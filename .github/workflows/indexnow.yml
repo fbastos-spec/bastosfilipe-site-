@@ -1,0 +1,29 @@
+# Signale aux moteurs IndexNow (Bing, et par lui ChatGPT, Copilot, DuckDuckGo ; Yandex, Naver, Seznam)
+# les pages changées à chaque publication. Aucun secret : la clé est publique par conception.
+# Tout le site est signalé si le message du commit contient [indexnow-all].
+name: IndexNow
+on:
+  push:
+    branches: [main]
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: { fetch-depth: 2 }
+      - name: Attendre la publication Cloudflare
+        run: sleep 90
+      - name: Signaler
+        run: |
+          KEY=$(ls | grep -E '^[0-9a-f]{32}\.txt$' | head -1 | sed 's/\.txt$//')
+          if ! curl -fsS "https://bastosfilipe.com/$KEY.txt" | grep -q "$KEY"; then
+            echo "La clé n'est pas encore servie par bastosfilipe.com (domaine pas encore branché) : rien à signaler."; exit 0; fi
+          if git log -1 --format=%B | grep -q '\[indexnow-all\]'; then
+            FILES=$(git ls-files '*.html' '*.pdf')
+          else
+            FILES=$(git diff --name-only HEAD~1 HEAD -- '*.html' '*.pdf')
+          fi
+          URLS=$(printf '%s\n' $FILES | grep -vE '^(_travail|404\.html)' | sed -E 's#(^|/)index\.html$#\1#; s#\.html$##; s#^#https://bastosfilipe.com/#' | head -10000)
+          [ -z "$URLS" ] && { echo "Aucune page changée."; exit 0; }
+          JSON=$(printf '%s\n' $URLS | python3 -c "import sys,json;print(json.dumps({'host':'bastosfilipe.com','key':'$KEY','keyLocation':'https://bastosfilipe.com/$KEY.txt','urlList':[l.strip() for l in sys.stdin if l.strip()]}))")
+          curl -sS -o /dev/null -w "IndexNow : HTTP %{http_code}\n" -X POST https://api.indexnow.org/indexnow -H 'Content-Type: application/json; charset=utf-8' -d "$JSON"

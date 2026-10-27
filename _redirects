@@ -1,0 +1,7 @@
+# Anciennes adresses WordPress
+/feed / 301
+/feed/ / 301
+/wp-admin/* / 301
+/wp-login.php / 301
+/accueil/ / 301
+/corpus-arc/ /arc/ 301
