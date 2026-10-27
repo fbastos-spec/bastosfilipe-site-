@@ -19,6 +19,13 @@ jobs:
         run: |
           mkdir -p /tmp/public
           rsync -a --exclude '.git' --exclude '.github' --exclude '_travail' --exclude 'README.md' ./ /tmp/public/
+      - name: Créer le projet Pages s'il n'existe pas encore
+        uses: cloudflare/wrangler-action@v3
+        continue-on-error: true
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages project create bastosfilipe-site --production-branch=main
       - name: Déployer
         uses: cloudflare/wrangler-action@v3
         with:
