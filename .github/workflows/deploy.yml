@@ -28,6 +28,16 @@ jobs:
           [ -n "$T" ] && echo "::notice::CLOUDFLARE_API_TOKEN présent (${#T} caractères)" || { echo "::error title=Secret manquant::CLOUDFLARE_API_TOKEN est vide ou absent des secrets Actions du dépôt"; ok=0; }
           [ -n "$A" ] && echo "::notice::CLOUDFLARE_ACCOUNT_ID présent (${#A} caractères)" || { echo "::error title=Secret manquant::CLOUDFLARE_ACCOUNT_ID est vide ou absent des secrets Actions du dépôt"; ok=0; }
           [ "$ok" = 1 ] || exit 1
+      - name: Diagnostic du jeton (comptes visibles et permissions, sans rien révéler)
+        env:
+          T: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          A: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          v=$(curl -s -H "Authorization: Bearer $T" https://api.cloudflare.com/client/v4/user/tokens/verify | jq -r '.result.status // "invalide"')
+          acc=$(curl -s -H "Authorization: Bearer $T" "https://api.cloudflare.com/client/v4/accounts?per_page=50" | jq -r --arg A "$A" '[.result[]? | (.name + (if .id==$A then " [= CLOUDFLARE_ACCOUNT_ID]" else "" end))] | join(" ; ")')
+          tok=$(curl -s -H "Authorization: Bearer $T" "https://api.cloudflare.com/client/v4/accounts/$A/tokens/verify" | jq -r '.result.status // .errors[0].message // "non"')
+          ws=$(curl -s -H "Authorization: Bearer $T" "https://api.cloudflare.com/client/v4/accounts/$A/workers/scripts" | jq -r 'if .success then "lecture Workers OK" else (.errors[0].message // "refusé") end')
+          echo "::notice title=Diagnostic jeton::jeton utilisateur : $v | jeton de compte : $tok | comptes visibles : ${acc:-aucun} | Workers : $ws"
       - name: Déployer sur Cloudflare Pages
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
