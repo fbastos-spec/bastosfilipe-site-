@@ -19,16 +19,17 @@ jobs:
         run: |
           mkdir -p /tmp/public
           rsync -a --exclude '.git' --exclude '.github' --exclude '_travail' --exclude 'README.md' ./ /tmp/public/
-      - name: Créer le projet Pages s'il n'existe pas encore
-        uses: cloudflare/wrangler-action@v3
-        continue-on-error: true
-        with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages project create bastosfilipe-site --production-branch=main
-      - name: Déployer
-        uses: cloudflare/wrangler-action@v3
-        with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy /tmp/public --project-name=bastosfilipe-site --branch=main --commit-dirty=true
+      - name: Déployer sur Cloudflare Pages
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          set -o pipefail
+          npx --yes wrangler@3 pages project create bastosfilipe-site --production-branch=main 2>&1 | tee -a sortie.txt || true
+          if ! npx --yes wrangler@3 pages deploy /tmp/public --project-name=bastosfilipe-site --branch=main --commit-dirty=true 2>&1 | tee -a sortie.txt; then
+            msg=$(grep -v '^\s*$' sortie.txt | tail -c 900 | tr '\n' ' ')
+            echo "::error title=Déploiement Cloudflare Pages::$msg"
+            exit 1
+          fi
+          url=$(grep -o 'https://[a-z0-9.-]*pages.dev' sortie.txt | tail -1)
+          echo "::notice title=Site publié::$url"
