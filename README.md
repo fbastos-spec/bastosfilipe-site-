@@ -8,6 +8,6 @@ Site statique du corpus ARC (Architecture de la Cohérence Relationnelle), Filip
 - `_headers` : en-têtes servis par Cloudflare Pages.
 - `_travail/` : blocs et consignes de la mise à jour du 26 octobre 2026 (archive).
 
-Publication : Cloudflare Pages relié à ce dépôt, branche `main`, sans commande de build, dossier de sortie `/`. Chaque commit sur `main` est mis en ligne.
+Publication : Cloudflare Workers (fichiers statiques), relié à ce dépôt par l'intégration Git de Cloudflare ; configuration dans `wrangler.jsonc`, exclusions dans `.assetsignore`. Chaque commit sur `main` est mis en ligne.
 
 En attente : l'identifiant Google Analytics (G-…) du site, à rétablir dans l'en-tête des trois pages et du gabarit de `/arc/`.

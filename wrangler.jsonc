@@ -1,0 +1,9 @@
+{
+  // Site statique bastosfilipe.com, publié par Cloudflare Workers (fichiers statiques).
+  "name": "bastosfilipe-site",
+  "compatibility_date": "2026-10-01",
+  "assets": {
+    "directory": ".",
+    "not_found_handling": "404-page"
+  }
+}
