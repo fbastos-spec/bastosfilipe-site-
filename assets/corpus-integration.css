@@ -1,0 +1,55 @@
+@charset "utf-8";
+
+.arcb { --fg: #1d1d1b; --mu: #6b6b66; --ac: #2f6f73; --bd: #e3e1da; --bg: #fbfaf7; font-family: Georgia, "Times New Roman", serif; color: var(--fg); max-width: 1100px; margin: 0px auto; padding: 0px 16px; line-height: 1.55; }
+
+.arcb h2 { font-weight: 400; font-size: 1.9rem; margin: 2.2rem 0px 0.4rem; }
+
+.arcb .lead { color: var(--mu); margin: 0px 0px 1.4rem; font-size: 1.05rem; }
+
+.arcb .eps { font-style: italic; border-left: 3px solid var(--ac); padding: 0.2rem 0px 0.2rem 1rem; margin: 1.2rem 0px; }
+
+.arcb .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px; }
+
+.arcb .card { background: var(--bg); border: 1px solid var(--bd); border-radius: 10px; padding: 16px 18px; display: flex; flex-direction: column; }
+
+.arcb .num { font-family: ui-monospace, Menlo, monospace; font-size: 0.75rem; letter-spacing: 0.12em; color: var(--ac); text-transform: uppercase; }
+
+.arcb .card h3 { font-weight: 400; font-size: 1.25rem; margin: 0.25rem 0px 0.35rem; }
+
+.arcb .card p { margin: 0px 0px 0.6rem; font-size: 0.95rem; color: rgb(59, 59, 56); }
+
+.arcb .meta { font-size: 0.8rem; color: var(--mu); margin-top: auto; padding-top: 0.4rem; }
+
+.arcb .btns { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 0.6rem; }
+
+.arcb .btns a { font-family: system-ui, sans-serif; font-size: 0.85rem; text-decoration: none; border: 1px solid var(--ac); color: var(--ac); border-radius: 999px; padding: 0.3rem 0.9rem; }
+
+.arcb .btns a.pdf { background: var(--ac); color: rgb(255, 255, 255); }
+
+.arcb details { margin: 0.2rem 0px 0.4rem; font-size: 0.92rem; }
+
+.arcb summary { cursor: pointer; color: var(--ac); font-family: system-ui, sans-serif; font-size: 0.85rem; }
+
+.arcb .tout { display: inline-block; margin: 1.4rem 0px; font-family: system-ui, sans-serif; color: var(--ac); }
+
+.arcb .lic { font-size: 0.85rem; color: var(--mu); margin: 2rem 0px 1rem; border-top: 1px solid var(--bd); padding-top: 1rem; }
+
+.arcb .grid { grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); }
+
+.arcb .card { min-width: 0px; overflow-wrap: anywhere; }
+
+.corpus-block > .arcb, .presentation-ajouts.arcb { max-width: none; padding-inline: 0px; }
+
+.arcb > p + p { margin-top: 1em; }
+
+.arcb > h3 { margin: 1.6em 0px 0.6em; }
+
+.arcb details[open] > p { margin-top: 0.8em; }
+
+.presentation-ajouts { margin-top: 24px; }
+
+.corpus-block { padding-block: clamp(32px, 5vw, 64px); }
+
+.cad-formules { display: flex; flex-wrap: wrap; gap: 8px 20px; margin-top: 16px; color: var(--bleu); font-size: 0.85rem; }
+
+.cad-formules span { white-space: nowrap; }

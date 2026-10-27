@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 560" width="640" height="560" role="img" aria-label="Deux cercles de même centre, un carré entre eux, une diagonale">
+  <title>Deux cercles et un carré</title>
+  <desc>Le grand cercle de rayon R ; le carré inscrit, de côté R√2 ; le petit cercle tangent aux quatre côtés, de rayon R√2/2 ; une diagonale du carré, de longueur 2R. Le rapport des rayons est √2/2, dont le carré vaut ½.</desc>
+  <style>
+    .trait { fill: none; stroke: #1d1d1b; stroke-width: 1.6; }
+    .fin   { fill: none; stroke: #1d1d1b; stroke-width: 1.1; }
+    .cote  { fill: none; stroke: #2f6f73; stroke-width: 1.3; }
+    .lab   { font-family: Georgia, 'Times New Roman', serif; font-size: 17px; fill: #1d1d1b; }
+    .eq    { font-family: Georgia, 'Times New Roman', serif; font-size: 18px; fill: #1d1d1b; }
+    .pt    { fill: #1d1d1b; }
+  </style>
+  <!-- centre O = (260, 250), R = 200 ; côté du carré R√2 = 282,84 ; r = 141,42 -->
+  <circle class="trait" cx="260" cy="250" r="200"/>
+  <rect class="trait" x="118.58" y="108.58" width="282.84" height="282.84"/>
+  <circle class="trait" cx="260" cy="250" r="141.42"/>
+  <!-- diagonale : de (118.58,108.58) à (401.42,391.42) -->
+  <line class="fin" x1="118.58" y1="108.58" x2="401.42" y2="391.42"/>
+  <!-- centre -->
+  <circle class="pt" cx="260" cy="250" r="2.6"/>
+  <!-- R : du centre au sommet gauche du grand cercle -->
+  <line class="cote" x1="260" y1="250" x2="60" y2="250"/>
+  <text class="lab" x="150" y="241" text-anchor="middle">R</text>
+  <!-- r : du centre au point de tangence bas -->
+  <line class="cote" x1="260" y1="250" x2="260" y2="391.42"/>
+  <text class="lab" x="270" y="330" text-anchor="start">R√2⁄2</text>
+  <!-- côté -->
+  <text class="lab" x="260" y="98" text-anchor="middle">côté R√2</text>
+  <!-- diagonale -->
+  <text class="lab" x="412" y="410" text-anchor="start">diagonale 2R</text>
+  <!-- l'égalité -->
+  <text class="eq" x="320" y="520" text-anchor="middle">rayon du petit cercle ÷ rayon du grand = √2⁄2, et (√2⁄2)² = ½</text>
+</svg>
