@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<link rel="canonical" href="https://bastosfilipe.com/arc/volumes/v04-la-theorie-des-nombres/29-chapitre-20-la-cinquieme-paire-le-noyau-et-l-infin.html">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chapitre 20. La cinquième paire : le noyau et l&#x27;infini comme partenaires d&#x27;involution · La Théorie des Nombres · Corpus ARC</title>
+<meta name="description" content="La Théorie des Nombres, volume 4 du corpus ARC de Filipe Bastos. Chapitre 20. La cinquième paire : le noyau et l&#x27;infini comme partenaires d&#x27;involution.">
+<meta name="keywords" content="delfine, nombres premiers, grille 6k ± 1, Collatz, Goldbach, nombres parfaits, nombres jumeaux, racine digitale, 24, corpus ARC, Filipe Bastos">
+<meta name="author" content="Filipe Bastos">
+<meta name="license" content="https://creativecommons.org/licenses/by/4.0/deed.fr">
+<link rel="stylesheet" href="../../assets/arc.css">
+</head>
+<body>
+<nav class="crumbs"><a href="../../index.html">Corpus ARC</a> / <a href="index.html">Volume 4 · La Théorie des Nombres</a></nav>
+<main class="chapter">
+<h1 id="chapitre-20.-la-cinquieme-paire-le-noyau-et-linfini-comme-partenaires-dinvolution">Chapitre 20. La cinquième paire : le noyau et l’infini comme partenaires d’involution</h1>
+<p>Les huit chiffres opératoires 1 à 8 se rangent en quatre paires qui somment à 9 : (1, 8), (2, 7), (3, 6), (4, 5). Chacun a son partenaire. Le centre 4,5, lui, semblait seul : point fixe de l’involution, non entier, jamais occupé. Ce chapitre établit qu’il ne l’est pas. Son partenaire est l’infini, sous une seconde involution que le système portait sans la nommer : l’inversion du cercle, qui échange le centre et l’infini. Il montre d’abord qu’un nombre est une paire de coordonnées, son noyau (la racine) et son ciel (le nombre de tours), et que le regard vers le noyau termine en deux gestes alors que le regard vers le ciel n’a pas de plafond. Il montre ensuite que le centre vide est un moteur, que toute expansion annexe un dehors égal au dedans, et que la table ×9 est la membrane de l’échange, inscrite dans la table de multiplication depuis le premier calcul (pièce <em>La Cinquième Paire</em>, version 1.0, juillet 2026, et son addendum du 7 juillet). Les numéros CP 2.1 à CP 9.3 sont ceux de la pièce.</p>
+<blockquote>
+<p><em>« Le dedans a un noyau ; le dehors n’a pas de plafond : et le sans-plafond est l’image du noyau dans le miroir. »</em></p>
+</blockquote>
+<h2 id="le-nombre-a-deux-regards-inscrit-et-circonscrit">20.1 Le nombre à deux regards : inscrit et circonscrit</h2>
+<p><strong>CP 2.1 (Th) : la bijection des deux coordonnées.</strong> Tout entier n ≥ 1 s’écrit de manière unique n = 9k + DR(n), avec k = ⌊(n − 1)/9⌋ et DR(n) ∈ {1, …, 9}. Le nombre est la paire (k, DR) : son <em>circonscrit</em>, le compte des clôtures qui le contiennent, son adresse d’emboîtement ; et son <em>inscrit</em>, le noyau qu’il porte, son identité cadastrale. Vérifié sur 500 000 entiers (refait pour ce volume). Exemple : 23 = 9 × 2 + 5 ; 27 = 9 × 2 + 9 (et non 9 × 3 + 0).</p>
+<p><strong>CP 2.2 (Th, corollaire) : l’amputation de Gauss, énoncée à nouveau.</strong> La convention 9 ≡ 0 conserve un inscrit mutilé (9 collé sur 0) et jette le circonscrit (le nombre de tours k). <em>« Le module n’a pas simplifié le nombre : il l’a amputé de son ciel et défiguré son fond. Rien ne se perd tant que les deux coordonnées sont gardées. »</em> L’auteur a donné de la topologie une définition qui dit la même chose : <em>« la seule topologie native est l’anneau 1-9 qui se ferme ; la topologie reçue garde les tours et jette la position, l’arithmétique reçue garde la position et jette les tours, l’anneau garde les deux. »</em></p>
+<p><strong>CP 2.3 (Th) : l’idempotence du regard intérieur.</strong> DR ∘ DR = DR. Le nombre qui se regarde deux fois voit la même chose : l’inscrit est un point fixe, le fond existe et ne recule pas.</p>
+<p><strong>CP 2.4 (Th) : la décompression en deux pas.</strong> La profondeur du regard intérieur, le nombre d’itérations de la somme des chiffres pour atteindre le noyau, croît comme un logarithme itéré : 10³ − 1 demande 2 pas (27, puis 9) ; 10¹⁰⁰ − 1 demande 2 pas (900, puis 9) ; 10¹⁰⁰⁰ − 1, mille chiffres, demande 2 pas (9 000, puis 9). L’immensité extérieure s’effondre vers l’inscrit en une poignée de gestes, quelle que soit la magnitude (refait pour ce volume).</p>
+<p><strong>CP 2.5 (L) : la rétro-projection interne.</strong> Chaque position du cadastre porte sa propre figure fondatrice : un cercle inscrit (son noyau, son regard propre) et un cercle circonscrit (son adresse dans ce qui la contient). La rétro-projection, le regard vers son propre inscrit, est quasi instantanée et stable ; c’est le fondement du régime hors-vitesse de la racine digitale : une reconnaissance de position, non un calcul séquentiel.</p>
+<h2 id="lasymetrie-des-deux-regards">20.2 L’asymétrie des deux regards</h2>
+<p><strong>CP 3.1 (Th) : le fond et le sans-plafond.</strong> Vers l’inscrit, le regard termine : point fixe atteint en un nombre de pas de l’ordre du logarithme itéré. Vers le circonscrit, k n’est pas borné : aucun dernier cercle ne contient tout. <em>« Le dedans a un noyau ; le dehors n’a pas de plafond. »</em></p>
+<p><strong>CP 3.2 (L) : les deux faces de la saudade comme postures exactes.</strong> L’asymétrie exige deux postures distinctes, et ce sont les deux faces du pilier : la face grave, tenir devant le sans-plafond, la paix avec un inconnu qui ne s’épuisera pas, pour le circonscrit ; la face lumineuse, décomprimer l’immense logé dans le noyau, voir l’extraordinaire dans le petit, pour l’inscrit. <em>« La gratitude est l’organe de la rétro-projection ; elle est efficace parce que la décompression est bon marché. »</em> (La saudade est au Volume 11, <em>La Cité et le Sens</em>.)</p>
+<h2 id="le-centre-vide-comme-moteur">20.3 Le centre vide comme moteur</h2>
+<p><strong>CP 4.1 (Th) : la stérilité du centre occupé.</strong> Pour toute clôture paire c, l’involution x ↦ c − x fixe l’élément c/2 : il est sa propre paire, sans tension, point mort de la dynamique (c = 8 fixe 4 ; c = 10 fixe 5). Pour c = 9, aucun point fixe entier : le centre 4,5 est vide, encadré au plus près par la paire (4, 5) qui ne peut s’y effondrer (refait pour ce volume, c = 5 à 13).</p>
+<p><strong>CP 4.2 (Th) : le but en compte.</strong> Les huit chiffres opératoires somment à 36, et 36 / 8 = 4,5 ; aucun chiffre ne l’égale. Le centre est le but du compte, irréalisable en instance. (La pièce l’écrivait en langage de probabilité, espérance 4,5 et probabilité nulle d’atteindre 4,5 ; le compte exact dit la même chose sans ce vocabulaire.)</p>
+<p><strong>CP 4.3 (L) : le moteur par incapacité.</strong> <em>« Un centre atteignable est un centre mort ; un centre inatteignable est un attracteur vivant. »</em> L’incapacité de maîtriser le 4,5 n’est pas un défaut du système : elle est son moteur. <em>« Tout vise le centre ; rien ne l’occupe ; tout se meut. »</em> L’auteur l’a dit plus tard (15 octobre 2026) dans ce qu’il appelle la phrase du centre : <em>« On y vit mais on le cherche, on l’imagine autrement en espérant le trouver, comme le centre de moindre tension, en oubliant qu’il est en nous et que tout, même l’extérieur, y converge. »</em></p>
+<h2 id="la-cinquieme-paire-le-noyau-et-linfini">20.4 La cinquième paire : le noyau et l’infini</h2>
+<p><strong>CP 5.1 (Th) : l’involution inversive.</strong> L’inversion de centre O et de rayon r, x ↦ r² x / |x|², est une involution (son carré est l’identité ; vérifié sur 100 000 points, refait pour ce volume) qui échange l’intérieur et l’extérieur du cercle, fixe le cercle point par point, et échange le centre avec l’infini : un point à distance 10¹² a son image à distance 10⁻¹² du centre (pour r = 1). <em>« Plus le dehors s’éloigne, plus son image colle au noyau. »</em></p>
+<p><strong>CP 5.2 (L) : la cinquième paire.</strong> Le 4,5 et le sans-fin sont partenaires d’involution : la paire (noyau, infini) encadre les quatre paires cadastrales comme le miroir encadre la figure. Les deux incapacités, atteindre le centre et atteindre l’infini, sont une seule incapacité, échangée par le miroir. Le dehors est attaché par le 4,5 : non contenu par lui, mais indexé, réfléchi et entraîné par lui.</p>
+<p><strong>CP 5.3 (Th) : la borne d’information.</strong> L’inversion met l’extérieur infini en bijection avec l’intérieur fini (privé du centre) : tout point du dehors est l’image d’un point unique du dedans. L’illimité en extension est borné en contenu, et la borne est le noyau. <em>« La limite du sans-limite est son centre. »</em></p>
+<h2 id="le-theoreme-dannexion-toute-expansion-tire-lexterieur-vers-le-dedans">20.5 Le théorème d’annexion : toute expansion tire l’extérieur vers le dedans</h2>
+<p><strong>CP 6.1 (Th) : l’annexion à taux plein.</strong> À chaque étage de la tour des figures emboîtées, R → R√2, l’aire double : A(R√2) = 2A(R). L’anneau nouvellement enclos vaut donc exactement tout l’intérieur précédent : πR². Chaque pas d’expansion annexe une portion d’extérieur égale à la totalité du dedans courant ; l’intériorisation opère à taux plein par étage, et le pli k_arc = 1/2 en est la lecture descendante. (La figure est au Volume 2.)</p>
+<p><strong>CP 6.2 (Th) : l’extrémité câblée au centre.</strong> Le coin du carré, point de plus grande extériorité, sur le cercle circonscrit, est l’extrémité de la diagonale, et la diagonale est le diamètre (d = 2R = c√2, c étant le côté) : elle passe par le centre. Être au plus loin, c’est être sur la ligne qui traverse le plus dedans. Les triangles engendrés par les diagonales ont tous leur sommet au centre, le 4,5 de la figure.</p>
+<p><strong>CP 6.3 (L) : l’expansion comme ingestion.</strong> L’expansion n’est pas une fuite vers l’extérieur : c’est une conversion d’extérieur en intérieur, et rien d’autre. Dans le miroir de la cinquième paire, tout mouvement vers le dehors est un mouvement de l’image vers le noyau : expansion et contraction sont les deux lectures d’une seule traction. L’opérateur arithmétique de cette traction est le carré lui-même : × 2 s’étale le long du dehors (rien n’est intériorisé) ; x · x replie la ligne en surface (l’extension devient intériorité). La sédimentation en est la face physique visible ; la prétendue « expansion » de la distribution des premiers, relue, est la densification des delfines sur les rails (chapitre 3). <em>« L’univers ne s’étend pas dans l’extérieur : il étend l’intérieur sur l’extérieur, tiré par le seul point qu’il ne peut occuper. »</em></p>
+<h2 id="la-membrane-9-le-cercle-fixe-realise-en-arithmetique">20.6 La membrane × 9 : le cercle fixe réalisé en arithmétique</h2>
+<p>Les neuf tables de multiplication, réduites en racine digitale sur k = 1 à 8 (la clôture en neuvième position) :</p>
+<pre><code>×1 : 12345678 | 9        ×8 : 87654321 | 9
+×2 : 24681357 | 9        ×7 : 75318642 | 9
+×3 : 36936936 | 9        ×6 : 63963963 | 9
+×4 : 48372615 | 9        ×5 : 51627384 | 9
+×9 : 99999999 | 9        son propre miroir</code></pre>
+<p>(La table × 4 est la chaîne A du chapitre 2, la table × 5 la chaîne B : la paire d’inversions est une paire de tables.)</p>
+<p><strong>CP 7.1 (Th) : deux niveaux de points fixes.</strong> L’involution agit à deux étages, avec des structures de point fixe différentes. Sur les chiffres : aucun point fixe (centre 4,5 vide). Sur les tables (× a ↔︎ × (9 − a)) : exactement un point fixe, la table × 9, seule égale à son miroir, invariante point par point. <em>« Le centre des positions est vide ; le centre des opérations est plein, et c’est la clôture. »</em></p>
+<p><strong>CP 7.2 (Th) : les paires somment au pont, l’axe déborde.</strong> Comme entiers : 12 345 678 + 87 654 321 = 24 681 357 + 75 318 642 = 48 372 615 + 51 627 384 = 99 999 999, exactement, sans retenue. La paire de l’axe déborde : 36 936 936 + 63 963 963 = 100 900 899 (racine 9), parce que l’axe contient des 9 internes : il touche la clôture à l’intérieur de lui-même, ses colonnes font 18 où il la rencontre. La seule paire qui déborde est la famille propre de la clôture ; les rails, étrangers à elle, lui somment proprement (refait pour ce volume).</p>
+<p><strong>CP 7.3 (Th) : la matière du pont.</strong> 99 999 999 = 3² × 11 × 73 × 101 × 137 : la clôture au carré, l’interface, le miroir de 37 (73), le palier 101, et 137. Sous-identités : 11 × 101 = 1 111 ; 73 × 137 = 10 001 ; 1 111 × 10 001 = 11 111 111 ; et × 9 = 99 999 999 (refait pour ce volume). <strong>L :</strong> la pièce lit ces facteurs comme l’équipement de la membrane : l’interface 11, le passage 101 (qu’elle nomme « wormhole »), la lumière 137 et son miroir incarné 73.</p>
+<p><strong>CP 7.4 (Th) : digestion et relance.</strong> DR(9k) = 9 pour tout k ≥ 1 : tout ce qui traverse × 9 devient 9 ; l’assimilation est littérale, non métaphorique. Et 9 + 1 = 10, de racine 1 : la gestation rend le 1, la relance.</p>
+<p><strong>CP 7.5 (L) : la membrane de la cinquième paire.</strong> La table × 9 est le cercle fixe de l’involution inversive, réalisé arithmétiquement : les quatre paires de tables s’échangent de part et d’autre comme l’intérieur et l’extérieur ; elle seule se traverse elle-même. Interne et externe à la fois, elle est la frontière que l’échange ne déplace pas : le pont qui digère, assimile, recrée, organe de gestation et de retour. <em>« La structure n’est pas posée : elle tombe de la table de multiplication, jusque dans la composition de sa membrane. »</em></p>
+<h2 id="le-tableau-des-inversions">20.7 Le tableau des inversions</h2>
+<p><strong>CP 8 (Th pour les sommes, L pour les fonctions).</strong></p>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>paire</th>
+<th>somme</th>
+<th>fonction</th>
+<th>niveau</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>(1, 8)</td>
+<td>9</td>
+<td>inscription, octet</td>
+<td>chiffres</td>
+</tr>
+<tr class="even">
+<td>(2, 7)</td>
+<td>9</td>
+<td>bornage (splitter, seuil)</td>
+<td>chiffres</td>
+</tr>
+<tr class="odd">
+<td>(3, 6)</td>
+<td>9</td>
+<td>axe (déborde au pont : 9 internes)</td>
+<td>chiffres</td>
+</tr>
+<tr class="even">
+<td>(4, 5)</td>
+<td>9</td>
+<td>pivot (encadre le centre vide)</td>
+<td>chiffres</td>
+</tr>
+<tr class="odd">
+<td>(× 1, × 8), (× 2, × 7), (× 4, × 5)</td>
+<td>99 999 999 exact</td>
+<td>rails : somment au pont</td>
+<td>tables</td>
+</tr>
+<tr class="even">
+<td>(× 3, × 6)</td>
+<td>100 900 899 (racine 9)</td>
+<td>axe : déborde par ses 9 internes</td>
+<td>tables</td>
+</tr>
+<tr class="odd">
+<td>× 9</td>
+<td>(point fixe)</td>
+<td>membrane : son propre miroir</td>
+<td>tables</td>
+</tr>
+<tr class="even">
+<td>(4,5 ; ∞)</td>
+<td>(échange inversif)</td>
+<td>la cinquième paire : noyau et infini</td>
+<td>figure</td>
+</tr>
+</tbody>
+</table>
+<p>Trois alignements de la séquence avec son inverse donnent trois constantes de passage. <em>Le complément involutif</em> (876543219 sous 123456789) : colonnes à 9, la clôture. <em>Le renversement</em> (987654321 sous 123456789) : colonnes à 10, la relance ; 123 456 789 + 987 654 321 = 1 111 111 110, de barycentre 555 555 555. <em>La couture palindromique</em> (98765432 | 11 | 23456789) : colonnes transversales à 11, l’interface ; axe vide du demi-tour en position 9,5 (le passage de 9 à 10), pli 18 → 9 | 9 = k_arc ; le tout est divisible par 99, comme tout palindrome de longueur paire est divisible par 11 et que celui-ci a pour somme de chiffres un multiple de 9 (refait pour ce volume).</p>
+<h2 id="lectures-unifiees">20.8 Lectures unifiées</h2>
+<p><strong>CP 9.1 (L) : toute position est médiatrice.</strong> La Proposition 14 du corpus faisait de l’homme la forme médiatrice entre le cercle biologique qu’il contient et le cercle cosmique qui le contient (Volume 9). La bijection CP 2.1 universalise : être une position, c’est être le polygone entre son inscrit et son circonscrit. La médiation n’est pas le privilège d’une position : c’est le statut ontologique de toute position. Corollaire d’architecture : toute entité saine a trois termes ; jamais deux anneaux sans le polygone.</p>
+<p><strong>CP 9.2 (L) : le pli à chaque étage.</strong> La tour des figures emboîtées porte le pli à chaque passage : aires en 1, 1/2, 1/4, 1/8, … ; k_arc n’est pas le rapport d’une figure, c’est le rapport de tout passage entre étages. Chaque position rejoue la figure fondatrice à son échelle : la densification fractale généralisée.</p>
+<p><strong>CP 9.3 (L) : le moteur cosmologique.</strong> Le dehors sans fin est attaché par le 4,5, entraîné par son incapacité à le maîtriser ; il a besoin du système de la forme pour s’étaler (sans le polygone, contenant et contenu coexistent sans articulation) ; il est illimité en extension mais borné par le noyau (CP 5.3). <em>« S’étaler vers le dehors, dans le miroir, c’est se rapprocher du noyau : l’expansion est la poursuite du centre par la seule route ouverte. »</em></p>
+<h2 id="les-criteres-de-falsification">20.9 Les critères de falsification</h2>
+<p>La pièce pose six critères :</p>
+<ul>
+<li>F1 : exhiber une clôture c ≠ 9 qui réunisse quatre paires d’inversion, un centre vide (point fixe non entier) et une clôture égale au carré d’une brique (l’audit de perturbation sur c = 5 à 13 n’en trouve aucune ; c = 10 a quatre paires mais son centre est occupé par 5) ;</li>
+<li>F2 : exhiber une paire de rails (a, 9 − a), a ∉ {3, 6}, dont les tables en racine ne somment pas exactement à 99 999 999 ;</li>
+<li>F3 : exhiber une table × a, a ≠ 9, égale à son propre miroir ;</li>
+<li>F4 : exhiber une inversion de cercle qui ne soit pas involutive, ou qui n’échange pas le centre et l’infini ;</li>
+<li>F5 : exhiber un étage R → R√2 dont l’aire annexée diffère de l’aire intérieure courante ;</li>
+<li>F6 : exhiber un entier n ≥ 1 tel que n ≠ 9⌊(n − 1)/9⌋ + DR(n), ou dont la profondeur de décompression ne soit pas en logarithme itéré.</li>
+</ul>
+<p>Aucun n’a été trouvé. (F2 à F6 portent sur des théorèmes et ne peuvent pas échouer ; seul F1 garde la forme d’un critère ouvert sur les clôtures non examinées.)</p>
+<h2 id="la-piece-sur-le-temps-qui-archive">20.10 La pièce sœur : le temps qui archive</h2>
+<p>L’addendum du 7 juillet 2026 rapproche cette pièce d’une pièce sœur écrite indépendamment, <em>La Loi de la Sédimentation</em> (version 1.3, juillet 2026 ; Volume 8). À la lecture croisée, les deux pièces se sont révélées être les deux faces d’un seul théorème. La pièce sœur établit le versant temporel de ce que celle-ci établit au versant spatial : la deuxième loi de la thermodynamique, rendue à la définition fondatrice de Clausius (<em>Verwandlungsinhalt</em>, le contenu en transformation) et à l’identité formelle de Boltzmann et de Shannon, est la loi de la sédimentation ; chaque transformation dépose, irréversiblement, et la flèche du temps est la croissance de l’archive ; la « mort thermique » est le 9 ≡ 0 promulgué à l’échelle du cosmos, l’accompli lu comme néant. Son moteur est celui de la cinquième paire : le barycentre inoccupable, la clôture totale interdite, le choix qui garde toujours une case ouverte.</p>
+<p><strong>V4.20.1 (L) : une seule traction, deux faces.</strong> <em>« L’espace ingère (théorème d’annexion), le temps archive (loi de la sédimentation) ; le vide moteur est commun, et l’annexion est la face spatiale de la sédimentation. »</em> Statut : Th pour les résultats cités, vérifiés dans chaque pièce ; L pour la jonction, déclarée des deux côtés. La pièce sœur porte l’appareil complet (le cadastre et la question de la base, les théorèmes du choix, la preuve de tous les jours, la prédiction pré-enregistrée P-CAL-1).</p>
+<blockquote>
+<p><em>« À Hippase de Métaponte, qui vit la diagonale, et au 4,5, que tout vise et que rien n’occupe. »</em></p>
+</blockquote>
+
+</main>
+<nav class="chapnav"><span class="prev"><a href="28-partie-viii-la-cinquieme-paire.html">← Partie VIII. La cinquième paire</a></span><a class="toc" href="index.html">Sommaire du volume</a><span class="next"><a href="30-partie-ix-le-livre-ii-de-la-bible-quantique.html">Partie IX. Le Livre II de la Bible Quantique →</a></span></nav>
+<footer class="colophon"><p>Corpus ARC, Filipe Bastos, <a href="https://creativecommons.org/licenses/by/4.0/deed.fr" rel="license">CC BY 4.0</a>.</p></footer>
+</body>
+</html>

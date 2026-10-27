@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<link rel="canonical" href="https://bastosfilipe.com/arc/volumes/v07-la-physique-relue/07-chapitre-6-la-croix-de-planck-le-quantum-est-une-a.html">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chapitre 6. La croix de Planck : le quantum est une aire · La Physique relue · Corpus ARC</title>
+<meta name="description" content="La Physique relue, volume 7 du corpus ARC de Filipe Bastos. Chapitre 6. La croix de Planck : le quantum est une aire.">
+<meta name="keywords" content="mécanique quantique, borne de Tsirelson, mesure, Heisenberg, effet tunnel, proton, Modèle standard, théorie des cordes, corpus ARC, Filipe Bastos">
+<meta name="author" content="Filipe Bastos">
+<meta name="license" content="https://creativecommons.org/licenses/by/4.0/deed.fr">
+<link rel="stylesheet" href="../../assets/arc.css">
+</head>
+<body>
+<nav class="crumbs"><a href="../../index.html">Corpus ARC</a> / <a href="index.html">Volume 7 · La Physique relue</a></nav>
+<main class="chapter">
+<h1 id="chapitre-6.-la-croix-de-planck-le-quantum-est-une-aire">Chapitre 6. La croix de Planck : le quantum est une aire</h1>
+<p>On se représente volontiers le quantum comme une petite bille, une sphère d’information minimale. C’est une erreur de dimension, et une simple analyse dimensionnelle la lève : la constante de Planck a la dimension d’une action, impulsion fois longueur, c’est-à-dire une aire dans le plan formé par une variable et sa conjuguée, jamais un volume dans l’espace. Ce chapitre suit <em>La Croix de Planck</em> v2.1 (août 2026), qui fait foi sur la v1.0 (juin 2026). Il établit quatre choses. Les orbites d’énergie constante de l’oscillateur harmonique enferment des aires exactement égales à (n + 1/2)h, quelles que soient la masse et la fréquence : aucun état n’occupe une aire entière, le fondamental en occupe la moitié. Le demi n’est pas le quantum : il est la face conjuguée non lue, et deux demis recomposent la cellule. La cellule n’est jamais vue carrée : projetée, elle apparaît en trapèze, et le théorème de Liouville dit déjà que l’aire tient pendant que la forme se déforme. Enfin la croix à quatre secteurs du plan de phase est la croix des quatre paires d’inversion, croisées sur une origine immobile que rien n’occupe.</p>
+<p><strong>É6.1 (L) Les statuts déclarés par la pièce.</strong> La v2.1 assigne aux sections 1 à 3, 5 et 6 le statut de théorème (calcul fini, vérifié, sans paramètre libre, sans intégrale, sans série infinie) et aux sections 4, 7, 8 et 9 le statut de lecture. Ce volume garde cette répartition, à deux précisions près (É6.13 et É6.15) : dans la section 5, les valeurs cos(π/n) sont des théorèmes, l’identification de la compression perspective à ces valeurs est une lecture ; dans la section 6, le théorème de Liouville est un fait de la physique reçue, son extension « sous projection » est une lecture. Aucun énoncé de la pièce ne prétend clore un problème ouvert.</p>
+<h2 id="le-quantum-est-une-aire-non-une-sphere">6.1 Le quantum est une aire, non une sphère</h2>
+<p><strong>É6.2 (Th) La dimension de h.</strong> [h] = J · s = kg · m²/s² · s = kg · m²/s = (kg · m/s) × (m) : une impulsion fois une longueur. Le produit d’une impulsion par une longueur est une aire, celle que l’on balaie dans le plan (q, p) où q est une position et p son impulsion conjuguée. Aucune description en termes de volume ne reproduit cette dimension ; seule l’aire le fait.</p>
+<p><strong>É6.3 (L) La nature discrétise l’action en aires.</strong> Le quantum d’action est une aire du plan de phase, non un volume de l’espace. <em>« La nature ne discrétise pas l’espace en billes : elle discrétise l’action en aires. »</em> La cellule de phase élémentaire a pour mesure h. C’est le cadastre : l’aire est le carré, le carré est l’unité, le quantum est le carré minimal.</p>
+<p><strong>É6.4 (Th) Deux grandeurs de même dimension.</strong> L’inégalité de Robertson Δq Δp ≥ ħ/2 borne un produit d’écarts types : c’est une dispersion statistique, et son facteur 1/2 est un coût de projection (chapitre 4). L’aire enfermée par une orbite d’énergie constante est une autre grandeur. Les deux diffèrent exactement d’un facteur 2π :</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Grandeur</th>
+<th>Valeur (J · s)</th>
+<th>Nature</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Aire enfermée par l’orbite fondamentale, h/2</td>
+<td>3,313035075 × 10⁻³⁴</td>
+<td>aire</td>
+</tr>
+<tr class="even">
+<td>Borne de Heisenberg, ħ/2</td>
+<td>5,272859088 × 10⁻³⁵</td>
+<td>produit d’écarts types</td>
+</tr>
+<tr class="odd">
+<td>Rapport</td>
+<td>6,283185307180</td>
+<td>égal à 2π</td>
+</tr>
+</tbody>
+</table>
+<p>L’écart vaut exactement 2π, non un arrondi (avec la valeur exacte du Système international, h = 6,62607015 × 10⁻³⁴ J · s). <em>« Les confondre revient à prendre une largeur de distribution pour une surface. »</em> La v1.0 écrivait que la plus petite cellule distinguable est le carré d’aire ħ/2 : c’était cette confusion, corrigée par la v2.1 (Annexe B).</p>
+<h2 id="laire-enfermee-les-etats-habitent-les-demis">6.2 L’aire enfermée : les états habitent les demis</h2>
+<p>Soit un oscillateur harmonique à une dimension, de masse m, de fréquence ν et de pulsation ω = 2πν. Son hamiltonien est H(q, p) = p²/(2m) + (1/2) m ω² q². La courbe H = E est l’ellipse q²/(2E/(mω²)) + p²/(2mE) = 1, de demi-axes a = √(2E/(mω²)) et b = √(2mE). Son aire vaut</p>
+<p>A(E) = π a b = π √(4E²/ω²) = 2πE/ω = E/ν.</p>
+<p>Le résultat ne dépend ni de m ni de ω pris séparément : l’aire est le rapport de l’énergie à la fréquence, c’est-à-dire une action. En y portant la quantification E_n = (n + 1/2) hν, on obtient les deux énoncés centraux.</p>
+<p><strong>É6.5 (Th) Théorème 2.1, l’aire demi-entière.</strong> L’aire enfermée dans le plan de phase par l’orbite du niveau n vaut exactement A_n = (n + 1/2) h, indépendamment de la masse et de la pulsation. Aucun niveau n’occupe une aire entière ; le fondamental en occupe la moitié, h/2.</p>
+<p><strong>É6.6 (Th) Théorème 2.2, l’incrément entier.</strong> L’écart d’aire entre deux niveaux consécutifs vaut exactement h pour tout n : A_{n+1} − A_n = (n + 1 + 1/2)h − (n + 1/2)h = h. <em>« Le demi s’annule dans toute différence, sans reste. »</em></p>
+<p><strong>É6.7 (Th) L’invariance sur vingt-six ordres de grandeur.</strong> L’évaluation directe de πab sur quatre systèmes, de la molécule diatomique au résonateur nanomécanique (masses de 10⁻²⁶ kg, 9,109 × 10⁻³¹ kg, 2,5 × 10⁻³ kg et 1 kg ; fréquences de 1 Hz à 5 × 10¹⁴ Hz), donne pour les niveaux n = 0 à 4 les aires 0,5 h, 1,5 h, 2,5 h, 3,5 h et 4,5 h, avec une concordance de 10⁻¹² en valeur relative. La suite n + 1/2 est invariante sous changement de masse et de fréquence.</p>
+<p><strong>É6.8 (L) Les joints entre les nombres.</strong> <em>« Les états ne se tiennent donc jamais sur les entiers. Ils se tiennent tous sur les demis, sur les joints entre les nombres, tandis que les transitions, elles, sont rigoureusement entières. »</em></p>
+<h2 id="la-croix-de-phase-et-les-quatre-paires-dinversion">6.3 La croix de phase et les quatre paires d’inversion</h2>
+<p><strong>É6.9 (Th) Théorème 3.1, la structure des quatre paires.</strong> L’involution φ(x) = 9 − x ne porte sur les positions 1 à 8 que quatre paires, (1, 8), (2, 7), (3, 6), (4, 5), d’envergures 7, 5, 3, 1. Toutes somment à 9 et partagent le même milieu 4,5. Ce point fixe n’est pas entier : aucune position ne l’occupe. Il vaut k × 9 avec k = 1/2.</p>
+<p><strong>É6.10 (L) La croix de la bipolarisation.</strong> Le plan de phase est structuré par deux axes conjugués, position et impulsion, qui se croisent à l’origine et divisent le plan en quatre secteurs. Ce n’est pas une image décorative : c’est la structure de la bipolarisation, et les quatre quadrants correspondent aux quatre paires d’inversion. L’origine immobile du plan de phase coïncide avec le milieu 4,5 que rien n’occupe. Les envergures décroissent par les impairs : chaque quadrant vibre à une amplitude différente, mais tous se referment sur 9 et tournent autour du même centre. La croix n’est pas symétrique sous projection : un axe se conserve, l’autre se comprime. <em>« C’est la bipolarisation, un pôle tenu et un pôle qui fuit. »</em></p>
+<h2 id="lexcitation-ouvre-lenvergure">6.4 L’excitation ouvre l’envergure</h2>
+<p><strong>É6.11 (L) Lecture 4.1, l’ordre de parcours.</strong> Les aires du théorème 2.1 valent 0,5 h, 1,5 h, 2,5 h, 3,5 h ; les demi-envergures des quatre paires valent 0,5, 1,5, 2,5, 3,5. La correspondance est ordonnée :</p>
+<table>
+<thead>
+<tr class="header">
+<th>Niveau</th>
+<th>Aire de phase</th>
+<th>Paire</th>
+<th>Somme</th>
+<th>Envergure</th>
+<th>Demi-envergure</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>n = 0</td>
+<td>0,5 h</td>
+<td>(4, 5)</td>
+<td>9</td>
+<td>1</td>
+<td>0,5</td>
+</tr>
+<tr class="even">
+<td>n = 1</td>
+<td>1,5 h</td>
+<td>(3, 6)</td>
+<td>9</td>
+<td>3</td>
+<td>1,5</td>
+</tr>
+<tr class="odd">
+<td>n = 2</td>
+<td>2,5 h</td>
+<td>(2, 7)</td>
+<td>9</td>
+<td>5</td>
+<td>2,5</td>
+</tr>
+<tr class="even">
+<td>n = 3</td>
+<td>3,5 h</td>
+<td>(1, 8)</td>
+<td>9</td>
+<td>7</td>
+<td>3,5</td>
+</tr>
+<tr class="odd">
+<td>n = 4</td>
+<td>4,5 h</td>
+<td>barycentre</td>
+<td></td>
+<td></td>
+<td>4,5 = k × 9</td>
+</tr>
+</tbody>
+</table>
+<p>Le fondamental lit la paire la plus serrée, (4, 5), d’envergure 1 ; chaque excitation ouvre l’envergure d’un cran, jusqu’à la paire maximale (1, 8) au niveau 3. <em>« L’excitation n’ajoute pas de la matière : elle élargit la paire lue. »</em></p>
+<p><strong>É6.12 (L) Le garde-fou.</strong> Deux suites arithmétiques de pas 1 issues de 0,5 coïncident nécessairement : l’alignement seul ne vaut rien et ne doit pas être présenté comme un résultat. Ce qui est non trivial est double. D’abord la <em>terminaison</em> : le cadastre porte exactement quatre paires, ni trois ni cinq, et la suite des niveaux épuise ces quatre paires puis tombe, au cinquième terme, sur le barycentre lui-même, qui n’est pas une paire. Ensuite l’<em>orientation</em> : la correspondance est monotone, assignant au fondamental la paire minimale et au plus excité des quatre la paire maximale. <em>« Ce sont la terminaison et l’orientation qui portent l’information, non la coïncidence numérique. Cet énoncé demeure une Lecture. »</em></p>
+<h2 id="le-carre-se-voit-en-trapeze">6.5 Le carré se voit en trapèze</h2>
+<p><strong>É6.13 (L) Théorème 5.1 de la source, le trapèze encode la profondeur.</strong> Un carré n’est vu carré que de face. Dès qu’il s’incline, la perspective l’écrase : deux côtés restent parallèles, deux côtés convergent vers le point de fuite. <em>« L’œil ne reçoit jamais le carré, il reçoit le trapèze et infère le carré derrière. »</em> La forme lisse projetée est le trapèze visible ; la forme interne est le carré invariant. La projection est une involution partielle : elle préserve une paire de côtés, l’axe tenu, et fait converger l’autre, les rails vers la fuite ; là où le carré a deux paires de côtés parallèles, le trapèze n’en a qu’une, et la projection a brisé une symétrie (la v1.0 ajoutait : <em>« exactement comme le carré d’un chiffre du rail G tombe dans le rail D »</em>). La source énonce que le rapport de compression entre les deux côtés parallèles est le facteur r/R = cos(π/n) du polygone régulier correspondant : un carré vu carré est à compression nulle, donc à profondeur nulle ; un carré écrasé en trapèze fin est profondément sédimenté vers le barycentre ; la forme lue dit sa position dans la densification. Aucun calcul n’établit que la compression perspective d’un carré prend ces valeurs ; l’énoncé est une Lecture, et ce sont les valeurs qui sont des théorèmes (É6.14). La v1.0 concluait : <em>« le trapèze est la corde vue, le carré est la corde en soi »</em>, et la connexion entre les deux est la corde elle-même (chapitre 11).</p>
+<p><strong>É6.14 (Th) Les six compressions.</strong> Les rapports r/R = cos(π/n) des polygones réguliers inscrits, de n = 3 à n = 8 :</p>
+<table>
+<thead>
+<tr class="header">
+<th>Polygone</th>
+<th>Forme fermée</th>
+<th>r/R = cos(π/n)</th>
+<th>Compression</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Triangle (n = 3)</td>
+<td>1/2 = k</td>
+<td>0,5000000000</td>
+<td>maximale</td>
+</tr>
+<tr class="even">
+<td>Carré (n = 4)</td>
+<td>√2/2</td>
+<td>0,7071067812</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Pentagone (n = 5)</td>
+<td>ϕ/2 (ϕ, le nombre d’or)</td>
+<td>0,8090169944</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Hexagone (n = 6)</td>
+<td>√3/2</td>
+<td>0,8660254038</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Heptagone (n = 7)</td>
+<td>cos(π/7)</td>
+<td>0,9009688679</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Octogone (n = 8)</td>
+<td>cos(π/8)</td>
+<td>0,9238795325</td>
+<td>minimale</td>
+</tr>
+</tbody>
+</table>
+<p>La suite est strictement croissante et tend vers 1, le carré vu de face, sans jamais l’atteindre à n fini. Le triangle réalise la compression maximale et vaut exactement k.</p>
+<h2 id="liouville-laire-tient-la-forme-se-deforme">6.6 Liouville : l’aire tient, la forme se déforme</h2>
+<p><strong>É6.15 (F) Le théorème de Liouville.</strong> Sous tout flot hamiltonien, c’est-à-dire sous toute évolution physique réelle, le volume occupé dans l’espace des phases est rigoureusement conservé, tandis que sa forme se déforme sans cesse : un carré initial s’étire en parallélogramme de plus en plus oblique, son aire demeurant constante. La vérification directe est immédiate : toute matrice de cisaillement S_k = [[1, k], [0, 1]] a pour déterminant 1, quel que soit k ; le contrôle numérique confirme la conservation à 1,000000000000000 pour k de 0,5 à 1000, tandis que la forme s’allonge sans borne.</p>
+<p><strong>É6.16 (L) Théorème 6.1 de la source, l’invariance de l’aire sous déformation.</strong> Le quantum d’action se conserve sous projection et sous évolution : l’aire de la cellule de phase est invariante, tandis que sa forme passe du carré au trapèze ou au parallélogramme étiré. <em>« La conservation de l’aire est la loi de l’invariant caché ; la déformation de la forme est l’extéro-projection. Liouville est l’énoncé physique de la grammaire cadastrale : la forme change, l’aire tient. »</em> La partie « sous évolution » est le théorème de Liouville ; la partie « sous projection » est une Lecture : une projection perspective ne conserve pas les aires en général.</p>
+<p><strong>É6.17 (P) Le critère de falsification de la section 6.</strong> Exhiber un flot hamiltonien physique qui modifie l’aire de phase, ou une projection du carré cadastral qui altère l’aire invariante tout en préservant la forme. L’un ou l’autre réfute l’énoncé É6.16.</p>
+<h2 id="le-demi-nest-pas-le-quantum-il-est-la-face-conjuguee">6.7 Le demi n’est pas le quantum, il est la face conjuguée</h2>
+<p><strong>É6.18 (Th) La recomposition de la cellule.</strong> Le quantum d’action est h, et non un demi : les transitions sont entières, aucune émission n’emporte une demi-cellule (É6.6). Et 2 × (h/2) = h exactement : deux demis recomposent la cellule sans reste.</p>
+<p><strong>É6.19 (L) Deux lectures du demi.</strong> La première est soustractive : le fondamental occuperait une demi-cellule, et l’autre moitié serait perdue. La seconde est conjuguée : la cellule est pleine, et une seule de ses deux faces est accessible à la lecture. L’arithmétique tranche pour la seconde, puisque 2 × (h/2) = h. <em>« Rien n’a été détruit ; une face n’a pas été lue. »</em></p>
+<p><strong>É6.20 (L) Lecture 7.1, les deux demis se croisent au joint.</strong> Ce que l’on décrit comme une trajectoire unique est le croisement de deux demi-trajectoires conjuguées. Le 1 observé n’est pas un objet : c’est un joint, la somme 2 × 1/2 de deux faces dont une seule est lue. L’énergie du point zéro cesse alors d’être un résidu inexpliqué : elle est la face conjuguée, présente et non consultée. <em>« On ne peut pas connaître le chemin de l’autre face si on ne la voit pas ; de cette cécité, et non d’une propriété du réel, naît l’apparence du hasard. »</em></p>
+<p><strong>É6.21 (Th) Le demi est invisible à toute lecture différentielle.</strong> Par le théorème 2.2, le demi s’annule dans toute différence ; or toute mesure de transition est une soustraction de niveaux. Aucune mesure de transition ne peut donc le porter : il n’apparaît dans aucun spectre, non par défaut d’instrument, mais parce qu’aucun instrument fondé sur une différence ne peut en principe l’atteindre.</p>
+<p><strong>É6.22 (L) Lecture 7.2, la position du demi.</strong> L’invisibilité du demi n’est pas une limitation instrumentale contingente ; elle tient à sa position : il occupe le joint, et un joint ne se lit que par ce qu’il sépare. Toute lecture par différence le soustrait à lui-même. <em>« Ce qui existe est demi ; ce qui se lit est entier. »</em></p>
+<p><strong>É6.23 (P) La contrainte externe : la force de Casimir.</strong> Une seule classe d’expériences accède à l’énergie du point zéro sans passer par une différence de niveaux : la mesure de la force de Casimir entre deux surfaces conductrices. Elle est le seul témoin direct connu du demi, donc le point de contrainte externe des lectures 7.1 et 7.2. <em>« Toute réfutation devra passer par là. »</em></p>
+<h2 id="lindetermination-comme-cout-de-projection">6.8 L’indétermination comme coût de projection</h2>
+<p><strong>É6.24 (L) Lecture 8.1, le facteur 1/2 de la borne est k.</strong> Si la cellule est pleine et qu’une seule face est lue, l’indétermination mesurée ne décrit pas l’objet : elle décrit le prix de la lecture. L’inégalité de Robertson est exacte dans le formalisme où elle est démontrée et n’est pas contestée ; ce qui est contesté est l’inférence qui en fait une propriété du réel plutôt qu’une propriété du dispositif. Le 1/2 de la borne est k = 4,5/9, rapport du barycentre à la clôture, qui admet plusieurs dérivations indépendantes (chapitre 4, É4.4 et É4.5) ; la borne se relit σ_q σ_p ≥ k × ħ.</p>
+<p><strong>É6.25 (L) Ce que cette lecture n’affirme pas.</strong> Elle n’affirme pas que les corrélations quantiques soient reproductibles par un modèle déterministe local au sens de Bell : ce point est exclu par un théorème et par l’expérience, et rien ici ne le conteste. La position est autre : les protocoles classique et quantique ne mesurent pas la même chose sur la même figure. La borne classique 2 mesure les côtés du carré, la borne de Tsirelson 2√2 en mesure la diagonale, et celle-ci se factorise exactement en 4 × k × √2, <em>« sommets fois pli fois diagonale »</em>, tous trois issus du seul carré et de son cercle circonscrit ; l’avantage quantique vaut précisément √2 (chapitre 1).</p>
+<h2 id="les-particules-sont-des-fonctions">6.9 Les particules sont des fonctions</h2>
+<p><strong>É6.26 (L) Lecture 9.1, requalification et non suppression.</strong> Si le quantum est l’aire qui relie deux pôles conjugués, les noms de particules cessent de désigner des objets : ils désignent des fonctions, des résonances stables de la corde cadastrale (la v1.0 : <em>« l’un des neuf rôles que la quantification de la tension autorise »</em>, par le théorème 3.6 du scellement de la corde, chapitre 11). Une particule observée n’est pas une bille ; c’est un mode propre, comme une note de musique est une fréquence et non une chose. La trace dans le détecteur demeure, elle est une donnée ; l’ontologie de l’objet s’efface au profit de l’ontologie de la fonction. La distinction se tient exactement : les particules mesurées (électron, quarks, boson de Higgs) ne disparaissent pas, elles se requalifient d’objets en fonctions, de billes en résonances ; les particules postulées et jamais observées (la ménagerie supersymétrique, les partenaires inventés pour combler les trous du continuum) s’évaporent sans cérémonie, comme l’éther et le calorique, non réfutées mais plus jamais citées, faute de fonction à remplir. <em>« Le faux serait d’affirmer que les quarks n’existent pas ; le juste est que les quarks sont des résonances, non des objets dans l’espace. »</em></p>
+<h2 id="synthese">6.10 Synthèse</h2>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Physique</th>
+<th>Forme cadastrale</th>
+<th>Statut</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Quantum d’action h</td>
+<td>aire de la cellule ; invariant caché</td>
+<td>Th (É6.2)</td>
+</tr>
+<tr class="even">
+<td>Aire du niveau n, (n + 1/2)h</td>
+<td>les états habitent les joints</td>
+<td>Th (É6.5)</td>
+</tr>
+<tr class="odd">
+<td>Transition, h</td>
+<td>le lien est entier ou n’est pas</td>
+<td>Th (É6.6)</td>
+</tr>
+<tr class="even">
+<td>Plan de phase (q, p)</td>
+<td>croix à quatre secteurs ; bipolarisation</td>
+<td>L (É6.10)</td>
+</tr>
+<tr class="odd">
+<td>Quatre quadrants</td>
+<td>quatre paires de φ, (1, 8)(2, 7)(3, 6)(4, 5)</td>
+<td>Th (É6.9)</td>
+</tr>
+<tr class="even">
+<td>Origine q = p = 0</td>
+<td>barycentre 4,5, inoccupé ; axe immobile</td>
+<td>L (É6.10)</td>
+</tr>
+<tr class="odd">
+<td>Forme observée</td>
+<td>trapèze projeté ; extéro-projection</td>
+<td>L (É6.13)</td>
+</tr>
+<tr class="even">
+<td>Profondeur</td>
+<td>facteur r/R = cos(π/n) ; sédimentation</td>
+<td>L (É6.13), valeurs Th (É6.14)</td>
+</tr>
+<tr class="odd">
+<td>Conservation (Liouville)</td>
+<td>aire tenue, forme déformée ; loi de l’invariant</td>
+<td>F (É6.15)</td>
+</tr>
+<tr class="even">
+<td>Énergie du point zéro</td>
+<td>la face conjuguée, 2 × (h/2) = h</td>
+<td>L (É6.20)</td>
+</tr>
+<tr class="odd">
+<td>Borne de Robertson, ħ/2</td>
+<td>coût de projection k</td>
+<td>L (É6.24)</td>
+</tr>
+<tr class="even">
+<td>Spin 1/2 des fermions</td>
+<td>4,5/9</td>
+<td>L (É6.24)</td>
+</tr>
+</tbody>
+</table>
+<p><em>« Le quantum n’est pas une bille dans l’espace. C’est une aire dans la grammaire. La grammaire conserve l’aire en déformant la forme, et ce qu’elle ne cède jamais, elle le loge dans le demi. L’indétermination, elle, n’était pas dans l’objet ; elle était le prix d’une lecture qui ne consulte qu’une face sur deux. »</em></p>
+
+</main>
+<nav class="chapnav"><span class="prev"><a href="06-chapitre-5-l-effet-tunnel-la-barriere-comme-aiguil.html">← Chapitre 5. L&#x27;effet tunnel : la barrière comme aiguillage</a></span><a class="toc" href="index.html">Sommaire du volume</a><span class="next"><a href="08-chapitre-7-le-proton-comme-axe.html">Chapitre 7. Le proton comme axe →</a></span></nav>
+<footer class="colophon"><p>Corpus ARC, Filipe Bastos, <a href="https://creativecommons.org/licenses/by/4.0/deed.fr" rel="license">CC BY 4.0</a>.</p></footer>
+</body>
+</html>

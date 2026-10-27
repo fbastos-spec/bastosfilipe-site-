@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<link rel="canonical" href="https://bastosfilipe.com/arc/volumes/v04-la-theorie-des-nombres/18-chapitre-12-l-amplitude-des-battements-le-produit.html">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chapitre 12. L&#x27;amplitude des battements, le produit de cascades, les quatre moments · La Théorie des Nombres · Corpus ARC</title>
+<meta name="description" content="La Théorie des Nombres, volume 4 du corpus ARC de Filipe Bastos. Chapitre 12. L&#x27;amplitude des battements, le produit de cascades, les quatre moments.">
+<meta name="keywords" content="delfine, nombres premiers, grille 6k ± 1, Collatz, Goldbach, nombres parfaits, nombres jumeaux, racine digitale, 24, corpus ARC, Filipe Bastos">
+<meta name="author" content="Filipe Bastos">
+<meta name="license" content="https://creativecommons.org/licenses/by/4.0/deed.fr">
+<link rel="stylesheet" href="../../assets/arc.css">
+</head>
+<body>
+<nav class="crumbs"><a href="../../index.html">Corpus ARC</a> / <a href="index.html">Volume 4 · La Théorie des Nombres</a></nav>
+<main class="chapter">
+<h1 id="chapitre-12.-lamplitude-des-battements-le-produit-de-cascades-les-quatre-moments">Chapitre 12. L’amplitude des battements, le produit de cascades, les quatre moments</h1>
+<p>Le 7 octobre 2026, le Tome II a reçu trois théorèmes sur deux chantiers que le corpus avait laissés ouverts en toutes lettres. Le premier (Th 39) répond en partie au chantier n°3 du chapitre 6 : il calcule exactement, par une formule fermée, la grandeur quadratique du résidu des battements sommée sur un tour complet et rapportée à sa longueur, sans parcourir les positions, et en tire la loi en racine que le Tome I avait seulement mesurée. Le deuxième (Th 40) répond à la question laissée ouverte par <em>La Cascade cadastrale</em> : comment composer la cascade d’un produit ; il donne la formule exacte, retenues comprises. Le troisième (Th 41) montre comment lire séparément les quatre paires du cadastre, en gardant l’orientation que le carré efface. Chaque énoncé porte sa portée exacte ; aucun ne conclut sur les jumeaux, Riemann ou le dipôle cosmique, et c’est écrit. La règle reste : aucune ligne retirée sans une ligne proposée.</p>
+<h2 id="theoreme-39-lamplitude-des-battements-en-formule-fermee">12.1 Théorème 39 : l’amplitude des battements, en formule fermée</h2>
+<p><strong>Le chantier.</strong> Le Tome I (§ XII.c à f, chapitre 6) conserve les phases des croisements du registre des premiers et constate, sur plusieurs fenêtres, des amplitudes en racine du nombre de croisements (V4.6.4). Il ouvre le contrôle de ce résidu (V4.6.2).</p>
+<p><strong>Les objets.</strong> Soit G un ensemble de t nombres premiers au-delà de 3, de produit M (la longueur du tour commun). À la position k, f(k) compte combien des deux branches 6k − 1 et 6k + 1 sont touchées par au moins un générateur de G : 0, 1 ou 2. On note C(K) le cumul de f jusqu’à K, ρ = Π(1 − 1/p) la part des positions libres de chaque branche, et E(K) = C(K) − 2(1 − ρ)K le résidu, dont le centre exact sur un tour est 1 − ρ. Ce centre du résidu est un autre objet que le centre 4,5 du cadastre. Pour chaque générateur, χ(p) vaut +1 sur le rail 6a + 1 et −1 sur le rail 6a − 1 ; on pose τ = Π(1 − (2 − χ(p))/p).</p>
+<p><strong>Théorème 39 (Tome II) : l’amplitude des battements.</strong> La grandeur quadratique du résidu recentré sur son tour complet vaut exactement :</p>
+<blockquote>
+<p>Q_G = (1/M) Σ_K (E(K) − (1 − ρ))² = (2^t ρ + τ − 2ρ²) / 9.</p>
+</blockquote>
+<p>Elle se calcule par des produits à t facteurs, sans parcourir les M positions ni énumérer les 2^t − 1 croisements. Aucune indépendance entre les croisements n’est postulée : le couplage de deux roues m et n sur leur tour commun vaut exactement d²/(mn) fois l’énergie de la sous-roue d = pgcd(m, n), et zéro sans diviseur partagé. La preuve passe par la fonction en dents de scie ψ(x) = x − ⌊x⌋ − ½ et son identité de partage Σ_j ψ(x + j/q) = ψ(qx), puis par inclusion-exclusion sur les sous-ensembles de G regroupés par intersection. <strong>Statut : Th.</strong></p>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>générateurs</th>
+<th>tour M</th>
+<th>Q_G</th>
+<th>√Q_G</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>5</td>
+<td>5</td>
+<td>2/25</td>
+<td>0,283</td>
+</tr>
+<tr class="even">
+<td>5, 7</td>
+<td>35</td>
+<td>292/1225</td>
+<td>0,488</td>
+</tr>
+<tr class="odd">
+<td>5, 7, 11</td>
+<td>385</td>
+<td>14688/29645</td>
+<td>0,704</td>
+</tr>
+<tr class="even">
+<td>5, 7, 11, 13</td>
+<td>5 005</td>
+<td>4884608/5010005</td>
+<td>0,987</td>
+</tr>
+<tr class="odd">
+<td>5, 7, 11, 13, 17, 19</td>
+<td>1 616 615</td>
+<td>1886889282048/522688811645</td>
+<td>1,900</td>
+</tr>
+</tbody>
+</table>
+<p>Les cinq valeurs exactes sont refaites pour ce volume, et la formule est confrontée à l’énumération du tour complet pour {5}, {5, 7}, {5, 7, 11} et l’ensemble non consécutif {7, 13} : égalité exacte en fractions. Pour G = {5, 7, 11, 13, 17, 19}, le compte à K = 10⁶ retrouve exactement les 973 858 branches touchées du Tome I (Th 13).</p>
+<p><em>Exemple au crayon, G = {5}.</em> t = 1, ρ = 4/5 ; 5 est sur le rail 6a − 1, donc χ(5) = −1 et τ = 1 − 3/5 = 2/5. Q = (2 × 4/5 + 2/5 − 2 × 16/25) / 9 = (50/25 − 32/25) / 9 = (18/25) / 9 = 2/25.</p>
+<p><strong>La loi en racine, démontrée pour cette grandeur (Th).</strong> Le terme (τ − 2ρ²)/9 reste entre −2/9 et 1/9 ; la partie dominante est 2^t ρ / 9, et le rapport de Q_G à 2^t ρ / 9 vaut 0,953 à quatre générateurs, 0,989 à six. Le nombre de croisements est 2^t − 1 : l’exposant ½ du Tome I a désormais une dérivation exacte, avec son coefficient ⅓ (√(1/9)) et son facteur de densité √ρ. Pour tout seuil λ, le nombre de positions où |E(K) − (1 − ρ)| ≥ λ est au plus M Q_G / λ² ; au seuil 2√Q_G, au plus un quart du tour.</p>
+<p><strong>Ce que le théorème dit, et ce qu’il ne dit pas.</strong> Il porte sur des générateurs fixés et sur un tour complet. Le contrôle du maximum sur une fenêtre courte, et celui d’un registre de générateurs qui grandit avec K, c’est-à-dire des premiers eux-mêmes, restent des questions distinctes. Rien ici ne conclut sur l’infinitude des jumeaux ni sur l’hypothèse de Riemann. <strong>Le chantier n°3 (V4.6.2) est fermé pour la grandeur quadratique à générateurs fixés ; il reste ouvert au-delà, et c’est écrit.</strong></p>
+<p><strong>V4.12.1 (L) : les deux rails dans la formule.</strong> Le seul terme qui distingue les deux rails est τ : un générateur du rail de 7 (6a + 1) y pèse 1 − 1/p, un générateur du rail de 5 (6a − 1) pèse 1 − 3/p. L’asymétrie des jumeaux (<em>Les Jumeaux et les Deux Réseaux</em>, § 1, chapitre 14 : 5 engendre le cercle de six, 7 n’engendre que son rail) est inscrite dans l’amplitude des battements.</p>
+<h2 id="theoreme-40-le-produit-de-cascades-avec-ses-retenues">12.2 Théorème 40 : le produit de cascades, avec ses retenues</h2>
+<p><strong>Le chantier.</strong> <em>La Cascade cadastrale</em> (v4.1, § 9 ; chapitre 15) demande comment composer la cascade d’un produit, et juge improbable une composition par les seules pointes des facteurs, à cause des retenues.</p>
+<p><strong>Théorème 40 (Tome II) : la loi du produit.</strong> Soient a_i et b_j les chiffres de A et B lus depuis les unités, c_k = Σ_i a_i b_(k−i) leur convolution brute, t_k la retenue entrant au rang k (t₀ = 0, t_L = 0, L étant la longueur du produit), et d_k = c_k + t_k − 10 t_(k+1) les chiffres réels du produit. Avec les poids de Pascal w_k = C(L − 1, k), la valeur entière dont la racine est la pointe de la cascade du produit vérifie :</p>
+<blockquote>
+<p>Σ_k w_k d_k = Σ_k w_k c_k + Σ_j (w_j − 10 w_(j−1)) t_j.</p>
+</blockquote>
+<p>Toutes les retenues sont conservées dans l’identité ; pour la seule racine finale, 10 w_(j−1) peut être remplacé par w_(j−1), leur différence étant un multiple de 9. L’effet d’une retenue sur la pointe dépend du changement de poids entre deux rangs voisins : avec des poids égaux il s’efface, avec les poids de Pascal il reste visible. La loi vaut pour toute pondération et pour toute base b, en remplaçant 10 par b. <strong>Statut : Th.</strong></p>
+<p><em>Exemple.</em> 14 × 26 = 364 : chiffres (4, 1) et (6, 2) ; convolution brute (24, 14, 2) ; retenues (0, 2, 1, 0) ; chiffres (4, 6, 3) ; poids (1, 2, 1). La convolution brute seule donne 24 + 28 + 2 = 54, racine 9 ; la correction vaut −35 (soit (2 − 10) × 2 + (1 − 20) × 1 = −16 − 19) ; la valeur exacte est 19, racine 1, qui est bien la pointe de la cascade de 3, 6, 4 (3 + 6 = 9, 6 + 4 = 10 → 1 ; 9 + 1 = 10 → 1). Vérifié sur les 40 000 produits A, B ≤ 200 (refait pour ce volume), et par un second code sur 160 000.</p>
+<p><strong>Le témoin : les seules pointes des facteurs ne suffisent pas (Th).</strong> 13 × 9 = 117 a pour pointe 1 ; 22 × 9 = 198 a pour pointe 9 ; les pointes des facteurs sont les mêmes (13 et 22 pointent sur 4, et 9 sur 9). Une fonction des deux seules pointes ne peut donc pas composer. Ce qu’il faut composer, ce sont les séquences conservées et leurs retenues : le chantier a maintenant son domaine, sa formule, son opérateur de correction et son témoin. <em>« La formule ne promet aucune multiplication plus rapide ; elle rend la cascade compositionnelle avec sa comptabilité complète. »</em></p>
+<h2 id="theoreme-41-lire-separement-les-quatre-paires">12.3 Théorème 41 : lire séparément les quatre paires</h2>
+<p><strong>Le chantier.</strong> Les quatre paires ont les écarts 1, 3, 5, 7 autour du centre 4,5 ; <em>Le Carré notifié</em> (Volume 2) montre que la projection quadratique efface l’orientation. On construit une lecture qui la conserve pour chaque paire.</p>
+<p><strong>Théorème 41 (Tome II) : les quatre moments.</strong> Soit un poids rationnel w_i sur chacune des huit positions i = 1, …, 8, et z_i = 2i − 9 les coordonnées centrées (−7, −5, −3, −1, 1, 3, 5, 7). Pour d = 1, 3, 5, 7, notons δ_d la différence des poids aux points +d et −d, et s_d leur somme. Les quatre moments impairs μ₁, μ₃, μ₅, μ₇ (μ_r = Σ w_i z_i^r) déterminent exactement les quatre δ_d, et les quatre moments pairs μ₀, μ₂, μ₄, μ₆ les quatre s_d, par interpolation de Lagrange sur les nœuds 1, 9, 25, 49 (les carrés des écarts), en fractions exactes. Les poids de la paire d sont (s_d − δ_d)/2 et (s_d + δ_d)/2. Vérifié sur les 3⁸ = 6 561 distributions à poids 0, 1 ou 2 (refait pour ce volume : restitution exacte dans les 6 561 cas). <strong>Statut : Th.</strong></p>
+<p><strong>Conséquence (Th).</strong> μ₁ = μ₃ = μ₅ = μ₇ = 0 équivaut à l’égalité des deux poids dans chacune des quatre paires. Le seul premier moment nul ne suffit pas : les poids (1, 1, 2, 1, 4, 1, 1, 1) ont pour total 12 et pour centre pondéré exactement 4,5, et pourtant la paire (4, 5) porte +3 et la paire (3, 6) porte −1 ; le premier moment ne voit que 3 × 1 − 1 × 3 = 0. Les trois moments suivants gardent l’adresse des contributions.</p>
+<p><strong>Portée.</strong> Le résultat acquis est la reconstruction exacte dans le modèle discret à huit positions. Pour une application au dipôle de <em>Cosmic Dipole Resolution</em> (Volume 8), il reste à définir quelle mesure donne chaque poids, comment les directions sont associées aux positions, et comment les incertitudes se propagent dans l’inversion ; aucune direction céleste n’est déduite ici.</p>
+<h2 id="les-errata-lexicaux-de-la-version-0.4">12.4 Les errata lexicaux de la version 0.4</h2>
+<p>La version 0.5 corrige trois formulations de la version 0.4, sans toucher aux énoncés : dans les deux phrases « le carré jette le signe et … jette le rang » (Collatz comme loi de chiralité) et « … écrase la spirale en cercle » (Lecture 35), le mot qui désignait la réduction des restes est remplacé par « le pli » ; dans le Théorème 37 (e), la formule qui qualifiait les deux rails par leur contraire est remplacée par « retombent chacun sur l’autre rail ». Les trois corrections sont appliquées dans ce volume (chapitres 9 et 10), conformément au Lexique (Volume 0, <em>Le Seuil</em>).</p>
+
+</main>
+<nav class="chapnav"><span class="prev"><a href="17-partie-v-les-ajouts-de-la-version-0-5.html">← Partie V. Les ajouts de la version 0.5</a></span><a class="toc" href="index.html">Sommaire du volume</a><span class="next"><a href="19-partie-vi-le-24-et-ses-voisins.html">Partie VI. Le 24 et ses voisins →</a></span></nav>
+<footer class="colophon"><p>Corpus ARC, Filipe Bastos, <a href="https://creativecommons.org/licenses/by/4.0/deed.fr" rel="license">CC BY 4.0</a>.</p></footer>
+</body>
+</html>

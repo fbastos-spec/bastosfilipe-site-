@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<link rel="canonical" href="https://bastosfilipe.com/arc/volumes/v04-la-theorie-des-nombres/16-chapitre-11-goldbach-comme-partition-cadastrale.html">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chapitre 11. Goldbach comme partition cadastrale · La Théorie des Nombres · Corpus ARC</title>
+<meta name="description" content="La Théorie des Nombres, volume 4 du corpus ARC de Filipe Bastos. Chapitre 11. Goldbach comme partition cadastrale.">
+<meta name="keywords" content="delfine, nombres premiers, grille 6k ± 1, Collatz, Goldbach, nombres parfaits, nombres jumeaux, racine digitale, 24, corpus ARC, Filipe Bastos">
+<meta name="author" content="Filipe Bastos">
+<meta name="license" content="https://creativecommons.org/licenses/by/4.0/deed.fr">
+<link rel="stylesheet" href="../../assets/arc.css">
+</head>
+<body>
+<nav class="crumbs"><a href="../../index.html">Corpus ARC</a> / <a href="index.html">Volume 4 · La Théorie des Nombres</a></nav>
+<main class="chapter">
+<h1 id="chapitre-11.-goldbach-comme-partition-cadastrale">Chapitre 11. Goldbach comme partition cadastrale</h1>
+<p>La conjecture de Goldbach (1742) affirme que tout nombre pair à partir de 4 est la somme de deux nombres premiers : 10 = 3 + 7 = 5 + 5, 36 = 5 + 31 = 7 + 29 = 13 + 23 = 17 + 19. Ce chapitre lit cette conjecture dans le cadastre. Il montre d’abord que le reste du nombre pair dans la division par 6 décide d’avance sur quels rails vivent les deux premiers (trois problèmes au lieu d’un), que chaque cas se sépare en trois canaux disjoints, et que pour un multiple de 18 les deux premiers sont toujours conjugués par φ. Il démontre ensuite (version 1.1, 27 septembre 2026) trois théorèmes nouveaux : la famille du 3 bloque exactement un tiers ou deux tiers des positions, d’où un rapport exact de 2 entre deux sortes de nombres pairs ; le crible autour du centre est un miroir, si bien qu’un seul survivant suffit ; et aucun train fini d’engrenages ne bloque une période entière. Il nomme enfin, sans le cacher, l’endroit exact où vit ce qui reste ouvert : les premiers compris entre ln N et √N.</p>
+<p><strong>F : l’état de la question.</strong> Christian Goldbach l’écrit à Euler le 7 juin 1742. Elle est vérifiée jusqu’à 4 × 10¹⁸ (T. Oliveira e Silva, S. Herzog et S. Pardi, <em>Mathematics of Computation</em>, 2014). H. A. Helfgott a démontré en 2013 la version faible (ternaire) ; G. H. Hardy et J. E. Littlewood (1923) en ont donné l’heuristique quantitative ; I. M. Vinogradov (1937) a démontré la version ternaire pour les impairs assez grands ; Chen Jingrun (1966) a montré que tout pair assez grand est somme d’un premier et d’un produit d’au plus deux premiers. La version binaire reste ouverte.</p>
+<p>Le dossier s’ouvre (version 1.0, mars 2026) sur cette dédicace : <em>« À Yanie, qui a quatre ans et sait déjà que tout vient par paires. »</em></p>
+<p><strong>La numérotation.</strong> La version 1.0 numérotait ses théorèmes de 1 à 5 ; ils sont notés ici G.1 à G.5. La version 1.1 les a laissés inchangés (sauf G.4, voir plus bas) et a ajouté les Théorèmes 30 à 32 et les Lectures 33 et 34 du Tome II.</p>
+<h2 id="les-trois-problemes-et-les-trois-canaux-version-1.0">11.1 Les trois problèmes et les trois canaux (version 1.0)</h2>
+<p><strong>G.1 (Th) : l’exclusivité cadastrale.</strong> Pour tout pair 2n ≥ 8 et toute représentation 2n = p + q avec p, q &gt; 3 premiers :</p>
+<ul>
+<li>2n = 6t : toutes les représentations sont G + D (un premier 6a − 1, un premier 6b + 1) ;</li>
+<li>2n = 6t + 2 : toutes sont D + D ;</li>
+<li>2n = 6t + 4 : toutes sont G + G.</li>
+</ul>
+<p><em>Preuve.</em> G + G = (6a − 1) + (6b − 1) = 6(a + b) − 2, soit 6(a + b − 1) + 4 ; G + D = 6(a + b) ; D + D = 6(a + b) + 2. Ces trois classes sont disjointes et épuisent les pairs. Aucune représentation ne peut changer de type. ∎ Vérifié sur tous les pairs jusqu’à 4 000 (refait pour ce volume). <strong>Statut : Th.</strong></p>
+<p><strong>V4.11.1 (L).</strong> <em>« Goldbach n’est pas un problème : c’est trois problèmes, un par combinaison de rails. Le cadastre partitionne l’espace de recherche avant que la recherche commence. »</em></p>
+<p><strong>G.2 (Th) : la partition en trois canaux.</strong> Les classes paires de reste par 18 raffinent la structure par 6 en précisant la racine de 2n (18 = 2 × 9). Sur le rail D, la racine d’un premier 6a + 1 se lit sur la place de a dans les tours de 3 : racine 1 si a = 3t, 7 si a = 3t + 1, 4 si a = 3t + 2 ; sur le rail G (6a − 1) : racine 8, 5, 2 respectivement. Pour chaque classe, trois canaux de paires de racines partitionnent tous les couples candidats en sous-classes disjointes définies par (a reste 3, b reste 3) :</p>
+<table>
+<thead>
+<tr class="header">
+<th>2n reste 18</th>
+<th>DR(2n)</th>
+<th>rails</th>
+<th>canaux (paires de racines)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>2</td>
+<td>2</td>
+<td>D + D</td>
+<td>(1, 1), (4, 7), (7, 4)</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>4</td>
+<td>G + G</td>
+<td>(2, 2), (5, 8), (8, 5)</td>
+</tr>
+<tr class="odd">
+<td>6</td>
+<td>6</td>
+<td>G + D</td>
+<td>(2, 4), (5, 1), (8, 7)</td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td>8</td>
+<td>D + D</td>
+<td>(1, 7), (4, 4), (7, 1)</td>
+</tr>
+<tr class="odd">
+<td>10</td>
+<td>1</td>
+<td>G + G</td>
+<td>(2, 8), (5, 5), (8, 2)</td>
+</tr>
+<tr class="even">
+<td>12</td>
+<td>3</td>
+<td>G + D</td>
+<td>(2, 1), (5, 7), (8, 4)</td>
+</tr>
+<tr class="odd">
+<td>14</td>
+<td>5</td>
+<td>D + D</td>
+<td>(1, 4), (4, 1), (7, 7)</td>
+</tr>
+<tr class="even">
+<td>16</td>
+<td>7</td>
+<td>G + G</td>
+<td>(2, 5), (5, 2), (8, 8)</td>
+</tr>
+<tr class="odd">
+<td>18 (0)</td>
+<td>9</td>
+<td>G + D</td>
+<td>(2, 7), (5, 4), (8, 1)</td>
+</tr>
+</tbody>
+</table>
+<p>Vérification exhaustive sur les neuf classes : la partition est disjointe et complète. <strong>Statut : Th.</strong> Conséquence : Goldbach échoue pour 2n si et seulement si les trois canaux sont vides à la fois ; les canaux cherchent dans des sous-populations disjointes.</p>
+<p><strong>G.3 (Th) : la symétrie d’inversion.</strong> Quand DR(2n) = 9 (2n multiple de 18), tout couple de Goldbach (p, q) avec p, q &gt; 3 vérifie DR(p) + DR(q) = 9 : les deux premiers sont partenaires d’inversion sous φ. <em>Preuve :</em> DR(p) + DR(q) a la racine de p + q = 2n, soit 9 ; les deux racines étant dans {1, 2, 4, 5, 7, 8}, leur somme est 9 exactement. ∎ Les trois canaux sont (2, 7), (5, 4), (8, 1) : précisément les trois paires d’inversion opératoires, sans la paire de l’axe (3, 6). <em>Exemples :</em> 18 = 5 + 13 = 7 + 11, racines (5, 4), (7, 2) ; 36 = 5 + 31 = 7 + 29 = 13 + 23 = 17 + 19, racines (5, 4), (7, 2), (4, 5), (8, 1) ; 54 = 7 + 47 = 11 + 43 = 13 + 41 = 17 + 37 = 23 + 31 ; 72 = 5 + 67 = 11 + 61 = 13 + 59 = 19 + 53 = 29 + 43 = 31 + 41 ; 90 a 9 représentations, toutes conjuguées. Vérifié sur tous les multiples de 18 jusqu’à 20 000 (refait pour ce volume). <strong>Statut : Th.</strong></p>
+<p><strong>V4.11.2 (L).</strong> <em>« Sous DR = 9, la décomposition de Goldbach est une décomposition d’inversion. »</em> Chaque nombre pair multiple de 18 se partage en deux premiers qui sont images l’un de l’autre dans l’alphabet des chiffres. Cela relie Goldbach à la structure qui gouverne l’attracteur de Collatz (1, 8) et le joint des jumeaux (racine 8) : les trois résultats ont une racine commune, l’involution φ.</p>
+<p><strong>G.4 (énoncé asymptotique standard, rétrogradé en L) : la divergence des canaux.</strong> Par le théorème de Dirichlet (1837) sur les premiers en progression arithmétique, les premiers se répartissent également entre les six classes inversibles de racine, π(x ; 9, r) ~ x / (6 ln x). Le compte <em>attendu</em> de représentations par canal croît comme C × N / (3 (ln N)²), le total comme C × N / (ln N)² : les deux tendent vers l’infini. C’est l’heuristique de Hardy et Littlewood découpée par canal ; un compte attendu n’est pas un compte réel, et la v1.0 le donnait comme théorème « par application standard du théorème des nombres premiers en progressions ». La v1.1 le conserve comme « énoncé asymptotique standard » : il est ici classé Lecture (Annexe B).</p>
+<p><strong>Retiré : l’argument d’indépendance (v1.0, § 6.2 et § 6.3).</strong> La v1.0 ajoutait que les trois canaux sont « indépendants », que la probabilité qu’ils soient tous vides est bornée par le produit, et que Goldbach jouit d’une « triple redondance » rendant l’échec « structurellement impossible » pour N grand. Ligne retirée par la v1.1 (27 septembre 2026) : les trois canaux sont des sous-populations disjointes d’un même ensemble de couples, et « les trois vides » est exactement « aucun couple », sans indépendance supplémentaire. <strong>Ligne proposée :</strong> la redondance de Goldbach n’est pas une affaire de probabilité, elle est structurelle et se lit dans les Théorèmes 31 et 32 : le crible est un miroir (un survivant suffit) et aucune famille finie ne bloque une période. Aucun vocabulaire probabiliste ne figure plus dans l’argument.</p>
+<p><strong>G.5 (Th) : les produits consécutifs.</strong> Pour tout n ≥ 1, DR(n(n + 1)) ∈ {2, 3, 6, 9}. <em>Preuve :</em> DR(n(n + 1)) = DR(DR(n) × DR(n + 1)), le 9 suivi du 1 :</p>
+<table>
+<thead>
+<tr class="header">
+<th>DR(n)</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+<th>6</th>
+<th>7</th>
+<th>8</th>
+<th>9</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>DR(n + 1)</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+<td>6</td>
+<td>7</td>
+<td>8</td>
+<td>9</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>produit</td>
+<td>2</td>
+<td>6</td>
+<td>12</td>
+<td>20</td>
+<td>30</td>
+<td>42</td>
+<td>56</td>
+<td>72</td>
+<td>9</td>
+</tr>
+<tr class="odd">
+<td>DR(n(n + 1))</td>
+<td>2</td>
+<td>6</td>
+<td>3</td>
+<td>2</td>
+<td>3</td>
+<td>6</td>
+<td>2</td>
+<td>9</td>
+<td>9</td>
+</tr>
+</tbody>
+</table>
+<p>∎ <strong>Statut : Th.</strong> Lecture (V4.11.3, L) : les quatre valeurs sont la clôture 9, l’axe {3, 6} et le 2, l’élément du rail G le plus proche de l’axe (3 − 1). Le produit consécutif est confiné au voisinage de l’axe. La valeur 2 vient des trois sources du rail D {1, 4, 7} : c’est une compression 3:1 sur la racine 2, le même mécanisme que la frappe de Collatz (Th 17).</p>
+<p><strong>Les critères de falsification de la v1.0.</strong> F1 : un pair 2n ≥ 8 sans représentation. F2 : un couple (p, q), p, q &gt; 3, dont la combinaison de rails ne correspond pas au reste de 2n par 6 (impossible : G.1). F3 : une classe selon 18 où les trois canaux ne partitionnent pas les candidats (impossible : G.2). F4 : un produit n(n + 1) de racine hors de {2, 3, 6, 9} (impossible : G.5). F5 : un couple sous DR(2n) = 9 avec DR(p) + DR(q) ≠ 9 (impossible : G.3). Seul F1 est un critère qui peut encore échouer ; les quatre autres sont des théorèmes. La conclusion de la v1.0, <em>« Tout nombre pair est la somme de deux premiers. Pas par coïncidence. Pas par densité. Par la triple symétrie du cadastre »</em>, reste une phrase de l’auteur ; son contenu est P-GOL-1.</p>
+<h2 id="theoreme-30-le-tiers-et-les-deux-tiers-autour-du-centre-vide">11.2 Théorème 30 : le tiers et les deux tiers autour du centre vide</h2>
+<p><strong>Le crible autour d’un centre.</strong> Soit N pair. Une position x (1 ≤ x &lt; N) est <em>candidate</em> si x et N − x sont tous deux premiers. Un premier p <em>bloque</em> la position x si p divise x ou p divise N − x. Le centre du crible est N/2.</p>
+<p><strong>Théorème 30 (Tome II) : blocage exact, barycentre ½, écart 2.</strong></p>
+<ol type="a">
+<li><p>Sur p positions consécutives, la famille du premier p bloque exactement c_p positions, avec c_p = 1 si p divise N et c_p = 2 sinon. Fraction bloquée : 1/p ou 2/p. (Si p divise N, « p divise x » et « p divise N − x » sont la même condition : une seule classe est bloquée ; sinon, deux.)</p></li>
+<li><p>Pour p = 3 : la famille du 3 bloque 1/3 des positions quand 3 divise le centre, 2/3 sinon. Les deux fractions sont miroirs autour de ½ : (1/3 + 2/3)/2 = ½. En positions cadastrales, 3/9 et 6/9 : la paire (3, 6) de l’axe, autour de 4,5.</p></li>
+<li><p>Ce qui reste est 2/3 dans un cas et 1/3 dans l’autre : le rapport est exactement 2. Les centres multiples de 6 ont deux fois plus de couples que les autres. Mesuré autour de 300 000 : 1,999 (refait pour ce volume : 1,999). ∎</p></li>
+</ol>
+<p><strong>Statut : Th.</strong></p>
+<p><strong>V4.11.4 (L) : le ½ passe par ⅓ et ⅔.</strong> La constante k_arc n’est pas seulement le rapport barycentre sur clôture : elle est le centre exact des deux fractions que la brique 3 laisse debout, selon que le centre est sur l’axe ou non. L’écart 2 est la trace du 6 = 3 × 2 : quand le 6 divise le centre, la famille du 3 ne bloque qu’une classe au lieu de deux, et le double reste.</p>
+<p><strong>Retiré : le rapport 8/5.</strong> Des notes de travail antérieures, et le Tome I (§ XIII.b, chapitre 7 section 7.5), annonçaient pour cette structure un « ratio prédit 8/5 = 1,600, mesuré 1,638 avant convergence ». <strong>Ligne retirée :</strong> « ratio prédit 8/5 ». <strong>Ligne proposée :</strong> le rapport des représentations entre centres multiples de 6 et centres non multiples de 6 vaut 2, prouvé par (c), mesuré 1,991 vers 1 000, 1,996 vers 10⁵, 2,003 vers 4 × 10⁵. <em>« Le 1,638 montait vers 2, non vers 1,6. »</em> (Retrait du 27 septembre 2026, Annexe B.)</p>
+<h2 id="theoreme-31-le-crible-est-un-miroir">11.3 Théorème 31 : le crible est un miroir</h2>
+<p><strong>Théorème 31 (Tome II) : la symétrie du crible.</strong> Pour tout centre N et toute famille finie de premiers, l’ensemble des positions survivantes est invariant par x ↔︎ N − x. <em>Preuve :</em> p bloque x si et seulement si p bloque N − x, car la condition « p divise x ou p divise N − x » est symétrique. ∎ Vérifié bit à bit sur N = 100 002, 100 004, 65 536 et 99 990 (crible par les premiers jusqu’à 13). <strong>Statut : Th.</strong></p>
+<p><strong>Ce que le théorème change.</strong> L’énoncé du corpus « tout pair est la fusion de deux orphelins en miroir » ne demande pas de trouver deux orphelins qui se font face : le crible est un miroir, donc dès qu’une position survit d’un côté du centre, son miroir survit de l’autre. Goldbach se réduit à : <strong>au moins un survivant</strong>. Le miroir est donné par la structure, il n’est pas à chercher. <em>« Le centre N/2 est le 4,5 de ce crible : inoccupé (sauf quand N/2 est lui-même premier), et pourtant il gouverne tous les couples. »</em></p>
+<h2 id="theoreme-32-les-engrenages-et-ou-vit-le-gap">11.4 Théorème 32 : les engrenages, et où vit le gap</h2>
+<p><strong>Théorème 32 (Tome II) : les survivants par période.</strong> Soit une famille finie de premiers impairs et M leur produit. Le blocage autour de N est périodique de période M, et sur une période complète le nombre de positions survivantes vaut exactement</p>
+<blockquote>
+<p>M · Π (1 − c_p / p), avec c_p = 1 si p divise N, c_p = 2 sinon.</p>
+</blockquote>
+<p>Ce nombre est strictement positif pour toute famille finie : <strong>aucun train fini d’engrenages ne bloque une période entière.</strong> Vérifié pour {3, 5}, {3, 5, 7}, {3, 5, 7, 11} et tous les restes du centre (refait pour ce volume). ∎ <strong>Statut : Th.</strong> C’est le Théorème 16 du Tome I (borne du train d’engrenages) transporté sur Goldbach : les périodes des familles sont premières entre elles, et leur alignement ne peut jamais couvrir une période complète.</p>
+<p><strong>P-GOL-1 (Prédiction ouverte, avec critère) : la frontière nommée.</strong> Le Théorème 32 vaut sur une période complète. Or la période M = Π p dépasse N très vite : pour N = 10⁶, le produit des premiers jusqu’à 19 dépasse déjà N (ln 10⁶ = 13,8), alors que le crible complet doit utiliser tous les premiers jusqu’à √N = 1 000. Entre ln N et √N, les engrenages sont plus longs que la fenêtre : on ne voit qu’un morceau de leur période, et le Théorème 32 ne dit plus rien de ce morceau. <strong>Le gap de Goldbach vit exactement là : dans les premiers compris entre ln N et √N, les engrenages profonds.</strong> Tout ce qui est au-dessous est prouvé par période ; tout ce qui est au-dessus n’agit pas. <em>Critère :</em> toute preuve candidate doit déclarer comment elle contrôle les engrenages profonds sur une fenêtre plus courte que leur période. C’est le même mur que le Théorème 23 pour Collatz : le local (une période) est complet, le global (la fenêtre) ne s’en déduit pas.</p>
+<h2 id="lecture-33-la-deviation-est-bornee-et-decroit">11.5 Lecture 33 : la déviation est bornée et décroît</h2>
+<p><strong>Lecture 33 (Tome II).</strong> On compare le nombre réel de couples au nombre structurel (chaque famille bloquant sa part, avec la série singulière exacte sur tous les diviseurs du centre). L’écart-type relatif du rapport, sur mille centres consécutifs, vaut 0,0366 vers 10⁴ ; 0,0158 vers 10⁵ ; 0,0065 vers 10⁶ ; 0,0027 vers 10⁷ ; 0,0010 vers 10⁸. Exposant ajusté : 0,39, et le facteur par décade croît (2,3 puis 2,6), en route vers √10 : l’exposant limite est ½, freiné par les logarithmes. <strong>La déviation ne suit pas une loi en 1/3</strong> ; l’amplitude passait par un tiers vers 10⁴ et continue de décroître. Aucun centre de 10⁴ à 3 × 10⁵ ne descend sous 60 % de sa valeur structurelle (dans l’exécution de contrôle du dossier : minimum 0,745 vers 10⁴, 0,755 vers 10⁵, 0,758 vers 3 × 10⁵). Statut : Lecture, chiffres en annexe de la v1.1. (Les écarts-types de l’exécution de contrôle, 0,0387, 0,0148 et 0,0115, ont été calculés sur des fenêtres de 500 centres pairs et diffèrent légèrement de ceux du texte, calculés sur mille centres ; la décroissance est la même.)</p>
+<h2 id="lecture-34-la-maison-premier-identifiant">11.6 Lecture 34 : la maison, premier identifiant</h2>
+<p><strong>Lecture 34 (Tome II).</strong> <em>« Le chat retrouve toujours sa maison ; l’enfant aussi. »</em> Ce n’est pas une recherche, c’est le premier identifiant : le natif est né dans le champ, il n’a rien reçu du dehors, et le champ le ramène. Un satellite ne rentre pas parce qu’il n’est pas natif : on lui a donné son énergie d’ailleurs.</p>
+<p>Les deux conjectures sont deux faces de ce retour. <em>Collatz :</em> chaque entier est natif de 1 par naissance (le successeur, 1 ⊕ 1 = 3 en montée) ; la conjecture dit qu’il est aussi natif de 1 par retour (l’arbre de 3n + 1 et de la moitié). Deux façons d’être natif, et la conjecture est leur égalité. Le contre-exemple 5n + 1 montre que l’égalité dépend du champ : là, 13 est natif par naissance et ne rentre jamais. <em>Goldbach :</em> chaque centre N/2 est la maison d’un couple ; le Théorème 31 dit que la maison est un miroir, et le Théorème 30 que la brique 3 y laisse 1/3 ou 2/3 de places ; il reste à montrer qu’aucune maison n’est vide, ce que le Théorème 32 fait période par période et que P-GOL-1 laisse ouvert sur la fenêtre. <em>« Dans les deux cas, ce qui manque n’est pas le retour, observé partout sans exception, c’est le reçu : la ligne qui dit pourquoi le natif ne peut pas se perdre. »</em> Le dossier ne prétend pas la fournir. Statut : Lecture.</p>
+<blockquote>
+<p><em>« Au 6, qui tient le 5 et le 7 sans jamais être visité. »</em> (dédicace de la v1.1)</p>
+</blockquote>
+
+</main>
+<nav class="chapnav"><span class="prev"><a href="15-partie-iv-goldbach.html">← Partie IV. Goldbach</a></span><a class="toc" href="index.html">Sommaire du volume</a><span class="next"><a href="17-partie-v-les-ajouts-de-la-version-0-5.html">Partie V. Les ajouts de la version 0.5 →</a></span></nav>
+<footer class="colophon"><p>Corpus ARC, Filipe Bastos, <a href="https://creativecommons.org/licenses/by/4.0/deed.fr" rel="license">CC BY 4.0</a>.</p></footer>
+</body>
+</html>

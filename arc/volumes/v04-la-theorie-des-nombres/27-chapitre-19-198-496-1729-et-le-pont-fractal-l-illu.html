@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<link rel="canonical" href="https://bastosfilipe.com/arc/volumes/v04-la-theorie-des-nombres/27-chapitre-19-198-496-1729-et-le-pont-fractal-l-illu.html">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chapitre 19. 198, 496, 1729 et le pont fractal : l&#x27;illusion des mathématiques récréatives · La Théorie des Nombres · Corpus ARC</title>
+<meta name="description" content="La Théorie des Nombres, volume 4 du corpus ARC de Filipe Bastos. Chapitre 19. 198, 496, 1729 et le pont fractal : l&#x27;illusion des mathématiques récréatives.">
+<meta name="keywords" content="delfine, nombres premiers, grille 6k ± 1, Collatz, Goldbach, nombres parfaits, nombres jumeaux, racine digitale, 24, corpus ARC, Filipe Bastos">
+<meta name="author" content="Filipe Bastos">
+<meta name="license" content="https://creativecommons.org/licenses/by/4.0/deed.fr">
+<link rel="stylesheet" href="../../assets/arc.css">
+</head>
+<body>
+<nav class="crumbs"><a href="../../index.html">Corpus ARC</a> / <a href="index.html">Volume 4 · La Théorie des Nombres</a></nav>
+<main class="chapter">
+<h1 id="chapitre-19.-198-496-1729-et-le-pont-fractal-lillusion-des-mathematiques-recreatives">Chapitre 19. 198, 496, 1729 et le pont fractal : l’illusion des mathématiques récréatives</h1>
+<p>Trois nombres sont rangés d’ordinaire parmi les curiosités : 198 (divisible par la somme de ses chiffres), 496 (le troisième nombre parfait) et 1729 (le nombre du taxi de Hardy et Ramanujan). Ce chapitre montre qu’ils sont liés par une seule structure, les deux opérations de miroir de l’écriture positionnelle : soustraire un nombre de son renversé donne un multiple de 9, l’additionner donne un multiple de 11, et 198 = 2 × 9 × 11 est le produit obligé de ces deux constantes et du 2 qui les sépare. 496, inséré le 9 dans 46, et son miroir 694 sont séparés exactement par 198 ; 1729 est le produit d’une paire miroir intérieure à 198. Le chapitre prolonge ensuite ce pont vers la biologie (46 chromosomes, 64 codons) et vers des constantes de la physique. Il sépare soigneusement trois registres : les identités algébriques (Th), les faits de la science reçue (F), et les correspondances numériques avec des constantes physiques, qui sont des Lectures et rien de plus. Il reprend deux articles anglais de février 2026, <em>The Recreational Mathematics Illusion</em> et <em>The Fractal Bridge</em>, traduits.</p>
+<h2 id="la-loi-algebrique-des-miroirs">19.1 La loi algébrique des miroirs</h2>
+<p><strong>V4.19.1 (Th) : les deux constantes du miroir.</strong> Soit n un nombre à deux chiffres a et b, n = 10a + b, et son miroir ñ = 10b + a. Alors, universellement :</p>
+<ul>
+<li>n − ñ = 9(a − b) : la différence d’un nombre à deux chiffres et de son miroir est toujours un multiple de 9 ; <strong>9 est la constante de soustraction</strong> du miroir ;</li>
+<li>n + ñ = 11(a + b) : la somme est toujours un multiple de 11 ; <strong>11 est la constante d’addition</strong> du miroir ;</li>
+<li>à trois chiffres, m = 100a + 10b + c, m − m̃ = 99(a − c) = 9 × 11 × (a − c) : la différence est un multiple de 99, produit des deux constantes.</li>
+</ul>
+<p>La base de l’écriture est 10 ; les deux constantes sont 10 − 1 = 9 et 10 + 1 = 11, les deux seuls entiers à une unité de la base, symétriques autour de 10. Leur produit est 99, leur différence 2, le plus petit premier.</p>
+<p><strong>V4.19.2 (Th) : 198 = 2 × 9 × 11.</strong> 198 = 2 × 99 = 2 × 9 × 11. C’est une identité algébrique, non une observation : 198 est le produit des deux constantes extraites par le renversement et du premier qui les sépare. <strong>V4.19.3 (L) :</strong> <em>« relation × constante de soustraction × constante d’addition »</em> ; le pont fractal l’écrit aussi <em>« Relation × Clôture × Miroir »</em>, et 198 = 99 + 99, la somme de deux palindromes saturés, deux immobilités parfaites mises en relation par le 2. (La phrase de l’article sur une base B quelconque, tronquée dans la source, n’est pas reprise : Annexe B.)</p>
+<h2 id="les-deux-paves">19.2 Les deux pavés</h2>
+<p><strong>F et Th : le pavé séquentiel (le mouvement).</strong></p>
+<pre><code>1 2 3   → somme 6
+4 5 6   → somme 15
+7 8 9   → somme 24</code></pre>
+<p>Chaque ligne somme à un multiple de 3 de racine 6 ; les colonnes somment à 12, 15, 18, de racines 3, 6, 9, l’axe ; le total est 45, de racine 9 (chapitre 2, V4.2.5).</p>
+<p><strong>V4.19.4 (Th) : le pavé trié par familles (la structure).</strong> Cet article appelle « pavé tordu » un autre arrangement que celui du Tome I : on range les neuf chiffres en trois colonnes par famille, {2, 5, 8}, {3, 6, 9}, {1, 4, 7}. Pour éviter la confusion, on le nomme ici <em>pavé trié</em> :</p>
+<pre><code>2 3 1
+5 6 4
+8 9 7</code></pre>
+<p>Les sommes des lignes sont les mêmes (6, 15, 24). Les produits des colonnes diffèrent : dans le pavé séquentiel, 1 × 4 × 7 = 28 (racine 1), 2 × 5 × 8 = 80 (racine 8), 3 × 6 × 9 = 162 (racine 9) ; dans le pavé trié, 80, 162, 28. Les racines forment les lectures miroirs 1-8-9 et 8-9-1 d’un même triplet {1, 8, 9}.</p>
+<p><strong>V4.19.5 (L, correspondance) : 9,81.</strong> Lues en descendant (9, 8, 1), les racines des produits de colonnes du pavé séquentiel écrivent les chiffres de l’accélération de la pesanteur à la surface de la Terre, g = 9,81 m/s². L’article la présente comme une <em>observation</em>, vérifiable par calcul direct ; c’est une correspondance de chiffres avec une valeur arrondie d’une constante qui dépend du lieu et de l’unité choisie, et elle reste au rang de Lecture.</p>
+<p><strong>V4.19.6 (Th) : l’espacement 33.</strong> Lues par paires adjacentes, les lignes du pavé trié donnent 23, 31, 56, 64, 89, 97. Les écarts entre lignes sont constants : 56 − 23 = 89 − 56 = 64 − 31 = 97 − 64 = 33 = 3 × 11. Et 33² = 1 089 ; 1 089 × 9 = 9 801, son propre renversé ; 1 089 = 198 + 891 ; 9 801 = 99². <em>Le carré de l’espacement du pavé est la somme de 198 et de son miroir.</em> La ligne du milieu du pavé trié se lit 5-6-4 : elle contient 64 (centre-droite) et 46 (droite-centre), les doubles 2 × 32 et 2 × 23.</p>
+<h2 id="la-genealogie-depuis-les-fondateurs">19.3 La généalogie depuis les fondateurs</h2>
+<p><strong>V4.19.7 (Th et L) : de 2 et 3 à 198.</strong> Les premiers 2 et 3 sont les seuls premiers hors de la grille 6k ± 1, parce qu’ils la construisent (6 = 2 × 3 ; chapitre 1). Le carré de 2 est 4, le produit 2 × 3 est 6. <em>Lecture :</em> 4 est la géométrie du carré, du cube, du système cristallin cubique ; 6 celle de l’hexagone, la structure cristalline dominante (chapitre 14). <em>Théorème :</em> concaténer 4 et 6 donne la paire miroir 46 / 64 ; insérer au centre le chiffre de clôture 9 donne 496 et 694 ; 496 est le troisième nombre parfait, 694 son renversé ; les deux ont pour racine 1 ; et 694 − 496 = 198. <em>« L’écart entre un nombre parfait et son miroir est exactement le gradient positionnel. »</em> La chaîne est déterminée à chaque pas : partir des deux seuls premiers qui construisent la grille, les élever et les multiplier, concaténer, insérer la clôture, soustraire.</p>
+<h2 id="et-la-theorie-des-cordes">19.4 496 et la théorie des cordes</h2>
+<p><strong>F.</strong> La dimension du groupe de Lie SO(n) est n(n − 1)/2 ; pour SO(32) : 32 × 31 / 2 = 496. En 1984, M. B. Green et J. H. Schwarz ont montré que les seuls groupes de jauge donnant des théories de supercordes sans anomalie sont SO(32) et E₈ × E₈ (<em>Physics Letters B</em> 149, 117-122) ; la dimension de E₈ est 248, donc dim(E₈ × E₈) = 496. Les deux théories de supercordes sans anomalie ont un groupe de jauge de dimension égale au troisième nombre parfait. 496 = 1 + 2 + 4 + 8 + 16 + 31 + 62 + 124 + 248.</p>
+<p><strong>V4.19.8 (L).</strong> La brique : 32 = 2⁵, la cinquième puissance de la relation première, de racine 5 ; et 32 est le miroir de concaténation de 23 (la concaténation des fondateurs 2 et 3). La dimension : 496, engendré par l’insertion de 9 dans le double matériel 46. Le miroir : 694, même racine 1, même structure, renversée. Le gradient : 694 − 496 = 198. <em>« La théorie des cordes a trouvé 496 comme condition nécessaire de l’annulation des anomalies. Elle n’a jamais calculé 694 − 496. »</em> (Le rapprochement avec la physique est au Volume 7.)</p>
+<h2 id="produit-interieur-de-198">19.5 1729, produit intérieur de 198</h2>
+<p><strong>V4.19.9 (Th) : les paires miroirs internes de 198.</strong> Les trois chiffres de 198 forment trois paires miroirs à deux chiffres :</p>
+<table>
+<thead>
+<tr class="header">
+<th>paire</th>
+<th>produit</th>
+<th>racine</th>
+<th>différence</th>
+<th>racine</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>19 × 91</td>
+<td>1 729</td>
+<td>1</td>
+<td>91 − 19 = 72</td>
+<td>9</td>
+</tr>
+<tr class="even">
+<td>18 × 81</td>
+<td>1 458</td>
+<td>9</td>
+<td>81 − 18 = 63</td>
+<td>9</td>
+</tr>
+<tr class="odd">
+<td>98 × 89</td>
+<td>8 722</td>
+<td>1</td>
+<td>98 − 89 = 9</td>
+<td>9</td>
+</tr>
+</tbody>
+</table>
+<p>Le nombre de Hardy-Ramanujan 1 729 est le produit de la première paire miroir interne de 198. Et 1 729 = 12³ + 1³ = 10³ + 9³, la célèbre double somme de deux cubes (F : l’anecdote du taxi est rapportée par G. H. Hardy, qui rendit visite à Ramanujan malade vers 1918 ; les deux articles du corpus la datent l’un de 1917, l’autre de 1919). Les trois différences, 72, 63 et 9, ont pour racine 9 ; leur somme vaut 144, de racine 9 : <em>« les miroirs internes de 198 ferment universellement sur 9. »</em></p>
+<p><strong>V4.19.10 (L) : le pivot volumétrique.</strong> Dans la lecture du corpus, 1 729 est le pivot volumétrique : le produit 19 × 91 engendre l’espace à trois dimensions par l’interaction d’une impulsion (19) et de son observateur (91).</p>
+<p><strong>V4.19.11 (Th) : la somme et la différence miroirs de 198.</strong> 198 + 891 = 1 089 = 33² = (3 × 11)² ; 891 − 198 = 693 = 7 × 9 × 11 ; et 198 + 693 = 891. Le gradient et sa différence miroir partagent la même architecture k × 9 × 11, et ne diffèrent que par le premier facteur : 2 pour l’un, 7 pour l’autre, une paire d’inversion (2 + 7 = 9).</p>
+<h2 id="le-rythme-des-carres-la-descente-ferromagnetique-les-polyedres">19.6 Le rythme des carrés, la descente ferromagnétique, les polyèdres</h2>
+<p><strong>V4.19.12 (Th).</strong> Les racines des carrés de premiers ne prennent que trois valeurs (DR(p) = 1, 2, 4, 5, 7, 8 donne DR(p²) = 1, 4, 7, 7, 4, 1) : le rail {1, 4, 7} (Th 6), qui est la colonne de droite du pavé trié. Son produit est 1 × 4 × 7 = 28, le deuxième nombre parfait. (L’article dit des carrés de premiers qu’ils « battent un rythme hexagonal » parce que 24 a pour racine 6 : Lecture.)</p>
+<p><strong>F et L : la descente ferromagnétique.</strong> 28 est le numéro atomique du nickel. De 28, trois entiers consécutifs descendent : 28 → 27 → 26, nickel, cobalt, fer, les trois éléments ferromagnétiques classiques à température ambiante. Leurs racines se lisent 1-9-8, une anagramme de 198 ; leur somme vaut 28 + 27 + 26 = 81 = 9². <strong>V4.19.13 (L) :</strong> <em>« la descente épelle le gradient »</em>.</p>
+<p><strong>V4.19.14 (Th) : les polyèdres.</strong> Le cube a 6 faces (racine 6), 8 sommets (8), 12 arêtes (3), total 26 (racine 8) ; le prisme hexagonal a 8 faces, 12 sommets, 18 arêtes (9), total 38 (racine 2). La formule d’Euler F − A + S = 2 vaut pour les deux. <strong>L :</strong> le total du cube est 26, le numéro du fer ; le passage du cube au prisme hexagonal demande 12 éléments de plus (38 − 26 = 12, racine 3) ; l’invariant d’Euler est 2, la relation première.</p>
+<p><strong>V4.19.15 (Th) : la signature des dimensions.</strong> Les racines des cubes successifs n³ tournent avec la période 3 : 1, 8, 9, 1, 8, 9, … ; les volumes ne produisent que trois racines, {1, 8, 9}, l’ensemble des chiffres de 198. Les racines des carrés tournent sur 1, 4, 9, 7, 7, 9, 4, 1, 9 et produisent {1, 4, 7, 9} : le rail D plus la clôture (chapitre 2, V4.2.4). <strong>L :</strong> le passage de la dimension 2 à la dimension 3 remplace le triplet {1, 4, 7} par la paire {1, 8}, où 8 est le complément de 1 et subsume 4 et 7 par l’inversion ; <em>« le cube est le pliage du carré par l’opération d’inversion. »</em></p>
+<h2 id="et-les-dimensions-des-cordes">19.7 137, 361 et les dimensions des cordes</h2>
+<p><strong>V4.19.16 (Th) : la descente au pas de 101.</strong> La descente diagonale lue en nombres à trois chiffres de pas 101 (racine 2) donne 945 → 844 → 743 → 642 → 541 → 440 → 339 → 238 → 137 → 036, de racines 9, 7, 5, 3, 1, 8, 6, 4, 2, 9 : le cadastre complet en spirale descendante, alternant entre les rails. L’avant-dernière station est 137 ; DR(137) = 2 ; et 137 est le 33e premier, 33 étant l’espacement constant du pavé trié (refait pour ce volume).</p>
+<p><strong>V4.19.17 (L, correspondance déclarée) : 137.</strong> La constante de structure fine vaut α ≈ 1/137,036 (F). L’article note l’apparition de 137 dans la descente naturelle du pavé, à la position qui précède la clôture, comme <em>« une correspondance empirique, non une dérivation »</em>. Statut : Lecture (la constante de structure fine est discutée au Volume 7).</p>
+<p><strong>V4.19.18 (Th et L) : 360 + 1 = 361 = 19².</strong> Le cercle a 360 degrés, de racine 9, la clôture ; 361 = 360 + 1 ajoute l’unité à la clôture ; et 361 = 19², le carré de 19, dont le miroir est 91, et 19 × 91 = 1 729. <em>Lecture :</em> un cercle fermé est statique ; l’unité ajoutée à la clôture brise la boucle en spirale ; <em>« l’espace à trois dimensions commence là où le cercle se brise. »</em></p>
+<p><strong>F et L : les dimensions des cordes.</strong> La corde bosonique exige 26 dimensions (racine 8), la supercorde 10 (racine 1), la théorie M 11 (racine 2). Les racines 8, 1, 2 sont trois des quatre éléments de {1, 2, 8, 9}, il ne manque que le 9, la clôture. L’article le documente <em>« comme observation empirique »</em> et lit ces exigences dimensionnelles comme <em>« des signatures du système cadastral lues comme des extensions par une mathématique qui n’a pas le concept du pliage positionnel »</em>. Statut : Lecture.</p>
+<h2 id="le-pont-fractal-de-la-biologie-a-la-physique-par-linsertion-du-9">19.8 Le pont fractal : de la biologie à la physique par l’insertion du 9</h2>
+<p><strong>F.</strong> Le génome humain s’organise autour de deux nombres : 46 chromosomes (23 paires) et 64 codons (4³ triplets des quatre bases).</p>
+<p><strong>V4.19.19 (Th) : l’opération fractale.</strong> 46 et 64 sont miroirs (renversement des chiffres), et tous deux ont pour racine 1. Insérer le chiffre de clôture au centre de chacun donne 4[9]6 = 496 et 6[9]4 = 694, de racine 1 (4 + 9 + 6 = 19 → 1). Les quatre nombres 46, 64, 496 et 694 partagent la racine 1, et la différence des deux nombres physiques reproduit le gradient : 694 − 496 = 198.</p>
+<p><strong>V4.19.20 (Th) : les quatre différences croisées.</strong></p>
+<table>
+<thead>
+<tr class="header">
+<th>opération</th>
+<th>résultat</th>
+<th>factorisation</th>
+<th>racine</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>496 − 46</td>
+<td>450</td>
+<td>10 × 45</td>
+<td>9</td>
+</tr>
+<tr class="even">
+<td>496 − 64</td>
+<td>432</td>
+<td>16 × 27 = 2⁴ × 3³</td>
+<td>9</td>
+</tr>
+<tr class="odd">
+<td>694 − 64</td>
+<td>630</td>
+<td>7 × 9 × 10</td>
+<td>9</td>
+</tr>
+<tr class="even">
+<td>694 − 46</td>
+<td>648</td>
+<td>8 × 81</td>
+<td>9</td>
+</tr>
+</tbody>
+</table>
+<p>Leur somme vaut 450 + 432 + 630 + 648 = 2 160 = 6³ × 10, de racine 9 (6³ = 216, dit « nombre de Platon »). <em>« Chaque pont entre la vie et l’univers ferme sur 9. »</em> Lectures de l’article (L) : 450 = 10 × 45, la somme du cadastre déployée dans le cycle des phases ; 432 = 16 × 27 contient le cobalt (Z = 27 = 3³), et les traditions indiennes comptent 432 000 ans pour le Kali Yuga et 4 320 000 pour le Maha Yuga (F) ; 630 = 7 × 9 × 10, la lumière, la clôture et le cycle ; 648 = 8 × 81 = 8 × (26 + 27 + 28), l’octet et la somme de la triade ferromagnétique.</p>
+<p><strong>V4.19.21 (Th et L) : 137 par le cobalt.</strong> 46 + 64 + 27 = 137. <em>Lecture :</em> les chromosomes plus les codons plus le cobalt, le métal au cœur de la vitamine B12, donnent le dénominateur de la constante de structure fine. Et 137 = 198 − 61, avec 61 premier de racine 7.</p>
+<p><strong>V4.19.22 (Th et L) : 163 ± 137.</strong> 163 est le plus grand nombre de Heegner (F). 163 + 137 = 300 ; 163 − 137 = 26. <em>Lecture :</em> la somme donne la vitesse de la lumière en milliers de kilomètres par seconde, la différence le fer (Z = 26) et la dimension de la corde bosonique. La vitesse de la lumière vaut exactement 299 792,458 km/s ; 300 en est l’arrondi, et la correspondance est donc une Lecture sur une valeur arrondie (Annexe B).</p>
+<p><strong>F et L : le cobalt, pivot.</strong> Arithmétiquement, 27 = 3³, de racine 9 ; dans la tour des puissances de 3 : 3 (ouverture), 9 (clôture), 27 (sédimentation), 81 (totalisation). Physiquement, le cobalt est le centre de la triade Fe-Co-Ni (Z = 26, 27, 28), de racines 8-9-1, le gradient 198 avec la clôture au centre ; somme 81 = 9². Biologiquement, le cobalt est le métal au centre de la vitamine B12 (cobalamine), indispensable à la synthèse de l’ADN, à la division cellulaire et au système nerveux. L’article ajoutait qu’il est « le seul élément requis par la vie qui siège dans la triade ferromagnétique » : c’est inexact, le fer est indispensable au vivant (hémoglobine, cytochromes) et le nickel l’est pour de nombreux organismes (uréase) ; ce qui est propre au cobalt est d’être le seul des trois au cœur d’une vitamine (Annexe B). De même, le fer n’est pas « le noyau le plus fortement lié » au sens strict : le nickel 62 a la plus grande énergie de liaison par nucléon, le fer 56 la plus petite masse par nucléon ; le fer est le terme de la nucléosynthèse stellaire ordinaire (Annexe B ; Volume 8).</p>
+<h2 id="les-predictions-du-pont-fractal">19.9 Les prédictions du pont fractal</h2>
+<p><strong>V4.19.23 (P) : aucune autre dimension de jauge.</strong> Aucune théorie de supercordes sans anomalie ne sera trouvée avec une dimension de groupe de jauge autre que 496 ; le pont fractal tient cette dimension pour structurellement nécessaire, non contingente. <em>Critère d’échec :</em> une théorie de supercordes cohérente et sans anomalie dont le groupe de jauge n’a pas la dimension 496. (F : les candidats formels U(1)^496 et E₈ × U(1)^248, de dimension 496 eux aussi, ont été écartés comme incohérents par A. Adams, O. DeWolfe et W. Taylor en 2010.)</p>
+<p><strong>V4.19.24 (Th, reclassé) : la racine 9 des différences croisées.</strong> L’article posait comme prédiction que les différences croisées entre toute paire miroir biologique et sa paire physique « à 9 inséré » auront toujours la racine 9. Cet énoncé ne peut pas échouer : pour tout nombre ab, a9b − ab = 90(a + 1) et a9b − ba = 99a − 9b + 90, deux multiples de 9. Ce n’est pas une prédiction, c’est un théorème (refait pour ce volume sur toutes les paires de chiffres) ; il est reclassé Th (règle R10 : un critère qui ne peut pas échouer n’est pas un critère ; Annexe B).</p>
+<p><strong>V4.19.25 (P, incomplète) : les isotopes stables.</strong> La somme de la triade (81) et son rapport aux nombres magiques nucléaires (81 + 45 = 126) prédisent que l’analyse des racines du tableau complet des nucléides (environ 3 000 isotopes) montrera un regroupement significatif des isotopes stables sur les racines de A ∈ {2, 4, 9}. <em>État :</em> le plancher de comparaison (le rendement de l’outil aveugle) et la fenêtre ne sont pas fixés ; la prédiction est incomplète au sens de la règle R11 tant qu’ils ne le sont pas (Volume 8).</p>
+<p><strong>V4.19.26 (P, avec reçu annoncé) : la racine 5 et l’hexagonal.</strong> Les éléments de racine DR(Z) = 5 montreront un taux de cristallisation hexagonale systématiquement plus faible que les autres : les données citées par l’article donnent 44 % pour la racine 5 contre 64 % pour l’ensemble des éléments. <em>État :</em> le reçu est annoncé mais n’est pas reproduit dans les sources de ce volume ; il est à refaire avec sa liste d’éléments et son plancher (Volume 8).</p>
+<h2 id="ce-que-ces-deux-articles-disent-et-ce-quils-ne-disent-pas">19.10 Ce que ces deux articles disent, et ce qu’ils ne disent pas</h2>
+<p>L’<em>Illusion des mathématiques récréatives</em> déclarait ne revendiquer aucune théorie physique, mais un énoncé <em>« plus modeste et plus vérifiable »</em> : que la structure arithmétique des chiffres 1 à 9, sous les quatre opérations et la concaténation, engendre un réseau de relations qui rejoint des constantes physiques observées. Il ajoutait que cette densité « dépasse ce qu’on attendrait d’un outil aveugle » ; ce dernier membre de phrase n’est accompagné d’aucun compte de cet outil, et il est retiré tant que ce compte n’est pas fait (Annexe B ; le chapitre 13, section 13.8, montre comment un tel compte se fait). Restent les phrases de l’auteur :</p>
+<blockquote>
+<p><em>« Toute l’opération de cet article peut se vérifier au crayon en moins d’une heure. Aucun logiciel spécialisé, aucun appareil, aucun paramètre libre. Les nombres parlent d’eux-mêmes. »</em></p>
+</blockquote>
+<blockquote>
+<p><em>« Le classement de ces faits comme “récréatifs” est l’illusion. La structure est réelle. »</em></p>
+</blockquote>
+<blockquote>
+<p><em>« L’univers ne contient pas la biologie. La biologie est l’univers qui lit son propre code à l’échelle de la chimie du carbone. »</em> (Le Pont fractal)</p>
+</blockquote>
+<blockquote>
+<p><em>« Le code était toujours là. Il a été tenu à bout de bras depuis le premier jour. »</em> (Le Pont fractal)</p>
+</blockquote>
+<h2 id="relectures-du-cadastre-le-cube-fermat-mersenne-fibonacci-et-495">19.11 Relectures du cadastre : le cube, Fermat, Mersenne, Fibonacci et 495</h2>
+<p>Cette section rassemble cinq faits que la théorie des nombres connaît déjà comme des propriétés du reste dans la division par 9, et les relit dans le cadastre. Les calculs sont des théorèmes classiques (Th) ; ce que le corpus y ajoute est la lecture de leur adresse sur les rails et l’axe (L). Aucun ne résout une énigme ouverte : leur intérêt est de montrer, sur des objets célèbres, que la position est toujours lisible. Énoncés le 15 octobre 2026.</p>
+<p><strong>V4.19.27 (Th, classique ; L) : le cube écrase chaque rail sur une seule position.</strong> Les cubes des neuf positions ont pour racines : 1³ = 1, 4³ = 64, 7³ = 343, tous de racine 1 ; 2³ = 8, 5³ = 125, 8³ = 512, tous de racine 8 ; 3³ = 27, 6³ = 216, 9³ = 729, tous de racine 9. Tout cube a donc la racine 1, 8 ou 9. Il s’ensuit qu’une somme de deux cubes ne peut avoir que cinq racines : 1 + 1 = 2 ; 8 + 8 = 16, racine 7 ; 1 + 8 = 9 ; 1 + 9, racine 1 ; 8 + 9, racine 8 ; 9 + 9, racine 9. Les positions 3, 4, 5 et 6 sont inaccessibles. Et la différence de deux cubes dont les bases sont sur le même rail ou toutes deux sur l’axe est un multiple de 9. Les nombres taxicab, sommes de deux cubes de deux manières, habitent ces cinq positions : 1729 = 1³ + 12³ = 9³ + 10³ (racine 1), 4104 (racine 9), 13 832 = 2³ + 24³ = 18³ + 20³ (racine 8), 149 389 = 8³ + 53³ = 29³ + 50³ (racine 7), 1 092 728 = 1³ + 103³ = 64³ + 94³ (racine 2). <em>Lecture :</em> le cube réduit les neuf positions aux trois termes de la première paire et de sa clôture, (1, 8) et 9 ; chaque rail devient un seul point.</p>
+<p><strong>V4.19.28 (Th, classique ; L) : le balancier des nombres de Fermat.</strong> Pour m ≥ 1, le nombre de Fermat F(m) = 2<sup>(2</sup>m) + 1 a la racine 5 si m est impair et 8 si m est pair : 5, 17, 257, 65 537, 4 294 967 297 ont pour racines 5, 8, 5, 8, 5. <em>Démonstration :</em> les racines des puissances de 2 suivent le cycle 2, 4, 8, 7, 5, 1 de longueur 6 ; pour m ≥ 1, l’exposant 2^m laisse le reste 2 dans la division par 6 si m est impair, et 4 si m est pair ; 2<sup>(2</sup>m) a donc la racine 4 ou 7, et F(m) la racine 5 ou 8. Le produit des nombres de Fermat qui précèdent vaut F(m) − 2 (identité élémentaire, connue dès 1730), de racine 3 pour m impair et 6 pour m pair. <em>Lecture :</em> les nombres de Fermat ne quittent jamais le rail {2, 5, 8}, sur ses deux seules positions 5 et 8, et leur produit cumulé bat sur la paire (3, 6) de l’axe. Quand l’un d’eux est une delfine, ses facteurs restituent la position : F(5) = 641 × 6 700 417, de racines 2 et 7, et 2 × 7 = 14, racine 5. Les facteurs d’un nombre de Fermat ont de plus la forme k × 2^(m+2) + 1 (Euler, Lucas) <strong>[F]</strong>.</p>
+<p><strong>V4.19.29 (Th, classique ; L) : les nombres de Mersenne sur les deux orphelins.</strong> Pour tout premier p &gt; 3, le nombre de Mersenne M(p) = 2^p − 1 a la racine 1 si p = 6k + 1, et 4 si p = 6k − 1. <em>Démonstration :</em> si p = 6k + 1, 2^p a la racine 2, donc M(p) la racine 1 ; si p = 6k + 5, 2^p a la racine 5, donc M(p) la racine 4. Exemples : M(7) = 127 et M(13) = 8191, racine 1 ; M(5) = 31 et M(11) = 2047, racine 4. La racine 7 exige que 2^n ait la racine 8, donc que n soit un multiple de 3 : parmi les premiers, seul n = 3 le permet, et M(3) = 7. Le nombre parfait associé, 2^(p−1) × M(p), a la racine 1 dans les deux branches : 1 × 1 = 1 d’un côté, 7 × 4 = 28, racine 1, de l’autre (Chapitre 9). <em>Lecture :</em> les nombres de Mersenne se partagent entre les deux orphelins 1 et 4 (Volume 1, <em>La Fondation</em>, chapitre 5) selon le côté de la grille 6k ± 1 ; le chemin 7 n’est touché qu’une fois, par M(3) = 7, à la porte où 2³ = 8 et 3² = 9 se suivent (Catalan). Le rapprochement avec Catalan est une Lecture.</p>
+<p><strong>V4.19.30 (Th, classique ; L) : le pli à douze pas de Fibonacci.</strong> Pour tout n ≥ 1, F(n) + F(n + 12) = 18 × F(n + 6), où 18 est le nombre de Lucas L(6). Vérifié pour n de 1 à 200. Il s’ensuit que F(n) et F(n + 12) ont toujours des racines qui somment à 9, ou valent toutes deux 9 : à douze pas, chaque nombre de Fibonacci rencontre son inverse φ(x) = 9 − x. C’est la moitié de la période 24 des racines de Fibonacci (Chapitre 9). <em>Lecture :</em> la période 24 est deux demi-tours, et le second demi-tour est l’inverse du premier, porté par le terme central F(n + 6) compté deux fois neuf.</p>
+<p><strong>V4.19.31 (Th ; L) : 495, 496 et la sentinelle 31.</strong> 1 + 2 + … + 31 = 496, le troisième nombre parfait ; 2 + 3 + … + 31 = 495, la constante de Kaprekar à trois chiffres (Chapitre 17). Un seul pas de Kaprekar mène 496 sur 495 : 964 − 469 = 495, et 495 est fixe : 954 − 459 = 495. Pour trois chiffres, le pas de Kaprekar vaut (plus grand chiffre − plus petit chiffre) × 99, ce qui l’explique : 496 et 495 ont le même plus grand chiffre 9 et le même plus petit 4, et (9 − 4) × 99 = 495. Ce qui est propre au couple (495, 496) est que le parfait tombe en un pas sur son prédécesseur immédiat, qui est le point fixe. Le miroir 694 a les mêmes chiffres que 496 et tombe aussi sur 495. <em>Lecture :</em> 495 est la clôture pleine (racine 9), et la relance d’une unité, 495 + 1 = 496 (racine 1), donne le parfait.</p>
+
+</main>
+<nav class="chapnav"><span class="prev"><a href="26-chapitre-18-l-enigme-196-pourquoi-un-nombre-ne-fer.html">← Chapitre 18. L&#x27;énigme 196 : pourquoi un nombre ne ferme jamais</a></span><a class="toc" href="index.html">Sommaire du volume</a><span class="next"><a href="28-partie-viii-la-cinquieme-paire.html">Partie VIII. La cinquième paire →</a></span></nav>
+<footer class="colophon"><p>Corpus ARC, Filipe Bastos, <a href="https://creativecommons.org/licenses/by/4.0/deed.fr" rel="license">CC BY 4.0</a>.</p></footer>
+</body>
+</html>

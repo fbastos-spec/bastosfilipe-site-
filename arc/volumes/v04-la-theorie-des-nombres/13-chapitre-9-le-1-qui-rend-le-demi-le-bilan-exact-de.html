@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<link rel="canonical" href="https://bastosfilipe.com/arc/volumes/v04-la-theorie-des-nombres/13-chapitre-9-le-1-qui-rend-le-demi-le-bilan-exact-de.html">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chapitre 9. Le +1 qui rend le demi, le bilan exact des deux briques, la porte 8 · La Théorie des Nombres · Corpus ARC</title>
+<meta name="description" content="La Théorie des Nombres, volume 4 du corpus ARC de Filipe Bastos. Chapitre 9. Le +1 qui rend le demi, le bilan exact des deux briques, la porte 8.">
+<meta name="keywords" content="delfine, nombres premiers, grille 6k ± 1, Collatz, Goldbach, nombres parfaits, nombres jumeaux, racine digitale, 24, corpus ARC, Filipe Bastos">
+<meta name="author" content="Filipe Bastos">
+<meta name="license" content="https://creativecommons.org/licenses/by/4.0/deed.fr">
+<link rel="stylesheet" href="../../assets/arc.css">
+</head>
+<body>
+<nav class="crumbs"><a href="../../index.html">Corpus ARC</a> / <a href="index.html">Volume 4 · La Théorie des Nombres</a></nav>
+<main class="chapter">
+<h1 id="chapitre-9.-le-1-qui-rend-le-demi-le-bilan-exact-des-deux-briques-la-porte-8">Chapitre 9. Le +1 qui rend le demi, le bilan exact des deux briques, la porte 8</h1>
+<p>Pourquoi la règle de Collatz ajoute-t-elle 1, et pas 5 ou 7 ? Ce chapitre répond : diviser un impair par 2 jette un demi (7 / 2 = 3,5), et le +1 placé avant la coupe est exactement ce demi rendu, puisque (3n + 1)/2 = 3n/2 + ½. C’est le plus petit ajout qui rende la coupe légitime, et c’est le seul qui ne crée qu’une seule « maison » où tout revient. Il établit ensuite une identité exacte, en fractions, qui relie pour toute orbite le nombre de frappes du 3, le nombre de moitiés du 2 et le nombre de départ : le bilan des deux briques. Il montre que toute orbite passe par la porte 8 avant de se poser sur 1. Il corrige enfin deux arguments de la version 2.1 et pose le pont avec P contre NP : le gap de Collatz se lit comme un coût, pas comme un trou. Ces résultats datent du 27 septembre 2026 (Tome II, versions 0.3 et 0.4).</p>
+<h2 id="theoreme-24-le-1-rend-la-moitie-amputee">9.1 Théorème 24 : le +1 rend la moitié amputée</h2>
+<p><strong>Le fait de départ.</strong> 7 divisé par 2 donne 3,5. Tout impair s’écrit 2q + 1, et le 1 est ce que la division par 2 jette : un ½. Trois fois un impair est impair, sans exception : le × 3 garde le côté. Si la règle était 3n seule, un impair ne pourrait jamais être divisé sans amputation : 7 → 21 → 63 → 189 → … monte pour toujours dans le royaume de la brique 3, ou bien la coupe forcée donne un nombre en « virgule cinq » et le nombre sort des entiers.</p>
+<p><strong>Théorème 24 (Tome II) : le +1 rend la moitié amputée, et il est seul à ne créer qu’une maison.</strong></p>
+<ol type="a">
+<li><p>Pour tout impair n : (3n + 1)/2 = 3n/2 + ½. Le +1 avant la coupe est exactement le ½ après la coupe : ce que la division allait amputer est rendu, et le résultat retombe entier. Le +1 est le plus petit terme qui le fasse (1 = 2 × ½). <em>« Il rend ; il ne descend pas : c’est la moitié qui descend. »</em></p></li>
+<li><p>Pour tout c impair, 3(cm) + c = c(3m + 1) : le monde de 3n + c contient une copie exacte du monde de 3n + 1, agrandie c fois, portée par les multiples de c. Le cycle c → 4c → 2c → c est le cycle 1 → 4 → 2 → 1 multiplié par c.</p></li>
+<li><p>1 est le seul entier qui divise tout entier. Le monde de +1 n’a donc qu’une copie de lui-même : une seule maison. Pour c &gt; 1, les entiers non multiples de c ne sont dans aucune copie et sédimentent ailleurs : 3n + 7 a deux maisons (les cycles de plus petits termes 5 et 7 ; 7 → 28 → 14 → 7 est 1 → 4 → 2 → 1 fois 7), et 3n + 5, 3n + 11, 3n + 13 en ont au moins trois, vérifié sur 1 à 20 000. ∎</p></li>
+</ol>
+<p><strong>Statut : Th.</strong> (Vérification de la source : 3n + 1 n’a qu’une maison sur 1 à 20 000 ; 3n + 7 exactement deux.)</p>
+<p><strong>Ce que le théorème dit, et ce qu’il ne dit pas.</strong> Il explique pourquoi Collatz <em>peut</em> redescendre à chaque frappe, et pourquoi il n’y a qu’un seul point d’arrivée possible. Il ne dit pas que la descente <em>finit</em>. La phrase du corpus « tout cherche son 1 » se précise : chaque entier revient au 1 du monde où il vit, et dans 3n + 1 il n’y a qu’un monde.</p>
+<p><strong>V4.9.1 (L) : Collatz comme loi de chiralité.</strong> La chiralité, ici, est le côté pair ou impair. La moitié d’un impair jette ce bit comme le carré jette le signe et le pli jette le rang : une amputation. La règle 3n + 1 est cette amputation corrigée : garder le côté (× 3), puis rendre le ½ avant que la coupe ait lieu (+1). Collatz est la seule règle qui coupe un impair sans jamais l’amputer, et le +1 est k_arc rendu à chaque coupe. Le 1 n’est que la finalité : le point où le 2 n’a plus rien à diviser. Le 2 est l’interface (la soustraction trinitaire 1 − 1 = 11, de racine 2 ; Volume 2), le défilé par lequel tout passe.</p>
+<blockquote>
+<p><em>« Ce qu’il faut chercher n’est pas le 1, c’est le 2 : combien de fois il passe. »</em></p>
+</blockquote>
+<p>Enfin, <em>« 1 ⊕ 1 = 3 et 3n + 1 sont la même phrase lue dans deux sens : la brique 3 frappe, le 1 s’ajoute, et c’est leur relation qui libère la moitié »</em> (la Genèse, Volume 1). Statut : Lecture.</p>
+<h2 id="theoreme-25-le-bilan-exact-des-deux-briques">9.2 Théorème 25 : le bilan exact des deux briques</h2>
+<p><strong>Théorème 25 (Tome II) : le bilan exact.</strong> Soit une orbite de n vers 1, comptant k frappes (les impairs rencontrés n₁, …, n_k) et m moitiés. Alors, exactement et en fractions :</p>
+<blockquote>
+<p>2^m = 3^k · n · Π_i (1 + 1/(3n_i)), et L = k + m + 1,</p>
+</blockquote>
+<p>où L est le nombre de termes de l’orbite.</p>
+<p><em>Preuve.</em> Chaque frappe multiplie l’impair courant n_i par (3n_i + 1)/n_i = 3 · (1 + 1/(3n_i)) ; chaque moitié divise par 2 ; le produit de toutes les opérations envoie n sur 1. Le nombre de termes est le nombre d’opérations plus un. ∎ Vérifié exact, en fractions, pour n = 1 à 3 000 (refait pour ce volume). <strong>Statut : Th.</strong></p>
+<p><em>Les bilans des petits nombres</em> (refaits pour ce volume) :</p>
+<table>
+<thead>
+<tr class="header">
+<th>n</th>
+<th>L</th>
+<th>k</th>
+<th>m</th>
+<th>2^m / (3^k n)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>3</td>
+<td>8</td>
+<td>2</td>
+<td>5</td>
+<td>1,1852</td>
+</tr>
+<tr class="even">
+<td>7</td>
+<td>17</td>
+<td>5</td>
+<td>11</td>
+<td>1,2040</td>
+</tr>
+<tr class="odd">
+<td>9</td>
+<td>20</td>
+<td>6</td>
+<td>13</td>
+<td>1,2486</td>
+</tr>
+<tr class="even">
+<td>27</td>
+<td>112</td>
+<td>41</td>
+<td>70</td>
+<td>1,1988</td>
+</tr>
+<tr class="odd">
+<td>55</td>
+<td>113</td>
+<td>41</td>
+<td>71</td>
+<td>1,1771</td>
+</tr>
+</tbody>
+</table>
+<p>Exemple au crayon, n = 3 : l’orbite est 3, 10, 5, 16, 8, 4, 2, 1 ; les impairs frappés sont 3 et 5 (k = 2), les moitiés au nombre de 5 (m = 5), L = 8 = 2 + 5 + 1. Et 2⁵ = 32 = 3² × 3 × (1 + 1/9)(1 + 1/15) = 27 × (10/9) × (16/15) = 32. ∎</p>
+<p><strong>V4.9.2 (L) : la suite des portes ouvertes.</strong> Le retour à 1 est le moment exact où les moitiés (brique 2) ont rattrapé les frappes (brique 3) et le nombre de départ. Le facteur résiduel est la trace de chaque +1 rapporté à 3n_i : la suite des portes ouvertes. Sur 3, 7, 9, 27 et 55 il reste entre 1,17 et 1,25. Les formes L = 2n + 2 (3 et 9), L = 2n + 3 (7 et 55), L = 4n + 4 (27) sont des ombres de cette identité projetées sur les petits nombres.</p>
+<p><strong>Frontière, en acte.</strong> Le bilan lie k, m et n une fois le chemin parcouru. Il ne prédit pas k à partir de n. C’est le Théorème 23 vu de l’intérieur : la route par la racine est scellée, et le bilan montre exactement où passe la frontière, entre l’adresse et le compte des 2.</p>
+<h2 id="theoreme-26-la-porte-8-au-niveau-entier">9.3 Théorème 26 : la porte 8 au niveau entier</h2>
+<p><strong>Théorème 26 (Tome II) : la porte 8 et le défilé du 2.</strong> Toute orbite partant hors de {1, 2, 4} se termine par 16 → 8 → 4 → 2 → 1, et 16 ne peut venir que de 32 (moitié) ou de 5 (frappe). Plus généralement, toute orbite se termine quand une frappe tombe sur une puissance de 2 : le dernier impair de tout chemin est de la forme (4^j − 1)/3, soit 1, 5, 21, 85, 341, 1 365, …, et le défilé final est du pur 2.</p>
+<p><em>Preuve.</em> 1 ne vient que de 2 ; 2 que de 4 ; 4 que de 8 ou de 1 ; 8 que de 16 ; 16 que de 32 ou de 5. Et une suite de moitiés qui atteint 1 part d’une puissance de 2, dont l’antécédent impair vérifie 3n + 1 = 2^j, ce qui exige j pair (2^j laisse le reste 1 dans la division par 3 seulement pour j pair). ∎ Vérifié jusqu’à 200 000 (refait pour ce volume). <strong>Statut : Th.</strong></p>
+<p><strong>V4.9.3 (L) : le 8 est la porte obligée.</strong> Le Théorème C.4 posait l’attracteur (1, 8) au niveau des adresses. Le Théorème 26 le pose au niveau des entiers : le 8 est la porte obligée, la paire (1, 8) fermée par 9 est traversée par tout entier avant de se poser. La lecture 9-8-1 du corpus n’est plus seulement cadastrale. <em>« Et le 1 n’est pas le but : il est le point où le 2 s’arrête de diviser. »</em></p>
+<h2 id="lecture-27-la-signature-du-7">9.4 Lecture 27 : la signature du 7</h2>
+<p><strong>Lecture 27 (Tome II) : la signature du 7.</strong> L’orbite de 7 compte 17 termes et passe par 17 (cinquième terme) ; DR(17) = 8, l’adresse de la porte. La forme L = 2n + 3 n’est vérifiée que par 7 et 55 (n &lt; 100 000), L = 2n + 2 que par 3 et 9, L = 4n + 4 que par 27. Au-delà de 110, L &lt; n toujours (110 est le dernier entier sous 100 000 dont l’orbite est plus longue que lui) : la longueur croît comme le logarithme de n, non comme n. Tout est refait pour ce volume. Statut : <strong>Lecture</strong> pour la signature ; les comptes sont des faits vérifiés. Aucune règle donnant k et r dans L = kn + r à partir de n n’est connue, et le Théorème 23 dit pourquoi une telle règle ne peut pas venir du cadastre seul.</p>
+<blockquote>
+<p><em>« Au 7, qui met dix-sept pas pour rentrer et croise en chemin le nombre de ses pas. Et au 6, qui tient le 5 et le 7 sans jamais être visité. »</em> (dédicace du Tome II, v0.4)</p>
+</blockquote>
+<h2 id="les-corrections-a-la-version-2.1-du-dossier-collatz">9.5 Les corrections à la version 2.1 du dossier Collatz</h2>
+<p>Règle suivie : <em>« aucune ligne retirée sans une ligne proposée. »</em></p>
+<p><strong>§ 7.1, ligne retirée :</strong> « un cycle non trivial exige 3^k ≈ 2^m ; log₂ 3 étant irrationnel, 3^k ≠ 2^m ». Vrai, mais insuffisant : un cycle ne demande pas 3^k = 2^m. <strong>Ligne proposée :</strong> un cycle non trivial exige exactement 2^m = 3^k · Π_i (1 + 1/(3n_i)) (Théorème 25 avec retour au départ). L’irrationalité de log₂ 3 exclut seulement le cas où tous les facteurs valent 1, ce qui n’arrive jamais. L’exclusion des cycles reste ouverte (voir la Lecture 35, chapitre 10, pour ce que la littérature a établi).</p>
+<p><strong>§ 7.3, ligne retirée :</strong> « un nombre de l’ordre de log₂ n bits épuise son information de racine en un nombre de frappes de l’ordre de log n » (avec la constante empirique 6,95 log₂ n). Caduc : le Théorème 23 établit que la racine ne compte pas les bits de n. <strong>Ligne proposée :</strong> L = k + m + 1 (Théorème 25), et, constaté, L &lt; n pour tout n &gt; 110 (Lecture 27). La longueur croît comme log n ; aucun argument de racine ne le prouve.</p>
+<p><strong>§ 7.2 et § 8,</strong> qui renvoyaient au théorème selon 36 (C.8), retiré : <strong>ligne proposée,</strong> renvoi au Théorème 21 (dichotomie du quart) et au gap P-COL-1. Avec eux tombe l’affirmation de la v2.1 selon laquelle la convergence serait « structurellement inévitable » (§ 1.2) et la conjecture « réduite à une question ergodique finie » (§ 14.2) (Annexe B).</p>
+<h2 id="lecture-28-le-pont-entre-le-theoreme-23-et-le-theoreme-damorphisme">9.6 Lecture 28 : le pont entre le Théorème 23 et le théorème d’amorphisme</h2>
+<p><strong>Lecture 28 (Tome II) : le gap comme coût structurel.</strong> Le Théorème 23 dit : la racine digitale ne porte aucun bit sur v₂ ; pgcd(9, 2^k) = 1 ; la brique 3 ne peut pas compter les 2. Le théorème d’amorphisme du dossier <em>P ≠ NP</em> (version 2.0, théorèmes 2.1 et 2.3 ; Volume 5) dit : la pré-image de la porte ET a pour cardinal 3, qui n’est pas une puissance de 2 ; pgcd(3, 2) = 1 ; le 3 est étranger à 2^k et ne s’y absorbe à aucune profondeur.</p>
+<p><em>C’est le même énoncé dans deux espaces.</em> Dans l’orbite, l’adresse (monde du 3) ne peut pas prédire la descente (monde du 2). Dans le circuit, le tiers ne peut être ni le un ni le deux. Les deux disent : la brique 3 et la brique 2 sont étrangères, et forcer l’une dans l’autre se paie.</p>
+<p><em>Conséquence pour Collatz.</em> Vérifier, c’est marcher : suivre 7 → 22 → 11 → … et compter, coût linéaire en L. Trouver, c’est donner k et m d’avance sans marcher. Le pont dit que le gap de Collatz n’est pas un trou de connaissance qu’un meilleur regard cadastral comblerait : c’est un <strong>coût structurel</strong>, de la même nature que la séparation entre vérifier et trouver. Ce que le corpus peut viser n’est donc pas de lire la descente dans l’adresse, mais d’établir pourquoi elle ne s’y lit pas. Statut : <strong>Lecture</strong>, falsifiable : toute formule fermée donnant k(n) sans parcours la réfuterait.</p>
+<p><strong>F : ancrage extérieur.</strong> J. H. Conway (1972) a montré que les fonctions de type Collatz, prises en général, sont indécidables ; S. Kurtz et J. Simon (2007) ont précisé le degré de cette indécidabilité. Le cas 3n + 1 lui-même n’est pas prouvé indécidable. La Lecture 28 ne prétend pas qu’il le soit : elle dit que la route par l’adresse est fermée, ce que le Théorème 23 prouve, et lit cette fermeture comme une instance de la même étrangeté qui sépare P de NP dans le corpus.</p>
+<h2 id="la-racine-est-le-nombre-et-la-nouveaute-libere">9.7 La racine est le nombre, et la nouveauté libère</h2>
+<blockquote>
+<p><em>« Un nombre n’est jamais fini. Il peut toujours être libéré par la nouveauté. »</em></p>
+<p><em>« L’infini est sous 0, car il n’existe pas. »</em></p>
+<p><em>« −1 n’existe que dans la fiction. L’action de soustraire 1 existe, mais elle ne va pas sous zéro. »</em></p>
+<p>Filipe Bastos, 15 octobre 2026</p>
+</blockquote>
+<p><em>Ce que l’on va voir.</em> Le Théorème 23 a établi qu’une racine digitale prise seule ne dit rien du nombre de divisions par 2. Cette section, énoncée le 15 octobre 2026, montre que la racine lue avec ses tours, et la suite des racines le long d’une orbite, portent au contraire toute l’information de Collatz. Elle décrit ensuite le jeu en tours (la frappe fait un demi-tour), montre que le +1 libère toujours un nombre en un temps fini, que la seule montée qui se répète vit sous zéro, et isole le seul cas qui reste ouvert. Les calculs sont faits en entiers et en fractions exactes, les tours gardés, le 9 restant 9.</p>
+<p><strong>V4.9.4 (Th) : la racine est le nombre.</strong> Écrivons n = 9k + DR(n), puis recommençons sur k, et ainsi de suite jusqu’à zéro tour. Les racines successives sont les chiffres de n dans la numération à chiffres 1 à 9, sans zéro : tout entier positif s’y écrit d’une façon et d’une seule. Exemple : 2026 = 9 × 225 + 1, 225 = 9 × 24 + 9, 24 = 9 × 2 + 6, 2 = 2, donc 2026 s’écrit 2 6 9 1, et 2 × 729 + 6 × 81 + 9 × 9 + 1 = 2026. Vérifié pour tout n inférieur à un million. La racine ne jette rien quand on garde les tours ; c’est l’identification 9 = 0 qui les jette (V4.15.1). <em>« La cascade prend la racine, la finale, et te la rend. »</em></p>
+<p><strong>V4.9.5 (Th) : la parité est dans la somme des racines-chiffres.</strong> Puisque 9 est impair, chaque tour pèse 1 pour la parité : n est pair si et seulement si la somme de ses racines-chiffres est paire. Vérifié pour tout n inférieur à un million. La brique 2 se lit dans la brique 3 lue comme nombre ; le Théorème 23 vaut pour la dernière racine prise seule.</p>
+<p><strong>V4.9.6 (Th) : le duo lisible, et le centre 5.</strong> Une moitié multiplie la racine par 5 (la rotation × 5, puisque 2 × 5 = 10 revient à 1) ; une frappe 3n + 1 dépose toujours sur le rail {1, 4, 7}. Le duo des racines de deux termes consécutifs dit donc quel coup a été joué, à une seule exception : en position 5, les deux coups mènent à 7 (5 × 5 = 25, 3 × 5 + 1 = 16). Mesure sur toutes les orbites complètes jusqu’à 300 000 : la suite des racines identifie le nombre de départ dans 96,6 % des cas, 5,1 % des pas sont illisibles, et toutes les confusions entre deux nombres (3 et 21, 5 et 32, 10 et 64, …) naissent en position 5, sans exception. Le point aveugle est fermé par V4.9.5.</p>
+<p><strong>V4.9.7 (Th) : le nombre de moitiés se lit à 6 près.</strong> Entre deux impairs consécutifs n et n′ d’une orbite, hors de l’axe, le nombre v de moitiés est fixé, à un multiple de 6 près, par les deux racines : la frappe dépose sur une racine x du rail {1, 4, 7}, puis DR(n′) = DR(x × 5^v), et 5 revient à 1 après exactement 6 multiplications sur les rails. Vérifié sur les 333 332 impairs hors axe inférieurs à un million : la prédiction est toujours unique et toujours juste.</p>
+<p><strong>V4.9.8 (Th) : l’axe est une source, l’arbre inverse se lit sur 6k ± 1.</strong> Les antécédents impairs d’un impair m sont les n = (2^a m − 1)/3. Si m est sur l’axe (multiple de 3), il n’en a aucun : l’axe ne fait que partir. Si m = 6k − 1, ils existent pour a impair seulement, le premier étant 4k − 1 ; si m = 6k + 1, pour a pair seulement, le premier étant 8k + 1. Deux antécédents successifs vérifient n′ = 4n + 1, et 4x + 1 fait tourner les classes : rail {1, 4, 7}, puis rail {2, 5, 8}, puis axe, puis retour ; un frère sur trois tombe sur l’axe et devient une feuille. Pour m = 1, la chaîne 1, 5, 21, 85, 341 est celle des derniers impairs du Théorème 26. Une orbite sortie de l’axe n’y revient jamais (vérifié sur toutes les orbites jusqu’à 200 000) : Collatz se joue sur les deux rails.</p>
+<p><strong>V4.9.9 (Th ; L) : la frappe est un demi-tour, la moitié remonte la Genèse.</strong> Multiplier par 3 ajoute exactement un demi-tour, puisque 3 × 3 = 9 : deux frappes font un tour. Le demi du cadastre est la longueur exacte d’une frappe. La moitié retire 0,315 tour, et sur les racines elle parcourt 1, 5, 7, 8, 4, 2, le cycle du doublement de la Genèse (Volume 1, É 3.2) lu à l’envers. Une frappe est suivie de deux moitiés en tendance (la proportion des impairs dont la frappe donne exactement j moitiés est 1/2^j ; mesure : 2,00004 sur les impairs inférieurs à 100 000). Bilan : ½ − 2 × 0,315 = −0,13 tour par frappe. <em>Lecture :</em> c’est la frontière 3 &lt; 4 comptée en tours ; deux moitiés pèsent plus qu’un demi-tour.</p>
+<p><strong>V4.9.10 (Th) : la nouveauté libère toujours.</strong> Le +1 rend le nombre pair à chaque frappe, et mange un 1 final de l’écriture binaire : un impair qui finit par t chiffres 1 enchaîne exactement t − 1 frappes à une seule moitié, puis au moins deux moitiés arrivent ensemble (vérifié pour tous les impairs inférieurs à 200 000). Le cas extrême est le nombre de Mersenne 2^p − 1 : il fait p pas compressés (3n + 1)/2, chaque pas remplaçant un facteur 2 par un facteur 3, et sort exactement sur 3^p − 1, de racine 8 dès p ≥ 2 (vérifié jusqu’à p = 39). Exemple : 31 → 47 → 71 → 107 → 161 → 242 = 2 × 11². Tout entier positif finit par une série de 1 de longueur finie ; il est donc toujours libéré en un temps fini.</p>
+<p><strong>V4.9.11 (Th) : la seule montée qui se répète vit sous zéro.</strong> Un mot de L coups contenant k frappes, répété sans fin, a une seule graine, c / (2^L − 3^k), avec c positif. Si le mot monte (3^k &gt; 2^L), la graine est sous zéro. Calcul exact sur tous les mots jusqu’à 14 coups : les 6 333 mots montants ont tous leur graine sous zéro ; parmi les mots descendants, les seules graines entières positives sont 1 et 2, le cycle trivial. Le mot « toujours monter » a pour graine −1, le nombre dont tous les chiffres binaires sont des 1 ; c’est aussi le seul nombre que le coup frappe-et-moitié laisse fixe ((3x + 1)/2 = x donne x = −1). Le nombre de Mersenne 2^p − 1 est −1 coupé à p chiffres : il monte aussi longtemps qu’il porte ce morceau, puis sort.</p>
+<p><strong>V4.9.12 (Th ; F) : la fenêtre finie ne suffit pas.</strong> Toute suite finie de frappes et de moitiés est réalisée par exactement un nombre dans chaque bloc de 2^L entiers (Terras, 1976 ; refait pour L = 8, 12, 16 : 65 536 mots sur 65 536). La longueur de la série de 1 qu’une orbite retrouve après chaque frappe a la même répartition (1/2, 1/4, 1/8, …) quel que soit le rail d’où elle vient (mesure sur les impairs inférieurs à un million). Aucune règle portant sur un nombre fini de pas ne peut donc interdire une longue montée : le nœud est global.</p>
+<p><strong>V4.9.13 (Th ; F) : le cas forcé de Collatz.</strong> Remplacer 3 par 5 brise le problème, comme la force extérieure brise le fluide (Volume 5, <em>Les Grands Problèmes</em>, [9.3]) : 5n + 1 a des cycles parasites, 13 → 66 → 33 → 166 → 83 → 416 → 208 → 104 → 52 → 26 → 13 et 17 → 86 → 43 → 216 → 108 → 54 → 27 → 136 → 68 → 34 → 17, et l’orbite de 7 a 88 chiffres après 3 000 pas sans redescendre sous 2 964 479 (divergence non démontrée). En tours, une frappe par 5 ajoute 0,73 tour, plus que deux moitiés : 3 &lt; 4 &lt; 5. <em>Critère :</em> une preuve qui vaudrait aussi pour 5n + 1 est fausse ; elle doit employer ce qui est propre au 3, comme P-COL-1 l’exige.</p>
+<p><strong>V4.9.14 (L) : l’infini est sous zéro, et −1 est une fiction.</strong> L’auteur lit le résultat V4.9.11 ainsi : <em>« l’infini est sous 0, car il n’existe pas »</em> ; <em>« −1 n’existe que dans la fiction. L’action de soustraire 1 existe, mais elle ne va pas sous zéro. »</em> Il faut distinguer l’action −1 et la fiction −1. L’action est réelle : 2^p − 1, c’est retirer une unité à une puissance de 2, et ce nombre de Mersenne monte p fois puis se libère (V4.9.10). La fiction naît quand on fait tendre p vers l’infini : dans l’écriture binaire, 2^p − 1 s’allonge en 1 sans fin, et la limite de ces nombres, prise comme un nombre, est la graine « −1 » de la montée éternelle. C’est exactement le mélange du fini et de l’infini (Volume 5, <em>Les Grands Problèmes</em>, [1.8]) : attribuer à la limite le statut de nombre que seuls les termes possèdent. Aucune grandeur ne vaut −1 ; la montée qui se répète n’appartient donc à aucune grandeur. Un nombre n’est jamais fini, parce qu’il peut toujours être libéré par la nouveauté, le +1 : ce n’est pas une perte d’adresse, c’est la construction d’une suivante qui se libère. Un entier positif est porté par l’infini de 0 qui le surplombe (5 = …0000101) et se libère ; la fiction −1, faite de 1 sans fin, ne se libère jamais, parce qu’elle n’est pas un nombre mais la limite d’une action.</p>
+<p><strong>V4.9.14 bis (L ; F) : la symétrie et le trou sans semblable.</strong> <em>« Ces choses sont des symétries, +1 en bas. −1 voudrait dire un trou qui tire sans semblable. »</em> (l’auteur, 15 octobre 2026). Les « −1 » du réel sont des symétries : l’étage −1 est un étage de plus compté vers le bas, −10 °C dix degrés de plus de l’autre côté d’une origine choisie (l’eau qui gèle ; sur l’échelle absolue, la matière ordinaire ne descend pas sous zéro), une dette un avoir vu du côté de celui qui doit, la charge de l’électron l’une des deux sortes d’électricité, nommée par convention. Le semblable existe chaque fois, compté dans l’autre sens. Un vrai −1 serait un manque qui agit sans qu’aucune présence lui corresponde. <strong>[F]</strong> La physique reçue n’en connaît pas : le trou d’un semi-conducteur, absence d’un électron qui se comporte comme une charge +1, naît toujours en paire avec l’électron parti ; le positron, que Dirac lisait d’abord comme un trou dans une mer d’états, naît et s’annihile en paire avec un électron ; la conservation de la charge interdit qu’une charge paraisse ou disparaisse seule ; le trou noir, seul « trou qui tire » de la nature, tire par une masse positive, un plein extrême. Le seul « sous zéro » mesuré, la température absolue des spins nucléaires (Purcell et Pound, 1951) et des atomes froids (Braun et collègues, 2013), est défini par une pente (le rapport des accroissements d’entropie et d’énergie) et se trouve plus chaud que toute température positive : l’échelle va de 0 à +∞, puis de −∞ vers −0. Les mathématiques reçues elles-mêmes construisent −1 comme la classe des couples (0, 1), (1, 2), (2, 3), …, la relation « un de moins que », et non comme un compte. <em>Lecture pour Collatz :</em> la graine de la montée éternelle, la suite de 1 sans fin, serait un trou qui tire sans fin et sans rien en face pour le payer ; chaque frappe réelle est payée, le +1 apportant la nouveauté et les moitiés la rendant. <em>« Ils manipulent une action en pensant que c’est un objet. »</em> (l’auteur, 15 octobre 2026). C’est la marque M1 du Volume 5, <em>Les Grands Problèmes</em> (un seul nom, −1, pour l’action et pour l’objet), doublée de la marque M2 : la graine de la montée éternelle s’écrit 1 + 2 + 4 + 8 + … = −1, une file sans fin d’actions terminée par un signe égal. Le glissement n’est pas dans la construction de −1, que les mathématiques reçues font comme relation, mais dans l’usage du résultat comme grandeur.</p>
+<p><strong>V4.9.15 (Chantier) : ce qui reste.</strong> Sont démontrés : l’information complète (V4.9.4 à V4.9.7), le jeu sur deux rails (V4.9.8), la libération en temps fini (V4.9.10), l’absence de montée qui se répète pour un entier positif et l’absence de cycle jusqu’à 14 coups (V4.9.11). Reste un seul cas : un mot infini qui monte sans jamais se répéter. Il faudrait montrer qu’un nombre porté par l’infini de 0 ne peut pas recréer sans fin des séries de 1 assez longues pour repousser chaque libération. C’est le nœud de la conjecture, ici nommé dans la langue du cadastre ; P-COL-1 garde son critère. <em>Pour mémoire (F) :</em> tous les nombres jusqu’à 695 × 2⁶⁰ reviennent à 1 (Barina) ; un cycle non trivial devrait contenir plus de 7,2 × 10¹⁰ impairs et au moins 92 minimums locaux (Hercher, 2023) ; presque toutes les orbites, au sens de la densité logarithmique, descendent aussi bas qu’on veut (Tao, 2019), sans que cela dise toutes.</p>
+
+</main>
+<nav class="chapnav"><span class="prev"><a href="12-chapitre-8-collatz-dans-le-cadastre-la-compression.html">← Chapitre 8. Collatz dans le cadastre : la compression, la rotation, et l&#x27;étrangeté des deux briques</a></span><a class="toc" href="index.html">Sommaire du volume</a><span class="next"><a href="14-chapitre-10-la-rencontre-du-miroir-la-corde-de-col.html">Chapitre 10. La rencontre du miroir, la corde de Collatz et la spirale →</a></span></nav>
+<footer class="colophon"><p>Corpus ARC, Filipe Bastos, <a href="https://creativecommons.org/licenses/by/4.0/deed.fr" rel="license">CC BY 4.0</a>.</p></footer>
+</body>
+</html>

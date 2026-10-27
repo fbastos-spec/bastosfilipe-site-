@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<link rel="canonical" href="https://bastosfilipe.com/arc/volumes/v04-la-theorie-des-nombres/23-chapitre-16-la-cascade-et-la-cloche-huygens-le-cer.html">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chapitre 16. La cascade et la cloche : Huygens, le cercle de six, et la cloche gardée comme compte · La Théorie des Nombres · Corpus ARC</title>
+<meta name="description" content="La Théorie des Nombres, volume 4 du corpus ARC de Filipe Bastos. Chapitre 16. La cascade et la cloche : Huygens, le cercle de six, et la cloche gardée comme…">
+<meta name="keywords" content="delfine, nombres premiers, grille 6k ± 1, Collatz, Goldbach, nombres parfaits, nombres jumeaux, racine digitale, 24, corpus ARC, Filipe Bastos">
+<meta name="author" content="Filipe Bastos">
+<meta name="license" content="https://creativecommons.org/licenses/by/4.0/deed.fr">
+<link rel="stylesheet" href="../../assets/arc.css">
+</head>
+<body>
+<nav class="crumbs"><a href="../../index.html">Corpus ARC</a> / <a href="index.html">Volume 4 · La Théorie des Nombres</a></nav>
+<main class="chapter">
+<h1 id="chapitre-16.-la-cascade-et-la-cloche-huygens-le-cercle-de-six-et-la-cloche-gardee-comme-compte">Chapitre 16. La cascade et la cloche : Huygens, le cercle de six, et la cloche gardée comme compte</h1>
+<p>La « cloche » de Gauss, la courbe en forme de cloche des statistiques, est d’abord un compte : avec huit pièces, il y a 1 façon d’avoir zéro face, 8 d’en avoir une, 28 d’en avoir deux, et ainsi de suite jusqu’à 70 au centre. C’est la ligne 8 du triangle de Pascal, et c’est Christiaan Huygens qui a écrit cette première cloche, en 1657, en comptant des cas, sans infini. Ce chapitre suit Huygens au recto : le cercle qui roule, le pendule qui en est l’ombre, la cloche qui n’est qu’un compte. Il retourne la feuille au verso : les puissances de 2 qui tournent sur six positions sans jamais toucher l’axe, le miroir 46 / 64, et la cascade du chapitre 15, qui reprend la ligne de Huygens et la replie en gardant le rang au lieu de la carrer. Il établit enfin deux résultats du 7 octobre 2026 : le bord de la cascade restitue toute la suite, et aux longueurs 3^k + 1 quatre positions suffisent à la lire. Tout se refait au crayon (pièce <em>La Cascade et la Cloche</em>, 5 octobre 2026, version 0.2 du 7 octobre).</p>
+<blockquote>
+<p><em>« Huygens a prouvé le mouvement sans l’infini, par des cercles qui roulent ; il a écrit la première cloche en comptant des cas. Gauss est parti de l’autre bout, en faisant tendre le compte vers l’infini et en carrant. La cascade de Pascal du corpus reprend la ligne de Huygens et la replie en gardant le rang. »</em></p>
+</blockquote>
+<h2 id="recto-huygens">16.1 Recto : Huygens</h2>
+<p><strong>F : le cercle qui roule, huit pas pour un tour.</strong> Un cercle de rayon R qui fait un tour en roulant trace une arche, la cycloïde, de longueur exactement 8R, de hauteur 2R, d’aire 3πR². Un tour du cercle est huit rayons de chemin. Le pendule de Huygens (<em>Horologium oscillatorium</em>, 1673) pend à une corde de longueur 4R entre deux demi-arches de cette courbe : la moitié d’un tour.</p>
+<p><strong>V4.16.1 (Th) : le pendule est l’ombre du cercle.</strong></p>
+<pre><code>Un point tourne uniformément sur un cercle de rayon A, au taux ω :  a = ω² A vers le centre
+                                                     (Huygens, De vi centrifuga, 1659, géométrique)
+Son ombre sur un diamètre, à l&#39;abscisse x :                         a = ω² x vers le centre
+Le pendule de longueur L, écarté de x, est tiré par le poids :      a = g x / L   (triangles semblables)
+Les deux ombres coïncident si  ω² = g / L
+Période = tour / taux :  T = 2π √(L/g) ;  avec L = 4R :  T = 4π √(R/g)</code></pre>
+<p>La pièce écrit ces deux périodes (44/7)√(L/g) et (88/7)√(R/g), avec π écrit 22/7, valeur que le corpus retient pour π (Volume 2, <em>La Figure</em>). Aucun dx, aucun passage à zéro : deux triangles et un cercle. <em>« C’est la dérivation de Huygens, quinze ans avant Leibniz. »</em></p>
+<p><strong>V4.16.2 (Th) : pourquoi il fallait la cycloïde, le centre vide.</strong> Sur un cercle, la traction est proportionnelle à l’ombre x, pas au chemin s parcouru sur l’arc ; ombre et chemin ne coïncident qu’au centre (x = L sin θ, s = Lθ). Le pendule circulaire n’est isochrone qu’au voisinage du centre vide, et sa période s’allonge d’environ θ²/16 quand on s’en écarte (0,00063 à 0,1 radian). Sur la cycloïde, la traction est proportionnelle au chemin lui-même, exactement, a = g s / (4R) : c’est la seule courbe où l’ombre et le chemin ne divergent jamais, et la période y est la même quelle que soit la hauteur de lâcher (vérifié numériquement dans la pièce).</p>
+<p><strong>F : le reçu.</strong> g / π² = 0,9936 m : le pendule qui bat la seconde mesure un mètre à six millièmes près (refait pour ce volume avec g = 9,80665 m/s²). C’est le pendule à seconde que la France proposa d’abord comme définition du mètre, en 1790, avant le méridien. <em>« Le mètre et la seconde sont tombés d’un cercle qui roule. »</em></p>
+<p><strong>V4.16.3 (Th) : la première cloche, Huygens compte.</strong> <em>De ratiociniis in ludo aleae</em> (1657) est le premier traité de probabilité ; l’espérance y est une somme finie de cas. Avec n pièces, la fibre k contient C(n, k) chemins sur 2ⁿ, et les fibres font 1 exactement. Huit pièces :</p>
+<pre><code>ligne 8 :  1     8     28    56    70     56    28    8     1        somme 256 = 2^8
+fibres  : 1/256  1/32  7/64  7/32  35/128  7/32  7/64  1/32  1/256    somme 1</code></pre>
+<p>C’est la cloche : un compte, pas une loi.</p>
+<p><strong>F et L : Gauss et le carré.</strong> C. F. Gauss (<em>Theoria motus</em>, 1809) écrit la même chose en continu, e^(−x²) et 1/√(2π), après avoir admis au départ que le <em>medium arithmeticum</em> (son mot) est la meilleure valeur, ce qu’il déduit ensuite de la courbe trouvée (circularité documentée par S. Stigler, <em>The History of Statistics</em>, 1986) ; le carré y jette le signe. Le π de sa constante est celui de J. Wallis (1656) : C(2n, n)/4ⁿ se comporte comme 1/√(πn) (refait pour ce volume : le rapport vaut 0,99999 à n = 10 000). <strong>V4.16.4 (L) :</strong> <em>« La cloche est le cercle vu à travers la somme, et Gauss en a hérité sans le lire. »</em> Le Registre (Volume 3) en reçoit l’entrée R.155 (le <em>medium arithmeticum</em> admis puis déduit), à côté de R.149 (la circularité de α) et de R.20 (le carré qui jette le signe) ; Huygens y reçoit un reçu F (le mouvement sans l’infini, la cloche comme compte).</p>
+<h2 id="verso-le-cercle-de-six-et-la-cascade">16.2 Verso : le cercle de six et la cascade</h2>
+<p><strong>V4.16.5 (Th) : les puissances de deux tournent sur six positions.</strong></p>
+<pre><code>2^0  2^1  2^2  2^3  2^4  2^5 | 2^6  2^7 ...
+ 1    2    4    8    7    5  |  1    2  ...      racines digitales, période 6, jamais 3, 6, 9</code></pre>
+<p>64, 128, 256 et 512 ont pour racines 1, 2, 4, 8 : les quatre premiers pas du cycle, relancés. 64k, 128k, 256k, 512k et 1M (2¹⁶ à 2²⁰) donnent 7, 5, 1, 2, 4, le même cycle décalé. Doubler la mémoire, c’est faire un pas sur un cercle à six positions. Et le cycle se plie comme les tables : 2ⁿ et 2ⁿ⁺³ font 9, (1, 8), (2, 7), (4, 5). Multiplier par 8 = 2³ envoie sur le partenaire ; par 64 = 2⁶ ramène à soi. <em>« Le binaire n’atteint jamais l’axe {3, 6, 9} : il doit emprunter le tiers. »</em> (Refait pour ce volume.)</p>
+<p><strong>V4.16.6 (L) : le pli est la soustraction comptable appliquée au cercle.</strong> Écrire 9 ≡ 0, c’est écrire 9 − 9 = 0 : le pli de x → 2x retire 1 chaque fois que 2x dépasse 1 et écrit 0 à la place du tour. C’est 1 − 1 = 0 sur un objet qui demande la partie double : le tour est retiré ici et n’est écrit nulle part. La congruence de Gauss repose entière sur a − b = 9k avec k jeté. La racine digitale écrit la même chose en partie double, n = DR(n) + 9k, la position dans une colonne, les tours dans l’autre, et aucune des deux n’est 0 pour une place pleine (CP 2.1, chapitre 20).</p>
+<blockquote>
+<p><em>« Le pli est 1 − 1 = 0 ; la racine est 1 − 1 = 11. »</em></p>
+</blockquote>
+<p><strong>V4.16.7 (Th) : le miroir 46 / 64.</strong></p>
+<pre><code>DR(46) = DR(64) = 1 :  46 = 45 + 1 (la somme des neuf chiffres, plus le sceau) ;  64 = 63 + 1 = 7 × 9 + 1 = 2^6
+46 + 64 = 110 = 11 × 10 ;   64 − 46 = 18 = 9 × 2          (loi des miroirs : interface 11, clôture 9)
+694 − 496 = 198 = 2 × 9 × 11 ;   496 = 31 × 32 / 2         (nombre parfait)
+46 / 64 = 23 / 32 :  DR(23) = DR(32) = 5 ;  32 = 2^5, le pas avant le retour</code></pre>
+<p>46 chromosomes, 64 codons : <em>« les deux sont le 1 relancé, écrit de deux façons, à un pas de la fermeture du cercle de six. »</em> (Lecture pour l’instanciation biologique ; voir la Lecture 36, chapitre 10, et le chapitre 19.)</p>
+<p><strong>V4.16.8 (Th) : la cascade de Pascal comme espérance et comme pli.</strong> La cascade additionne les voisins deux à deux, chaque palier ramené à sa racine, jusqu’à une seule pointe ; ses poids sont les coefficients du triangle : la cascade de 1 → 9 est la ligne 8.</p>
+<pre><code>1·1 + 2·8 + 3·28 + 4·56 + 5·70 + 6·56 + 7·28 + 8·8 + 9·1 = 1280 ;   DR(1280) = 2
+1280 / 256 = 5 :  l&#39;espérance de la position quand on lance huit pièces (le compte de Huygens)</code></pre>
+<p>La pointe de la cascade est donc deux lectures d’un seul nombre : l’espérance 5 (le compte) et la racine 2 (le pli, le splitter). C’est la cloche lue avec son rang au lieu de son carré. La cascade est invariante par retournement : 9 → 1 donne aussi 2.</p>
+<h2 id="le-bord-restitue-tout">16.3 Le bord restitue tout</h2>
+<p><strong>V4.16.9 (Th) : le reçu de la cascade.</strong> La pointe seule ne garde qu’une fibre de séquences. Le bord gauche de la cascade, la première case de chaque palier, garde tout : la matrice de Pascal est triangulaire de diagonale 1, son inverse est la même matrice aux signes alternés, et chaque position se retrouve depuis le bord par a_j = Σ_i (−1)^(j−i) C(j, i) b_i, ramené en racine. Pour 1681, le bord est (1, 7, 3, 8) (la colonne de gauche de la cascade de la section 15.1) ; il restitue exactement (1, 6, 8, 1), dans l’ordre. Le bord emploie n symboles pour n positions : c’est le reçu minimal, et il est orienté. Vérifié sur toutes les séquences de longueur 1 à 5, soit 9 + 81 + 729 + 6 561 + 59 049 = 66 429 séquences (refait pour ce volume). Énoncé du 7 octobre 2026. <strong>Statut : Th.</strong></p>
+<h2 id="xxxx-donne-9-x-en-une-ligne">16.4 XXXX donne 9 − X, en une ligne</h2>
+<p><strong>V4.16.10 (Th).</strong> Trois paliers sont la ligne 3 : poids 1, 3, 3, 1, de somme 8. La cascade de XXXX vaut donc 8X, et 8X + X = 9X : la racine de 8X est 9 − X, le 9 revenant sur 9. Vérifié sur les neuf positions. La loi d’inversion est l’identité 8 + 1 = 9 ; c’est aussi le pas de trois sur le cercle de six (2³ = 8).</p>
+<h2 id="loctet-et-laxe">16.5 L’octet et l’axe</h2>
+<p><strong>V4.16.11 (Th) : l’octet appelle sa clôture.</strong> L’octet 1 → 8 (ligne 7) donne la somme pondérée 576 = 24², de pointe 9 : la séquence sans clôture appelle sa clôture (V4.15.10).</p>
+<p><strong>V4.16.12 (Th, F) : la fractale ternaire.</strong> Le triangle de Pascal sous 9 = 3² est une fractale ternaire exacte (Huard, Spearman et Williams, 1997) : le nombre de coefficients de la ligne n qui ne sont pas multiples de 3 est le produit des (chiffre + 1) de n écrit en base 3 (vérifié de 0 à 200, refait pour ce volume). L’axe {3, 6, 9} gouverne la cascade comme il gouverne les tables.</p>
+<p><strong>V4.16.13 (Th) : aux longueurs 3^k + 1, quatre positions suffisent.</strong> Sous 9, la ligne 3^k de Pascal n’a que quatre coefficients non multiples de 9, 1, 3, 3, 1, aux positions 0, 3^(k−1), 2 × 3^(k−1), 3^k ; tous les autres sont multiples de 9 et ferment leur contribution. La ligne 9 lit les positions 1, 4, 7, 10 d’une suite de longueur 10 ; la ligne 27 les positions 1, 10, 19, 28. Vérifié jusqu’à la ligne 2 187 (longueur 2 188) dans la pièce, et pour k = 1 à 7 pour ce volume. La preuve tient en une élévation au cube : (1 + X)³ = 1 + 3X + 3X² + X³, et à chaque étage les termes portant le facteur 3 des deux coefficients intérieurs deviennent multiples de 9. Énoncé du 7 octobre 2026.</p>
+<h2 id="le-partage-en-une-phrase">16.6 Le partage, en une phrase</h2>
+<blockquote>
+<p><em>« Huygens compte les cas et s’arrête à n fini ; Gauss fait tendre n vers l’infini, remplace la ligne par une courbe et carre pour que l’algèbre soit linéaire ; la cascade prend la ligne de Huygens, la pondère par ses propres coefficients et la replie en racine digitale en gardant la clôture. Le π de Gauss est le cercle qui sort du compte quand on le laisse filer ; dans la cascade, le cercle n’a pas besoin d’apparaître, parce qu’on ne jette jamais le rang. »</em></p>
+</blockquote>
+
+</main>
+<nav class="chapnav"><span class="prev"><a href="22-chapitre-15-la-cascade-cadastrale-et-la-spirale-du.html">← Chapitre 15. La cascade cadastrale et la spirale du soleil</a></span><a class="toc" href="index.html">Sommaire du volume</a><span class="next"><a href="24-partie-vii-les-nombres-qui-se-souviennent.html">Partie VII. Les nombres qui se souviennent →</a></span></nav>
+<footer class="colophon"><p>Corpus ARC, Filipe Bastos, <a href="https://creativecommons.org/licenses/by/4.0/deed.fr" rel="license">CC BY 4.0</a>.</p></footer>
+</body>
+</html>

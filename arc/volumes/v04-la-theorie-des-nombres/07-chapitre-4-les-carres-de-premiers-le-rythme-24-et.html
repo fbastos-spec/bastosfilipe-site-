@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<link rel="canonical" href="https://bastosfilipe.com/arc/volumes/v04-la-theorie-des-nombres/07-chapitre-4-les-carres-de-premiers-le-rythme-24-et.html">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chapitre 4. Les carrés de premiers : le rythme 24 et la chrysalide · La Théorie des Nombres · Corpus ARC</title>
+<meta name="description" content="La Théorie des Nombres, volume 4 du corpus ARC de Filipe Bastos. Chapitre 4. Les carrés de premiers : le rythme 24 et la chrysalide.">
+<meta name="keywords" content="delfine, nombres premiers, grille 6k ± 1, Collatz, Goldbach, nombres parfaits, nombres jumeaux, racine digitale, 24, corpus ARC, Filipe Bastos">
+<meta name="author" content="Filipe Bastos">
+<meta name="license" content="https://creativecommons.org/licenses/by/4.0/deed.fr">
+<link rel="stylesheet" href="../../assets/arc.css">
+</head>
+<body>
+<nav class="crumbs"><a href="../../index.html">Corpus ARC</a> / <a href="index.html">Volume 4 · La Théorie des Nombres</a></nav>
+<main class="chapter">
+<h1 id="chapitre-4.-les-carres-de-premiers-le-rythme-24-et-la-chrysalide">Chapitre 4. Les carrés de premiers : le rythme 24 et la chrysalide</h1>
+<p>Quand on élève un nombre premier au carré, deux choses se produisent, et toutes deux sont exactes. La première : le carré tombe toujours un cran au-dessus d’un multiple de 24 (25 = 24 + 1, 49 = 48 + 1, 121 = 120 + 1, …), si bien que les carrés de premiers avancent au pas de 24, et ce pas est le plus grand que l’arithmétique permette pour une telle loi. La seconde : sur le cadastre, le carré efface la différence entre les deux membres d’une paire conjuguée (4 et 5 ont des carrés de même racine, comme 2 et 7, comme 1 et 8), et il fait tomber les deux rails sur un seul, le rail {1, 4, 7}. On appelle cette métamorphose la <em>chrysalide</em>. Ce chapitre démontre les deux faits et mesure exactement ce que le carré efface : un bit, pas plus, pas moins.</p>
+<blockquote>
+<p><em>« Le rythme des carrés n’est pas un réseau parmi d’autres : il est le rythme maximal que l’arithmétique autorise. »</em></p>
+</blockquote>
+<h2 id="theoreme-5-le-rythme-24">4.1 Théorème 5 : le rythme 24</h2>
+<p><strong>Théorème 5 (Tome I) : le rythme 24.</strong> Pour tout premier p ≥ 5, p² s’écrit 24k + 1 : 24 divise p² − 1. En conséquence : (i) tout carré de premier est sur la branche 6k + 1 (rail D) ; (ii) l’écart entre deux carrés de premiers consécutifs est toujours un multiple de 24.</p>
+<p><em>Preuve.</em> p ≥ 5 est impair et non divisible par 3. Impair : p = 2t + 1, donc p² − 1 = 4t(t + 1), et t(t + 1) est pair (deux entiers consécutifs), donc 8 divise p² − 1. Non divisible par 3 : p laisse le reste 1 ou 2 dans la division par 3, son carré laisse le reste 1, donc 3 divise p² − 1. D’où 24 = 8 × 3 divise p² − 1. La branche 6k + 1 en est le corollaire. ∎</p>
+<p><em>Vérification.</em> Tous les premiers 5 ≤ p &lt; 500 dans le Tome I, puis jusqu’à 10⁷ en passage adversarial ; refait pour ce volume sur les 78 496 premiers au-delà de 3 jusqu’à un million. Les écarts consécutifs des carrés valent 24, 72, 48, 120, 72, 168, 312, 120, … (25, 49, 121, 169, 289, 361, 529, 841, 961), tous multiples de 24. <strong>Statut : Th.</strong></p>
+<p><strong>Corollaire du Théorème 5 : maximalité du 24 (Th).</strong> Le nombre 24 n’est pas seulement suffisant : il est maximal. Les modules n pour lesquels toute unité x (tout x sans facteur commun avec n) vérifie « x² laisse le reste 1 dans la division par n » sont exactement les diviseurs de 24 : {2, 3, 4, 6, 8, 12, 24} (et 1, trivialement). Vérifié exhaustivement pour n ≤ 500 (refait pour ce volume) ; démontrable par la fonction de Carmichael : λ(n) divise 2 si et seulement si n divise 24. L’horloge des carrés bat donc au tempo maximal que l’arithmétique autorise : aucun module plus grand ne peut imposer cette loi à tous ses inversibles.</p>
+<p><strong>V4.4.1 (L) : l’horloge battue par les fondateurs.</strong> <em>« Le rythme des premiers n’est pas un accident régulier : il est la saturation d’une contrainte structurelle à sa borne exacte. »</em> Le rythme des carrés n’est pas une régularité approximative : c’est une horloge exacte de pas 24, battue par les deux fondateurs (8 vient de 2, 3 vient de 3 ; 8 × 3 = 24). <em>« Les fondateurs ne jouent jamais dans la grille, mais ils en cadencent les carrés. »</em></p>
+<p><strong>V4.4.2 (Th) : la hiérarchie des horloges.</strong> Le système bat sur trois cadrans liés :</p>
+<ul>
+<li><strong>12, horloge additive</strong> : pas de l’auto-génération (Th 1) ; les axes désignés par les sommes internes avancent en 12m, les chevauchantes en 12m + 6. Rythme de la grille qui s’engendre.</li>
+<li><strong>24, horloge multiplicative</strong> : pas des carrés de premiers, exactement le double de l’horloge additive (24 = 2 × 12). Rythme de la grille qui s’élève.</li>
+<li><strong>4, horloge des indices</strong> : puisque p² = 6k + 1, les indices k des carrés avancent par multiples de 24/6 = 4 sur la ligne des k : 25 = 6 × 4 + 1, 49 = 6 × 8 + 1, 121 = 6 × 20 + 1, 169 = 6 × 28 + 1. Le 4 est le nombre du rail D et de la paire du barycentre (4 + 5 = 9).</li>
+</ul>
+<p>Les observations initiales « rythme 12 ou 24 » captaient les deux premières horloges ensemble ; la formalisation les sépare et attribue chacune à son opération. (Le chapitre 14 montre que 24 = 4 × 6 se retrouve comme rapport exact de deux horloges à toute clôture 9^k.)</p>
+<h2 id="theoreme-6-la-chrysalide">4.2 Théorème 6 : la chrysalide</h2>
+<p><strong>Théorème 6 (Tome I) : la carte du carré sur le cadastre.</strong> L’élévation au carré induit sur le cadastre la carte suivante des racines numériques :</p>
+<table>
+<thead>
+<tr class="header">
+<th>DR(x)</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+<th>6</th>
+<th>7</th>
+<th>8</th>
+<th>9</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>DR(x²)</td>
+<td>1</td>
+<td>4</td>
+<td>9</td>
+<td>7</td>
+<td>7</td>
+<td>9</td>
+<td>4</td>
+<td>1</td>
+<td>9</td>
+</tr>
+</tbody>
+</table>
+<p>Propriétés démontrées :</p>
+<p><strong>(a) Effondrement conjugué.</strong> Chaque paire conjuguée de φ s’effondre sur une même destination : DR(x²) = DR((9 − x)²), puisque (9 − x)² = 81 − 18x + x², et que 81 et 18x sont des multiples de 9. Les paires (1, 8) → 1, (2, 7) → 4, (4, 5) → 7, (3, 6) → 9. Après élévation au carré, les conjugués sont indiscernables : la trace de leur différence est effacée par l’opération même qui les élève. En nombres : 1 et 64, 4 et 49, 9 et 36, 16 et 25 ont deux à deux la même racine.</p>
+<p><strong>(b) Confluence des rails.</strong> Les deux rails s’écoulent entièrement dans le seul rail D : l’image de D = {1, 4, 7} est {1, 7, 4}, l’image de G = {2, 5, 8} est {4, 7, 1}. Tout carré de membre de grille porte une racine de {1, 4, 7}. Le rail D est le rail des carrés.</p>
+<p><strong>(c) La porte du 1.</strong> Les antécédents de la racine 1 sont exactement {1, 8}, la paire conjuguée extrême de φ. De même, la racine 4 provient exactement de la paire (2, 7), et la racine 7 de la paire (4, 5) : chaque valeur du rail D est la destination d’exactement une paire conjuguée.</p>
+<p><strong>(d) Dynamique interne.</strong> Sur le rail D, la carte du carré agit ainsi : 1 reste fixe, 4 et 7 s’échangent. D’où la chrysalide observée : 5² = 25, racine 7 ; 7² = 49, racine 4 ; 4² = 16, racine 7. La métamorphose 5 → 7 → 4 → 7 → 4 … : après la première élévation, le système entre dans l’oscillation 4 ↔︎ 7, ou se fixe en 1 s’il vient de la paire (1, 8).</p>
+<p><strong>Statut : Th</strong> (chaque assertion se vérifie par calcul fini sur le cadastre et se démontre par congruence ; refait pour ce volume).</p>
+<p><strong>Théorème 6, complément : la porte à un bit (Th).</strong> La carte « racine du carré » envoie les six états de rails sur trois sorties {1, 4, 7}, chaque sortie ayant exactement deux antécédents : une paire conjuguée de φ. La perte d’information vaut donc exactement log₂(2) = 1 bit : le bit de conjugaison, c’est-à-dire savoir de quel membre de la paire provient le carré. L’élévation au carré est une porte logique irréversible calibrée : elle n’efface ni plus ni moins que la distinction que φ institue. (Comptage exact des antécédents.) L’article de démarcation l’énonce : <em>« le carré est une porte irréversible calibrée pour effacer précisément la distinction instituée par φ. »</em></p>
+<p><strong>V4.4.3 (L) : le clin d’œil EPR.</strong> La propriété (a) est structurellement une indiscernabilité de conjugués : deux positions liées par l’involution φ, une fois soumises à l’élévation, produisent des états identiques sur le cadastre ; l’observation du carré ne permet plus de dire lequel des deux conjugués en est l’origine. La chrysalide (25, coque en racine 7) ne révèle pas si elle vient du 5 ou du 4 : l’information de branche est repliée, non détruite. Elle demeure dans la position complète, effacée seulement dans la réduction. Analogie de structure avec l’intrication des paires, proposée comme Lecture, non comme identité physique (la physique des corrélations est au Volume 7, <em>La Physique relue</em>).</p>
+<p><strong>V4.4.4 (L) : deux amnésies distinctes.</strong> <em>La Cascade cadastrale</em> (mai 2026, § 7) donne la même table sous le titre « le carré efface l’involution », et conclut : <em>« Le carré confond les deux faces d’une paire : il efface l’involution, comme la clôture modulaire effaçait le tour. Deux amnésies distinctes : l’une oublie le sens du tour, l’autre le côté de la paire. »</em> Les quatre images obtenues, 1, 4, 7, 9, sont exactement le rail D fermé par la clôture.</p>
+
+</main>
+<nav class="chapnav"><span class="prev"><a href="06-chapitre-3-la-grille-qui-s-engendre-et-les-quatre.html">← Chapitre 3. La grille qui s&#x27;engendre et les quatre familles</a></span><a class="toc" href="index.html">Sommaire du volume</a><span class="next"><a href="08-chapitre-5-les-jumeaux-le-predicat-j-k-et-la-dynam.html">Chapitre 5. Les jumeaux : le prédicat J(k) et la dynamique des ondes →</a></span></nav>
+<footer class="colophon"><p>Corpus ARC, Filipe Bastos, <a href="https://creativecommons.org/licenses/by/4.0/deed.fr" rel="license">CC BY 4.0</a>.</p></footer>
+</body>
+</html>

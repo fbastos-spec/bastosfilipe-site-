@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<link rel="canonical" href="https://bastosfilipe.com/arc/volumes/v07-la-physique-relue/06-chapitre-5-l-effet-tunnel-la-barriere-comme-aiguil.html">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chapitre 5. L&#x27;effet tunnel : la barrière comme aiguillage · La Physique relue · Corpus ARC</title>
+<meta name="description" content="La Physique relue, volume 7 du corpus ARC de Filipe Bastos. Chapitre 5. L&#x27;effet tunnel : la barrière comme aiguillage.">
+<meta name="keywords" content="mécanique quantique, borne de Tsirelson, mesure, Heisenberg, effet tunnel, proton, Modèle standard, théorie des cordes, corpus ARC, Filipe Bastos">
+<meta name="author" content="Filipe Bastos">
+<meta name="license" content="https://creativecommons.org/licenses/by/4.0/deed.fr">
+<link rel="stylesheet" href="../../assets/arc.css">
+</head>
+<body>
+<nav class="crumbs"><a href="../../index.html">Corpus ARC</a> / <a href="index.html">Volume 7 · La Physique relue</a></nav>
+<main class="chapter">
+<h1 id="chapitre-5.-leffet-tunnel-la-barriere-comme-aiguillage">Chapitre 5. L’effet tunnel : la barrière comme aiguillage</h1>
+<p>Une particule d’énergie E rencontre une barrière de hauteur V plus grande que E ; la physique classique dit qu’elle rebondit, la mécanique quantique dit qu’elle a une chance non nulle de se trouver de l’autre côté. Le récit reçu invoque un « emprunt » d’énergie autorisé par la relation temps-énergie, et l’effet Hartman (1962), qui montre que le temps de traversée cesse de croître avec l’épaisseur d’une barrière opaque, semble menacer la causalité relativiste. La version 1.0 de ce texte (12 janvier 2026) proposait que l’effet tunnel n’est pas une traversée probabiliste d’une région interdite, mais une projection selon un axe de cohérence orthogonal. La version 2.0 (août 2026), qui fait foi, garde cette thèse et la reconstruit sous la discipline des statuts : quatre théorèmes du formalisme standard, six lectures, trois prédictions, deux errata. Son résultat central : la barrière n’est pas un mur mais un aiguillage. Hors de la barrière, la dynamique spatiale est une rotation circulaire ; dedans, elle devient une rotation hyperbolique. La particule n’a jamais cessé d’obéir à une loi de rotation exacte ; la rotation a changé de signature.</p>
+<p><strong>É5.1 (L) Le protocole épistémique de la v2.0.</strong> Chaque énoncé porte un statut : Th (démontré, ou vérifié numériquement à cinquante chiffres significatifs), L (relecture structurelle de faits établis, empiriquement équivalente au récit standard par construction), P (falsifiable et ouvert). <em>« Une lecture ne peut pas être confirmée par les données qu’elle relit, seulement par les prédictions qu’elle engendre. »</em></p>
+<h2 id="les-faits-etablis">5.1 Les faits établis</h2>
+<p>Pour une barrière rectangulaire de hauteur V et de largeur L, une particule d’énergie E &lt; V, avec k = √(2mE)/ħ hors de la barrière et κ = √(2m(V − E))/ħ dedans, l’équation de Schrödinger stationnaire donne l’amplitude de transmission</p>
+<p>t = e^{−ikL} / [cosh(κL) + i ((κ² − k²)/(2kκ)) sinh(κL)].</p>
+<p><strong>É5.2 (Th) Théorème 1, l’unitarité : rien n’est perdu.</strong> |r|² + |t|² = 1 identiquement. Vérifié pour L = 1, 5 et 10 (unités ħ = m = 1, V = 2, E = 1) : écart inférieur à 10⁻⁴⁵ à cinquante chiffres ; refait en double précision pour ce volume, écart de l’ordre de 10⁻¹⁶ (Annexe D).</p>
+<p><strong>É5.3 (Th) Théorème 2, l’atténuation exponentielle.</strong> Pour κL ≫ 1, |t| tend vers C e^{−κL} avec un préfacteur borné. Au point k = κ (ici k = κ = √2), le rapport |t|/(2e^{−κL}) vaut 0,996519 pour L = 2 et 1,000000 pour L = 10.</p>
+<p><strong>É5.4 (Th) Théorème 3, la saturation de Hartman.</strong> Le retard de groupe τ = ħ dφ/dE de l’onde transmise sature, quand L → ∞, à la limite finie 2m/(ħkκ), indépendante de L. Valeurs : τ = 0,8884 pour L = 1, 0,99999 pour L = 5, et la limite théorique 1,0000000000 dès L = 10 (dix chiffres), la limite valant ici 2/(√2 × √2) = 1.</p>
+<p><strong>É5.5 (F) Ce qui est contesté et ce qui ne l’est pas.</strong> Le théorème 3 appartient au formalisme standard (phase stationnaire) ; ce que la littérature conteste est son interprétation physique, non ses mathématiques. Les expériences récentes sont partagées : les mesures d’horloge atto-seconde sur l’hydrogène atomique (Sainadh et al., Nature 568, 2019) donnent des délais compatibles avec zéro, tandis que les mesures par horloge de Larmor sur le rubidium (Ramos et al., Nature 583, 2020) donnent un petit temps non nul passé dans la barrière. La question expérimentale est tenue pour ouverte.</p>
+<h2 id="la-lecture-geometrique">5.2 La lecture géométrique</h2>
+<p><strong>É5.6 (L) Lecture 1, l’aiguillage.</strong> Hors de la barrière, la dynamique spatiale satisfait D² = −1 sur son rail : solutions e^{±ikx}, rotation circulaire, régime de période 4 (sinus et cosinus). Dans la barrière, le vecteur d’onde devient imaginaire, k → iκ, et la dynamique passe sur le rail D² = +1 : solutions e^{±κx}, rotation hyperbolique, régime de période 2 (sinus et cosinus hyperboliques). <em>« La barrière n’est pas un mur : c’est un aiguillage. La particule ne cesse jamais d’obéir à une loi de rotation exacte ; la rotation change de signature. »</em></p>
+<p><strong>É5.7 (Th) Les deux constantes de contact encadrent l’unité.</strong> Les deux rails, disséqués dans <em>La Dissection de l’Exponentielle</em> (théorèmes T-A.9 et T-A.10), portent chacun une constante de contact exacte pour un pas h : circulaire K = 2 sin(h/2) (cycle de période 4, avec signe), hyperbolique K′ = 2 sinh(h/2) (cycle de période 2, sans signe). Elles encadrent l’unité symétriquement : (K′/h − 1)/h² → 1/24 et (1 − K/h)/h² → 1/24 quand h → 0 (vérifié à soixante chiffres). Le rail hyperbolique dépasse l’unité exactement de ce dont le rail circulaire lui manque.</p>
+<p><strong>É5.8 (L) Lecture 2, la signature complète de l’aiguillage.</strong> L’aiguillage échange trois choses à la fois :</p>
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th>Dehors (région E)</th>
+<th>Dedans (barrière)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Rail</td>
+<td>D² = −1</td>
+<td>D² = +1</td>
+</tr>
+<tr class="even">
+<td>Constante de contact</td>
+<td>K = 2 sin(h/2)</td>
+<td>K′ = 2 sinh(h/2)</td>
+</tr>
+<tr class="odd">
+<td>Identité de clôture</td>
+<td>sin² + cos² = 1</td>
+<td>cosh² − sinh² = 1</td>
+</tr>
+<tr class="even">
+<td>Forme de la clôture</td>
+<td>somme</td>
+<td>différence</td>
+</tr>
+</tbody>
+</table>
+<p><em>« La clôture change de forme mais ne fait jamais défaut »</em> : dehors, le couple (sin, cos) se ferme par somme, paire d’inversion normalisée à 1 et pivotant à π/4 ; dedans, le couple (cosh, sinh) se ferme par différence. C’est le contenu géométrique de l’unitarité (É5.2) vu de l’intérieur de chaque région. Avec l’encadrement de É5.7 : <em>« le même 1/24 des deux côtés de l’aiguillage. La barrière ne brise pas la grammaire de la rotation ; elle en retourne le signe et paie le même péage de contact dans l’autre sens. »</em></p>
+<p><strong>É5.9 (Th) La décroissance comme soustraction des deux demi-rails.</strong> e^{−κL} = cosh(κL) − sinh(κL). Vérifié à cinquante chiffres : cosh(3,7) − sinh(3,7) = e^{−3,7} (refait à soixante chiffres décimaux, Annexe D).</p>
+<p><strong>É5.10 (L) Lecture 3, la loi de projection corrigée.</strong> L’atténuation est la projection associée à l’angle hyperbolique θ = κL : e^{−κL} = cosh(κL) − sinh(κL), la soustraction des deux demi-rails hyperboliques. Dans la dissection de l’exponentielle, ce sont précisément les deux composantes dont la réconciliation engendre e^x (période 1) et dont la différence engendre la décroissance ; l’identité d’opérateur 2 sinh(hD/2) vit sur le même rail. <em>« L’amplitude transmise n’est pas la survivante d’une épreuve aléatoire ; elle est la composante, tournée hyperboliquement, de l’état incident. »</em></p>
+<p><strong>É5.11 (L) Lecture 4, pas de dette énergétique.</strong> Le récit de l’emprunt d’énergie par ΔE Δt ≥ ħ/2 est inutile. Dans le traitement stationnaire qui donne l’amplitude t, l’énergie E est conservée exactement en tout point ; la région évanescente ne porte aucun déséquilibre de flux propagatif, et le théorème 1 rend compte de tout le budget d’amplitude : ce qui n’est pas transmis est réfléchi. <em>« Rien n’est emprunté, rien n’est perdu : l’amplitude est redirigée. »</em> La métaphore de l’emprunt est le résidu d’une image de trajectoire classique imposée à un régime dont la loi est la rotation hyperbolique.</p>
+<p><strong>É5.12 (L) Lecture 5, Hartman sans paradoxe.</strong> Dans la lecture de l’aiguillage, la saturation du théorème 3 est attendue, non paradoxale. Une rotation hyperbolique n’est pas une translation : l’angle hyperbolique κL est de l’atténuation accumulée, non du transit accumulé. Au-delà de quelques longueurs de décroissance, la structure de phase de la composante sortante est fixée par les points d’aiguillage (entrée et sortie), non par la longueur intérieure ; le retard de groupe cesse donc de croître avec L. Aucun signal supraluminique n’en découle : l’impulsion transmise, très atténuée, est remodelée à partir du front de l’onde incidente, mécanisme entièrement contenu dans l’amplitude t.</p>
+<h2 id="la-recuperabilite-la-composante-tournee-existe">5.3 La récupérabilité : la composante tournée existe</h2>
+<p><strong>É5.13 (Th) Théorème 4, la réflexion totale frustrée.</strong> En réflexion totale interne, un champ évanescent (hyperbolique) de constante de décroissance κ existe au-delà de l’interface. Placer un second milieu à quelques 1/κ convertit l’amplitude « perdue » en onde transmise propagative, avec un couplage qui décroît en e^{−κd} selon la largeur d de l’interstice. C’est le principe de fonctionnement des cubes séparateurs et des guides d’onde couplés.</p>
+<p><strong>É5.14 (L) Lecture 6, la réflexion frustrée exhibe la lecture 3.</strong> Si l’atténuation est une rotation et non une perte, la composante tournée doit être physiquement présente dans la région de la barrière et récupérable par couplage. Ce n’est pas une spéculation : c’est de la physique établie sous un autre nom. La composante tournée sur le rail hyperbolique n’est pas détruite : elle est là, et rebrancher un rail circulaire à sa portée la récupère. La v1.0 affirmait sans appui que le signal n’est pas perdu mais tourné hors du plan observable ; la v2.0 ancre l’affirmation dans le théorème 4.</p>
+<h2 id="predictions">5.4 Prédictions</h2>
+<p><strong>É5.15 (P) Prédiction 1, la discrimination sur Hartman.</strong> La lecture exige que la saturation du théorème 3 soit exacte pour la composante cohérente transmise. Si une expérience sans échappatoire établit un temps de traversée croissant linéairement avec L pour la composante qui a traversé (et non pour les particules qui séjournent puis reviennent), la lecture 5 tombe.</p>
+<p><strong>É5.16 (P) Prédiction 2, pas de stochasticité intrinsèque à l’aiguillage.</strong> La lecture traite la transmission comme une projection déterministe, l’aléa apparent étant logé dans l’état relationnel non résolu de la particule incidente, non dans l’événement de barrière. Tout protocole qui certifierait un aléa irréductible engendré à la barrière elle-même, et non hérité de la préparation de l’état, falsifierait la lecture déterministe. <em>« Cette prédiction est délibérément exposée : c’est là que la lecture est la plus vulnérable, et cela est dit plutôt que caché. »</em></p>
+<p><strong>É5.17 (P) Prédiction 3, l’échelle de récupération.</strong> Pour tout système tunnel, et non seulement optique, une structure réceptrice couplée à la distance d dans la région évanescente doit récupérer une amplitude en e^{−κd}, avec le même κ que celui mesuré en transmission. Un système qui montrerait une constante de transmission κ₁ et une constante de récupération κ₂ différente briserait le compte à rotation unique.</p>
+<p><strong>É5.18 (P) Les trois conditions de falsification.</strong> F1 : une mesure sans échappatoire d’un temps de traversée croissant linéairement avec L pour la composante cohérente transmise (tue la lecture 5). F2 : une génération certifiée d’aléa irréductible à l’événement de barrière lui-même (tue la lecture déterministe). F3 : un système tunnel dont la constante de récupération diffère de sa constante de transmission (tue le compte à rotation unique).</p>
+<h2 id="ce-que-la-version-2.0-ne-pretend-plus">5.5 Ce que la version 2.0 ne prétend plus</h2>
+<p><strong>É5.19 (L) Erratum 1 : la loi de projection circulaire de la v1.0.</strong> La v1.0 écrivait |ψ_sortie| = |ψ_entrée| cos Θ, avec Θ = 2κL. Un cosinus circulaire est borné et oscillant ; il ne peut pas reproduire la décroissance exponentielle monotone du théorème 2. L’identification était défectueuse. La structure correcte est la rotation hyperbolique de la lecture 3, que la dissection des opérateurs (les rails D² = ±1) a fournie six mois après l’écriture de la v1.0. <em>« Le document de janvier avait la bonne intuition sur le mauvais rail. »</em></p>
+<p><strong>É5.20 (L) Erratum 2 : le cadrage de la v1.0.</strong> La v1.0 présentait l’image géométrique comme une <em>résolution</em> du paradoxe. Comme l’image reproduit par construction le coefficient de transmission standard, elle ne peut pas être confirmée par les données du tunnel ; en tant que lecture, son contenu scientifique est épuisé par les prédictions 1 à 3. La v2.0 prétend donc : que les paradoxes (emprunt d’énergie, supraluminalité) sont des artefacts du récit de trajectoire classique, au niveau Th, puisque l’unitarité et la stationnarité les dissolvent ; que l’aiguillage est un récit de remplacement cohérent, au niveau L ; et que ce remplacement ne gagne sa place que par ses prédictions, au niveau P. Une désignation propre à la v1.0 pour l’axe de la projection est retirée de toutes les versions ouvertes et remplacée par « axe de cohérence (axe 4,5) » ; toute copie de la v1.0 en circulation est à tenir pour périmée.</p>
+<p><strong>É5.21 (L) Ce qui est remplacé dans la pièce sur Heisenberg.</strong> La pièce de février sur Heisenberg (chapitre 4) contenait une résolution de l’effet tunnel de l’époque de la v1.0 : l’axe de cohérence orthogonal au gradient de densité matérielle, le long duquel le potentiel n’aurait pas de composante ; une distance effective D_eff = L sin φ, φ étant l’angle entre l’état relationnel de la particule et l’axe de cohérence, qui tend vers zéro pour un système cohérent quelle que soit la largeur métrique L ; un travail nul le long d’une géodésique isopotentielle ; un temps de traversée nul. La v2.0 remplace cette résolution : le retard de groupe sature à une valeur finie, 2m/(ħkκ), et non à zéro (É5.4) ; la conservation de l’énergie tient par la stationnarité et l’unitarité, sans géodésique isopotentielle. Reste de la pièce de février l’intuition, que la v2.0 précise : <em>« la relation temps-énergie n’a jamais été un processus physique ; c’était un correctif mathématique appliqué pour compenser le désaccord dimensionnel entre un phénomène à trois dimensions (un contournement par rotation) et une description à une dimension »</em>, et la distinction entre distance métrique et distance topologique, qui gouverne aussi l’intrication (P2). Ces deux phrases restent des Lectures.</p>
+<h2 id="conclusion">5.6 Conclusion</h2>
+<p><strong>É5.22 (L) Il n’y a pas de région interdite.</strong> <em>« La particule ne traverse jamais de région interdite, parce qu’il n’y a pas de région interdite : il y a un changement de loi de rotation. »</em> Dehors, circulaire (D² = −1) ; dedans, hyperbolique (D² = +1) ; l’atténuation exponentielle est la soustraction des deux demi-rails hyperboliques, et l’unitarité certifie que le budget d’amplitude se ferme sans perte ni dette. <em>« Le mystère du tunnel est l’artefact d’un récit qui raconte une rotation hyperbolique dans le vocabulaire d’une traversée classique. »</em></p>
+<p>La v1.0 disait : <em>« Si une particule semble traverser un mur, c’est que le mur n’a jamais été fermé dans toutes les dimensions. »</em> La v2.0 peut le dire précisément : <em>« le mur n’a jamais été un mur, c’était un aiguillage, et le corpus a eu besoin de six mois de théorèmes de plus pour nommer le rail vers lequel il aiguille. »</em></p>
+<p>La v2.0 est dédiée <em>« à la communauté portugaise, qui a toujours refusé le sort aveugle par la saudade : la foi dans l’inconnu »</em>.</p>
+
+</main>
+<nav class="chapnav"><span class="prev"><a href="05-chapitre-4-l-indetermination-de-heisenberg-comme-c.html">← Chapitre 4. L&#x27;indétermination de Heisenberg comme coût de projection</a></span><a class="toc" href="index.html">Sommaire du volume</a><span class="next"><a href="07-chapitre-6-la-croix-de-planck-le-quantum-est-une-a.html">Chapitre 6. La croix de Planck : le quantum est une aire →</a></span></nav>
+<footer class="colophon"><p>Corpus ARC, Filipe Bastos, <a href="https://creativecommons.org/licenses/by/4.0/deed.fr" rel="license">CC BY 4.0</a>.</p></footer>
+</body>
+</html>

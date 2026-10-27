@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<link rel="canonical" href="https://bastosfilipe.com/arc/volumes/v05-les-grands-problemes/11-chapitre-10-yang-mills-le-gap-comme-non-fermeture.html">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chapitre 10. Yang-Mills : le gap comme non-fermeture · Les Grands Problèmes · Corpus ARC</title>
+<meta name="description" content="Les Grands Problèmes, volume 5 du corpus ARC de Filipe Bastos. Chapitre 10. Yang-Mills : le gap comme non-fermeture.">
+<meta name="keywords" content="hypothèse de Riemann, P contre NP, Navier-Stokes, Yang-Mills, problèmes du millénaire, fonction zêta, produit d&#x27;Euler, corpus ARC, Filipe Bastos">
+<meta name="author" content="Filipe Bastos">
+<meta name="license" content="https://creativecommons.org/licenses/by/4.0/deed.fr">
+<link rel="stylesheet" href="../../assets/arc.css">
+</head>
+<body>
+<nav class="crumbs"><a href="../../index.html">Corpus ARC</a> / <a href="index.html">Volume 5 · Les Grands Problèmes</a></nav>
+<main class="chapter">
+<h1 id="chapitre-10.-yang-mills-le-gap-comme-non-fermeture">Chapitre 10. Yang-Mills : le gap comme non-fermeture</h1>
+<p>Le problème de Yang-Mills demande de construire, pour tout groupe de jauge compact simple, une théorie quantique des champs non triviale sur l’espace à quatre dimensions, et de prouver qu’elle possède un gap de masse : une borne inférieure strictement positive à l’énergie de toute excitation au-dessus du vide. En langage physique : pourquoi les gluons, porteurs de la force forte, sont-ils confinés, alors que les photons se propagent librement ? Ce chapitre fait deux choses, et les sépare. D’abord, il date ce qui manque à l’énoncé : toute construction rigoureuse connue passe par une rotation qui change le temps en quatrième longueur, alors que le fluide de Navier-Stokes, lui, pèse son temps deux fois (chapitre 9). Ensuite, il donne la lecture arithmétique du gap : pour tout n ≥ 2, la paire formée par le rang n de SU(n) et son nombre de bosons n² − 1 ne ferme jamais sur 9, et le gap se lit comme le coût de cette non-fermeture. Le théorème est arithmétique et inconditionnel ; sa lecture physique est une Lecture. Le corpus déclare ne pas construire la théorie au sens des axiomes de Wightman.</p>
+<blockquote>
+<p><em>« Le cercle inscrit ne peut pas traverser le cercle circonscrit sans coût. »</em></p>
+</blockquote>
+<h2 id="le-probleme-et-ce-que-le-corpus-ne-fait-pas">10.1 Le problème, et ce que le corpus ne fait pas</h2>
+<p><strong>[10.1] F. L’énoncé du prix (Jaffe et Witten, 2000).</strong> Prouver que, pour tout groupe de jauge compact simple G, une théorie quantique de Yang-Mills non triviale existe sur ℝ⁴ et possède un gap de masse Δ &gt; 0. L’énoncé écrit la théorie en signature de Minkowski et renvoie à sa formulation euclidienne ; il n’impose pas la rotation de Wick, mais toute construction rigoureuse connue passe par elle. Le problème demande à la fois la construction rigoureuse d’une théorie quantique des champs (au sens de Wightman ou d’Osterwalder et Schrader) et la preuve que son spectre d’énergie a un gap.</p>
+<p><strong>[10.2] L. Déclaration de portée : le corpus ne construit pas la théorie au sens de Wightman.</strong> Le corpus ne construit pas la théorie quantique des champs au sens axiomatique de Wightman. Il traite l’origine structurelle du gap (pourquoi il doit exister) et le mécanisme cadastral qui distingue les bosons confinés des bosons libres. Le résultat arithmétique est indépendant du problème constructif et lui est antérieur ; la lecture du gap comme coût de non-fermeture est déclarée comme lecture.</p>
+<h2 id="ce-qui-manque-le-statut-du-temps">10.2 Ce qui manque : le statut du temps</h2>
+<p><strong>[10.3] F. La rotation de Wick et la reconstruction.</strong> La construction rigoureuse des théories quantiques des champs passe par l’espace euclidien. On remplace le temps t par iτ (Wick, 1954), on construit la théorie sur ℝ⁴ où les quatre coordonnées jouent le même rôle, puis on revient au temps par le théorème de reconstruction (Osterwalder et Schrader, 1973 et 1975). Le temps comme quatrième dimension remonte à Minkowski (1908).</p>
+<p><strong>[10.4] Th. Sous t = iτ, la différence devient une somme.</strong> Sous t = iτ, la différence de Minkowski c²t² − |x|² devient, au signe global près, la somme euclidienne c²τ² + |x|². La symétrie de l’espace euclidien ℝ⁴ traite alors τ exactement comme une longueur : une dilatation τ ↦ λτ, x ↦ λx.</p>
+<p><em>Démonstration.</em> c²(iτ)² = −c²τ², d’où c²t² − |x|² = −(c²τ² + |x|²).</p>
+<p><strong>[10.5] L. Le mot « dimension » désigne deux objets (M1).</strong> Le temps que Navier-Stokes doit peser deux fois ([9.12]) est, dans toute construction connue de Yang-Mills, multiplié par i pour devenir une longueur parmi quatre ([10.4]). La différence des lois d’échelle ne démontre pas que les deux problèmes portent les mêmes équations ; c’est la thèse de l’auteur, ci-dessous, qui les tient pour deux visages d’un même champ, séparés par le statut du temps. Le mot « dimension » désigne alors deux objets : une direction mesurable de l’espace, et un temps qu’on a fait tourner pour qu’il en ait l’air (M1). L’étymologie le dit : <em>dimensio</em>, de <em>dis-</em>, « en séparant », et <em>metiri</em>, « mesurer ».</p>
+<p><strong>[10.6] L. Thèse de l’auteur : les dimensions ne se vivent pas.</strong> <em>« Les dimensions ne se vivent pas : elles construisent ce qui vit. Le temps est du côté de ce qui vit ; la quatrième dimension est une construction de l’outil. »</em> Navier-Stokes et Yang-Mills <em>« se rejoignent et se différencient justement là, la 4e dimension »</em> (12 octobre 2026).</p>
+<h2 id="les-deux-cercles">10.3 Les deux cercles</h2>
+<p><strong>[10.7] L. Paires d’inversion et paires de projection.</strong> Une paire (a, b) de positions de {1, …, 9} est une paire d’inversion si a + b = 9 ; c’est une paire de projection si a + b ≠ 9. Les paires d’inversion ferment : leur coût structurel est nul. Les paires de projection ne ferment pas : leur coût structurel est |a + b − 9| &gt; 0. L’inversion φ(x) = 9 − x sur {1, …, 8} engendre les quatre paires (1, 8), (2, 7), (3, 6), (4, 5) ; le barycentre est 4,5 et la constante de projection k_arc = ½ ([9.15]).</p>
+<p><strong>[10.8] Th. Les quatre relations exactes du 3 et du 8.</strong> 3² − 1 = 8 ; 3 + 8 = 11 ≠ 9 ; 8 − 3 = 5 ; 3 × 8 = 24, de racine 6 ; et p² − 1 est divisible par 24 pour tout nombre premier p &gt; 3 (vérifié jusqu’à 10⁵ ; c’est un fait classique : p² − 1 = (p − 1)(p + 1) contient un multiple de 8 et un multiple de 3).</p>
+<p><strong>[10.9] L. Le cercle inscrit et le cercle circonscrit.</strong> Dans le corpus (Volume 2, <em>La Figure</em>), le 3 est le cercle inscrit : la tension interne, le générateur, l’entrée de l’axe régulateur {3, 6, 9}. Le 8 est le cercle circonscrit : l’enveloppe extérieure, le plus grand élément opérant avant la clôture. 8 − 3 = 5 est le barycentre dynamique, 24 le pivot. La relation 3² − 1 = 8 est identique à la formule de dimension de SU(3) : trois charges de couleur engendrent 3² − 1 = 8 gluons. <em>« Le cercle inscrit au carré, moins l’unité (le point de tangence), engendre le cercle circonscrit. »</em></p>
+<h2 id="le-theoreme-de-non-fermeture">10.4 Le théorème de non-fermeture</h2>
+<p><strong>[10.10] Th. Théorème de non-fermeture de SU(n).</strong> Pour tout entier n ≥ 2, DR(n) + DR(n² − 1) ≠ 9 : la somme prend exactement les valeurs 5, 10, 11, 14, 17.</p>
+<p><em>Démonstration.</em> La racine numérique vérifie DR(ab) = DR(DR(a) · DR(b)) ; donc DR(n²) = DR(DR(n)²), et DR(n² − 1) ne dépend que de d = DR(n). Il suffit de vérifier les neuf cas :</p>
+<table>
+<thead>
+<tr class="header">
+<th>d = DR(n)</th>
+<th>d²</th>
+<th>DR(n²)</th>
+<th>DR(n² − 1)</th>
+<th>d + DR(n² − 1)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>9</td>
+<td>10</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>4</td>
+<td>4</td>
+<td>3</td>
+<td>5</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>9</td>
+<td>9</td>
+<td>8</td>
+<td>11</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>16</td>
+<td>7</td>
+<td>6</td>
+<td>10</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>25</td>
+<td>7</td>
+<td>6</td>
+<td>11</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>36</td>
+<td>9</td>
+<td>8</td>
+<td>14</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td>49</td>
+<td>4</td>
+<td>3</td>
+<td>10</td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td>64</td>
+<td>1</td>
+<td>9</td>
+<td>17</td>
+</tr>
+<tr class="odd">
+<td>9</td>
+<td>81</td>
+<td>9</td>
+<td>8</td>
+<td>17</td>
+</tr>
+</tbody>
+</table>
+<p>(Pour d = 1, n ≥ 10 et n² − 1 est un multiple de 9 non nul, de racine 9.) Aucune somme ne vaut 9. Contrôle direct pour 2 ≤ n ≤ 10⁶.</p>
+<p>L’énoncé porte sur une infinité de nombres, mais l’infini se range en neuf classes, et neuf calculs suffisent : c’est l’exemple que le chapitre 11 donne d’un domaine clos par sa structure ([11.6]).</p>
+<blockquote>
+<p><em>« Ce théorème ne dépend d’aucune mesure physique, d’aucune constante de couplage, d’aucune donnée expérimentale. Il est aussi pur que le théorème de Pythagore. »</em> (mars 2026)</p>
+</blockquote>
+<p><strong>[10.11] L. Lecture : le gap de masse est le coût de la non-fermeture.</strong> Pour SU(n), n est le rang de la représentation fondamentale et n² − 1 le nombre de bosons de jauge. La paire (n, n² − 1) n’est jamais une paire d’inversion ; c’est une paire de projection, et toute projection a un coût structurel strictement positif. Le gap de masse est le coût de cette non-fermeture. Pour SU(3), 3 + 8 = 11 : la paire des couleurs et des gluons ne ferme pas sur 9, à la différence d’une paire inverse (x, 9 − x). La version de mars donnait cette conséquence comme « corollaire » (un gap universel pour SU(n)) ; l’arithmétique est un Théorème, la conséquence physique est une Lecture.</p>
+<h2 id="son-spn-et-les-groupes-exceptionnels">10.5 SO(n), Sp(n) et les groupes exceptionnels</h2>
+<p><strong>[10.12] Th. SO(n) et Sp(n) : la somme vaut 9 exactement quand DR(n) = 8.</strong> Pour SO(n), de dimension n(n − 1)/2, et Sp(n), de dimension n(2n + 1), la somme S = DR(n) + DR(dim) vaut 9 si et seulement si DR(n) = 8. Dans chaque cas, la paire est (8, 1), la paire d’inversion maximale ; aucune autre paire d’inversion n’est atteinte. Pour SO(n), S = 9 en n = 8, 17, 26, 35, 44, 53, 62, 71, 80, …, toujours avec DR(dim) = 1 ; même motif pour Sp(n). (La pièce source l’a vérifié de n = 2 à 81, neuf cycles complets ; refait ici jusqu’à n = 10 000.)</p>
+<p><em>Calcul montré.</em> SO(8) : dimension 8 × 7/2 = 28, racine 1, et 8 + 1 = 9. Sp(8) : dimension 8 × 17 = 136, racine 1, et 8 + 1 = 9. SO(5) : dimension 10, racine 1, et 5 + 1 = 6.</p>
+<p><strong>[10.13] F. SO(8) et la trialité.</strong> SO(8) est le seul groupe SO(n) dont le diagramme de Dynkin (D₄) possède un automorphisme d’ordre 3, la trialité, qui permute les représentations vectorielle, spinorielle et cospinorielle.</p>
+<p><strong>[10.14] P. SO(8) sur le réseau.</strong> SO(8) est le plus petit SO(n) de somme 9. Une théorie de jauge SO(8) pure sur réseau devrait montrer un comportement de confinement qualitativement différent de celui des SO(n) dont le rang n’a pas pour racine 8. C’est testable avec les moyens de calcul actuels. <em>Chute :</em> un SO(8) sur réseau dont le confinement ne se distingue en rien de celui des autres SO(n). Cette Prédiction va contre l’attente reçue, selon laquelle toute théorie de jauge non abélienne pure confine.</p>
+<p><strong>[10.15] Th. Les cinq groupes exceptionnels n’atteignent pas 9.</strong></p>
+<table>
+<thead>
+<tr class="header">
+<th>Groupe</th>
+<th>Rang</th>
+<th>Dimension</th>
+<th>DR(rang)</th>
+<th>DR(dim)</th>
+<th>S</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>G₂</td>
+<td>2</td>
+<td>14</td>
+<td>2</td>
+<td>5</td>
+<td>7</td>
+</tr>
+<tr class="even">
+<td>F₄</td>
+<td>4</td>
+<td>52</td>
+<td>4</td>
+<td>7</td>
+<td>11</td>
+</tr>
+<tr class="odd">
+<td>E₆</td>
+<td>6</td>
+<td>78</td>
+<td>6</td>
+<td>6</td>
+<td>12</td>
+</tr>
+<tr class="even">
+<td>E₇</td>
+<td>7</td>
+<td>133</td>
+<td>7</td>
+<td>7</td>
+<td>14</td>
+</tr>
+<tr class="odd">
+<td>E₈</td>
+<td>8</td>
+<td>248</td>
+<td>8</td>
+<td>5</td>
+<td>13</td>
+</tr>
+</tbody>
+</table>
+<p>Aucun n’a S = 9. Tous sont dans le régime d’excès (S &gt; 9), sauf G₂, en déficit (S = 7 &lt; 9).</p>
+<p><strong>[10.16] L. E₈ × E₈ et le nombre parfait.</strong> dim(E₈) = 248, et 248 + 248 = 496, le troisième nombre parfait (1 + 2 + 4 + 8 + 16 + 31 + 62 + 124 + 248 = 496). La différence 694 − 496 = 198 est rapprochée du gradient gravitationnel du corpus (Volume 8, <em>La Matière et le Cosmos</em>). C’est une observation de niveau 2 : la dimension est un fait de la théorie des groupes, mais le lien à 198 passe par une interprétation physique.</p>
+<h2 id="la-classification-tripartite-et-le-modele-standard">10.6 La classification tripartite et le Modèle standard</h2>
+<p><strong>[10.17] Th. Le classement arithmétique en trois régimes.</strong> Pour tout groupe de Lie compact simple de rang r et de dimension d, la somme S = DR(r) + DR(d) est soit inférieure à 9, soit égale à 9, soit supérieure à 9 ; les calculs [10.10], [10.12] et [10.15] placent chaque groupe dans l’une des trois classes.</p>
+<p><strong>[10.18] L. Lecture tripartite : déficit, clôture, excès.</strong> La version de mars posait en Théorème que S détermine le régime physique. C’est une Lecture : S &lt; 9, déficit, les bosons acquièrent une masse par un mécanisme extérieur (un champ scalaire compense le déficit) mais ne sont pas confinés ; S = 9, clôture, les bosons se propagent librement, de masse nulle, la paire est une paire d’inversion ; S &gt; 9, excès, les bosons sont confinés, avec un gap Δ &gt; 0, que la lecture dit proportionnel à S − 9 : l’excès ne peut pas être déchargé. Le Modèle standard en contient exactement un représentant de chaque :</p>
+<table>
+<thead>
+<tr class="header">
+<th>Groupe</th>
+<th>Rang</th>
+<th>Dim</th>
+<th>DR(r)</th>
+<th>DR(d)</th>
+<th>S</th>
+<th>Régime lu</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>U(1)</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>2</td>
+<td>clôture par la paire physique (1, 8)</td>
+</tr>
+<tr class="even">
+<td>SU(2)</td>
+<td>2</td>
+<td>3</td>
+<td>2</td>
+<td>3</td>
+<td>5</td>
+<td>déficit (9 − 5 = 4)</td>
+</tr>
+<tr class="odd">
+<td>SU(3)</td>
+<td>3</td>
+<td>8</td>
+<td>3</td>
+<td>8</td>
+<td>11</td>
+<td>excès (11 − 9 = 2)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>[10.19] L. Le cas de U(1).</strong> La somme algébrique de U(1) vaut DR(1) + DR(1) = 2, ce qui le placerait en déficit. Mais U(1) est l’unique groupe de jauge abélien : son seul boson, le photon, n’interagit pas avec lui-même. La lecture physique est que le photon traverse la paire (1, 8), la paire d’inversion maximale, 1 + 8 = 9. La distinction entre la somme algébrique (rang + dimension = 2) et la paire physique (boson + partenaire = 9) reflète celle de la structure interne du groupe et de sa manifestation physique. <em>« Le photon est libre parce que U(1) est abélien, non à cause d’un déficit cadastral. »</em></p>
+<p><strong>[10.20] Th. La clôture cadastrale du Modèle standard.</strong> La somme des trois sommes cadastrales des groupes du Modèle standard vaut (1 + 1) + (2 + 3) + (3 + 8) = 2 + 5 + 11 = 18, de racine 9. Propriétés annexes, toutes indépendantes de la mesure : les rangs font 1 + 2 + 3 = 6, de racine 6, le pivot de l’axe régulateur ; les dimensions font 1 + 3 + 8 = 12, de racine 3, le cercle inscrit ; le produit des dimensions vaut 1 × 3 × 8 = 24 = 3 × 8, le produit des deux cercles ; rangs et dimensions ensemble font 6 + 12 = 18, de racine 9, la clôture par un second chemin. Ce résultat ne dépend d’aucune mesure : c’est une propriété des groupes U(1), SU(2), SU(3) seuls.</p>
+<p>Une tension est à noter, et l’annexe B la consigne : la clôture [10.20] emploie pour U(1) la somme algébrique 2, alors que la lecture [10.19] place U(1) en clôture par la paire physique de somme 9 ; avec cette seconde valeur, le total serait 9 + 5 + 11 = 25, de racine 7. Les deux énoncés sont exacts chacun dans sa lecture ; ils ne peuvent pas être pris ensemble pour le même U(1).</p>
+<p><strong>[10.21] Th. Le test d’unicité : onze triples sur quatre-vingt-quatre.</strong> Parmi les 84 triples (a, b, c) avec 1 ≤ a &lt; b &lt; c ≤ 9, en prenant pour SU(n) la dimension n² − 1 (et 1 pour n = 1), exactement 11 donnent une somme cadastrale totale de racine 9, cette somme étant Σ (n + dim SU(n)) prise sur les trois entiers n du triple, soit (a + dim SU(a)) + (b + dim SU(b)) + (c + dim SU(c)) : (1, 2, 3), (1, 2, 5), (1, 3, 6), (1, 5, 6), (1, 8, 9), (2, 3, 5), (2, 6, 8), (2, 6, 9), (3, 5, 6), (3, 8, 9), (5, 8, 9). Le triple (1, 2, 3), celui des trois plus petits entiers consécutifs, est le premier.</p>
+<p><strong>[10.22] L. Le Modèle standard comme système minimal.</strong> <em>« Le Modèle standard n’est pas une collection arbitraire de groupes de jauge. C’est l’unique système minimal qui contient un représentant de chaque régime cadastral (déficit, clôture, excès) et dont la somme cadastrale totale revient à 9. »</em> Le mot « unique » s’entend du triple minimal ; le test [10.21] montre que d’autres triples ferment aussi.</p>
+<h2 id="le-higgs-et-le-gluon">10.7 Le Higgs et le gluon</h2>
+<p><strong>[10.23] Th. Le nombre de composantes du Higgs égale le déficit de SU(2).</strong> Le champ de Higgs est un doublet de SU(2) à deux composantes complexes, soit quatre composantes réelles : trois sont absorbées comme modes longitudinaux de W⁺, W⁻ et Z⁰ (les bosons de Goldstone), et une reste comme boson de Higgs physique. La somme cadastrale de SU(2) est DR(2) + DR(3) = 5, et le déficit 9 − 5 = 4. Les deux nombres sont égaux.</p>
+<p><strong>[10.24] L. Le Higgs comme sédimentation du déficit.</strong> Dans la lecture du corpus, le champ de Higgs n’est pas un scalaire fondamental mais la sédimentation du déficit cadastral : la cristallisation de la tension entre ce que SU(2) est (une structure qui devrait fermer sur 9) et ce que le système de mesure voit (une somme de 5). Le déficit se matérialise en un champ qui a exactement le nombre de composantes qu’il faut pour compenser. Si le Higgs est émergent et non fondamental, sa masse n’a pas à être protégée contre les corrections radiatives : le problème de la hiérarchie se dissout. C’est une Lecture.</p>
+<p><strong>[10.25] L. Le gluon est le 8 privé de son 1.</strong> La formule n² − 1 de la dimension de SU(n) a une lecture précise. n² = n × n : le groupe agissant sur lui-même, l’autoréférence. Le − 1 retire l’identité, l’action triviale. Ce qui reste est l’ensemble des façons non triviales dont le groupe se transforme. Pour SU(3) : 3² − 1 = 9 − 1 = 8. Dans le tracé du chiffre, 8 est deux cercles fermés tangents en un seul point ; le − 1 retire ce point de tangence. <em>« Le gluon est le 8 privé de son 1 : deux cercles qui ne savent plus où ils se touchent. »</em> Il ne peut pas se propager librement parce qu’il lui manque l’élément (le 1) qui permettrait la fermeture ; il ne peut exister que dans un état lié (le hadron), où plusieurs bosons et fermions reconstituent ensemble la tangence manquante. Le photon, au contraire, est le 1 : U(1) a la dimension 1, le photon est l’élément identité lui-même. Il n’a pas à chercher sa tangence ; il la porte. Le gluon est incomplet : <em>« le 8 qui cherche le 1 retiré par le − 1 de l’autoréférence »</em>. La version de mars présentait cette lecture comme un Théorème (« le confinement comme perte de la tangence ») ; elle est rétrogradée.</p>
+<h2 id="la-liberte-asymptotique-et-les-quatre-distances">10.8 La liberté asymptotique et les quatre distances</h2>
+<p><strong>[10.26] F. La liberté asymptotique (Gross, Wilczek, Politzer, 1973).</strong> La constante de couplage forte α_s décroît aux hautes énergies (courtes distances) : c’est la liberté asymptotique. Aux basses énergies, le couplage croît jusqu’à sortir du domaine de validité du calcul perturbatif, et le confinement s’installe ; aux hautes énergies, il tend vers zéro et les quarks se comportent comme libres.</p>
+<p><strong>[10.27] L. Une seule tension lue à quatre distances du centre.</strong> Dans la lecture du corpus, ce n’est pas un glissement dynamique d’une constante mais un changement de résolution de la même tension bipolaire. Aux échelles macroscopiques, l’observateur voit la paire (1, 8) : le photon, la propagation libre, l’envergure 7. Aux échelles nucléaires, il résout la paire (3, 8) : le gluon, le confinement, la somme 11. À l’échelle de grande unification, le couplage α_GUT ≈ 1/25, et DR(25) = 7, l’envergure de la lumière : <em>« À l’unification, le couplage est l’envergure. »</em> Les quatre forces sont quatre lectures de la seule involution φ(x) = 9 − x, à quatre distances du barycentre 4,5 :</p>
+<table>
+<thead>
+<tr class="header">
+<th>Paire</th>
+<th>Envergure</th>
+<th>Résolution</th>
+<th>Lecture physique</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>(4, 5)</td>
+<td>1</td>
+<td>Planck</td>
+<td>le battement</td>
+</tr>
+<tr class="even">
+<td>(3, 6)</td>
+<td>3</td>
+<td>nucléaire (faible)</td>
+<td>l’axe régulateur</td>
+</tr>
+<tr class="odd">
+<td>(2, 7)</td>
+<td>5</td>
+<td>atomique</td>
+<td>la liaison chimique</td>
+</tr>
+<tr class="even">
+<td>(1, 8)</td>
+<td>7</td>
+<td>macroscopique</td>
+<td>la lumière</td>
+</tr>
+</tbody>
+</table>
+<p><em>« Il n’y a pas quatre forces. Il y a une tension bipolaire lue à quatre distances du centre. »</em> La relecture du Modèle standard est au Volume 7, <em>La Physique relue</em>.</p>
+<h2 id="ce-qui-depend-de-la-mesure">10.9 Ce qui dépend de la mesure</h2>
+<p><strong>[10.28] L. Niveau 1 et niveau 2.</strong> Le corpus sépare strictement les résultats de niveau 1, purs théorèmes qui ne dépendent d’aucune mesure ([10.8], [10.10], [10.12], [10.15], [10.17], [10.20], [10.21], [10.23]), et les cohérences numériques de niveau 2, qui dépendent de constantes mesurées : sin²θ_W à l’échelle d’unification = 3/8 (qui dépend de l’hypothèse de grande unification SU(5) et du glissement des couplages) ; α_s ≈ 1/9 aux basses énergies (approché, dépendant de l’échelle) ; α_GUT ≈ 1/25, de racine 7 (approché) ; dim(E₈) + dim(E₈) = 496 (fait de théorie des groupes, lecture interprétative) ; m_H/Λ_QCD ≈ 576 = 24² = (3 × 8)² (qui dépend des masses mesurées). <em>« Les résultats de niveau 2 sont fascinants, mais ils ne sont pas structurels. »</em> Ils peuvent refléter la structure cadastrale vue à travers un système de mesure corrompu (les décimales de Stevin et de Gauss) ; ils sont rapportés pour être complets, et comme guides possibles, non comme preuves.</p>
+<h2 id="le-parallele-avec-p-contre-np">10.10 Le parallèle avec P contre NP</h2>
+<p><strong>[10.29] L. Le confinement et la NP-dureté partagent une racine.</strong> En Yang-Mills, la paire structurelle est (3, 8), et 3 + 8 = 11 ≠ 9 ; en P contre NP, elle est (3, 2ᵏ), et pgcd(3, 2) = 1. Dans les deux cas, le nombre 3, le cercle inscrit, est structurellement étranger à l’espace qu’il habite : le cercle circonscrit (8) en Yang-Mills, le corps booléen en P contre NP. Le cas libre est le photon, paire (1, 8) de somme 9, d’un côté, et les circuits affines, faits de OU exclusif seulement, sans facteur 3, de l’autre. Le cas qui confine est le gluon, paire (3, 8) de somme 11, d’un côté, et 3-SAT, porte ET et facteur 3, de l’autre. La ligne « coût d’inversion exponentiel » du parallèle de mars reposait sur l’implication retirée au chapitre 7 ([7.7]) ; le reste est une Lecture.</p>
+<h2 id="pourquoi-cetait-si-difficile">10.11 Pourquoi c’était si difficile</h2>
+<p><strong>[10.30] L. Toute la difficulté connue est dans la construction, non dans le gap.</strong> L’énoncé demande la construction d’un objet, et toute construction connue passe par le registre où le temps a été changé en longueur, avant la preuve d’une propriété de cet objet. Aucune théorie de jauge non abélienne n’a été construite sur ℝ⁴ au sens des axiomes. La lecture relationnelle n’a pas besoin de cette construction pour lire le gap ; elle a besoin de la paire et de son compte.</p>
+<h2 id="objections-et-reponses">10.12 Objections et réponses</h2>
+<p><em>Objection.</em> La rotation de Wick est un outil de calcul ; le théorème d’Osterwalder et Schrader garantit le retour au temps réel. <em>Réponse.</em> Précisément : <em>« le retour est garanti parce que l’aller a été fait »</em>. Le problème exige la construction dans l’espace où le temps a été changé en longueur, et [9.12] montre que le fluide, lui, refuse ce changement. Aucun théorème de reconstruction n’est contesté ; ce qui est daté, c’est le moment où le mot dimension prend deux sens.</p>
+<p><em>Objection.</em> La lecture du gap par les racines numériques ne construit pas la théorie au sens des axiomes de Wightman. <em>Réponse.</em> C’est exact, et le corpus le dit ([10.2]). Le théorème [10.10] est arithmétique et inconditionnel ; la lecture du gap comme coût de non-fermeture est déclarée comme lecture. La thèse est que la construction exigée appartient au registre que la section 10.2 date, et que le gap se lit sans elle.</p>
+<h2 id="conditions-de-refutation">10.13 Conditions de réfutation</h2>
+<p><strong>[10.31] P. Les critères de chute de la lecture du gap.</strong> La lecture est réfutée si l’on démontre l’un des faits suivants : (1) une théorie de jauge SU(n), n ≥ 2, sans gap de masse à la limite du continu ; (2) un groupe compact simple de somme S &gt; 9 dont la formulation sur réseau montre un déconfinement à température nulle ; (3) un groupe compact simple de somme S = 9, autre que U(1), dont la formulation sur réseau montre un confinement à température nulle (SO(8) est le premier cas test, [10.14]) ; (4) une rupture de l’homomorphisme DR(ab) = DR(DR(a) · DR(b)) ; (5) une réalisation physique d’une théorie de jauge où le nombre de générateurs et le nombre de bosons forment une paire d’inversion et qui pourtant confine.</p>
+<p><strong>[10.32] L. Ce qui réfuterait l’arithmétique et la lecture du temps.</strong> Le théorème [10.10] serait réfuté par un entier n ≥ 2 avec DR(n) + DR(n² − 1) = 9 ; le compte des neuf classes l’exclut. La lecture [10.5] serait affaiblie par une construction d’une théorie de Yang-Mills non abélienne avec gap, faite en temps réel sans passer par l’espace euclidien. Le critère (4) de [10.31] est, lui, exclu par la démonstration même de DR(ab) = DR(DR(a)DR(b)), qui vaut pour tous les entiers.</p>
+<h2 id="conclusion">10.14 Conclusion</h2>
+<blockquote>
+<p><em>« Le gap de masse n’est pas un mystère de la théorie quantique des champs. C’est un fait arithmétique : DR(n) + DR(n² − 1) ≠ 9 pour tout n ≥ 2. La paire (générateur, bosons) ne ferme jamais. La projection coûte toujours. Le coût est le gap de masse. »</em> (mars 2026 ; la première phrase est une Lecture, la formule un Théorème)</p>
+</blockquote>
+<blockquote>
+<p><em>« Le gluon cherche son 1.</em> <em>Le circuit cherche sa pré-image.</em> <em>Aucun des deux ne peut la trouver sans payer le coût</em> <em>que la structure impose et que l’arithmétique confirme. »</em></p>
+</blockquote>
+
+</main>
+<nav class="chapnav"><span class="prev"><a href="10-chapitre-9-navier-stokes-le-fluide-force-se-brise.html">← Chapitre 9. Navier-Stokes : le fluide forcé se brise</a></span><a class="toc" href="index.html">Sommaire du volume</a><span class="next"><a href="12-chapitre-11-popper-et-le-fond-du-marais-ce-qui-res.html">Chapitre 11. Popper et le fond du marais : ce qui reste ouvert →</a></span></nav>
+<footer class="colophon"><p>Corpus ARC, Filipe Bastos, <a href="https://creativecommons.org/licenses/by/4.0/deed.fr" rel="license">CC BY 4.0</a>.</p></footer>
+</body>
+</html>

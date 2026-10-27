@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<link rel="canonical" href="https://bastosfilipe.com/arc/volumes/v07-la-physique-relue/02-chapitre-1-la-borne-de-tsirelson-sans-espace-de-hi.html">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chapitre 1. La borne de Tsirelson sans espace de Hilbert · La Physique relue · Corpus ARC</title>
+<meta name="description" content="La Physique relue, volume 7 du corpus ARC de Filipe Bastos. Chapitre 1. La borne de Tsirelson sans espace de Hilbert.">
+<meta name="keywords" content="mécanique quantique, borne de Tsirelson, mesure, Heisenberg, effet tunnel, proton, Modèle standard, théorie des cordes, corpus ARC, Filipe Bastos">
+<meta name="author" content="Filipe Bastos">
+<meta name="license" content="https://creativecommons.org/licenses/by/4.0/deed.fr">
+<link rel="stylesheet" href="../../assets/arc.css">
+</head>
+<body>
+<nav class="crumbs"><a href="../../index.html">Corpus ARC</a> / <a href="index.html">Volume 7 · La Physique relue</a></nav>
+<main class="chapter">
+<h1 id="chapitre-1.-la-borne-de-tsirelson-sans-espace-de-hilbert">Chapitre 1. La borne de Tsirelson sans espace de Hilbert</h1>
+<p>Deux particules intriquées, mesurées loin l’une de l’autre, donnent des résultats corrélés plus fortement qu’aucune théorie locale à variables cachées ne le permet : c’est le contenu du théorème de Bell (1964), confirmé par l’expérience depuis Aspect (1982) jusqu’aux tests sans échappatoire de 2015. Mais la violation a elle-même une limite, la borne de Tsirelson (1980), qui vaut 2√2 ≈ 2,828 dans la combinaison de corrélations dite CHSH. La physique reçue obtient ce nombre par l’algèbre des opérateurs dans un espace de Hilbert. Ce chapitre montre qu’on l’obtient sans cet appareil, par une seule opération géométrique : la projection d’un état partagé sur la sphère, lue par un instrument qui paie la lecture. Le résultat est double. D’abord la corrélation exacte du singulet, −cos θ, sort en deux lignes. Ensuite la borne se décompose en trois facteurs indépendants, et cette décomposition dit ce que 2√2 <em>est</em> : le maximum algébrique 4 ramené à la valeur quantique par le tarif de la lecture. Le chapitre se clôt sur le sablier des paires, un dessin à la main qui contient exactement les quatre réglages de la borne.</p>
+<p>La version qui fait foi est <em>Tsirelson Without Hilbert</em> v4.1 (juillet 2026). La version 4.0 (mars 2026) est retirée sur le point du protocole de mesure (voir § 1.3 et Annexe B).</p>
+<h2 id="le-modele">1.1 Le modèle</h2>
+<p><strong>É1.1 (L) L’état relationnel.</strong> La paire intriquée partage un état relationnel λ, vecteur unitaire distribué uniformément sur la sphère S² selon la mesure invariante par rotation. Cette isotropie est la seule distribution compatible avec l’absence de direction privilégiée ; ce n’est pas un paramètre réglable.</p>
+<p><strong>É1.2 (Th) Le protocole de mesure à variable de lecture.</strong> Soient a et b deux directions de mesure (vecteurs unitaires) et μ une seconde variable cachée, uniforme sur [−1, 1], indépendante de λ, qui appartient à l’appareil de lecture. Le protocole est :</p>
+<ol type="1">
+<li>A(a, λ) = sgn(a·λ), le résultat d’Alice, dans {+1, −1} ;</li>
+<li>λ′ = −A(a, λ) · a, la mise à jour déterministe ;</li>
+<li>B(b, λ′, μ) = sgn(b·λ′ − μ), le résultat de Bob, dans {+1, −1}.</li>
+</ol>
+<p>La règle (2) est l’unique transformation qui satisfait à la fois la conservation du spin total, la cohérence entre résultat et état, et l’injection minimale d’information (exactement un bit). La règle (3) est un seuil à réponse linéaire : l’appareil apporte une variable continue, et le résultat est déterministe dès que l’état complet (λ, μ) est donné. Ni fonction d’onde, ni opérateur, ni effondrement, ni paramètre libre.</p>
+<p><strong>É1.3 (L) La mise à jour n’est pas un signal.</strong> Le passage de λ à λ′ n’est pas un signal qui se propage dans l’espace-temps : c’est un remplacement de coordonnée dans l’espace d’état relationnel partagé. Comme les distributions marginales ne dépendent pas du réglage de la partie éloignée (É1.20), aucune observable ne dépend de l’ordre des mesures dans aucun référentiel de Lorentz.</p>
+<p><strong>É1.4 (L) La paire et son lecteur.</strong> La variable μ n’appartient pas à la paire, elle appartient à la lecture. <em>« La paire porte la relation (λ) ; l’appareil porte le tarif de sa lecture (μ). »</em> Ôter μ, c’est lire le signe pur, c’est-à-dire supprimer le tarif ; le § 1.3 montre exactement ce que cela coûte : le protocole dépasse alors la borne quantique et tombe sur le maximum algébrique. La distinction entre la paire et son lecteur n’est pas une décoration philosophique : c’est elle qui sépare 2√2 de 4.</p>
+<h2 id="la-correlation-du-singulet">1.2 La corrélation du singulet</h2>
+<p><strong>É1.5 (Th) E(a, b) = −cos θ.</strong> Sous le protocole É1.2, pour toutes directions a et b faisant l’angle θ, la corrélation vaut E(a, b) = −cos θ.</p>
+<p><em>Démonstration.</em> Étape 1 : A = sgn(a·λ), avec P(A = +1) = 1/2 par isotropie. Étape 2 : la mise à jour donne λ′ = −A·a. Étape 3 : pour λ′ fixé, P(B = +1 | λ′) = P(μ &lt; b·λ′) = (1 + b·λ′)/2, puisque μ est uniforme sur [−1, 1] et que b·λ′ est dans [−1, 1] ; donc l’espérance de B sachant λ′ vaut b·λ′. Étape 4 : l’espérance de AB sachant λ vaut A × (b·(−A·a)) = −A²(a·b) = −(a·b) = −cos θ, puisque A² = 1. La corrélation conditionnelle ne dépend pas de λ ; la corrélation tout court vaut donc exactement −cos θ. ∎</p>
+<p>C’est la prédiction exacte de la mécanique quantique pour l’état singulet. Aucun paramètre n’est ajusté, aucune formule d’intégration n’est posée : le cosinus sort de la réponse linéaire de la lecture.</p>
+<h2 id="lerratum-le-signe-pur-est-la-boite-de-popescu-rohrlich">1.3 L’erratum : le signe pur est la boîte de Popescu-Rohrlich</h2>
+<p><strong>É1.6 (Th) Le protocole à signe pur donne |S| = 4.</strong> La version 4.0 lisait B = sgn(b·λ′), sans variable de lecture. Pris à la lettre, ce protocole donne AB = −sgn(a·b) pour tout λ, donc E(a, b) = −sgn(cos θ) : une fonction en marche d’escalier, non un cosinus. Aux réglages standard (a = 0°, a′ = 90°, b = 45°, b′ = 135°), les quatre corrélations valent −1, +1, −1, −1, et la combinaison CHSH S = E(a, b) − E(a, b′) + E(a′, b) + E(a′, b′) vaut −1 − 1 − 1 − 1 = −4. Le protocole à signe pur ne sature pas la borne de Tsirelson : il la dépasse et tombe exactement sur la boîte de Popescu-Rohrlich (1994), le maximum algébrique compatible avec le non-signalement.</p>
+<p>La v4.0 affirmait, à l’étape d’intégration, une interpolation pondérée par |cos α| ; ce poids est précisément ce que la fonction signe avait jeté. La réparation n’affaiblit pas le résultat, elle en révèle le mécanisme : la grandeur de la projection, portée par la variable de lecture μ, est ce qui ramène le maximum algébrique à la borne quantique. <em>« Lire le signe seul est une lecture gratuite ; la nature n’accorde pas de lecture gratuite. »</em></p>
+<h2 id="le-fondement-arithmetique-de-k-12">1.4 Le fondement arithmétique de k = 1/2</h2>
+<p>Avant la borne, la constante de projection. Cette section se lit indépendamment de la physique : elle établit que k = 1/2 est une nécessité de l’arithmétique des neuf chiffres. La construction complète du pli et des neuf positions est au Volume 1, La Fondation ; on n’en rappelle ici que ce que la borne utilise.</p>
+<p><strong>É1.7 (Th) Les neuf grandeurs à un symbole.</strong> Il existe exactement neuf grandeurs positives qui s’écrivent d’un seul chiffre : {1, …, 9}. Le nombre 10 en exige deux ; il introduit la valeur de position. Les neuf chiffres existent avant toute base.</p>
+<p><strong>É1.8 (Th) L’involution et la constante.</strong> L’application φ(x) = 9 − x agit sur {1, …, 8} comme une involution sans point fixe et produit quatre paires exhaustives, (1, 8), (2, 7), (3, 6), (4, 5), chacune de somme 9. Leur barycentre commun est 4,5. Le 9 agit comme membrane de clôture : φ(9) = 0 n’est pas dans {1, …, 9}. La constante de projection est k = 4,5/9 = 1/2, et elle ne dépend pas de la base : en base b, le rapport analogue vaut ((b − 1)/2)/(b − 1) = 1/2.</p>
+<p><strong>É1.9 (Th) Le pli universel.</strong> Pour tout entier a ≥ 1, le cycle des racines {DR(a), DR(2a), …, DR(9a)} contient le 9 comme clôture, et les huit autres termes se replient en quatre paires de somme 9.</p>
+<p><em>Démonstration.</em> DR(ka) + DR((9 − k)a) a la même racine que ka + (9 − k)a = 9a, donc sa somme est un multiple de 9. Les deux termes sont dans {1, …, 9}, leur somme dans {2, …, 18} : elle vaut 9 ou 18, et 18 seulement quand les deux racines valent 9. Les huit positions s’épuisent ainsi en quatre paires. ∎</p>
+<p>Le pli se voit dans la table de multiplication que tout enfant apprend :</p>
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th>×1</th>
+<th>×2</th>
+<th>×3</th>
+<th>×4</th>
+<th>×5</th>
+<th>×6</th>
+<th>×7</th>
+<th>×8</th>
+<th>×9</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>DR(1 × k)</td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+<td>6</td>
+<td>7</td>
+<td>8</td>
+<td>9</td>
+</tr>
+<tr class="even">
+<td>DR(8 × k)</td>
+<td>8</td>
+<td>7</td>
+<td>6</td>
+<td>5</td>
+<td>4</td>
+<td>3</td>
+<td>2</td>
+<td>1</td>
+<td>9</td>
+</tr>
+<tr class="odd">
+<td>DR(2 × k)</td>
+<td>2</td>
+<td>4</td>
+<td>6</td>
+<td>8</td>
+<td>1</td>
+<td>3</td>
+<td>5</td>
+<td>7</td>
+<td>9</td>
+</tr>
+<tr class="even">
+<td>DR(7 × k)</td>
+<td>7</td>
+<td>5</td>
+<td>3</td>
+<td>1</td>
+<td>8</td>
+<td>6</td>
+<td>4</td>
+<td>2</td>
+<td>9</td>
+</tr>
+<tr class="odd">
+<td>DR(4 × k)</td>
+<td>4</td>
+<td>8</td>
+<td>3</td>
+<td>7</td>
+<td>2</td>
+<td>6</td>
+<td>1</td>
+<td>5</td>
+<td>9</td>
+</tr>
+<tr class="even">
+<td>DR(5 × k)</td>
+<td>5</td>
+<td>1</td>
+<td>6</td>
+<td>2</td>
+<td>7</td>
+<td>3</td>
+<td>8</td>
+<td>4</td>
+<td>9</td>
+</tr>
+</tbody>
+</table>
+<p>Dans chaque couple de rangées, chaque colonne de ×1 à ×8 somme à 9. La convention de Gauss (1801) qui écrit « 9 ≡ 0 » écrase le chiffre de clôture sur le zéro, efface le barycentre et rend la structure d’inversion invisible ; la racine digitale sur {1, …, 9} la restitue (critique développée au Volume 3, Le Code et le Registre).</p>
+<h2 id="la-derivation-geometrique-de-la-borne">1.5 La dérivation géométrique de la borne</h2>
+<p>La combinaison CHSH est S = E(a, b) − E(a, b′) + E(a′, b) + E(a′, b′). En y portant E = −cos θ avec des réglages séparés de π/4, on obtient |S| = 2√2. La suite montre que ce nombre est une identité de structure.</p>
+<p><strong>É1.10 (Th) Lemme A, la norme spectrale.</strong> L’opérateur de Bell B = A₀⊗(B₀ + B₁) + A₁⊗(B₀ − B₁) vérifie ‖B‖ ≤ 2√2, avec égalité quand les deux paires d’observables anticommutent au maximum.</p>
+<p><em>Démonstration.</em> B² = 4 I⊗I − [A₀, A₁]⊗[B₀, B₁]. Pour des observables de spectre {+1, −1}, ‖[A₀, A₁]‖ ≤ 2 et ‖[B₀, B₁]‖ ≤ 2. Donc ‖B²‖ ≤ 4 + 4 = 8 et ‖B‖ ≤ √8 = 2√2. ∎</p>
+<p><strong>É1.11 (Th) Lemme B, le gain de la diagonale.</strong> Pour deux vecteurs unitaires orthogonaux b et b′, ‖b + b′‖ = √2. La configuration CHSH optimale place les réglages à π/4. Les protocoles classiques n’accèdent qu’aux côtés (gain 1) ; les protocoles quantiques accèdent à la diagonale (gain √2).</p>
+<p><strong>É1.12 (Th) Lemme C, le coût universel de projection.</strong> Pour λ uniforme sur S² et toute direction fixe a, l’espérance de |a·λ| vaut 1/2.</p>
+<p><em>Démonstration.</em> Prendre a selon l’axe vertical et couper la sphère à l’équateur. Sur chaque hémisphère, ∫₀^{π/2} cos θ sin θ dθ = [sin²θ/2]₀^{π/2} = 1/2. Rapportée à la sphère entière (de mesure normalisée (1/2) sin θ dθ), l’espérance vaut (1/2) × 2 × (1/2) = 1/2. ∎</p>
+<p>C’est l’information retenue, à l’espérance, quand un état continu sur S² est comprimé en un seul bit. C’est une constante géométrique de la sphère, et c’est le même 1/2 que celui de l’involution du § 1.4 : deux chemins indépendants, la géométrie sphérique et l’arithmétique discrète, aboutissent à la même valeur. Dans le protocole réparé, cette constante n’est plus seulement descriptive : la lecture à réponse linéaire est exactement celle qui paie la grandeur de la projection, et l’erratum du § 1.3 montre ce qui arrive quand elle n’est pas payée.</p>
+<p><strong>É1.13 (Th) La décomposition de la borne.</strong> S_max = N × k × d = 4 × (1/2) × √2 = 2√2.</p>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Facteur</th>
+<th>Valeur</th>
+<th>Origine</th>
+<th>Nature</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>N</td>
+<td>4</td>
+<td>CHSH : 2 réglages × 2 parties</td>
+<td>combinatoire</td>
+</tr>
+<tr class="even">
+<td>k</td>
+<td>1/2</td>
+<td>projection S² → Z₂ (Lemme C)</td>
+<td>géométrique</td>
+</tr>
+<tr class="odd">
+<td>d</td>
+<td>√2</td>
+<td>norme spectrale de la diagonale (Lemmes A et B)</td>
+<td>algébrique</td>
+</tr>
+</tbody>
+</table>
+<p>La borne classique de Bell s’obtient avec d = 1 : S = 4 × (1/2) × 1 = 2. L’avantage quantique vaut exactement √2, le rapport de la diagonale au côté.</p>
+<p><strong>É1.14 (L) De la factorisation au mécanisme.</strong> En v4.0, cette décomposition était présentée comme une factorisation analytique. La réparation du théorème du singulet la change en mécanisme. Le protocole à signe pur, la paire lue sans tarif, atteint le maximum algébrique 4 (É1.6) ; le poids géométrique de la lecture, dont la grandeur vaut k = 1/2 à l’espérance, est ce qui réduit ce maximum à la borne quantique. <em>« 4 est ce que la paire livrerait si la lecture était gratuite, et le passage par cos θ est le tarif qui la ramène à 2√2. Le facteur k n’est pas une écriture comptable ; c’est le péage. »</em></p>
+<h2 id="les-trois-plafonds">1.6 Les trois plafonds</h2>
+<p>Trois plafonds gouvernent la corrélation CHSH : la borne classique (variables cachées locales), la borne quantique (Tsirelson) et la borne algébrique (la boîte de Popescu-Rohrlich, maximum compatible avec le non-signalement).</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Plafond</th>
+<th>Valeur</th>
+<th>Régime</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Classique (Bell)</td>
+<td>2</td>
+<td>variables cachées locales ; côtés seulement (d = 1)</td>
+</tr>
+<tr class="even">
+<td>Quantique (Tsirelson)</td>
+<td>2√2</td>
+<td>la paire lue avec son tarif (ce modèle)</td>
+</tr>
+<tr class="odd">
+<td>Algébrique (boîte PR)</td>
+<td>4</td>
+<td>maximum non signalant ; la paire lue gratuitement (É1.6)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>É1.15 (Th) Le milieu géométrique des plafonds.</strong> 2√2 = √(2 × 4) : le plafond quantique est le milieu multiplicatif des plafonds classique et algébrique, et non leur milieu additif, qui serait 3 et que rien dans la structure ne sélectionne.</p>
+<p><strong>É1.16 (L) Le pli entre le classique et le formel.</strong> <em>« Le réel se tient au point de pli dimensionnel entre le monde classique et le maximum formel. »</em></p>
+<p><strong>É1.17 (Th) Les deux cercles.</strong> Le rapport du plafond quantique au plafond algébrique vaut 2√2/4 = 1/√2, exactement le rapport r/R du cercle inscrit au cercle circonscrit d’un carré, la figure fondatrice du corpus (Volume 2, La Figure). Son carré vaut (1/√2)² = 1/2 = k.</p>
+<p><strong>É1.18 (L) Le monde quantique remplit le maximum comme le cercle intérieur remplit l’extérieur.</strong> Le monde quantique remplit le maximum algébrique exactement comme le cercle inscrit remplit le circonscrit, et la constante de projection est la trace au carré de ce rapport.</p>
+<p><strong>É1.19 (L) Le sens opératoire du plafond.</strong> van Dam a montré (prépublication 2005, publication 2013) que des corrélations au maximum algébrique rendraient triviale la complexité de communication : avec des boîtes PR, toute fonction booléenne distribuée se calculerait avec un seul bit de communication ; la relation ferait gratuitement le travail du transport. La borne de Tsirelson est alors le plafond quantitatif de la relation sans transport : le point où la paire est fermée au maximum tandis que le tiers, le lecteur, le canal, paie encore. <em>« La nature s’arrête exactement là où le tarif survit. »</em></p>
+<h2 id="non-signalement-regle-de-born-intrication">1.7 Non-signalement, règle de Born, intrication</h2>
+<p><strong>É1.20 (Th) Non-signalement.</strong> La marge d’Alice P(A | a) ne dépend pas de b ; celle de Bob P(B | b) ne dépend pas de a.</p>
+<p><em>Démonstration.</em> A(a, λ) = sgn(a·λ) ne dépend que de a et λ, et l’isotropie donne P(A = +1 | a) = 1/2 pour tout a. Pour Bob : P(B = +1) = espérance de (1 + b·λ′)/2 = 1/2 + (1/2) × espérance de b·(−A·a) = 1/2 − (1/2)(a·b) × E[A] = 1/2, puisque E[A] = 0 par isotropie. ∎</p>
+<p><strong>É1.21 (L) La règle de Born comme compression géométrique.</strong> Dans la mécanique quantique reçue, la règle de Born est fondatrice mais non dérivée. Ici, elle est une conséquence de la géométrie. L’état complet λ porte deux degrés de liberté (θ, φ) ; la lecture retient une réponse linéaire seuillée et jette le reste. C’est l’origine de l’aléa quantique : l’information détruite par la compression dimensionnelle. L’état est déterministe, le résultat est déterministe sachant l’état complet (λ, μ) ; mais l’observateur, qui n’a accès qu’au résultat binaire, éprouve un aléa apparent dont la statistique est gouvernée par la géométrie sphérique, c’est-à-dire par la règle de Born. La constante k = 1/2 en est la signature : à l’espérance, exactement la moitié de l’information directionnelle survit à la compression S² → Z₂. Le protocole v4.1 rend le compte explicite : la variable de lecture μ appartient à l’appareil et elle est le porteur physique de la compression ; <em>« le lecteur paie la projection, pas la paire »</em>. <em>« La règle de Born n’est pas ontologiquement fondamentale. Elle est l’empreinte statistique d’une perte d’information géométrique. »</em></p>
+<p><strong>É1.22 (L) L’intrication comme paire d’inversion.</strong> Dans ce modèle, après la mesure d’Alice, l’état relationnel prend deux valeurs : λ′ = −a si A = +1, λ′ = +a si A = −1. Dans les deux cas, λ′ est l’inverse du résultat d’Alice projeté sur l’axe de mesure. C’est la structure φ(x) = 9 − x réalisée physiquement : A et λ′ sont complémentaires, ils forment une paire d’inversion ; aucun n’existe seul. Les deux résultats sont corrélés non parce qu’un signal voyage entre eux, mais parce qu’ils sont deux lectures du même état relationnel depuis les deux côtés de l’inversion.</p>
+<p><strong>É1.23 (L) Le minimum de la relation.</strong> La relation 2 = DR(11), racine de l’opérateur d’interface 11, est le minimum de la relation : deux éléments face à face. L’intrication n’est pas un phénomène quantique spécial ; elle est la condition générale de l’existence : tout élément n’existe qu’en relation à son complément. Le formalisme quantique l’a rendue visible ; la structure d’inversion la rend inévitable.</p>
+<p><strong>É1.24 (L) Ce qui est instantané et ce qui est borné.</strong> Modifier un élément d’une paire détermine l’autre, non par signal mais par définition : si x + φ(x) = 9, connaître x détermine φ(x) instantanément, à toute distance, parce que la contrainte est structurelle et non causale. <em>« Ce qui est instantané, c’est la relation ; ce qui est borné par c, c’est le transport. La corrélation est gratuite parce qu’elle est adresse ; le message coûte parce qu’il est travail. »</em></p>
+<h2 id="cinq-constantes-un-mecanisme">1.8 Cinq constantes, un mécanisme</h2>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Résultat</th>
+<th>Valeur</th>
+<th>Dérivation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Borne de Tsirelson</td>
+<td>2√2</td>
+<td>4 × (1/2) × √2, par S² → Z₂</td>
+</tr>
+<tr class="even">
+<td>Nombre quantique de spin</td>
+<td>1/2</td>
+<td>barycentre sur clôture, 4,5/9</td>
+</tr>
+<tr class="odd">
+<td>Distribution des premiers</td>
+<td>6k ± 1</td>
+<td>tous les premiers au-delà de 3 sur deux rails symétriques</td>
+</tr>
+<tr class="even">
+<td>Auto-complétion des premiers</td>
+<td>p² laisse 1 dans la division par 24</td>
+<td>24 = 4 × 6</td>
+</tr>
+<tr class="odd">
+<td>Écart structurel</td>
+<td>Δ = 3</td>
+<td>barycentre haut moins barycentre bas, 7,5 − 4,5</td>
+</tr>
+</tbody>
+</table>
+<p><strong>É1.25 (Chantier) L’universalité de la projection.</strong> Les corrélations quantiques et les motifs de distribution arithmétique seraient deux manifestations de la topologie d’inversion φ(x) = 9 − x sur {1, …, 9}, avec quatre paires invariantes, barycentre 4,5 et constante de projection 1/2. Les convergences du tableau sont des correspondances de structure, non des preuves ; leur unification formelle est un programme de recherche, non une affirmation (les premiers sur les rails 6k ± 1 sont au Volume 4, La Théorie des Nombres).</p>
+<h2 id="portee-et-limites">1.9 Portée et limites</h2>
+<p><strong>É1.26 (L) Ce que le modèle ne fait pas.</strong> (i) Il ne remplace pas la mécanique quantique : il propose une reformulation géométrique de la mesure pour les paires intriquées de spin 1/2 ; l’extension aux systèmes à plusieurs particules est ouverte. (ii) Il ne modifie aucune prédiction empirique : il reproduit E(a, b) = −cos θ et S_max = 2√2 exactement. (iii) Il n’est pas contextuel au sens de Kochen-Specker : les variables (λ, μ) sont indépendantes du contexte, λ appartient à la paire, μ à l’appareil local ; le modèle opère sur S² (dimension 2), hors de la portée du théorème de Kochen-Specker (dimension 3 ou plus). (iv) Les convergences arithmétiques du § 1.8 sont des correspondances, non des preuves. (v) Localité de Bell : le modèle est non signalant (É1.20) mais, comme tout modèle qui reproduit le cosinus du singulet, il n’est pas local au sens de Bell ; la mise à jour λ → λ′ est un remplacement relationnel indépendant de l’ordre, non un signal (É1.3). La prétention du modèle est l’origine géométrique de la borne, non une restauration de la localité de Bell, que le théorème de Bell exclut pour toute théorie qui reproduit la statistique quantique.</p>
+<h2 id="predictions-falsifiables">1.10 Prédictions falsifiables</h2>
+<p>Chacune suffit à réfuter le modèle si elle est violée.</p>
+<p><strong>É1.27 (P) F1, le cosinus exact.</strong> E(a, b) = −cos θ est exact pour tous les angles. Tout écart statistiquement significatif réfute le modèle.</p>
+<p><strong>É1.28 (P) F2, la borne exacte.</strong> S_max = 2√2 exactement. Toute violation reproductible de la borne de Tsirelson réfute le modèle.</p>
+<p><strong>É1.29 (P) F3, les marges.</strong> P(A | a) = P(B | b) = 1/2 pour tous les réglages, indépendamment de la partie éloignée. Tout signalement observé réfute le modèle.</p>
+<p><strong>É1.30 (P) F4, l’universalité de k.</strong> k = 1/2 vaut pour toutes les mesures binaires sur S². Un écart systématique réfute l’hypothèse de compression géométrique.</p>
+<p><strong>É1.31 (Th) F5, les deux propriétés des premiers.</strong> Tout premier p &gt; 3 laisse le reste 1 ou 5 dans la division par 6, et p² laisse le reste 1 dans la division par 24. Ce sont des théorèmes arithmétiques vérifiables indépendamment (refaits jusqu’à 10⁵, Annexe D).</p>
+<h2 id="la-double-derivation">1.11 La double dérivation</h2>
+<p><strong>É1.32 (L) La discipline de la double dérivation.</strong> Chaque constante porteuse est dérivée deux fois : à gauche, au papier et au crayon, sans rien d’autre que la géométrie de la règle et du compas et l’arithmétique de l’écolier ; à droite, dans l’appareil standard (mesures, normes, espérances). La règle est stricte : la colonne de gauche n’emprunte pas un seul concept à celle de droite. La dernière ligne de chaque tableau porte le même nombre. Ce que l’identité établit est le but de l’exercice : si le résultat est atteignable sans l’appareil, <em>« l’appareil est un véhicule du résultat, non son fondement »</em>. Chaque tableau est une pièce à conviction, non une illustration : le formalisme standard est convoqué comme témoin qui confirme, dans sa propre langue, un nombre qu’un pli de papier livre déjà.</p>
+<p><strong>É1.33 (Th) A.1, la constante k.</strong> <em>Au crayon</em> : envelopper la sphère dans un cylindre. Archimède : des tranches égales du cylindre couvrent des aires égales de la sphère ; la hauteur d’un point uniforme sur la sphère est donc répartie également le long du bâton [−1, 1]. Plier le bâton en son milieu : la moitié pliée [0, 1] reste couverte également. Le point d’équilibre d’un bâton couvert également est son milieu : 1/2. Un enveloppement, un pli, un milieu. <em>Dans l’appareil</em> : pour λ uniforme sur S² et a fixe, la loi image de a·λ est uniforme sur [−1, 1] (le théorème du carton à chapeau d’Archimède sous forme de théorie de la mesure) ; l’espérance de |a·λ| vaut (1/2)∫₀^π |cos θ| sin θ dθ = (1/2) × 2 × [sin²θ/2]₀^{π/2} = 1/2. Même nombre : k = 1/2.</p>
+<p><strong>É1.34 (Th) A.2, le plafond 2√2.</strong> <em>Au crayon</em> : tracer un carré de côté 2. Sa diagonale, par Pythagore, vaut √(2² + 2²) = √8 = 2√2. L’optimum CHSH lit les deux contributions perpendiculaires à pleine force (chacune vaut 2) et prend leur diagonale ; une règle suffit à vérifier. <em>Dans l’appareil</em> : B² = 4 I⊗I − [A₀, A₁]⊗[B₀, B₁], ‖[A₀, A₁]‖ ≤ 2 et ‖[B₀, B₁]‖ ≤ 2, donc ‖B²‖ ≤ 4 + 4 = 8 et ‖B‖ ≤ 2√2, saturé à l’anticommutation maximale. Même nombre : 2√2, la diagonale du carré 2 × 2 ; <em>« ‖B²‖ = 4 + 4 est Pythagore en habit d’opérateur »</em>.</p>
+<p><strong>É1.35 (Th) A.3, le milieu géométrique des plafonds.</strong> <em>Au crayon</em> : la construction de l’intermédiaire proportionnel de Descartes, au début de <em>La Géométrie</em>. Sur une droite, porter un segment de longueur 2 puis un segment de longueur 4 ; tracer le demi-cercle sur le segment entier (longueur 6) ; au point de jonction, élever la perpendiculaire jusqu’au demi-cercle : sa hauteur est le côté du carré d’aire égale au rectangle 2 × 4, soit √8 = 2√2. Compas et règle, rien d’autre. <em>Dans l’appareil</em> : √(2 × 4) = √8 = 2√2 ; le milieu additif serait 3, que rien dans la structure ne sélectionne. Même nombre : le plafond quantique est l’intermédiaire proportionnel entre le classique et l’algébrique.</p>
+<p><strong>É1.36 (L) Ce que les trois tableaux établissent.</strong> La constante k = 1/2 est un enveloppement et un pli ; le plafond 2√2 est la diagonale d’un carré ; leur point de rencontre est une construction au compas que Descartes donne dans les premières pages de <em>La Géométrie</em>. Aucun des nombres porteurs n’exige l’appareil dans lequel le texte est écrit. L’appareil est gardé pour une seule raison : c’est la langue dans laquelle le résultat est recevable par la communauté qui l’entretient. La frontière entre les deux colonnes est marquée, non effacée, et <em>« chaque fois que la colonne de droite confirme celle de gauche, l’instrument témoigne pour le pli »</em>.</p>
+<h2 id="le-sablier-des-paires">1.12 Le sablier des paires</h2>
+<p>Le 14 octobre 2026, l’auteur a dessiné à la main les quatre paires d’inversion empilées : 1-8, puis 2-7, puis 3-6, puis 4-5, à pas égal. Le dessin a la forme d’un sablier, et ce sablier contient exactement les réglages de la borne.</p>
+<p><strong>É1.37 (Th) La géométrie du sablier.</strong> Les rangées 1-8, 2-7, 3-6, 4-5 ont pour largeurs 7, 5, 3, 1, de somme 16 = 4². À pas égal, les bords descendent à 45° : ce sont les diagonales, de facteur √2. La taille du sablier est vide, en 4,5, que rien n’occupe. Inscrit dans le cercle, le dessin donne huit cônes et quatre sabliers.</p>
+<p><strong>É1.38 (Th) Les quatre directions du sablier sont les réglages de Tsirelson.</strong> Les quatre directions du sablier, 0°, 45°, 90° et 135°, sont exactement les réglages qui atteignent la borne. Avec a = 0°, a′ = 90°, b = 45°, b′ = 135° et E = −cos θ :</p>
+<ul>
+<li>E(a, b) = −cos 45° = −½√2 ;</li>
+<li>E(a, b′) = −cos 135° = +½√2, qui entre dans S avec le signe moins : −E(a, b′) = −½√2 ;</li>
+<li>E(a′, b) = −cos 45° = −½√2 ;</li>
+<li>E(a′, b′) = −cos 45° = −½√2.</li>
+</ul>
+<p>Donc S = −4 × ½√2 = −2√2 et |S| = 2√2. Chacun des quatre termes vaut ½ × √2 = cos 45° en valeur absolue : la constante de projection fois la diagonale.</p>
+<p><strong>É1.39 (Th) Sans les diagonales, la borne classique.</strong> Si l’on ne garde que les directions 0° et 90° (a = b = 0°, a′ = b′ = 90°), les quatre corrélations valent −1, 0, 0, −1 et S = −1 − 0 + 0 − 1 = −2 : |S| = 2, la borne classique. Les côtés seuls donnent 2 ; les diagonales donnent 2√2.</p>
+<p><strong>É1.40 (Th) Le maximum exige l’écart de 45°.</strong> Un balayage de tous les réglages au degré près (a fixé à 0°, a′, b, b′ de 0° à 179°) donne le maximum |S| = 2√2 au seul quadruplet (0°, 90°, 45°, 135°) : trois couples de réglages adjacents séparés de 45° et le quatrième de 135°. Pour des photons, où l’angle du polariseur est la moitié de l’angle de spin, ces réglages correspondent à des polariseurs écartés de 22,5°. (Vérifié par script le 14 octobre 2026, refait pour ce volume : Annexe D.)</p>
+<p><strong>É1.41 (L) Le dessin et la borne.</strong> Le sablier n’est pas une illustration ajoutée à la borne : il en est le schéma. Ses quatre rangées sont les quatre paires, ses bords à 45° sont les diagonales qui portent le gain √2, sa taille vide en 4,5 est le barycentre que la lecture ne touche jamais, et la somme de ses largeurs, 16 = 4², rappelle le N = 4 de la combinatoire CHSH. <em>« Classique : mesurer les côtés. Quantique : mesurer les diagonales. »</em></p>
+<h2 id="la-meme-borne-lue-par-le-livre-viii">1.13 La même borne lue par le Livre VIII</h2>
+<p>La Bible Quantique (Livre VIII.6 bis) lit la même borne par la figure des deux cercles, sans passer par la sphère.</p>
+<p><strong>É1.42 (Th) S/4 = r/R = √k.</strong> Dans la figure fondatrice, le carré est inscrit dans le cercle de rayon R et circonscrit au cercle de rayon r, avec r/R = cos(π/4) = √2/2 ≈ 0,7071068. La constante de projection est k = (r/R)² = 1/2. La borne de Tsirelson rapportée au maximum algébrique s’écrit S_Tsirelson/4 = √2/2 = r/R = √k.</p>
+<p><strong>É1.43 (L) La non-localité comme grammaire.</strong> La lecture reçue nomme « non-localité quantique » la violation de l’inégalité de Bell ; cette description est valide mais incomplète. Les corrélations ne sont pas une action mystérieuse à distance : elles partagent leur position dans le cadastre, et cette position est globale par construction. Les deux particules occupent la même paire d’inversion, l’une en x, l’autre en 9 − x ; leur corrélation exprime cette occupation conjointe, non la transmission d’un signal. <em>« La connexion est non locale dans l’espace métrique et locale dans l’espace topologique : c’est cette distinction, et non un contournement de Bell, qui porte la lecture »</em> (Croix de Planck v2.1, § 8).</p>
+<p><strong>É1.44 (Chantier) Le degré d’intrication comme position.</strong> Si l’intrication est une manifestation du cadastre, son degré devrait se lire comme une position : les états maximalement intriqués, qui saturent 2√2, occuperaient la paire centrale (4, 5), dont le barycentre est le centre du cadastre ; les états partiellement intriqués occuperaient des positions intermédiaires. La règle qui assigne une position à un degré d’intrication n’est pas écrite ; tant qu’elle ne l’est pas, l’énoncé ne peut être confronté aux expériences de Bell à intrication variable.</p>
+
+</main>
+<nav class="chapnav"><span class="prev"><a href="01-avant-propos.html">← Avant-propos</a></span><a class="toc" href="index.html">Sommaire du volume</a><span class="next"><a href="03-chapitre-2-les-correlations-quantiques-par-project.html">Chapitre 2. Les corrélations quantiques par projection séquentielle →</a></span></nav>
+<footer class="colophon"><p>Corpus ARC, Filipe Bastos, <a href="https://creativecommons.org/licenses/by/4.0/deed.fr" rel="license">CC BY 4.0</a>.</p></footer>
+</body>
+</html>

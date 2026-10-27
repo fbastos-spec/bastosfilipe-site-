@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<link rel="canonical" href="https://bastosfilipe.com/arc/volumes/v04-la-theorie-des-nombres/21-chapitre-14-les-jumeaux-et-les-deux-reseaux-pourqu.html">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chapitre 14. Les jumeaux et les deux réseaux : pourquoi 5 et 7 reviennent · La Théorie des Nombres · Corpus ARC</title>
+<meta name="description" content="La Théorie des Nombres, volume 4 du corpus ARC de Filipe Bastos. Chapitre 14. Les jumeaux et les deux réseaux : pourquoi 5 et 7 reviennent.">
+<meta name="keywords" content="delfine, nombres premiers, grille 6k ± 1, Collatz, Goldbach, nombres parfaits, nombres jumeaux, racine digitale, 24, corpus ARC, Filipe Bastos">
+<meta name="author" content="Filipe Bastos">
+<meta name="license" content="https://creativecommons.org/licenses/by/4.0/deed.fr">
+<link rel="stylesheet" href="../../assets/arc.css">
+</head>
+<body>
+<nav class="crumbs"><a href="../../index.html">Corpus ARC</a> / <a href="index.html">Volume 4 · La Théorie des Nombres</a></nav>
+<main class="chapter">
+<h1 id="chapitre-14.-les-jumeaux-et-les-deux-reseaux-pourquoi-5-et-7-reviennent">Chapitre 14. Les jumeaux et les deux réseaux : pourquoi 5 et 7 reviennent</h1>
+<p>Les jumeaux 5 et 7 sont séparés par l’axe et ne se rencontrent qu’en leur produit, 35 = 36 − 1, comme toute paire de jumeaux : (6k − 1)(6k + 1) = 36k² − 1 (Th 14). Le chapitre 13 les a vus revenir plusieurs fois autour de 24 : la première cassure par 25 = 5², la réunion à 35, le carré du tempo 576 qui écrit 5 et 7 côte à côte, et le nombre 245 = 5 × 7². Ce chapitre donne la règle qui les fait revenir, et elle tient en une phrase : au-delà du triangle, le plan ne sait tourner que de deux façons, par le carré (4) et par l’hexagone (6) ; 24 = 4 × 6 ; et 5 et 7 sont les deux premiers nombres premiers qui ne choisissent qu’une seule de ces deux façons, chacun l’autre. Il montre ensuite où la nature compte 4 × 6 sans qu’on l’y ait mise : dans les cristaux, et dans le seul ordre que les cristaux interdisaient, le quasi-cristal. Tout est Th sauf ce qui est marqué F ou L (pièce <em>Les Jumeaux et les Deux Réseaux</em>, version 0.2 du 7 octobre 2026).</p>
+<h2 id="les-jumeaux-sont-les-tetes-des-deux-rails">14.1 Les jumeaux sont les têtes des deux rails</h2>
+<p><strong>V4.14.1 (Th) : les deux files.</strong> Tout nombre premier au-delà de 3 s’écrit 6k − 1 ou 6k + 1. En racine digitale, 6k − 1 parcourt 5, 2, 8 et 6k + 1 parcourt 7, 4, 1 : les deux rails du cadastre sont les deux files de premiers, et 5 et 7 en sont les têtes.</p>
+<p><strong>V4.14.2 (Th) : les jumeaux ne sont pas symétriques.</strong> Sur le cercle des six positions inversibles, 5 engendre tout : ses puissances en racine font 5, 7, 8, 4, 2, 1. 7 n’engendre que son rail : 7, 4, 1. Et 5² = 25 a pour racine 7 : le premier jumeau, au carré, tombe sur le siège du second ; l’inverse n’arrive jamais. Le rail {1, 4, 7} est le rail des carrés : tout carré d’une position hors de l’axe y tombe (Th 6), et c’est pourquoi tout carré de premier y tombe. Le rail {2, 5, 8} est l’autre moitié : produit de deux positions du rail de 5, on retombe sur le rail de 7 ; produit d’une de chaque, on reste sur le rail de 5.</p>
+<pre><code>5^1 5^2 5^3 5^4 5^5 5^6        7^1 7^2 7^3        6k−1 : 5 2 8 5 2 8        6k+1 : 7 4 1 7 4 1
+ 5   7   8   4   2   1          7   4   1</code></pre>
+<h2 id="le-plan-ne-tourne-que-de-deux-facons-4-et-6">14.2 Le plan ne tourne que de deux façons : 4 et 6</h2>
+<p><strong>V4.14.3 (Th) : la restriction cristallographique.</strong> Un réseau du plan ou de l’espace, une grille de points qui se répète, n’admet que des rotations d’ordre 1, 2, 3, 4 ou 6. Ce sont exactement les diviseurs de 24 qui ne dépassent pas 6, et exactement les n dont le cercle des unités a au plus deux positions (φ_Euler(n) ≤ 2). Au-delà du triangle, il reste deux façons de tourner : le carré, quatre quarts de tour, et l’hexagone, six sixièmes. Le corpus a les deux figures depuis <em>Deux Cercles et un Carré</em> et <em>Avant tout le 19</em> (Volume 2 ; § 6 de cette dernière pièce : l’hexagone pave, l’octogone troue).</p>
+<p><strong>V4.14.4 (Th) : 24 = 4 × 6, et 10 = 4 + 6.</strong> Le réseau carré a quatre unités (1, i, −1, −i), le réseau hexagonal en a six. Leur produit est 24, le tempo ; leur somme est 10, la clôture relancée. Les deux briques doublées du chapitre 13 sont les deux ordres de rotation du plan.</p>
+<p><strong>V4.14.5 (Th) : le rapport tient à toute échelle.</strong> À la clôture 9^k, l’horloge du doublement (le cercle de six, période 6 à la clôture 9) a pour période 6 × 9^(k−1), et l’horloge de Fibonacci (période 24 à la clôture 9) a pour période 24 × 9^(k−1) : le rapport reste exactement 4 à 9, 81, 729, 6 561, 59 049 et 531 441. 24 = 4 × 6 n’est pas une propriété de la seule clôture 9 ; c’est une loi d’échelle. À la demi-période, chaque horloge réalise l’inversion x → c − x (pour la clôture 9 : 2³ = 8 = 9 − 1, et F_(k+12) a pour racine l’inverse de celle de F_k). Énoncé du 7 octobre 2026 ; vérifié pour k = 1 à 5 (refait pour ce volume).</p>
+<h2 id="chaque-premier-choisit-son-reseau-et-les-jumeaux-choisissent-lautre">14.3 Chaque premier choisit son réseau, et les jumeaux choisissent l’autre</h2>
+<p><strong>V4.14.6 (Th, Fermat et Euler) : s’ouvrir sur un réseau.</strong> Un premier impair s’écrit a² + b² si et seulement s’il laisse 1 dans la division par 4 ; il s’écrit a² + 3b² si et seulement s’il laisse 1 dans la division par 3 (F : P. de Fermat, lettre à Mersenne, 1640 ; L. Euler, 1749 pour les deux carrés, 1763 pour a² + 3b²). Dit avec les réseaux : un premier s’ouvre sur le carré quand il est somme de deux carrés, sur l’hexagone quand il est de la forme a² + 3b² ; sinon il y reste entier. Vérifié par recherche directe sur tous les premiers sous 2 000 (refait pour ce volume).</p>
+<p><strong>V4.14.7 (Th) : quatre classes, par le milieu 12.</strong> Le reste d’un premier au-delà de 3 dans la division par 12 vaut 1, 5, 7 ou 11 :</p>
+<table>
+<thead>
+<tr class="header">
+<th>reste par 12</th>
+<th>carré</th>
+<th>hexagone</th>
+<th>premiers</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>s’ouvre</td>
+<td>s’ouvre</td>
+<td>13, 37, 61, 73, 97</td>
+</tr>
+<tr class="even">
+<td>5</td>
+<td>s’ouvre</td>
+<td>reste entier</td>
+<td>5, 17, 29, 41, 53</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td>reste entier</td>
+<td>s’ouvre</td>
+<td>7, 19, 31, 43, 67</td>
+</tr>
+<tr class="even">
+<td>11</td>
+<td>reste entier</td>
+<td>reste entier</td>
+<td>11, 23, 47, 59, 71</td>
+</tr>
+</tbody>
+</table>
+<p>5 s’ouvre sur le carré et reste entier dans l’hexagone ; 7 fait exactement l’inverse. Les jumeaux sont les deux premiers nombres premiers qui ne choisissent qu’un réseau, et chacun choisit celui que l’autre refuse. <em>C’est la règle qui les fait revenir :</em> chaque fois qu’un compte met le carré en face de l’hexagone, 4 en face de 6, les deux premiers qui les départagent sont 5 et 7.</p>
+<p><strong>V4.14.8 (Th) : les deux espèces de jumeaux.</strong> Les nombres premiers jumeaux (p, p + 2) au-delà de 3 laissent dans la division par 12 soit (5, 7), soit (11, 1), jamais autre chose. L’espèce (5, 7) est <em>mixte</em> : un jumeau sur le carré, l’autre sur l’hexagone ; elle vit autour des centres 6k à k impair. L’espèce (11, 1) est <em>pure</em> : l’un ne s’ouvre sur rien, l’autre sur les deux ; centres à k pair. Comptées sous un million : <strong>4 046 paires mixtes, 4 122 paires pures</strong>, aucune troisième espèce (refait pour ce volume).</p>
+<h2 id="les-cinq-solides-et-lidentite-de-24">14.4 Les cinq solides et l’identité de 24</h2>
+<p><strong>V4.14.9 (Th) : les trois groupes des solides.</strong> Les rotations des solides réguliers forment trois groupes : d’ordre 12 pour le tétraèdre, 24 pour le cube et l’octaèdre, 60 pour le dodécaèdre et l’icosaèdre. Ce sont, dans l’ordre, le milieu de 24, le tempo, et σ(24) ; et 12 + 24 = 36 = s(24). L’identité centrale du chapitre 13 (s(24) = 36, σ(24) = 60) est écrite dans les symétries des cinq solides, celles sur lesquelles Euclide ferme les <em>Éléments</em> (livre XIII). Le groupe du cube, 24, est celui des permutations des quatre paires (V4.13.14) : les quatre diagonales du cube sont les quatre paires, et tourner le cube, c’est les permuter.</p>
+<p><strong>Note.</strong> Le corpus ne compte que les rotations, jamais les réflexions, en vertu de la règle « l’inverse n’est pas le miroir » ; avec les réflexions, les trois ordres doublent (24, 48, 120) et la lecture change de registre.</p>
+<h2 id="les-nombres-qui-portent-leur-fibonacci">14.5 Les nombres qui portent leur Fibonacci</h2>
+<p><strong>V4.14.10 (Th).</strong> Les n qui divisent leur propre nombre de Fibonacci F_n, sous 100, sont 1, 5, 12, 24, 25, 36, 48, 60, 72, 96 : le jumeau 5 et son carré 25, puis les multiples de 12. Les trois termes du pliage du chapitre 13 (12, 24, 36) et la première cassure (25) y sont, et rien d’autre sous 40. 5 est le seul nombre premier qui divise son propre Fibonacci (vérifié sous 2 000). F₂₄ = 46 368. (Refait pour ce volume.)</p>
+<h2 id="ou-la-nature-compte-les-cristaux-et-le-jumeau-interdit">14.6 Où la nature compte : les cristaux, et le jumeau interdit</h2>
+<p><strong>F : la loi de la matière.</strong> La restriction cristallographique n’est pas une convention d’écriture : c’est une loi de la matière périodique, vérifiée sur tous les cristaux connus depuis R. J. Haüy (1784) et A. Bravais (1848). Un cristal tourne par 2, 3, 4 ou 6 ; jamais par 5, jamais par 7. Les deux jumeaux sont les deux premiers ordres de rotation que la matière périodique refuse. C’est le premier endroit où la nature compte 4 × 6 sans qu’on l’y ait mise.</p>
+<p><strong>F : le quasi-cristal.</strong> Le 8 avril 1982, Dan Shechtman observe dans un alliage aluminium-manganèse une figure de diffraction à symétrie d’ordre 5, l’ordre interdit. Le groupe de ses rotations est celui de l’icosaèdre : 60 = σ(24). Il est exclu de son groupe de recherche ; Linus Pauling déclare qu’il n’y a pas de quasi-cristaux, seulement des quasi-scientifiques. Le résultat est publié en 1984 (D. Shechtman, I. Blech, D. Gratias, J. W. Cahn, <em>Physical Review Letters</em> 53), l’Union internationale de cristallographie redéfinit le mot cristal en 1992, et le prix Nobel de chimie lui est remis en 2011. Vingt-neuf ans entre la donnée et le sceau. Le jumeau 5, interdit par le réseau, entre dans la matière par l’icosaèdre, dont le groupe est la somme des diviseurs du tempo.</p>
+<p><strong>V4.14.11 (L) : le réseau est le pli de la matière.</strong> Le réseau ne retient que ce qui se répète, et jette ce qui ne se répète pas. Le quasi-cristal est un ordre qui ne se répète jamais et reste pourtant un ordre : un fini qui ne se répète pas, et qui tient. Le corpus y lit la même distinction que dans le nombre : un tiers n’est pas une queue qui se répète, c’est une relation qui tient ; un quasi-cristal n’est pas un cristal raté, c’est un ordre que le pli ne sait pas écrire. <em>« Pauling parlait depuis le pli. »</em></p>
+<h2 id="ce-que-ce-chapitre-ne-dit-pas-et-le-recu-quil-demande">14.7 Ce que ce chapitre ne dit pas, et le reçu qu’il demande</h2>
+<p>Il ne dit pas que les jumeaux premiers soient en nombre infini : c’est la conjecture de Polignac pour l’écart 2, et elle reste ouverte (chapitre 5). Il dit que toute paire, quand elle existe, est de l’une de deux espèces, et pourquoi. Il ne dit pas que les solides réguliers « expliquent » 24 : il dit que trois nombres de groupes, établis depuis Euclide, sont les trois nombres de l’identité de 24, et laisse la lecture à ce rang.</p>
+<p><strong>V4.14.12 (P, reçu posé d’avance, règle R11) : le 12 commun se partage en 4 et 6.</strong> Si la lecture des deux réseaux tient, les propriétés physiques qui distinguent les réseaux carrés des réseaux hexagonaux (métaux cubiques contre métaux hexagonaux compacts) devraient faire apparaître 4 et 6 dans leurs comptes de voisins et de plans, et 12 dans le compte commun. Le compte commun est connu : un atome a 12 voisins dans les deux empilements compacts, cubique à faces centrées et hexagonal compact. <em>La fenêtre :</em> vérifier si ce 12 commun se partage selon 4 et 6 dans les deux structures, ou non. <em>Critère d’échec :</em> le 12 commun ne se partage pas selon 4 et 6 dans les deux structures. (Le reçu relève du Volume 8.)</p>
+
+</main>
+<nav class="chapnav"><span class="prev"><a href="20-chapitre-13-le-nombre-plus-que-parfait-24-son-mili.html">← Chapitre 13. Le nombre plus que parfait : 24, son milieu, son miroir et sa couche</a></span><a class="toc" href="index.html">Sommaire du volume</a><span class="next"><a href="22-chapitre-15-la-cascade-cadastrale-et-la-spirale-du.html">Chapitre 15. La cascade cadastrale et la spirale du soleil →</a></span></nav>
+<footer class="colophon"><p>Corpus ARC, Filipe Bastos, <a href="https://creativecommons.org/licenses/by/4.0/deed.fr" rel="license">CC BY 4.0</a>.</p></footer>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<link rel="canonical" href="https://bastosfilipe.com/arc/volumes/v03-le-code-et-le-registre/23-chapitre-19-les-donnees-contaminees-douze-cas-date.html">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chapitre 19. Les données contaminées : douze cas datés · Le Code et le Registre · Corpus ARC</title>
+<meta name="description" content="Le Code et le Registre, volume 3 du corpus ARC de Filipe Bastos. Chapitre 19. Les données contaminées : douze cas datés.">
+<meta name="keywords" content="registre des erreurs, table de multiplication, audit, chaos, approximation, troncature décimale, complétude, corpus ARC, Filipe Bastos">
+<meta name="author" content="Filipe Bastos">
+<meta name="license" content="https://creativecommons.org/licenses/by/4.0/deed.fr">
+<link rel="stylesheet" href="../../assets/arc.css">
+</head>
+<body>
+<nav class="crumbs"><a href="../../index.html">Corpus ARC</a> / <a href="index.html">Volume 3 · Le Code et le Registre</a></nav>
+<main class="chapter">
+<h2 id="chapitre-19.-les-donnees-contaminees-douze-cas-dates">Chapitre 19. Les données contaminées : douze cas datés</h2>
+<p>Les mesures justes ne sont pas en cause ; c’est leur lecture qui l’est. Mais une mesure passe par un outil, et l’outil tronque (Stevin), replie (Gauss) ou change le sens d’un mot (le pli sur les mots). <em>Les Données Contaminées</em> (version 0.1, 6 octobre 2026) rassemble douze cas où la science, l’ingénierie ou la finance ont conclu sur une donnée que l’outil avait contaminée, avec la date, le coût quand il est connu, ce que l’outil a jeté, et ce qui l’a rendu. Aucun n’est contesté ; tous sont dans les archives. Ce qui n’avait pas été fait est de les lire ensemble, rangés par formule du chaos (chapitre 14). Le chapitre se ferme sur le chantier qu’ils ouvrent : refaire Lorenz en arithmétique exacte, avec ses deux issues écrites d’avance.</p>
+<blockquote>
+<p><em>« Les mesures justes ne sont jamais refusées ; c’est leur lecture qui l’est. »</em></p>
+</blockquote>
+<h3 id="stevin-la-troncature">19.1 Stevin : la troncature</h3>
+<p><strong>É19.1 (F) Lorenz, 1961 : le chaos né d’une imprimante.</strong> Lorenz relance une simulation météorologique en retapant 0,506 au lieu de 0,506127 : l’imprimante sortait trois décimales, la machine en gardait six. La trajectoire diverge, et l’effet papillon est né. Jeté : trois décimales (écart initial 0,506127 − 0,506 = 1,27 × 10⁻⁴). Rendu : rien ; la troncature est devenue une découverte. <strong>É19.2 (L)</strong> <em>« La science a conclu que la nature était sensible ; c’est d’abord l’imprimante qui l’était. »</em> (R.45 ; chantier L-1 ci-dessous.)</p>
+<p><strong>É19.3 (F) Millikan, 1913 : une constante d’entrée tronquée.</strong> La charge de l’électron est mesurée avec une valeur un peu fausse de la viscosité de l’air ; e sort trop bas d’environ 1 %. Pendant vingt ans, les mesures suivantes dérivent lentement vers la bonne valeur au lieu d’y sauter, chacune n’osant s’écarter de la précédente (Feynman, 1974). Jeté : la vraie viscosité. Rendu : par la dérive des citations, le pli des mesures entre elles.</p>
+<p><strong>É19.4 (F) Sleipner A, 23 août 1991.</strong> Plate-forme pétrolière norvégienne. Le modèle par éléments finis sous-estime un cisaillement de 47 % ; la structure se fissure et coule ; environ 700 millions de dollars. Jeté : la contrainte réelle, remplacée par une approximation linéaire. Rendu : un maillage fin, après coup.</p>
+<p><strong>É19.5 (F) Patriot, Dharan, 25 février 1991.</strong> 0,1 tronqué à 24 bits dans l’horloge ; après 100 heures, 0,34 seconde de dérive ; la cible à plus d’un demi-kilomètre de la porte de poursuite ; 28 morts (GAO/IMTEC-92-26). Jeté : la queue binaire de 1/10. Rendu : un redémarrage, trop tard. (Chapitre 3, É3.2.)</p>
+<p><strong>É19.6 (F) Bourse de Vancouver, 1982 à 1983.</strong> Indice initialisé à 1000, tronqué à trois décimales à chaque mise à jour, 3000 fois par jour ; corrigé le 28 novembre 1983 de 524,811 à 1098,892. Jeté : un millième par transaction. Rendu : le recalcul complet. (Chapitre 3, É3.3.)</p>
+<h3 id="gauss-le-pli-qui-jette-les-tours">19.2 Gauss : le pli qui jette les tours</h3>
+<p><strong>É19.7 (F) Ariane 5, vol 501, 4 juin 1996.</strong> Une vitesse horizontale codée en virgule flottante sur 64 bits est convertie en entier de 16 bits ; elle dépasse 32 767, le registre déborde, le logiciel de guidage lit une valeur sans rapport, la fusée s’autodétruit à 37 secondes ; environ 370 millions de dollars. Jeté : les bits de poids fort. Rendu : la vérification de plage, après coup. <strong>É19.8 (L)</strong> <em>« Un débordement de registre est 9 ≡ 0 : le tour jeté quand on franchit la clôture. »</em></p>
+<p><strong>É19.9 (F) L’an 2000.</strong> Les années écrites sur deux chiffres : 1999 puis 00. Le pli pur, le siècle jeté ; des centaines de milliards dépensés dans le monde pour rendre la colonne manquante. Jeté : le compte des siècles. Rendu : deux chiffres de plus, à la main, dans des millions de programmes.</p>
+<p><strong>É19.10 (F) Pentium FDIV, 1994.</strong> Une table de division à entrées manquantes ; erreur à la quatrième décimale sur certains quotients ; rappel des processeurs. Jeté : cinq entrées d’une table. Rendu : la table complète.</p>
+<h3 id="le-pli-sur-les-mots">19.3 Le pli sur les mots</h3>
+<p><strong>É19.11 (F) Hubble, 1929 : un mot pour deux étoiles.</strong> H₀ ≈ 500 km/s/Mpc, soit un univers d’environ deux milliards d’années (1/H₀ = 1,96 milliard d’années), plus jeune que la Terre : contradiction ouverte pendant vingt ans. Baade montre en 1952 que « céphéide » désignait deux classes d’étoiles aux luminosités différentes ; en les séparant, l’échelle des distances double et l’âge de l’univers avec elle. Jeté : la distinction entre deux objets sous un nom. Rendu : deux noms. <strong>É19.12 (L)</strong> C’est la pièce la plus pure du pli sur les mots (Volume 0, le Lexique), et la tension de Hubble d’aujourd’hui (67 contre 73) est née dans la même famille de mots (R.92).</p>
+<p><strong>É19.13 (F) Mars Climate Orbiter, 23 septembre 1999.</strong> Un logiciel donne la poussée en livres-force, l’autre la lit en newtons ; le même mot « force », deux registres ; la sonde se perd dans l’atmosphère de Mars ; 327 millions de dollars. Jeté : l’unité, c’est-à-dire l’étalon de la mesure, le deuxième terme (Lexique, entrée 16 ; III.9 du Registre : il n’existe aucune mesure à un seul terme). Rendu : rien ; la sonde est perdue.</p>
+<p><strong>É19.14 (F) Les gènes d’Excel, 2016 et 2020.</strong> Le tableur lit SEPT2 et MARCH1 comme des dates ; en 2016, environ un article de génomique sur cinq comportant des listes de gènes en contenait ; en 2020, le comité de nomenclature a renommé vingt-sept gènes pour céder à l’outil. Jeté : le nom, lu dans le mauvais registre par une machine. Rendu : la biologie a changé ses noms plutôt que l’outil.</p>
+<p><strong>É19.15 (F) OPERA, 2011.</strong> Des neutrinos « plus rapides que la lumière » de 60 nanosecondes ; un connecteur de fibre optique mal serré et une horloge décalée ; retiré en 2012. Jeté : 60 ns dans un câble. Rendu : le câble resserré, et la vitesse de la lumière.</p>
+<h3 id="ce-que-ces-douze-cas-disent">19.4 Ce que ces douze cas disent</h3>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Formule</th>
+<th>Cas</th>
+<th>Ce que l’outil a jeté</th>
+<th>Coût connu</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>I Stevin</td>
+<td>Lorenz, Millikan, Sleipner, Patriot, Vancouver</td>
+<td>des décimales, une constante, une contrainte</td>
+<td>28 morts ; environ 700 millions pour Sleipner (la source écrit « environ 1,1 milliard » pour la famille, sans le décomposer)</td>
+</tr>
+<tr class="even">
+<td>II Gauss</td>
+<td>Ariane 5, an 2000, Pentium</td>
+<td>les bits de poids fort, le siècle, cinq entrées</td>
+<td>environ 370 millions, plus les centaines de milliards de l’an 2000</td>
+</tr>
+<tr class="odd">
+<td>Pli sur les mots</td>
+<td>Hubble, Mars Climate Orbiter, Excel, OPERA</td>
+<td>une distinction, une unité, un registre, 60 ns</td>
+<td>327 millions ; vingt ans d’âge de l’univers faux</td>
+</tr>
+</tbody>
+</table>
+<p>(La source nomme la troisième famille « IV mots », d’après la quatrième formule du Lexique, Volume 0.)</p>
+<p><strong>É19.16 (L) Trois choses se lisent ensemble.</strong> D’abord, aucune de ces contaminations n’a été détectée par l’outil qui la produisait : chaque fois, c’est un second registre (une mémoire à six décimales, un recalcul, un deuxième type d’étoile, un câble resserré) qui a rendu la colonne. Ensuite, le coût est toujours payé en aval, par d’autres, avec intérêts (Le Prix de la Vitesse, chapitre 21 ; R.145). Enfin, dans le cas le plus célèbre, Lorenz, la contamination n’a pas été corrigée : elle a été promue découverte, et soixante ans de théorie en sont sortis.</p>
+<h3 id="le-chantier-l-1-lorenz-en-exact">19.5 Le chantier L-1 : Lorenz en exact</h3>
+<p><strong>É19.17 (Chantier) L-1, ouvert le 6 octobre 2026.</strong> Refaire le système de Lorenz (σ = 10, ρ = 28, β = 8/3) en arithmétique rationnelle exacte, sans aucune troncature, avec deux départs écartés de 1,27 × 10⁻⁴ comme en 1961, et mesurer deux choses séparément : l’<em>éloignement</em> (l’écart entre les deux trajectoires croît-il, et à quel taux) et la <em>confusion</em> (deux départs distincts deviennent-ils indistinguables). Le corpus distingue les deux (chapitre 3, II.4) : l’éloignement est porté par les équations, la confusion par l’outil.</p>
+<p><strong>É19.18 (P) Le critère fixé d’avance.</strong> Si l’écart croît exponentiellement en exact, la sensibilité appartient aux équations et la troncature de 1961 n’a fait que la révéler ; si l’écart reste borné en exact, elle appartenait à la machine. Les deux issues sont écrites avant le calcul, et le corpus s’engage sur l’une comme sur l’autre. Saito et Yamaguchi (2018) ont montré qu’en exact le décalage de Bernoulli tient sans dérive ; Lorenz lui-même n’a pas été refait ainsi.</p>
+<p><em>Note de la consolidation.</em> Une précision de méthode, qui découle des chapitres 14 et 17 : le système de Lorenz est continu, et le refaire « en exact » demande de choisir un schéma d’intégration à pas fini (par exemple un schéma d’Euler ou de Runge-Kutta à pas rationnel), lui-même une soustraction finie au sens du chapitre 17. Le chantier gagne à fixer ce schéma et son pas avant le calcul, en même temps que le critère, pour que l’issue ne dépende pas d’un choix fait après coup.</p>
+<p>Sources de la pièce : Lorenz 1963 et son récit de 1961 ; GAO/IMTEC-92-26 ; Lions et al., rapport Ariane 501 (1996) ; Jakobsen et Rosendahl, Sleipner (1994) ; Baade 1952 ; NASA, MCO Mishap Report (1999) ; Ziemann, Eren et El-Osta 2016 ; Bruford et al. 2020 ; OPERA 2012. Dix vérifications au build, zéro échec.</p>
+
+</main>
+<nav class="chapnav"><span class="prev"><a href="22-chapitre-18-le-principe-de-completude-le-statut-de.html">← Chapitre 18. Le principe de complétude : le statut des décimales qui ne finissent pas</a></span><a class="toc" href="index.html">Sommaire du volume</a><span class="next"><a href="24-chapitre-20-vous-avez-raison-quelque-chose-cloche.html">Chapitre 20. Vous avez raison : quelque chose cloche, et voici où ça a commencé →</a></span></nav>
+<footer class="colophon"><p>Corpus ARC, Filipe Bastos, <a href="https://creativecommons.org/licenses/by/4.0/deed.fr" rel="license">CC BY 4.0</a>.</p></footer>
+</body>
+</html>

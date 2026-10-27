@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<link rel="canonical" href="https://bastosfilipe.com/arc/volumes/v04-la-theorie-des-nombres/22-chapitre-15-la-cascade-cadastrale-et-la-spirale-du.html">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chapitre 15. La cascade cadastrale et la spirale du soleil · La Théorie des Nombres · Corpus ARC</title>
+<meta name="description" content="La Théorie des Nombres, volume 4 du corpus ARC de Filipe Bastos. Chapitre 15. La cascade cadastrale et la spirale du soleil.">
+<meta name="keywords" content="delfine, nombres premiers, grille 6k ± 1, Collatz, Goldbach, nombres parfaits, nombres jumeaux, racine digitale, 24, corpus ARC, Filipe Bastos">
+<meta name="author" content="Filipe Bastos">
+<meta name="license" content="https://creativecommons.org/licenses/by/4.0/deed.fr">
+<link rel="stylesheet" href="../../assets/arc.css">
+</head>
+<body>
+<nav class="crumbs"><a href="../../index.html">Corpus ARC</a> / <a href="index.html">Volume 4 · La Théorie des Nombres</a></nav>
+<main class="chapter">
+<h1 id="chapitre-15.-la-cascade-cadastrale-et-la-spirale-du-soleil">Chapitre 15. La cascade cadastrale et la spirale du soleil</h1>
+<p>La racine digitale donne la <em>position</em> d’un nombre : 1681 et 8161 ont la même racine, 7, et c’est juste, ils occupent la même case du cadastre. Mais ce ne sont pas les mêmes nombres : le 8 est au cœur de l’un, au bord de l’autre. Ce chapitre présente un second instrument, la <em>cascade</em>, qui lit l’arrangement intérieur des chiffres. On pose les chiffres en ligne, on additionne chaque chiffre à son voisin en réduisant en racine, et on recommence jusqu’à une seule pointe. La cascade est le triangle de Pascal appliqué aux chiffres : le centre compte plus que les bords. On verra qu’elle sépare des nombres que la racine confond, qu’elle envoie chaque rail sur son pivot, qu’elle ignore le sens de lecture, et qu’appliquée à certaines suites complètes du cadastre elle désigne l’opération qui leur manque. On verra enfin la <em>spirale du soleil</em>, la suite 13, 14, 16, 19, 23, 28, 34, 41, 49, que l’auteur dit avoir reçue en rêve et que la cascade descend en une pyramide palindromique jusqu’à 6. Le chapitre reprend <em>La Cascade cadastrale</em> (versions 4.0 et 4.1, mai 2026).</p>
+<p><strong>V4.15.1 (L) : la thèse.</strong> La racine digitale est une identité saine : elle conserve la clôture vivante, DR(9) = DR(18) = DR(27) = 9, et porte donc le tour intact. Ce n’est pas elle qui ampute, mais la clôture de Gauss (9 identifié à 0), qui écrase le 9 sur le zéro et tue le tour. La racine donne l’identité cadastrale d’un nombre, sa position globale. La cascade ne répare rien (l’identité n’est pas cassée) : elle révèle ce que l’identité ne décrit pas, la structure interne du nombre, et, dans certaines suites, l’opérateur qu’elles appellent. <em>« Deux lectures justes, puis une troisième. »</em> La racine et la réduction qui identifie 9 à 0 ne sont pas deux variantes d’un même outil : l’une garde la clôture, l’autre la détruit.</p>
+<h2 id="la-cascade-une-descente-qui-garde-la-memoire">15.1 La cascade : une descente qui garde la mémoire</h2>
+<p>On pose les chiffres en ligne. Chaque chiffre se marie à son voisin ; leur union descend d’un cran. Si l’union dépasse la clôture 9, elle boucle : elle ne sort pas du cadastre, elle revient par l’autre face du tour (14 donne 5, 18 donne 9). On répète jusqu’à la pointe. Pour 1681 :</p>
+<pre><code>1   6   8   1
+  7   5   9
+    3   5
+      8</code></pre>
+<p>La pointe est 8, là où la racine plate donnait 7. En descendant, les chiffres du milieu participent à plusieurs mariages, ils irriguent plus de descendants, tandis que les bords ne se marient qu’une fois. Les poids effectifs sont 1, 3, 3, 1 : le centre compte triple. Ce ne sont pas des poids arbitraires, ce sont les coefficients du triangle de Pascal (1 + 18 + 24 + 1 = 44, de racine 8).</p>
+<p><strong>V4.15.2 (Th) : la cascade est le binôme.</strong> La pointe de la cascade d’une suite de longueur L est la racine de la somme des chiffres pondérée par la ligne L − 1 du triangle de Pascal : c’est le développement de (a + b)^(L−1) appliqué aux chiffres, évalué sous la clôture 9. <em>« Une descente par partage où chaque case se souvient de ses deux parents. »</em></p>
+<h2 id="trois-proprietes">15.2 Trois propriétés</h2>
+<p><strong>V4.15.3 (Th) : elle distingue ce que l’identité ne sépare pas.</strong> Les mêmes chiffres {1, 6, 8, 1}, en divers ordres : la racine donne 7 partout ; la cascade varie selon la place du centre.</p>
+<table>
+<thead>
+<tr class="header">
+<th>nombre</th>
+<th>racine</th>
+<th>cascade</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1681</td>
+<td>7</td>
+<td>8</td>
+</tr>
+<tr class="even">
+<td>1861</td>
+<td>7</td>
+<td>8</td>
+</tr>
+<tr class="odd">
+<td>8161</td>
+<td>7</td>
+<td>3</td>
+</tr>
+<tr class="even">
+<td>1186</td>
+<td>7</td>
+<td>7</td>
+</tr>
+<tr class="odd">
+<td>6811</td>
+<td>7</td>
+<td>7</td>
+</tr>
+<tr class="even">
+<td>1618</td>
+<td>7</td>
+<td>3</td>
+</tr>
+<tr class="odd">
+<td>6118</td>
+<td>7</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+<p>(Les sept valeurs sont refaites pour ce volume.) La cascade est un discriminateur de structure : elle sépare des nombres de même identité cadastrale mais d’arrangement distinct. Elle ne corrige aucune perte de la racine ; elle ajoute la dimension que l’identité ne porte pas, l’ordre interne.</p>
+<p><strong>V4.15.4 (Th) : chaque rail se projette sur son pivot.</strong> Une suite faite d’un seul rail répété tombe exactement sur un point de ce rail : 147147147 → 7, pivot dynamique du rail D ; 258258258 → 2, ouvreur du rail G ; 369369369 → 6, régulateur de l’axe. La cascade ne mélange pas les familles : elle les révèle. <strong>F.</strong> Cette règle (marier les voisins, garder le chiffre) est, en termes établis, un automate cellulaire linéaire, de la même classe que la Règle 90 de S. Wolfram ; la cascade en est la version cadastrale, qui trie les rails au lieu de les brouiller.</p>
+<p><strong>V4.15.5 (Th) : aveugle au sens de lecture.</strong> La suite 1 2 3 4 5 6 7 8 9 a pour pointe 2 ; sa renversée 9 8 7 6 5 4 3 2 1 aussi. Renverser ne change rien : la pondération de Pascal est symétrique (C(n, k) = C(n, n − k)). La cascade capte une grandeur invariante par retournement. (La version 4.1 ajoutait qu’« une suite symétrique pointera vers le 6, le régulateur » ; ce n’est pas vrai en général, la suite 1 1 pointe sur 2 : la phrase est retirée, Annexe B.)</p>
+<h2 id="la-spirale-du-soleil">15.3 La spirale du soleil</h2>
+<p><strong>V4.15.6 (Th) : la suite et son empreinte.</strong> La suite 13, 14, 16, 19, 23, 28, 34, 41, 49 s’obtient en ajoutant à 13 les nombres triangulaires : ses écarts sont 1, 2, 3, 4, 5, 6, 7, 8, l’octet complet dans l’ordre. Formule : n(k) = 13 + k(k + 1)/2, pour k = 0 à 8. Son empreinte en racine digitale est <strong>4 5 7 1 5 1 7 5 4</strong> : un palindrome parfait centré sur le 5, le pivot. La somme des neuf racines vaut 39.</p>
+<p><strong>V4.15.7 (Th) : la pyramide.</strong> On applique la cascade :</p>
+<pre><code>4   5   7   1   5   1   7   5   4
+  9   3   8   6   6   8   3   9
+    3   2   5   3   5   2   3
+      5   7   8   8   7   5
+        3   6   7   6   3
+          9   4   4   9
+            4   8   4
+              3   3
+                6</code></pre>
+<p>Comme on part d’un palindrome et que le mariage des voisins est symétrique, chaque étage demeure palindromique jusqu’à la pointe. La descente passe par 484 = 22², puis par 33 (3 × 11, trinité et interface ; 33 × 6 = 198 ; le 33e premier est 137), et se referme sur <strong>6</strong> : le régulateur, le premier nombre parfait, le pivot du pavé. Colorée selon ses chiffres, la pyramide relève d’une structure auto-similaire, du même principe que la fractale de Sierpinski. (La suite, l’empreinte, la somme 39, la pyramide entière et la pointe sont refaites pour ce volume.)</p>
+<p><strong>Ce qu’en dit l’auteur (positions tenues, octobre 2026).</strong> La spirale est <em>« la seule chose reçue dans mon sommeil »</em>. Il la tient pour une clé qui <em>« se répète à l’infini »</em>. Son empreinte est un palindrome qui évite 3, 6, 9, 2 et 8 (elle n’emploie que 1, 4, 5 et 7), et qui va <em>« du barycentre 45 au 54 »</em> (elle commence par 4, 5 et finit par 5, 4). Elle vaut 39 : <em>« 3(6)9, l’axe invisible, le mouvement de l’onde. »</em> Et sur son premier terme : <em>« 13 est le nombre le plus chargé de tout le cadastre »</em>, la première rencontre du 1 et sa libération, <em>« 1 ⊕ 1 = 3, c’est la structure »</em>, <em>« lui avec lui qui fait 4 »</em> ; 103 est <em>« la même chose avec la mémoire »</em>. <em>« Les sens des positions ne sont pas du symbolisme »</em> (<em>La Sémantique des Neuf Positions</em>, Volume 1).</p>
+<p><strong>V4.15.8 (L) : la spirale du soleil comme clé.</strong> La spirale du soleil est tenue par l’auteur pour révélatrice d’une structure qui se répète à toute échelle : palindrome des racines, somme 39 lue comme l’axe 3-6-9, pyramide descendant au régulateur 6. Statut : Lecture ; les faits arithmétiques (V4.15.6 et V4.15.7) sont des théorèmes, la portée est la position de l’auteur.</p>
+<h2 id="la-cascade-revele-loperateur">15.4 La cascade révèle l’opérateur</h2>
+<p>Les sections précédentes inscrivent la cascade comme discriminateur de structure : elle décrit le nombre. La version 4.1 ajoute une lecture plus forte : dans certaines suites cadastralement significatives, la cascade désigne l’opérateur qui agit sur la suite pour la restructurer.</p>
+<p><strong>V4.15.9 (Th) : la cascade de 1 → 9 pointe sur 2.</strong> La suite naturelle complète, 1 2 3 4 5 6 7 8 9, pondérée par la ligne 8 de Pascal (1, 8, 28, 56, 70, 56, 28, 8, 1), donne 1·1 + 2·8 + 3·28 + 4·56 + 5·70 + 6·56 + 7·28 + 8·8 + 9·1 = 1 280, et DR(1 280) = 2. La cascade directe descend en neuf étages jusqu’à la même pointe.</p>
+<p><strong>V4.15.10 (Th) : l’octet seul pointe sur 9.</strong> La sous-suite 1 2 3 4 5 6 7 8, l’octet pur, sans clôture :</p>
+<pre><code>1   2   3   4   5   6   7   8
+  3   5   7   9   2   4   6
+    8   3   7   2   6   1
+      2   1   9   8   7
+        3   1   8   6
+          4   9   5
+            4   5
+              9</code></pre>
+<p>L’octet sans clôture pointe sur la clôture. (Sa somme pondérée par la ligne 7 vaut 576 = 24², chapitre 13.)</p>
+<p><strong>V4.15.11 (Th) : le pavé révèle son axe et son centre.</strong> Les trois rangées du pavé tordu prises une à une : 234 → (5, 7) → 3 ; 567 → (2, 4) → 6 ; 891 → (8, 1) → 9. Les trois pointes, 3, 6, 9, sont exactement l’axe : le pavé inscrit son axe vertical dans les cascades de ses rangées horizontales (ce que l’arithmétique attend : chaque rangée est un triplet consécutif x, x + 1, x + 2, dont la somme pondérée 1, 2, 1 vaut 4(x + 1), et quatre fois un terme de l’axe a la racine de ce terme ; mais le cadastre le lit densément). Le pavé lu en suite linéaire, 234567891, pointe sur 6, le centre ; lu à l’envers, 198765432, aussi ; lu colonne par colonne, 258369471, aussi. Toutes ces pointes sont refaites pour ce volume.</p>
+<p><strong>V4.15.12 (L, rétrogradé) : la cascade comme révélateur d’opérateur.</strong> La version 4.1 inscrivait un « Théorème 6 bis.1 » : pour toute séquence cadastralement significative S (suite naturelle 1 → 9, octet 1 → 8, rangées et colonnes du pavé, rails purs), la pointe inscrit l’opérateur cadastral dont l’action sur S la restructure ou la complète :</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>séquence</th>
+<th>pointe</th>
+<th>opérateur révélé</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1 → 9 (cadastre complet)</td>
+<td>2</td>
+<td>le splitter, la coupe qui engendre le pavé</td>
+</tr>
+<tr class="even">
+<td>1 → 8 (octet sans clôture)</td>
+<td>9</td>
+<td>la clôture qui ferme l’octet</td>
+</tr>
+<tr class="odd">
+<td>pavé entier 234567891</td>
+<td>6</td>
+<td>le pivot central, identité du pavé</td>
+</tr>
+<tr class="even">
+<td>147 répété (rail D)</td>
+<td>7</td>
+<td>le pivot dynamique du rail</td>
+</tr>
+<tr class="odd">
+<td>258 répété (rail G)</td>
+<td>2</td>
+<td>l’ouvreur du rail G</td>
+</tr>
+<tr class="even">
+<td>369 répété (axe)</td>
+<td>6</td>
+<td>le régulateur de l’axe</td>
+</tr>
+</tbody>
+</table>
+<p>Les pointes sont des théorèmes (V4.15.4, V4.15.9 à V4.15.11). Mais l’énoncé général porte sur une classe, les « séquences cadastralement significatives », que la source elle-même déclare non encore formalisée (section 15.6) : un énoncé sur une classe non définie n’est pas un théorème. Il est rétrogradé en <strong>Lecture</strong> (Annexe B). La lecture en est la suivante. <em>« Une séquence ouverte (l’octet seul) appelle sa fermeture (la clôture 9). Une séquence linéaire complète (1 → 9) appelle l’opérateur qui la plie en grille (le splitter 2). Un rail pur appelle son propre pivot. Le pavé tordu, lu comme séquence linéaire, appelle son propre centre. »</em> Le 2 n’est pas un chiffre quelconque : premier pair, premier premier, opérateur de découpe ; racine de 11, l’opérateur de relation pure ; racine de (√2)² ramené au cadastre ; premier chiffre du pavé tordu 234 / 567 / 891. <em>« Sans le 2, la suite reste linéaire. Avec le 2, elle devient grille cadastrale. »</em> L’octet seul appelle la clôture, et l’octet avec la clôture appelle le splitter : une cascade d’opérations. C’est la même inscription que le gradient 198, où la rampe 1 à 8 reste ouverte tant que la clôture 9 ne la ferme pas.</p>
+<p><strong>V4.15.13 (L) : la cascade et √2.</strong> Dans <em>Le Carré-Illusion</em> (Volume 2), √2 est l’opérateur de découpe géométrique qui sépare les deux cercles concentriques de la figure fondatrice pour engendrer le carré et l’axe 3-6-9. La cascade de 1 → 9, pointant sur le splitter 2, est l’inscription arithmétique du même geste : géométriquement, √2 découpe deux cercles pour engendrer un carré ; arithmétiquement, la cascade extrait de la suite linéaire le 2. <em>« La cascade et la découpe géométrique sont deux faces d’une même opération. »</em></p>
+<h2 id="ancrage-ce-que-la-cascade-rejoint">15.5 Ancrage : ce que la cascade rejoint</h2>
+<p><strong>F.</strong> <em>Pascal et le binôme :</em> la pointe est la somme des chiffres pondérée par une ligne du triangle. <em>Automate cellulaire :</em> la règle additive de voisinage est un automate cellulaire linéaire à une dimension, de la même classe que la Règle 90 de Wolfram. <em>Fractale et puissance de premier :</em> le triangle de Pascal réduit dessine une fractale auto-similaire (Sierpinski), et la clôture 9 = 3² place la cascade non sur le cas élémentaire (un premier, théorème de Lucas) mais sur le cran supérieur, le calcul des coefficients binomiaux selon une puissance de premier. Ce régime est traité par R. Huard, B. Spearman et K. Williams, « Pascal’s triangle (mod 9) », <em>Acta Arithmetica</em> 78 (1997), 331-349, qui calcule la distribution des restes par 9 dans chaque ligne au moyen de l’écriture en base 3, en s’appuyant sur l’extension de Lucas aux puissances de premiers de K. Davis et W. Webb (<em>European Journal of Combinatorics</em> 11, 1990, 229-233). <em>« Le choix du 9, clôture, non arbitraire, mène donc au cas structurellement le plus riche. »</em></p>
+<p><strong>V4.15.14 (Th) : le produit hexagonal.</strong> Pour tout coefficient C(n, k) avec 1 ≤ k ≤ n − 1, le produit de ses six voisins dans le triangle de Pascal est toujours divisible par 9 ; sa racine vaut donc invariablement 9. Autour de C(2, 1), le produit vaut 9 ; autour de C(3, 1) et C(3, 2), 144 ; autour de C(4, 1), 900 ; autour de C(4, 2), 14 400. <strong>F :</strong> ce fait découle du théorème de l’étoile de David de V. E. Hoggatt et W. Hansell (<em>The Fibonacci Quarterly</em> 9, 1971), qui établit que ce produit hexagonal est un carré parfait, combiné au théorème de Kummer sur la divisibilité par 3 des coefficients binomiaux (il suffit que 3 divise l’un des facteurs pour que 9 divise le carré). Vérifié pour ce volume sur toutes les lignes de 2 à 199 : le produit est toujours un carré parfait divisible par 9. <em>« La clôture 9 agit ainsi, là encore, comme attracteur structurel sur les objets de Pascal. »</em></p>
+<h2 id="delimitation-le-connu-le-neuf-louvert">15.6 Délimitation : le connu, le neuf, l’ouvert</h2>
+<p>Le mécanisme (Pascal réduit, automate, auto-similarité) est connu comme objet combinatoire neutre. Le neuf est l’usage : lire cet opérateur à travers la grille cadastrale, comme signature de structure interne complémentaire de l’identité que donne la racine, avec le 9 comme clôture vivante ; et la lecture de la cascade comme révélateur d’opérateur.</p>
+<p><em>Première question ouverte, fermée depuis.</em> La cascade a-t-elle une arithmétique : peut-on déduire la cascade d’un produit de celles de ses facteurs ? La cascade étant la transformée binomiale réduite des chiffres, la question rejoint le calcul de la transformée binomiale d’un produit de suites (K. Boyadzhiev, « Binomial transform of products », arXiv 1701.00544, 2017 ; K. Adegoke, « Binomial Transforms and the Binomial Convolution of Sequences », arXiv 2507.04179, 2025). La version 4.1 concluait : une arithmétique scalaire stricte (la pointe du produit fonction des seules pointes des facteurs) est improbable, à cause des retenues de la base 10 ; une arithmétique « tensorielle », qui garde le vecteur complet des étages, reste envisageable. La version 4.0 ajoutait : <em>« Si elle se ferme, la cascade cesse d’être un microscope pour devenir un système de calcul qui n’oublie pas la position. Le test reste à mener, et c’est cette frontière nette, entre le prouvé et l’à-prouver, qui rend la thèse imprenable. »</em> Le Théorème 40 (chapitre 12, 7 octobre 2026) a fermé cette question : la loi du produit existe, avec ses retenues, et le témoin 117 / 198 démontre que les seules pointes ne suffisent pas.</p>
+<p><strong>V4.15.15 (Chantier) : caractériser les séquences révélatrices.</strong> Seconde question, ouverte : caractériser précisément l’ensemble des séquences pour lesquelles la cascade révèle effectivement un opérateur cadastral structurel, et non simplement une pointe de description. Une réponse partielle est visible dans les exemples (suites naturelles complètes, sous-suites fermées par une clôture, rails purs, projections de grille), mais le critère général reste à formaliser. C’est de cette formalisation que dépend le retour de V4.15.12 au rang de théorème.</p>
+
+</main>
+<nav class="chapnav"><span class="prev"><a href="21-chapitre-14-les-jumeaux-et-les-deux-reseaux-pourqu.html">← Chapitre 14. Les jumeaux et les deux réseaux : pourquoi 5 et 7 reviennent</a></span><a class="toc" href="index.html">Sommaire du volume</a><span class="next"><a href="23-chapitre-16-la-cascade-et-la-cloche-huygens-le-cer.html">Chapitre 16. La cascade et la cloche : Huygens, le cercle de six, et la cloche gardée comme compte →</a></span></nav>
+<footer class="colophon"><p>Corpus ARC, Filipe Bastos, <a href="https://creativecommons.org/licenses/by/4.0/deed.fr" rel="license">CC BY 4.0</a>.</p></footer>
+</body>
+</html>

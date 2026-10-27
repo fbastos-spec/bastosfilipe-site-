@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<link rel="canonical" href="https://bastosfilipe.com/arc/volumes/v06-l-histoire-de-la-preuve/28-annexe-d-verifications-refaites.html">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Annexe D : Vérifications refaites · L&#x27;Histoire de la Preuve · Corpus ARC</title>
+<meta name="description" content="L&#x27;Histoire de la Preuve, volume 6 du corpus ARC de Filipe Bastos. Annexe D : Vérifications refaites.">
+<meta name="keywords" content="histoire des mathématiques, preuve, zéro, Euler, Gauss, Stevin, épistémologie, corpus ARC, Filipe Bastos">
+<meta name="author" content="Filipe Bastos">
+<meta name="license" content="https://creativecommons.org/licenses/by/4.0/deed.fr">
+<link rel="stylesheet" href="../../assets/arc.css">
+</head>
+<body>
+<nav class="crumbs"><a href="../../index.html">Corpus ARC</a> / <a href="index.html">Volume 6 · L&#x27;Histoire de la Preuve</a></nav>
+<main class="chapter">
+<h1 id="annexe-d-verifications-refaites">Annexe D : Vérifications refaites</h1>
+<p>Le script <code>verif.py</code> (dans le dossier du volume) refait 85 vérifications ; toutes passent après correction des énoncés fautifs. En voici la liste courte, avec le résultat.</p>
+<ul>
+<li><strong>Balayage des clôtures</strong> : pour c &lt; 200, les clôtures carrées d’un premier impair sont 9, 25, 49, 121, 169 ; clôtures 8, 15, 25, 27, 49 conformes au Procès. Juste.</li>
+<li><strong>9 ≡ 0 et racine digitale</strong> : DR(9) = DR(18) = DR(27) = 9, restes nuls ; 9, 18, 27, 90, 99, 729 de reste 0 ; 729 → 18 → 9. Juste.</li>
+<li><strong>Kaprekar</strong> : K(2026) = 5994, K(137) = 7173, K(8) = 7992 (quatre chiffres) ; K(n) multiple de 9 pour n de 1 à 9999. Juste, avec la précision des quatre chiffres.</li>
+<li><strong>Triangle natif et Ménon</strong> : (√2/4)² × 2 = 1/4 en fractions exactes ; d² = 2c² et (2c)² = 4c² pour c de 1 à 99. Juste.</li>
+<li><strong>Formule (II)</strong> : 10⁻⁶ × 2¹⁰ = 1,024 × 10⁻³, × 2²⁰ = 1,049, × 2³⁰ = 1074 ; doublement exact sur 1/7 : cycle 1/7, 2/7, 4/7. Juste.</li>
+<li><strong>Logistique exacte</strong> : douzième itéré depuis 1/3 calculé exactement (dénominateur 3^(2¹²)). Juste.</li>
+<li><strong>Newton sur (√5 − 1)/2</strong> : erreurs 4,9 × 10⁻², 1,0 × 10⁻³, 4,6 × 10⁻⁷, 9,4 × 10⁻¹⁴, 1,1 × 10⁻¹⁶. Juste jusqu’à la quatrième ; « zéro exact » corrigé.</li>
+<li><strong>½ ∫ |cos θ| sin θ dθ</strong> : 0,50000000002 par quadrature. Juste. <strong>Tsirelson</strong> : 4 × ½ × √2 = 2√2 ; 2/√(1/2) = 2√2. Juste.</li>
+<li><strong>Table de neuf et tables inverses</strong> : unités 9 à 1 ; DR(mk) + DR((9 − m)k) = 9 exactement quand 9 ne divise pas mk. Corrigé (exception des 9).</li>
+<li><strong>Cascades de Pascal</strong> : 147147147 → 7, 258258258 → 2, 369369369 → 6 ; XXXX → 9 − X pour X de 1 à 8. Juste.</li>
+<li><strong>Carrés des paires</strong> : 1, 4, 9, 7. Juste.</li>
+<li><strong>Figure et pyramides</strong> : cos(π/5) = φ/2 ; les trois pliages ; √φ = 1,27202, 146,6/115,2 = 1,27257, 14/11 = 1,27273, écarts &lt; 0,06 % ; pente 51,83° ; 4/√φ = 3,1446 ; 22/7 − π = 1,26 × 10⁻³ ; 223/71 &lt; π &lt; 22/7. Juste (π ≠ 22/7 noté).</li>
+<li><strong>Monde de 6</strong> : premiers &gt; 3 sur 6k ± 1 et hors de {3, 6, 9} jusqu’à 2 × 10⁵ ; produit des jumeaux de racine 8 (tous les jumeaux jusqu’à 2 × 10⁵) ; p² de reste 1 par 24 ; écarts 24, 72, 48, 120, 72, 168 ; DR(25, 49, 121, 169) = 7, 4, 4, 7 ; sommes 12, 24, 36, 54 ; DR(11) = 2 ; 99, 198, 495 multiples de 11 ; Ni, Co, Fe de racines 1, 9, 8 ; 3² − 1 = 8, 163 − 137 = 26 ; 9! = 362 880. Juste.</li>
+<li><strong>Nombres heureux</strong> : tout n ≤ 10⁵ aboutit à 1 ou au cycle de huit ; 7 → 49 → 97 → 130 → 10 → 1 ; somme du cycle 411 = 3 × 137 ; DR(7) = DR(16), DR(13) = DR(4) avec destins différents. Juste.</li>
+<li><strong>Sphère par le pli</strong> : 4πR² × ½ × 2R/3 = (4/3)πR³. Juste.</li>
+<li><strong>Lignée du zéro</strong> : huit dates en ordre strict ; 1748 − 628 = 1120 ; 1908 − 1889 = 19. Juste (« vingt ans » arrondi).</li>
+<li><strong>Deux Euler</strong> : degrés 5, 3, 3, 3 ; V − E + F = 2 pour les cinq solides ; φ(9) = 6 et {1, 2, 4, 5, 7, 8} ; DR(2ⁿ) = 1, 2, 4, 8, 7, 5 ; a⁶ de reste 1 par 9 ; sept parfaits de racines 6, 1, 1, 1, 1, 1, 1 ; 496 = 31 × 32/2 ; Σ 1/k! (k ≤ 12) = 2,718281828286 ; Bâle à 2000 termes 1,64443 contre 1,64493. Juste, sauf « dix décimales » (neuf).</li>
+<li><strong>Tiroir de Gauss</strong> : écarts 57, 14, 1797-1802, 18 ans ; dans les cinq dossiers revendiqués, l’autre ne vient pas après la revendication. Juste.</li>
+<li><strong>Fibonacci</strong> : période exacte 24 des racines digitales. Juste. <strong>{0, …, 8}</strong> : centre 4. Juste. <strong>Tétraktys</strong> 10. Juste.</li>
+<li><strong>Table des inversions</strong> et <strong>ligne × 9</strong> : sommes 9, centre 4,5 ; DR(9k) = 9. Juste.</li>
+<li><strong>Livre IV</strong> : DR(3ⁿ) = 1, 3, 9, 9, 9 ; 1637 − 1585 = 52 ; Σ 1/2ᵏ → 1. Juste.</li>
+<li><strong>Dossier technique</strong> : Pappus recalculé sur douze triangles (formule juste, table publiée fausse) ; répartition de 1 à 92 (positions 1 et 2) ; cos²(π/n) pour neuf polygones (φ²/4 et (5 + √5)/8) ; 7/6028 = 0,00116125, α/2π = 0,00116141, écart −1,6 × 10⁻⁷ ; premiers sous 1000 : 168, 80, 86 ; IC(137, 207, 3477, 272, 109737, 1602) = 2, 9, 3, 2, 9, 9 et IC(299792458) = 1 ; 11/(22/7) = 3,5. Corrections consignées en B.5.</li>
+</ul>
+
+</main>
+<nav class="chapnav"><span class="prev"><a href="27-annexe-c-sources-fusionnees.html">← Annexe C : Sources fusionnées</a></span><a class="toc" href="index.html">Sommaire du volume</a><span class="next"><a href="29-colophon.html">Colophon →</a></span></nav>
+<footer class="colophon"><p>Corpus ARC, Filipe Bastos, <a href="https://creativecommons.org/licenses/by/4.0/deed.fr" rel="license">CC BY 4.0</a>.</p></footer>
+</body>
+</html>

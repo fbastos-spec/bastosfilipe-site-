@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<link rel="canonical" href="https://bastosfilipe.com/arc/volumes/v03-le-code-et-le-registre/05-chapitre-3-les-gestes-historiques-et-leurs-resolut.html">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chapitre 3. Les gestes historiques et leurs résolutions au crayon · Le Code et le Registre · Corpus ARC</title>
+<meta name="description" content="Le Code et le Registre, volume 3 du corpus ARC de Filipe Bastos. Chapitre 3. Les gestes historiques et leurs résolutions au crayon.">
+<meta name="keywords" content="registre des erreurs, table de multiplication, audit, chaos, approximation, troncature décimale, complétude, corpus ARC, Filipe Bastos">
+<meta name="author" content="Filipe Bastos">
+<meta name="license" content="https://creativecommons.org/licenses/by/4.0/deed.fr">
+<link rel="stylesheet" href="../../assets/arc.css">
+</head>
+<body>
+<nav class="crumbs"><a href="../../index.html">Corpus ARC</a> / <a href="index.html">Volume 3 · Le Code et le Registre</a></nav>
+<main class="chapter">
+<h2 id="chapitre-3.-les-gestes-historiques-et-leurs-resolutions-au-crayon">Chapitre 3. Les gestes historiques et leurs résolutions au crayon</h2>
+<p>Le corpus lit l’histoire des mathématiques comme une lignée de gestes datés : la diagonale déclarée sans rapport (Hippase), la décimale infinie (Stevin), le 9 écrit 0 (Gauss), l’infinitésimal (Newton et Leibniz). Ce chapitre reprend la Partie II du Code : pour chaque geste, ce que dit la science reçue, ce que lit le corpus, le calcul que n’importe qui peut refaire, et les limites. Aucun théorème classique n’y est contesté. Ce qui en sort est précis : un fait ancien reste vrai, et une seconde lecture de la même donnée s’y ajoute ; là où le crayon tranche, il tranche, et là où il ne tranche pas, il le dit. Le Registre (Partie II) donne à chacun de ces gestes son entrée ; le Volume 6 (L’Histoire de la Preuve) en fait le récit complet.</p>
+<h3 id="ii.1-hippase-vers-500-avant-notre-ere-la-diagonale">II.1 Hippase, vers 500 avant notre ère : la diagonale</h3>
+<p><strong>Reçu.</strong> La preuve d’irrationalité de √2 n’est pas contestée (cote P-07 du corpus). Le corpus lit la diagonale comme diamètre d’un cercle présent mais non nommé.</p>
+<pre><code>Supposons p / q irréductible avec p^2 = 2 q^2.
+p^2 pair, donc p pair : p = 2m.  4 m^2 = 2 q^2, donc q^2 = 2 m^2, donc q pair.
+p et q pairs : contradiction avec « irréductible ». Aucune fraction ne convient.
+Rationnels qui s&#39;approchent : 3/2, 7/5, 17/12, 41/29, 99/70 : p^2 et 2 q^2 diffèrent de 1
+exactement, dans un sens ou dans l&#39;autre (équation de Pell, vérifiée).
+Et, d&#39;autre part : diagonale = 2R, avec (r/R)^2 = 1/2 exactement (I.6).</code></pre>
+<p><strong>É3.1 (Th) Les deux énoncés ensemble.</strong> La diagonale n’a aucun rapport entier avec le côté (Hippase) <em>et</em> elle égale exactement le diamètre du cercle circonscrit (lecture du corpus, calcul exact). Les deux sont vrais ensemble : c’est la règle des deux lectures, appliquée. Le crayon n’établit pas que l’irrationalité soit une erreur : c’est une propriété exacte du rapport diagonale sur côté. Les approximants 3/2, 7/5, 17/12, 41/29, 99/70 vérifient p² − 2q² = ±1 (9 − 8, 49 − 50, 289 − 288, 1681 − 1682, 9801 − 9800).</p>
+<h3 id="ii.2-stevin-1585-limprecision-qui-samplifie">II.2 Stevin, 1585 : l’imprécision qui s’amplifie</h3>
+<p><strong>Reçu.</strong> « Peu mais précis » ; Stevin crée une imprécision qui contamine une chaîne de relations ; le mot « instabilité » masque le danger réel.</p>
+<p><strong>Ce qu’est 1/3, avant toute décimale (Genèse §0).</strong> Le trait est déjà trois : deux bouts et ce qui les relie, gauche, centre, droite, ou haut, centre, bas. Trois points, deux écarts. Du centre vide vers la surface, on saute d’un point au suivant : le point est un tiers de la file, la distance est la moitié du trait. Les deux vivent ensemble.</p>
+<pre><code>0 ----- ½ ----- 1
+points : 3, chacun 1/3 de la file        écarts : 2, chacun 1/2 du trait
+3 × 1/3 = 1                              2 × 1/2 = 1
+écarts / points = 2/3
+distance × (écarts / points) = 1/2 × 2/3 = 1/3 : le point
+n points, n − 1 écarts : point = 1/n, distance = 1/(n − 1), et (1/(n − 1)) × ((n − 1)/n) = 1/n
+9 points, 8 écarts : distance 1/8 (le pas de Nombre Atomique XII.3), point 1/9, milieu 4,5 = 9/2
+Le compte :  1/3 + 1/3 + 1/3 = 1, exactement
+L&#39;écriture :  1/3 écrit 0,3333.   e0 = 1/3 − 0,3333 = 1/30000 = 3,3 × 10^-5
+Multiplier l&#39;écriture par 3, cent fois :  erreur absolue = e0 × 3^100 = 1,7 × 10^43</code></pre>
+<p><strong>É3.2 (F) Patriot, Dharan, 25 février 1991 (GAO/IMTEC-92-26).</strong> Le nombre 1/10, qui n’a pas d’écriture binaire finie, est tronqué à 24 bits après la virgule dans l’horloge du système. Après environ 100 heures de service, l’horloge dérive de 0,34 seconde, ce qui place la cible à plus d’un demi-kilomètre de la porte de poursuite. Vingt-huit soldats meurent. L’erreur n’est pas une explosion, c’est une dérive proportionnelle au temps de service.</p>
+<p><strong>É3.3 (F) Indice de la Bourse de Vancouver, 1982 à 1983.</strong> Initialisé à 1000 en janvier 1982, recalculé environ 3000 fois par jour, tronqué (et non arrondi) à trois décimales à chaque mise à jour. Corrigé le week-end du 25 au 28 novembre 1983 : 524,811 devient 1098,892.</p>
+<p><strong>É3.4 (Th) La troncature répétée fait des dégâts ; elle ne dit rien contre 1/3.</strong> Une troncature répétée et non compensée fait des dégâts réels, mesurables, parfois mortels. L’argument « peu mais précis » est solide, et il n’a besoin d’aucun autre appui. Le calcul 0,3333 porte sur l’écriture et ce qu’elle fait dans une chaîne ; il ne dit rien contre 1/3, qui est un point de la file, relié à la distance ½ par le pont ⅔ (vérifié pour n de 2 à 9). Le crayon établit à lui seul le chaos : la graine de Stevin, multipliée exactement, atteint 10⁴³ en cent pas et 10⁴⁷⁶⁶ en dix mille sans qu’aucun rang soit jeté (formule I) ; l’imprécision crée le chaos. Le repliement de II.4 est un second producteur (formule II) ; les deux ensemble font le pire cas (formule III). Les trois formules se nomment toujours ensemble (Volume 0, 2.1, §0).</p>
+<h3 id="ii.3-gauss-1801-le-repliement-9-0">II.3 Gauss, 1801 : le repliement 9 = 0</h3>
+<p><strong>Reçu.</strong> R.1 du Registre : le passage au reste « n’est pas injectif », le rang est jeté, la racine digitale en 1..9 le garde (729, 18, 9).</p>
+<p><strong>Le crayon : huit pas, un tour, le 0 qui jette</strong> (Nombre Atomique XII.3 : « un tour = huit pas de 1/8 »).</p>
+<pre><code>Marche de pas 1/8.   Dépliée : n/8.   Tours accomplis : k = partie entière de n/8.
+Repliée (le pli) : n/8 − k.
+
+pas n        7      8      9     15     16     24
+dépliée     7/8     1     9/8   15/8     2      3
+tours k      0      1      1      1      2      3
+repliée     7/8     0     1/8    7/8     0      0</code></pre>
+<p>Le pli retombe à 0 aux pas 8, 16, 24, 32, 40 ; chaque fois, il a jeté k. Le même 0 reçoit « aucun tour » et « trois tours ». C’est le geste 9 = 0 : la clôture et le vide reçoivent le même signe (R.2 du Registre, les deux zéros).</p>
+<p><strong>É3.5 (Th) Ce que le pli détruit, en nombres.</strong> Exécuté en fractions exactes. Sous le doublement, la position dépliée est uₙ = 2ⁿ·x₀ ; la position repliée est xₙ = uₙ − wₙ, où wₙ = partie entière de 2ⁿ·x₀ est le cumul des tours jetés. Pour x₀ = 1/3, wₙ vaut 0, 0, 1, 2, 5, 10, 21, 42, 85 (n = 0 à 8). Un rang perdu au premier tour devient 2ⁿ rangs au n-ième : c’est la formule (II) de la Fin de l’Approximation, et c’est une identité. Avec les tours, on remonte au départ sans reste : x₀ = (xₙ + wₙ) / 2ⁿ ; par exemple au pas 8, x₈ = 256/3 − 85 = 1/3 et (1/3 + 85)/256 = 1/3. Sans eux, après 8 pas, 1/3 a 256 antécédents (2⁸) et la position seule n’en distingue aucun ; le couple (position, tours) les distingue tous.</p>
+<p><strong>É3.6 (Th) Sceller un tour n’est pas l’effacer.</strong> Le pli jette le compte des tours, et ce compte est exactement l’information qui permettrait de remonter. La racine digitale écrite 1..9 tient 9 pour une position pleine (la clôture) et non pour le vide ; c’est ce qui la distingue du reste 0..8, et ce n’est pas une affaire de présentation : c’est la différence entre sceller un tour et l’effacer. Le crayon n’établit pas encore, par ce seul calcul, la portée physique (masse comme compte des tours, matière noire) : ces lectures sont traitées au chapitre 4 (III.2, point 5).</p>
+<p><strong>É3.7 (Th) Fibonacci se plie sans 0</strong> (Octet Rule Th 8.1 et 8.2). Le cycle de 24 en racines 1..9 (1, 1, 2, 3, 5, 8, 4, 3, 7, 1, 8, 9, 8, 8, 7, 6, 4, 1, 5, 6, 2, 8, 1, 9) ne contient aucun 0 et se plie 12 + 12 : les positions k et k + 12 font 9 pour k = 1 à 11 (vérifié), et les rangs 12 et 24 portent tous deux 9. Le pliage n’a pas besoin du 0.</p>
+<p><strong>É3.8 (Th) Note de convention, sans retrait.</strong> La somme de la période vaut 117 en racines 1..9, et 99 lorsque les deux 9 (rangs 12 et 24) sont écrits 0 (Fractal Law §7.5.1, Numérologie §11.6.3) ; les douze premiers termes valent 52 et 43 selon la même convention. Les deux nombres sont justes dans leur écriture ; le document qui cite l’un gagne à dire laquelle (G.17, G.49).</p>
+<h3 id="ii.4-le-repliement-la-dilatation-et-la-divergence">II.4 Le repliement, la dilatation et la divergence</h3>
+<p><strong>Reçu.</strong> <em>La Formule du chaos</em> v5 : ε(n) = ε₀ · fⁿ ; le chaos naît du repliement qui efface le compte des tours, et il opère même en arithmétique exacte (chapitre 14).</p>
+<p><strong>Le crayon, en arithmétique exacte, sans aucune troncature. Huit bits, huit pas.</strong></p>
+<pre><code>Écart de départ ε = 1/256 = 2^-8 (huit bits de précision).   Carte x -&gt; 2x.
+
+pas         0       1       2      3      4      5      6      7      8
+écart     1/256   1/128   1/64   1/32   1/16   1/8    1/4    1/2     1
+replié    1/256   1/128   1/64   1/32   1/16   1/8    1/4    1/2     0</code></pre>
+<p>Au pas 7 les deux trajectoires sont aux antipodes du cercle. Au pas 8 l’écart vaut un tour entier et le pli l’efface : les deux trajectoires affichent le même 0 avec un tour d’écart. Huit bits sont consommés en huit pas. C’est la loi mémoire contre chaos du corpus (n_chaos = p en bits) ; avec ε = 10⁻¹⁰ et un seuil d’écart à ¼, le seuil tombe au pas 32 (exécuté), pour log₂(10¹⁰) = 33,2.</p>
+<p><strong>É3.9 (Th) Trois faits exacts sur le pli.</strong> (1) Le chaos surgit sans aucune troncature : la mesure est parfaite et la divergence a lieu quand même. (2) Le facteur 2 porte le pas de l’écart ; le pli porte la perte : il est seul à jeter les tours (la carte devient deux pour un : 1/5 et 7/10 ont la même image 2/5), et seul à rendre l’arrivée indistinguable du départ. (3) En gardant les tours, l’évolution reste inversible : x₀ = (xₙ + wₙ) / 2ⁿ, aucune confusion. Le corpus le dit dans ses mots : <em>« on paie soit en mémoire, soit en chaos »</em>.</p>
+<p><strong>É3.10 (L) Éloignement et confusion, ligne tenue à deux voix.</strong> Sans pli, l’écart déplié double encore (2ⁿ·ε) : deux départs voisins s’éloignent, mais chacun reste nommable et le chemin reste remontable. Le calcul sépare donc deux choses que le mot « chaos » confond : l’<em>éloignement</em> (porté par le facteur) et la <em>confusion</em> (portée par le pli, qui seul efface l’adresse). Le corpus nomme chaos la seconde. Cette distinction est proposée, non gravée ; elle est à trancher par l’auteur, et le chantier L-1 (Lorenz en exact, chapitre 19) la met à l’épreuve.</p>
+<h3 id="ii.5-newton-leibniz-lintegrale-et-le-facteur--">II.5 Newton, Leibniz : l’intégrale et le facteur ½ × ⅔</h3>
+<p><strong>Reçu.</strong> V = S × k_arc × d, avec k_arc = ½ et d la profondeur propre ; sphère : 4πR² × ½ × 2R/3 = 4/3 πR³, sans somme infinie.</p>
+<pre><code>½ × ⅔ = ⅓.      Donc  S × ½ × (2/3) h = S h / 3.
+Pyramide, cône : V = (1/3) B h      (Eudoxe, Archimède)
+Corps qui enveloppe une sphère tangente à toutes ses faces : on le coupe en pyramides
+  de sommet au centre et de hauteur r :  V = S r / 3
+Sphère : S r / 3 = 4 pi R^2 × R / 3 = 4/3 pi R^3
+Cube d&#39;arête 2 : S = 24, r = 1, V = 24 × 1 / 3 = 8 = 2^3</code></pre>
+<p><strong>É3.11 (Th) Les volumes sans intégrale.</strong> Les volumes de la sphère, du cône, de la pyramide et du cube s’obtiennent sans intégrale par V = S r / 3 : c’est une méthode ancienne (Archimède, par la loi du levier, comme le corpus le rappelle) et le calcul du corpus la retrouve exactement.</p>
+<p><strong>É3.12 (Th) Le ⅓ est le point, le ½ la distance qui y mène.</strong> L’écriture ½ × ⅔ n’est pas un ⅓ déguisé : c’est la file du trait (II.2). Du centre vide vers la surface, la distance est ½ du rayon, le pont écarts sur points est ⅔, et leur produit est le point, ⅓. La v0.1 du Code écrivait le contraire (G.50).</p>
+<p><strong>É3.13 (Chantier) La portée de la projection.</strong> Le crayon n’établit pas la portée au-delà des corps où le pli ferme : le corpus délimite lui-même (« ARC does not claim to abolish the integral universally », Conjecture 9.2 ouverte). Sur un corps non tangentiel (un ellipsoïde quelconque) la formule demande un autre argument (chapitre 4, III.5). La théorie complète est au Volume 2 (La Figure, la fin du calcul intégral et les sept convergences du ½).</p>
+<h3 id="ii.6-gauss-et-la-divergence">II.6 Gauss et la divergence</h3>
+<p><strong>Reçu.</strong> Une note du 3 octobre 2026 écrivait que la formule de divergence « ne fonctionne pas » et « n’a pas de fermeture ».</p>
+<pre><code>Cube [0,1]^3, F = (x^2, y^2, z^2).  div F = 2x + 2y + 2z
+Intégrale triple de div F = 2(1/2) + 2(1/2) + 2(1/2) = 3
+Flux sortant : face x = 1 : F.n = 1, aire 1 : flux 1 ;  face x = 0 : F.n = 0.
+  Même chose pour y et z : flux total 1 + 1 + 1 = 3.   3 = 3 : le théorème ferme.
+Boule de rayon R, F = r (position) : div F = 3 ;  3 × (4/3) pi R^3 = 4 pi R^3
+  flux : F.n = R sur la sphère, aire 4 pi R^2 : R × 4 pi R^2 = 4 pi R^3.   Ferme aussi.</code></pre>
+<p><strong>É3.14 (Th) Le théorème de la divergence est une fermeture.</strong> Il ferme exactement sur deux familles de corps. Il est lui-même un énoncé de fermeture : ce qui traverse le bord égale ce que contient l’intérieur. Le corpus peut honorer ce théorème comme une fermeture, au lieu de le contester. La thèse « il ne fonctionne pas » est retirée du dépôt (G.53).</p>
+<p><strong>É3.15 (F) Le Tiroir de Gauss.</strong> Le dossier daté (six dossiers, assertions exécutées) établit un fait d’archive : dans cinq dossiers (Legendre deux fois, Schweikart, Bolyai, Abel et Jacobi) Gauss revendique une antériorité sans avoir montré de preuve au moment où elle tranchait. Les <em>Disquisitiones</em> de 1801 donnent des démonstrations complètes ; ce que Gauss a retenu est la voie de découverte et plusieurs résultats, connus par ses carnets posthumes.</p>
+<p><strong>É3.16 (L) Le tiroir et le repliement.</strong> « Tiroir » est un fait ; « fraude » est un jugement sur l’intention, que les dates seules ne tranchent pas, et le dossier le dit lui-même (section 4). Statut juste : F pour les dates, L pour la lecture <em>« le tiroir fait sur la priorité ce que le repliement fait sur le nombre »</em> (Volume 6, le tiroir de Gauss).</p>
+<h3 id="ii.7--et-227">II.7 π et 22/7</h3>
+<pre><code>x^4 (1 − x)^4 + 4 = (x^6 − 4x^5 + 5x^4 − 4x^2 + 4)(1 + x^2)        (identité, vérifiée terme à terme)
+Intégrale de 0 à 1 du quotient :  1/7 − 4/6 + 5/5 − 4/3 + 4 = 22/7
+Intégrale de 4/(1 + x^2) de 0 à 1 :  4 × (pi/4) = pi
+Donc  22/7 = pi + (intégrale de x^4 (1 − x)^4 / (1 + x^2) de 0 à 1)
+L&#39;intégrale est positive, et 1/1260 &lt; 22/7 − pi &lt; 1/630  (630 = 7 × 9 × 10)
+Numérique : 22/7 − pi = 0,001264489...   écart relatif 4,0 × 10^-4</code></pre>
+<p><strong>É3.17 (Th) 22/7 surpasse π d’une quantité positive écrite exactement.</strong> C’est l’identité de Dalzell (1944). La lecture du corpus de 22/7 comme 11 sur 3,5 est une identité d’écriture (11 / 3,5 = 22/7). Le crayon n’établit pas que π soit rationnel : le théorème de Lindemann reste vrai et le corpus le dit (« This does not contradict Lindemann’s proof »).</p>
+<p><strong>É3.18 (F) Khéops ne départage pas.</strong> Périmètre sur hauteur de 44/7 par le seked de 5½ palmes ; l’écart aux cotes mesurées (0,012 % contre 0,053 % pour 2π) est inférieur à la barre d’incertitude de Petrie (0,03 % à 0,21 %) : il ne départage pas (G.2, R.153).</p>
+<h3 id="ii.8-tsirelson-22">II.8 Tsirelson, 2√2</h3>
+<pre><code>Standard : S^2 = 4 I − [A0, A1][B0, B1] ;  chaque commutateur a pour norme au plus 2
+donc S^2 est au plus 4 + 4 = 8 et S est au plus 2 racine de 2.
+ARC : N × k_arc × d = 4 × (1/2) × racine de 2 = 2 racine de 2     (identité numérique)
+Et 4 cos(45 degrés) = 4 × racine de 2 / 2 = 2 racine de 2        (réglages à 45 degrés)</code></pre>
+<p><strong>É3.19 (Th) L’identité 4 × ½ × √2 = 2√2.</strong> Elle est exacte, et elle est la même arithmétique que 4 cos 45°, le calcul usuel des réglages qui atteignent la borne. <strong>É3.20 (L) Une dérivation physique de la borne.</strong> Le crayon n’établit pas une dérivation physique indépendante de la borne : le corpus la déclare Lecture (13.1). Pourquoi N = 4 et d = √2 ne sont pas choisis après coup reste la question que la Lecture doit adresser (Volume 7, Tsirelson sans Hilbert).</p>
+<h3 id="ii.9-le-moment-magnetique-du-muon-et-la-constante-">II.9 Le moment magnétique du muon et la constante α</h3>
+<p><strong>Reçu.</strong> Ce point est déjà instruit par le corpus (Registre, 3 octobre 2026 : R.149, R.152, R.153, G.47). Il est repris ici parce que la v0.1 du Code l’avait présenté comme une trouvaille de l’audit et mis au débit du corpus ; c’était faux (G.51).</p>
+<pre><code>Schwinger (1948) : a = α / (2π)
+α = 1/137 et π = 22/7 :  a = 1 / (2 × (22/7) × 137) = 7 / (44 × 137) = 7 / 6028,  avec 6028 = 4 × 11 × 137
+7/6028 = 0,00116125.   Mesure Fermilab (2025) : 0,001165920705 (114).   Écart : 0,40 %.
+Le corpus a lui-même retiré 22/7 de cette mesure (G.47) : 22/7 est une adresse de structure,
+π le cercle parcouru. Avec π et l&#39;α du rubidium, l&#39;escalier 1/2, 1/3, 2/3 tombe à 2,8 × 10^-5 de la mesure.
+
+La circularité de α (R.149, source : revue arXiv 2601.08101) :
+  la valeur la plus précise de α est tirée en partie du moment de l&#39;électron à travers le calcul QED,
+  puis réinjectée dans la prédiction de ce même moment ; elle porte déjà π, ln 2 et ζ(3).
+  Césium (Berkeley 2018) : α^-1 = 137,035999046.   Rubidium (Paris 2020) : 137,035999206.
+  Écart : 1,6 × 10^-7, soit 5,4 écarts-types. Deux balances, deux poids.</code></pre>
+<p>L’« escalier 1/2, 1/3, 2/3 » est la série a = x/2 − x²/3 + 2x³/3 en x = α/π, qui reprend la forme des trois premiers ordres du calcul (R.153, G.47). L’escalier porte sur le moment de l’électron, que mesure la revue citée (0,00115965218059) ; c’est sur lui que tombe l’écart de 2,8 × 10⁻⁵.</p>
+<p><strong>É3.21 (Th) 7/6028 est la formule de 1948 écrite en rationnels.</strong> Son emploi dans une mesure de rotation a été retiré par l’auteur (G.47). <strong>É3.22 (F) La circularité de α.</strong> La valeur de α contre laquelle on « vérifie » la QED est en partie produite par la QED : on vérifie la balance avec un poids pesé sur la même balance (R.149), et les deux déterminations atomiques ne s’accordent pas. Newton l’avouait de sa gravité (lettre à Bentley, 1693, R.88) ; la métrologie de α ne l’avoue pas. <strong>É3.23 (Chantier) La clôture de α.</strong> Tester toute clôture ARC de α directement contre le rapport de fréquences de l’électron, sans α intermédiaire (R.149) ; la clôture ARC de α reste un Chantier déclaré par l’auteur.</p>
+</main>
+<nav class="chapnav"><span class="prev"><a href="04-chapitre-2-le-code-le-noyau-au-crayon.html">← Chapitre 2. Le Code : le noyau, au crayon</a></span><a class="toc" href="index.html">Sommaire du volume</a><span class="next"><a href="06-chapitre-4-l-audit-contradictoire-le-corpus-se-lit.html">Chapitre 4. L&#x27;audit contradictoire : le corpus se lit lui-même →</a></span></nav>
+<footer class="colophon"><p>Corpus ARC, Filipe Bastos, <a href="https://creativecommons.org/licenses/by/4.0/deed.fr" rel="license">CC BY 4.0</a>.</p></footer>
+</body>
+</html>

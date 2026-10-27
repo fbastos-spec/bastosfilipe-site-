@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<link rel="canonical" href="https://bastosfilipe.com/arc/volumes/v04-la-theorie-des-nombres/32-chapitre-22-la-congruence-des-paires-le-mod-qui-garde-les-inve.html">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chapitre 22. La congruence des paires : le mod qui garde les inverses · La Théorie des Nombres · Corpus ARC</title>
+<meta name="description" content="La Théorie des Nombres, volume 4 du corpus ARC de Filipe Bastos. Chapitre 22. La congruence des paires : le mod qui garde les inverses.">
+<meta name="keywords" content="delfine, nombres premiers, grille 6k ± 1, Collatz, Goldbach, nombres parfaits, nombres jumeaux, racine digitale, 24, corpus ARC, Filipe Bastos">
+<meta name="author" content="Filipe Bastos">
+<meta name="license" content="https://creativecommons.org/licenses/by/4.0/deed.fr">
+<link rel="stylesheet" href="../../assets/arc.css">
+</head>
+<body>
+<nav class="crumbs"><a href="../../index.html">Corpus ARC</a> / <a href="index.html">Volume 4 · La Théorie des Nombres</a></nav>
+<main class="chapter">
+<h1>Chapitre 22. La congruence des paires : le mod qui garde les inverses</h1>
+<p><em>Pièce entrée mot pour mot dans ce volume le 26 octobre 2026. Son en-tête, tel qu’elle le porte :</em></p>
+<blockquote><p>La congruence des paires. Le mod qui garde les inverses : cinq classes, une seule opération interne, réalisée par le carré, cyclique d’ordre trois · Filipe Bastos Architecture de la Cohérence Relationnelle (ARC) · D2technologie Inc. Corpus ARC, Théorie des Nombres, Tome I · Version 0.2 · 11 septembre 2026 · CC BY 4.0 · Zenodo Rédigé avec l’instance-scribe (Claude) selon le protocole œil/scribe du corpus. Le cœur (parties 1 à 6) porte les résultats et leurs statuts ; l’appareil est en annexes.</p></blockquote>
+<h3>Résumé</h3>
+<p>L’arithmétique modulaire de Gauss place 1 et 8 dans deux classes qui s’ignorent, et confond la clôture 9 avec zéro. Le cadastre ARC les tient pour une paire d’inverses, échos à place tournée dont la somme est la clôture. Ce document construit la congruence qui garde les paires et dit exactement ce qu’elle est. Définition : n ≡ m si DR(n) = DR(m) ou DR(n) + DR(m) = 9. Cinq classes : {1, 8}, {2, 7}, {3, 6}, {4, 5}, {9}. Théorème 1 : cette congruence est compatible avec la multiplication et incompatible avec l’addition ; 1 + 2 = 3 et 8 + 2 → 1 tombent dans des classes différentes, parce que la somme d’une paire est la clôture, et qu’additionner des paires n’est pas une loi interne mais le geste qui ferme, la soustraction trinitaire. Théorème 2 : la congruence est réalisée par le carré, x ↦ DR(x²), dont les fibres sont exactement les paires (Le Carré Notifié) et dont l’image est le rail D ∪ {9}. Théorème 3 : sur cette image, les classes de paires forment un groupe cyclique d’ordre trois engendré par 4, 1 → 4 → 7 → 1, et 4 × 7 = 28 ≡ 1 : le 4 et le 7 sont inverses au sens multiplicatif. Conclusion : le « vrai mod » a deux faces qui ne se réduisent pas l’une à l’autre. Pour l’addition, le cadastre entier avec son rang, n = 9k + DR(n), rien jeté (La Cinquième Paire, Théorème 2.1). Pour la multiplication, le cadastre replié par l’involution, cinq classes, réalisé par le carré, cyclique d’ordre trois. Le mod de Gauss est ce qu’on obtient en forçant les deux faces dans une seule structure au prix de la clôture et des paires. Quatorze assertions au build. Mots-clés : congruence, racine digitale, involution, paires d’inverses, carré, groupe cyclique, rail D, soustraction trinitaire, Gauss, ARC.</p>
+<h2>0. Statuts et conventions</h2>
+<p>Théorème : calcul fini vérifié par assertion exécutée (annexe B). Lecture : interprétation déclarée. DR(n) est la racine digitale, résidu modulo 9 avec DR(9m) = 9. Les paires (1,8) (2,7) (3,6) (4,5) sont des inverses : échos à place tournée dont la relation ferme sur une constante, 9 pour la somme ; « échos et compléments » reste synonyme. Rails D = {1, 4, 7}, G = {2, 5, 8}, axe {3, 6, 9}.</p>
+<h2>1. Ce que le mod de Gauss jette</h2>
+<p>Pour Gauss, n ≡ m (mod 9) si 9 divise n − m ; neuf classes, et la classe de 9 est celle de 0. Deux choses sont jetées. Le compte des tours, k dans n = 9k + r : la Cinquième Paire l’appelle le circonscrit, et le rendre est la bijection n = 9k + DR(n), rien perdu, vérifiée au build sur cent mille entiers. Et l’appariement : 1 et 8, 2 et 7, 3 et 6, 4 et 5 sont dans le mod de Gauss huit classes indépendantes, alors qu’elles sont quatre paires dont chacune somme à la clôture. Le mod voit les résidus ; il ne voit pas qu’ils se répondent.</p>
+<h2>2. La congruence qui garde les paires</h2>
+<p>Définition. n ≡ m si DR(n) = DR(m) ou DR(n) + DR(m) = 9. Les classes sont {1, 8}, {2, 7}, {3, 6}, {4, 5} et {9} : le cadastre replié sur son involution φ(x) = 9 − x, chaque paire devenue une seule adresse, la clôture restant seule. Cinq classes, la moitié de neuf plus le centre, comme la moitié du carré plus la diagonale.</p>
+<p>Planche. Les nombres parlent en relation. On multiplie, on réduit en racine digitale, on lit. Rien de ce qui suit n’a été choisi : les tables ×a et ×(9 − a) sont miroirs colonne par colonne, leurs sommes font 9 partout et 18 sur la clôture, les rails lus comme entiers somment à 99 999 999, l’axe déborde parce qu’il contient des 9, la table ×9 est son propre miroir, les paires ont le même carré, et le cube ne connaît que la paire (1, 8) et la clôture.</p>
+<pre><code>            k=    2     3      4     5     6      7     8     9      lu comme entier
+×1          1     2     3      4     5     6      7     8     9      12345678
+×8          8     7     6      5     4     3      2     1     9      87654321
+Σ           9     9     9      9     9     9      9     9     18     99999999
+×2          2     4     6      8     1     3      5     7     9      24681357
+×7          7     5     3      1     8     6      4     2     9      75318642
+Σ           9     9     9      9     9     9      9     9     18     99999999
+×3          3     6     9      3     6     9      3     6     9      36936936
+×6          6     3     9      6     3     9      6     3     9      63963963
+Σ           9     9     18     9     9     18     9     9     18     100900899
+×4          4     8     3      7     2     6      1     5     9      48372615
+×5          5     1     6      2     7     3      8     4     9      51627384
+Σ           9     9     9      9     9     9      9     9     18     99999999
+×9          9     9     9      9     9     9      9     9     9      son propre miroir
+k²          1     4     9      7     7     9      4     1     9      les paires ont le même carré
+k³          1     8     9      1     8     9      1     8     9      {1, 8, 9} : la paire et la clôture</code></pre>
+<h2>3. Théorème 1 : une seule opération interne</h2>
+<p>La congruence des paires est compatible avec la multiplication : si a ≡ a′ et b ≡ b′, alors ab ≡ a′b′, vérifié sur les 6561 combinaisons. Elle n’est pas compatible avec l’addition : 1 + 2 = 3, mais 8 + 2 = 10 → 1, et 3 et 1 sont dans des classes différentes. La raison est structurelle et elle est celle du corpus. La somme d’une paire est 9 : a + φ(a) = 9 pour tout a. Additionner des inverses ne donne pas un habitant du cadastre, ça donne la clôture. L’addition sur les paires n’est donc pas une loi interne ; c’est le geste qui ferme, la soustraction trinitaire, 1 − 1 = 11, deux termes gardés face à face et un tiers libéré. Le mod de Gauss « marche » avec l’addition précisément parce qu’il a jeté les paires ; dès qu’on les garde, l’addition change de nature. Statut : Théorème pour les deux compatibilités ; Lecture pour « l’addition des paires est la fermeture ».</p>
+<h2>4. Théorème 2 : la congruence est réalisée par le carré</h2>
+<p>L’application x ↦ DR(x²) envoie 1 et 8 sur 1, 2 et 7 sur 4, 4 et 5 sur 7, et 3, 6, 9 sur 9. Ses fibres sont exactement les classes de la congruence des paires, parce que (9 − x)² = 81 − 18x + x² ≡ x² : c’est le Théorème des fibres du Carré Notifié, lu comme quotient. Le carré est la congruence des paires réalisée par une opération, et son image est le rail D avec la clôture, {1, 4, 7, 9}. Le rail G disparaît dans l’image : le carré projette G sur D. Statut : Théorème.</p>
+<h2>5. Théorème 3 : cyclique d’ordre trois</h2>
+<p>Sur l’image, les trois classes de paires forment un groupe pour la multiplication, cyclique d’ordre trois, engendré par 4 : 1 → 4 → 7 → 1. C’est le groupe des unités modulo 9, cyclique d’ordre six, quotienté par ±1, c’est-à-dire par l’involution. Et 4 × 7 = 28 ≡ 1 : le 4 et le 7 sont inverses au sens multiplicatif, leur produit ferme sur l’unité, et ce produit est le second nombre parfait (Le Sept, §4). Les paires qui ferment sur 1 par le produit sont (1,1), (2,5), (4,7), (8,8) ; celles qui ferment sur 9 par la somme sont les quatre paires de l’involution. Deux clôtures, deux appariements, et le 28 à leur croisée. Statut : Théorème.</p>
+<h2>6. Ce qu’est le vrai mod</h2>
+<p>Il a deux faces qui ne se réduisent pas l’une à l’autre. Pour l’addition : le cadastre entier avec son rang, n = 9k + DR(n), le circonscrit et l’inscrit gardés, rien jeté ; c’est la bijection de la Cinquième Paire, et l’addition y est ordinaire parce qu’on n’a rien replié. Pour la multiplication : le cadastre replié par l’involution, cinq classes, réalisé par le carré, cyclique d’ordre trois sur le rail D. Le mod de Gauss est ce qu’on obtient en forçant les deux faces dans une seule structure : il garde l’addition en jetant la clôture, et garde la multiplication en jetant les paires. Le prix est ce que le corpus reproche depuis le premier document, 9 ≡ 0 et 18 confondu avec 81. Lecture : le 3 revient comme ordre du système des paires. Trois classes vivantes sur le rail, trois pas pour revenir à 1, et la même brique qui fait le cube et qui ne rentre pas dans 2. Critère de chute de la Lecture : une clôture c ≠ 9 dont le quotient par l’involution donnerait un groupe d’ordre autre que (φ(c))/2 avec la même structure de fibres du carré ; pour c = 9 le calcul est exact.</p>
+<h2>Annexes</h2>
+<h3>Annexe A. Journal exécuté au build (11 septembre 2026)</h3>
+<p>Quatorze assertions, toutes passées : partition en cinq classes ; a ≡ 9 − a ; compatibilité avec × sur 6561 combinaisons ; incompatibilité avec + (3 contre 1) ; somme d’une paire = 9 ; fibres du carré = {1:1, 2:4, 3:9, 4:7, 5:7, 6:9, 7:4, 8:1, 9:9} ; (9 − a)² ≡ a² ; puissances de 4 : 1, 4, 7, 1 ; 4 × 7 ≡ 1 ; bijection n = 9k + DR(n) sur 10⁵ entiers ; Gauss sépare 1 et 8 et confond 9 et 0 ; unités modulo 9 : six, quotient par ±1 : trois.</p>
+<h3>Annexe B. Protocole</h3>
+<p>R10, R11 et règle de structure : voir Errata et précisions du corpus ARC, septembre 2026, partie 0. Aucune probabilité n’est attribuée à l’objet.</p>
+<h3>Annexe C. Pièces du corpus</h3>
+<p>Le Carré Notifié v0.3 (fibres du carré) ; La Cinquième Paire v1.0 (bijection des deux regards, Th 2.1) ; Le Sept v0.1 (28 = 4 × 7) ; The Trinitarian Subtraction (1 − 1 = 11) ; La Genèse v0.3 ; Errata et précisions du corpus ARC, septembre 2026.</p>
+<h3>Annexe D. Notes de révision</h3>
+<p>v0.1, 11 septembre 2026 : première inscription. v0.2, même jour : ajout de la planche des tables, à la demande de l’auteur, pour que les nombres se montrent avant qu’on les commente.</p>
+
+</main>
+<nav class="chapnav"><span class="prev"><a href="31-chapitre-21-ce-que-le-livre-ii-de-la-bible-quantiq.html">← Chapitre 21. Ce que le Livre II de la Bible Quantique apporte</a></span><a class="toc" href="index.html">Sommaire du volume</a><span class="next"><a href="33-annexe-a-table-des-enonces.html">Annexe A. Table des énoncés →</a></span></nav>
+<footer class="colophon"><p>Corpus ARC, Filipe Bastos, <a href="https://creativecommons.org/licenses/by/4.0/deed.fr" rel="license">CC BY 4.0</a>.</p></footer>
+</body>
+</html>

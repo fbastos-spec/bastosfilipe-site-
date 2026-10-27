@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<link rel="canonical" href="https://bastosfilipe.com/arc/volumes/v01-la-fondation/22-annexe-d-verifications-refaites.html">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Annexe D : Vérifications refaites · La Fondation · Corpus ARC</title>
+<meta name="description" content="La Fondation, volume 1 du corpus ARC de Filipe Bastos. Annexe D : Vérifications refaites.">
+<meta name="keywords" content="Genèse, racine digitale, neuf positions, 1 ⊕ 1 = 3, logique, métaphysique de la relation, base 10, corpus ARC, Filipe Bastos">
+<meta name="author" content="Filipe Bastos">
+<meta name="license" content="https://creativecommons.org/licenses/by/4.0/deed.fr">
+<link rel="stylesheet" href="../../assets/arc.css">
+</head>
+<body>
+<nav class="crumbs"><a href="../../index.html">Corpus ARC</a> / <a href="index.html">Volume 1 · La Fondation</a></nav>
+<main class="chapter">
+<h1 id="annexe-d-verifications-refaites">Annexe D : Vérifications refaites</h1>
+<p>Tous les calculs ci-dessous ont été refaits en Python, en arithmétique entière ou en fractions exactes, par le script <code>verif.py</code> joint au volume (88 vérifications, aucun échec après rectification des trois énoncés signalés à l’Annexe B). La liste est courte : ce qui a été recalculé, et le résultat.</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Énoncé</th>
+<th>Ce qui a été recalculé</th>
+<th>Résultat</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>É 1.2</td>
+<td>pli du segment 1-8 en 4,5, en 4 et en 5</td>
+<td>fermé en 4,5 seulement</td>
+</tr>
+<tr class="even">
+<td>É 3.4</td>
+<td>clôtures impaires N &lt; 200 dont le cycle n’a qu’un sous-cycle propre</td>
+<td>9, 25, 49, 121, 169 ; seule 9 divisible par 3</td>
+</tr>
+<tr class="odd">
+<td>É 5.3, 5.4</td>
+<td>fermeture des briques 2 et 3 par + et × sans répétition collée, jusqu’à 30</td>
+<td>manquent exactement 1 et 4 ; 1 = 3 − 2, 4 = 2 × 3 − 2</td>
+</tr>
+<tr class="even">
+<td>É 3.2, 3.3</td>
+<td>racines des 200 premières puissances de 2 ; poids binaires</td>
+<td>cycle 1, 2, 4, 8, 7, 5 ; axe jamais touché ; repli en trois pas</td>
+</tr>
+<tr class="odd">
+<td>É 3.5</td>
+<td>n − DR(n) multiple de 9 pour n ≤ 500 000</td>
+<td>vrai</td>
+</tr>
+<tr class="even">
+<td>É 6.5</td>
+<td>loi des miroirs à deux et trois chiffres ; écart miroir multiple de 9 jusqu’à 10⁶</td>
+<td>vrai, sans exception</td>
+</tr>
+<tr class="odd">
+<td>É 6.12, 4.4 (v)</td>
+<td>DR(x²) = DR((9 − x)²) ; racines des carrés 1 à 9</td>
+<td>vrai ; 1, 4, 9, 7, 7, 9, 4, 1, 9</td>
+</tr>
+<tr class="even">
+<td>É 5.6, 5.9, 5.10</td>
+<td>parfaits sous 10⁴ ; somme et produit des diviseurs propres sous 10⁵</td>
+<td>6, 28, 496, 8128 ; seul 6 ; 28, 496, 8128 de racine 1</td>
+</tr>
+<tr class="odd">
+<td>É 16.10</td>
+<td>p² − 1 multiple de 24 pour tous les premiers de 5 à 10⁵</td>
+<td>vrai</td>
+</tr>
+<tr class="even">
+<td>É 16.11</td>
+<td>entiers n ≤ 200 dont tous les inversibles sont leur propre inverse</td>
+<td>1, 2, 3, 4, 6, 8, 12, 24</td>
+</tr>
+<tr class="odd">
+<td>É 6.7, 6.8</td>
+<td>198 = 2 × 9 × 11 ; 891 − 198 = 693 = 7 × 99 ; 1089 = 33² ; 694 − 496 ; 28 + 27 + 26 = 81 ; 595</td>
+<td>vrai</td>
+</tr>
+<tr class="even">
+<td>É 6.3</td>
+<td>inverses multiplicatifs (racine 1) sur 1 à 8</td>
+<td>(1, 1), (2, 5), (4, 7), (8, 8)</td>
+</tr>
+<tr class="odd">
+<td>É 10.7, 10.8</td>
+<td>primalité de 59, 19, 11 ; bases à clôture p² et interface première</td>
+<td>premières ; seule base : 10 (démonstration par la division par 3)</td>
+</tr>
+<tr class="even">
+<td>É 4.3, 4.4</td>
+<td>homomorphisme de DR (a, b &lt; 300) ; les sept structures de la table, dont les 72 cas d’équivariance et les sommes 99 999 999</td>
+<td>vrai ; DR((9 − a)b) = 9 − DR(ab) seulement hors clôture (et 9 quand DR(ab) = 9)</td>
+</tr>
+<tr class="odd">
+<td>É 4.7</td>
+<td>positions de la grille 234 / 567 / 891</td>
+<td>centre 6 ; cardinales 3, 5, 7, 9 ; colonnes G, axe, D</td>
+</tr>
+<tr class="even">
+<td>É 4.9</td>
+<td>attracteurs de la somme itérée des carrés des chiffres, n &lt; 1000</td>
+<td>1 et le cycle 4, 16, 37, 58, 89, 145, 42, 20</td>
+</tr>
+<tr class="odd">
+<td>É 11.8, 11.10</td>
+<td>sommes angulaires de 3 à 199 côtés ; 3 × 120, 2 × 135</td>
+<td>racine 9 partout ; 360 ; 270</td>
+</tr>
+<tr class="even">
+<td>É 11.2, 7.8</td>
+<td>r²/R² du carré ; 4,5/9 et 3,5/7 en fractions exactes</td>
+<td>1/2</td>
+</tr>
+<tr class="odd">
+<td>É 11.12</td>
+<td>r/R = cos(π/n) pour n = 3 à 9 ; polynôme de cos(π/7)</td>
+<td>1/2, φ/2… ; 8x³ − 4x² − 4x + 1 (et non le polynôme de la source) ; octogone ≠ 3/8</td>
+</tr>
+<tr class="even">
+<td>É 11.14</td>
+<td>Kaprekar de 45, 4950, 499 500 ; sommes avec 55, 5050, 500 500</td>
+<td>vrai ; 10², 10⁴, 10⁶</td>
+</tr>
+<tr class="odd">
+<td>É 8.3</td>
+<td>périodes décimales de 1/k, k = 1 à 9 ; 142857 × 7 ; permutations k/7</td>
+<td>seule 1/7 a 6 chiffres ; 999 999 ; vrai</td>
+</tr>
+<tr class="even">
+<td>É 8.1, 5.12, 5.14</td>
+<td>DR(16), DR(25) ; triangulaires T1 à T9 et racines ; colonnes 12, 15, 18</td>
+<td>7, 7 ; 1, 3, 6, 10, 15, 21, 28, 36, 45 ; 3, 6, 9</td>
+</tr>
+<tr class="odd">
+<td>É 3.7</td>
+<td>puissances parfaites consécutives jusqu’à 10⁷</td>
+<td>une seule paire : (8, 9)</td>
+</tr>
+<tr class="even">
+<td>É 16.26, 9.1, 9.3</td>
+<td>Kaprekar à quatre chiffres sur les 9000 nombres ; 495 ; 6174 = 18 × 7³</td>
+<td>8991 aboutissent à 6174 ; 954 − 459 = 495 ; vrai</td>
+</tr>
+<tr class="odd">
+<td>É 16.13</td>
+<td>période de Pisano pour 9 ; sommes</td>
+<td>24 ; douze premiers termes : 43 ; période complète : 99</td>
+</tr>
+<tr class="even">
+<td>section 16.12 (rotor), É 16.19, 16.22, 16.9</td>
+<td>racines des premiers 5 à 23 ; écarts des carrés en multiples de 24 ; nombres magiques ; Pb 208 et 184 ; angles de liaison ; 108</td>
+<td>5, 7, 2, 4, 8, 1, 5 ; 1, 3, 2, 5, 3, 7 ; 2, 8, 2, 1, 5, 1, 9 ; 1, 9, 1, 4 ; 1, 6, 8, 9 ; 108 = 137 − 29, racine 9</td>
+</tr>
+<tr class="odd">
+<td>É 16.4</td>
+<td>décompte des éléments des régions directes</td>
+<td>47 (et non 46)</td>
+</tr>
+<tr class="even">
+<td>É 15.11</td>
+<td>pliage pour a &lt; 10 000</td>
+<td>vrai exactement quand 3 ne divise pas a</td>
+</tr>
+<tr class="odd">
+<td>É 15.12, 15.13 (Annexe B)</td>
+<td>4 × 1/2 × √2 ; simulation de 20 000 tirages du protocole S² tel qu’écrit, à 60°</td>
+<td>2√2 ; corrélation −1 (et non −1/2)</td>
+</tr>
+<tr class="even">
+<td>É 7.11, 7.12</td>
+<td>largeurs du sablier ; combinaison CHSH aux réglages 0°, 45°, 90°, 135°</td>
+<td>7, 5, 3, 1, somme 16 ; 2√2 = 2,828427…</td>
+</tr>
+<tr class="odd">
+<td>É 12.2</td>
+<td>1/3 contre 0,3333 après cent multiplications par 3, en fractions exactes</td>
+<td>écart ≈ 1,72 × 10⁴³</td>
+</tr>
+<tr class="even">
+<td>É 8.5, 4.9, 8.4</td>
+<td>22/7 = 11/3,5 ; 3² − 1 = 8 ; 3 + 8 = 11 ; 8 − 1 = 7</td>
+<td>vrai</td>
+</tr>
+<tr class="odd">
+<td>É 17.10</td>
+<td>2 + 4 + 5 + 7 + 8 et 2 × 4 × 5 × 7 × 8</td>
+<td>26 (racine 8) ; 2240 (racine 8)</td>
+</tr>
+<tr class="even">
+<td>É 6.10</td>
+<td>23 + 23, racines de 23, 46, 64 ; 64 = 4³ = 2⁶</td>
+<td>46 ; 5, 1, 1 ; vrai</td>
+</tr>
+</tbody>
+</table>
+
+</main>
+<nav class="chapnav"><span class="prev"><a href="21-annexe-c-sources-fusionnees.html">← Annexe C : Sources fusionnées</a></span><a class="toc" href="index.html">Sommaire du volume</a><span class="next"><a href="23-colophon.html">Colophon →</a></span></nav>
+<footer class="colophon"><p>Corpus ARC, Filipe Bastos, <a href="https://creativecommons.org/licenses/by/4.0/deed.fr" rel="license">CC BY 4.0</a>.</p></footer>
+</body>
+</html>

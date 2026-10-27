@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<link rel="canonical" href="https://bastosfilipe.com/arc/volumes/v04-la-theorie-des-nombres/03-chapitre-1-la-feuille-1-a-30-le-document-de-genese.html">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chapitre 1. La feuille 1 à 30 : le document de genèse · La Théorie des Nombres · Corpus ARC</title>
+<meta name="description" content="La Théorie des Nombres, volume 4 du corpus ARC de Filipe Bastos. Chapitre 1. La feuille 1 à 30 : le document de genèse.">
+<meta name="keywords" content="delfine, nombres premiers, grille 6k ± 1, Collatz, Goldbach, nombres parfaits, nombres jumeaux, racine digitale, 24, corpus ARC, Filipe Bastos">
+<meta name="author" content="Filipe Bastos">
+<meta name="license" content="https://creativecommons.org/licenses/by/4.0/deed.fr">
+<link rel="stylesheet" href="../../assets/arc.css">
+</head>
+<body>
+<nav class="crumbs"><a href="../../index.html">Corpus ARC</a> / <a href="index.html">Volume 4 · La Théorie des Nombres</a></nav>
+<main class="chapter">
+<h1 id="chapitre-1.-la-feuille-1-a-30-le-document-de-genese">Chapitre 1. La feuille 1 à 30 : le document de genèse</h1>
+<p>Tout ce volume part d’une feuille de papier. On y écrit les nombres de 1 à 30, on remplace chacun par la somme de ses chiffres réduite à un seul chiffre, et on marque les nombres premiers. Ce geste, à la portée d’un enfant, fait apparaître en quelques minutes ce que la tradition présente comme une énigme : les nombres premiers n’occupent pas n’importe quelle place. Ils évitent trois positions sur neuf, ils vivent sur deux files, et le reste en découle. Ce chapitre donne le protocole, les deux observations fondatrices, la lecture historique qui explique pourquoi ce fait est resté invisible, et la ligne de partage entre ce qui est connu de la littérature et ce que le corpus revendique en propre.</p>
+<h2 id="le-protocole">1.1 Le protocole</h2>
+<p>Le point d’entrée du corpus fut obtenu en trois jours, sans appareil, par le protocole suivant.</p>
+<blockquote>
+<p><strong>Protocole.</strong> (1) Écrire les nombres de 1 à 30. (2) Réduire chacun à sa racine numérique DR par addition itérée des chiffres. (3) Marquer les premiers.</p>
+</blockquote>
+<p><em>« Écrire 1 à 30, réduire chaque nombre à sa racine (DR), marquer les premiers. C’est tout. »</em> (La Planche ARC)</p>
+<table>
+<thead>
+<tr class="header">
+<th>n</th>
+<th>DR</th>
+<th></th>
+<th>n</th>
+<th>DR</th>
+<th></th>
+<th>n</th>
+<th>DR</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>1</td>
+<td></td>
+<td>11</td>
+<td><strong>2 P</strong></td>
+<td></td>
+<td>21</td>
+<td>3</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td><strong>2 P</strong></td>
+<td></td>
+<td>12</td>
+<td>3</td>
+<td></td>
+<td>22</td>
+<td>4</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td><strong>3 P</strong></td>
+<td></td>
+<td>13</td>
+<td><strong>4 P</strong></td>
+<td></td>
+<td>23</td>
+<td><strong>5 P</strong></td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>4</td>
+<td></td>
+<td>14</td>
+<td>5</td>
+<td></td>
+<td>24</td>
+<td>6</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td><strong>5 P</strong></td>
+<td></td>
+<td>15</td>
+<td>6</td>
+<td></td>
+<td>25</td>
+<td>7</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>6</td>
+<td></td>
+<td>16</td>
+<td>7</td>
+<td></td>
+<td>26</td>
+<td>8</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td><strong>7 P</strong></td>
+<td></td>
+<td>17</td>
+<td><strong>8 P</strong></td>
+<td></td>
+<td>27</td>
+<td>9</td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td>8</td>
+<td></td>
+<td>18</td>
+<td>9</td>
+<td></td>
+<td>28</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>9</td>
+<td>9</td>
+<td></td>
+<td>19</td>
+<td><strong>1 P</strong></td>
+<td></td>
+<td>29</td>
+<td><strong>2 P</strong></td>
+</tr>
+<tr class="even">
+<td>10</td>
+<td>1</td>
+<td></td>
+<td>20</td>
+<td>2</td>
+<td></td>
+<td>30</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<p>On lit la colonne des racines : elle tourne de 1 à 9 et recommence. Le 9 n’est jamais remplacé par 0 : 9, 18 et 27 ont pour racine 9. C’est la convention de tout le corpus : le 9 est la fermeture du cycle, pas son effacement.</p>
+<h2 id="les-deux-observations-fondatrices">1.2 Les deux observations fondatrices</h2>
+<p><strong>V4.1.1 (Th) : l’axe stérile.</strong> Aucun premier supérieur à 3 ne porte une racine numérique de l’axe {3, 6, 9}. Vérifié exhaustivement jusqu’à 10⁶ dans le Tome I, jusqu’à 3 × 10⁷ dans l’article de démarcation, et refait pour ce volume jusqu’à 6 × 10⁶ : aucune exception. La preuve tient en une ligne : DR(n) ∈ {3, 6, 9} équivaut à « 3 divise n » (puisque la racine est le reste de n dans la division par 9, avec 9 pour le reste nul), donc un nombre de l’axe est composé, hors le générateur 3 lui-même.</p>
+<p><strong>V4.1.2 (Th) : la boucle-9 interdite.</strong> Aucun premier n’a une somme de chiffres égale à 9 : aucun premier ne boucle à 9 en une seule itération. Vérifié jusqu’à 10⁶ (Tome I), 3 × 10⁷ (article de démarcation), refait jusqu’à 6 × 10⁶. Une somme de chiffres égale à 9 place le nombre au point de fermeture du cycle, dans la descendance de 9, et 9 divise alors le nombre.</p>
+<p><strong>V4.1.3 (Th) : la conséquence structurale.</strong> L’axe exclu, les premiers vivent sur deux rails : <strong>D = {1, 4, 7}</strong> et <strong>G = {2, 5, 8}</strong>. En retirant des rails la descendance de 2 (les positions paires), le résidu est exactement la grille des positions qui flanquent les multiples de 6 : 5, 7, 11, 13, 17, 19, 23, 25, 29, 31, 35, 37, … Le « monde de 6 » n’est pas un choix de méthode : il est le résidu de deux exclusions cadastrales.</p>
+<blockquote>
+<p><em>« Les fondateurs 2 et 3 créent ce monde (2 × 3 = 6) et n’y jouent jamais. »</em></p>
+</blockquote>
+<p>Sur la planche, la grille s’écrit avec ses racines : 5, 7, 11, 13, 17, 19, 23, 25, 29, 31, 35, 37, 41, 43, 47, 49 portent les racines 5, 7, 2, 4, 8, 1, 5, 7, 2, 4, 8, 1, 5, 7, 2, 4. Le motif 5, 7, 2, 4, 8, 1 se répète tous les six termes. Les positions 25 = 5 × 5, 35 = 5 × 7 et 49 = 7 × 7 sont les premiers composés de la grille : on les nommera <em>delfines</em> (chapitre 3).</p>
+<h2 id="le-temoin-anatomique-les-deux-mains-face-a-face">1.3 Le témoin anatomique : les deux mains face à face</h2>
+<p><strong>V4.1.4 (L) : les deux mains.</strong> Numérotons les dix doigts des deux mains posées : 0 à 4, puis 5 à 9. Mains face à face, les doigts qui se rencontrent sont (0, 9), (1, 8), (2, 7), (3, 6), (4, 5). Cinq paires sommant toutes à 9 : les mains face à face réalisent physiquement φ(x) = 9 − x. La paire de fermeture (0, 9) est aux auriculaires, mémoire contre clôture ; la paire barycentrique (4, 5) est aux pouces ; et le barycentre 4,5 est logé exactement dans l’interstice entre les mains : le point fixe de l’involution n’est sur aucun doigt, il est dans le vide qui les sépare. La somme des cinq rencontres vaut 45, le cadastre entier (1 + 2 + ⋯ + 9 = 45).</p>
+<blockquote>
+<p><em>« Le corps porte le φ-palindrome, des années avant que l’enfant n’apprenne à compter dessus. »</em></p>
+</blockquote>
+<p>Et l’inversion causale du chapitre 2 (section 2.6) s’y referme : la main n’explique pas la base ; la main et la base incarnent la même structure de fermeture 9 + 1. Statut : Lecture. L’appariement est un fait ; la portée est interprétative.</p>
+<h2 id="la-prediction-pedagogique">1.4 La prédiction pédagogique</h2>
+<p><strong>V4.1.5 (P) : la prédiction de l’enfant.</strong> Tout sujet sans formation mathématique formelle, muni de la feuille 1 à 30 et de la règle de réduction, identifie l’axe stérile en une session. Le protocole est réplicable par un enfant de neuf ans avec un crayon. La vitesse de découverte est inversement liée au degré d’installation du filtre notationnel décrit à la section 1.5 (strate 2) : l’obstacle est un artefact de formation, non de difficulté.</p>
+<p><em>Critère d’échec.</em> Un groupe de sujets sans formation, munis de la feuille et de la règle, qui ne repère pas l’absence de premiers sur {3, 6, 9} en une session ; ou une vitesse de découverte qui ne décroît pas avec la durée de formation mathématique. La planche du corpus porte la même prédiction : <em>« muni de cette feuille, un enfant de neuf ans identifie l’axe stérile en une session. »</em></p>
+<h2 id="genealogie-de-laveuglement-trois-strates-datables">1.5 Généalogie de l’aveuglement : trois strates datables</h2>
+<p>L’affirmation centrale de ce volume est que la position des nombres premiers n’a jamais été énigmatique : elle est déterminée par une structure additive visible sur une feuille de papier, à hauteur d’enfant. Si cette structure est restée invisible, ce n’est pas faute d’observation : c’est par la sédimentation de trois gestes distincts.</p>
+<p><strong>V4.1.6 (L) : strate 1, l’absorption instrumentale (des comptables à Gauss, 1801).</strong> Les faits bruts furent enregistrés très tôt : la « preuve par neuf » des comptables utilise la racine numérique depuis des siècles ; la forme 6k ± 1 figure dans les manuels élémentaires. Mais ils furent enregistrés comme <em>outils de vérification</em>, jamais comme <em>objets d’étude</em>. Les <em>Disquisitiones Arithmeticae</em> (1801) scellent ce classement : dans le formalisme des congruences, on écrit 9 ≡ 0, et le point de fermeture du cycle est identifié au vide ; le nombre d’enroulements est effacé par définition. L’observation n’a pas été manquée ; elle a été classée triviale par l’appareil même qui l’a absorbée.</p>
+<blockquote>
+<p><em>« Cette forme d’aveuglement est plus résistante que l’ignorance : on ne cherche pas ce qu’on croit déjà avoir rangé. »</em></p>
+</blockquote>
+<p><strong>V4.1.7 (L) : strate 2, la transparence de la notation (Stevin, 1585).</strong> L’universalisation de la notation positionnelle décimale institue la convention selon laquelle les chiffres sont une fenêtre transparente sur la quantité. Regarder les chiffres eux-mêmes, leur somme, leur réduction, leur cycle, devient regarder le doigt au lieu de la lune. Toute régularité découverte dans la notation est présumée artefact. Or l’opération la plus informative du protocole est précisément celle que cette convention interdit : lire la feuille, et non à travers elle.</p>
+<p><strong>V4.1.8 (L) : strate 3, le déplacement de la question (après Riemann).</strong> Sur la <em>position</em> des premiers, la tradition n’a jamais tenu qu’il y avait énigme : le crible d’Ératosthène et la décision par facteur borné sont antiques. L’« énigme des premiers » comme mythe public naît d’un glissement : après Euler et Riemann, la discipline redéfinit « le problème des premiers » comme un problème de comptage asymptotique, puis le discours pédagogique fusionne les deux questions en une aura unique de mystère. Des générations apprennent que « les premiers sont imprévisibles », énoncé faux sur la position.</p>
+<blockquote>
+<p><em>« Le scandale n’est pas qu’une vérité fût cachée : c’est qu’un récit d’énigme ait été superposé à une structure ouverte. »</em></p>
+</blockquote>
+<p><strong>V4.1.9 (L) : le mystère comme produit dérivé.</strong> <em>« Ce ne sont pas les premiers qui étaient énigmatiques ; c’est l’institution qui avait besoin qu’ils le soient. »</em> Le mystère est un produit dérivé du prestige analytique, selon le mécanisme décrit dans <em>Le Procès de la Preuve</em> : l’outil devenu juge de l’objet (Volume 6, <em>L’Histoire de la Preuve</em>).</p>
+<p><strong>F : références des strates.</strong> Strate 1 : C. F. Gauss, <em>Disquisitiones Arithmeticae</em>, 1801 (le formalisme des congruences, section I, où le reste nul absorbe le point de fermeture). Strate 2 : S. Stevin, <em>De Thiende</em> (« La Disme »), 1585. Strate 3 : B. Riemann, <em>Über die Anzahl der Primzahlen unter einer gegebenen Grösse</em>, 1859 ; Clay Mathematics Institute, énoncé des Problèmes du Millénaire, 2000. La critique vise des gestes datés et documentés, non des intentions.</p>
+<h2 id="ce-qui-est-connu-ce-qui-est-revendique">1.6 Ce qui est connu, ce qui est revendiqué</h2>
+<p>Le titre du Tome I, <em>Les Nombres Premiers n’ont jamais été cachés</em>, est une affirmation historique autant que mathématique ; il porte donc une double charge de preuve, que cette section assume.</p>
+<p><strong>Ce qui est connu de la littérature, et reconnu comme tel (F).</strong> La forme 6k ± 1 des premiers supérieurs à 3 figure dans les manuels élémentaires ; le crible par roue (<em>wheel factorization</em>) exploite cette grille depuis longtemps ; le fait que 24 divise p² − 1 pour tout premier p ≥ 5 est classique ; la racine numérique et la preuve par neuf sont d’usage séculaire ; la caractérisation des composés d’une roue par les produits de ses générateurs est implicite dans toute division d’essai restreinte ; la division d’essai jusqu’à √n est antique. Aucun théorème de ce volume ne revendique la nouveauté de ces briques prises isolément : les revendiquer serait précisément le genre d’inflation que la discipline des statuts interdit.</p>
+<p><strong>Ce qui est revendiqué comme propre.</strong> (i) Le <em>chemin de genèse</em> : la structure est dérivée du cadastre (feuille 1 à 30, axe stérile, rails) <em>avant</em> toute considération de congruence, et la grille 6k ± 1 apparaît comme résidu de deux exclusions cadastrales, non comme point de départ. (ii) La <em>définition positionnelle primitive</em> des delfines, et son équivalence compositionnelle comme théorème (chapitre 3). (iii) L’<em>architecture unifiée</em> sous une seule involution φ : auto-génération (Th 1), familles (Th 2), chrysalide (Th 6), prédicat J(k) (Th 7), correspondance riemannienne (Th 9), invariant Root-9 (Th 10). (iv) La <em>réduction mesurée</em> de l’infinitude des jumeaux à un lemme unique nommé (chapitre 5). (v) La <em>prédiction pédagogique falsifiable</em> (V4.1.5). L’article de démarcation anglais (<em>The 6k ± 1 Grid Revisited via Digital-Root Partition</em>, juillet 2026) ajoute à cette liste : la loi d’auto-génération à indexation déterministe ; la structure de groupe de Klein des familles avec la branche comme produit des signes ; la lecture de la maximalité de 24 comme saturation d’une borne ; la quantification exacte à un bit de l’effondrement conjugué ; la preuve en deux lignes de l’invariant Root-9, valable sur toute la grille. Et il conclut : <em>« Nous revendiquons la réduction et le prédicat exact, non le lemme. »</em></p>
+<h2 id="la-planche">1.7 La planche</h2>
+<p>La planche du Tome I (<em>La Planche ARC, Manifeste pédagogique : tout se lit sur une feuille, à hauteur d’enfant</em> ; protocole : <em>« un crayon, la réduction des chiffres, trois jours »</em>) dispose en six panneaux ce que les chapitres 1 à 4 démontrent : la feuille 1 à 30 ; la table des inversions ; le pavé tordu ; la paire d’inversions ; la grille qui s’auto-génère avec ses premiers (en or) et ses delfines (en creux) ; les trois horloges 12, 24 et 4. Elle se ferme sur deux phrases :</p>
+<blockquote>
+<p><em>« Le premier n’est pas un rescapé : il est la position que les quatre familles ne peuvent pas engendrer. L’identité par contrainte relationnelle : la signature arithmétique de la Cohérence Relationnelle. »</em></p>
+</blockquote>
+
+</main>
+<nav class="chapnav"><span class="prev"><a href="02-partie-i-la-feuille-et-le-cadastre.html">← Partie I. La feuille et le cadastre</a></span><a class="toc" href="index.html">Sommaire du volume</a><span class="next"><a href="04-chapitre-2-le-cadastre-neuf-positions-une-involuti.html">Chapitre 2. Le cadastre : neuf positions, une involution, deux rails et un axe →</a></span></nav>
+<footer class="colophon"><p>Corpus ARC, Filipe Bastos, <a href="https://creativecommons.org/licenses/by/4.0/deed.fr" rel="license">CC BY 4.0</a>.</p></footer>
+</body>
+</html>

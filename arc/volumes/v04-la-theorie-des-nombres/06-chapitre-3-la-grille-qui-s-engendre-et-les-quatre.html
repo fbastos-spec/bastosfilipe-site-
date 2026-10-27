@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<link rel="canonical" href="https://bastosfilipe.com/arc/volumes/v04-la-theorie-des-nombres/06-chapitre-3-la-grille-qui-s-engendre-et-les-quatre.html">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chapitre 3. La grille qui s&#x27;engendre et les quatre familles · La Théorie des Nombres · Corpus ARC</title>
+<meta name="description" content="La Théorie des Nombres, volume 4 du corpus ARC de Filipe Bastos. Chapitre 3. La grille qui s&#x27;engendre et les quatre familles.">
+<meta name="keywords" content="delfine, nombres premiers, grille 6k ± 1, Collatz, Goldbach, nombres parfaits, nombres jumeaux, racine digitale, 24, corpus ARC, Filipe Bastos">
+<meta name="author" content="Filipe Bastos">
+<meta name="license" content="https://creativecommons.org/licenses/by/4.0/deed.fr">
+<link rel="stylesheet" href="../../assets/arc.css">
+</head>
+<body>
+<nav class="crumbs"><a href="../../index.html">Corpus ARC</a> / <a href="index.html">Volume 4 · La Théorie des Nombres</a></nav>
+<main class="chapter">
+<h1 id="chapitre-3.-la-grille-qui-sengendre-et-les-quatre-familles">Chapitre 3. La grille qui s’engendre et les quatre familles</h1>
+<p>Ce chapitre établit les quatre théorèmes qui règlent la <em>position</em> des nombres premiers. Le premier montre que la grille des candidats 5, 7, 11, 13, 17, 19, … se fabrique d’elle-même, par la seule addition de voisins : rien n’est caché sur l’endroit où il faut chercher. Le deuxième montre que les composés de cette grille (les <em>delfines</em>) naissent exactement de quatre formules simples, quatre « familles » dont on connaît d’avance toutes les naissances, et qu’il ne peut pas en exister une cinquième. Le troisième en tire que le premier est ce que les familles n’engendrent pas : une soustraction exacte, sans rescapé. Le quatrième dit comment décider en un nombre fini de gestes si une position donnée est première : il suffit de lancer les générateurs jusqu’au point d’équilibre de la paire de facteurs. Rien ici n’est de l’ordre du « peut-être » : tout est calcul fini.</p>
+<h2 id="la-grille-les-paires-les-delfines">3.1 La grille, les paires, les delfines</h2>
+<p><strong>Définition (grille).</strong> L’ensemble ordonné des positions 6k ± 1, k ≥ 1 : {5, 7, 11, 13, 17, 19, 23, 25, …}. Les paires sont notées P_m = (6m − 1, 6m + 1), d’axe 6m. Pour tout k, DR(6k + 1) ∈ D et DR(6k − 1) ∈ G : les deux branches occupent des classes disjointes.</p>
+<p><strong>Définition (delfines).</strong> <em>Définition cadastrale, primitive :</em> les positions de grille à racine de rail (DR ∈ {1, 4, 7} ∪ {2, 5, 8}) occupées par des non-premiers. La définition est <em>positionnelle</em> : elle dit où les delfines vivent, non ce dont ils sont faits. Les deux exclusions cadastrales sont constitutives : la racine de rail exclut la descendance du fondateur 3 (racine hors axe équivaut à non-divisibilité par 3), la position de grille exclut la descendance du fondateur 2. <em>Caractérisation compositionnelle, dérivée par le Théorème 2 :</em> les delfines sont exactement les <strong>carrés</strong> p² et les <strong>croisements</strong> p × q (p ≠ q, premiers ≥ 5) et leurs produits. Tout membre de la grille est soit premier, soit delfine : la grille est exactement {premiers ≥ 5} ∪ {delfines}. Le nom <em>delfine</em> (descendant) est la correction ontologique du vocabulaire du rejet (chapitre 6, section 6.4).</p>
+<p><strong>F : note de démarcation.</strong> La classe compositionnelle coïncide avec les « quasi-premiers » de la méthodologie QPM (R. E. Grant, 2019) : composés dont tous les facteurs premiers sont ≥ 5. La convergence est extensionnelle et indépendante, deux chemins de découverte distincts vers le même ensemble, mais l’architecture diffère : dans la QPM, l’équivalence position/composition est la définition ; ici, la définition est positionnelle (issue de la feuille DR) et l’équivalence est un théorème (Th 2). L’involution φ, les quatre familles génératrices, l’auto-génération de la grille (Th 1), la chrysalide (Th 6) et le prédicat J(k) (Th 7) sont propres au corpus et sans équivalent dans la QPM. Aucun autre élément de la QPM n’est endossé.</p>
+<p><strong>Définition (familles).</strong> Les quatre lignées génératrices des delfines, paramétrées par (a, b), a, b ≥ 1 :</p>
+<table>
+<thead>
+<tr class="header">
+<th>famille</th>
+<th>indice k</th>
+<th>position</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>(+, +)</td>
+<td>k = 6ab + a + b</td>
+<td>6k + 1 = (6a + 1)(6b + 1)</td>
+</tr>
+<tr class="even">
+<td>(−, −)</td>
+<td>k = 6ab − a − b</td>
+<td>6k + 1 = (6a − 1)(6b − 1)</td>
+</tr>
+<tr class="odd">
+<td>(+, −)</td>
+<td>k = 6ab + a − b</td>
+<td>6k − 1 = (6a + 1)(6b − 1)</td>
+</tr>
+<tr class="even">
+<td>(−, +)</td>
+<td>k = 6ab − a + b</td>
+<td>6k − 1 = (6a − 1)(6b + 1)</td>
+</tr>
+</tbody>
+</table>
+<p>Chaque famille, à a fixé, est une progression arithmétique en b de raison 6a ± 1 : ses naissances sont explicites et prévisibles. Exemple : à a = 1, la famille (−, −) donne k = 5b − 1, soit k = 4, 9, 14, 19, … et les positions 25, 55, 85, 115, … (tous multiples de 5 sur la branche 6k + 1).</p>
+<p><strong>Définition (hors-famille).</strong> Un indice k qui n’appartient à aucune des quatre familles sur une branche donnée : la position correspondante est un premier.</p>
+<h2 id="theoreme-1-lauto-generation-de-la-grille">3.2 Théorème 1 : l’auto-génération de la grille</h2>
+<p><strong>Théorème 1 (Tome I) : auto-génération de la grille.</strong> La somme de deux voisins consécutifs de la grille tombe exactement sur un axe 6m, et la paire (s − 1, s + 1) est la paire de grille correspondante. L’indexation est déterministe :</p>
+<ul>
+<li>somme interne de P_m : (6m − 1) + (6m + 1) = 12m, qui désigne <strong>P₂ₘ</strong> ;</li>
+<li>somme chevauchante P_m / P_{m+1} : (6m + 1) + (6(m + 1) − 1) = 12m + 6, qui désigne <strong>P₂ₘ₊₁</strong>.</li>
+</ul>
+<p>Chaque paire engendre donc, par simple addition, des paires strictement plus loin dans la suite. La grille se déploie d’elle-même, sans information externe, à l’infini.</p>
+<p><em>Exemples.</em> 5 + 7 = 12 → P₂ = (11, 13). 7 + 11 = 18 → P₃ = (17, 19). 11 + 13 = 24 → P₄ = (23, 25). 13 + 17 = 30 → P₅ = (29, 31). 23 + 25 = 48 → P₈ = (47, 49).</p>
+<p><em>Vérification.</em> 1 665 sommes consécutives testées (grille jusqu’à 5 000) : exactitude totale. Indexation vérifiée pour m = 1 à 399 dans le Tome I, pour m ≤ 10⁶ dans l’article de démarcation (refait pour ce volume), et démontrée pour tout m par les deux identités ci-dessus. <strong>Statut : Th.</strong></p>
+<p><strong>V4.3.1 (L).</strong> <em>« La position des candidats n’a jamais été cachée : la suite s’auto-génère par l’opération la plus élémentaire du cadastre, l’addition de voisins. Aucune énigme positionnelle. »</em></p>
+<h2 id="theoreme-2-les-quatre-familles-epuisent-les-delfines">3.3 Théorème 2 : les quatre familles épuisent les delfines</h2>
+<p><strong>Théorème 2 (Tome I) : les quatre familles.</strong> Un indice k porte un delfine si et seulement si k appartient à l’une des quatre familles. Les deux formes symétriques, ±(a + b), couvrent la branche 6k + 1 ; les deux formes croisées, ±(a − b), couvrent la branche 6k − 1.</p>
+<p><em>Preuve.</em> Développement direct des produits de générateurs :</p>
+<ul>
+<li>(6a + 1)(6b + 1) = 36ab + 6a + 6b + 1 = 6(6ab + a + b) + 1 ;</li>
+<li>(6a − 1)(6b − 1) = 36ab − 6a − 6b + 1 = 6(6ab − a − b) + 1 ;</li>
+<li>(6a + 1)(6b − 1) = 36ab − 6a + 6b − 1 = 6(6ab − a + b) − 1, et symétriquement pour (6a − 1)(6b + 1).</li>
+</ul>
+<p>Tout composé de la grille est produit de deux membres de la grille (les facteurs 2 et 3 étant exclus par construction : on peut toujours regrouper les facteurs premiers ≥ 5 en deux paquets, chacun de la forme 6c ± 1), donc de l’une des formes voulues. Réciproque immédiate. ∎</p>
+<p><em>Vérification.</em> k = 1 à 33 332 (grille jusqu’à 200 000) dans le Tome I ; k = 1 à 4 999 998 (grille sous 3 × 10⁷) dans l’article de démarcation, zéro écart contre un crible ; refait pour ce volume sur k = 1 à 10⁶. <strong>Statut : Th.</strong></p>
+<p><strong>Corollaire du Théorème 2 : complétude et groupe de Klein (Th).</strong> Tout membre de grille est de la forme 6c + ε avec ε ∈ {+1, −1} ; tout produit de deux membres relève donc d’exactement une des quatre combinaisons de signes (ε₁, ε₂) ∈ {±1} × {±1}. L’algèbre est épuisée : <strong>aucune cinquième famille indépendante ne peut exister.</strong> Mieux, les quatre familles portent une structure de <em>groupe de Klein</em> : indexées par {±1} × {±1}, leur branche d’atterrissage est le produit des signes. (+, +) et (−, −) engendrent la branche 6k + 1 ; (+, −) et (−, +) la branche 6k − 1. Les familles ne sont pas quatre objets juxtaposés : ce sont les quatre éléments d’un groupe, et la répartition sur les branches est le morphisme produit. La partition des delfines par les familles est close par nécessité algébrique, non par inventaire.</p>
+<h2 id="theoreme-3-le-premier-comme-naissance-par-soustraction-de-familles">3.4 Théorème 3 : le premier comme naissance par soustraction de familles</h2>
+<p><strong>Théorème 3 (Tome I) : la soustraction exacte.</strong> Un premier est un membre de grille dont l’indice k est hors-famille. La partition premier/delfine est une soustraction exacte :</p>
+<blockquote>
+<p>{premiers ≥ 5} = grille − ⋃ (quatre familles).</p>
+</blockquote>
+<p>La primalité sur la grille est décidable dans les deux sens : à l’endroit, chaque famille à a fixé est une progression arithmétique de raison 6a ± 1 aux naissances explicites ; à l’envers, l’appartenance d’un k donné se règle par un nombre fini de tests de générateurs. <strong>Statut : Th</strong> (corollaire immédiat des Théorèmes 1 et 2).</p>
+<p><strong>V4.3.2 (L) : rien ne survit, tout se déduit.</strong> <em>« Le premier n’est pas un accident ni un rescapé : il est une famille qui naît par soustraction de familles, à position déductible dans les deux sens. »</em> Le vocabulaire de la « survie », hérité de l’imagerie du crible, est rejeté : <em>« rien ne survit, tout se déduit. »</em></p>
+<p><strong>Note de démarcation.</strong> Ce qui est démontré ici est la <em>détermination positionnelle</em> : où sont les candidats, lesquels sont premiers, par calcul fini dans chaque cas. La question du <em>comptage asymptotique</em> des hors-famille (densités, infinitude des paires jumelles) est d’un autre type logique, quantifiée sur l’infini ; elle relève d’un travail distinct (le calcul de recouvrement des familles, chacune étant une progression arithmétique explicite de raison 6a ± 1), traité au chapitre 5 (section 5.3) et au chapitre 6. La confusion historique entre ces deux questions est précisément la strate 3 de la généalogie (V4.1.8).</p>
+<h2 id="theoreme-4-la-decision-au-point-dequilibre">3.5 Théorème 4 : la décision au point d’équilibre</h2>
+<p><strong>Théorème 4 (Tome I) : décision par le point d’équilibre de la paire génératrice.</strong> Pour toute position n = 6k ± 1, le statut se décide par le lancement des seuls générateurs 6a ± 1 inférieurs ou égaux au point d’équilibre de la paire de facteurs. Si aucun ne divise n, la position est hors-famille : n est premier.</p>
+<p><em>Preuve.</em> Toute naissance de famille s’écrit n = (petit générateur) × (grand générateur), et la paire (a, b) est symétrique sous l’échange a ↔︎ b : elle s’ordonne autour de son point d’équilibre, où petit et grand se rejoignent. Le petit facteur est donc toujours au-dessous de ce point. En notation standard, le point d’équilibre est √n ; mais la borne ne provient d’aucune géométrie de longueurs : elle provient de la symétrie d’échange de la paire, l’analogue multiplicatif du barycentre 4,5 de l’involution φ. ∎</p>
+<p><em>Vérification en acte.</em> n = 600 011 : premier, décidé en au plus 260 tests. n = 600 013 : famille, 53 × 11 321, même borne. n = 10 000 019 : premier, au plus 1 056 tests pour une position à huit chiffres. Sens direct enchaîné : le premier suivant après 10 000 019 est 10 000 079, obtenu en avançant sur la grille auto-générée et en appliquant le même test. Les quatre résultats sont refaits pour ce volume (le décompte des générateurs lancés y donne 257 et 1 053, sous les bornes annoncées). <strong>Statut : Th.</strong></p>
+<p><strong>Remarque de complexité : même coût, autre sens.</strong> La relecture barycentrique ne modifie pas la complexité du test : la borne est numériquement √n, et le coût calculatoire est identique à la division d’essai sur roue. Ce qui change est le <em>sens</em> de la borne (symétrie d’échange de la paire génératrice, analogue multiplicatif du barycentre), non son prix. Le corpus le déclare pour qu’on ne lui fasse pas dire ce qu’il ne dit pas.</p>
+<p><strong>Remarque sur le rang.</strong> Le rang d’une naissance dans sa famille (deuxième, cinquième…) est une information de généalogie, non de statut : la décision n’en dépend jamais. Seule l’appartenance compte, et elle se lit au premier générateur diviseur rencontré.</p>
+<p><strong>V4.3.3 (Th) : bilan des Théorèmes 1 à 4.</strong> Le système est complet dans les deux directions. À l’endroit : les familles se lancent et l’on voit où elles naissent (progressions explicites). À l’envers : toute position se juge par son point d’équilibre, calculatrice en main. Aucune position, si grande soit-elle, n’échappe au verdict fini.</p>
+
+</main>
+<nav class="chapnav"><span class="prev"><a href="05-partie-ii-les-premiers-jamais-caches.html">← Partie II. Les premiers jamais cachés</a></span><a class="toc" href="index.html">Sommaire du volume</a><span class="next"><a href="07-chapitre-4-les-carres-de-premiers-le-rythme-24-et.html">Chapitre 4. Les carrés de premiers : le rythme 24 et la chrysalide →</a></span></nav>
+<footer class="colophon"><p>Corpus ARC, Filipe Bastos, <a href="https://creativecommons.org/licenses/by/4.0/deed.fr" rel="license">CC BY 4.0</a>.</p></footer>
+</body>
+</html>

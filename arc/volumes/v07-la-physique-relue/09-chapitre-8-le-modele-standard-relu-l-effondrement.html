@@ -1,0 +1,419 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<link rel="canonical" href="https://bastosfilipe.com/arc/volumes/v07-la-physique-relue/09-chapitre-8-le-modele-standard-relu-l-effondrement.html">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chapitre 8. Le Modèle standard relu : l&#x27;effondrement arithmétique · La Physique relue · Corpus ARC</title>
+<meta name="description" content="La Physique relue, volume 7 du corpus ARC de Filipe Bastos. Chapitre 8. Le Modèle standard relu : l&#x27;effondrement arithmétique.">
+<meta name="keywords" content="mécanique quantique, borne de Tsirelson, mesure, Heisenberg, effet tunnel, proton, Modèle standard, théorie des cordes, corpus ARC, Filipe Bastos">
+<meta name="author" content="Filipe Bastos">
+<meta name="license" content="https://creativecommons.org/licenses/by/4.0/deed.fr">
+<link rel="stylesheet" href="../../assets/arc.css">
+</head>
+<body>
+<nav class="crumbs"><a href="../../index.html">Corpus ARC</a> / <a href="index.html">Volume 7 · La Physique relue</a></nav>
+<main class="chapter">
+<h1 id="chapitre-8.-le-modele-standard-relu-leffondrement-arithmetique">Chapitre 8. Le Modèle standard relu : l’effondrement arithmétique</h1>
+<p>Le Modèle standard de la physique des particules prédit avec une précision remarquable, et il repose sur plus de dix-neuf paramètres libres, plus de trente-sept particules fondamentales, des espaces d’états de dimension infinie et une interprétation probabiliste irréductible. <em>The Arithmetic Collapse of the Standard Model</em> (v1 et v2.0, février 2026 ; la v2.0, « enrichie de vérifications quantitatives », fait foi) soutient que chacun de ces traits est la conséquence en aval de six décisions historiques prises dans les fondements mathématiques, de la notation décimale de Stevin (1585) à la convention de Gauss (1801). La pièce ne conteste aucune donnée : les masses, les sections efficaces et les taux de désintégration mesurés au CERN et ailleurs sont réels. Elle soutient que ces données peuvent être engendrées par un fondement plus simple. Ce chapitre en garde tout le contenu, avec une discipline stricte des statuts : la source numérote ses propositions « Théorème 4 » à « Théorème 11 », mais aucune n’est démontrée par un calcul fini ; elles sont rendues ici comme Lectures ou Prédictions. Et les mentions « VALIDATED » et « PROVEN » de la v2.0 sont rendues selon le Registre des Erreurs (III.4) : une prédiction comparée à des données reste P à reçu tant que le reçu n’est pas publié et refait.</p>
+<h2 id="les-six-erreurs-fondatrices">8.1 Les six erreurs fondatrices</h2>
+<p><strong>É8.1 (L) La cascade de six décisions.</strong> Le Modèle standard n’est pas sorti de la nature mais des mathématiques, et plus précisément d’une lignée de conventions qui, utiles au calcul, ont introduit des distorsions systématiques dans la description d’une réalité discrète. Six décisions, chacune rationnelle isolément, ont remplacé l’arithmétique discrète, fermée et autoréférente du système des nombres par une approximation continue, ouverte et amnésique :</p>
+<ol type="1">
+<li><em>Stevin (1585), la notation décimale.</em> Les rapports exacts sont remplacés par des développements infinis : 1/3, complet et exact, devient 0,333…, suite qui ne se ferme pas ; le rapport 22/7, qui se ferme après six chiffres répétés (142857), est remplacé par la poursuite de π = 3,14159…, qui ne se ferme jamais. Conséquence : le résidu de Stevin ε, erreur de troncature inévitable dans tout calcul à décimales infinies.</li>
+<li><em>Viète (1591), l’abstraction algébrique.</em> Les lettres pour les inconnues et les constantes séparent l’identité qualitative des nombres de leur rôle algébrique ; le 7 (premier, envergure maximale de la paire (1, 8), dénominateur de 22/7) devient indiscernable de n’importe quelle variable.</li>
+<li><em>Descartes (1637), la séparation des coordonnées.</em> La géométrie est séparée de l’arithmétique par le système de coordonnées ; les nombres deviennent des positions plutôt que des identités relationnelles, la droite numérique devient infinie dans les deux sens, la clôture à 9 se perd.</li>
+<li><em>Newton (1687) et Leibniz, l’infinitésimal.</em> Le passage dx → 0 traverse des fractions incomplètes, des quantités qui ne se sont pas résolues en entiers : violation systématique du principe de complétude, singularités (division par zéro), divergences, nécessité de la renormalisation en théorie quantique des champs.</li>
+<li><em>Gauss (1801), l’amnésie de la congruence.</em> La convention « 9 ≡ 0 » efface le 9 de l’alphabet opératoire et écrase l’horizon de clôture sur l’identité additive ; poser 9 = 0, c’est effacer la mémoire du système. Conséquence : perte du nombre d’enroulement k ; toute grandeur codée en multiples de 9 devient invisible.</li>
+<li><em>La décimalisation institutionnelle (1795-1815).</em> Le gouvernement révolutionnaire puis la standardisation napoléonienne imposent le système métrique décimal comme cadre universel de la science, et cimentent la notation de Stevin comme seule langue légitime de la mesure.</li>
+</ol>
+<p><em>« LA CASCADE : Stevin brise l’exactitude → Viète retire l’identité → Descartes brise la clôture → Newton brise la complétude → Gauss efface la mémoire → l’institution rend les erreurs invisibles. »</em> Tout ce qui paraît mystérieux dans le Modèle standard (l’incertitude, la dualité onde-particule, la matière noire, le zoo des particules) en serait la conséquence. <em>« La physique n’est pas fausse. Les mathématiques sont incomplètes. »</em> L’analyse de cette cascade appartient au Volume 3, Le Code et le Registre (le chaos fabriqué) et au Volume 6, L’Histoire de la Preuve.</p>
+<p><strong>É8.2 (L) La variante de Principia relationalis.</strong> Principia relationalis (février 2026) dresse une liste de six « crimes » qui diffère sur un point : Viète n’y figure pas, et Cantor (1874) y entre, pour avoir construit une hiérarchie d’infinis qui traite l’infini comme un objet plutôt que comme un processus (pour ARC, l’infini est la direction du 1 couché, l’unité étendue, non une collection achevée). Les formulations y sont plus frappées : sur Stevin, la décimale infinie est <em>« une représentation non de la nature mais de l’échec de l’outil »</em> ; sur Newton, <em>« le calcul intégral n’est pas une sommation ; c’est un effacement déguisé en accumulation »</em> ; sur Gauss, <em>« poser 9 = 0, c’est poser l’accomplissement égal au vide »</em> ; sur l’institution, le système métrique fut <em>« une décision politique, non scientifique »</em>, et la base 10 <em>« avec son zéro orphelin »</em> devint la grille administrative de la science. Principia ajoute une remarque que le volume garde : ces six interventions ne sont pas des accusations contre de grands mathématiciens ; ce sont des tournants où un choix, défendable dans son contexte, s’est composé en une dérive systémique ; le corpus ne prétend pas que ces mathématiciens se sont trompés dans leurs domaines, mais que l’effet cumulé de leurs innovations, appliquées universellement, a créé un chaos artificiel que la physique a passé quatre siècles à traiter par des épicycles de plus en plus élaborés. Les deux listes sont gardées ; elles ne se contredisent pas, elles retiennent chacune six tournants parmi sept.</p>
+<p><strong>É8.3 (L) Les axiomes de l’alternative.</strong> A1 (clôture) : le 9 est l’horizon de clôture, il n’équivaut pas à 0 ; c’est la membrane de saturation qui force le retour cyclique. A2 (inversion) : φ(x) = 9 − x engendre les quatre paires exhaustives (1, 8), (2, 7), (3, 6), (4, 5), qui partitionnent {1, …, 8}. A3 (barycentre) : l’unique point fixe de φ est 4,5, <em>« non obtenu en divisant 9 par 2, mais établi comme le point de convergence topologique de quatre paires d’inversion indépendantes »</em>. A4 (constante de projection) : k = 4,5/9 = 3,5/7 = 1/2, établie par triple convergence. A5 (complétude) : toute opération qui produit une grandeur physique doit se résoudre en quantités entières ou rationnelles exactes à chaque étape intermédiaire ; les opérations qui exigent une infinité de parties incomplètes pour approcher le tout sont structurellement déficientes.</p>
+<h2 id="la-constante-de-planck-comme-resolution-du-systeme">8.2 La constante de Planck comme résolution du système</h2>
+<p><strong>É8.4 (L) « Théorème 4 » : ħ est une résolution.</strong> La constante ħ ne représenterait pas un quantum fondamental d’action, mais le pas minimal, la résolution, d’un système discret fonctionnant sous la clôture 9 avec le barycentre 4,5. E = ħω ne dirait pas « l’énergie vient par paquets de taille ħω », mais « la variation d’énergie entre états adjacents égale la résolution du système multipliée par la fréquence de mise à jour ». Lecture du tableau :</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Symbole</th>
+<th>Lecture reçue</th>
+<th>Lecture ARC</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>E</td>
+<td>énergie d’un photon</td>
+<td>variation d’énergie entre états adjacents</td>
+</tr>
+<tr class="even">
+<td>ħ</td>
+<td>quantum fondamental d’action</td>
+<td>résolution du système (pas minimal)</td>
+</tr>
+<tr class="odd">
+<td>ω</td>
+<td>pulsation du rayonnement</td>
+<td>fréquence de mise à jour (transitions d’état par seconde)</td>
+</tr>
+</tbody>
+</table>
+<p>E = ħω devient « variation = résolution × fréquence de mise à jour », structurellement identique à l’équation de transfert des systèmes numériques, données = taille du pixel × fréquence d’image.</p>
+<p><strong>É8.5 (L) La dérivation proposée et sa faiblesse.</strong> La dérivation de la source : l’écart entre les chambres (4,5 et 7,5) se traverse en six pas de 0,5 = k (É2.17) ; le pas minimal vaut 0,5 unité géométrique, qui en unités physiques correspondrait à 0,5 × (h/π) = h/(2π) = ħ ; le 2 de h/2π serait l’expression directe de k. Le passage de l’unité géométrique à h/π n’est justifié nulle part : l’argument suppose ce qu’il veut établir (Annexe B). L’énoncé reste une Lecture.</p>
+<p><strong>É8.6 (L) Les conséquences.</strong> La quantification n’est pas mystérieuse : l’énergie apparaît en paquets discrets parce que le système sous-jacent est discret ; <em>« Planck a découvert la résolution du système, non une loi de la nature. »</em> La catastrophe ultraviolette était un problème de résolution : la physique classique prédisait une énergie infinie aux hautes fréquences parce qu’elle supposait une émission continue (loi de Rayleigh-Jeans) ; le correctif de Planck a réussi parce qu’il imposait une résolution à un système qui avait toujours été discret ; la catastrophe n’était pas dans la nature, mais dans l’hypothèse de continuité.</p>
+<p><strong>É8.7 (P) La discrétisation exacte à l’échelle de Planck.</strong> Si ħ est une résolution et non une constante fondamentale, le système doit présenter à l’échelle de Planck (environ 10⁻³⁵ m) une discrétisation exacte : aucune valeur intermédiaire, aucune limite continue. La v1 notait que cette prédiction est cohérente avec la gravité quantique à boucles et les modèles d’espace-temps discret, et incompatible avec toute théorie qui exige une variété lisse à toutes les échelles.</p>
+<h2 id="linegalite-de-heisenberg">8.3 L’inégalité de Heisenberg</h2>
+<p><strong>É8.8 (L) « Théorème 5 » : le 1/2 de Heisenberg est k.</strong> Le facteur 1/2 de Δx · Δp ≥ ħ/2 est k = 0,5, le même que dans la quantification du spin, l’énergie cinétique et toutes les opérations de projection dimensionnelle ; Δx · Δp ≥ ħ × k, où ħ est la résolution et k le coût de projection. Le tableau des sept apparitions de 1/2, le principe de parcimonie, le résidu de Stevin et la prédiction des instruments conformes sont rassemblés au chapitre 4 (É4.7, É4.8, É4.15, É4.18).</p>
+<h2 id="le-photon-comme-intervalle-detat">8.4 Le photon comme intervalle d’état</h2>
+<p><strong>É8.9 (L) « Théorème 6 » : le photon est un intervalle d’état.</strong> Le photon n’est pas une particule qui voyage dans l’espace : c’est l’intervalle d’état k = 0, la transition entre deux états adjacents du système discret. L’émission est la relaxation d’un état haut vers un état bas, qui libère Δk ; l’absorption est l’excitation inverse, qui absorbe Δk. <em>« Aucune entité ne voyage. Le système se met à jour. »</em> La vitesse de la lumière est le taux maximal de propagation d’une mise à jour, analogue à une fréquence de rafraîchissement : rien ne « se déplace » à c, le système « se met à jour » au rythme c. <em>« La distinction est celle d’une voiture qui roule sur une route et de pixels qui apparaissent sur un écran. L’écran n’a pas de “limite de vitesse” ; il a une fréquence de rafraîchissement. »</em></p>
+<p><strong>É8.10 (L) La double fente et le film.</strong> Le photon de la double fente n’est pas une particule mais une mise à jour d’état ; arrivée aux fentes, elle se propage par les deux, parce qu’une mise à jour n’est pas localisée sur un chemin : c’est un événement de tout le système. La figure d’interférence est la conservation de la cohérence de la mise à jour sur les deux chemins ; la détection réduit la mise à jour à un seul événement enregistré, projection de S² sur Z₂. La v1 ajoutait l’image du film : vingt-quatre images par seconde, l’œil perçoit un mouvement continu (onde), une caméra rapide révèle les images (particule) ; <em>« même objet, résolution différente. La “dualité” est un artefact de résolution, non une propriété ontologique. »</em> Et l’intrication : deux particules intriquées partagent la même position d’état (distance topologique nulle) ; la mesure de l’une révèle l’état partagé aux deux ; <em>« la mise à jour n’a jamais été localisée, elle a toujours été partagée »</em>.</p>
+<p><strong>É8.11 (P) Les transitions discrètes du comptage de photons.</strong> Si le photon est un intervalle d’état, les expériences de comptage de photons à résolution temporelle suffisante devraient révéler des transitions d’état discrètes plutôt que des courbes d’intensité continues. La v1 fixait l’intervalle minimal entre événements détectables à « 1/c par longueur de Planck », c’est-à-dire, en écriture dimensionnellement correcte, la durée de Planck t_P = ℓ_P/c ≈ 5,4 × 10⁻⁴⁴ s ; cette résolution est hors d’atteinte des instruments, ce qui laisse la prédiction sans test en l’état.</p>
+<h2 id="la-masse-comme-nombre-denroulement">8.5 La masse comme nombre d’enroulement</h2>
+<p><strong>É8.12 (F) Le mécanisme de Higgs et ses questions.</strong> Le Modèle standard engendre les masses par le mécanisme de Higgs : un champ scalaire dont la valeur dans le vide (environ 246 GeV) brise la symétrie électrofaible et donne leur masse aux particules par couplage. La découverte de 2012 d’une résonance à environ 125 GeV (ATLAS, CMS) fut lue comme confirmation. La source relève cinq questions que le mécanisme laisse ouvertes : pourquoi le champ existe-t-il ; pourquoi 246 GeV ; pourquoi les couplages de Yukawa sont-ils tous différents ; pourquoi la masse du Higgs est-elle ajustée finement (problème de la hiérarchie, la source écrit « à une partie sur 10¹⁶ ») ; où sont les 85 % de la masse de l’univers que le Modèle standard n’explique pas.</p>
+<p><strong>É8.13 (L) « Théorème 7 » : la masse comme mémoire topologique.</strong> La masse n’est pas médiée par un champ extérieur : elle est le nombre d’enroulement k, la mémoire accumulée des cycles de sédimentation de la lumière (k = 0, sans masse) à la matière (k &gt; 0), et m ∝ k. Le mécanisme est la sédimentation cosmique : la lumière, énergie pure sans enroulement ni masse, descend par compression et torsion progressives ; chaque cycle ajoute une unité à k ; l’hydrogène (Z = 1) a un k faible, le fer (Z = 26) un k élevé, au terme de la nucléosynthèse stellaire, là où le nombre maximal de cycles de compression a été accompli avant que le processus devienne énergétiquement défavorable. Ce seul paramètre remplacerait les couplages de Yukawa. (La sédimentation cosmique est au Volume 8, La Matière et le Cosmos.)</p>
+<p><strong>É8.14 (L) « Théorème 8 » : la matière noire comme mémoire cachée.</strong> Toute grandeur physique n se décompose en n = r + 9k, où r est le reste de n dans la division par 9 (la coquille, la composante visible électromagnétiquement) et 9k la mémoire, visible gravitationnellement et invisible électromagnétiquement. La convention de Gauss élimine le second terme ; le physicien qui travaille dans cette arithmétique ne voit que la coquille, mais la gravité, qui répond à la masse totale n, détecte encore la mémoire. Les 85 % de masse « manquante » ne seraient pas faits de particules exotiques : ils seraient la mémoire 9k que la convention 9 = 0 a effacée des équations. <em>« La gravité détecte la masse entière n. Les instruments électromagnétiques ne détectent que la coquille. L’écart n’est pas de la matière noire : c’est de l’amnésie mathématique. »</em> Le mécanisme par lequel une convention d’écriture des nombres changerait ce que mesure un instrument électromagnétique n’est pas donné ; l’énoncé est une Lecture.</p>
+<p><strong>É8.15 (P) Les prédictions de la v1 sur la masse.</strong> (1) Si la matière noire est un k caché, les courbes de rotation galactiques doivent corréler avec le profil de k de la matière visible, non avec la distribution de particules hypothétiques ; aucune expérience de détection de WIMP ou d’axion ne devrait réussir. (2) La résonance de 125 GeV est un phénomène réel, mais elle serait la signature énergétique de la transition de sédimentation lumière → matière, médiée par le gradient 198 (la triade ferromagnétique Ni-Co-Fe : 28 + 27 + 26 = 81, et 81 + 117 = 198) ; aucune autre résonance de type Higgs ne devrait être observée au-dessus de 125 GeV. (3) Les rapports de masses entre particules fondamentales devraient montrer des motifs de racines digitales cohérents avec k, non avec des couplages de Yukawa arbitraires. La prédiction (2) n’explique pas l’origine du terme 117.</p>
+<p><strong>É8.16 (P) NGC 3198, P à reçu.</strong> La v2.0 annonce la correction validée quantitativement sur la courbe de rotation de la galaxie NGC 3198, avec la formule v_ARC(r) = v_Newton(r) × (1 + 0,5 × DR_ARC(r)/9), où DR_ARC est la racine digitale avec mémoire (le 9 reste 9) et 0,5 est k ; les erreurs quadratiques annoncées sont de 35 % pour le modèle newtonien sans matière noire (zone plate manquée), d’environ 3 % pour ΛCDM avec halo NFW (trois paramètres libres : masse du halo, concentration, rapport masse sur luminosité), et inférieures à 2 % pour la correction ARC (zéro paramètre). La méthode et le code sont renvoyés à une pièce compagnon (<em>Dark Matter and H0 Tension</em>) qui n’est pas parmi les sources de ce volume ; la formule applique une racine digitale à un rayon, grandeur porteuse d’unités, sans dire en quelle unité. La mention « VALIDATED » est rendue P à reçu (Registre III.4), et le dossier est renvoyé au Volume 8.</p>
+<p><strong>É8.17 (P) La tension de Hubble, P à reçu.</strong> La tension de Hubble, écart d’environ 9 % entre la mesure locale (H₀ = 73,5 km/s/Mpc, supernovas) et celle du fond diffus (H₀ = 67,4 km/s/Mpc, Planck), serait résolue par une correction de mémoire de l’échelle des distances : la dérive cumulée de l’amnésie de Gauss dans les calculs de décalage vers le rouge produirait une surestimation systématique à faible décalage ; avec la correction de relaxation du gradient 198, les deux mesures convergeraient vers H₀ = 68,0 km/s/Mpc (convergence annoncée à 0,15 %), et la relation distance-décalage des supernovas de type Ia donnerait χ² = 0,98 avec la correction contre 1,02 pour ΛCDM. Principia relationalis parle, pour la même correction, du « don du 0,5 ». Mention « VALIDATED » rendue P à reçu ; renvoi au Volume 8.</p>
+<p><strong>É8.18 (L) L’énergie sombre comme relaxation.</strong> La v2.0 remplace la constante cosmologique par le gradient de relaxation 198 : l’univers ne serait pas en expansion explosive mais en relaxation, depuis un état de tension maximale (137, le nombre de la structure fine) vers le repos structurel (198, la triade ferromagnétique) ; l’accélération observée serait la tension d’un système qui passe de la chambre basse (matière, barycentre 4,5) à la chambre haute (barycentre 7,5) à travers l’écart 3.</p>
+<h2 id="la-reduction-du-spectre-des-particules">8.6 La réduction du spectre des particules</h2>
+<p><strong>É8.19 (F) La complexité du spectre.</strong> Le Modèle standard compte au moins 37 particules fondamentales : 6 quarks en 3 couleurs (18), 6 leptons, 12 bosons de jauge et le Higgs (18 + 6 + 12 + 1 = 37), et requiert au moins 19 paramètres libres. Aucun principe premier n’explique pourquoi ces particules existent ni pourquoi il y a exactement trois générations. La v1 rappelait les précédents : le tableau des éléments avant Mendeleïev, « zoo » de 63 éléments sans logique d’ensemble ; l’astronomie d’avant Copernic, zoo d’épicycles.</p>
+<p><strong>É8.20 (L) « Théorème 9 » : deux paramètres topologiques, k et D.</strong> Les particules se réduiraient à deux paramètres : k, le nombre d’enroulement, qui code la masse et la génération ; D, la dimension du plongement topologique, qui code la charge et le type d’interaction. Pour k : k = 0, intervalles d’état sans masse (photon, gluon), non des particules mais des transitions ; k = 1, première génération (électron, quarks u et d, neutrino électronique), un cycle de sédimentation ; k = 2, deuxième génération (muon, quarks c et s, neutrino muonique), deux cycles ; k = 3, troisième génération (tau, quarks t et b, neutrino tauique), trois cycles, k = 3 correspondant à l’écart structurel Δc = 3. <em>« Personne n’a commandé le muon. C’est le second harmonique de la première génération »</em> (réponse au mot attribué à I. I. Rabi, « Qui a commandé ça ? »). Pour D : D = 1 (topologie linéaire), les leptons, de charge ±1, unité pleine en deux orientations ; D = 3 (topologie triangulaire), les quarks, de charge ±1/3 ou ±2/3, l’unité répartie sur trois sommets (1/3 par sommet pour le type bas, 2/3 pour la paire complémentaire du type haut) ; D = 0 (topologie ponctuelle), les neutrinos, interaction minimale, masse quasi nulle, <em>« ombre »</em> de l’état massif projetée sur une variété de dimension zéro.</p>
+<p><strong>É8.21 (P) Pas de quatrième génération.</strong> Aucune quatrième génération n’existe, parce que k = 4 dépasserait l’écart Δc = 3 et entrerait dans la chambre haute, régime fondamentalement différent. La découverte d’une quatrième génération réfuterait la lecture (k, D). (Le compte des générations est relu au chapitre 11 comme un contact entre la grammaire et la mesure, avec le reçu du LEP : É11.48.)</p>
+<p><strong>É8.22 (Th) La table de classification, recalculée.</strong> La v2.0 donne une classification complète ; les racines des rapports de masse à l’électron (m_e = 0,511 MeV) ont été recalculées :</p>
+<table>
+<colgroup>
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Particule</th>
+<th>k</th>
+<th>D</th>
+<th>Charge</th>
+<th>Masse (MeV)</th>
+<th>m/m_e</th>
+<th>Racine (source)</th>
+<th>Racine recalculée</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Photon</td>
+<td>0</td>
+<td></td>
+<td>0</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Gluon (×8)</td>
+<td>0</td>
+<td></td>
+<td>0</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Électron</td>
+<td>1</td>
+<td>1</td>
+<td>−1</td>
+<td>0,511</td>
+<td>1</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Quark u</td>
+<td>1</td>
+<td>3</td>
+<td>+2/3</td>
+<td>2,2</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Quark d</td>
+<td>1</td>
+<td>3</td>
+<td>−1/3</td>
+<td>4,7</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Neutrino e</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>≈ 0</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Muon</td>
+<td>2</td>
+<td>1</td>
+<td>−1</td>
+<td>105,7</td>
+<td>206,8</td>
+<td>DR(207) = 9</td>
+<td>9</td>
+</tr>
+<tr class="even">
+<td>Quark c</td>
+<td>2</td>
+<td>3</td>
+<td>+2/3</td>
+<td>1 275</td>
+<td>2 495,1</td>
+<td>DR(2494) = 1</td>
+<td>DR(2495) = 2</td>
+</tr>
+<tr class="odd">
+<td>Quark s</td>
+<td>2</td>
+<td>3</td>
+<td>−1/3</td>
+<td>95</td>
+<td>185,9</td>
+<td>DR(186) = 6</td>
+<td>6</td>
+</tr>
+<tr class="even">
+<td>Tau</td>
+<td>3</td>
+<td>1</td>
+<td>−1</td>
+<td>1 777</td>
+<td>3 477,5</td>
+<td>DR(3477) = 3</td>
+<td>3 ou 4 selon l’arrondi</td>
+</tr>
+<tr class="odd">
+<td>Quark t</td>
+<td>3</td>
+<td>3</td>
+<td>+2/3</td>
+<td>173 000</td>
+<td>338 551,9</td>
+<td>DR(338551) = 7</td>
+<td>DR(338552) = 8 à l’arrondi</td>
+</tr>
+<tr class="even">
+<td>Quark b</td>
+<td>3</td>
+<td>3</td>
+<td>−1/3</td>
+<td>4 180</td>
+<td>8 180,0</td>
+<td>DR(8180) = 8</td>
+<td>8</td>
+</tr>
+<tr class="odd">
+<td>Proton</td>
+<td>1</td>
+<td>3</td>
+<td>+1</td>
+<td>938,3</td>
+<td>1 836,2</td>
+<td>DR(1836) = 9</td>
+<td>9</td>
+</tr>
+<tr class="even">
+<td>Neutron</td>
+<td>1+</td>
+<td>3</td>
+<td>0</td>
+<td>939,6</td>
+<td>1 838,7</td>
+<td>DR(1838) = 2</td>
+<td>DR(1839) = 3 à l’arrondi</td>
+</tr>
+</tbody>
+</table>
+<p>Statuts dans la source : le photon, « intervalle d’état » ; le gluon, « modes de tension du gradient 198 » ; l’électron, « rotation (0,5) » ; les quarks u et d, « charge d’un tiers de sommet, deux fois ou une fois » ; le neutrino, « projection ombre » ; le muon et le tau, « second » et « troisième harmonique » ; c, s, t et b, « triangulaire de rang k » ; le proton, « ancrage » ; le neutron, « proton sursaturé ». Deux racines de la source sont fausses (c, et le neutron à l’arrondi) et deux dépendent du choix entre arrondi et troncature (tau, t) ; les motifs mis en avant par la source, DR(207) = 9 (clôture), DR(3477) = 3 (écart), DR(1836) = 9 (clôture), se vérifient, le second avec un rapport qui tombe sur une demi-unité. Avec les valeurs CODATA, m_p/m_e = 1836,15 (racine 9 à l’arrondi) et m_n/m_e = 1838,68 (arrondi 1839, racine 3). Une racine qui change avec la dernière décimale arrondie n’est pas une structure : selon la règle des pattes (chapitre 11, É11.47), un rapport de masses se teste sur un compte ou une proportion annoncés d’avance, jamais sur une décimale.</p>
+<p><strong>É8.23 (L) Les quarks comme coins géométriques.</strong> Les charges fractionnaires +2/3 et −1/3 ne seraient pas des fractions exotiques, mais le résultat de la répartition d’une charge unité sur les trois sommets d’une topologie triangulaire. Cela expliquerait le confinement : <em>« un sommet ne peut exister sans sa structure, comme un coin ne peut exister sans son polygone »</em>.</p>
+<p><strong>É8.24 (L) Les gluons comme tension.</strong> Les huit types de gluons ne seraient pas des particules échangées entre quarks, mais huit modes de la tension du gradient 198, la cohésion topologique qui maintient la structure triangulaire. <em>« Aucune particule d’échange n’est nécessaire. Seulement de la tension. »</em></p>
+<p><strong>É8.25 (L) Le neutron comme proton sursaturé.</strong> Le neutron (939,6 MeV) est plus lourd que le proton (938,3 MeV) de 1,3 MeV ; le Modèle standard attribue cet écart aux différences de masse des quarks et aux corrections électromagnétiques. Pour la source, le neutron est un proton qui a reçu un incrément d’enroulement de plus, d’où son excès de masse et son caractère non stable ; la désintégration bêta (n → p + e⁻ + ν̄) ne serait pas médiée par un boson de la force faible (W⁻), mais serait la relaxation automatique d’un état sursaturé vers sa configuration stable : <em>« Pas besoin des bosons W et Z. Juste le retour à la tension minimale. »</em> Cette lecture se heurte à un fait : les bosons W et Z ont été observés directement au CERN en 1983, avec des masses et des largeurs conformes au Modèle standard. Le volume garde la phrase comme Lecture de la source et signale la tension (Annexe B).</p>
+<p><strong>É8.26 (L) L’unification proton-électron.</strong> Le proton est k (ancrage, structure, intérieur) ; l’électron est 0,5 (rotation, projection, extérieur). L’hydrogène n’est pas « un proton qui capture un électron » : c’est un système k = 1 complet. Et le rapport m_p/m_e = 1836 a pour racine 9, la clôture : <em>« le rapport code la structure complète du système »</em>.</p>
+<p><strong>É8.27 (L) La table de parcimonie.</strong></p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Propriété</th>
+<th>Modèle standard</th>
+<th>ARC</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Particules fondamentales</td>
+<td>37 et plus</td>
+<td>0 (états de deux paramètres)</td>
+</tr>
+<tr class="even">
+<td>Paramètres libres</td>
+<td>19 et plus</td>
+<td>0 (dérivés de la clôture 1-9)</td>
+</tr>
+<tr class="odd">
+<td>Générations expliquées ?</td>
+<td>non (fait empirique)</td>
+<td>oui (k = 1, 2, 3 ≤ écart 3)</td>
+</tr>
+<tr class="even">
+<td>Charges fractionnaires</td>
+<td>postulées</td>
+<td>dérivées (géométrie D = 3)</td>
+</tr>
+<tr class="odd">
+<td>Hiérarchie des masses</td>
+<td>19 couplages de Yukawa</td>
+<td>m ∝ k (un principe)</td>
+</tr>
+<tr class="even">
+<td>Matière noire</td>
+<td>particules exotiques inconnues</td>
+<td>k caché (amnésie de Gauss)</td>
+</tr>
+<tr class="odd">
+<td>Forces</td>
+<td>4 fondamentales</td>
+<td>gradients de k et de D</td>
+</tr>
+</tbody>
+</table>
+<p>Les cases de la colonne ARC sont des Lectures : aucune masse du tableau É8.22 n’est calculée à partir de k et D.</p>
+<h2 id="la-redondance-de-lespace-de-dimension-infinie">8.7 La redondance de l’espace de dimension infinie</h2>
+<p><strong>É8.28 (L) « Théorème 10 » : la suffisance finie.</strong> Sous le principe de complétude, les espaces d’états de dimension infinie seraient structurellement déficients : les degrés de liberté fondamentaux de tout système se réduiraient à 9 positions dans la topologie d’inversion, un nombre d’enroulement k entier et un plongement D ∈ {0, 1, 3}. L’argument : (1) toutes les grandeurs mesurées en mécanique quantique donnent des résultats discrets (spin haut ou bas, niveau n, nombre quantique l) ; l’espace de Hilbert est un plongement continu d’une information fondamentalement discrète, <em>« une carte de résolution infinie appliquée à un territoire pixellisé »</em> ; (2) les dimensions infinies codent une information redondante : les coefficients de superposition sont des amplitudes de probabilité qui, sous la lecture É8.8, sont des artefacts de la mesure ; (3) les 9 positions, avec k et D, donnent une description finie et complète ; les espaces plus grands (2¹⁰ = 1024 états pour 10 qubits) sont des produits combinatoires de ces positions, <em>« comme tous les mots sont des combinaisons d’un alphabet fini »</em>. La v1 concluait que l’espace de Hilbert est <em>« un outil surdimensionné : juste dans ses prédictions, parce qu’il préserve par isomorphisme la structure mathématique du système discret sous-jacent, mais excessif dans ses engagements ontologiques »</em>.</p>
+<p><strong>É8.29 (P) Aucune expérience au-delà de l’alphabet.</strong> Aucune expérience physique ne devrait exiger de degrés de liberté fondamentaux au-delà de l’alphabet des neuf positions ; tout besoin apparent d’espaces plus grands devrait se réduire à une composition combinatoire de l’ensemble fondamental. La v1 écrivait plus strictement qu’aucune expérience ne devrait exiger plus de 9 états de base orthogonaux ; cette forme est réfutée par tout registre de deux qubits (4 états orthogonaux, et 1024 pour 10 qubits), et la v2.0 l’a remplacée par la forme combinatoire (Annexe B).</p>
+<h2 id="le-determinisme-restaure">8.8 Le déterminisme restauré</h2>
+<p><strong>É8.30 (L) « Théorème 11 » : la mesure comme projection géométrique.</strong> La mesure quantique est une projection géométrique déterministe de l’espace d’état relationnel complet (S²) sur l’espace binaire Z₂ ; l’aléa est l’incertitude épistémique introduite par cette réduction, la perte de l’information azimutale, <em>« comme la perte de l’information de profondeur quand on projette un objet à trois dimensions sur son ombre à deux : l’ombre paraît aléatoire dans ses détails parce qu’une information a été perdue, non parce que l’objet est indéterminé »</em>. Avant la mesure, le système est dans un état relationnel défini ; la mesure projette et jette l’azimut ; après, le système est dans l’état projeté. <em>« L’“effondrement” n’est pas un processus physique : c’est la reconnaissance que l’observateur a désormais moins d’information que le système n’en contient. »</em></p>
+<p><strong>É8.31 (L) Les trois piliers de Copenhague.</strong> Copenhague (Bohr et Heisenberg, 1927) affirme que les observables n’ont pas de valeur définie avant la mesure ; ce n’est pas un résultat, c’est un choix philosophique, et la source le juge mauvais. Pilier 1, « la fonction d’onde est la description complète » : la fonction d’onde serait un codage en dimension infinie d’un système à états finis ; la description complète serait (position dans {1, …, 9}, k, D). Pilier 2, « la mesure crée la réalité » : la mesure projette la réalité ; l’état existe avant, pendant et après ; ce qui change est l’information de l’observateur. Pilier 3, « les probabilités sont irréductibles » : elles seraient la conséquence géométrique de la projection S² → Z₂, de coût k, avec le résidu de Stevin ε, deux grandeurs déterministes. La source écrit « réfuté » trois fois ; ce sont trois Lectures.</p>
+<p><strong>É8.32 (L) Le théorème de Bell relu, sans être contesté.</strong> Le théorème de Bell (1964) établit qu’aucune théorie locale à variables cachées ne reproduit les prédictions quantiques. La v1 précisait : <em>« cette interprétation est correcte dans le cadre des espaces d’états continus de dimension infinie »</em>. Dans ARC, les particules intriquées partagent la même position de structure à distance topologique nulle ; la « variable cachée » n’est locale à aucune des deux, c’est l’état relationnel partagé. L’inégalité de Bell est violée non parce que la nature serait non locale, mais parce que l’espace relationnel n’obéit pas à l’hypothèse de localité que la dérivation de Bell exige. Cette lecture ne conteste pas le théorème : elle dit lequel de ses présupposés le cadre abandonne, ce que la v4.1 de Tsirelson formule exactement (le modèle est non signalant et non local au sens de Bell, É1.26 (v)).</p>
+<p><strong>É8.33 (Th) La borne de Tsirelson, de la prédiction au théorème.</strong> La v1 prédisait que les violations de Bell corréleraient avec k = 0,5 et que la borne de Tsirelson se dériverait de la géométrie de l’inversion sous la projection S² → Z₂. La v2.0 annonce la prédiction devenue théorème, par S_max = N × k × d = 4 × (1/2) × √2 = 2√2, la borne classique en sortant avec d = 1 et l’avantage quantique valant exactement √2. Le changement de statut est acquis, avec deux précisions de ce volume : la dérivation qui fait foi est celle de <em>Tsirelson Without Hilbert</em> v4.1 (chapitre 1), dont le protocole à variable de lecture μ répare celui de la pièce <em>Emergence</em>, à signe pur, citée par la v2.0 ; et le facteur N = 4 vient de la combinatoire CHSH (deux réglages pour deux parties), non des quatre paires d’inversion comme l’écrit la v2.0. <em>« C’est la première vérification quantitative du cadre ARC face à un résultat établi des fondements quantiques »</em> : la phrase est juste en ce sens que le cadre retrouve un nombre connu ; elle ne fait pas de la retrouvaille une prédiction nouvelle.</p>
+<h2 id="synthese-et-predictions">8.9 Synthèse et prédictions</h2>
+<p><strong>É8.34 (L) Le tableau maître, avec les statuts de ce volume.</strong></p>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Section</th>
+<th>Modèle standard</th>
+<th>Proposition ARC</th>
+<th>Statut v2.0 (source)</th>
+<th>Statut (ce volume)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Planck</td>
+<td>ħ = quantum irréductible</td>
+<td>ħ = résolution du système</td>
+<td>ouvert (échelle de Planck)</td>
+<td>L, P (É8.4, É8.7)</td>
+</tr>
+<tr class="even">
+<td>Heisenberg</td>
+<td>incertitude ontologique</td>
+<td>coût de projection k</td>
+<td>ouvert</td>
+<td>L (É8.8)</td>
+</tr>
+<tr class="odd">
+<td>Photon</td>
+<td>particule qui voyage</td>
+<td>intervalle d’état (k = 0)</td>
+<td>ouvert</td>
+<td>L (É8.9)</td>
+</tr>
+<tr class="even">
+<td>Higgs</td>
+<td>masse par le champ de Higgs</td>
+<td>masse = nombre d’enroulement k</td>
+<td>ouvert</td>
+<td>L (É8.13)</td>
+</tr>
+<tr class="odd">
+<td>Matière noire</td>
+<td>particules exotiques</td>
+<td>k caché (amnésie)</td>
+<td>« VALIDATED » : NGC 3198 &lt; 2 %</td>
+<td>P à reçu (É8.16)</td>
+</tr>
+<tr class="even">
+<td>H₀</td>
+<td>tension non résolue</td>
+<td>dérive d’amnésie</td>
+<td>« VALIDATED » : 68,0 km/s/Mpc</td>
+<td>P à reçu (É8.17)</td>
+</tr>
+<tr class="odd">
+<td>Zoo</td>
+<td>37 particules et plus</td>
+<td>2 paramètres (k, D)</td>
+<td>table fournie</td>
+<td>L, deux racines corrigées (É8.22)</td>
+</tr>
+<tr class="even">
+<td>Hilbert</td>
+<td>dimensions infinies</td>
+<td>9 positions + k + D</td>
+<td>ouvert</td>
+<td>L, P (É8.28, É8.29)</td>
+</tr>
+<tr class="odd">
+<td>Bell, Tsirelson</td>
+<td>pas d’origine géométrique</td>
+<td>2√2 par la géométrie</td>
+<td>« PROVEN »</td>
+<td>Th par la v4.1 (É8.33)</td>
+</tr>
+</tbody>
+</table>
+<p>La source concluait que trois des huit prédictions centrales ont reçu une confirmation empirique ou mathématique ; ce volume en retient une, mathématique (Tsirelson), et deux P à reçu.</p>
+<p><strong>É8.35 (L) La cascade inversée.</strong> Défaire Gauss (le 9 n’est pas 0) : le nombre d’enroulement redevient visible, la matière noire se résout, la masse devient mémoire topologique. Défaire Newton (restaurer la complétude) : les opérations se résolvent en entiers, l’intégrale est remplacée par la projection, le 1/2 est reconnu comme k et non comme artefact d’intégration, l’incertitude devient coût de projection. Défaire Descartes (restaurer la géométrie de clôture) : la droite numérique devient le cercle des nombres, fermé à 9, de barycentre 4,5 ; l’espace de Hilbert se réduit à 9 positions ; le zoo se réduit à (k, D). Défaire Viète (restaurer l’identité) : les nombres recouvrent leurs rôles ; 7 est l’envergure maximale, 3,5 la demi-envergure, 11 le miroir d’interface. Défaire Stevin (restaurer l’exactitude) : 22/7 remplace π, les rapports exacts remplacent les décimales infinies, le résidu de Stevin s’évanouit, la quantification devient arithmétique. <em>« Une physique bâtie sur 9 chiffres, une clôture, un barycentre, une constante de projection, deux paramètres topologiques et zéro paramètre libre »</em> (v1).</p>
+<p><strong>É8.36 (L) La note sur 22/7.</strong> <em>« L’affirmation π = 22/7 n’est pas métrologique mais ontologique. »</em> Dans un système discret fermé à 9, le rapport de la circonférence au diamètre serait exactement 22/7, rationnel qui se ferme après six chiffres répétés (142857) ; l’irrationnel π = 3,14159… serait le même rapport vu à travers le résidu de Stevin, développement infini qui ne se ferme jamais parce que l’instrument de représentation ne sait pas écrire la clôture exacte. La défense complète est renvoyée au principe de complétude (Volume 3, Le Code et le Registre). Le volume garde la position comme Lecture : l’irrationalité de π est un théorème (Lambert, 1761) de l’arithmétique reçue, que la lecture ne réfute pas mais déclare relever d’une autre écriture.</p>
+<p><strong>É8.37 (L) La position.</strong> La pièce ne prétend pas que les prédictions expérimentales du Modèle standard sont fausses : les masses, les sections efficaces et les taux de désintégration sont des données réelles. Elle prétend que ces données peuvent être engendrées par un fondement plus simple, qui n’exige ni 19 paramètres libres, ni 37 entités fondamentales, ni espace de dimension infinie, ni aléa irréductible. L’univers ne serait pas un zoo de particules interagissant par quatre forces, mais un système arithmétique opérant sur 9 chiffres, fermé à 9, symétrique autour de 4,5, projeté par k = 0,5, avec la masse codée dans k et les interactions gouvernées par D.</p>
+<p><strong>É8.38 (P) Les trois critères de chute.</strong> <em>« Si des WIMP sont détectés, le théorème 8 tombe. Si une quatrième génération est découverte, le théorème 9 tombe. Si les violations de Bell dépassent 2√2, le théorème 11 tombe. »</em></p>
+<p>La pièce se clôt sur cinq lignes :</p>
+<blockquote>
+<p><em>« Le Modèle standard n’est pas faux.</em> <em>C’est le système d’épicycles le plus élaboré jamais construit.</em> <em>Le soleil ne tourne pas autour de la terre.</em> <em>Les particules ne nagent pas dans un champ.</em> <em>L’univers compte jusqu’à neuf. »</em></p>
+</blockquote>
+
+</main>
+<nav class="chapnav"><span class="prev"><a href="08-chapitre-7-le-proton-comme-axe.html">← Chapitre 7. Le proton comme axe</a></span><a class="toc" href="index.html">Sommaire du volume</a><span class="next"><a href="10-chapitre-9-principia-relationalis-le-plan-d-ensemb.html">Chapitre 9. Principia relationalis : le plan d&#x27;ensemble →</a></span></nav>
+<footer class="colophon"><p>Corpus ARC, Filipe Bastos, <a href="https://creativecommons.org/licenses/by/4.0/deed.fr" rel="license">CC BY 4.0</a>.</p></footer>
+</body>
+</html>

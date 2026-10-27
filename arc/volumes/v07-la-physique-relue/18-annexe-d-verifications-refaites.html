@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<link rel="canonical" href="https://bastosfilipe.com/arc/volumes/v07-la-physique-relue/18-annexe-d-verifications-refaites.html">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Annexe D : Vérifications refaites · La Physique relue · Corpus ARC</title>
+<meta name="description" content="La Physique relue, volume 7 du corpus ARC de Filipe Bastos. Annexe D : Vérifications refaites.">
+<meta name="keywords" content="mécanique quantique, borne de Tsirelson, mesure, Heisenberg, effet tunnel, proton, Modèle standard, théorie des cordes, corpus ARC, Filipe Bastos">
+<meta name="author" content="Filipe Bastos">
+<meta name="license" content="https://creativecommons.org/licenses/by/4.0/deed.fr">
+<link rel="stylesheet" href="../../assets/arc.css">
+</head>
+<body>
+<nav class="crumbs"><a href="../../index.html">Corpus ARC</a> / <a href="index.html">Volume 7 · La Physique relue</a></nav>
+<main class="chapter">
+<h1 id="annexe-d-verifications-refaites">Annexe D : Vérifications refaites</h1>
+<p>Le script verif.py, joint au volume, refait 124 contrôles ; tous passent. En l’absence de la bibliothèque de précision arbitraire dans l’environnement, les contrôles de l’effet tunnel sont faits en double précision et ceux qui demandent cinquante chiffres avec le module décimal de la bibliothèque standard (soixante à quatre-vingts chiffres). Principaux résultats :</p>
+<ul>
+<li><strong>Tsirelson.</strong> Aux réglages 0°, 90°, 45°, 135° avec E = −cos θ : S = −2,8284271247, |S| = 2√2, chaque terme ±0,7071067812 = ½√2. Directions 0° et 90° seules : |S| = 2. Signe pur (v4.0) : |S| = 4. Balayage de tous les réglages au degré : maximum 2√2 au seul quadruplet (0, 90, 45, 135), écarts adjacents de 45° et 135°. Monte-Carlo du protocole v4.1 (200 000 tirages par angle) : E = −1,0000, −0,7071, −0,0019, +0,4995 pour θ = 0°, 45°, 90°, 120° (attendus −1, −0,7071, 0, +0,5) ; marges nulles à 4 × 10⁻³ près ; espérance de |a·λ| : 0,4989 (Monte-Carlo) et 0,5 (règle de Simpson). 2√2 = √8, 2√2/4 = 1/√2, (1/√2)² = 1/2, 4 × ½ × √2 = 2√2.</li>
+<li><strong>Pli et constante.</strong> Pli universel DR(ka) + DR((9 − k)a) ∈ {9, 18} pour a ≤ 5000 ; k = 4,5/9 = 3,5/7 = 1/2 et ((b − 1)/2)/(b − 1) = 1/2 en toute base ; 11/(7π) = 0,500201 (la source de février écrit 0,5003) ; 11/((22/7) × 7) = 1/2 ; premiers de 5 à 10⁵ : reste 1 ou 5 par 6, p² reste 1 par 24.</li>
+<li><strong>Effet tunnel</strong> (ħ = m = 1, V = 2, E = 1). |r|² + |t|² − 1 ≈ 2 × 10⁻¹⁶ à L = 1, 5, 10 ; |t|/(2e^{−κL}) = 0,99651867 (L = 2) et 1,00000000 (L = 10) ; retard de groupe 0,88838556 (L = 1), 0,99999856 (L = 5), 1,00000000 (L = 10), limite 2/(kκ) = 1 ; cosh 3,7 − sinh 3,7 = e^{−3,7} à 10⁻⁵⁵ ; (2 sinh(h/2)/h − 1)/h² et (1 − 2 sin(h/2)/h)/h² tendent vers 1/24.</li>
+<li><strong>Croix de Planck.</strong> h/2 = 3,313035075 × 10⁻³⁴ J · s ; ħ/2 = 5,272859088 × 10⁻³⁵ J · s ; rapport 2π ; πab = (n + 1/2)h pour les quatre systèmes et n = 0 à 4 ; écart entre niveaux h en fractions exactes ; cos(π/n) pour n = 3 à 8 aux dix décimales du tableau, croissance stricte ; déterminant du cisaillement 1.</li>
+<li><strong>Proton.</strong> Table des racines : cadre de 9, appariement des rangées hors clôture, 12345678 + 87654321 = 24681357 + 75318642 = 48372615 + 51627384 = 99 999 999, symétrie du demi-tour, sous-bloc {3, 6, 9}, rangées fertiles permutations de 1 à 8, diagonale {1, 4, 7, 9}, rangées 4 et 5 ; m × φ(x) = φ(m × x) sur 60 des 72 couples, les 12 échecs tous de clôture ; sommes d’angles des polygones de racine 9 ; 196 = (2 × 7)².</li>
+<li><strong>Modèle standard.</strong> 18 + 6 + 12 + 1 = 37 ; rapports de masse à 0,511 MeV : 206,849 ; 2495,108 ; 185,910 ; 3477,495 ; 338 551,859 ; 8180,039 ; 1836,204 ; 1838,748 (d’où les corrections du quark c, du neutron, du tau et du quark t) ; CODATA 1836,15 et 1838,68 ; tension de Hubble 9 % ; 28 + 27 + 26 = 81, 81 + 117 = 198 ; période 142857 de 22/7.</li>
+<li><strong>Principia et matriochka.</strong> 1 + … + 13 = 91 ; 91 × 19 = 1729 = 1³ + 12³ = 9³ + 10³ ; 694 − 496 = 198 ; racines 1, 9, 8 de Ni, Co, Fe ; 23 + 35 = 58 = 2 × 29, 56 = 2 × 28, 28 parfait ; DR(235) = 1, DR(236) = 2 ; 1 + 235 = 144 + 89 + 3, alors que 144 + 89 + 2 = 235 ; compatibilité de la racine avec somme et produit (a, b ≤ 300) ; DR(9n) = 9 (n ≤ 10⁴).</li>
+<li><strong>Cordes.</strong> 496 parfait ; 31,5 = 4,5 × 7 ; racines 4, 5, 1, 5 ; dimensions de SO(3), SO(4), SO(7), SO(8), SO(32) : 3, 6, 21, 28, 496 ; 198 = 2 × 9 × 11, 891 = 81 × 11, 1089 = 33², 693 = 7 × 99 = 694 − 1 ; 595 = 5 × 7 × 17 ; 8x³ − 4x² − 4x + 1 s’annule en cos(π/7), 8x³ + 28x² + 14x − 7 y vaut 34,19 ; N − M(N) = 99(a − c) sur les 900 entiers ; barycentre palindrome sur les 450 cas ; six écarts 0,5 ; 0,2929 ; 0,191 ; 0,134 ; 0,099 ; 0,0761 ; cylindre sur sphère 3/2 ; DR(n) + DR(n² − 1) ≠ 9 pour 2 ≤ n ≤ 10⁵ et restes de n² + n ; inverses chiffre à chiffre 503, 53, 35 ; théorèmes 7 et 9 pour k = 1 à 6 ; pavé (234, 567, 891, différences, barycentres 333, 666, 544,5) ; théorème 12 (seuls 3 et 6) ; théorème 13 (D³ = inverse, D⁶ = identité, 6 minimal, DR(64n) = DR(n) et 64n = 9(64h + 7d) + d jusqu’à 10⁵, 64 × 496 = 9 × 3527 + 1) ; théorème 14 ; 22 + 23 + 1 = 46, 31 + 32 + 1 = 64 ; ρ = 877,8/888,1 = 0,9884.</li>
+<li><strong>Livre VIII.</strong> Pappus et 4πS²/(3c) identiques sur les sept triangles, valeurs du tableau à 10⁻⁶ ; apothème de l’hexagone √3/2 ; 26 + 27 + 28 = 81, 27 = 3³ ; 945 = 3³ × 5 × 7, racine 9, divisions 315, 105, 35 et 35/7 = 5 ; 137 et 163 sont les 33e et 38e premiers ; 26 et 300, racines 8 et 3 ; e^{π√163} = 262 537 412 640 768 743,99999999999925… ; 9 + 81/100 = 9,81 (écart 0,034 % à 9,80665) ; 8 + 64/81 = 8,790123 ; énergie de liaison du fer 56 recalculée à partir des masses atomiques : 8,7903 MeV par nucléon ; 7/6028 = 0,00116124751, 6028 = 4 × 11 × 137, racine 7 ; α/2π = 0,00116141, écart relatif 1,4 × 10⁻⁴ ; écart relatif de 7/6028 à a_μ : 4,0 × 10⁻³ ; 116 592 061 − 116 591 810 = 251 ; c² = 8,98755 × 10¹⁶ m²/s² ; 1/ln 2 = 1,443, ln 2 = 0,693.</li>
+</ul>
+<hr />
+<p>Modèle, questions, lectures et règles : Filipe Bastos. Scribe : Claude, sous la contradiction de l’auteur. Calculs, formulations et audits assistés par IA (ChatGPT, Gemini, DeepSeek, GLM), à sa demande.</p>
+<p>Corpus ARC, Filipe Bastos, CC BY 4.0.</p>
+
+</main>
+<nav class="chapnav"><span class="prev"><a href="17-annexe-c-sources-fusionnees.html">← Annexe C : Sources fusionnées</a></span><a class="toc" href="index.html">Sommaire du volume</a><span class="next"></span></nav>
+<footer class="colophon"><p>Corpus ARC, Filipe Bastos, <a href="https://creativecommons.org/licenses/by/4.0/deed.fr" rel="license">CC BY 4.0</a>.</p></footer>
+</body>
+</html>

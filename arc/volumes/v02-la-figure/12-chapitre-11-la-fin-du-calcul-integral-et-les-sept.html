@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<link rel="canonical" href="https://bastosfilipe.com/arc/volumes/v02-la-figure/12-chapitre-11-la-fin-du-calcul-integral-et-les-sept.html">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chapitre 11. La fin du calcul intégral et les sept convergences du demi · La Figure · Corpus ARC</title>
+<meta name="description" content="La Figure, volume 2 du corpus ARC de Filipe Bastos. Chapitre 11. La fin du calcul intégral et les sept convergences du demi.">
+<meta name="keywords" content="géométrie, deux cercles et un carré, polygones réguliers, √2, π, nombre d&#x27;or, règle de l&#x27;octet, base 10, corpus ARC, Filipe Bastos">
+<meta name="author" content="Filipe Bastos">
+<meta name="license" content="https://creativecommons.org/licenses/by/4.0/deed.fr">
+<link rel="stylesheet" href="../../assets/arc.css">
+</head>
+<body>
+<nav class="crumbs"><a href="../../index.html">Corpus ARC</a> / <a href="index.html">Volume 2 · La Figure</a></nav>
+<main class="chapter">
+<h1 id="chapitre-11.-la-fin-du-calcul-integral-et-les-sept-convergences-du-demi">Chapitre 11. La fin du calcul intégral et les sept convergences du demi</h1>
+<p>Le calcul intégral, hérité de Newton et Leibniz, mesure un tout en additionnant une infinité de tranches infiniment fines. <em>The End of the Integral Calculus Illusion</em> (La fin de l’illusion du calcul intégral, v3.0, mars 2026, édition des sept convergences, traduite ici de l’anglais) soutient que, pour les structures qui possèdent une symétrie d’inversion, cette accumulation est inutile : le passage de la surface au volume serait un <em>pli</em> autour du pivot 4,5, de coût 1/2, et ce 1/2 se retrouverait par sept chemins. Ce chapitre expose la thèse, ses appuis arithmétiques (les tables de multiplication qui basculent entre la quatrième et la cinquième position), les sept convergences, et surtout les deux corrections que le corpus a lui-même apportées : la formule de volume V = S × 1/2, validée sur la seule sphère, a été remplacée par <em>face × ½ × ⅔ h</em> (ce qui redonne exactement le tiers d’Archimède) ; et la portée de la thèse a été délimitée : <em>« ARC does not claim to abolish the integral universally »</em> (ARC ne prétend pas abolir l’intégrale universellement). L’examen de l’indépendance des sept convergences est fait ici avec la même franchise.</p>
+<blockquote>
+<p>« Stop counting grains of sand to weigh the beach. Weigh the beach. » (Cessez de compter les grains de sable pour peser la plage. Pesez la plage.)</p>
+</blockquote>
+<h2 id="limpasse-du-continu">11.1 L’impasse du continu</h2>
+<p><strong>É 11.1 [L] La métaphore qui a asservi la science.</strong> Depuis la fin du XVIIᵉ siècle, la pensée scientifique serait prisonnière d’une métaphore architecturale, le continu. L’intégrale de Newton et Leibniz repose sur l’idée que pour mesurer un tout il faut additionner une infinité de parties évanescentes. Cette méthode serait <em>« not only costly in computational resources, it is philosophically erroneous because it denies the discrete and symmetrical structure of spacetime »</em> (non seulement coûteuse en calcul, mais philosophiquement erronée, parce qu’elle nie la structure discrète et symétrique de l’espace-temps). <em>« The integral does not know the volume ; it tries to reconstruct it by accumulation. »</em> (L’intégrale ne connaît pas le volume ; elle tente de le reconstruire par accumulation.)</p>
+<p>La Figure Fondamentale (§5.5) dit la même chose : l’intégrale ∫ₐᵇ f(x) dx = lim Σ f(xᵢ) Δx suppose qu’il faut additionner une infinité de termes pour un résultat fini, la continuité absolue de la fonction, et l’absence de mémoire structurelle dans le résultat : <em>« C’est l’amnésie du système. »</em></p>
+<p><strong>É 11.2 [L] Le Principe de complétude (Axiome 1).</strong> Une opération mathématique qui produit une grandeur physique réelle (un volume, une énergie, une grandeur mesurable) doit se résoudre en un entier ou un rationnel exact à chaque étape intermédiaire. Une opération qui demande une infinité de parties incomplètes (des fractions tendant vers zéro) pour approcher l’entier serait structurellement déficiente : <em>« it confuses the limit with reality »</em> (elle confond la limite avec la réalité). L’intégrale de Riemann <em>« asks us to believe that summing an infinity of nothings produces something »</em> (nous demande de croire que la somme d’une infinité de riens produit quelque chose) ; la définition par ε et δ formalise le problème ontologique sans le résoudre. <em>« The volume was already there. »</em> (Le volume était déjà là.) Le Principe de complétude est traité en entier au Volume 3, <em>Le Code et le Registre</em>.</p>
+<p><strong>É 11.3 [L] Trois niveaux d’échec.</strong> Du Principe de complétude, l’intégration échouerait à trois niveaux (§8) : ontologique (dx est incomplet) ; opérationnel (le produit f(xᵢ) × dx n’est pas défini dans un système discret) ; accumulatif (une somme de produits incomplets ne peut engendrer l’entier). La source y ajoute <em>« le paradoxe 9 ≡ 0 »</em> : 0,999… = 1 serait le symptôme d’un effondrement au bord de la clôture. En analyse réelle, 0,999… = 1 est une égalité exacte (la somme de la série géométrique 9/10 + 9/100 + … vaut 1) ; la phrase de l’auteur est une lecture de cette égalité, non sa contestation.</p>
+<h2 id="les-tables-de-multiplication-et-la-bascule-au-centre">11.2 Les tables de multiplication et la bascule au centre</h2>
+<p><strong>É 11.4 [Th] La bascule 4 | 5 (Théorème 2.1).</strong> Dans chaque table ×m réduite en racine digitale (m de 1 à 8), la suite se retourne entre les positions 4 et 5 : le terme k et le terme 9 − k ont pour somme 9 (ou 18), de sorte que la seconde moitié est le miroir complémentaire de la première.</p>
+<pre><code>×1   1 2 3 4 | 5 6 7 8   9
+×2   2 4 6 8 | 1 3 5 7   9
+×3   3 6 9 3 | 6 9 3 6   9
+×4   4 8 3 7 | 2 6 1 5   9
+×5   5 1 6 2 | 7 3 8 4   9
+×6   6 3 9 6 | 3 9 6 3   9
+×7   7 5 3 1 | 8 6 4 2   9
+×8   8 7 6 5 | 4 3 2 1   9
+×9   9 9 9 9 | 9 9 9 9   9</code></pre>
+<p>La barre marque la frontière entre les positions 4 et 5, l’emplacement du barycentre 4,5. (La source écrit que <em>« les quatre premiers termes et les quatre derniers sont liés par φ »</em> ; la relation exacte est celle du pli : position k et position 9 − k, É 10.11.)</p>
+<p><strong>É 11.5 [Th] La complétude multiplicative (Théorème 2.2).</strong> Pour toute paire (m, 9 − m) et tout k de 1 à 9 : DR(mk) + DR((9 − m)k) = 9 (ou 18, réduit à 9). Algébriquement : mk + (9 − m)k = 9k. <em>« The multiplication tables of the base-10 system operate in inversion pairs that close to 9. »</em> (Les tables de multiplication opèrent par paires d’inversion qui ferment sur 9.)</p>
+<p><strong>É 11.6 [L] Le spin dans les tables.</strong> Les tables ×1 et ×8 sont les plus transparentes : 1 2 3 4 | 5 6 7 8 monte, 8 7 6 5 | 4 3 2 1 descend. Le coût du retournement (la projection de la suite complète sur un seul hémisphère) serait 4,5/9 = 1/2 : <em>« The electron’s spin-1/2 is the arithmetic cost of deciding which side of the barycenter you are on. »</em> (Le spin 1/2 de l’électron est le coût arithmétique de décider de quel côté du barycentre on se trouve.) §7 : empiler ×m et ×(9 − m), c’est voir l’hémisphère gauche de l’un compléter l’hémisphère droit de l’autre ; ×1 monte (+), ×8 descend (−) ; un passage = 360° = −1, deux passages = 720° = +1 : <em>« the signature of spin-1/2, visible in the multiplication tables »</em>. La source écrit <em>« This is spin. Not metaphorical. Arithmetic spin »</em> ; le statut retenu est celui d’une lecture (Annexe B).</p>
+<h2 id="le-pivot-transforme-la-surface-en-volume">11.3 Le pivot transforme la surface en volume</h2>
+<p><strong>É 11.7 [Th] Fermeture par le pivot (Théorème 3.1).</strong> Voir chapitre 10, É 10.7 : la rotation du segment [1, 8] autour d’un pivot p ne referme chaque paire sur une même sphère que si p = 4,5 ; pour p = 5 ou p = 4, la surface engendrée est ouverte.</p>
+<p><strong>É 11.8 [L] k_arc est le coût du pli.</strong> Le rayon de la sphère la plus extérieure est 3,5 (le demi-span de la paire maximale (1, 8)), son diamètre 7 (le span). Leur rapport, k_arc = 3,5/7 = 1/2, serait <em>« the universal ratio between the folded depth (radius) and the unfolded extent (diameter). It is the cost of folding a line into a sphere »</em> (le rapport universel entre la profondeur pliée et l’étendue dépliée ; le coût de plier une ligne en sphère). <em>« Integration attempts to reconstruct this fold by stacking infinitely many flat slices. But the fold is a single geometric act, a rotation around 4.5, and its cost is exactly 1/2. »</em> (L’intégration tente de reconstruire ce pli en empilant une infinité de tranches plates ; mais le pli est un acte géométrique unique, une rotation autour de 4,5, et son coût est exactement 1/2.)</p>
+<p><strong>É 11.9 [L] Le rotor qui élimine l’intégrale (La Figure Fondamentale, §5.4).</strong> Quand un système opère par symétrie d’inversion (structures géométriques régulières, configurations électroniques, paires de bases de l’ADN, intrication), le résultat global se calculerait par rotation autour du pivot 4,5, non par accumulation. <em>« On n’a plus besoin de mesurer grain de sable par grain de sable. Pivoter sur 4,5 donne avec précision le volume entier d’une structure inversée sans calcul intégral. Le rotor restitue la totalité en une opération géométrique unique. »</em> La même source délimite aussitôt (§5.5) : la grammaire cadastrale <em>« ne réfute pas le calcul intégral pour ses applications non symétriques, mais … le remplace pour les structures qui opèrent par paires d’inversion »</em> ; <em>« Le calcul différentiel reste utile pour les fonctions continues sans symétrie d’inversion. »</em></p>
+<h2 id="la-projection-volumetrique-et-sa-correction">11.4 La projection volumétrique et sa correction</h2>
+<p><strong>É 11.10 [Th, correction] De V = S × ½ à face × ½ × ⅔ h.</strong> La source (§9) pose la <em>projection volumétrique discrète</em> V = S × k_arc, k_arc = 0,5, et la <em>« valide »</em> (§11) sur la sphère : V = 4πR² × 0,5 × 2R/3 = (4/3)πR³, <em>« Match : 100 % »</em>. Le calcul montre que le facteur effectif n’est pas 1/2 seul mais 1/2 × 2/3 = 1/3 : la formule V = S × ½ × d ne rend le volume de la sphère que si l’on choisit la profondeur d = 2R/3, choix qui n’était justifié que par l’accord avec le résultat connu. Le corpus a retiré la formule V = S × ½ × d, <em>« validée sur la seule sphère pendant dix-huit mois »</em>, et l’a remplacée par <strong>face × ½ × ⅔ h</strong>, testée sur le cube, la sphère, le cylindre et Khéops (Errata et précisions de septembre 2026 ; Registre des Erreurs G.1, Volume 3 ; Annexe B). Il en a tiré un corollaire de méthode (règle R11) : tout résultat général vérifié sur un seul exemple doit être testé sur un second exemple d’une autre famille avant d’être inscrit.</p>
+<p>Vérification. ½ × ⅔ = ⅓, donc face × ½ × ⅔ h = S × h/3. - Pyramide et cône de base B et de hauteur h : V = B × h/3 (Eudoxe, Archimède). Khéops en est un cas. - Tout corps qui enveloppe une sphère tangente à toutes ses faces (rayon r) se découpe en pyramides de sommet au centre et de hauteur r : V = S × r/3, où S est la surface totale. - Sphère : 4πR² × R/3 = (4/3)πR³. - Cube de côté a (sphère inscrite de rayon a/2) : 6a² × (a/2)/3 = a³. - Cylindre circonscrit à une sphère de rayon r (hauteur 2r) : surface 2πr × 2r + 2πr² = 6πr², et 6πr² × r/3 = 2πr³ = πr² × 2r.</p>
+<p>C’est la méthode d’Archimède (par la loi du levier) retrouvée exactement. Le Code (Volume 3) précise que l’écriture ½ × ⅔ <em>« n’est pas un ⅓ déguisé »</em> : du centre vers la surface, la distance est ½, le pont est ⅔, et leur produit est le point ⅓ ; <em>« Le ⅓ de la pyramide est le point ; le ½ est la distance qui y mène »</em> <strong>[L]</strong>.</p>
+<p><strong>É 11.11 [L] L’énergie cinétique sans intégration.</strong> E_k = mv² × k_arc = ½mv² : <em>« The factor 1/2 is geometric necessity, not integration artifact. »</em> (Le facteur 1/2 est une nécessité géométrique, non un artefact d’intégration.) Le facteur 1/2 de ½mv² s’obtient d’ordinaire par l’intégrale du travail ∫ m v dv ; la source y lit le pli.</p>
+<p><strong>É 11.12 [Th, Chantier] La délimitation.</strong> <em>Pourquoi ce n’est pas de la numérologie</em> (v2.9, §9 ; Volume 1) fixe le domaine : le théorème de Pappus restreint (V = 2πrS pour tout solide de révolution engendré par une figure plane d’aire S tournant autour d’un axe extérieur à la distance r de son centroïde) calcule le volume sans intégration, avec une erreur nulle face au théorème classique de Pappus <strong>[Th]</strong>. Il s’applique strictement aux solides de révolution et aux figures décomposables en compositions de tels solides. <em>« It is not a universal substitute for integration in domains beyond this. For non-rotational continuous variations (e.g., arbitrary scalar fields, non-axisymmetric distributions), classical integration retains its role as the standard tool. ARC does not claim to abolish the integral universally. »</em> (Ce n’est pas un substitut universel de l’intégration hors de ce domaine ; pour les variations continues non rotationnelles, champs scalaires quelconques, distributions non axisymétriques, l’intégration classique garde son rôle d’outil standard. ARC ne prétend pas abolir l’intégrale universellement.) La conjecture 9.2 (tout volume d’intérêt physique se décompose en une somme finie de primitives rotationnelles) est ouverte et testable cas par cas : <strong>Chantier</strong>. Le Registre (III.3 b) retient cette délimitation, la plus récente et la plus prudente, contre les textes qui écrivaient l’intégrale « remplacée par le pli » : <em>la projection remplace l’intégrale là où une symétrie d’inversion existe ; ailleurs le calcul différentiel reste utile.</em></p>
+<p><strong>É 11.13 [L] La soustraction contre l’accumulation (La Figure Fondamentale, §5.5).</strong> <em>« Pour calculer le terme uni libéré par une opération entre deux pôles préservés (A, B), on n’additionne pas des infinitésimaux. On effectue A − B = C directement. »</em> Exemples de la source : au lieu d’intégrer la densité énergétique d’un atome de fer sur ses états, lire 163 − 137 = 26 ; au lieu d’intégrer la probabilité de chaque codon, lire 8 × 8 = 64 ; au lieu d’intégrer le gradient gravitationnel, lire 694 − 496 = 198. Ces exemples sont des lectures, non des calculs qui remplaceraient une intégrale de physique ; le troisième dépendait de la lecture 198 → 9,81, retirée (chapitre 9, É 9.30). <em>« La soustraction est l’opération logique qui fusionne et donne un produit différencié uni. »</em></p>
+<h2 id="les-sept-convergences-vers-12">11.5 Les sept convergences vers 1/2</h2>
+<p><strong>É 11.14 [Th] Le pivot, point fixe (Théorème 5.1).</strong> 4,5 est l’unique point fixe de φ(x) = 9 − x sur les réels, et le milieu de toute paire (x, 9 − x). La partition 1234 | 5678, avec le 9 en clôture, et la constante k_arc = 4,5/9 = 1/2 en découlent.</p>
+<p><strong>É 11.15 [Th, L] Les sept chemins (§6).</strong></p>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Chemin</th>
+<th>Type</th>
+<th>Dérivation</th>
+<th>Résultat</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>I</td>
+<td>global (barycentre)</td>
+<td>4,5/9</td>
+<td>1/2</td>
+</tr>
+<tr class="even">
+<td>II</td>
+<td>local (demi-span)</td>
+<td>3,5/7</td>
+<td>1/2</td>
+</tr>
+<tr class="odd">
+<td>III</td>
+<td>géométrique (interface π)</td>
+<td>11/π ≈ 3,5014 ; sous π = 22/7, 11/(22/7) = 3,5 ; puis 3,5/7</td>
+<td>1/2</td>
+</tr>
+<tr class="even">
+<td>IV</td>
+<td>combinatoire (toutes les paires)</td>
+<td>|x − 4,5| / |9 − 2x|</td>
+<td>1/2</td>
+</tr>
+<tr class="odd">
+<td>V</td>
+<td>sphérique (projection)</td>
+<td>valeur attendue de |cos θ| sur la sphère S²</td>
+<td>1/2</td>
+</tr>
+<tr class="even">
+<td>VI</td>
+<td>multiplicatif (tables)</td>
+<td>bascule à la position 4,5 sur 9</td>
+<td>1/2</td>
+</tr>
+<tr class="odd">
+<td>VII</td>
+<td>physique (spin du fermion)</td>
+<td>projection S² → Z₂</td>
+<td>1/2</td>
+</tr>
+</tbody>
+</table>
+<p>Calcul du chemin V : pour un point uniformément réparti sur la sphère, la valeur attendue de |cos θ| est (1/2)∫₀^π |cos θ| sin θ dθ = (1/2) × 2 × (1/2) = 1/2 ; c’est <em>« le coût universel de S² → {±1} »</em>. Calcul du chemin IV : pour toute paire, demi-span/span = |x − 4,5| / (2|x − 4,5|) = 1/2.</p>
+<p><em>« Seven independent paths converge to k_arc = 1/2. This excludes coincidence. »</em> (Sept chemins indépendants convergent vers 1/2 ; cela exclut la coïncidence ; Corollaire 6.1.)</p>
+<p><strong>É 11.16 [L] Examen de l’indépendance.</strong> Chaque égalité du tableau est exacte (sauf III, qui n’est exacte que sous π = 22/7 et vaut sinon 3,5014/7). Mais les chemins ne sont pas tous indépendants (Annexe B) : - I, II, IV et VI sont la même identité : le milieu de deux nombres de somme 9 rapporté à 9, ou un demi-span rapporté à son span, vaut 1/2 par définition (x/(2x)) ; - III repose sur l’identification π = 22/7, qui est une adresse et non une valeur (chapitre 2, É 2.12) ; - V est un calcul indépendant de l’arithmétique des neuf chiffres, et c’est le plus fort des sept ; - VII est une lecture physique (le spin 1/2 est un fait, sa lecture comme coût de projection est l’interprétation).</p>
+<p>Les autres listes du corpus ajoutent d’autres chemins vraiment distincts : le triangle équilatéral (r/R = cos(π/3) = 1/2, chapitre 5) et le carré dans son cercle ((r/R)² = 1/2, chapitre 1) ; L’autre triangle (chapitre 6, É 6.11) donne une liste de sept où figurent 20,25/40,5 et 5,5/11, du même type x/(2x) ; Deux Cercles (chapitre 4, É 4.21) cite <em>« l’interface 11/π »</em>, la projection de Haar et le facteur 1/2 de la physique. La convergence la plus solide est donc celle de trois objets distincts : le pli arithmétique autour de 4,5, la géométrie des deux cercles (triangle, carré), et la projection sur la sphère. Le Code (Volume 3) écrit ce qui reste à montrer : <em>un cas où le cadastre prédit avant le calcul une valeur qui n’est ni ½ ni ⅓ ni leur produit, et où elle est mesurée</em> ; un tel cas transformerait la lecture en prédiction. <strong>[Chantier]</strong></p>
+<h2 id="validation-numerique-et-conclusion">11.6 Validation numérique et conclusion</h2>
+<p><strong>É 11.17 [Th, L] La validation numérique (§11).</strong> Sphère : 4πR² × 0,5 × 2R/3 = (4/3)πR³, accord exact (avec la correction de É 11.10 : c’est le facteur ½ × ⅔ qui donne l’accord). Énergie cinétique : mv² × 0,5 = ½mv², accord exact. Propagation d’erreur : la projection a une erreur constante (nulle sur ces cas), là où la somme de Riemann à n tranches a une erreur de l’ordre de 1/n pour un coût de l’ordre de n opérations <strong>[Th]</strong> pour l’ordre d’erreur de la méthode des rectangles. Le reste est la lecture de l’auteur.</p>
+<blockquote>
+<p>« Integral calculus is the method of the blind man who gropes the object millimeter by millimeter. Discrete Volumetric Projection sees the object in its totality. Its depth is a predictable extension of its surface, mediated by k_arc = 1/2, established by seven convergences, governed by the Completeness Principle, rooted in the inversion topology of the number system. » (Le calcul intégral est la méthode de l’aveugle qui palpe l’objet millimètre par millimètre. La projection volumétrique discrète voit l’objet dans sa totalité. Sa profondeur est une extension prévisible de sa surface, médiée par k_arc = 1/2, établie par sept convergences, gouvernée par le Principe de complétude, enracinée dans la topologie d’inversion du système des nombres.)</p>
+</blockquote>
+<blockquote>
+<p>« The integral is dead. Long live the projection. » (L’intégrale est morte. Vive la projection.)</p>
+</blockquote>
+<p>Ces deux phrases sont gardées comme citations de l’auteur. Leur portée est celle que le corpus a fixée en É 11.12 : là où une symétrie d’inversion ou une décomposition en primitives rotationnelles existe.</p>
+
+</main>
+<nav class="chapnav"><span class="prev"><a href="11-chapitre-10-la-regle-de-l-octet-comme-necessite-ar.html">← Chapitre 10. La règle de l&#x27;octet comme nécessité arithmétique</a></span><a class="toc" href="index.html">Sommaire du volume</a><span class="next"><a href="13-chapitre-12-la-loi-fractale.html">Chapitre 12. La loi fractale →</a></span></nav>
+<footer class="colophon"><p>Corpus ARC, Filipe Bastos, <a href="https://creativecommons.org/licenses/by/4.0/deed.fr" rel="license">CC BY 4.0</a>.</p></footer>
+</body>
+</html>

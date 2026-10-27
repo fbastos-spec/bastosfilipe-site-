@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<link rel="canonical" href="https://bastosfilipe.com/arc/volumes/v03-le-code-et-le-registre/29-annexe-b-retraits-et-corrections.html">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Annexe B. Retraits et corrections · Le Code et le Registre · Corpus ARC</title>
+<meta name="description" content="Le Code et le Registre, volume 3 du corpus ARC de Filipe Bastos. Annexe B. Retraits et corrections.">
+<meta name="keywords" content="registre des erreurs, table de multiplication, audit, chaos, approximation, troncature décimale, complétude, corpus ARC, Filipe Bastos">
+<meta name="author" content="Filipe Bastos">
+<meta name="license" content="https://creativecommons.org/licenses/by/4.0/deed.fr">
+<link rel="stylesheet" href="../../assets/arc.css">
+</head>
+<body>
+<nav class="crumbs"><a href="../../index.html">Corpus ARC</a> / <a href="index.html">Volume 3 · Le Code et le Registre</a></nav>
+<main class="chapter">
+<h2 id="annexe-b.-retraits-et-corrections">Annexe B. Retraits et corrections</h2>
+<p>Cette annexe liste ce qui, en fusionnant les pièces, a été retiré, rétrogradé, corrigé ou retouché. Les retraits que le corpus avait déjà gravés lui-même (G.1 à G.58) ne sont pas répétés ici : ils sont au chapitre 12. Chaque ligne dit ce qui est touché, la raison, et la date quand elle est connue.</p>
+<h3 id="b.1-calculs-qui-ne-se-reproduisent-pas-retire">B.1 Calculs qui ne se reproduisent pas (Retiré)</h3>
+<ol type="1">
+<li><strong>Anthropogenic Chaos v12, Théorème 2.2</strong> (mars 2026). « En décimal à huit chiffres, x₀ = 1, xₖ₊₁ = xₖ/3, à k = 20, erreur accumulée ±35. » Recalcul : erreur relative 3,2 × 10⁻⁹, erreur absolue 9 × 10⁻¹⁹ (Annexe D, D.23). Diviser par 3 n’amplifie pas l’erreur relative. Remplacé par : le calcul du Code sur l’écriture 0,3333 multipliée par 3 cent fois, e₀ × 3¹⁰⁰ = 1,7 × 10⁴³ (chapitre 3, II.2). Chapitre 16, É16.4.</li>
+<li><strong>Anthropogenic Chaos v12, §5.3</strong>, logistique de paramètre 3 depuis 1/3 en double précision : « divergence complète à l’itération 20 ». Recalcul : l’orbite reste à 2/3 à 2,2 × 10⁻¹⁶ près sur soixante itérations (D.24). Le point fixe 2/3 est marginal à ce paramètre ; il n’y a aucune dilatation à amplifier. La partie exacte (2/3, puis 2/3) est gardée. Chapitre 16, É16.30 et É16.31.</li>
+<li><strong>Formule du chaos v5, §2.1</strong> : « en rationnel exact sans repliement, le numérateur enfle (78 572 chiffres au tour 15) ». Non reproduit pour la carte de doublement : sans pli, 1/3 devient 32 768/3 au tour 15. L’enfle des numérateurs est propre aux cartes quadratiques (logistique de paramètre 4 depuis 1/3 : 15 635 chiffres au tour 15, D.25). La conclusion qualitative (sans pli, pas de confusion) est gardée. Chapitre 14, É14.4.</li>
+</ol>
+<h3 id="b.2-enonces-corriges-par-le-calcul">B.2 Énoncés corrigés par le calcul</h3>
+<ol start="4" type="1">
+<li><strong>Fin de l’Approximation v3.4, Théorème 1.1</strong> (mai 2026). « Le cadastre {1, …, 9} est l’unique cycle qui conjugue une fermeture pure et une asymétrie interne. » L’élimination de la source oublie les clôtures impaires composées : 15, 21, 25, 27 ont un centre pur et un axe interne (D.26), et l’hypothèse de réfutation H0 de la pièce est remplie par c = 15. Remplacé par : 9 est la plus petite clôture qui conjugue centre pur et axe interne. Même nature que G.4. Chapitre 17, É17.1 et É17.31. La même correction vaut pour la phrase « une seule porte l’architecture complète, et c’est neuf » de Vous avez raison (IV.6) et pour « unique clôture équilibrée : 9 » de son annexe C-bis : le balayage jusqu’à 200 établit que 9 est la plus petite.</li>
+<li><strong>Formule du chaos v5, §4, et Anthropogenic Chaos v12, §5.4</strong> : « sur ℚ, les applications rationnelles sont périodiques ou prépériodiques » ; « toute orbite partie d’une condition initiale rationnelle est périodique ». Vrai pour la carte de doublement ; faux pour une application rationnelle de degré 2 ou plus : par Northcott, elle n’a qu’un nombre fini de points prépériodiques rationnels ; la logistique de paramètre 4 partie de 1/3 a un dénominateur 3 à la puissance 2ⁿ et n’est pas périodique (D.25). Un x rationnel n’a pas en général un angle θ rationnel. La borne de Poonen (neuf points prépériodiques pour x² + c) est conditionnelle. Chapitre 14, É14.9 ; chapitre 16, É16.32.</li>
+<li><strong>Completeness Principle v2.0, §4.1 et §5.3</strong> : « α⁻¹ = 137 (le miroir d’interface, DR = 11) » ; « DR(137) = 1 + 3 + 7 = 11 ». 11 est la somme des chiffres ; la racine digitale de 137 est 2 (D.30), comme l’écrit la Fin de l’Approximation. Chapitre 18, É18.16.</li>
+<li><strong>Fin de l’Approximation v3.4, §9</strong> : « 64 = le nombre de codons = 26 = 8² ». Coquille d’extraction pour 2⁶. Chapitre 17, É17.26.</li>
+<li><strong>Le Prix de la Vitesse v0.1, §1</strong> : « √2, l’unique nombre qui, mis au carré, rend le double ». Précisé : l’unique nombre positif dont le carré est le double de l’unité ; l’équation x² = 2x a pour solution positive 2 (D.37). Chapitre 21, É21.1.</li>
+</ol>
+<p>8 bis. <strong>Registre, G.12 et G.13 : le « facteur 113 »</strong> (correction du 15 octobre 2026). Les gravures invoquent un facteur 113 dans 137 036 et dans le numérateur de √5 ≈ 27 951/12 500. Il n’existe pas : 27 951 = 3 × 7 × 11³ et 137 036 = 2² × 34 259, aucun n’est divisible par 113 (D.39). Les gravures sont gardées (R9), avec la correction datée inscrite à leur suite ; la justification par le 113 est retirée. De plus, le convergent 161/72 retenu en G.13 fait entrer 23 (161 = 7 × 23), hors du registre cadastral. R.32 ne cite pas le 113 et n’est pas touchée. Chapitre 12.</p>
+<h3 id="b.3-enonces-retrogrades-un-theoreme-sans-calcul-fini">B.3 Énoncés rétrogradés (un « théorème » sans calcul fini)</h3>
+<ol start="9" type="1">
+<li><strong>Anthropogenic Chaos v12, Théorème 2.4</strong> (E(9) = E(0), contradiction) : étiquetage d’états, non calcul. Rétrogradé en L. É16.6.</li>
+<li><strong>Anthropogenic Chaos v12, Théorème 2.7</strong> (εₙ ≥ ε₀ · λⁿ · (1 + n/M)) : le facteur (1 + n/M) n’est pas dérivé. Rétrogradé en L ; la forme vérifiée est ε₀ · fⁿ. É16.8.</li>
+<li><strong>Anthropogenic Chaos v12, Théorème 5.1</strong> (« ARC élimine le chaos », λ = 0, εₙ = 0) : l’exposant de Lyapunov du doublement vaut ln 2 quelle que soit l’arithmétique, et, tours gardés, l’écart déplié double encore (chapitre 3, II.4). Rétrogradé en L ; remplacé par É3.9 et É14.22 (le compte des tours supprime la confusion, non l’éloignement). É16.28. Rétabli en Th le 26 octobre 2026 (G.70) : sans troncature ε₀ = 0 et ε(n) = 0 ; tours gardés, chaque pas est inversible ; la phrase sur l’exposant de Lyapunov sort de l’énoncé.</li>
+<li><strong>Anthropogenic Chaos v12, Théorème 2.3</strong> (le correctif de Newton) : le point (i) est un calcul ; la lecture d’ensemble est rétrogradée en L. É16.5.</li>
+<li><strong>Anthropogenic Chaos v12, Proposition 4.1</strong> (inversion outil et objet) : lecture historique adossée à des faits, inscrite L. É16.24.</li>
+<li><strong>Anthropogenic Chaos v12, Remarque 3.9</strong> : la convergence avec Halo y est dite « confirmation mutuelle ». Rétrogradée en convergence diagnostique, non validante, par la Formule du chaos v5 §5, qui fait foi. É16.19.</li>
+<li><strong>Anthropogenic Chaos v12, condition F4</strong> : remplie telle quelle par le doublement exact. Réécrite avec le mot confusion, selon G.52. É16.35.</li>
+<li><strong>Fin de l’Approximation v3.4, Théorème 4.1</strong> (soustraction trinitaire) : l’exemple chiffré est exact ; la portée (« toute opération différentielle authentique ») est inscrite L. É17.16.</li>
+<li><strong>Fin de l’Approximation v3.4, Théorème 7.1</strong> (le fer comme produit différencié uni) : le compte 163 − 137 = 26 est Th ; la lecture est L. É17.22 et É17.23.</li>
+<li><strong>Completeness Principle v2.0, §5.1</strong> : « π = 22/7 » comme mesure du cercle physique, et « aucune expérience n’a jamais distingué π de 22/7 ». La seconde phrase est retirée : l’écart relatif vaut 4,0 × 10⁻⁴, et la mesure de rotation de l’électron demande π (cercle requis 3,141504 ; R.153, G.47, 3 octobre 2026). La première est ramenée au statut d’adresse de structure (G.5). É18.14 et É18.22.</li>
+<li><strong>Completeness Principle v2.0, §5.3</strong> : « α⁻¹ = 137 exactement ». Rétrogradé en Chantier : la clôture ARC de α est un Chantier déclaré, à tester sans α intermédiaire (R.149), et l’écriture 137 + 36/1000 est retirée (G.12). É18.16.</li>
+<li><strong>Completeness Principle v2.0, Crime 4, et Anthropogenic Chaos v12, §3.5</strong> : les adresses « Euler 1748, 0 × a = 0 » et « Peano 1889, zéro est un nombre naturel » sont corrigées par le corpus (G.58, G.57, 5 octobre 2026). Les lectures sont conservées. Chapitres 16 et 18.</li>
+</ol>
+<h3 id="b.4-tension-non-conciliee-inscrite-chantier">B.4 Tension non conciliée, inscrite Chantier</h3>
+<ol start="21" type="1">
+<li><strong>Les deux ruptures des écritures numériques.</strong> Les Tables natives (§4 bis, 4 octobre 2026) et Vous avez raison (30 juillet 2026) tiennent que les écritures attestées ne rompent qu’à 9|10 ou au centre ; G.16 (31 juillet 2026) inscrit une rupture 3|4 pour les numérations chinoise, kharosthi et brahmi, hors du critère de réfutation fixé par la pièce elle-même. La phrase est restreinte aux systèmes du tableau et la tension est inscrite Chantier. É1.10, É20.25 ; chapitre 13, III.12 b.</li>
+</ol>
+<h3 id="b.5-figures-de-style-signalees">B.5 Figures de style signalées</h3>
+<ol start="22" type="1">
+<li><strong>« Mesurée à la cinquième décimale »</strong> (Le Prix de la Vitesse, §7 ; Vous avez raison, VII) : les valeurs mesurées de la corrélation CHSH (Aspect 1982 : environ 2,70) approchent la borne 2√2 = 2,828 sans la mesurer à cette précision ; la phrase est gardée comme citation et signalée. É20.23, É21.12.</li>
+<li><strong>Coûts des Données Contaminées</strong> : le total « environ 1,1 milliard » de la famille Stevin ne se recompose pas à partir des coûts listés (700 millions pour Sleipner) ; gardé comme valeur de la source, non vérifiée. Chapitre 19, 19.4.</li>
+<li><strong>Vous avez raison, annexe A</strong> : l’intervalle imprimé pour le risque relatif de diagnostic (1,38 ; IC 95 % 1,36 à 1,52) est asymétrique ; à relire contre la source primaire (Frisira, Holland, Sayal 2024).</li>
+<li><strong>Anthropogenic Chaos v12, Remarque 4.2</strong> : « depuis 224 ans » dans une pièce de 2026 (1801 + 224 = 2025) ; écart d’un an, sans conséquence.</li>
+</ol>
+<h3 id="b.6-retouches-de-forme-imposees-par-les-regles-du-corpus">B.6 Retouches de forme imposées par les règles du corpus</h3>
+<ol start="26" type="1">
+<li><strong>Mentions de la rédaction.</strong> Les passages qui nommaient la personne ou l’outil qui rédigeait, ou qui racontaient qui avait corrigé qui, sont retirés ou réécrits. Dans le Code : la déclaration de rédaction (0.1), la première personne de l’audit (III.4), l’attribution des corrections (G.50, G.51, G.56), le colophon de la v0.4 ; l’audit se lit comme la section critique du corpus sur lui-même. Dans le Registre : la fin de la ligne En clair de R.144 ; le titre et les lignes Posée et En clair de R.148 (« la rédaction ») ; G.22 (citation réécrite sans guillemets) ; G.28 ; l’introduction de la Partie II ; le récit du premier décompte (III.2 bis) ; III.8 ; la table des adresses ; les colophons des pièces ; III.11 (citation du colophon remplacée par un renvoi au colophon final).</li>
+<li><strong>Circonstances de travail.</strong> Les mentions des réunions de travail datées du 3 et du 8 octobre 2026 sont remplacées par la date seule dans R.149 à R.154 et R.158 à R.160, dans G.45, G.47, G.48 et III.9, et dans les titres des familles K et M ; dans R.115 et l’annexe C-bis de Vous avez raison, la note de travail du 30 juillet 2026 est nommée par son titre (Deux Inscriptions) ou par sa date.</li>
+<li><strong>Mots bannis du texte courant.</strong> L’abréviation de l’intelligence artificielle est écrite en entier (R.13, R.21, et deux citations traduites du chapitre 16) ; les écritures « mod 36 » et « ≡ 4 mod 6 » sont réécrites (R.118, G.30, G.31) ; le mot « négatif » est réécrit en G.26 et mis entre guillemets dans R.152 et G.47, où l’entrée examine le mot ; « apophénie » est mis entre guillemets dans R.22, qui examine le mot ; « oppose » et « par opposition » sont réécrits (R.22, R.62) ; dans R.28, la ligne En clair, qui tutoyait le lecteur, est mise à la troisième personne ; dans les Parties I et III, « hasard », « modulo », « négatif », « moyennant » et « opposer » sont réécrits hors des citations historiques (Tables natives §8 ; Formule du chaos ; Chaos Fabriqué ; Vous avez raison IV.3 et IV.5). Les citations historiques et les citations des pièces dans les entrées du Registre sont gardées telles quelles.</li>
+<li><strong>Registre, Partie III.</strong> Les comptes partiels III.2 bis (v1.1) et III.2 quater (v1.3) sont fondus dans le recompte global III.2. Les comptes publiés en septembre (62, 120, 63, 14, 4 sur 148) ne se reproduisent pas à la règle déclarée (70, 113, 70, 17, 4 ; 66, 117, 69, 17, 4 après les précisions du 15 octobre 2026, point 33), sauf pour les retraits ; la règle de septembre n’est pas dans les pièces reçues. L’Annexe B du Registre (le crayon rendu) est remplacée par l’Annexe D de ce volume.</li>
+<li><strong>Ligne Posée de R.3</strong> : remplacée par la ligne corrigée du 5 octobre 2026 (Registre v1.2) ; l’ancienne ligne est citée en fin de chapitre 12.</li>
+</ol>
+<h3 id="b.7-ce-qui-na-pas-ete-verse">B.7 Ce qui n’a pas été versé</h3>
+<ol start="31" type="1">
+<li><strong>Les gravures G.59 à G.68</strong>, annoncées par la pièce d’ajout du 8 octobre 2026 pour le Volume 0, ne figurent dans aucune des pièces fusionnées. La numérotation s’arrête à G.58 (chapitre 13, III.12 a).</li>
+<li><strong>Notes de travail</strong> : l’Annexe C du Code (onze pièces non reçues par l’audit), la note de construction de Vous avez raison (son contenu est en G.44), la partition d’héritage et l’étape suivante de la charpente du Chaos Fabriqué, les déclarations d’affiliation et de contact des pièces de mars et de mai, la mention d’assistance de la Fin de l’Approximation (couverte par le colophon), les scripts de vérification des pièces (refaits en Annexe D).</li>
+</ol>
+<h3 id="b.8-statuts-alignes-sur-les-autres-volumes-15-octobre-2026">B.8 Statuts alignés sur les autres volumes (15 octobre 2026)</h3>
+<ol start="33" type="1">
+<li><strong>R.57, R.58, R.65 (conséquences du « Théorème 4.1 » de l’Objet à Deux Faces).</strong> La ligne Statut portait le sigle Th par la seule mention du « Th 4.1 ». Ce théorème de la source est rétrogradé en Lecture au Volume 1 (É 15.7, Annexe B.3) et au Volume 6 (Annexe B.4, point 15) : il n’a pas de calcul fini qui le démontre. Les trois entrées sont inscrites L, avec la note « Th 4.1 de la source, rétrogradé en L » (Annexe A, partie 2). <strong>R.112</strong> : le théorème de nécessité cadastrale de la fractalité (§4, Fractal Law) et le théorème 3.1 d’auto-réflexivité sont Lecture au Volume 2 (B.2.13 : la preuve tient par la définition de la projection) ; l’entrée est inscrite Th, L (Th pour l’identité r/R = cos 36° = φ/2 du pentagone). <strong>R.114</strong> : les corollaires 5.1-5.3 de l’Étoile de la Vie II, non marqués dans la source, ne sont plus comptés Th : un corollaire non marqué n’est pas un théorème ; l’entrée est inscrite L. Le recompte III.2 (chapitre 13) et la vérification D.20 sont refaits : 66, 117, 69, 17, 4 sur 148 entrées ; 78, 127, 77, 18, 4 sur 160.</li>
+</ol>
+<h3 id="b.9-correction-de-fait-dans-une-piece-entree-mot-pour-mot-26-octobre-2026">B.9 Correction de fait dans une pièce entrée mot pour mot (26 octobre 2026)</h3>
+<ol start="34" type="1">
+<li><strong>Chapitre 22, note [7] (Le Chaos Fabriqué, Partie I, v0.3).</strong> La source écrivait « commission Lichnerowicz, 1967–1972 ». La commission a été présidée par Lichnerowicz de 1967 à 1973, année de sa dissolution ; ses programmes sont entrés en vigueur de 1969 à 1972. Corrigé en « 1967–1973 », avec l’accord de l’auteur. Le reste de la pièce est inchangé.</li>
+</ol>
+</main>
+<nav class="chapnav"><span class="prev"><a href="28-annexe-a-table-des-enonces.html">← Annexe A. Table des énoncés</a></span><a class="toc" href="index.html">Sommaire du volume</a><span class="next"><a href="30-annexe-c-sources-fusionnees.html">Annexe C. Sources fusionnées →</a></span></nav>
+<footer class="colophon"><p>Corpus ARC, Filipe Bastos, <a href="https://creativecommons.org/licenses/by/4.0/deed.fr" rel="license">CC BY 4.0</a>.</p></footer>
+</body>
+</html>

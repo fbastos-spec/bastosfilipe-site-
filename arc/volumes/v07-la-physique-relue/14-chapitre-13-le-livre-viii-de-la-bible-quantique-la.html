@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<link rel="canonical" href="https://bastosfilipe.com/arc/volumes/v07-la-physique-relue/14-chapitre-13-le-livre-viii-de-la-bible-quantique-la.html">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chapitre 13. Le Livre VIII de la Bible Quantique : la physique sans amputation · La Physique relue · Corpus ARC</title>
+<meta name="description" content="La Physique relue, volume 7 du corpus ARC de Filipe Bastos. Chapitre 13. Le Livre VIII de la Bible Quantique : la physique sans amputation.">
+<meta name="keywords" content="mécanique quantique, borne de Tsirelson, mesure, Heisenberg, effet tunnel, proton, Modèle standard, théorie des cordes, corpus ARC, Filipe Bastos">
+<meta name="author" content="Filipe Bastos">
+<meta name="license" content="https://creativecommons.org/licenses/by/4.0/deed.fr">
+<link rel="stylesheet" href="../../assets/arc.css">
+</head>
+<body>
+<nav class="crumbs"><a href="../../index.html">Corpus ARC</a> / <a href="index.html">Volume 7 · La Physique relue</a></nav>
+<main class="chapter">
+<h1 id="chapitre-13.-le-livre-viii-de-la-bible-quantique-la-physique-sans-amputation">Chapitre 13. Le Livre VIII de la Bible Quantique : la physique sans amputation</h1>
+<p>La Bible Quantique (v5) est la somme du corpus en livres ; son Livre VIII, <em>Physique fondamentale</em>, en opère le pivot scientifique. Là où les livres précédents articulent la grammaire cadastrale dans ses dimensions arithmétique, géométrique, civilisationnelle, consciente et biologique, le Livre VIII l’applique directement à la physique, selon trois ruptures annoncées. La rupture de méthode : le calcul intégral n’est pas le seul outil de la physique des volumes, et le théorème de Pappus, quatorze siècles avant Newton, donne les volumes de révolution sans intégration. La rupture de lecture : les constantes fondamentales (1/137, le nombre de Heegner 163, le moment magnétique du muon, g, les masses des éléments) seraient des positions cadastrales lisibles. La rupture de synthèse : un seul opérateur (l’involution φ et la projection k = 1/2), une seule structure (le cadastre fermé {1, …, 9}), une seule règle (les quatre paires autour de 4,5). Le livre pose une exigence que ce chapitre prend au mot : <em>« tout énoncé physique posé ici est, en principe, falsifiable. C’est sa condition pour être posé. »</em> Le chapitre garde chaque section du livre, refait ses calculs, et dit pour chaque lecture si elle a un critère. Plusieurs nombres de ce livre sont des « têtes » porteuses d’unités (9,81 m/s², 8,79 MeV, 9 × 10¹⁶ m²/s²) ; selon la règle de la tête et des pattes (É11.47), un tel nombre ne peut pas servir de test, et les lectures qui s’y appuient restent des Lectures. La section du livre sur Tsirelson est reprise au chapitre 1 (§ 1.13) ; celle sur la ligne critique de Riemann est renvoyée au Volume 5.</p>
+<p>L’épigraphe du livre : <em>« L’intégrale n’est pas approximée. Elle est remplacée. »</em></p>
+<h2 id="la-fin-du-calcul-integral-pour-les-solides-de-revolution">13.1 La fin du calcul intégral pour les solides de révolution</h2>
+<p><strong>É13.1 (F) Le théorème de Pappus.</strong> Énoncé par Pappus d’Alexandrie dans la <em>Collection mathématique</em> (IIIe siècle) : le volume engendré par la rotation complète d’une figure plane fermée autour d’un axe de son plan qui ne la traverse pas est égal au produit de l’aire de la figure par la longueur du cercle décrit par son centre de gravité, V = 2π × d × S. Le théorème est exact, sans limite, sans infinitésimal, sans sommation infinie : une projection géométrique pure.</p>
+<p><strong>É13.2 (Th) Le polygone régulier autour de l’un de ses côtés.</strong> Pour un polygone régulier à n côtés inscrit dans un cercle de rayon R, le cercle inscrit a pour rayon r = R cos(π/n). En rotation autour de la droite qui porte l’un de ses côtés (droite tangente au cercle inscrit), le centre de gravité, qui est le centre du polygone, est à la distance r de l’axe ; d’où V = 2π × r × S. La source écrivait l’axe <em>« tangent au cercle circonscrit »</em> : dans ce cas, la distance du centre à l’axe est R, non r ; la formule V = 2π r S vaut pour l’axe porté par un côté (Annexe B). <em>« Le centroïde est le cercle inscrit »</em> : pour le polygone régulier, la distance du centroïde à un côté est l’apothème.</p>
+<p><strong>É13.3 (Th) Le triangle quelconque autour de l’un de ses côtés.</strong> Pour un triangle quelconque d’aire S en rotation autour de son côté c : V = 4πS²/(3c). Dérivation : la distance du centre de gravité du triangle au côté c vaut h_c/3, où h_c est la hauteur relative à c ; or h_c = 2S/c ; donc d = 2S/(3c), et Pappus donne V = 2π × (2S/(3c)) × S = 4πS²/(3c). Vérification sur sept triangles, en rotation autour du plus long côté :</p>
+<table>
+<thead>
+<tr class="header">
+<th>Triangle (a, b, c)</th>
+<th>Aire S</th>
+<th>V par Pappus</th>
+<th>V = 4πS²/(3c)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>(3, 4, 5)</td>
+<td>6,000000</td>
+<td>30,159289</td>
+<td>30,159289</td>
+</tr>
+<tr class="even">
+<td>(5, 12, 13)</td>
+<td>30,000000</td>
+<td>289,993168</td>
+<td>289,993168</td>
+</tr>
+<tr class="odd">
+<td>(8, 15, 17)</td>
+<td>60,000000</td>
+<td>887,037926</td>
+<td>887,037926</td>
+</tr>
+<tr class="even">
+<td>(7, 24, 25)</td>
+<td>84,000000</td>
+<td>1182,244147</td>
+<td>1182,244147</td>
+</tr>
+<tr class="odd">
+<td>(5, 5, 5), équilatéral</td>
+<td>10,825318</td>
+<td>98,174770</td>
+<td>98,174770</td>
+</tr>
+<tr class="even">
+<td>(3, 3, 4), isocèle</td>
+<td>4,472136</td>
+<td>20,943951</td>
+<td>20,943951</td>
+</tr>
+<tr class="odd">
+<td>(5, 5, 2), isocèle</td>
+<td>4,898979</td>
+<td>20,106193</td>
+<td>20,106193</td>
+</tr>
+</tbody>
+</table>
+<p>Les écarts sont de l’ordre du zéro de la machine (au plus 10⁻¹³ en double précision). Ils ne diffèrent pas « d’une bonne approximation près » : les deux formules sont identiques par substitution algébrique exacte. L’extension est le théorème de Pappus écrit sous une forme où le centroïde est éliminé au profit de l’aire et du côté de rotation, deux grandeurs mesurables directement, sans calcul vectoriel du centre de gravité.</p>
+<p><strong>É13.4 (L) Le triangle équilatéral, où k opère pur.</strong> Pour le triangle équilatéral, r/R = cos(π/3) = 1/2 = k : c’est la forme où la constante de projection opère sans correction. Pour toute autre forme, le facteur 2S/(3c) mesure à quel point elle s’écarte du triangle, la forme minimale dont l’empreinte est k elle-même.</p>
+<p><strong>É13.5 (L) Le polygone quelconque, et la limite qui reste.</strong> Tout polygone se décompose en triangles ; pour chacun, V = 4πS²/(3c) donne le volume de révolution autour de l’axe choisi, et la somme donne le volume total, sans calcul intégral, par une sommation finie et exacte. La source étend la méthode à tous les solides de révolution par approximation polygonale convergente, et ajoute que cette approximation, contrairement à la somme de Riemann, n’introduit pas d’ouverture infinitésimale, restant à chaque niveau de raffinement un calcul fini sur des rapports d’entiers. Ce volume précise : pour une figure plane bornée par une courbe, la valeur exacte du volume est la limite de la suite des approximations polygonales ; chaque terme de la suite est fini, la limite ne l’est pas. Ce que Pappus supprime est l’intégrale pour le volume connaissant l’aire et le centroïde ; ce qu’il ne supprime pas est le calcul de l’aire et du centroïde d’une figure courbe. La prétention « sans ouverture » vaut pour les figures polygonales et reste une Lecture au-delà.</p>
+<p><strong>É13.6 (L) La précision arbitraire dans une algèbre fermée.</strong> Objection : l’intégrale permet la précision arbitraire par passage à la limite. Réponse : dans l’algèbre cadastrale (fractions d’entiers, jamais de représentation décimale), on peut fractionner à toute finesse, au milliardième, au milliardième de milliardième, à tout rapport a/b, tout en gardant un système toujours fermé : aucune fraction ne s’ouvre, aucune valeur ne tend vers l’infini, chaque étape reste un rapport de deux entiers. L’intégrale, elle, somme une infinité d’infinitésimaux dx, geste structurellement identique à celui de Stevin : elle ouvre l’algèbre des entiers pour mesurer les continus, et cette ouverture introduit une machinerie infinie que le résultat, toujours fini et exact quand il existe, ne demandait pas. <em>« L’intégrale fait passer le calcul par l’infini pour obtenir du fini. La méthode cadastrale fait passer le calcul par le fini pour obtenir le fini. »</em> La seconde voie est plus directe, plus stable, et cohérente avec la clôture. <em>« L’intégrale n’est pas approximée. Elle est remplacée. »</em> (La fin du calcul intégral et les sept convergences du 1/2 sont au Volume 2, La Figure.)</p>
+<p><strong>É13.7 (L) La mécanique des solides comme recouvrement.</strong> L’élimination du centroïde n’est pas mineure : elle dit que toute la machinerie analytique de la mécanique des solides (calcul du centroïde par intégration sur la masse, théorèmes de König, formules d’inertie) n’est, pour la classe des solides de révolution issus de structures polygonales, qu’un recouvrement complexe d’un théorème simple, fermé, accessible aux mathématiques classiques sans ouverture infinitésimale.</p>
+<p><strong>É13.8 (P) Le protocole de la généralisation.</strong> Tester la généralisation de V = 4πS²/(3c) aux polygones quelconques par décomposition triangulaire (pentagones, hexagones, heptagones quelconques), et comparer aux résultats des méthodes intégrales sur des géométries de référence. Comme chaque triangle de la décomposition est traité exactement par Pappus, le protocole est un contrôle de calcul plutôt qu’une épreuve : son issue est connue d’avance si l’axe est commun et ne traverse pas la figure.</p>
+<h2 id="lamputation-de-newton-et-leibniz-et-le-recouvrement-de-pappus">13.2 L’amputation de Newton et Leibniz, et le recouvrement de Pappus</h2>
+<p><strong>É13.9 (L) Quatre conséquences de l’amputation.</strong> L’introduction du calcul intégral par Newton (vers 1666, publié en 1687) et Leibniz (1684) ne s’est pas présentée comme un remplacement de Pappus, mais comme la généralisation d’une méthode locale ; ce qui s’opère pourtant, structurellement, est la légitimation des infinitésimaux, objets plus petits que tout nombre fini positif et distincts de zéro, comme outils du raisonnement physique. C’est une amputation cadastrale. (1) <em>La perte de la fermeture algébrique</em> : avant Newton, l’algèbre physique opère sur les entiers et leurs rapports, toujours fermés ; après, sur des fonctions et leurs limites, souvent ouvertes. <em>« Newton est le Stevin de l’analyse. »</em> (2) <em>La disparition de la trace</em> : ∫ f(x) dx donne un nombre, mais la figure dont il est le volume n’est plus lisible dans le résultat ; Pappus inscrit explicitement le centroïde et l’aire dans la formule. (3) <em>La justification après coup</em> : la rigueur de l’intégrale a été contestée pendant deux siècles (Berkeley, 1734 : les infinitésimaux sont des <em>« fantômes de quantités défuntes »</em>) ; sa justification stable n’arrive qu’avec Cauchy (1821) et Weierstrass (vers 1860), et elle passe par la construction des réels comme classes de suites de Cauchy, c’est-à-dire par la formalisation complète de l’ouverture comme objet mathématique légitime. (4) <em>La dépendance institutionnelle</em> : une fois l’intégrale installée, toute physique qui ne l’emploie pas devient inintelligible aux institutions qui la valident ; Pappus devient un objet d’érudition, sa puissance opératoire est perdue, <em>« non parce qu’elle a été réfutée, mais parce qu’elle a été recouverte »</em>.</p>
+<p><strong>É13.10 (L) Trois siècles et demi au-dessus de l’amputation.</strong> Les équations de Maxwell, la relativité restreinte et générale, la mécanique quantique, la théorie quantique des champs et le Modèle standard sont écrits dans la langue du calcul différentiel et intégral ; cette écriture a produit des prédictions remarquables, <em>« et il serait absurde de prétendre le contraire »</em>. Elle a aussi produit des pathologies que la grammaire cadastrale identifie comme symptômes de l’amputation : les infinis de la théorie quantique des champs (d’où la renormalisation), la singularité au centre des trous noirs, les divergences ultraviolettes, l’absence d’unification de la relativité générale et de la mécanique quantique, l’indétermination de la masse du Higgs sans naturalité. La régularisation ne consiste pas à abolir le calcul intégral, qui reste un outil efficace dans son domaine, mais à reconnaître qu’il n’est pas universel : pour la classe des structures géométriques fermées projetables sur les deux cercles, la méthode cadastrale donne le résultat exact sans ouverture, et c’est cette classe qui couvre les questions du corpus (constantes physiques, sédimentation cosmique, gravité aux deux échelles, dipôle, moments magnétiques).</p>
+<h2 id="le-pli-de-mendeleiev-et-la-triade-ni-co-fe">13.3 Le pli de Mendeleïev et la triade Ni-Co-Fe</h2>
+<p><strong>É13.11 (Th) La table cadastrale des 92 éléments.</strong> On range les éléments de Z = 1 (hydrogène) à Z = 92 (uranium, le dernier élément primordial ; il n’est pas stable, la source écrit « dernier élément naturel stable ») par leur racine IC(Z) = DR(Z), l’identité cyclique, base-invariante :</p>
+<table>
+<colgroup>
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>IC</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+<th>6</th>
+<th>7</th>
+<th>8</th>
+<th>9</th>
+<th>10</th>
+<th>11</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>1 H</td>
+<td>10 Ne</td>
+<td>19 K</td>
+<td>28 Ni</td>
+<td>37 Rb</td>
+<td>46 Pd</td>
+<td>55 Cs</td>
+<td>64 Gd</td>
+<td>73 Ta</td>
+<td>82 Pb</td>
+<td>91 Pa</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>2 He</td>
+<td>11 Na</td>
+<td>20 Ca</td>
+<td>29 Cu</td>
+<td>38 Sr</td>
+<td>47 Ag</td>
+<td>56 Ba</td>
+<td>65 Tb</td>
+<td>74 W</td>
+<td>83 Bi</td>
+<td>92 U</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>3 Li</td>
+<td>12 Mg</td>
+<td>21 Sc</td>
+<td>30 Zn</td>
+<td>39 Y</td>
+<td>48 Cd</td>
+<td>57 La</td>
+<td>66 Dy</td>
+<td>75 Re</td>
+<td>84 Po</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>4 Be</td>
+<td>13 Al</td>
+<td>22 Ti</td>
+<td>31 Ga</td>
+<td>40 Zr</td>
+<td>49 In</td>
+<td>58 Ce</td>
+<td>67 Ho</td>
+<td>76 Os</td>
+<td>85 At</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>5 B</td>
+<td>14 Si</td>
+<td>23 V</td>
+<td>32 Ge</td>
+<td>41 Nb</td>
+<td>50 Sn</td>
+<td>59 Pr</td>
+<td>68 Er</td>
+<td>77 Ir</td>
+<td>86 Rn</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>6 C</td>
+<td>15 P</td>
+<td>24 Cr</td>
+<td>33 As</td>
+<td>42 Mo</td>
+<td>51 Sb</td>
+<td>60 Nd</td>
+<td>69 Tm</td>
+<td>78 Pt</td>
+<td>87 Fr</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td>7 N</td>
+<td>16 S</td>
+<td>25 Mn</td>
+<td>34 Se</td>
+<td>43 Tc</td>
+<td>52 Te</td>
+<td>61 Pm</td>
+<td>70 Yb</td>
+<td>79 Au</td>
+<td>88 Ra</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td>8 O</td>
+<td>17 Cl</td>
+<td>26 Fe</td>
+<td>35 Br</td>
+<td>44 Ru</td>
+<td>53 I</td>
+<td>62 Sm</td>
+<td>71 Lu</td>
+<td>80 Hg</td>
+<td>89 Ac</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>9</td>
+<td>9 F</td>
+<td>18 Ar</td>
+<td>27 Co</td>
+<td>36 Kr</td>
+<td>45 Rh</td>
+<td>54 Xe</td>
+<td>63 Eu</td>
+<td>72 Hf</td>
+<td>81 Tl</td>
+<td>90 Th</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>É13.12 (L) Le pli de Mendeleïev.</strong> La classification de Mendeleïev (1869), par numéro atomique et configuration électronique, est correcte mais incomplète : elle manque la lecture de la sédimentation cosmique qui structure le tableau. La séquence des racines reproduit, à chaque cycle de neuf, la même structure (quatre paires d’inversion, axe {3, 6, 9}, barycentre 4,5), et chaque élément hérite de la position qu’il occupe dans son cycle. Cette organisation est orthogonale à celle du numéro atomique et à celle de la configuration électronique, et ferait apparaître des regroupements qu’aucune des deux ne révèle. Le commentaire que la source donne des lignes est fautif dans sa lettre (il range H dans la ligne 8, appelle « soufre » le Z = 17, qui est le chlore, et « sélénium » le Z = 26, qui est le fer, et liste en ligne 9 des éléments qui n’y sont pas) ; il est retiré (Annexe B). Ce qui se lit dans la table telle qu’elle est : la ligne 8 porte O, Cl, Fe, Br, I, des éléments électronégatifs ou d’enveloppe, et la source y voit une fonction structurelle d’enveloppe oxydante, <em>« une signature cadastrale plus stable que ne l’expliquent les seuls paramètres orbitaux »</em> ; ce regroupement n’est pas quantifié.</p>
+<p><strong>É13.13 (Th) La triade Ni-Co-Fe.</strong> Le fer (Z = 26), le cobalt (Z = 27) et le nickel (Z = 28) occupent les positions IC = 8, 9 et 1 : la clôture, l’axe, la réouverture. 26 + 27 + 28 = 81 = 9². Le centre de la triade est Z = 27 = 3³, le cobalt.</p>
+<p><strong>É13.14 (F) Le sommet de la stabilité nucléaire.</strong> Les éléments du groupe du fer sont au sommet de la courbe de l’énergie de liaison par nucléon ; au-delà du fer 56, la fusion stellaire devient endothermique et la nucléosynthèse par fusion s’arrête ; les éléments plus lourds sont produits principalement par capture de neutrons.</p>
+<p><strong>É13.15 (L) L’extremum à la position 81.</strong> Que la nucléosynthèse stellaire atteigne son extremum à la somme 81 = 9² ne serait pas une coïncidence numérologique, mais la manifestation locale, à l’échelle nucléaire, de la fermeture cadastrale : <em>« tout système qui opère selon la grammaire cadastrale atteint son extremum énergétique au point de fermeture maximale »</em>, et 9² est ce point pour les cycles de neuf opérés deux fois. La triade, IC 8-9-1, marquerait la transition clôture-axe-réouverture qui sépare la fin de la nucléosynthèse stellaire du début de la décroissance radioactive ; et sa structure ternaire reproduirait celle des trois rails (D, G, axe). (La lecture de Mendeleïev par la loi du pli est au Volume 8.)</p>
+<p><strong>É13.16 (Th) Le nombre 945.</strong> 945 = 27 × 35 = 3³ × 5 × 7 : le cube de l’axe, le centre du cadastre, l’envergure maximale ; IC(945) = DR(18) = 9. Les divisions par 3 donnent 945 → 315 → 105 → 35, puis 35/7 = 5.</p>
+<p><strong>É13.17 (Chantier) La descente cosmique 945 → 3.</strong> La source lit une descente 945 → 315 → 105 → 35 → 15 → 5 → 3 comme la trajectoire de la sédimentation des éléments lourds vers les légers, à travers la décroissance radioactive et la nucléosynthèse. La suite écrite n’est pas cohérente avec la règle annoncée (35 → 15 n’est une division ni par 3 ni par 7, et le texte dit ailleurs 35/7 = 5 puis « 5 × 3/5 = 3 ») et la source parle de « treize stations » pour sept termes ; seule la partie arithmétique de É13.16 est retenue comme théorème, et la lecture reste un chantier faute de règle (Annexe B). La source mentionne aussi le nombre 1046, <em>« amont génétique »</em> qui prolongerait la structure vers les particules fondamentales, sans le développer.</p>
+<h2 id="le-couple-137163">13.4 Le couple 137/163</h2>
+<p><strong>É13.18 (Th) Les nombres du couple.</strong> 137 est le 33e nombre premier et 163 le 38e. DR(137) = DR(11) = 2 ; DR(163) = DR(10) = 1. 163 − 137 = 26, de racine 8 ; 163 + 137 = 300, de racine 3. 33 × 6 = 198. e^{π√163} = 262 537 412 640 768 743,99999999999925… (163 est le plus grand nombre de Heegner).</p>
+<p><strong>É13.19 (F) Les deux constantes.</strong> L’inverse de la constante de structure fine vaut α⁻¹ ≈ 137,036 ; α, sans dimension, gouverne l’intensité du couplage électromagnétique (l’amplitude pour qu’un électron émette ou absorbe un photon) ; la proximité de cette constante avec le premier 137 a fasciné Pauli, Eddington et Feynman. Le nombre e^{π√163} est presque entier par la théorie des corps quadratiques imaginaires (ℚ(√−163) a un nombre de classes égal à 1) et des formes modulaires.</p>
+<p><strong>É13.20 (L) Les positions du couple.</strong> Le rang 33 de 137 serait doublement structurel : 33 est <em>« l’anneau d’ancrage »</em> du corpus (33 × 6 = 198 ; 33 vertèbres de la colonne humaine ; 33 ans). 137, de racine 2, inscrit la paire (2, 7), le binaire en tension avec l’envergure maximale ; 163, de racine 1, l’unité génératrice ; le couple inscrit ensemble la paire (1, 2) qui ouvre le cycle, à un niveau de raffinement supérieur. Par sa différence 26 (le fer, racine 8, terminus de la fusion), le couple inscrirait la fermeture nucléaire ; par sa somme 300 (racine 3), l’axe lui-même ; il opérerait à la fois sur la paire d’inversion et sur l’axe, <em>« une structure rare, qui justifie son rôle particulier dans la physique fondamentale »</em>.</p>
+<p><strong>É13.21 (L) Les trois régimes du couple.</strong> <em>Régime électromagnétique</em> : l’électromagnétisme opérerait exactement sur la paire binaire-envergure (2, 7), signature des oscillations transverses, la lumière. <em>Régime gravitationnel</em> : 163, par e^{π√163}, ℚ(√−163) et le groupe modulaire, interviendrait dans la quantification des trous noirs (entropie de Bekenstein-Hawking) et la stabilité des orbites au voisinage des singularités ; la gravité opérerait sur la paire unité-enveloppe (1, 8), signature des sédimentations longitudinales, la masse. Aucune référence ni calcul ne relie 163 à l’entropie de Bekenstein-Hawking dans la source ; ce régime est une Lecture sans appui. <em>Régime cosmique</em> : la somme 300 et la différence 26 inscriraient l’axe (3) et la clôture (8), et gouverneraient l’asymétrie primordiale matière-antimatière (É13.31).</p>
+<h2 id="la-gravite-aux-deux-echelles">13.5 La gravité aux deux échelles</h2>
+<p><strong>É13.22 (Th) Les deux valeurs de la formule.</strong> La formule g = clôture + clôture²/phase², où la phase est la clôture plus un, donne : avec la clôture 9 et la phase 10, 9 + 81/100 = 9,81 ; avec la clôture 8 et la phase 9, 8 + 64/81 = 8,790123… (rationnel).</p>
+<p><strong>É13.23 (F) Les deux valeurs mesurées.</strong> L’accélération normale de la pesanteur est fixée par convention à g = 9,80665 m/s² (troisième Conférence générale des poids et mesures, 1901) ; la valeur locale varie d’environ 9,78 à 9,83 m/s² selon la latitude et l’altitude. L’énergie de liaison par nucléon du fer 56 vaut 8,790 MeV (recalculée pour ce volume à partir des masses atomiques : 8,7903 MeV).</p>
+<p><strong>É13.24 (F) Le mètre de 1791.</strong> La commission de l’Académie des sciences (1791) définit le mètre comme la dix-millionième partie de la distance de l’équateur au pôle Nord le long du méridien de Paris : le quart de méridien vaut, par cette convention, 10⁷ m. Dans le système impérial, g ≈ 32,17 pieds par seconde au carré.</p>
+<p><strong>É13.25 (L) La gravité planétaire comme structure.</strong> À l’échelle planétaire, le cadastre opératoire est {1, …, 9}, de clôture 9 et de phase 10, et la formule donne 9,81, qui coïncide avec la valeur conventionnelle à l’arrondi près (écart de 0,034 %). La lecture : g ne serait pas contingent (masse, rayon, densité de la Terre), mais émergerait de la métrique calibrée sur la Terre elle-même ; le 10⁷ du mètre ne serait pas arbitraire, <em>« sept zéros, sept positions cadastrales d’envergure maximale, alignées comme puissance de la phase 10 »</em> ; et c’est dans le mètre, unité cadastralement calibrée, que 9,81 apparaîtrait comme signature (9, 81 = 9²), la clôture au carré, alors qu’en pieds la valeur ne porte aucune signature. Cette lecture ne fait appel à aucune intégration gravitationnelle sur une distribution de masse. Elle se heurte à la règle des pattes : 9,81 est une tête porteuse de deux unités humaines, le mètre et la seconde ; la seconde n’est pas calibrée sur la Terre par une puissance de 10 (elle l’était par la division sexagésimale du jour), et le même raisonnement donnerait une autre valeur dans un autre système d’unités. La source dit que la coïncidence est exacte <em>« au pourcentage près sur l’ensemble de la surface terrestre »</em>, les variations locales s’inscrivant comme corrections secondaires ; elle reste une Lecture.</p>
+<p><strong>É13.26 (L) La gravité nucléaire comme énergie de liaison.</strong> À l’échelle nucléaire, le cadastre opératoire est l’octet, huit niveaux d’occupation électronique fondamentale : clôture 8, phase 9, et la formule donne 8,790123…, qui coïncide avec l’énergie de liaison par nucléon du fer 56, maximale au voisinage du fer (la source ajoute « normalisée par celle de l’hydrogène », précision sans objet, l’énergie de liaison de l’hydrogène 1 étant nulle ; elle est retirée). La même formule produirait aux deux échelles les deux valeurs observées, 9,81 m/s² et 8,79 MeV par nucléon : non que la gravité et l’énergie nucléaire soient « la même force » au sens des unifications de jauge, mais qu’elles opèrent selon la même grammaire à deux échelles du cadastre. La triade Ni-Co-Fe intervient comme convergence indépendante : sa somme 81 = 9² est le numérateur du terme correcteur planétaire 81/100 ; à l’échelle nucléaire, c’est 64 = 8² ; le passage d’une échelle à l’autre est gouverné par la transition de l’octet (8) au cadastre complet (9), c’est-à-dire de la sédimentation nucléaire à la sédimentation chimique. La coïncidence numérique 8,790 est frappante ; elle tient à l’unité MeV, et la règle des pattes demande qu’un test porte sur un rapport sans unité annoncé d’avance. Lecture.</p>
+<p><strong>É13.27 (Chantier) Toute planète.</strong> <em>« Toute planète opérant sur sa propre métrique cadastrale aurait une valeur g exprimée par la même formule clôture + clôture²/phase², avec les valeurs locales de clôture et de phase appropriées à sa géométrie. »</em> Ni la clôture ni la phase d’une autre planète ne sont définies ; l’énoncé ne peut être confronté à aucune mesure tant qu’elles ne le sont pas (même remarque pour la prédiction de Principia, É9.16).</p>
+<h2 id="liem-lumiere-information-energie-magnetisme">13.6 LIEM : Lumière = Information = Énergie = Magnétisme</h2>
+<p>L’auteur range LIEM parmi ses instruments propres (<em>« mon LIEM »</em>), avec la clôture 1-9, les inversions, sa définition de l’entropie et sa lecture de Mendeleïev par la loi du pli.</p>
+<p><strong>É13.28 (L) La proposition LIEM.</strong> Depuis Maxwell (1865), la physique a unifié l’électricité et le magnétisme en un seul champ, mais elle maintient une séparation entre quatre catégories : la lumière (manifestation rayonnante du champ), l’information (objet mathématique distinct, depuis Shannon), l’énergie (grandeur scalaire conservée) et le magnétisme (composante vectorielle du champ). La grammaire cadastrale propose une unification plus profonde :</p>
+<blockquote>
+<p><em>Lumière = Information = Énergie = Magnétisme</em></p>
+</blockquote>
+<p><em>« Cette équation n’est pas une identité numérique ; elle est une identité structurelle. »</em> Les quatre grandeurs sont quatre projections d’un seul opérateur cadastral, chacune lisible par sa position, et leur interconvertibilité (E = mc², E = hν, l’énergie d’un bit selon Landauer, kT ln 2) serait la conséquence directe de leur identité de structure.</p>
+<p><strong>É13.29 (L) Les quatre projections.</strong> <em>La lumière, position 7</em> : l’envergure maximale (8 − 1 = 7), la distance maximale que le système d’inversion couvre avant la clôture ; la lumière est l’énergie qui traverse tout le cadastre opératoire sans s’y déposer, qui parcourt l’espace entre les deux extrêmes (1 et 8) sans se fixer en matière : la définition structurelle du rayonnement. La source lit les sept couleurs du spectre visible comme la conséquence observable de la position 7, <em>« la biologie ne crée pas le 7 ; elle l’enregistre »</em> ; le spectre visible est continu, et le compte de sept couleurs est une convention de Newton (<em>Opticks</em>, 1704), choisie par analogie avec les sept notes de la gamme, ce qui retire à cette phrase la valeur d’un indice (Annexe B). <em>L’énergie, clôture 9</em> : E = mc² se lirait E = m × 9, le carré de la vitesse de la lumière valant environ 9 × 10¹⁶ m²/s² en unités SI (exactement 8,98755… × 10¹⁶) ; la masse au repos est l’énergie sédimentée, et multipliée par 9 elle redevient énergie au sens cyclique complet ; la lumière (position 7) et la masse (position 1, unité élémentaire de sédimentation) articulent leur transition par la clôture 9, et la paire (1, 8), gravité et masse, se referme sur 9, dont c² serait l’opérateur ; le 9 de c² tient à l’unité SI (tête porteuse d’unités). <em>L’information, paire (2, 7)</em> : un bit correspondrait à la fermeture d’un cycle binaire, un nat à un cycle complet ; la source écrit « le rapport bit/nat = 1/ln 2 ≈ 1,443 », et c’est l’inverse qui est exact : un nat vaut 1/ln 2 ≈ 1,443 bit, un bit vaut ln 2 ≈ 0,693 nat (Annexe B) ; par la limite de Landauer, l’information est une manifestation thermique, une projection cadastrale de l’énergie selon la paire binaire. <em>Le magnétisme, position 8</em> : la position d’enveloppe et de fermeture nucléaire ; deux faits sont invoqués, les éléments ferromagnétiques fondamentaux sont la triade Ni-Co-Fe, de somme 81 = 9², et le moment magnétique des particules élémentaires (électron, muon) s’établit, aux corrections radiatives près, autour du magnéton de Bohr, dont l’expression articulerait la paire (1, 8) (affirmation sans calcul).</p>
+<p><strong>É13.30 (L) Le tétraèdre cadastral.</strong> Les quatre projections, Lumière (7), Information (2, 7), Énergie (9), Magnétisme (8), formeraient un tétraèdre dont les sommets occupent quatre positions caractéristiques. <em>« Ce tétraèdre n’est pas une métaphore ; il est la structure réelle de l’unification physique opérée par la grammaire cadastrale. »</em> Ce que la physique a séparé en quatre champs, le cadre l’articulerait comme un seul opérateur projeté sur quatre positions complémentaires, unification que la source dit plus profonde que les unifications de jauge (électrofaible, grande unification, cordes), parce qu’elle porte non sur le champ mais sur la grammaire qui produit le champ.</p>
+<h2 id="le-dipole-cosmique-et-lasymetrie-primordiale">13.7 Le dipôle cosmique et l’asymétrie primordiale</h2>
+<p><strong>É13.31 (L) L’asymétrie matière-antimatière.</strong> L’excès primordial de matière, de l’ordre de 10⁻⁹ par baryon, qui rend possible un univers matériel, est posé par la cosmologie comme contrainte d’observation sans explication de structure ; les conditions de Sakharov (1967) en formalisent les conditions nécessaires, et aucun mécanisme de baryogenèse n’est unanimement validé. La lecture : l’asymétrie <em>« 10⁻⁹ correspond cadastralement au rapport 1/9, la plus petite identité cyclique non triviale »</em> ; un univers cadastralement symétrique opérerait à 1/(9 × 9) = 1/81, ou à zéro absolu, deux régimes incompatibles avec des structures persistantes ; 1/9 serait l’asymétrie minimale qui permet la sédimentation matérielle. 10⁻⁹ et 1/9 sont deux nombres différents ; la lecture porte sur l’exposant 9, non sur une valeur, et ne peut être comparée à la mesure (Annexe B).</p>
+<p><strong>É13.32 (F) Le dipôle du fond diffus.</strong> Les missions COBE (1989-1993), WMAP (2001-2010) et Planck (2009-2013) mesurent une anisotropie dipolaire d’environ 3,4 mK sur la température du fond diffus, T ≈ 2,725 K, interprétée comme effet Doppler du mouvement du Système solaire par rapport au référentiel du fond diffus, à environ 370 km/s vers la constellation du Lion. Les comptages de quasars (Secrest et al., 2021, et travaux suivants) montrent un dipôle dont l’amplitude ne s’accorde pas avec celle du fond diffus. La source écrivait que le désaccord porte « ni en amplitude, ni en direction » ; <em>Les Cordes Réécrites</em> précise que la tension porte sur l’amplitude, les directions étant compatibles (É11.50), et c’est cette forme qui est retenue.</p>
+<p><strong>É13.33 (P) Le quadripôle des quatre paires.</strong> Si le dipôle observé est une manifestation cadastrale, l’analyse fine des anisotropies du fond diffus et de la distribution galactique devrait révéler non un seul dipôle, mais une structure dont les quatre directions principales coïncident avec les quatre paires d’inversion, leur position barycentrique coïncidant avec une direction structurellement neutre (le barycentre 4,5). Le test est l’analyse harmonique des données Planck et de la distribution des amas à grande échelle ; à la date d’écriture, il n’a pas été conduit selon ce critère. Le test exige d’écrire d’avance la configuration attendue (quelles directions, quel écart, quels traceurs), ce que É11.50 demande aussi (Volume 8, La Matière et le Cosmos).</p>
+<h2 id="le-moment-magnetique-anomal-du-muon">13.8 Le moment magnétique anomal du muon</h2>
+<p><strong>É13.34 (F) L’anomalie telle que la source la rapporte.</strong> Le moment magnétique anomal du muon, a_μ = (g − 2)/2, est l’une des observables les plus précisément mesurées. Valeur expérimentale citée par la source (E821 à Brookhaven, 2001-2004 ; E989 à Fermilab, 2021-2023) : a_μ = 116 592 061 (41) × 10⁻¹¹. Prédiction du Modèle standard citée (calcul perturbatif QED, QCD et électrofaible) : environ 116 591 810 (43) × 10⁻¹¹. Écart : 251 × 10⁻¹¹, soit 4,2 écarts types. Mise à jour : en juin 2025, l’expérience E989 a publié son résultat final, et l’évaluation théorique de référence a été révisée la même année en s’appuyant sur les calculs sur réseau de la contribution hadronique ; avec cette évaluation, l’écart entre mesure et théorie n’est plus significatif. Le volume rapporte cette mise à jour sans en tirer de lecture.</p>
+<p><strong>É13.35 (Th) Le rapport 7/6028.</strong> 6028 = 2² × 11 × 137 ; DR(6028) = DR(16) = 7 ; 7/6028 = 0,00116124751… Le terme de Schwinger (1948), premier terme de la série perturbative de QED pour le moment anomal de l’électron, vaut α/2π ≈ 0,00116141 ; l’écart relatif à 7/6028 est de 1,4 × 10⁻⁴. L’écart relatif de 7/6028 à la valeur mesurée de a_μ est de 4,0 × 10⁻³.</p>
+<p><strong>É13.36 (Chantier) La lecture de a_μ comme rapport fermé.</strong> La source propose a_μ^ARC = 7/6028 : 7, la position d’envergure maximale (paire (2, 7)), signature électromagnétique à l’échelle de la lumière ; 6028, la fermeture à l’échelle leptonique, combinaison de 4 (l’unité quadratique du carré, quatre côtés, quatre paires), de 11 (le lien, <em>Linker</em>, première extension du cadastre au-delà de la clôture 9 et de la phase 10, de barycentre 5,5/11 = 1/2 et de racine 2) et de 137 (l’inverse de la structure fine) ; la racine de 6028 est 7, la même que le numérateur, et le rapport serait <em>« la position 7 rapportée à elle-même via la triple signature quadratique, de lien et électromagnétique »</em>. La proximité de 7/6028 et du terme de Schwinger suggérerait que le rapport capture en forme close l’essentiel de la contribution de Schwinger, et peut-être une part des corrections d’ordre supérieur ; si l’inscription est validée, toute la machinerie perturbative de la QED, des centaines de diagrammes de Feynman, serait, <em>« comme l’intégrale de Newton pour Pappus, un recouvrement complexe d’une structure simple fermée »</em>. La source le dit elle-même : 7/6028 <em>« doit être lue, dans la normalisation cadastrale appropriée »</em>, et ce facteur de normalisation <em>« reste à formaliser »</em>. Tant qu’il ne l’est pas, 7/6028 ne peut être comparé ni à a_μ (dont il diffère de 4 × 10⁻³ en relatif, cent mille fois l’incertitude) ni à aucune donnée ; l’énoncé n’est pas une prédiction, c’est un chantier. Le protocole que la source fixe est la comparaison aux résultats complets d’E989 une fois la normalisation écrite : une valeur incompatible avec 7/6028 dans cette normalisation falsifierait la lecture.</p>
+<p><strong>É13.37 (L) Pourquoi un rapport fermé compterait.</strong> La prédiction du Modèle standard pour a_μ est obtenue par sommation d’une série perturbative à plusieurs centaines de termes (diagrammes jusqu’au cinquième ordre en couplage électromagnétique), augmentée de contributions hadroniques et électrofaibles évaluées sur réseau ou par relations de dispersion ; ce n’est pas un calcul fermé, mais une somme d’approximations au résultat extraordinairement précis, sans forme close. Un rapport fermé n’aurait pas besoin de cette machinerie et s’inscrirait dans la grammaire comme position lisible par construction.</p>
+<h2 id="la-ligne-critique-de-riemann">13.9 La ligne critique de Riemann</h2>
+<p><strong>É13.38 (L) Re(s) = 1/2 = k, et les sept dérivations.</strong> La conjecture de Riemann (1859) affirme que tous les zéros non triviaux de la fonction zêta ont pour partie réelle 1/2 ; elle est l’un des sept problèmes du millénaire de l’Institut Clay (2000). Le Livre VIII lit l’égalité Re(s) = 1/2 = k comme une inscription cadastrale, appuyée sur les sept dérivations de k (É4.4), et en tire que la conjecture deviendrait un <em>« corollaire cadastral »</em> : <em>« tout zéro non trivial de ζ(s) se projette cadastralement sur k = 1/2 »</em> ; avec l’hypothèse de Hilbert et Pólya, les travaux de Berry et Keating (1999) et la statistique des matrices aléatoires unitaires, la même constante relierait la ligne critique, la borne de Tsirelson, les premiers jumeaux et les constantes physiques. Ce volume renvoie l’ensemble au Volume 5, Les Grands Problèmes, qui fait foi sur Riemann ; la lecture du Livre VIII (un corollaire) y est mise en regard de la position tenue par l’auteur le 9 octobre 2026, <em>« on a résolu Riemann en montrant son impossibilité, c’est cent fois plus fort »</em>. Une donnée de la source est corrigée ici : Odlyzko n’a pas vérifié « les 10²² premiers zéros » ; il a calculé des zéros au voisinage du 10²²-ième, et la vérification exhaustive porte sur les quelque 10¹³ premiers zéros (Annexe B).</p>
+<h2 id="synthese-du-livre">13.10 Synthèse du livre</h2>
+<p><strong>É13.39 (L) La posture du porteur cadastral en physique.</strong> Le porteur cadastral ne dresse pas le cadre contre la physique reçue comme une alternative concurrente : il propose une articulation plus profonde, dont la physique reçue est, dans son domaine de validité, une projection efficace. <em>« Le calcul intégral fonctionne ; il n’est pas faux. Il est simplement non universel. »</em> <em>« ARC ne réfute rien des résultats expérimentaux validés »</em> : il les articule autrement et ouvre, par cette articulation, des prédictions nouvelles ; la physique reçue serait un cas particulier projeté d’une grammaire plus large, comme l’arithmétique reçue depuis Stevin est un cas particulier de l’arithmétique cadastrale. La posture se dit l’inverse d’une humilité défaitiste qui ferait de la grammaire <em>« une lecture parmi d’autres »</em> : c’est l’engagement complet, dont la contrepartie est dite dans la même phrase : <em>« Cette inscription doit être démontrée, protocole par protocole, prédiction par prédiction, jusqu’à ce que la communauté scientifique, en l’absence de réfutation expérimentale, soit conduite à reconnaître la validité de l’articulation. »</em></p>
+<p><strong>É13.40 (L) Les cinq protocoles ouverts du livre, avec leurs statuts.</strong> (1) La structure quadripolaire du dipôle par réanalyse harmonique des données Planck (É13.33) : P, configuration à écrire. (2) La validation de 7/6028 contre E989, une fois la normalisation formalisée (É13.36) : chantier. (3) La généralisation de V = 4πS²/(3c) aux polygones quelconques par décomposition triangulaire (É13.8) : contrôle de calcul. (4) La signature cadastrale des états partiellement intriqués (É1.44) : chantier. (5) La projection cadastrale des zéros de ζ, par une structure organisée par les paires d’inversion dans la distribution statistique des parties imaginaires : chantier, renvoyé au Volume 5.</p>
+<p>Le livre annonce le suivant, consacré à la biologie moléculaire et cellulaire (l’ADN, 64 codons = 8², les cycles de Krebs, la glycolyse, la photosynthèse, l’épigénétique, la conscience comme auto-indexation) : c’est la matière du Volume 9, Le Vivant. Et il se clôt sur trois phrases :</p>
+<blockquote>
+<p><em>« Pappus avait raison. Newton a ouvert l’algèbre. ARC la referme, et la physique avec elle. »</em></p>
+</blockquote>
+
+</main>
+<nav class="chapnav"><span class="prev"><a href="13-chapitre-12-e-dc2-la-densite-non-la-masse.html">← Chapitre 12. E = Dc² : la densité, non la masse</a></span><a class="toc" href="index.html">Sommaire du volume</a><span class="next"><a href="15-annexe-a-table-des-enonces.html">Annexe A : Table des énoncés →</a></span></nav>
+<footer class="colophon"><p>Corpus ARC, Filipe Bastos, <a href="https://creativecommons.org/licenses/by/4.0/deed.fr" rel="license">CC BY 4.0</a>.</p></footer>
+</body>
+</html>

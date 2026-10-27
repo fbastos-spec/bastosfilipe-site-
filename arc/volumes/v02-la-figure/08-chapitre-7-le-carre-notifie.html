@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<link rel="canonical" href="https://bastosfilipe.com/arc/volumes/v02-la-figure/08-chapitre-7-le-carre-notifie.html">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chapitre 7. Le carré notifié · La Figure · Corpus ARC</title>
+<meta name="description" content="La Figure, volume 2 du corpus ARC de Filipe Bastos. Chapitre 7. Le carré notifié.">
+<meta name="keywords" content="géométrie, deux cercles et un carré, polygones réguliers, √2, π, nombre d&#x27;or, règle de l&#x27;octet, base 10, corpus ARC, Filipe Bastos">
+<meta name="author" content="Filipe Bastos">
+<meta name="license" content="https://creativecommons.org/licenses/by/4.0/deed.fr">
+<link rel="stylesheet" href="../../assets/arc.css">
+</head>
+<body>
+<nav class="crumbs"><a href="../../index.html">Corpus ARC</a> / <a href="index.html">Volume 2 · La Figure</a></nav>
+<main class="chapter">
+<h1 id="chapitre-7.-le-carre-notifie">Chapitre 7. Le carré notifié</h1>
+<p>Mettre au carré, c’est perdre une information : 2² = (−2)² = 4, et le carré ne dit plus d’où il vient. <em>Le Carré notifié</em> (version 0.3, 24 août 2026) mesure exactement ce que le carré perd dans le cadastre et en tire une règle : toute opération qui ferme une relation en objet doit émettre un <em>reçu</em>, une petite pièce justificative qui permet de remonter à l’origine. Le résultat central est un théorème vérifiable par énumération : les nombres que le carré rend impossibles à distinguer sont exactement les quatre paires d’inversion du cadastre (1 et 8, 2 et 7, 4 et 5, et la famille 3, 6, 9). Le reçu nécessaire est donc minuscule : un bit (quel membre de la paire) hors de l’axe, un trit (lequel des trois) sur l’axe. Le chapitre expose aussi la lecture de la mesure quantique qui s’en déduit, la propriété qu’un second carré ne coûte plus rien, le contenu de ce que le carré scelle, et les chantiers ouverts.</p>
+<blockquote>
+<p>« Le carré silencieux consomme sans déposer ; le carré notifié ferme en versant. »</p>
+</blockquote>
+<p>Statuts déclarés par la source : Th pour les théorèmes des §2 et §4, chacun vérifié par calcul fini ; L pour la portée universelle du scellement, la relecture de Born et la correspondance avec les projecteurs ; Chantier pour les points restants. La version 0.2 avait fermé deux points ouverts (le reçu minimal, la composition des reçus) ; la version 0.3 ajoute le contenu du sceau.</p>
+<h2 id="la-these-le-carre-scelle-les-connexions">7.1 La thèse : le carré scelle les connexions</h2>
+<p><strong>É 7.1 [L] Le carré scelle, toujours.</strong> <em>« Partout où une relation vivante devient un objet clos, l’opération exécutée est un carré. »</em> L’inventaire rassemblé par le corpus : Stevin scelle √2 en queue décimale (le côté gardé du carré vivant, chapitre 8) ; Born scelle l’onde en probabilité ; Gauss scelle le rang en résidu, 9 ≡ 0 ; le crédit scelle l’œuvre multidimensionnelle en étiquette « 1 » ; et l’arithmétique du cadastre porte la loi nue : élever au carré efface l’écho. Dans chaque cas, <em>« une connexion convertie en objet, au prix exact de ce que l’objet ne porte plus »</em>. <em>« Le carré n’est pas coupable ; son silence l’est. »</em> La source déclare : L pour la portée, Th pour chaque instance arithmétique.</p>
+<h2 id="le-theoreme-des-fibres-ce-que-le-carre-perd">7.2 Le théorème des fibres : ce que le carré perd</h2>
+<p><strong>É 7.2 [Th] Les fibres du carré sont les paires.</strong> Sur le cadastre {1, …, 9}, les classes d’indiscernabilité de x → x² (lu en racine digitale) sont exactement :</p>
+<table>
+<thead>
+<tr class="header">
+<th>Famille</th>
+<th>Image du carré</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>(1, 8)</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>(2, 7)</td>
+<td>4</td>
+</tr>
+<tr class="odd">
+<td>(4, 5)</td>
+<td>7</td>
+</tr>
+<tr class="even">
+<td>(3, 6, 9)</td>
+<td>9</td>
+</tr>
+</tbody>
+</table>
+<p>Vérification par énumération : 1² = 1 ; 8² = 64 → 10 → 1 ; 2² = 4 ; 7² = 49 → 13 → 4 ; 4² = 16 → 7 ; 5² = 25 → 7 ; 3² = 9 ; 6² = 36 → 9 ; 9² = 81 → 9. Et en général DR(x²) = DR((9 − x)²), puisque (9 − x)² = 81 − 18x + x², qui ne diffère de x² que d’un multiple de 9.</p>
+<p><strong>É 7.3 [L] Une double dérivation.</strong> Ce que le scellement rend indiscernable n’est pas quelconque : ce sont les quatre familles de l’involution, les trois paires d’échos hors axe et l’axe comme famille propre de la clôture. Le corpus définissait les paires par l’involution φ(x) = 9 − x ; le carré les redéfinit indépendamment comme ses propres classes d’effacement. <em>« Deux dérivations sans hypothèse commune, le même objet »</em> : au sens du critère du corpus sur la fabrication des coïncidences (Volume 3), la structure des paires est <em>« un nombre du système, doublement dérivé, et non un nombre de la fenêtre »</em>.</p>
+<p><strong>É 7.4 [Th] Le reçu minimal.</strong> Le reçu nécessaire et suffisant d’un scellement par le carré est l’appartenance de famille : un bit hors de l’axe (quel membre de la paire), un trit sur l’axe (quel membre de {3, 6, 9}). La valeur scellée et le reçu déterminent la racine digitale de l’antécédent de façon unique (vérifié sur 10⁴ entiers).</p>
+<p><em>« Avec son reçu, toute projection est réversible en droit, même quand elle ne l’est plus en acte. »</em> La réponse est plus fine que la question posée en v0.1 : le coût du scellement n’est pas uniforme. <em>« Les rails paient un bit ; l’axe, la famille de la clôture, paie un trit. La géographie du cadastre est aussi une géographie des prix. »</em></p>
+<h2 id="la-regle-de-born-relue">7.3 La règle de Born relue</h2>
+<p><strong>É 7.5 [L] Le carré silencieux de la mécanique quantique.</strong> La mécanique quantique pose |ψ|² comme probabilité et nomme <em>effondrement</em> le passage de l’amplitude à la mesure. Lecture cadastrale : l’amplitude au carré est un scellement non déclaré. L’opération ferme la connexion de phase et ne verse aucun reçu ; l’interprétation s’est construite sur ce manque : l’aléa quantique serait le solde d’un compte dont les pièces justificatives ont été détruites par l’opération elle-même. <em>« Le mystère de la mesure n’est pas dans l’objet ; il est dans la comptabilité. »</em></p>
+<p><strong>É 7.6 [Chantier] Critère de Born.</strong> Si l’aléa est le reçu manquant d’une projection, toute reformulation qui conserve la phase dans un registre externe doit reproduire les statistiques quantiques sans postulat probabiliste additionnel. La source en fait un chantier : transformer ce critère en prédiction datée si un dispositif à registre externe de phase peut être spécifié.</p>
+<h2 id="lidempotence-du-cout-le-prix-se-paie-une-fois">7.4 L’idempotence du coût : le prix se paie une fois</h2>
+<p><strong>É 7.7 [Th] La rotation gratuite.</strong> Le carré restreint à sa propre image {1, 4, 7, 9} est une permutation : 1 et 9 restent fixes, 4 et 7 s’échangent (4² = 16 → 7 ; 7² = 49 → 4). Le second scellement ne détruit rien.</p>
+<p><strong>É 7.8 [Th] L’invariance de la partition.</strong> Pour tout carré itéré x → x<sup>(2</sup>k), la partition en fibres est identique à celle de É 7.2 ; seules les étiquettes d’atterrissage 4 et 7 tournent sous la rotation gratuite. En particulier x⁴ a exactement les mêmes classes d’indiscernabilité que x² : le reçu de la projection composée est le reçu de la première projection, rien de plus. Vérifié pour k de 1 à 6.</p>
+<p><strong>É 7.9 [Th, L] La composition des reçus.</strong> La composition de deux scellements ne verse ni la somme ni le produit des reçus : le premier reçu est plein, le second est vide <strong>[Th]</strong>. Le troisième terme libéré par leur rencontre est la loi elle-même : <em>« le fait structurel qu’une connexion ne se ferme pas deux fois »</em>. <em>« C’est le 1 ⊕ 1 = 3 de la comptabilité des projections : deux actes, et leur relation qui compte comme terme, ici l’idempotence »</em> <strong>[L]</strong> (l’opération 1 ⊕ 1 = 3 est l’objet du Volume 1, <em>La Fondation</em>).</p>
+<p><strong>É 7.10 [L] L’idempotence des projecteurs.</strong> P² = P : mesurer à nouveau dans la même base ne produit rien de neuf et ne coûte rien de neuf. Le postulat de projection de la mécanique quantique est retrouvé <em>« comme arithmétique de deux lignes sur l’anneau : la comptabilité de la mesure était dans la table de multiplication »</em>. Lecture déclarée, adossée à É 7.7 et É 7.8.</p>
+<h2 id="le-contenu-du-sceau-le-nud-des-flancs-et-les-murs">7.5 Le contenu du sceau : le nœud des flancs et les murs</h2>
+<p><strong>É 7.11 [Th] Le sceau contient la relation plus l’unité.</strong> Pour tout n, n² = (n − 1)(n + 1) + 1 : le carré du centre est exactement le nœud de ses deux flancs, augmenté de l’unité (vérifié jusqu’à 10⁵ ; c’est l’identité (n − 1)(n + 1) = n² − 1).</p>
+<p><em>« Avant que le centre ne puisse se sceller, ses voisins ont déjà noué leur relation ; le sceau n’invente rien, il absorbe le nœud et signe du +1 de la relance. La relation devance l’axe. »</em> <strong>[L]</strong></p>
+<p><strong>É 7.12 [Th] Le cas fondateur 5-6-7.</strong> Dans la grille 234 / 567 / 891 (chapitre 3, É 3.21), dont les colonnes sont le rail G (2, 5, 8), l’axe (3, 6, 9) et le rail D (4, 7, 1), l’axe est la colonne mitoyenne. Le 5 et le 7 habitent la même rangée ; le 6 est entre eux ; leur nœud vaut 5 × 7 = 35 = 6² − 1, un cran sous le sceau du mur. L’orbite du doublement le confirme en dynamique : 5, 1, 2, 4, 8, 7 (les deux rails entiers, l’axe jamais touché). <em>« Le 5 atteint le 7 par le couloir, jamais à travers le mur. »</em> <strong>[L]</strong> pour cette image.</p>
+<p><strong>É 7.13 [Th] Le joint des jumeaux.</strong> Tout couple (6m − 1, 6m + 1) de la grille se noue en (6m − 1)(6m + 1) = 36m² − 1, qui laisse le reste 35 dans la division par 36 et a pour racine digitale 8 = φ(1), toujours. Vérifié sur les 204 couples de premiers jumeaux inférieurs à 10⁴ (en excluant (3, 5), qui n’est pas de cette forme). C’est l’équation de joint du Tome I de la Théorie des nombres (Théorème 14 ; Volume 4), relue comme comptabilité du sceau : <em>« chaque paire de jumeaux de l’univers grave sa relation un cran sous le carré de son mur, et tous les nœuds portent la même adresse, l’ancre 8. »</em></p>
+<p>Démonstration de la racine digitale : 36m² est multiple de 9, donc 36m² − 1 laisse le reste 8 dans la division par 9.</p>
+<p><strong>É 7.14 [L] La lecture des murs.</strong> Tout est déterministe localement : la formule de repliement (chapitre 3, É 3.13) le montre en arithmétique exacte. Mais voir à travers le mur exigerait le rang que le pli a jeté, et le pli est structurel : tout observateur interne a un registre fini, la mémoire requise croît d’un bit par tour, le chaos est exactement le déficit. <em>« Le déterminisme, plus la finitude de tout regard interne, produit nécessairement des murs »</em> ; ce qui se passe derrière un mur a, pour l’observateur, toutes les propriétés de l’aléa sans en avoir la substance. <em>« Le déterminisme est le créateur de l’illusion du chaos, par nécessité structurelle. La nature n’oublie rien ; c’est le regard qui est muré, par théorème et non par malchance. »</em> La source renvoie au livre en chantier sur ce point (Volume 3).</p>
+<h2 id="la-regle-notification-au-carre">7.6 La règle : notification au carré</h2>
+<p><strong>É 7.15 [L] La règle du reçu.</strong> <em>« Toute projection émet son reçu ; conserver est gratuit et silencieux, projeter se déclare. »</em> Chaque scellement (élévation au carré, réduction par un module, arrondi, échantillonnage, réduction, étiquetage) verse au registre quatre choses : l’<em>acte</em>, le <em>pivot</em>, le <em>versement</em> (spécifié par É 7.4 et É 7.11 : l’appartenance de famille) et la <em>date</em> (le rang du cycle).</p>
+<p>Le recouvrement avec les deux zéros du corpus : le carré silencieux est un <em>zéro d’exhaustion</em>, il consomme la connexion sans rien déposer ; le carré notifié est un <em>zéro de clôture</em>, il ferme en versant, et le registre empile la mémoire que la valeur de sortie ne peut plus porter. <em>« La mesure devient une transaction avec facture ; la probabilité change de statut, propriété du registre perdu et non du monde. »</em></p>
+<h2 id="chantiers">7.7 Chantiers</h2>
+<p><strong>É 7.16 [Chantier] Trois points restants.</strong> 1. Le critère de falsification de la lecture de Born, à transformer en prédiction datée (É 7.6). 2. La jonction avec <em>Le Prix de la Vitesse</em> et <em>Le Corps comptable</em>, où le même principe (<em>toute traversée se paie, tout paiement s’inscrit</em>) opère aux échelles physique et biologique (Volume 3). 3. L’extension du théorème des fibres aux autres scellements (la réduction de Gauss, l’arrondi de Stevin) : chacun a-t-il ses familles d’indiscernabilité propres, et sont-elles cadastrales ?</p>
+<p>Le document publie la grammaire de la règle ; il précise que ses incarnations techniques ne font pas l’objet de la publication.</p>
+<p>Journal de vérification de la source (24 août 2026), refait en Annexe D : fibres de x → x² énumérées, égales aux quatre familles ; reconstruction unique valeur + reçu sur 10⁴ entiers ; carré sur {1, 4, 7, 9} vérifié permutation (1)(9)(4 7) ; fibres de x⁴ identiques à celles de x² ; invariance pour x<sup>(2</sup>k), k = 1 à 6 ; DR(x²) = DR((9 − x)²) sur les huit positions ; cycle du doublement {1, 2, 4, 8, 7, 5} ; atterrissage des carrés dans {1, 4, 7, 9}.</p>
+
+</main>
+<nav class="chapnav"><span class="prev"><a href="07-chapitre-6-l-autre-triangle.html">← Chapitre 6. L&#x27;autre triangle</a></span><a class="toc" href="index.html">Sommaire du volume</a><span class="next"><a href="09-chapitre-8-les-operations-oubliees-et-le-battement.html">Chapitre 8. Les opérations oubliées et le battement →</a></span></nav>
+<footer class="colophon"><p>Corpus ARC, Filipe Bastos, <a href="https://creativecommons.org/licenses/by/4.0/deed.fr" rel="license">CC BY 4.0</a>.</p></footer>
+</body>
+</html>

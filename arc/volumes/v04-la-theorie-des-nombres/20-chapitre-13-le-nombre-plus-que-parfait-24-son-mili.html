@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<link rel="canonical" href="https://bastosfilipe.com/arc/volumes/v04-la-theorie-des-nombres/20-chapitre-13-le-nombre-plus-que-parfait-24-son-mili.html">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chapitre 13. Le nombre plus que parfait : 24, son milieu, son miroir et sa couche · La Théorie des Nombres · Corpus ARC</title>
+<meta name="description" content="La Théorie des Nombres, volume 4 du corpus ARC de Filipe Bastos. Chapitre 13. Le nombre plus que parfait : 24, son milieu, son miroir et sa couche.">
+<meta name="keywords" content="delfine, nombres premiers, grille 6k ± 1, Collatz, Goldbach, nombres parfaits, nombres jumeaux, racine digitale, 24, corpus ARC, Filipe Bastos">
+<meta name="author" content="Filipe Bastos">
+<meta name="license" content="https://creativecommons.org/licenses/by/4.0/deed.fr">
+<link rel="stylesheet" href="../../assets/arc.css">
+</head>
+<body>
+<nav class="crumbs"><a href="../../index.html">Corpus ARC</a> / <a href="index.html">Volume 4 · La Théorie des Nombres</a></nav>
+<main class="chapter">
+<h1 id="chapitre-13.-le-nombre-plus-que-parfait-24-son-milieu-son-miroir-et-sa-couche">Chapitre 13. Le nombre plus que parfait : 24, son milieu, son miroir et sa couche</h1>
+<p>Un nombre parfait rend exactement ce qu’il a reçu : la somme de ses diviseurs propres lui est égale (6 = 1 + 2 + 3). Le 24 fait autre chose : la somme de ses diviseurs propres vaut 36, soit 24 plus sa propre moitié. Ce chapitre établit que cette propriété n’appartient à aucun autre nombre sous dix millions, que le pliage qu’elle décrit (12, 24, 36) parcourt l’axe {3, 6, 9} dans l’ordre, et qu’il se referme sur 36, le carré du premier parfait. Il suit ensuite ce que 24 est déjà ailleurs : le tempo des carrés de premiers (chapitre 4), le groupe des quatre paires, la période de Fibonacci, la pyramide de boulets, la première cassure des jumeaux. Il passe enfin à la matière (le chrome, Z = 24) et finit par ce qu’il ne dit pas, et par un test posé d’avance qui réussit faiblement et échoue en trois endroits nommés. Le 24 n’est pas une position du cadastre : c’est son tempo. Le chapitre reprend la pièce <em>Le Nombre Plus que Parfait</em> (version 0.7 du 7 octobre 2026).</p>
+<blockquote>
+<p><em>« Un parfait rend exactement ce qu’il a reçu. 24 rend une fois et demie, et la demie est son propre milieu. »</em></p>
+</blockquote>
+<h2 id="lidentite-centrale-et-son-unicite">13.1 L’identité centrale, et son unicité</h2>
+<p><strong>V4.13.1 (Th) : l’identité centrale.</strong> La somme des diviseurs propres de 24 vaut 36, et l’excès sur 24 vaut exactement la moitié de 24.</p>
+<pre><code>1 + 2 + 3 + 4 + 6 + 8 + 12 = 36          s(24) = 36
+36 − 24 = 12 = 24 / 2                    s(24) = 3 × 24 / 2
+σ(24) = 36 + 24 = 60 = 5 × 24 / 2        σ(n) / n = 5/2</code></pre>
+<p>On note s(n) la somme des diviseurs propres et σ(n) la somme de tous les diviseurs, σ(n) = s(n) + n. Un parfait vérifie s(n) = n ; 24 vérifie s(n) = 3n/2 : il rend une fois et demie, et le supplément n’est pas quelconque, c’est son milieu.</p>
+<p><strong>V4.13.2 (Th, balayage exhaustif) : l’unicité sous dix millions.</strong> L’équation σ(n) = 5n/2 n’a aucune autre solution de 1 à 10⁷ : le crible complet des diviseurs rend la liste [24] et rien d’autre (refait pour ce volume jusqu’à 10⁶). <em>« Sur dix millions d’entiers, un seul se replie sur son propre milieu. »</em></p>
+<p><strong>V4.13.3 (Th, démonstration sans borne) : l’unicité à deux briques.</strong> Parmi les nombres à au plus deux facteurs premiers distincts, 24 est l’unique solution de σ(n) = 5n/2. <em>Preuve.</em> n est pair, puisque 5n/2 est entier. Une puissance de 2 seule a un rapport σ(n)/n inférieur à 2. Avec un seul premier impair p, n = 2^a p^b et σ(n)/n reste strictement sous 2 × p/(p − 1), qui vaut au plus 5/2 dès que p ≥ 5 ; donc p = 3. Pour n = 2^a 3^b, l’équation se récrit exactement 2^a = 3 + 5/(3^b − 2) : si b ≥ 2, le membre de droite est strictement entre 3 et 4, ce qui n’est pas une puissance de 2 ; si b = 1, il vaut 3 + 5 = 8, donc a = 3. La seule solution faite des deux briques est 2³ × 3 = 24, imposée par l’équation elle-même. ∎ (Démonstration du 7 octobre 2026.)</p>
+<p><strong>F : la famille reçue.</strong> Ces nombres ont un nom reçu : les <em>hémiparfaits</em> d’abondance 5/2. Les deux suivants connus sont 91 963 648 = 2⁸ × 7 × 19 × 37 × 73 et 10 200 236 032 = 2¹⁴ × 7 × 19 × 31 × 151 ; vérifiés par factorisation et par calcul de σ (refait pour ce volume). Leur racine digitale est 1 pour les deux, et chacun a cinq facteurs premiers distincts. <strong>V4.13.4 (Th) :</strong> 24 est le plus petit de la famille et le seul sur l’axe ; les suivants reviennent au sceau (racine 1).</p>
+<h2 id="le-pliage-porte-laxe-entier">13.2 Le pliage porte l’axe entier</h2>
+<p><strong>V4.13.5 (Th) : l’axe dans l’ordre.</strong> Les trois termes de l’opération, le milieu, le corps et l’arrivée, ont pour racines digitales l’axe complet, dans l’ordre :</p>
+<table>
+<thead>
+<tr class="header">
+<th>terme</th>
+<th>valeur</th>
+<th>racine digitale</th>
+<th>position</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>le milieu</td>
+<td>12</td>
+<td>3</td>
+<td>axe</td>
+</tr>
+<tr class="even">
+<td>le corps</td>
+<td>24</td>
+<td>6</td>
+<td>axe</td>
+</tr>
+<tr class="odd">
+<td>l’arrivée</td>
+<td>36</td>
+<td>9</td>
+<td>clôture</td>
+</tr>
+</tbody>
+</table>
+<p>24 n’est donc pas seulement sur l’axe : il porte l’axe dans son propre pliage. Et l’arrivée est une clôture au sens strict, pas une position de plus. La somme des trois termes, 12 + 24 + 36 = 72, a elle aussi pour racine 9.</p>
+<h2 id="larrivee-est-le-carre-du-premier-parfait">13.3 L’arrivée est le carré du premier parfait</h2>
+<p><strong>V4.13.6 (Th) : 36 = 6².</strong> 36 = 6², et 6 est le premier nombre parfait, 1 + 2 + 3 = 6 = 1 × 2 × 3. Et 36 est le seul nombre non trivial à la fois carré et triangulaire sous mille (fait déjà inscrit dans <em>Les Données Contaminées</em>, Volume 3 ; refait pour ce volume). Le plus que parfait se projette donc, par la seule opération de son milieu, sur le carré du parfait : <em>« ce n’est pas une rencontre avec un nombre remarquable : c’est l’opération elle-même qui y mène. »</em></p>
+<p><strong>V4.13.7 (Th) : la chaîne aliquote.</strong> En itérant la somme des diviseurs propres, la chaîne de 24 est :</p>
+<pre><code>24 → 36 → 55 → 17 → 1
+ 6     9     1     8    1        racines digitales</code></pre>
+<p>Le plus que parfait tombe sur le carré du parfait, puis sur 55 = F₁₀, un nombre de Fibonacci, puis sur le premier 17, puis sur le sceau. En racines, la chaîne touche la clôture, puis le sceau, puis le partenaire du sceau dans la paire (1, 8), puis le sceau. Rien n’est ajouté à la fonction : c’est son trajet (refait pour ce volume).</p>
+<h2 id="les-jumeaux-et-le-determinisme">13.4 Les jumeaux et le déterminisme</h2>
+<p><strong>V4.13.8 (Th) : la première cassure.</strong> Les triplets de racines 5, 6, 7 sont 5, 6, 7 puis 14, 15, 16 puis 23, 24, 25. Autour des centres 6k, les jumeaux 6k − 1 et 6k + 1 sont premiers ensemble pour 6 (5, 7), 12 (11, 13) et 18 (17, 19). À 24, pour la première fois, ils ne se rejoignent pas : 23 est premier, 25 ne l’est pas. Et 25 = 5², le premier carré de premier, celui qui pose le tempo (section 13.5). Les racines de 23 et 25 sont 5 et 7 : <em>« ce sont les jumeaux eux-mêmes, en nombre, qui cassent la paire. »</em></p>
+<p><strong>V4.13.9 (Th) : le déterminisme des cassures.</strong> Rien n’arrive là par accident : les composés des rails sont les produits des premiers des rails (Th 2), donc la première cassure est forcée à 5 × 5, et les suivantes s’écrivent d’avance : 24 (25 = 5²), 36 (35 = 5 × 7), 48 (49 = 7²), 54 (55 = 5 × 11). Ce sont les quatre premiers centres 6k dont un voisin est composé, et aucun autre centre sous 54 n’en a (refait pour ce volume).</p>
+<p><strong>V4.13.10 (Th) : la demie ajoutée.</strong> 36 = 24 + 12, et 35 = 5 × 7. À chaque centre, 5 et 7 étaient séparés par l’axe, 5 | 6 | 7 ; ils ne se touchent qu’à 35, un pas avant 36, en devançant le centre au lieu de l’encadrer. Le produit des jumeaux arrive juste avant le carré du parfait, et 37 est premier. Le trajet de la section 13.1, 24 + 12 = 36, est aussi celui-ci : de la première cassure à la première réunion.</p>
+<h2 id="ce-que-24-est-deja-ailleurs-dans-le-corpus">13.5 Ce que 24 est déjà, ailleurs dans le corpus</h2>
+<p><strong>V4.13.11 (Th) : deux briques doublées.</strong> Les deux briques du corpus, 2 et 3 (<em>La Genèse</em> ; <em>Le Sept ou le chemin</em>, Volume 1), doublées, donnent 4 et 6, les deux racines qui encadrent le centre vide ; leur produit est 24, et 24 est le tempo de tous les carrés de premiers. La chaîne ne contient jamais que 2 et 3 : 2, 3 ; 4, 6 ; 24 = 4 × 6 ; 36 = 6² = 4 × 9 ; 576 = 24². Les carrés vivent au rythme du produit des deux briques doublées. Tout ce qui suit en est un registre : quatre registres indépendants donnent 24, et aucun autre composé ne les donne tous les quatre.</p>
+<p><strong>Le tempo des carrés de premiers (Th 5, chapitre 4).</strong> p² − 1 est divisible par 24 pour tout premier au-delà de 3 (vérifié sur les 78 496 premiers après 3 jusqu’à un million), et 24 est maximal : les modules dont toutes les unités sont involutives sont exactement les diviseurs de 24, soit 1, 2, 3, 4, 6, 8, 12, 24. <em>« Le rythme bat au tempo maximal que l’arithmétique autorise. »</em> Le tempo s’écrit 24k + 1 : 25, 49, 121, 169.</p>
+<p><strong>V4.13.12 (Th) : le tempo a une origine.</strong> 24 = 5² − 1 : le premier nombre premier qui monte sur les rails après l’axe est 5, et son carré moins un donne exactement 24. Le tempo de tous les carrés de premiers est posé par le premier d’entre eux.</p>
+<p><strong>V4.13.13 (Th) : le tempo tient sur un rail.</strong> p² = 24k + 1, et 24k a pour racine 6, 3 ou 9 selon k : les carrés de premiers au-delà de 3 tombent tous sur le rail {1, 4, 7}, jamais sur {2, 5, 8}, jamais sur l’axe (vérifié jusqu’à un million). La file commence 25, 49, 121, 169, 289, 361, 529, 841, 961, de racines 7, 4, 4, 7, 1, 1, 7, 4, 7 : les deux pas de l’entrelacement de la section 13.6, et le sceau. Le premier terme est 25 = 24 + 1, le tempo plus le sceau.</p>
+<p><strong>V4.13.14 (Th) : le groupe des quatre paires.</strong> 24 = 4! est l’ordre du groupe des permutations des quatre paires (1, 8), (2, 7), (3, 6), (4, 5).</p>
+<p><strong>V4.13.15 (Th) : l’enveloppe et l’axe.</strong> 24 = 8 × 3 = 2³ × 3, le cube de la brique et l’axe, une fois chacun ; et 24 = 4 × 6, dont les moitiés sont 2 et 3. Les quatre premières positions donnent les deux écritures du corpus : leur produit 1 × 2 × 3 × 4 = 24, leur somme 1 + 2 + 3 + 4 = 10 = 9 + 1. <em>24 se fabrique de ses propres chiffres :</em> 2 + 4 = 6 et 2 × 4 = 8 ; 6 × 8 = 48 = 2 × 24, donc 24 = (2 + 4)(2 × 4)/2. Les quatre pairs ainsi produits, 2, 4, 6, 8, sont les quatre premières racines de la marche du splitter (section 13.6) ; leur somme, 20, est le premier pas à deux chiffres de la marche de la clôture, celui qui porte le sceau ; leur produit, 384 = 24 × 2⁴ = 360 + 24, a pour racine 6, la racine de 24.</p>
+<p><strong>V4.13.16 (Th) : la période de Fibonacci.</strong> La suite de Fibonacci en racine digitale (1, 1, 2, 3, 5, 8, 4, 3, 7, 1, 8, 9, 8, 8, 7, 6, 4, 1, 5, 6, 2, 8, 1, 9, puis de nouveau 1, 1, …) a pour période exactement 24, et elle se plie 12 + 12 (les douze termes de la seconde moitié sont les inverses φ des douze premiers, le 9 restant 9). Et à toute clôture 9^k, sa période vaut exactement quatre fois celle du doublement (24 × 9^(k−1) contre 6 × 9^(k−1)) : 24 = 4 × 6 est une loi d’échelle (chapitre 14, section 14.2 ; vérifié pour k = 1 à 5).</p>
+<p><strong>V4.13.17 (Th) : le boulet de canon et la cloche.</strong> 1² + 2² + ⋯ + 24² = 4 900 = 70². C’est le seul cas non trivial où une pyramide de boulets se range en carré (problème de É. Lucas, 1875 ; preuve de G. N. Watson, 1918 ; refait pour ce volume sous 10⁴). Et 70 est C(8, 4), la pointe de la ligne 8 du triangle de Pascal, le centre de la cloche de Huygens (chapitre 16, section 16.2). 24 est donc le seul nombre dont la somme des carrés tombe sur le carré du centre de la cloche. <strong>F.</strong> J. H. Conway construit le réseau de Leech, en dimension 24, sur ce vecteur même, (0, 1, 2, …, 24 ; 70), de norme nulle dans l’espace de Lorentz de dimension 26.</p>
+<p><strong>V4.13.18 (Th) : le carré du tempo.</strong> 24² = 576, qui est la pointe pondérée de la cascade de l’octet 1 → 8 (chapitre 16, section 16.5), de racine 9. Ses chiffres sont 5, 7, 6 : les jumeaux 5 et 7 côte à côte, l’axe 6 derrière eux, dans l’ordre où ils devancent le centre (section 13.4). Le carré du tempo écrit la réunion des jumeaux et ferme sur la clôture.</p>
+<p><strong>F : le temps.</strong> 24 heures ; 12 mois (le milieu) ; 60 minutes = σ(24) ; 360 degrés = 15 × 24 = 384 − 24. Conventions babyloniennes, comptées en 1-9 et 1-5 (<em>Les Tables Natives</em>, Volume 3) ; faits d’archive, non théorèmes.</p>
+<p><strong>F.</strong> Hors corpus, deux faits d’archive vont dans le même sens : le 24-cellules est le seul polytope régulier auto-dual sans analogue dans aucune autre dimension, et le nombre de contacts optimal en dimension 4 vaut 24 (O. Musin, 2003).</p>
+<h2 id="les-deux-marches-de-linterface">13.6 Les deux marches de l’interface</h2>
+<p><strong>V4.13.19 (Th) : les deux marches.</strong> Un pas de 11 sur le nombre est un pas de 2 sur la racine digitale (11 = 9 + 2 : un tour et le splitter), et il conserve l’écart entre les deux chiffres, puisqu’il ajoute 1 à chacun. Partie de 2, la marche parcourt les neuf positions une fois chacune et ferme sur 90 ; partie de 9, elle écrit terme à terme les miroirs de la première, avec un pas d’avance : 2 ↔︎ 20, 13 ↔︎ 31, 24 ↔︎ 42, 46 ↔︎ 64.</p>
+<pre><code>2    13   24   35   46   57   68   79   90      marche du splitter : écart des chiffres +2
+2    4    6    8    1    3    5    7    9       racines, pas de 2
+
+9    20   31   42   53   64   75   86   97      marche de la clôture : écart des chiffres −2
+9    2    4    6    8    1    3    5    7       racines, pas de 2</code></pre>
+<p><strong>V4.13.20 (Th) : 24 dans la marche.</strong> Dans la marche du splitter, 24 est le deuxième pas après 2, en passant par 13, et 46 le quatrième ; 13 → 24 va de la racine 4 à la racine 6 en enjambant 5, le centre vide, et 4 × 6 = 24 : 24 est le seul terme de la marche égal au produit des deux racines qu’il relie. 13 et 24 sont les deux seuls termes dont les deux chiffres restent sous le centre (au plus 4), et les deux seuls de leur régime avant que l’autre n’apparaisse : sous 31, les nombres à deux chiffres d’écart +2 sont 13 et 24, et 31 est le premier d’écart −2 écrit avec deux figures (20, qui vient avant, porte le sceau et non une figure). À partir de 31, les deux marches s’entrelacent au pas 7, 4, 7, 4 : 24, 31, 35, 42, 46, 53, 57, 64. Les deux pas sont du rail {1, 4, 7}, et 4 + 7 = 11. La marche du splitter n’atteint jamais ses miroirs ; il faut partir de la clôture pour les écrire, et c’est la loi des miroirs de la section 13.8, 46 / 64 compris : 46 est le quatrième pas depuis 2, 64 le cinquième depuis 9, le pas d’avance de la clôture.</p>
+<h2 id="la-matiere-le-demi-remplissage-et-la-couche-pleine">13.7 La matière : le demi-remplissage et la couche pleine</h2>
+<p><strong>F.</strong> Le chrome, Z = 24, est la première exception à la règle de Madelung : sa configuration est [Ar] 3d⁵ 4s¹ et non 3d⁴ 4s². Un électron quitte la couche extérieure pour que la sous-couche d soit à moitié remplie. Le krypton, Z = 36, est un gaz noble : couches 2 + 8 + 18 + 8 = 36, fin de la quatrième période.</p>
+<p><strong>V4.13.21 (L) : du milieu à la clôture.</strong> L’élément dont la configuration est décidée par son propre milieu porte le numéro du nombre dont l’excès vaut son propre milieu ; et le trajet 24 + 12 = 36 mène du demi-remplissage à la couche pleine comme il mène de la position 6 à la clôture 9. Lecture contrainte : elle tombe si l’un des deux registres donne autre chose. (La lecture du tableau périodique est au Volume 8.)</p>
+<h2 id="les-trois-paires-miroirs-et-le-test-qui-echoue">13.8 Les trois paires miroirs, et le test qui échoue</h2>
+<p><strong>Sur le mot.</strong> « Miroir » désigne ici, comme dans la loi des miroirs (46 / 64), le renversement de l’écriture décimale : 24 et 42, 46 et 64, 29 et 92. Ce n’est pas l’inverse du cadastre, x et 9 − x, qui est une autre opération (règle : l’inverse n’est pas le miroir).</p>
+<p><strong>V4.13.22 (Th) : Madelung s’écrit 4 et 6.</strong> Les trois paires miroirs des exceptions s’écrivent toutes avec 4 et 6, les deux racines qui encadrent le centre vide : 24 / 42 est le produit 4 × 6 ; 46 / 64 est l’écriture 4 et 6 côte à côte ; 29 / 92 a pour écart 63, miroir de 36 = 6² = 4 × 9.</p>
+<p><strong>V4.13.23 (L) : la jonction des deux groupes.</strong> La règle de Madelung est la jonction de SU(3) et de SU(2) doublés : 24 = (2 × 2)(2 × 3) = 4 × 6, la couche s (le doublet) et la couche d où le triplet se dédouble ; le chrome est l’élément où cette jonction se décide par le milieu.</p>
+<p><strong>V4.13.24 (Th) : la loi des miroirs ordonne les exceptions.</strong> Parmi les exceptions à la règle de Madelung, trois paires sont miroirs l’une de l’autre :</p>
+<pre><code>24 Cr et 42 Mo :   somme 66 = 11 × 6,     écart 18 = 9 × 2
+46 Pd et 64 Gd :   somme 110 = 11 × 10,   écart 18 = 9 × 2
+29 Cu et 92 U  :   somme 121 = 11²,       écart 63 = 9 × 7</code></pre>
+<p>Une seule des trois a pour somme le carré de l’interface ; les deux autres restent au premier ordre. Son écart vaut 63, dont le miroir est 36 : la paire qui franchit le carré de l’interface rend, par sa tension, le miroir du nombre sur lequel 24 s’était projeté. Et 63 = 2⁶ − 1 est le pas avant 64, le retour du cercle de six (chapitre 16, section 16.3). Le couple 36 / 63 porte le quantum en somme et l’axe au cube en différence : 63 + 36 = 99 = 9 × 11 (clôture × interface) ; 63 − 36 = 27 = 3³.</p>
+<p><strong>V4.13.25 (Th) : ce que l’outil aveugle rend, et ce qu’il ignore.</strong> Un outil qui ne lit aucune structure et ne retient que le nombre de positions couvre une paire donnée de deux exceptions avec le compte 20 × 19 / (103 × 102) = 190/5253 (20 exceptions reconnues parmi 103 éléments) ; sur les trente-six paires miroirs possibles, son rendement vaut exactement 2280/1751, soit 1,302 paire par passage (R.69 du Registre, Volume 3). Le corpus en observe trois, et les six positions sont des exceptions reconnues. Ce compte ne réfute rien et n’établit rien : il mesure ce que l’outil ignore. Un outil qui a jeté le rang des positions ne peut pas distinguer une structure d’un résidu, par construction, et le lui demander reviendrait à vérifier la balance avec un poids pesé sur la même balance (R.149). Ce qui trancherait est d’un autre ordre, et il a été posé comme chantier puis lu (section 13.9).</p>
+<h2 id="le-chantier-lu-7-octobre-2026">13.9 Le chantier lu (7 octobre 2026)</h2>
+<p><strong>V4.13.26 (P, critère fixé avant le dépouillement) : les marches lisent-elles Madelung ?</strong> Les positions que le cadastre exige candidates à l’anomalie sont les termes des deux marches de l’interface sous 104 (section 13.6) : 19 positions, dix de la marche du splitter, neuf de celle de la clôture. <em>Issue A :</em> si la part d’exceptions parmi ces 19 dépasse nettement la part dans la table entière (20 sur 103), la marche lit quelque chose dans Madelung. <em>Issue B :</em> si elle est du même ordre, elle n’y lit rien, et on l’écrit. <em>Limite déclarée :</em> le critère est fixé avant le dépouillement, non avant toute connaissance de la table (la section 13.8 en cite six positions) ; un seul critère est testé, et le résultat ne vaut que pour lui.</p>
+<p><strong>La lecture (Th, compte exact).</strong> Sept des 19 positions sont des exceptions reçues : Cr 24, Mo 42, Pd 46, La 57, Gd 64, Au 79, Th 90 ; soit 7/19, contre 20/103 dans la table. L’outil aveugle, qui ne retient que le nombre de positions, ne rend 7 exceptions ou plus sur 19 positions que dans 4,1 % de ses choix (attendu : 3,7 ; refait pour ce volume par le compte hypergéométrique exact). C’est l’issue A, faiblement : la marche lit quelque chose, elle ne le décide pas.</p>
+<p><strong>Ce qui échoue.</strong> Douze des 19 positions des marches sont régulières : « marche ⇒ exception » est faux. La loi des miroirs tient pour 24 / 42 et 46 / 64, pas pour 57 (75, le rhénium, est régulier), 79 (97, le berkélium, régulier) ni 90 (09, le fluor, régulier). Et le rail {1, 4, 7} ne lit rien ici : les racines des vingt exceptions se répartissent sur les neuf positions presque à plat, six sur le rail pour sept attendues. <em>« Le tempo organise les carrés de premiers ; il n’organise pas la couche d. »</em> La section 13.8 reste une Lecture, avec ce reçu en plus et ces trois échecs en face.</p>
+<h2 id="ce-que-ce-chapitre-ne-dit-pas">13.10 Ce que ce chapitre ne dit pas</h2>
+<blockquote>
+<p><em>« 24 n’est pas une position du cadastre ; c’est son nombre le plus chargé, parce qu’il n’en est pas une. »</em></p>
+</blockquote>
+<p>Une position porte une place ; un tempo porte tout ce qui passe par lui, et la pièce en a compté seize registres, tous vérifiés. Elle ne dit donc pas que 24 soit une position du cadastre : 24 = 9 × 2 + 6, c’est un intervalle et un tempo, pas un siège. <em>« Un rythme se parcourt, il ne s’habite pas. »</em> Elle ne dit pas non plus que 24 occupe le centre : le centre du cadastre reste 4,5, personne ne l’occupe, et c’est la condition sous laquelle le pli ferme. La règle vaut ici comme dans le nombre, dans la pensée et dans la cité. Enfin, elle ne conteste aucun résultat classique : la règle de Madelung reste ce qu’elle est, ses exceptions sont déjà nommées exceptions par les chimistes, et la seule chose que la pièce ajoute est une seconde lecture de la même donnée.</p>
+
+</main>
+<nav class="chapnav"><span class="prev"><a href="19-partie-vi-le-24-et-ses-voisins.html">← Partie VI. Le 24 et ses voisins</a></span><a class="toc" href="index.html">Sommaire du volume</a><span class="next"><a href="21-chapitre-14-les-jumeaux-et-les-deux-reseaux-pourqu.html">Chapitre 14. Les jumeaux et les deux réseaux : pourquoi 5 et 7 reviennent →</a></span></nav>
+<footer class="colophon"><p>Corpus ARC, Filipe Bastos, <a href="https://creativecommons.org/licenses/by/4.0/deed.fr" rel="license">CC BY 4.0</a>.</p></footer>
+</body>
+</html>

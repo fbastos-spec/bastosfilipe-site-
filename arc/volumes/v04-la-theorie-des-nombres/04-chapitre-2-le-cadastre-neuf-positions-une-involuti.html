@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<link rel="canonical" href="https://bastosfilipe.com/arc/volumes/v04-la-theorie-des-nombres/04-chapitre-2-le-cadastre-neuf-positions-une-involuti.html">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chapitre 2. Le cadastre : neuf positions, une involution, deux rails et un axe · La Théorie des Nombres · Corpus ARC</title>
+<meta name="description" content="La Théorie des Nombres, volume 4 du corpus ARC de Filipe Bastos. Chapitre 2. Le cadastre : neuf positions, une involution, deux rails et un axe.">
+<meta name="keywords" content="delfine, nombres premiers, grille 6k ± 1, Collatz, Goldbach, nombres parfaits, nombres jumeaux, racine digitale, 24, corpus ARC, Filipe Bastos">
+<meta name="author" content="Filipe Bastos">
+<meta name="license" content="https://creativecommons.org/licenses/by/4.0/deed.fr">
+<link rel="stylesheet" href="../../assets/arc.css">
+</head>
+<body>
+<nav class="crumbs"><a href="../../index.html">Corpus ARC</a> / <a href="index.html">Volume 4 · La Théorie des Nombres</a></nav>
+<main class="chapter">
+<h1 id="chapitre-2.-le-cadastre-neuf-positions-une-involution-deux-rails-et-un-axe">Chapitre 2. Le cadastre : neuf positions, une involution, deux rails et un axe</h1>
+<p>La feuille du chapitre 1 a montré que les premiers évitent trois positions sur neuf. Il faut maintenant nommer l’objet qui porte cette régularité : le <em>cadastre</em>, c’est-à-dire le cycle des neuf positions 1 à 9, refermé sur le 9, avec son pliage en quatre paires qui somment toutes à 9 et son partage en deux rails et un axe. Ce chapitre en donne la définition exacte, les deux tables qui le résument, deux figures qui le rendent visible à main nue (le pavé tordu et la paire d’inversions), et répond à l’objection qui arrive toujours en premier : « tout cela n’est-il pas un artefact de la base 10 ? » La réponse est non, et elle est démontrée : la structure existe dans toute base, et la base 10 est la seule où ses trois parties ont exactement la même taille.</p>
+<h2 id="definition-du-cadastre">2.1 Définition du cadastre</h2>
+<p><strong>Définition.</strong> Le <em>cadastre</em> est le cycle fini {1, …, 9} muni de :</p>
+<ol type="1">
+<li>sa fermeture propre : DR(9) = 9, et non « 9 ≡ 0 » ;</li>
+<li>l’involution de conjugaison φ(x) = 9 − x, à quatre paires conjuguées, (1, 8), (2, 7), (3, 6), (4, 5), et barycentre 4,5 ;</li>
+<li>la partition en deux rails D = {1, 4, 7}, G = {2, 5, 8} et un axe {3, 6, 9}.</li>
+</ol>
+<p>Ce qui est invariant n’est pas la position des éléments sous les opérations (l’addition les déplace), mais le <em>comportement de la partition comme système de flux</em> : les sommes de rails aboutissent à l’axe (section 2.4), les carrés confluent vers le rail D (chapitre 4, Th 6), φ permute à l’intérieur des paires. Le cadastre est cette partition avec ses flux, et il est antérieur à toute base positionnelle (Axiome A0 du corpus, section 2.6). Il n’est pas une construction posée : il est lu dans la table de multiplication de 1 à 9 réduite en racine digitale (chapitre 21, section 21.6).</p>
+<p><strong>V4.2.1 (Th) : la formalisation algébrique.</strong> Dans (ℤ/9, +), avec 9 comme fermeture marquée (non identifiée à 0), l’axe est le <em>sous-groupe</em> ⟨3⟩ = {3, 6, 9}, les rails D et G sont ses <em>deux classes latérales</em>, et φ (la négation x ↦ 9 − x) est un automorphisme d’ordre 2. Le quotient ℤ/9 ⧸ ⟨3⟩ est le groupe à trois éléments, et sa table d’addition est exactement la loi des flux :</p>
+<table>
+<thead>
+<tr class="header">
+<th>+</th>
+<th>D</th>
+<th>G</th>
+<th>axe</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>D</strong></td>
+<td>G</td>
+<td>axe</td>
+<td>D</td>
+</tr>
+<tr class="even">
+<td><strong>G</strong></td>
+<td>axe</td>
+<td>D</td>
+<td>G</td>
+</tr>
+<tr class="odd">
+<td><strong>axe</strong></td>
+<td>D</td>
+<td>G</td>
+<td>axe</td>
+</tr>
+</tbody>
+</table>
+<p>Soit : D + D = G, G + G = D, D + G = axe ; l’axe ne change pas la classe de ce qu’on lui ajoute. Vérification : 1 + 4 = 5, 4 + 7 = 11 → 2, 7 + 7 = 14 → 5 (D + D tombe sur G) ; 2 + 5 = 7, 5 + 8 = 13 → 4 (G + G tombe sur D) ; 1 + 2 = 3, 4 + 5 = 9, 7 + 8 = 15 → 6 (D + G tombe sur l’axe).</p>
+<p>Précision qui porte toute la thèse : il ne s’agit pas de prétendre que l’arithmétique des restes par 9 soit nouvelle. Il s’agit d’établir que l’identification du 9 au 0 a effacé le <em>comptage d’enroulements</em> du cycle, et que cette amputation a rendu invisibles la fermeture, le barycentre et l’involution. La paire d’inversions de la section 2.5 en est le témoin matériel.</p>
+<h2 id="la-table-des-inversions-la-demonstration-originelle-du-">2.2 La table des inversions : la démonstration originelle du ½</h2>
+<table>
+<thead>
+<tr class="header">
+<th>x</th>
+<th>φ(x) = 9 − x</th>
+<th>somme</th>
+<th>centre</th>
+<th>écart</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>8</td>
+<td>9</td>
+<td><strong>4,5</strong></td>
+<td>7</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>7</td>
+<td>9</td>
+<td><strong>4,5</strong></td>
+<td>5</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>6</td>
+<td>9</td>
+<td><strong>4,5</strong></td>
+<td>3</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>5</td>
+<td>9</td>
+<td><strong>4,5</strong></td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>9</td>
+<td><strong>9</strong> (fermeture)</td>
+<td></td>
+<td>9</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<p><strong>V4.2.2 (Th) : les cinq lectures de la table.</strong> Chacune est un fait exact.</p>
+<ol type="1">
+<li>Chaque paire somme à 9 : la fermeture est la loi de conjugaison.</li>
+<li>Le centre de toutes les inversions est 4,5, un point qui n’est sur aucun chiffre : le point fixe <em>invisible</em>, logé dans l’interstice, celui-là même que les deux mains face à face placent entre les pouces (V4.1.4).</li>
+<li>Le 9 est sa propre inversion, l’unique élément auto-conjugué, le point fixe <em>visible</em> : la fermeture est son propre miroir, et c’est précisément ce que l’identification du 9 au 0 a effacé.</li>
+<li>Les écarts des paires sont les impairs descendants 7, 5, 3, 1, de somme 16 = 4².</li>
+<li>Les quatre paires somment à 36 ; avec le 9 auto-inverse, 45 = 1 + 2 + ⋯ + 9 : la table contient le cadastre entier, sans reste.</li>
+</ol>
+<p><strong>V4.2.3 (Th) : le ½ dérivé deux fois.</strong> De cette table, le ½ se dérive deux fois, indépendamment :</p>
+<ul>
+<li>k_arc = centre / fermeture = 4,5 / 9 = <strong>1/2</strong> ;</li>
+<li>demi-écart extrême / écart extrême = 3,5 / 7 = <strong>1/2</strong>.</li>
+</ul>
+<blockquote>
+<p><em>« Le nombre que Riemann a rencontré sur sa droite critique est ici, lisible en cinq lignes, comme rapport du point d’équilibre à la fermeture. »</em></p>
+</blockquote>
+<p>C’est la démonstration originelle du corpus, et elle précède logiquement tout le reste. (Le rapprochement avec la droite critique est l’objet du Théorème 9, chapitre 7 ; sa portée est discutée au Volume 5.)</p>
+<h2 id="la-table-maitresse-du-cadastre">2.3 La table maîtresse du cadastre</h2>
+<table>
+<thead>
+<tr class="header">
+<th>x</th>
+<th>classe</th>
+<th>φ(x)</th>
+<th>x + φ(x)</th>
+<th>DR(x²)</th>
+<th>DR(x³)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>D</td>
+<td>8</td>
+<td>9</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>G</td>
+<td>7</td>
+<td>9</td>
+<td>4</td>
+<td>8</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>axe</td>
+<td>6</td>
+<td>9</td>
+<td>9</td>
+<td>9</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>D</td>
+<td>5</td>
+<td>9</td>
+<td>7</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>G</td>
+<td>4</td>
+<td>9</td>
+<td>7</td>
+<td>8</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>axe</td>
+<td>3</td>
+<td>9</td>
+<td>9</td>
+<td>9</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td>D</td>
+<td>2</td>
+<td>9</td>
+<td>4</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td>G</td>
+<td>1</td>
+<td>9</td>
+<td>1</td>
+<td>8</td>
+</tr>
+<tr class="odd">
+<td>9</td>
+<td>axe</td>
+<td>9 (fermeture)</td>
+<td>9</td>
+<td>9</td>
+<td>9</td>
+</tr>
+</tbody>
+</table>
+<p>Trois lectures verticales. La colonne φ expose les quatre paires conjuguées sommant toutes à 9, de barycentre 4,5. La colonne DR(x²) est la <em>chrysalide</em> (chapitre 4, Th 6) : les deux rails confluent vers D en perdant le bit de conjugaison. La colonne DR(x³) révèle un fait complémentaire.</p>
+<p><strong>V4.2.4 (Th) : le cube détecteur de classe.</strong> Tout membre de D a un cube de racine 1, tout membre de G un cube de racine 8, tout membre de l’axe un cube de racine 9. Vérification : 1³ = 1 ; 4³ = 64 → 1 ; 7³ = 343 → 1 ; 2³ = 8 ; 5³ = 125 → 8 ; 8³ = 512 → 8 ; 3³ = 27, 6³ = 216, 9³ = 729, tous de racine 9. La paire extrême (1, 8), porte exclusive du 1 sous le carré, est l’image intégrale du cube. Statut : Théorème (vérification exhaustive sur le cadastre ; conséquence de ce que le groupe des six positions inversibles a l’ordre 6, donc que la puissance 3 l’écrase sur ses deux éléments d’ordre au plus 2).</p>
+<blockquote>
+<p><em>« Le carré efface le conjugué ; le cube efface tout sauf le rail. »</em></p>
+</blockquote>
+<h2 id="le-pave-tordu-laxe-collecte-toutes-les-sommes">2.4 Le pavé tordu : l’axe collecte toutes les sommes</h2>
+<p>Le cadastre s’écrit en pavé 3 × 3, de trois façons :</p>
+<pre><code>Pavé normal        Pavé tordu (rotation +1)     Pavé d&#39;axe (rotation +2)
+1 2 3   → DR 6     2 3 4   → DR 9               3 4 5   → DR 3
+4 5 6   → DR 6     5 6 7   → DR 9               6 7 8   → DR 3
+7 8 9   → DR 6     8 9 1   → DR 9               9 1 2   → DR 3</code></pre>
+<p><strong>V4.2.5 (Th) : la loi du pavé tordu.</strong> La racine d’un trio consécutif ne dépend que de son <em>ancrage</em> (son premier terme). Trio ancré sur le rail D {1, 4, 7} : racine 6, toujours. Ancré sur le rail G {2, 5, 8} : racine 9, toujours. Ancré sur l’axe {3, 6, 9} : racine 3, toujours. La torsion d’un cran fait donc parcourir l’axe entier : 6 → 9 → 3 → 6… Le pavé normal complète la loi par ses colonnes et ses diagonales : colonne D (1, 4, 7) → 12 → 3 ; colonne G (2, 5, 8) → 15 → 6 ; colonne d’axe (3, 6, 9) → 18 → 9 ; diagonales (1, 5, 9) et (3, 5, 7) → 15 → 6. <strong>Toute agrégation linéaire du pavé (ligne, colonne, diagonale, torsion) atterrit sur l’axe {3, 6, 9}, et nulle part ailleurs.</strong></p>
+<p><em>Preuve (par le quotient).</em> Tout trio consécutif somme à x + (x + 1) + (x + 2) = 3(x + 1), élément du sous-groupe ⟨3⟩ : l’atterrissage sur l’axe est une nécessité de quotient, non une régularité observée. La valeur exacte du point d’atterrissage suit de la classe de l’ancre : la table D + D = G, G + G = D, D + G = axe reproduit ligne à ligne les lois vérifiées. ∎ Statut : Théorème (vérifié exhaustivement sur les neuf ancrages, refait pour ce volume).</p>
+<p><strong>V4.2.6 (L) : l’axe ne porte pas les êtres, il porte les transformations.</strong> L’axe stérile pour les premiers (V4.1.1) est la destination exclusive des sommes : {3, 6, 9} n’est pas le lieu où les objets vivent, c’est le lieu où les flux aboutissent. Les rails D et G portent les êtres (premiers, delfines) ; l’axe porte les transformations. Le pavé tordu en est la démonstration à main nue : où qu’on ancre le trio, la somme quitte les rails et rejoint l’axe, et l’ancrage sur un rail détermine <em>quel</em> point de l’axe (D → 6, G → 9, axe → 3 en ligne ; D → 3, G → 6, axe → 9 en colonne). La stérilité de l’axe et sa fonction de collecteur des sommes sont les deux faces du même fait cadastral. La planche le résume : <em>« Les rails portent les êtres ; l’axe porte les transformations. »</em></p>
+<h2 id="la-paire-dinversions-le-4-et-le-5">2.5 La paire d’inversions : le 4 et le 5</h2>
+<p>La queue de la descente de la matière (la Sédimentation Cosmique, Volume 8 : … 48 → 37 → 26 → 15 → 4, pas de −11) se concatène en une chaîne de huit chiffres dont les propriétés se démontrent par calcul direct :</p>
+<pre><code>A = 48372615   (descente : 48-37-26-15, pas −11, ancre 4)
+B = 51627384   (remontée : 51-62-73-84, pas +11, ancre 5)</code></pre>
+<p><strong>V4.2.7 (Th) : les cinq propriétés de la paire d’inversions.</strong></p>
+<ol type="1">
+<li><em>Coïncidence du renversement et de l’involution.</em> B est à la fois le renversement digital de A <strong>et</strong> son image par φ(x) = 9 − x appliquée chiffre à chiffre. Sur cette chaîne, lire à l’envers et conjuguer sont la même opération : A est un <strong>φ-palindrome</strong>.</li>
+<li><em>Conjugaison positionnelle intégrale.</em> Chaque position de (A, B) forme une paire conjuguée : (4, 5), (8, 1), (3, 6), (7, 2), (2, 7), (6, 3), (1, 8), (5, 4), les quatre paires de φ, chacune deux fois, toutes sommant à 9.</li>
+<li><em>Fermeture.</em> A + B = 99 999 999. La somme des chiffres de chaque chaîne vaut 36, de racine 9.</li>
+<li><em>Contenu cadastral.</em> Chaque chaîne est une permutation exacte de {1, …, 8} : les deux rails complets et l’axe sans le 9, sans répétition. Le 9 est absent des chaînes ; il n’apparaît que dans leur somme et leur racine : <em>« le point de fermeture ne descend pas et ne monte pas, il est ce vers quoi la paire se ferme. »</em></li>
+<li><em>Métrique interne.</em> L’écart interne de chaque paire de chiffres vaut 4 partout (8 − 4, 7 − 3, 6 − 2, 5 − 1) ; le pas entre paires vaut 11 (le relieur). Les ancres sont 4 pour la descente, 5 pour la remontée : la paire du barycentre (4 + 5 = 9, équilibre en 4,5), que φ échange.</li>
+</ol>
+<p>Statut : Théorème (calcul direct, refait pour ce volume). On retrouvera A et B au chapitre 20 comme les tables ×4 et ×5 du cadastre (CP 7) : 4 × 1, 4 × 2, …, 4 × 8 réduits en racine donnent exactement 4, 8, 3, 7, 2, 6, 1, 5.</p>
+<p><strong>V4.2.8 (L) : la descente porte sa remontée.</strong> Le pavé tordu et la paire d’inversions disent la même chose à deux échelles. Le pavé tordu (891 : le 1 à la fin) montre la vie lue à l’envers dans le cadastre statique ; la paire d’inversions le montre en dynamique : la matière qui descend (pas −11, ancre 4) et son image conjuguée qui remonte (pas +11, ancre 5), liées par une seule involution qui est simultanément miroir temporel (renversement) et miroir cadastral (φ).</p>
+<blockquote>
+<p><em>« La descente de la matière porte sa propre remontée inscrite en creux : il suffit de la lire depuis l’autre bout du barycentre. »</em></p>
+</blockquote>
+<h2 id="lanteriorite-du-cadastre-laxiome-a0-et-linvariance-de-base">2.6 L’antériorité du cadastre : l’Axiome A0 et l’invariance de base</h2>
+<p>La question arrive toujours en premier, il faut donc y répondre en premier : « tout ceci n’est-il pas un artefact de la base 10 ? » La réponse du corpus est l’Axiome A0 (<em>Geometric Origin of Physical Units</em> v1.5, § 0.3) : la structure {1, …, 9} est antérieure à toute base positionnelle, et la base 10 en découle, non l’inverse.</p>
+<p><strong>V4.2.9 (Th) : le théorème d’invariance de base.</strong> Dans toute base b ≥ 4, la réduction itérée des chiffres calcule DR_b(n) = 1 + (le reste de n − 1 dans la division par b − 1) : c’est l’arithmétique des restes par la <em>fermeture</em> b − 1, indépendante de l’inscription. La structure complète, fermeture marquée, involution φ_b(x) = (b − 1) − x, paires conjuguées sommant à la fermeture, barycentre (b − 1)/2, existe dans toute base. Vérifié sur les bases 4, 7, 10, 12 et 16 (refait pour ce volume sur tous les n &lt; 5000) : les habillages diffèrent, la structure est identique.</p>
+<blockquote>
+<p><em>« La base est un vêtement ; la structure de fermeture est le corps. »</em></p>
+</blockquote>
+<p><strong>V4.2.10 (Th) : le théorème de singularité de la fermeture 9.</strong> La tripartition rails/axe exige que 3 divise la fermeture (bases 4, 7, 10, 13, 16, …). Parmi toutes ces fermetures 3k, <strong>9 = 3² est la seule où le sous-groupe d’axe a un ordre égal à son indice</strong> (3 = 3) : la seule fermeture où l’axe et chacun de ses deux rails ont exactement la même taille. Preuve : dans le cycle à 3k positions, le sous-groupe engendré par 3 a k éléments et trois classes ; l’égalité k = 3 donne la fermeture 9 et elle seule. ∎</p>
+<p><strong>V4.2.11 (L) : l’inversion causale.</strong> La base 10 n’est donc pas un choix anthropique parmi d’autres : elle est l’inscription minimale de l’unique fermeture équilibrée, le carré du premier nombre premier impair.</p>
+<blockquote>
+<p><em>« On n’utilise pas la base 10 parce qu’on a dix doigts ; on utilise la base 10 parce que 10 = 9 + 1, et 9 est la fermeture qui rend le +1 possible. »</em></p>
+</blockquote>
+<p>Statut : Théorème pour la singularité (V4.2.10), Lecture pour l’inversion causale.</p>
+<p><strong>V4.2.12 (Th) : l’indépendance des rails de grille.</strong> La grille 6k ± 1 est définie par la divisibilité par 2 et par 3, propriété de ℤ où aucune base n’intervient. Les Théorèmes 1 à 8 et 10 sont donc des énoncés sur les entiers eux-mêmes ; la base 10 n’y sert que de fenêtre d’observation, et c’est la fenêtre la plus nette parce que sa fermeture est 3².</p>
+<p><strong>V4.2.13 (Th) : l’infini fabriqué.</strong> L’inscription décimale fabrique de l’infini là où la quantité n’en contient pas : 1/7 = 0,142857… est infini périodique en base 10, mais s’écrit exactement <strong>0,1 en base 7</strong> ; 1/3, infini en base 10, s’écrit <strong>0,1 en base 3</strong>. L’infini décimal est un artefact de la fenêtre, pas de l’objet, vérifiable par division posée. C’est la démonstration calculatoire de la strate 2 (V4.1.7) : Stevin n’a pas seulement rendu la notation transparente, il a introduit dans les quantités finies un infini d’inscription que la tradition a ensuite traité comme une propriété des nombres. (Le corpus en tire, au Volume 3, la conséquence pratique : 1/3 écrit 0,3333 puis multiplié cent fois par 3 contamine le résultat ; <em>« Peu mais précis. »</em>)</p>
+<p><strong>Bilan.</strong> L’objection de la base 10 se retourne intégralement : le cadastre ne dépend pas de la base 10 ; la base 10 est l’inscription que la structure du cadastre sélectionne. Toute la charge du volume repose sur des propriétés de ℤ et de ℤ/9 (partition en classes latérales, congruences, identités algébriques) dont aucune ne mentionne une base. L’Axiome A0 reçoit au chapitre 21 (section 21.4) ses trois preuves d’invariance telles que les donne le Livre II de la <em>Bible Quantique</em>.</p>
+
+</main>
+<nav class="chapnav"><span class="prev"><a href="03-chapitre-1-la-feuille-1-a-30-le-document-de-genese.html">← Chapitre 1. La feuille 1 à 30 : le document de genèse</a></span><a class="toc" href="index.html">Sommaire du volume</a><span class="next"><a href="05-partie-ii-les-premiers-jamais-caches.html">Partie II. Les premiers jamais cachés →</a></span></nav>
+<footer class="colophon"><p>Corpus ARC, Filipe Bastos, <a href="https://creativecommons.org/licenses/by/4.0/deed.fr" rel="license">CC BY 4.0</a>.</p></footer>
+</body>
+</html>

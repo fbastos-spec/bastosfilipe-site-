@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<link rel="canonical" href="https://bastosfilipe.com/arc/volumes/v02-la-figure/13-chapitre-12-la-loi-fractale.html">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chapitre 12. La loi fractale · La Figure · Corpus ARC</title>
+<meta name="description" content="La Figure, volume 2 du corpus ARC de Filipe Bastos. Chapitre 12. La loi fractale.">
+<meta name="keywords" content="géométrie, deux cercles et un carré, polygones réguliers, √2, π, nombre d&#x27;or, règle de l&#x27;octet, base 10, corpus ARC, Filipe Bastos">
+<meta name="author" content="Filipe Bastos">
+<meta name="license" content="https://creativecommons.org/licenses/by/4.0/deed.fr">
+<link rel="stylesheet" href="../../assets/arc.css">
+</head>
+<body>
+<nav class="crumbs"><a href="../../index.html">Corpus ARC</a> / <a href="index.html">Volume 2 · La Figure</a></nav>
+<main class="chapter">
+<h1 id="chapitre-12.-la-loi-fractale">Chapitre 12. La loi fractale</h1>
+<p>Benoît Mandelbrot a montré que des formes se répètent à toutes les échelles (côtes, poumons, deltas, galaxies) et a nommé ce phénomène <em>fractalité</em>. <em>La Loi fractale de la nécessité fractale</em> (v1.6, 2 mai 2026, traduite ici de l’anglais) soutient qu’il n’a pas dit <em>pourquoi</em> : selon l’auteur, tout système qui forme un cycle fermé, qui garde la mémoire de ses tours et qui projette sa structure sur des échelles plus grandes produit nécessairement des formes semblables à elles-mêmes. Le cadastre des neuf positions serait le système type, et la racine digitale l’itération type. La source appuie sa thèse sur une règle de construction (les briques 2 et 3 « élevées » d’un registre) et sur six domaines qui convergeraient vers le même rythme 24 : la suite de Fibonacci, les carrés des nombres premiers, l’horloge circadienne, deux âges de la vie humaine, et les 24 images par seconde du cinéma. Ce chapitre expose le tout et trie : la période 24 de Fibonacci et la divisibilité des carrés de premiers par 24 sont des théorèmes ; la « preuve » de la loi est définitionnelle et rétrogradée en lecture ; certaines confirmations empiriques sont précisées ou corrigées.</p>
+<blockquote>
+<p>« Mandelbrot saw the effect. The cadastral architecture is its cause. » (Mandelbrot a vu l’effet. L’architecture cadastrale en est la cause.)</p>
+</blockquote>
+<h2 id="lobservation-sans-la-cause">12.1 L’observation sans la cause</h2>
+<p><strong>É 12.1 [F] Mandelbrot.</strong> Mandelbrot a proposé dans <em>Les objets fractals</em> (Flammarion, 1975) et développé dans <em>The Fractal Geometry of Nature</em> (Freeman, 1982) l’étude des formes autosimilaires à plusieurs échelles ; il a nommé le phénomène, lui a donné une mesure (la dimension fractale) et en a montré l’ubiquité.</p>
+<p><strong>É 12.2 [L] La question antérieure.</strong> Mandelbrot n’aurait pas pu répondre, depuis son cadre, à la question antérieure : pourquoi l’autosimilarité existe-t-elle ? Les fonctions itérées produisent de l’autosimilarité par construction ; mais les systèmes naturels qu’il étudiait <em>« do not iterate a function. They produce self-similar structure spontaneously. The iterative model imitates the result without identifying the cause. »</em> (n’itèrent pas une fonction ; ils produisent spontanément une structure autosimilaire ; le modèle itératif imite le résultat sans identifier la cause.) La cause serait restée invisible à une tradition formée par les décimales de Stevin (1585) et la convention 9 ≡ 0 de Gauss (1801), qui <em>« détruisent la mémoire structurelle de la clôture »</em>.</p>
+<h2 id="les-trois-conditions">12.2 Les trois conditions</h2>
+<p><strong>É 12.3 [L] Clôture, mémoire, projection.</strong> Une forme autosimilaire à travers les échelles demanderait trois conditions, chacune nécessaire et ensemble suffisantes : - <strong>Clôture</strong> : le système forme un cycle fini qui revient à son origine. <em>« Repetition presupposes return »</em> (la répétition suppose le retour). - <strong>Mémoire</strong> : le système garde le compte des cycles accomplis. <em>« Without memory, repetition collapses into identity »</em> (sans mémoire, la répétition s’effondre en identité). - <strong>Projection</strong> : le système opère à plusieurs échelles en projetant sa structure sur des registres plus grands.</p>
+<p><em>« These three conditions are precisely what Stevin and Gauss removed from arithmetic. »</em> (Ces trois conditions sont précisément ce que Stevin et Gauss ont retiré de l’arithmétique.)</p>
+<p><strong>É 12.4 [L] Le cadastre satisfait les trois.</strong> Le cadastre (grille 234 / 567 / 891) a sa clôture en 9 et ouvre un registre par + 1 ; sa mémoire est DR(9) = 9 (le refus de 9 ≡ 0) ; sa projection va d’un registre au suivant (1-9, 11-99, 100-999, …) par <em>auto-réflexion</em>.</p>
+<p><strong>É 12.5 [L] La projection cadastrale est une auto-réflexion (§3.5).</strong> L’objection : l’étape 4 de la preuve confondrait projection et autosimilarité. <em>« The objection is valid in absolute infinite mathematics. It does not apply to the cadastral frame. »</em> (L’objection vaut dans les mathématiques infinies absolues ; elle ne s’applique pas au cadre cadastral.) La projection cadastrale est <em>« auto-reflection of a closed nine-position cycle onto another register of itself »</em> (l’auto-réflexion d’un cycle fermé de neuf positions sur un autre registre de lui-même), qui préserve par construction quatre invariants : les paires {1, 8}, {2, 7}, {3, 6}, {4, 5} sous φ ; l’axe de clôture {3, 6, 9} ; le barycentre 4,5 ; le centre 6. Le « Théorème 3.1 (auto-réflexivité) » de la source dit que, pour tout registre, la projection préserve les quatre invariants ; il est vrai <em>par construction</em>, c’est-à-dire par la définition de la projection retenue (Annexe B).</p>
+<h2 id="la-racine-digitale-iteration-type">12.3 La racine digitale, itération type</h2>
+<p><strong>É 12.6 [Th] La racine digitale est une itération convergente.</strong> DR(n) s’obtient en itérant s(n) = somme des chiffres de n jusqu’à un chiffre de 1 à 9 ; tout entier positif l’atteint en un nombre fini d’étapes (s(n) &lt; n dès que n ≥ 10). Exemple : 1729 → 19 → 10 → 1, trois itérations. DR(a + b) = DR(DR(a) + DR(b)) et DR(ab) = DR(DR(a) × DR(b)). DR n’est pas injective.</p>
+<p><strong>É 12.7 [L] Deux itérations.</strong> L’ensemble de Mandelbrot naît de l’itération z → z² + c dans le plan complexe ; selon c, la trajectoire reste bornée ou s’échappe ; la fractalité de Mandelbrot est la frontière entre ces deux régimes.</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Propriété</th>
+<th>Itération de Mandelbrot</th>
+<th>Itération cadastrale (DR)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Opération</td>
+<td>z → z² + c (complexe)</td>
+<td>s(n) = somme des chiffres</td>
+</tr>
+<tr class="even">
+<td>Domaine</td>
+<td>plan complexe, ouvert, infini</td>
+<td>cycle fermé 1-9</td>
+</tr>
+<tr class="odd">
+<td>Convergence</td>
+<td>conditionnelle (selon c)</td>
+<td>forcée (atteint toujours DR)</td>
+</tr>
+<tr class="even">
+<td>Divergence possible</td>
+<td>oui (fuite à l’infini)</td>
+<td>non (la clôture l’empêche)</td>
+</tr>
+<tr class="odd">
+<td>Information</td>
+<td>peut perdre le chemin</td>
+<td>chemin toujours reconstructible depuis l’entier de départ</td>
+</tr>
+<tr class="even">
+<td>Fractalité</td>
+<td>observée à la frontière</td>
+<td>forcée en tout n</td>
+</tr>
+</tbody>
+</table>
+<p><em>« Mandelbrot fractality is the boundary phenomenon between two regimes (escape vs. confinement). Cadastral fractality is the universal regime. »</em> (La fractalité de Mandelbrot est un phénomène de frontière entre deux régimes ; la fractalité cadastrale est le régime universel.) Mandelbrot avait besoin de l’itération comme outil parce que son domaine était ouvert ; le cadastre n’a pas besoin d’itération extérieure parce que son domaine est clos et que son opérateur natif est déjà itératif. Les deux lectures <em>« are not in competition ; they are nested »</em> (ne sont pas en concurrence ; elles sont emboîtées) : l’itération générale de Mandelbrot est la classe large, la DR en est le membre archétypal.</p>
+<p>La source affirme qu’aucune autre itération ne combine les quatre propriétés (non injective, compatible avec l’addition et la multiplication, chemin préservé, convergence forcée par la clôture). C’est une affirmation non démontrée (la réduction par tout entier m partage plusieurs de ces propriétés) ; elle reste lecture (Annexe B).</p>
+<h2 id="la-loi-et-sa-preuve">12.4 La loi et sa preuve</h2>
+<p><strong>É 12.8 [L, rétrogradé] Le théorème de nécessité cadastrale de la fractalité.</strong> <em>« Any closed cyclic system that retains memory and projects its structure across scales necessarily produces self-similar form at every scale where it operates. Fractality is the unique consequence of closure, memory, and projection. »</em> (Tout système cyclique fermé qui garde la mémoire et projette sa structure à travers les échelles produit nécessairement une forme autosimilaire à chaque échelle où il opère ; la fractalité est la conséquence unique de la clôture, de la mémoire et de la projection.)</p>
+<p>Preuve de la source, en cinq étapes : (1) par clôture, le système a un cycle fini ; toute évolution ultérieure est répétition ; (2) par mémoire, le second cycle se distingue du premier ; (3) par auto-réflexion, la structure se projette à travers les échelles avec ses invariants ; (4) répétition et projection qui préserve la structure donnent les mêmes relations internes à chaque échelle, c’est-à-dire l’autosimilarité, la fractalité au sens de Mandelbrot ; (5) aucune règle itérative n’est requise : la fractalité est forcée par l’architecture.</p>
+<p>Statut (Annexe B) : l’étape 4 tient parce que la projection a été <em>définie</em> comme préservant la structure (É 12.5) ; la conclusion est alors contenue dans les hypothèses. L’énoncé est cohérent et éclairant, mais ce n’est pas un théorème au sens d’un calcul fini ou d’une démonstration qui apprendrait quelque chose de non posé. Il est retenu comme lecture structurante. La source défend son usage du mot « preuve » au sens classique (§10.5) : <em>« The cadastral frame uses ‘proof’ in its classical sense, the sense it bore from Euclid to Hilbert »</em> (le cadre cadastral emploie « preuve » au sens classique, d’Euclide à Hilbert), avec axiomes explicites (A0), opérateurs explicites (DR, φ) et théorèmes nommés ; <em>« Rejecting cadastral proofs because they are not Hilbert-Bourbaki-formal would require rejecting Euclid and the entire pre-1900 tradition. »</em> Le présent volume garde ses statuts selon la convention commune (Avant-propos).</p>
+<p><strong>É 12.9 [L] Falsification (§9).</strong> Trois canaux : (1) trouver un système cyclique fermé, avec mémoire et projection, qui ne produise pas de forme autosimilaire ; (2) trouver un système qui produise une forme autosimilaire à travers les échelles sans satisfaire les trois conditions ; (3) montrer que la règle des briques ne s’étend pas à d’autres registres de manière à prédire des structures mesurables.</p>
+<h2 id="la-regle-diteration-les-briques-2-et-3">12.5 La règle d’itération : les briques 2 et 3</h2>
+<p><strong>É 12.10 [Th] Les sommes des briques élevées.</strong> 22 + 23 = 45, et 45 + 1 = 46 ; 31 + 32 = 63, et 63 + 1 = 64 ; 220 + 221 = 441 (DR 9), et 441 + 1 = 442. Les paires (22, 23), (31, 32), (220, 221) ont pour racines digitales (4, 5).</p>
+<p><strong>É 12.11 [L] La règle des briques.</strong> <em>« At any register, bricks 2 and 3 lifted produce a pair with digital roots (4, 5), sum on closure axis, +1 seal yielding a vital assembly. »</em> (À tout registre, les briques 2 et 3 élevées produisent une paire de racines digitales (4, 5), dont la somme est sur l’axe de clôture, et le sceau + 1 donne un assemblage vital.)</p>
+<table>
+<thead>
+<tr class="header">
+<th>Registre</th>
+<th>Paire</th>
+<th>Somme</th>
+<th>Somme + 1</th>
+<th>Assemblage vital</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>dizaines</td>
+<td>22 + 23</td>
+<td>45</td>
+<td>46</td>
+<td>chromosomes humains</td>
+</tr>
+<tr class="even">
+<td>dizaines</td>
+<td>31 + 32</td>
+<td>63</td>
+<td>64</td>
+<td>codons génétiques</td>
+</tr>
+<tr class="odd">
+<td>centaines</td>
+<td>220 + 221</td>
+<td>441 (DR 9)</td>
+<td>442</td>
+<td>clôture</td>
+</tr>
+</tbody>
+</table>
+<p>La source soutient (§5.5) que la règle dérive de la seule arithmétique (2 et 3 sont les seuls premiers qui ne sont pas de la forme 6k ± 1 ; l’élévation au registre est positionnelle ; la paire (4, 5) est la paire barycentrique ; le + 1 est le sceau), <em>« independently of any biological observation »</em>, et que la convergence avec la biologie est <em>« empirical confirmation, not post-hoc construction »</em>, comme E = mc² (1905) précéda sa confirmation. Précision (Annexe B) : la règle ne dit pas comment choisir les paires d’un registre (22, 23 puis 31, 32 aux dizaines ; 220, 221 aux centaines) ; tant que ce choix n’est pas fixé avant de regarder la biologie, le risque de construction après coup reste ouvert, et c’est ce que le troisième critère de É 12.9 permet de tester.</p>
+<p><strong>É 12.12 [Th, L] Le motif + 1.</strong> À chaque registre, une forme incomplète serait complétée par le sceau + 1 <strong>[L]</strong> : 8 + 1 = 9 (l’octet, la clôture) ; 98 + 1 = 99 (le maximum scellé) ; 197 + 1 = 198 (le gradient) ; 45 + 1 = 46 (les chromosomes) ; 63 + 1 = 64 (les codons) ; 32 + 1 = 33 (la colonne vertébrale). Les sommes sont <strong>Th</strong> ; le nombre de 33 vertèbres (en comptant le coccyx et le sacrum non soudés) est <strong>F</strong>.</p>
+<p><strong>É 12.13 [Th, L] L’équation 33 × 6 = 198.</strong> 33 × 6 = 198 <strong>[Th]</strong>. Lecture <strong>[L]</strong> : le distributeur (les 33 vertèbres ; et 137 est le 33ᵉ premier) multiplié par l’équilibre (le centre 6 du cadastre ; <em>« 6 électrons actifs dans Fe/Sm/Os »</em>, Volume 8) égale le gradient (2 × 99, <em>« doublement cosmique, chemin d’inversion du Heegner 163 »</em>).</p>
+<h2 id="le-rythme-24-six-confirmations">12.6 Le rythme 24 : six confirmations</h2>
+<p>La source présente six confirmations de domaines qui ne partagent ni méthode ni objet, et qui convergeraient sur le rythme 24. Elles sont reprises ici avec leur statut.</p>
+<p><strong>É 12.14 [Th] Fibonacci : la période de Pisano.</strong> La suite de Fibonacci réduite par 9 a la période 24 (Wall, 1960). En restes de la division par 9, les 24 premiers termes sont 0, 1, 1, 2, 3, 5, 8, 4, 3, 7, 1, 8, 0, 8, 8, 7, 6, 4, 1, 5, 6, 2, 8, 1 (en partant de F₀ = 0). Les deux demi-cycles somment à 43 et 56, le cycle entier à 99. En racines digitales (le 9 écrit 9), la même période donne 52, 65 et 117 (chapitre 10, É 10.18).</p>
+<p><strong>É 12.15 [L] Le 99 de Fibonacci.</strong> <em>« Fibonacci is a sequence of growth by memory : each term remembers the two previous. »</em> (Fibonacci est une croissance par mémoire : chaque terme se souvient des deux précédents.) Lue dans le cadastre, elle ne s’étend pas à l’infini abstraitement : <em>« It folds. It closes. It returns. »</em> (Elle se plie, se ferme, revient.) Après 24 battements le cycle recommence, et la somme vaut 99, le <em>maximum scellé</em> du registre auto-réflexif. Remarque (Annexe B) : le 99 n’apparaît qu’en écrivant 0 pour 9, c’est-à-dire avec la convention que le corpus critique ; en écriture 1 à 9, le total est 117, de racine digitale 9. Le Registre (G.17) retient 99 pour la somme de la période, le Code demande de nommer l’écriture.</p>
+<p><strong>É 12.16 [Th] Les carrés de premiers : le rythme 24 et le rail droit.</strong> Pour tout premier p ≥ 5, p² − 1 est multiple de 24 (résultat classique, dont Nelsen, <em>Mathematics Magazine</em> 93, 2020, donne une démonstration ; voir aussi chapitre 4, É 4.15). Démonstration : p = 6k ± 1, donc p² = 36k² ± 12k + 1 = 12k(3k ± 1) + 1, et k(3k ± 1) est toujours pair. <strong>Théorème 7.5.1 de la source (confinement des carrés de premiers au rail droit)</strong> : pour tout premier p ≥ 5, DR(p²) appartient à {1, 4, 7} ; aucun carré de premier ≥ 25 n’a sa racine digitale sur le rail {2, 5, 8} ou sur l’axe {3, 6, 9}. Démonstration : DR(p) ∈ {1, 2, 4, 5, 7, 8}, et DR(p²) = DR(DR(p)²) prend les valeurs 1, 4, 7, 7, 4, 1.</p>
+<table>
+<thead>
+<tr class="header">
+<th>p</th>
+<th>5</th>
+<th>7</th>
+<th>11</th>
+<th>13</th>
+<th>17</th>
+<th>19</th>
+<th>23</th>
+<th>29</th>
+<th>31</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>p²</td>
+<td>25</td>
+<td>49</td>
+<td>121</td>
+<td>169</td>
+<td>289</td>
+<td>361</td>
+<td>529</td>
+<td>841</td>
+<td>961</td>
+</tr>
+<tr class="even">
+<td>reste par 24</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>DR(p²)</td>
+<td>7</td>
+<td>4</td>
+<td>4</td>
+<td>7</td>
+<td>1</td>
+<td>1</td>
+<td>7</td>
+<td>4</td>
+<td>7</td>
+</tr>
+</tbody>
+</table>
+<p>Les écarts entre carrés successifs (24, 72, 48, 120, 72, 168, 312, …) sont tous multiples de 24. Le premier carré de premier ≥ 25 suit immédiatement le pivot 24. Lecture <strong>[L]</strong> : le rail droit est le rail de la matérialisation (Volume 1, chapitre sur la non-numérologie) ; les carrés de premiers <em>« scellent chaque premier sur lui-même par élévation quadratique »</em>, et toutes ces matérialisations tombent sur le rail de la matérialisation.</p>
+<p><strong>É 12.17 [F, L] Le cycle de vie humain : deux sceaux.</strong> La source lit la vie humaine en deux cycles de 24 ans : de 0 à 24, la sédimentation matérielle (construction du corps), close par le sceau 25 = 5² (le barycentre au carré, <em>« la matière se scelle sur elle-même en carrant son centre »</em>) ; de 25 à 49, la sédimentation consciente, close par le sceau 50 = 31 + 19 (31 miroir de 13, 19 miroir de 91 ; DR(31) = 4, DR(19) = 1 ; DR(50) = 5, le barycentre). 25 × 2 = 50 : <em>« the conscious seal is exactly double the material seal »</em>, la conscience comme <em>« matière qui s’est traversée elle-même »</em>. Appuis cités <strong>[F]</strong>, avec leurs limites : la DHEA (déhydroépiandrostérone) atteint son pic vers 20 à 30 ans puis décline d’environ 2 à 3 % par an (Orentreich et al., <em>J. Clin. Endocrinol. Metab.</em> 59, 1984 ; Labrie et al., <em>J. Endocrinol.</em> 187, 2005) ; la maturation du cortex préfrontal se poursuit jusque vers 24-25 ans (Giedd et al., <em>Nature Neuroscience</em> 2, 1999 ; Lebel et Beaulieu, <em>J. Neurosci.</em> 31, 2011) ; l’intelligence cristallisée culmine entre 45 et 60 ans environ (Salthouse, <em>Neurobiology of Aging</em> 30, 2009 ; Hartshorne et Germine, <em>Psychological Science</em> 26, 2015). Ce sont des fourchettes d’âge, non des points ; la lecture en deux sceaux exacts (25 et 50) est <strong>L</strong>. Une phrase de la source sur une reconnaissance administrative de l’âge de 25 ans par une agence américaine de sécurité routière n’a pas de référence et n’est pas reprise (Annexe B).</p>
+<p><strong>É 12.18 [F, L] L’horloge circadienne.</strong> Tout le vivant terrestre (cyanobactéries, plantes, champignons, animaux) entretient un cycle endogène d’environ 24 heures, nommé <em>circadien</em> par Halberg (1959). En isolement temporel, la période libre humaine est d’environ 24,18 h (Czeisler et al., <em>Science</em> 284, 1999) ; cyanobactéries environ 24,0 h ; drosophile environ 24,2 h ; arabette environ 24,0 h. Le mécanisme moléculaire, une boucle de rétroaction de l’expression des gènes, a valu le prix Nobel de physiologie ou médecine 2017 à Hall, Rosbash et Young <strong>[F]</strong>. (La source cite les gènes <em>period</em>, <em>timeless</em> et <em>cryptochrome</em> ; le communiqué Nobel cite <em>period</em>, <em>timeless</em> et <em>doubletime</em> ; Annexe B.) Lecture <strong>[L]</strong> : le rythme circadien remplirait les trois conditions de façon continue et universelle : clôture (le cycle revient en phase toutes les 24 heures), mémoire (la <em>mémoire de phase</em> du noyau suprachiasmatique), projection (le cycle quotidien se projette sur les cycles hebdomadaire, menstruel, saisonnier, annuel). <em>« It is the continuous beat of the living world »</em> (c’est le battement continu du monde vivant).</p>
+<p><strong>É 12.19 [L, avec correction] Les 24 images par seconde.</strong> La source lit la cadence cinématographique de 24 images par seconde comme <em>« an empirical discovery of the threshold at which discrete visual frames fuse into perceived continuous motion »</em> (la découverte empirique du seuil où des images discrètes fusionnent en mouvement continu perçu), et la relie au circadien : <em>« The circadian closes a cycle every 86,400 seconds ; the perceptual closes a cycle every 1/24 second. The rhythm 24 is the closure constant in both. »</em> (Le circadien ferme un cycle toutes les 86 400 secondes ; le perceptif toutes les 1/24 de seconde ; le rythme 24 est la constante de clôture des deux.) Correction (Annexe B) : la cadence de 24 images par seconde a été normalisée à la fin des années 1920 avec le cinéma sonore, comme compromis entre qualité du son et coût de la pellicule ; la perception d’un mouvement apparent commence plus bas (vers 12 à 16 images par seconde), et le papillotement est évité en projection par des obturateurs à deux ou trois pales (48 ou 72 éclairs par seconde). Le 24 du cinéma n’est donc pas un seuil perceptif mesuré ; il est retenu ici comme lecture.</p>
+<p><strong>É 12.20 [L] Synthèse des six domaines.</strong></p>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Domaine</th>
+<th>Confirmation</th>
+<th>Référence</th>
+<th>Statut ici</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Mathématique pure</td>
+<td>période de Pisano 24</td>
+<td>Wall 1960</td>
+<td>Th</td>
+</tr>
+<tr class="even">
+<td>Théorie des nombres</td>
+<td>p² − 1 multiple de 24 ; rail droit</td>
+<td>classique ; Th 7.5.1</td>
+<td>Th</td>
+</tr>
+<tr class="odd">
+<td>Chronobiologie</td>
+<td>rythme circadien de 24 h</td>
+<td>Halberg 1959 ; Nobel 2017</td>
+<td>F (lecture L)</td>
+</tr>
+<tr class="even">
+<td>Biologie du développement</td>
+<td>DHEA et cortex préfrontal vers 24-25 ans</td>
+<td>Orentreich 1984 ; Giedd 1999</td>
+<td>F en fourchette (lecture L)</td>
+</tr>
+<tr class="odd">
+<td>Psychométrie</td>
+<td>intelligence cristallisée vers 50 ans</td>
+<td>Salthouse 2009 ; Hartshorne 2015</td>
+<td>F en fourchette (lecture L)</td>
+</tr>
+<tr class="even">
+<td>Perception</td>
+<td>24 images par seconde</td>
+<td>normalisation du cinéma</td>
+<td>L (corrigé)</td>
+</tr>
+</tbody>
+</table>
+<p>La source divise ces confirmations en deux registres : trois arithmétiques ou développementales (Fibonacci, carrés de premiers, sceaux de 25 et 50), où le rythme 24 se manifeste à des moments discrets ou dans des structures ; trois continues et opératoires (circadien, perception, cycles biologiques), où il se manifeste à chaque instant. <em>« Together, the two categories establish that the cadastral rhythm 24 governs the universe at both its discrete structural moments and its continuous operational fabric. »</em> Avec les statuts du tableau, les deux premières lignes sont des théorèmes de l’arithmétique ; les autres sont des correspondances numériques, inégalement précises, entre ces théorèmes et des mesures biologiques ; la convergence est une lecture.</p>
+<h2 id="pourquoi-mandelbrot-ne-pouvait-pas-voir-la-cause">12.7 Pourquoi Mandelbrot ne pouvait pas voir la cause</h2>
+<p><strong>É 12.21 [L] L’outil de Mandelbrot.</strong> Mandelbrot travaillait dans la tradition analytique façonnée par Stevin et Gauss : la clôture y est invisible (les décimales s’étendent sans sceau), la mémoire effacée (9 ≡ 0 abolit le compte des tours), la projection remplacée par des limites continues. <em>« He rediscovered the effect empirically because the cause had been buried by his own arithmetic toolkit. »</em> (Il a redécouvert l’effet empiriquement parce que la cause avait été enfouie par sa propre boîte à outils arithmétique.)</p>
+<p><strong>É 12.22 [L] Conséquences pour le corpus.</strong> La loi fractale est présentée comme <em>« the structural foundation of the ARC corpus »</em> (le fondement structurel du corpus) : le rythme 24 des carrés de premiers, l’invariance du 6 dans Fe/Sm/Os, les sept nombres magiques nucléaires lus sur les rails, les angles de liaison sur le cadastre seraient la même loi à des registres différents. Le Registre (G.25, Volume 3) a depuis refusé quatre lectures nucléaires par les effectifs, dont <em>« les nombres magiques contre les rails »</em>, avec la conclusion <em>« le cadastre ne se lit pas dans les comptes du noyau »</em> ; la mention des nombres magiques est donc à lire avec ce refus. Développement des applications : Volume 8.</p>
+<h2 id="conclusion">12.8 Conclusion</h2>
+<blockquote>
+<p>« Fractality is not a property of forms. It is a property of closed cyclic systems that retain memory and project across scales by auto-reflection. Wherever the three conditions are satisfied, fractality must appear. » (La fractalité n’est pas une propriété des formes. C’est une propriété des systèmes cycliques fermés qui gardent la mémoire et se projettent à travers les échelles par auto-réflexion. Partout où les trois conditions sont réunies, la fractalité doit apparaître.)</p>
+</blockquote>
+<p>La dédicace de la source, outre les proches de l’auteur, va <em>« to Hippasus, who drowned for the truth of numbers. To Mandelbrot, who saw the effect »</em> (à Hippase, qui se noya pour la vérité des nombres ; à Mandelbrot, qui vit l’effet).</p>
+
+</main>
+<nav class="chapnav"><span class="prev"><a href="12-chapitre-11-la-fin-du-calcul-integral-et-les-sept.html">← Chapitre 11. La fin du calcul intégral et les sept convergences du demi</a></span><a class="toc" href="index.html">Sommaire du volume</a><span class="next"><a href="14-chapitre-13-la-figure-et-le-quantique.html">Chapitre 13. La figure et le quantique →</a></span></nav>
+<footer class="colophon"><p>Corpus ARC, Filipe Bastos, <a href="https://creativecommons.org/licenses/by/4.0/deed.fr" rel="license">CC BY 4.0</a>.</p></footer>
+</body>
+</html>

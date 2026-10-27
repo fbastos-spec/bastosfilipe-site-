@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<link rel="canonical" href="https://bastosfilipe.com/arc/volumes/v05-les-grands-problemes/08-chapitre-7-p-contre-np-i-la-porte-le-circuit-et-le.html">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chapitre 7. P contre NP (I) : la porte, le circuit et le tiers · Les Grands Problèmes · Corpus ARC</title>
+<meta name="description" content="Les Grands Problèmes, volume 5 du corpus ARC de Filipe Bastos. Chapitre 7. P contre NP (I) : la porte, le circuit et le tiers.">
+<meta name="keywords" content="hypothèse de Riemann, P contre NP, Navier-Stokes, Yang-Mills, problèmes du millénaire, fonction zêta, produit d&#x27;Euler, corpus ARC, Filipe Bastos">
+<meta name="author" content="Filipe Bastos">
+<meta name="license" content="https://creativecommons.org/licenses/by/4.0/deed.fr">
+<link rel="stylesheet" href="../../assets/arc.css">
+</head>
+<body>
+<nav class="crumbs"><a href="../../index.html">Corpus ARC</a> / <a href="index.html">Volume 5 · Les Grands Problèmes</a></nav>
+<main class="chapter">
+<h1 id="chapitre-7.-p-contre-np-i-la-porte-le-circuit-et-le-tiers">Chapitre 7. P contre NP (I) : la porte, le circuit et le tiers</h1>
+<p>P contre NP demande si la différence entre vérifier une solution et la trouver est réelle, ou si elle n’est qu’un défaut de nos méthodes. Le corpus a abordé ce problème en mars 2026 avec un argument arithmétique : la porte ET a une pré-image de cardinal 3, et 3 ne rentre dans aucune structure faite de puissances de 2. Cet argument contenait un théorème juste et une implication fausse. La version du 10 septembre 2026, qui fait foi, garde le théorème, retire l’implication avec son contre-exemple, et reconstruit le dossier sur trois constats tirés de la littérature : la phrase « trois ne rentre pas dans deux » est déjà un théorème dans un modèle restreint (Smolensky, 1987) ; toutes les séparations connues ont été payées par un tiers venu du dehors ; la frontière entre 2 et 3 est réelle et classée (Schaefer, 1978). Ce chapitre expose ce dossier, ce qui reste des pièces de mars (les théorèmes conservés), les chantiers ouverts et les deux Prédictions datées. Le chapitre 8 prolonge le dossier avec les résultats d’octobre : le mur des preuves naturelles, les chiffres du compte, et le prix adressé.</p>
+<blockquote>
+<p><em>« Trois ne rentre pas dans deux. »</em></p>
+</blockquote>
+<h2 id="le-probleme-rendu-reel">7.1 Le problème rendu réel</h2>
+<p>Un livreur doit visiter des villes ; vérifier qu’un ordre donné est court se fait en une addition, en trouver un court est une autre affaire. Une grille de sudoku remplie se vérifie en une minute ; la remplir peut prendre une heure. P contre NP demande si cette différence entre vérifier et trouver est réelle ou si elle n’est qu’un défaut de nos méthodes : existe-t-il un problème dont toute solution proposée se vérifie vite et dont aucune méthode ne trouve la solution vite ?</p>
+<p><strong>[7.1] F. La frontière a une adresse : deux contre trois.</strong> Une formule en clauses de deux littéraux se résout en temps polynomial ; à trois littéraux, c’est le problème NP-complet de Cook (1971). Colorier une carte avec deux couleurs est polynomial ; avec trois, NP-complet. Apparier des couples dans deux ensembles est polynomial ; dans trois, NP-complet. Karp l’a écrit en 1972 dans sa liste de vingt et un problèmes. Le problème nu, sans restriction ni oracle, est ouvert depuis 1971.</p>
+<h2 id="la-base-pour-le-lecteur-qui-decouvre-arc">7.2 La base, pour le lecteur qui découvre ARC</h2>
+<p>ARC lit à travers un cadastre fini, les positions 1 à 9, avec deux briques, 2 et 3, dont les opérations engendrent toutes les positions sauf deux orphelins ([5.16]). Deux principes gouvernent ce dossier.</p>
+<p><strong>[7.2] Th. Le double et le carré ne coïncident qu’en n = 2.</strong> 2n = n² n’a qu’une solution entière positive, n = 2 ([4.23]). <em>« Le double reste dans sa dimension, le carré en change et paie. »</em></p>
+<p><strong>[7.3] L. Aucun objet à deux termes ; le tiers paie.</strong> Il n’existe aucun objet à deux termes ; deux termes en relation ont déjà un troisième, leur relation, et ce tiers paie (1 ⊕ 1 = 3). Un tiers payé par la relation ferme ; un tiers imposé du dehors ne ferme pas. Ce dernier point est le fil de Navier-Stokes (chapitre 9) et il est le fil d’ici.</p>
+<h2 id="theoreme-la-porte-et-ne-rentre-pas-dans-le-corps-a-deux-elements">7.3 Théorème : la porte ET ne rentre pas dans le corps à deux éléments</h2>
+<p><strong>[7.4] Th. La pré-image de la porte ET n’est pas une classe (mars 2026, conservé).</strong> La porte ET calcule (a, b) ↦ a ∧ b. Ses pré-images sont ET⁻¹(0) = {(0, 0), (0, 1), (1, 0)}, de cardinal 3, et ET⁻¹(1) = {(1, 1)}, de cardinal 1 ; la porte OU a la structure symétrique, |OU⁻¹(0)| = 1 et |OU⁻¹(1)| = 3. Dans (ℤ/2ℤ)², tout sous-groupe a un ordre qui divise 4, donc un ordre dans {1, 2, 4}, et toute classe a le cardinal de son sous-groupe. Comme 3 ∉ {1, 2, 4}, ET⁻¹(0) n’est la classe d’aucun sous-groupe. Sur n bits, la pré-image de 0 par x₁ ∧ x₂ compte 3 × 2^{n−2} points, alors que tout sous-espace et toute classe affine de (ℤ/2ℤ)ⁿ a un cardinal 2ᵏ.</p>
+<p><strong>[7.5] Th. Irréductibilité de 3 dans (ℤ/2ℤ)ⁿ (mars 2026, conservé).</strong> Pour tout k, 3 ne divise pas 2ᵏ. Donc aucun sous-ensemble de (ℤ/2ℤ)ⁿ de cardinal divisible par 3 n’est un sous-espace affine, une classe ou un sous-groupe.</p>
+<p><em>Démonstration.</em> 2ᵏ est une puissance de 2 et pgcd(3, 2) = 1 ; par le théorème fondamental de l’arithmétique, 3 ne divise pas 2ᵏ. Tous les sous-groupes de (ℤ/2ℤ)ⁿ ont un ordre 2ᵏ par le théorème de Lagrange, et leurs classes ont le même cardinal. <em>Contrôles :</em> 3 ne divise aucun 2ᵏ jusqu’à k = 200 ; les sous-espaces de (ℤ/2ℤ)⁴, énumérés, ont pour cardinaux exactement {1, 2, 4, 8, 16} ; la pré-image de 0 de x₁ ∧ x₂ sur 4 bits a 12 éléments, qui n’est pas une puissance de 2.</p>
+<p><strong>[7.6] L. Définition : la pré-image amorphe.</strong> Une pré-image f⁻¹(b) dans (ℤ/2ℤ)ⁿ est dite amorphe si elle n’est ni une classe, ni un sous-espace affine, ni la réunion d’un nombre borné de telles structures. La version de mars en donnait une forme équivalente par le cardinal (un facteur premier autre que 2) ; seule la première forme est une définition sûre, la seconde n’en est qu’un signe suffisant pour une seule classe.</p>
+<blockquote>
+<p><em>« Le nombre 3 est un corps étranger permanent dans l’espace booléen. »</em> (mars 2026)</p>
+</blockquote>
+<h2 id="ce-que-ce-theoreme-ne-dit-pas-le-contre-exemple">7.4 Ce que ce théorème ne dit pas : le contre-exemple</h2>
+<p><strong>[7.7] Th. Une pré-image amorphe n’implique pas une recherche dure.</strong> La fonction x₁ ∧ x₂ elle-même, sur n bits, a une pré-image de 0 amorphe, de cardinal 3 × 2^{n−2}, et l’on trouve un x avec f(x) = 0 en un geste : tous les bits à zéro. L’amorphisme d’une pré-image de porte n’implique donc pas la dureté de la recherche.</p>
+<p>Ce n’est pas un écart à combler, c’est une implication fausse telle qu’écrite, et elle est retirée (annexe B). Ce qui pourrait être dur n’est pas la porte, c’est le circuit : la façon dont des milliers de pré-images amorphes se composent, et ce qu’il en coûte de les défaire ensemble.</p>
+<h2 id="constat-la-phrase-est-un-theoreme-en-profondeur-bornee">7.5 Constat : la phrase est un théorème en profondeur bornée</h2>
+<p><strong>[7.8] F. Razborov et Smolensky (1987) : le compte par 3 échappe aux circuits qui comptent par 2.</strong> Un circuit de profondeur constante, de taille polynomiale, fait de portes ET, OU, NON et de portes qui comptent par paquets de 2, ne peut pas calculer si le nombre de bits à 1 est divisible par 3 ; et, en général, le compte par paquets de p ne se calcule pas avec des portes de compte par paquets de q, pour deux premiers distincts p et q. Le cœur de la preuve est que les polynômes sur le corps à q éléments ne peuvent pas approcher le compte par paquets de p, et pgcd(p, q) = 1 en est la raison.</p>
+<p>Trois ne rentre pas dans deux, démontré, dès que la profondeur est bornée. La version de mars ne le citait pas ; c’est le meilleur reçu de sa phrase.</p>
+<h2 id="constat-toutes-les-separations-connues-sont-forcees">7.6 Constat : toutes les séparations connues sont forcées</h2>
+<p><strong>[7.9] F. Chaque séparation a été payée par un tiers.</strong></p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Résultat</th>
+<th>Ce qui est séparé</th>
+<th>Le tiers imposé du dehors</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Baker, Gill, Solovay, 1975</td>
+<td>P^A = NP^A pour un oracle A ; P^B ≠ NP^B pour un oracle B</td>
+<td>un oracle, une caisse extérieure que la machine interroge</td>
+</tr>
+<tr class="even">
+<td>Razborov, 1985</td>
+<td>la clique exige des circuits monotones de taille exponentielle</td>
+<td>la restriction aux portes monotones, sans NON</td>
+</tr>
+<tr class="odd">
+<td>Håstad, 1986</td>
+<td>la parité exige des circuits de profondeur bornée de taille exponentielle</td>
+<td>la profondeur bornée, sans portes de compte</td>
+</tr>
+<tr class="even">
+<td>Razborov, Smolensky, 1987</td>
+<td>le compte par 3 hors des circuits qui comptent par 2 ; par p hors de ceux qui comptent par q</td>
+<td>la profondeur bornée</td>
+</tr>
+<tr class="odd">
+<td>Le problème nu</td>
+<td>P contre NP, profondeur libre, sans oracle</td>
+<td>aucun : ouvert depuis 1971</td>
+</tr>
+</tbody>
+</table>
+<p>Oracle, monotonie, profondeur bornée : à chaque fois la séparation a été payée d’ailleurs, par un tiers que le problème nu ne fournit pas. C’est le motif de Navier-Stokes (paroi, rugosité, force) transposé : <em>« ce qui casse a toujours reçu un coup de main de la fenêtre »</em>.</p>
+<h2 id="constat-la-frontiere-2-3-est-classee">7.7 Constat : la frontière 2 → 3 est classée</h2>
+<p><strong>[7.10] F. La dichotomie de Schaefer (1978).</strong> Un problème de satisfaction booléenne à contraintes fixées est dans P si et seulement si ses contraintes sont toutes 0-valides, ou toutes 1-valides, ou Horn, ou anti-Horn, ou affines, ou bijonctives (2-SAT) ; sinon il est NP-complet. Les cas faciles sont exactement ceux dont l’ensemble des solutions a une structure fermée : classes affines, cônes de Horn, graphes d’implication à deux littéraux. Les cas durs sont ceux où aucune telle fermeture n’existe.</p>
+<p><strong>[7.11] L. Schaefer lu comme frontière entre structure et amorphisme (mars 2026, conservé comme Lecture).</strong> Le cas affine correspond aux circuits faits de OU exclusif et de NON seulement : pas de porte ET, pas d’amorphisme ; les pré-images sont des sous-espaces affines de cardinal 2ᵏ, structurées et traitables. Les cas Horn et anti-Horn correspondent à des structures ET/OU restreintes, dont les pré-images, sans être affines, ont une structure dirigée et monotone exploitable par propagation unitaire : un amorphisme borné. Les cas NP-complets, dont 3-SAT, correspondent à la composition ET/OU sans restriction : un amorphisme plein. Pour 3-SAT, chaque clause sur trois variables a |clause⁻¹(0)| = 1 et |clause⁻¹(1)| = 7, et 7, comme 3, est premier avec 2. Cette lecture est juste comme Lecture de la frontière ; elle n’en est pas la cause démontrée.</p>
+<p><strong>[7.12] F. Réserve : la frontière n’est pas l’arité seule.</strong> PARTITION en deux sous-ensembles est NP-complet, par les poids et non par l’arité ; 2-SAT est facile mais MAX-2-SAT est dur.</p>
+<p><strong>[7.13] L. Le tiers qui coûte.</strong> <em>« Le tiers qui coûte n’est pas toujours le troisième littéral ; c’est toujours ce qui empêche l’ensemble des solutions de se fermer. »</em> Cette réserve protège la Lecture au lieu de l’affaiblir.</p>
+<h2 id="lecture-le-tiers-paye-du-dehors">7.8 Lecture : le tiers payé du dehors</h2>
+<p><strong>[7.14] L. Faire rentrer 3 dans 2 exige un tiers payé du dehors.</strong> Faire rentrer 3 dans 2, dans un modèle de calcul, c’est donner à la machine de quoi payer ce que la structure du corps à deux éléments ne paie pas. L’oracle paie en répondant ; la restriction paie en interdisant les portes qui composent ; la profondeur bornée paie en interdisant la composition longue. À chaque fois le tiers vient de la fenêtre, et la séparation apparaît. Sans tiers, sur le problème nu, personne n’a rien séparé, et la Lecture dit pourquoi : la composition à profondeur libre est l’endroit où les pré-images amorphes peuvent se réorganiser, comme les tubes de vorticité, et où il faut une inégalité au bon rang pour montrer qu’elles ne peuvent pas se défaire à coût polynomial. <em>Critère de chute :</em> une séparation de P et NP obtenue sans oracle ni restriction par une propriété de porte seule, ou un algorithme polynomial pour 3-SAT.</p>
+<h2 id="ce-qui-reste-des-pieces-de-mars-2026">7.9 Ce qui reste des pièces de mars 2026</h2>
+<p>Les deux pièces de mars, <em>P ≠ NP v2</em> et <em>P ≠ NP comme irréversibilité structurelle dans la topologie de compression v1.0</em>, sont remplacées. Leurs thèses et les implications vers la dureté sont retirées (annexe B). Les énoncés suivants, vérifiables par eux-mêmes, restent.</p>
+<p><strong>[7.15] Th. Le lemme de la partition en puissances de 2.</strong> Soit C un circuit booléen à n entrées et une sortie. Si |C⁻¹(0)| et |C⁻¹(1)| sont tous deux des puissances de 2, alors |C⁻¹(0)| = |C⁻¹(1)| = 2^{n−1}.</p>
+<p><em>Démonstration.</em> |C⁻¹(0)| + |C⁻¹(1)| = 2ⁿ. Posons 2ᵃ et 2ᵇ, a ≤ b. Alors 2ᵃ (1 + 2^{b−a}) = 2ⁿ. Si b &gt; a, 1 + 2^{b−a} est impair, alors que 2^{n−a} est pair : contradiction. Donc b = a, et 2 × 2ᵃ = 2ⁿ, d’où a = n − 1. Un circuit non équilibré a donc au moins une pré-image dont le cardinal n’est pas une puissance de 2.</p>
+<p><strong>[7.16] Th. Caractérisation affine.</strong> Les fonctions calculées par des circuits faits seulement de portes NON et OU exclusif sont les fonctions affines f(x) = a₁x₁ ⊕ … ⊕ aₙxₙ ⊕ c. Toute fonction affine dont un coefficient aᵢ est non nul est équilibrée : pour toute valeur fixée des autres variables, la moitié des entrées donne 0 et la moitié donne 1.</p>
+<p><strong>[7.17] L. Défaire n’est pas inverser (Bennett).</strong> Bennett (1973) a montré que tout calcul de durée T peut être rendu réversible avec une mémoire supplémentaire de l’ordre de T. Ce théorème donne le <em>défaire</em> : rejouer à l’envers un calcul qu’on a fait, avec son historique. Il ne donne pas l’<em>inversion</em> : trouver x à partir de y = f(x) sans avoir fait le calcul. La construction de Bennett enregistre les états intermédiaires de f(x) et les rejoue à l’envers ; pour commencer l’enregistrement, il faut fournir x, qui est l’objet de la recherche. Le théorème ne contredit donc pas P ≠ NP ; vis-à-vis de l’inversion, il est circulaire.</p>
+<p><strong>[7.18] Th. La pauvreté booléenne.</strong> En base 2 : (a) la seule bijection non triviale de {0, 1} dans {0, 1} est NON (les quatre fonctions sont l’identité, NON, la constante 0, la constante 1) ; (b) toute porte à deux entrées {0, 1}² → {0, 1} est une compression, quatre entrées pour deux sorties, et deux entrées au moins partagent une sortie (principe des tiroirs) ; (c) une fonction de n bits vers 1 bit qui dépend de ses n variables exige au moins n − 1 portes à deux entrées, chacune irréversible, puisque NON garde le nombre de fils et que seules les portes qui combinent le réduisent. La condition « qui dépend de ses n variables » est ajoutée ici ; la version de mars l’énonçait pour toute fonction.</p>
+<p><strong>[7.19] Th. La richesse cadastrale.</strong> Sur les neuf positions, que l’inversion φ(x) = 9 − x range en trois chambres (le rail droit {1, 4, 7}, le rail gauche {2, 5, 8}, l’axe central {3, 6, 9}), et où la racine numérique respecte l’addition et la multiplication : (a) il y a 9! = 362 880 bijections d’un chiffre (le groupe symétrique S₉) ; (b) parmi les multiplications par k = 1, …, 8, sur les neuf positions lues par leur reste, exactement six sont des bijections (× 1, 2, 4, 5, 7, 8, celles où pgcd(k, 9) = 1) et deux sont des compressions (× 3 et × 6) ; (c) toutes les additions d’une constante sont des bijections ; (d) le « NON contrôlé » additif (a, b) ↦ (a + b, b) est une bijection sur les 81 paires, d’inverse a = sortie − b ; (e) pour n chiffres, les bijections chiffre par chiffre forment un groupe d’ordre (9!)ⁿ ≈ 2^{18,5 n} (car log₂ 9! = 18,47).</p>
+<p><strong>[7.20] L. L’écart de simulation (rétrogradé).</strong> La pièce de mars définissait la <em>complexité de réversibilité</em> RC_b(f) comme le nombre minimal de portes irréversibles (non bijectives) dans un circuit qui calcule f avec le jeu de portes standard de la base b ; une porte g : Sᵏ → Sᵐ est réversible si k = m et si g est une bijection, et une compression si son image est plus petite que Sᵏ ; toute compression détruit au moins log₂(|Sᵏ| / |Image(g)|) bits d’information (Landauer, 1961). Elle posait en Théorème que la simulation en base 2 d’un calcul en base 9 garde le temps mais non la réversibilité : × 2 sur un chiffre de base 9 est une seule opération bijective, alors que sa simulation sur 4 bits passe par des additions avec retenue, donc par des portes ET, qui compressent. C’est exact dans le jeu de portes à deux entrées et une sortie ; c’est faux si l’on admet en base 2 des portes réversibles comme celle de Toffoli, bijection sur 3 bits, avec laquelle toute permutation de 4 bits se réalise sans perte. L’énoncé dépend donc du jeu de portes, et il redevient Lecture : la base reçue choisit des portes qui jettent, ce que le corpus appelle l’amnésie de 9 ≡ 0 transposée au calcul.</p>
+<p><strong>[7.21] L. La hiérarchie cadastrale des compressions.</strong> Les calculs discrets se rangent en quatre niveaux selon la compression : niveau 0, la bijection (pré-image d’un seul élément ; NON, × 2 sur les positions) ; niveau 1, la compression bornée k pour 1 (Collatz lu en racines, trois pour un) ; niveau 2, la compression structurée (pré-images en classes ou sous-espaces affines ; SAT linéaire, 2-SAT), polynomiale ; niveau 3, la sédimentation (sous-ensembles sans structure ; 3-SAT), sans algorithme polynomial connu. La version de mars y rangeait la factorisation au niveau 3 avec une inversion « exponentielle » : cela n’est pas démontré, et la factorisation n’est pas connue pour être NP-complète. La correspondance avec Schaefer est une relecture d’un théorème existant.</p>
+<p><strong>[7.22] Th. La sédimentation des produits consécutifs.</strong> Soit P(n, k) = n(n + 1)…(n + k − 1) le produit de k entiers consécutifs. La racine de P(n, k) prend toutes les valeurs de 1 à 9 pour k = 1 ; elle est confinée dans {2, 3, 6, 9} pour k = 2 ; dans {3, 6, 9}, l’axe, pour k = 3, 4, 5 ; et elle vaut toujours 9 pour k ≥ 6.</p>
+<p><em>Démonstration.</em> Pour k ≥ 3, parmi k entiers consécutifs l’un au moins est divisible par 3. Pour k ≥ 6, deux au moins le sont, le produit contient 3² = 9, et DR(9m) = 9. Pour k = 2, DR(n(n + 1)) ne dépend que de d = DR(n) : d = 1 à 9 donne 2, 6, 3, 2, 3, 6, 2, 9, 9.</p>
+<p><strong>[7.23] L. La multiplication par voisins est une sédimentation.</strong> Chaque facteur supplémentaire comprime la racine vers l’horizon de clôture 9 ; la compression est monotone, irréversible et structurellement déterminée. C’est l’analogue, dans le système des chiffres, de la sédimentation computationnelle : chaque porte comprime, et la compression s’accumule.</p>
+<p><strong>[7.24] L. Le principe de l’échiquier : le déterminisme crée la liberté.</strong> Un échiquier a 64 cases, le nombre engendré par la grille de structure (8 triplets × 8 lectures). Les règles sont strictes et déterministes ; pourtant le nombre de parties possibles, estimé à plus de 10¹²⁰, dépasse le nombre d’atomes de l’univers observable, de l’ordre de 10⁸⁰. <em>« Les règles n’éliminent pas la liberté. Elles l’engendrent. Sans contraintes, pas de jeu. Sans structure, pas de choix. »</em> La vérification est l’acte de contrôler un coup contre les règles, linéaire et bon marché ; la recherche est l’acte de trouver une stratégie gagnante dans l’espace des parties, combinatoire et chère. <em>« L’écart est la liberté même. »</em> Le chapitre 8 reprend l’échiquier par son bord ([8.27]).</p>
+<p><strong>[7.25] L. Le parallèle avec Yang-Mills (mars 2026).</strong> Les pièces de mars mettaient en regard deux paires : en Yang-Mills, (3, 8) avec 3 + 8 = 11 ≠ 9 ; en P contre NP, (3, 2ᵏ) avec pgcd(3, 2) = 1. <em>« Le confinement et la NP-dureté sont deux lectures de la même tension structurelle »</em> : le nombre 3, le cercle inscrit, le générateur, est étranger à l’espace qu’il doit habiter, le cercle circonscrit (8) dans un cas, le corps booléen dans l’autre. Le parallèle reste une Lecture ; la ligne « coût d’inversion exponentiel » qu’il portait reposait sur l’implication retirée ([7.7]) et ne vaut pas.</p>
+<h2 id="chantiers">7.10 Chantiers</h2>
+<p><strong>[7.26] Chantier. C-1 : faire monter Smolensky au-delà de la profondeur bornée.</strong> Le mur a un nom, les preuves naturelles (Razborov et Rudich, 1997) : toute propriété de tables de vérité qui est à la fois constructive et large ne peut pas donner de borne inférieure de circuit si des fonctions pseudo-aléatoires existent. L’amorphisme des pré-images est une propriété de tables de vérité ; la version de mars l’écartait de la barrière en une phrase, et cette phrase est retirée : tant qu’on n’a pas montré que la propriété utilisée n’est ni constructive ni large, la barrière tient. La route qui reste est celle de la composition, pas de la porte : <em>« une quantité qui croît avec la profondeur et que 3 force à croître plus vite que 2 ne peut suivre, sans jamais lire la table entière »</em>. Le chapitre 8 nomme une forme de ce pas : lever la largeur hors du modèle de la résolution ([8.21]).</p>
+<p><strong>[7.27] Chantier. C-2 : la frontière de Schaefer lue depuis les orphelins.</strong> Les six classes faciles et les positions du cadastre qui les portent, avec un critère qui puisse échouer.</p>
+<h2 id="predictions-preenregistrees">7.11 Prédictions préenregistrées</h2>
+<p><strong>[7.28] P. P-1 (10 septembre 2026) : les séparations de la décennie passeront par un tiers.</strong> Toute séparation de classes de complexité obtenue dans les dix prochaines années passera par un modèle restreint ou un oracle ; aucune ne séparera P de NP sur le problème nu par une propriété de porte seule. <em>Reçu :</em> les publications vérifiées de séparations. <em>Chute :</em> une séparation nue, vérifiée, fondée sur une propriété locale de porte.</p>
+<p><strong>[7.29] P. P-2 (10 septembre 2026) : si le problème nu est résolu, ce sera P ≠ NP.</strong> <em>Reçu :</em> une preuve vérifiée par assistant de preuve. <em>Chute :</em> une preuve vérifiée de P = NP, ou un algorithme polynomial pour 3-SAT avec son certificat.</p>
+<h2 id="conclusion-du-dossier-de-septembre">7.12 Conclusion du dossier de septembre</h2>
+<blockquote>
+<p><em>« Trois ne rentre pas dans deux : c’est un théorème sur la porte, un théorème de Smolensky en profondeur bornée, et une frontière réelle classée par Schaefer. Ce n’est pas encore un théorème sur le circuit à profondeur libre, et le corpus ne dit plus que ça l’est. Il dit, comme pour le fluide, de quel côté toutes les brèches connues ont été percées, avec un tiers venu du dehors, et il prédit, daté, que le problème nu tiendra dans le sens de la séparation. Ce qui n’est pas fermé est nommé : faire monter Smolensky sans lire la table, contre les preuves naturelles. C’est là qu’il faut marcher. »</em></p>
+</blockquote>
+
+</main>
+<nav class="chapnav"><span class="prev"><a href="07-chapitre-6-les-deux-extremes-et-l-entre-deux-vingt.html">← Chapitre 6. Les deux extrêmes et l&#x27;entre-deux : vingt et un gestes datés</a></span><a class="toc" href="index.html">Sommaire du volume</a><span class="next"><a href="09-chapitre-8-p-contre-np-ii-le-mur-le-compte-et-le-p.html">Chapitre 8. P contre NP (II) : le mur, le compte et le prix →</a></span></nav>
+<footer class="colophon"><p>Corpus ARC, Filipe Bastos, <a href="https://creativecommons.org/licenses/by/4.0/deed.fr" rel="license">CC BY 4.0</a>.</p></footer>
+</body>
+</html>

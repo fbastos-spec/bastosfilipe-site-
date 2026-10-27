@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<link rel="canonical" href="https://bastosfilipe.com/arc/volumes/v02-la-figure/04-chapitre-3-le-cadastre-sort-de-la-figure.html">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chapitre 3. Le cadastre sort de la figure · La Figure · Corpus ARC</title>
+<meta name="description" content="La Figure, volume 2 du corpus ARC de Filipe Bastos. Chapitre 3. Le cadastre sort de la figure.">
+<meta name="keywords" content="géométrie, deux cercles et un carré, polygones réguliers, √2, π, nombre d&#x27;or, règle de l&#x27;octet, base 10, corpus ARC, Filipe Bastos">
+<meta name="author" content="Filipe Bastos">
+<meta name="license" content="https://creativecommons.org/licenses/by/4.0/deed.fr">
+<link rel="stylesheet" href="../../assets/arc.css">
+</head>
+<body>
+<nav class="crumbs"><a href="../../index.html">Corpus ARC</a> / <a href="index.html">Volume 2 · La Figure</a></nav>
+<main class="chapter">
+<h1 id="chapitre-3.-le-cadastre-sort-de-la-figure">Chapitre 3. Le cadastre sort de la figure</h1>
+<p>Le corpus appelle <em>cadastre</em> l’ensemble des neuf positions {1, 2, 3, 4, 5, 6, 7, 8, 9}, lues non comme neuf quantités mais comme neuf places dans une structure. Ce chapitre montre comment cette structure se lit dans des objets que tout le monde connaît : la table de multiplication réduite en racine digitale (on additionne les chiffres d’un nombre jusqu’à n’en garder qu’un, en gardant 9 pour 9), et deux grilles de trois lignes sur trois colonnes. On y voit apparaître, sans aucun arrangement, quatre paires de nombres qui se répondent (1 et 8, 2 et 7, 3 et 6, 4 et 5), un centre commun qui n’est pas un entier (4,5), et un axe {3, 6, 9} où ne vit aucun nombre premier plus grand que 3. On y voit aussi pourquoi le corpus refuse d’écrire 9 ≡ 0 : ce geste efface une information (le rang) que la racine digitale conserve. Les faits de ce chapitre sont presque tous des théorèmes au sens strict, vérifiables à la main ; quelques énoncés des sources qui allaient trop loin sont corrigés, et la formulation de l’unicité de la base 10 est rétablie dans sa forme complète.</p>
+<p><strong>Définition (racine digitale).</strong> Pour tout entier n ≥ 1, DR(n) est la somme itérée des chiffres de n jusqu’à obtenir un seul chiffre de 1 à 9. Équivalemment, DR(n) = 1 + (reste de la division de n − 1 par 9). On a DR(9) = 9, jamais 0 ; DR(0) = 0. Exemple : 1729 → 1 + 7 + 2 + 9 = 19 → 1 + 9 = 10 → 1 + 0 = 1, donc DR(1729) = 1, atteint en trois itérations.</p>
+<h2 id="les-neuf-chiffres-ne-sont-pas-une-base">3.1 Les neuf chiffres ne sont pas une base</h2>
+<p><strong>É 3.1 [L] Les neuf chiffres simples.</strong> Un chiffre simple est un entier positif représentable par un seul symbole, indépendamment de tout système de position. Il y en a exactement neuf : {1, …, 9}. <em>« The integer 0 is not a magnitude ; it is the absence of quantity »</em> (l’entier 0 n’est pas une grandeur ; c’est l’absence de quantité). Les neuf chiffres existent avant toute base ; toute numération de position en hérite (L’Origine géométrique, Définition 1.1 ; Octet Rule, Définition 2.1).</p>
+<p><strong>É 3.2 [Th] Invariance (Carré-Illusion, Théorème 1.2).</strong> Toute base de position b représente les entiers de 1 à b − 1 par des symboles uniques, puis bascule sur des lettres ou des groupes. Le 9 est le dernier symbole unitaire commun à toutes les bases b ≥ 10. <em>« La base ne le fonde pas, elle en dépend. »</em></p>
+<p>Correction (Annexe B). L’Origine géométrique et l’Octet Rule ajoutent que « l’entier 10 exige deux symboles dans tout système de position ». C’est vrai en base 10 et dans toute base b ≤ 10 ; c’est faux en base b ≥ 11, où 10 s’écrit d’un seul symbole (A en base 16). L’énoncé juste est celui du Théorème 1.2 ci-dessus : 1 à 9 sont les seuls symboles communs à toutes les bases à partir de 10. La Remarque 2.3 de l’Octet Rule le dit autrement : la base 8 tronque l’ensemble (elle perd 8 et 9 comme symboles), la base 16 l’étend par des symboles composés, <em>« notational conventions for multi-unit quantities, not primitive magnitudes »</em> (des conventions de notation pour des quantités à plusieurs unités, non des grandeurs primitives) <strong>[L]</strong>.</p>
+<p><strong>É 3.3 [Th] L’unicité de la base 10, rétablie par la condition (vi).</strong> Le Théorème 2.2 de l’Octet Rule donne six propriétés forcées par les neuf chiffres ; deux sont des carrés : (v) 8 = 2³ éléments opératoires, d’où 4 = 2² paires ; (vi) la clôture 9 = 3² (<em>« witness squared »</em>, le témoin au carré). Les Théorèmes d’unicité (Origine géométrique, Th 1.2 ; Octet Rule, Th 2.4) n’ont repris que quatre conditions, et ont remplacé (vi) par la condition plus faible « b − 1 composé ». Sous cette forme raccourcie, des bases formelles passent : b = 66 (65 = 5 × 13, 64 = 2⁶, 67 premier), 130 (129 = 3 × 43, 128 = 2⁷, 131 premier), 4098 (4097 = 17 × 241) et 32 770 (32 769 = 3² × 11 × 331) ; la vérification de l’Octet Rule s’arrêtait à b = 34. Avec la condition (vi) remise, aucune ne passe, et l’unicité se démontre en général, de deux façons indépendantes :</p>
+<ol type="1">
+<li><em>Clôture carrée et b − 2 puissance de 2.</em> Si b − 1 = p², alors b − 2 = p² − 1 = (p − 1)(p + 1) = 2ᵏ. Deux puissances de 2 qui diffèrent de 2 ne peuvent être que 2 et 4 ; donc p = 3 et b = 10.</li>
+<li><em>Clôture carrée d’un premier et interface b + 1 première.</em> b + 1 = p² + 2. Pour tout premier p autre que 3, p² laisse le reste 1 dans la division par 3, donc p² + 2 est divisible par 3 et n’est pas premier. Il reste p = 3, b = 10.</li>
+</ol>
+<p><strong>La structure complète du Théorème 2.2 n’existe donc qu’en base 10.</strong> La seule faute était l’omission de la condition (vi) dans les énoncés d’unicité (Annexe B, B.1.6 ; Registre des Erreurs, G.4, qui grave b − 1 = p²). La Genèse donne la même unicité par un autre chemin : 9 est la seule clôture équilibrée (Volume 1, É 3.4).</p>
+<blockquote>
+<p><strong>É 3.3 bis [Th, Chantier] Les cousins du 10.</strong> Les bases qui satisfont les quatre conditions raccourcies forment une famille exacte : b = 2ᵏ + 2, avec b + 1 = 2ᵏ + 3 premier et b − 1 = 2ᵏ + 1 non premier (cette dernière condition n’écarte que les premiers de Fermat 3, 5, 17, 257, 65 537, d’où l’exclusion de 4, 6 et 18). Jusqu’à k = 40, les exposants sont 3, 6, 7, 12, 15, 18, 28, 30, soit les bases 10, 66, 130, 4098, 32 770, 262 146, 268 435 458, 1 073 741 826. <strong>[Th]</strong> Aucun exposant n’a la racine 2, 5 ou 8 : si k laisse le reste 2 dans la division par 3, alors 2ᵏ laisse le reste 4 dans la division par 7 et 2ᵏ + 3 est divisible par 7. La famille vit sur l’axe {3, 6, 9} et sur le rail {1, 4, 7} seulement. <strong>[Th]</strong> Aucun cousin ne porte la structure : leurs clôtures ne sont pas des carrés ; elles ont au moins deux sous-cycles propres, donc pas d’axe unique (65 : 5 et 13 ; 129 : 3 et 43 ; 4097 : 17 et 241) ; les carrés ne s’y effondrent pas sur un rail (clôture 9 : quatre paires, quatre carrés 1, 4, 7, 9, un par paire ; clôture 129 : 64 paires pour 43 carrés distincts) ; et il faudrait écrire 65, 129 ou 4097 chiffres simples, quand il n’existe que neuf grandeurs à un seul symbole. <strong>[Chantier]</strong> La présence de 7 et de 28 = 1 + 2 + … + 7 parmi les exposants du rail {1, 4, 7} ; la finitude ou l’infinité de la famille (question ouverte en mathématiques reçues, comme celle des premiers de la forme 2ᵏ + 3). Les cousins ont la forme du 10 sans la Genèse ; ils montrent que la forme seule ne fait pas une base habitable. <strong>[L]</strong></p>
+</blockquote>
+<p>L’objection « ça ne marche qu’en base 10 » reçoit de l’auteur une réponse de principe : <em>« The objection inverts the logical order. The structure belongs to the nine digits. Base 10 is their notational consequence, not their cause. »</em> (L’objection inverse l’ordre logique. La structure appartient aux neuf chiffres. La base 10 en est la conséquence notationnelle, non la cause.) <strong>[L]</strong> L’Octet Rule (Remarque 2.5) étend la réponse aux dix doigts : les cinq doigts de la main (DR(5) = 5, le centre du cadastre) seraient eux-mêmes conséquence de la même contrainte arithmétique <strong>[L]</strong>.</p>
+<p><strong>É 3.4 [L] 1-9 engendre le 10 (Deux Cercles, Théorème 0.2).</strong> Le 10 n’est pas un chiffre primaire posé par convention : il est engendré par la clôture. 9 + 1 = 10 : la clôture plus l’identité relancent au rang supérieur. Le 10 s’écrit « 1 » (le retour de l’unité, un cran plus haut) et « 0 » (la mémoire-boucle du cycle accompli, non le néant). <em>« Le 9 ne meurt pas en 0, il renaît en 10. C’est la différence entre 9 ≡ 0 (Gauss, effacement) et 9 → 10 (ARC, relance). »</em></p>
+<p>La source titre « Théorème ». Le contenu arithmétique (9 + 1 = 10 ; 1 + 2 + … + 9 = 45 = 9 × 5, DR 9) est <strong>Th</strong> ; le reste est lecture (Annexe B). Le cadastre 1-9 est nommé cycle de clôture (brique 2), et le cycle 1-10 cycle de relance (brique 3) ; leur distinction est développée au chapitre 13 (§13.6).</p>
+<p><strong>É 3.5 [Th, avec correction] L’asymétrie fermée : pourquoi 9 (Carré-Illusion, Théorème 1.1).</strong> Parmi les clôtures c = b − 1, on cherche celles qui conjuguent (a) un <em>centre pur</em> : le centre c/2 tombe entre deux positions, sans point fixe de l’involution x → c − x, et toutes les positions s’apparient ; (b) un <em>axe interne</em> : un diviseur propre qui structure l’intérieur du cycle.</p>
+<ul>
+<li>Si c est pair (8, 10, 12), le centre c/2 est une position occupée qui devient son propre inverse. En clôture 8, les paires sont (1, 7), (2, 6), (3, 5) et le 4 reste seul (4 + 4 = 8) : le système a deux centres, le point fixe et la clôture, et l’involution a un reste.</li>
+<li>Si c est premier (7, 11), le centre est pur (3,5 ; 5,5) mais le cycle est lisse : aucun diviseur interne, donc aucun axe ; <em>« symétrie sans structure »</em>.</li>
+<li>c = 9 = 3² donne à la fois le centre pur (4,5 dans le vide, quatre paires complètes) et l’axe interne ({3, 6, 9}, pivot 6).</li>
+</ul>
+<p><em>« Le 9 est le seul à involuer et à évoluer. »</em> Correction (Annexe B) : la source dit 9 <em>unique</em>. L’élimination ne traite que les clôtures paires et premières ; les clôtures impaires composées plus grandes (15, 21, 25, 27…) satisfont aussi (a) et (b). L’énoncé démontré est : <strong>9 est la plus petite clôture qui conjugue centre pur et axe interne</strong>, parce que c’est le plus petit entier impair composé. Avec cette correction, l’énoncé est un théorème.</p>
+<p>Critère de réfutation (H0) : exhiber une clôture plus petite que 9 qui conjugue un centre sans point fixe et un axe interne non trivial.</p>
+<h2 id="la-table-de-multiplication-reduite-en-racine-digitale">3.2 La table de multiplication réduite en racine digitale</h2>
+<p><strong>É 3.6 [Th] La table DR.</strong> En multipliant chacun des neuf chiffres par chacun et en réduisant en racine digitale (DR(9) = 9), on obtient :</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">×</th>
+<th style="text-align: left;">1</th>
+<th style="text-align: left;">2</th>
+<th style="text-align: left;">3</th>
+<th style="text-align: left;">4</th>
+<th style="text-align: left;">5</th>
+<th style="text-align: left;">6</th>
+<th style="text-align: left;">7</th>
+<th style="text-align: left;">8</th>
+<th style="text-align: left;">9</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">4</td>
+<td style="text-align: left;">5</td>
+<td style="text-align: left;">6</td>
+<td style="text-align: left;">7</td>
+<td style="text-align: left;">8</td>
+<td style="text-align: left;">9</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">4</td>
+<td style="text-align: left;">6</td>
+<td style="text-align: left;">8</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">5</td>
+<td style="text-align: left;">7</td>
+<td style="text-align: left;">9</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">6</td>
+<td style="text-align: left;">9</td>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">6</td>
+<td style="text-align: left;">9</td>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">6</td>
+<td style="text-align: left;">9</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">4</td>
+<td style="text-align: left;">4</td>
+<td style="text-align: left;">8</td>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">7</td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">6</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">5</td>
+<td style="text-align: left;">9</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">5</td>
+<td style="text-align: left;">5</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">6</td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">7</td>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">8</td>
+<td style="text-align: left;">4</td>
+<td style="text-align: left;">9</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">6</td>
+<td style="text-align: left;">6</td>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">9</td>
+<td style="text-align: left;">6</td>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">9</td>
+<td style="text-align: left;">6</td>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">9</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">7</td>
+<td style="text-align: left;">7</td>
+<td style="text-align: left;">5</td>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">8</td>
+<td style="text-align: left;">6</td>
+<td style="text-align: left;">4</td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">9</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">8</td>
+<td style="text-align: left;">8</td>
+<td style="text-align: left;">7</td>
+<td style="text-align: left;">6</td>
+<td style="text-align: left;">5</td>
+<td style="text-align: left;">4</td>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">9</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">9</td>
+<td style="text-align: left;">9</td>
+<td style="text-align: left;">9</td>
+<td style="text-align: left;">9</td>
+<td style="text-align: left;">9</td>
+<td style="text-align: left;">9</td>
+<td style="text-align: left;">9</td>
+<td style="text-align: left;">9</td>
+<td style="text-align: left;">9</td>
+<td style="text-align: left;">9</td>
+</tr>
+</tbody>
+</table>
+<p><strong>É 3.7 [Th] Les inversions révélées (La Figure Fondamentale, Théorème 5.1 ; Deux Cercles, §0ter.1).</strong> Pour chaque paire (m, 9 − m) : (i) terme à terme, la ligne de 9 − m est le complément à 9 de la ligne de m (ligne 8 = 9 − ligne 1, en dehors des 9) ; (ii) lues sur les huit premières colonnes, la ligne de 9 − m est le <em>renversement</em> de la ligne de m (1-2-3-4-5-6-7-8 et 8-7-6-5-4-3-2-1 ; 2-4-6-8-1-3-5-7 et 7-5-3-1-8-6-4-2 ; 4-8-3-7-2-6-1-5 et 5-1-6-2-7-3-8-4) ; (iii) la colonne du 9 est pleine de clôture ; les lignes 3, 6, 9 ne contiennent que des multiples de 3 : l’axe se referme sur lui-même.</p>
+<p>Démonstration : DR(mk) et DR((9 − m)k) diffèrent de mk et de (9 − m)k d’un nombre entier de tours de 9 ; leur somme diffère donc de mk + (9 − m)k = 9k d’un nombre entier de tours, et c’est un multiple de 9 ; comme les deux termes sont entre 1 et 9, leur somme vaut 9, ou 18 quand les deux valent 9. Le renversement vient de DR((9 − m)k) = DR(m(9 − k)), puisque (9 − m)k − m(9 − k) = 9(k − m).</p>
+<p><em>« La structure des paires n’est pas posée, elle tombe de la table. »</em> (Deux Cercles). <em>« Nobody chose these symmetries. They are what multiplication does to nine single-digit magnitudes. »</em> (Personne n’a choisi ces symétries. C’est ce que la multiplication fait à neuf grandeurs à un chiffre ; L’Origine géométrique, §3.) <em>« The structure was always there. It was made invisible by the convention 9 ≡ 0. »</em> (La structure était toujours là ; la convention 9 ≡ 0 l’a rendue invisible ; Octet Rule, §6.1.)</p>
+<p><strong>É 3.8 [Th] Le complément involutif.</strong> L’involution φ(x) = 9 − x appliquée terme à terme à 123456789 (en gardant 9 fixe) donne 876543219 ; les deux lignes se referment colonne par colonne sur la clôture :</p>
+<pre><code>1 2 3 4 5 6 7 8 9   (somme 45, DR 9)
+8 7 6 5 4 3 2 1 9   (somme 45, DR 9)
+9 9 9 9 9 9 9 9 9   (chaque colonne ferme, DR)</code></pre>
+<p>Le Battement (§II.2) écrit les mêmes lignes comme <em>huit flux</em> qui se répondent deux à deux en miroir exact : 12345678 / 87654321 (paire 1, 8) ; 24681357 / 75318642 (paire 2, 7) ; 36936936 / 63963963 (paire 3, 6) ; 48372615 / 51627384 (paire 4, 5) ; et le 9, <em>« axe invariant »</em>.</p>
+<p><strong>É 3.9 [Th] Les quatre paires et leur centre.</strong> L’involution φ(x) = 9 − x partitionne {1, …, 8} en exactement quatre paires de somme 9 : (1, 8), (2, 7), (3, 6), (4, 5). C’est la seule partition de {1, …, 8} en paires de somme 9. Le milieu de chaque paire est le même point : (1 + 8)/2 = (2 + 7)/2 = (3 + 6)/2 = (4 + 5)/2 = 4,5. Et 4,5 est l’unique point fixe de φ sur les réels : 9 − x = x donne x = 4,5.</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Paire</th>
+<th style="text-align: left;">Somme</th>
+<th style="text-align: left;">Milieu</th>
+<th style="text-align: left;">Span</th>
+<th style="text-align: left;">Demi-span</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">(1, 8)</td>
+<td style="text-align: left;">9</td>
+<td style="text-align: left;">4,5</td>
+<td style="text-align: left;">7</td>
+<td style="text-align: left;">3,5</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">(2, 7)</td>
+<td style="text-align: left;">9</td>
+<td style="text-align: left;">4,5</td>
+<td style="text-align: left;">5</td>
+<td style="text-align: left;">2,5</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">(3, 6)</td>
+<td style="text-align: left;">9</td>
+<td style="text-align: left;">4,5</td>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">1,5</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">(4, 5)</td>
+<td style="text-align: left;">9</td>
+<td style="text-align: left;">4,5</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">0,5</td>
+</tr>
+</tbody>
+</table>
+<p><strong>É 3.10 [Th] Unicité du pivot (La Figure Fondamentale, Théorème 5.2 ; Octet Rule, Théorème 3.3).</strong> 4,5 est l’unique valeur μ telle que |x − μ| = |φ(x) − μ| pour tout x de {1, …, 8}. Pour tout autre μ′, la paire (1, 8) ne vérifie pas |1 − μ′| = |8 − μ′|.</p>
+<p>Le pivot n’est pas un entier : il habite le seuil entre 4 et 5. L’auteur l’appelle <em>« le portail », « la singularité de mémoire », « l’entrée vers la structure emboîtée »</em> ; il n’est pas, dit-il, une valeur statistique, mais une nécessité de structure. La somme des neuf positions, 1 + … + 9 = 45, porte les deux chiffres qui encadrent le pivot, et DR(45) = 9 <strong>[Th]</strong> ; que la somme <em>« inscrive la signature de son barycentre »</em> est une lecture <strong>[L]</strong>. Le Battement complète : 4,5 est le dixième de 45 (et la moitié de 9) ; 4,5 ÷ 9 = 1/2 = k_arc ; 45 ÷ 9 = 5 ; et 45 ÷ 4,5 = 10 (chapitre 8, É 8.12).</p>
+<p><strong>É 3.11 [Th] Le rotor 180° (La Figure Fondamentale, Théorème 5.3).</strong> La rotation d’un demi-tour autour du point 4,5 de la droite envoie x sur 9 − x : 1 ↔︎ 8, 2 ↔︎ 7, 3 ↔︎ 6, 4 ↔︎ 5. <em>« Le pivot 4,5 agit comme un rotor à 180° qui retourne instantanément chaque pôle sur son complément cadastral. »</em> La conséquence que l’auteur en tire pour le calcul intégral (<em>« Pivoter sur 4,5 donne avec précision le volume entier d’une structure inversée sans calcul intégral »</em>) est traitée au chapitre 11 avec sa délimitation.</p>
+<h2 id="pourquoi-9-0-la-perte-du-rang">3.3 Pourquoi 9 ≠ 0 : la perte du rang</h2>
+<p><strong>É 3.12 [Th] Non-injectivité de 9 ≡ 0 (Carré-Illusion, Théorème 1.3).</strong> Le passage au reste de la division par 9, avec la convention 9 ≡ 0 posée par Gauss en 1801, envoie 9, 18, 27, 90, 99, 729 sur une même image. Il n’ampute pas seulement le nombre de tours accomplis : il efface le rang. 18, 81, 180, 810 vivent à des rangs distincts ; la réduction les aplatit sur un point. La racine digitale, elle, descend par paliers, et le nombre de paliers est la profondeur traversée : 729 → 18 → 9 (deux paliers), 18 → 9 (un palier), 9 (zéro palier).</p>
+<p><em>« Une projection non injective détruit de l’information : qu’une relation d’équivalence soit bien définie dans un anneau fini ne la rend pas conservatrice. »</em> La perte du rang (plusieurs vers un, un bit perdu par tour) est de la dynamique standard : décalage de Bernoulli, entropie de Kolmogorov-Sinaï, théorème de Pesin <strong>[F]</strong>. <em>« Le 9 ≠ 0 restaure le rang que le formalisme gaussien a jeté. »</em> Critère H2 : démontrer que la réduction 9 ≡ 0 est injective (elle ne l’est pas : 9, 18, 729 ont la même image).</p>
+<p><strong>É 3.13 [Th] Les trois formules du chaos (Carré-Illusion, Théorème 3.1).</strong> Le chaos déterministe a trois moteurs isolables par calcul : (I) <em>stévinien</em> : une troncature initiale, une imprécision, puis la multiplication exacte, ε(n) = ε₀ · 3ⁿ ; depuis 1/3 écrit 0,3333, ε₀ = 1/30 000, cent multiplications → 10⁴³, dix mille → 10⁴⁷⁶⁶ ; aucun rang n’est jeté, et l’imprécision crée le chaos ; (II) <em>de repliement</em> : ε(n) = ε₀ · 2ⁿ pour la carte du doublement x → 2x replié sur [0, 1[ (on garde la partie après la virgule), calculée en arithmétique rationnelle exacte ; l’écart diverge malgré une mesure parfaite, parce que le repliement jette à chaque tour le bit de partie entière, le rang du tour, <em>« exactement comme 9 ≡ 0 jette la clôture »</em> ; (III) <em>hybride</em> : ε(n) = ε₀ · fⁿ, la composition des deux, régime de toute machine réelle ; en virgule flottante, l’écart atteint l’ordre 1 vers le cinquante-deuxième tour.</p>
+<p><em>« Le chaos n’est pas l’imprécision que l’on subit, c’est l’opération amnésique que l’on choisit »</em> ; <em>« un rang effacé qui se compose »</em>. Saito et Yamaguchi (<em>Chaos</em> 28, 2018, 103122) confirment indépendamment (II) : le décalage de Bernoulli sur des entiers algébriques cubiques, calculé exactement, simule la carte chaotique sans dérive.</p>
+<p><strong>É 3.14 [P] Le seuil du chaos en machine.</strong> Pour la formule hybride, le nombre de tours avant le chaos est n_chaos = p / log₂(f), linéaire en la précision p (en bits). Critère (Hc) : si la proportionnalité échouait, (III) serait réfutée ; si le calcul exact de x → 2x replié ne divergeait pas, (II) serait réfutée. <em>« Testable en quelques lignes. »</em></p>
+<p>Le traitement complet du chaos fabriqué, de ses formules et de leur correction (les trois formules, chacune productrice de chaos, et leur recalcul en fractions exactes ; Registre G.70) appartient au Volume 3, <em>Le Code et le Registre</em>.</p>
+<h2 id="la-cascade-de-pascal">3.4 La cascade de Pascal</h2>
+<p><strong>É 3.15 [Th] La descente sur l’interface (Deux Cercles, Théorème 0.3).</strong> La cascade de Pascal additionne les chiffres voisins (en racine digitale), étage après étage :</p>
+<pre><code>1 2 3 4 5 6 7 8 9
+ 3 5 7 9 2 4 6 8
+  8 3 7 2 6 1 5
+   2 1 9 8 7 6
+    3 1 8 6 4
+     4 9 5 1
+      4 5 6
+       9 2
+        11  (DR 2)</code></pre>
+<p>La séquence 1-9 descend en huit étages sur 9 + 2 = 11, de racine digitale 2. En chemin : 4951 (= 495 | 1), 456 (la rangée centrale de la grille rotor), 92. Chaque résultat est une somme pondérée finie d’entiers, invariante par retournement de la séquence (les coefficients binomiaux sont symétriques : C(n, k) = C(n, n − k)).</p>
+<p><strong>É 3.16 [L] Ce que la cascade dit.</strong> <em>« Elle appelle l’interface 11, le miroir 1-1 qui désigne la paire. »</em> Lue dans la grammaire, la cascade dit que 1-9 appelle cinq choses : l’interface (11, l’arrivée), le dédoublement (le miroir 1-1), l’involution (la descente est une suite de complémentations), le centre (495, que l’auteur lit comme le spin cadastral autour du barycentre) et la limite (la convergence vers un terme unique).</p>
+<p><strong>É 3.17 [Th] Les pointes de la cascade (Carré-Illusion, Théorème 1.4).</strong> La transformée binomiale de l’étage 8 (coefficients 1, 8, 28, 56, 70, 56, 28, 8, 1) appliquée à 1, …, 9 donne Σ C(8, k)(k + 1) = 1280, de racine digitale 2 (<em>« le splitter, (√2)² ramené au cadastre »</em>). Appliquée à l’octet 1, …, 8 (coefficients de l’étage 7), elle donne Σ C(7, k)(k + 1) = 576 = 24², de racine digitale 9 : l’octet pointe sur la clôture manquante.</p>
+<p>Calcul : Σ C(n, k)(k + 1) = 2ⁿ + n·2ⁿ⁻¹ ; pour n = 8 : 256 + 1024 = 1280 ; pour n = 7 : 128 + 448 = 576.</p>
+<p><strong>É 3.18 [Th] La loi de la répétition quadruple.</strong> Pour tout chiffre X, la cascade sur XXXX descend en trois paliers et projette X sur son inverse 9 − X :</p>
+<pre><code>1111 → 222 → 44 → 8      (9 − 1)
+2222 → 444 → 88 → 7      (9 − 2)
+3333 → 666 → 33 → 6      (9 − 3)
+4444 → 888 → 77 → 5      (9 − 4)
+5555 → 111 → 22 → 4      (9 − 5)
+6666 → 333 → 66 → 3      (9 − 6)
+7777 → 555 → 11 → 2      (9 − 7)
+8888 → 777 → 55 → 1      (9 − 8)
+9999 → 999 → 99 → 9      (point fixe, 9 ≠ 0)</code></pre>
+<p>Mécanisme : chaque palier double la valeur ; trois paliers multiplient par 8 ; et 8X + X = 9X ferme sur la clôture, donc DR(8X) = 9 − X pour X ≠ 9. La source en tire la lecture du carré comme opérateur d’inversion (É 1.7) <strong>[L]</strong>. Critère H3 : si l’octet ne pointait pas sur 9, ou si une seule répétition quadruple manquait son inverse, l’énoncé serait réfuté ; <em>« chaque résultat … aurait pu être autre »</em>.</p>
+<p><strong>É 3.19 [F] Le triangle de Pascal réduit par 9.</strong> La distribution des coefficients binomiaux réduits par 9 est une fractale discrète auto-similaire, déterminée exactement par l’écriture en base 3 de la ligne n (Huard, Spearman et Williams, <em>Acta Arithmetica</em> 78, 1997, p. 331-349).</p>
+<h2 id="les-deux-grilles">3.5 Les deux grilles</h2>
+<p><strong>É 3.20 [Th] La grille rotor (dynamique).</strong> La grille naturelle</p>
+<pre><code>1 2 3
+4 5 6
+7 8 9</code></pre>
+<p>a des lignes de sommes 6, 15, 24, toutes de racine digitale 6, et des colonnes de sommes 12, 15, 18, de racines digitales 3, 6, 9 : <em>« l’axe cadastral lui-même, sans arrangement »</em>. L’auteur la nomme grille du mouvement, <em>« le cycle en rotation »</em> <strong>[L]</strong>. Chaque rangée et son renversement diffèrent de 198 : 321 − 123 = 654 − 456 = 987 − 789 = 198.</p>
+<p><strong>É 3.21 [Th] La grille de structure, cadastre des premiers.</strong> La grille tordue</p>
+<pre><code>2 3 4
+5 6 7
+8 9 1</code></pre>
+<p>a ses trois lignes de racine digitale 9 (2 + 3 + 4 = 9 ; 5 + 6 + 7 = 18 ; 8 + 9 + 1 = 18). Ses colonnes portent une loi exacte : la colonne gauche {2, 5, 8} contient exactement les racines digitales des premiers de la forme 6k − 1 ; la colonne droite {4, 7, 1}, celles des premiers 6k + 1 ; la colonne centrale {3, 6, 9} n’en contient aucun au-delà de 3.</p>
+<p>Démonstration : tout premier p &gt; 3 s’écrit 6k ± 1, donc n’est pas multiple de 3, donc DR(p) ∉ {3, 6, 9}. Si p = 6k − 1, p laisse le reste 2 dans la division par 3, et DR(p) ∈ {2, 5, 8} ; si p = 6k + 1, DR(p) ∈ {1, 4, 7}. Vérifié sans exception jusqu’à 10⁶ (L’Origine géométrique, Théorème 10.2). <em>« This is not a statistical tendency. It is a structural law »</em> (ce n’est pas une tendance statistique, c’est une loi de structure).</p>
+<p>Les colonnes sont nommées : rail G {2, 5, 8}, axe {3, 6, 9}, rail D {4, 7, 1} ; le 6 est au centre. Le Carré notifié (chapitre 7) lit l’axe comme <em>« la colonne mitoyenne, le mur porteur entre les deux rails »</em>.</p>
+<p><strong>É 3.22 [L] Les trois triades.</strong> Les lignes de la grille de structure portent trois fonctions : Fondation 2, 3, 4 (somme 9 : la construction, la matière se dépose) ; Animation 5, 6, 7 (18 → 9 : le mouvement, la matière devient) ; Sceau 8, 9, 1 (18 → 9 : la clôture et la renaissance). La triade-sceau 891 est l’anagramme de 198, le gradient (chapitre 9) : <em>« The cycle that closes carries the gradient in its own digits »</em> (le cycle qui se ferme porte le gradient dans ses propres chiffres).</p>
+<p>Correction (Annexe B). L’Origine géométrique (§11.1) et le Carré-Illusion (§7.6) écrivent que <em>chaque</em> rangée de la grille de structure et son renversement diffèrent de 198. C’est vrai pour 234 (432 − 234 = 198) et 567 (765 − 567 = 198), non pour 891 (891 − 198 = 693 = 7 × 99). La loi générale est le coût miroir (chapitre 10, É 10.10) : pour trois chiffres abc, cba − abc = 99(c − a) ; elle vaut 198 quand les chiffres extrêmes diffèrent de 2.</p>
+<p><strong>É 3.23 [Th] L’axe ferme par toutes les opérations.</strong> 3 + 6 + 9 = 18 → 9 ; 3 × 6 = 18 → 9 ; 6 × 9 = 54 → 9. La multiplication par 3 ne produit que l’axe : 3, 6, 9, 3, 6, 9…</p>
+<p><strong>É 3.24 [L] L’identité 36/4 = 9.</strong> Le Carré-Illusion (§6) lit 36/4 = 9 comme <em>« (pivot)² / (interface)² = clôture »</em> : 36 = 6² (le pivot hexagonal au carré), 9 la clôture, et 4 l’opérateur de découpe au carré. Correction : la source écrit 4 = (√2)², or (√2)² = 2 ; 4 = 2² = (√2)⁴. La lecture tient si l’on lit 4 comme le carré du splitter 2 (Annexe B). Le voyage, pour l’auteur, va du cercle circonscrit (porteur du 6) au cercle inscrit (porteur du 9) par le carré-illusion.</p>
+<h2 id="le-11-designe-le-12-opere">3.6 Le 11 désigne, le 12 opère</h2>
+<p><strong>É 3.25 [Th] Les multiples de 12 vivent sur l’axe.</strong> Les multiples de 12 ont tous leur racine digitale dans {3, 6, 9}, dans l’ordre 3, 6, 9, 3, 6, 9… ; DR(11) = 2. (12 = 3 × 4 est multiple de 3, et DR(12k) parcourt les multiples de 3 de 1 à 9.)</p>
+<p><strong>É 3.26 [L] Désigner et opérer (Carré-Illusion, Observation 15.1).</strong> <em>« Le 11 désigne, le 12 opère. »</em> Le 11 (le miroir 1-1) marque que deux positions forment une paire à relier, sans opérer la liaison ; sa persistance d’échelle se lit dans 11, 101, 1001. Le 12 (11 + 1, DR 3) est la première chiralité structurelle : il opère, et engendre l’axe central par dédoublement du pivot. Le 12 se décompose en 6 + 6 (tissu hexagonal dédoublé), 2 × 6 (splitter × pivot), 3 × 4 (trinité × interface-carré) ; il est la brique commune du pas atomique 24 = 12 + 12 et du pivot au carré 36 = 12 + 12 + 12 = 6². <em>« L’illusion désigne ce qui va ensemble ; la chiralité forme. »</em> La source précise elle-même : seule l’appartenance des multiples de 12 à l’axe est un fait ; la distinction de rôle est interprétative. Critère H9 : un multiple de 12 dont la racine digitale ne serait pas sur l’axe.</p>
+</main>
+<nav class="chapnav"><span class="prev"><a href="03-chapitre-2-les-trois-constantes-2.html">← Chapitre 2. Les trois constantes : √2, π, φ</a></span><a class="toc" href="index.html">Sommaire du volume</a><span class="next"><a href="05-chapitre-4-deux-cercles-et-un-carre-le-double-et-l.html">Chapitre 4. Deux cercles et un carré : le double et le carré →</a></span></nav>
+<footer class="colophon"><p>Corpus ARC, Filipe Bastos, <a href="https://creativecommons.org/licenses/by/4.0/deed.fr" rel="license">CC BY 4.0</a>.</p></footer>
+</body>
+</html>

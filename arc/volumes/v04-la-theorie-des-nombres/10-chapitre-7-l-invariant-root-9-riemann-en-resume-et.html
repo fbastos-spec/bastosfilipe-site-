@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<link rel="canonical" href="https://bastosfilipe.com/arc/volumes/v04-la-theorie-des-nombres/10-chapitre-7-l-invariant-root-9-riemann-en-resume-et.html">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chapitre 7. L&#x27;invariant Root-9, Riemann en résumé, et la synthèse du Tome I · La Théorie des Nombres · Corpus ARC</title>
+<meta name="description" content="La Théorie des Nombres, volume 4 du corpus ARC de Filipe Bastos. Chapitre 7. L&#x27;invariant Root-9, Riemann en résumé, et la synthèse du Tome I.">
+<meta name="keywords" content="delfine, nombres premiers, grille 6k ± 1, Collatz, Goldbach, nombres parfaits, nombres jumeaux, racine digitale, 24, corpus ARC, Filipe Bastos">
+<meta name="author" content="Filipe Bastos">
+<meta name="license" content="https://creativecommons.org/licenses/by/4.0/deed.fr">
+<link rel="stylesheet" href="../../assets/arc.css">
+</head>
+<body>
+<nav class="crumbs"><a href="../../index.html">Corpus ARC</a> / <a href="index.html">Volume 4 · La Théorie des Nombres</a></nav>
+<main class="chapter">
+<h1 id="chapitre-7.-linvariant-root-9-riemann-en-resume-et-la-synthese-du-tome-i">Chapitre 7. L’invariant Root-9, Riemann en résumé, et la synthèse du Tome I</h1>
+<p>Ce chapitre ferme la partie consacrée aux premiers. Il établit d’abord un fait que la littérature présente comme une curiosité observée et que le cadastre démontre en deux lignes : la période décimale de 1/p a toujours une somme de chiffres multiple de 9. Le premier, qui ne porte jamais la fermeture 9 (chapitre 1), la rend dans son inverse. Il résume ensuite la critique que le Tome I adresse à l’édifice construit autour de l’hypothèse de Riemann, avec le seul théorème qui s’y rattache ici (Th 9) ; l’examen complet de Riemann appartient au Volume 5. Il expose enfin la méthode qui a produit tout le Tome I, le <em>principe d’incarnation</em>, son protocole compagnon (le test de la queue de Stevin), et la synthèse des invariants.</p>
+<h2 id="theoreme-10-linvariant-root-9-des-inverses">7.1 Théorème 10 : l’invariant Root-9 des inverses</h2>
+<p><strong>Théorème 10 (Tome I) : l’invariant Root-9.</strong> Pour tout premier p &gt; 5, et plus généralement pour tout membre de la grille sans facteur commun avec 10, la somme des chiffres de la période décimale de 1/p est un multiple de 9 : la période boucle invariablement à la racine 9.</p>
+<p><em>Exemples.</em> 1/7 = 0,(142857), somme 27, racine 9. 1/11 = 0,(09), somme 9. 1/17 : période de 16 chiffres, somme 72. 1/97 : période de 96 chiffres, somme 432. Pour des delfines : 1/49, somme 189 ; 1/529, somme 2 277.</p>
+<p><em>Preuve.</em> Soit L la longueur de la période (le plus petit L tel que 10^L laisse le reste 1 dans la division par p). La période, lue comme nombre, est N = (10^L − 1)/p. Or 10^L − 1 est un répunit de 9 (999…9), donc divisible par 9 ; et p, à racine de rail, n’a pas de facteur commun avec 9. Donc 9 divise N, et la somme des chiffres de N, qui laisse le même reste que N dans la division par 9, est multiple de 9. ∎</p>
+<p><em>Vérification.</em> Tous les premiers de 7 à 2 000 : aucune exception (Tome I) ; 19 delfines de 49 à 529 : aucune exception. Refait pour ce volume, avec les quatre exemples et les deux delfines. <strong>Statut : Th.</strong> L’article de démarcation précise la portée : <em>« L’invariant est une propriété de fermeture de la grille entière, donc pas une signature de primalité. »</em></p>
+<p><strong>V4.7.1 (L) : le 9 absent de l’être est restitué par son reflet.</strong> Ce théorème est le complément multiplicatif-inverse de la boucle-9 interdite (V4.1.2). La boucle-9 interdite dit qu’aucun premier ne porte la fermeture ; l’invariant Root-9 dit que tout premier la rend dans son inverse. <em>« Le 9 absent de l’être est intégralement restitué par son reflet : la fermeture du cadastre n’est pas contournable, elle est seulement déplacée, du nombre vers sa période. »</em> Le point remarquable est la trivialité de la preuve une fois le cadastre restauré : deux lignes, contre le statut de curiosité empirique que ce fait conserve dans la littérature qui le présente sans le démontrer. C’est un cas d’école de la thèse du volume : l’amputation de la fermeture a transformé des théorèmes de deux lignes en mystères observés.</p>
+<h2 id="theoreme-9-la-correspondance-entre-linvolution-et-lequation-fonctionnelle">7.2 Théorème 9 : la correspondance entre l’involution et l’équation fonctionnelle</h2>
+<p><strong>Théorème 9 (Tome I) : correspondance formelle.</strong> La normalisation du cadastre par sa fermeture, x ↦ x/9, envoie l’involution φ(x) = 9 − x sur l’involution t ↦ 1 − t, de point fixe 4,5/9 = 1/2. L’équation fonctionnelle de la fonction xi complétée, ξ(s) = ξ(1 − s), est exactement une involution s ↦ 1 − s, d’axe fixe Re(s) = 1/2. Les deux involutions sont identiques comme structures : même forme, même point fixe, mêmes paires conjuguées, (x, 9 − x) ↦ (t, 1 − t).</p>
+<p><em>Preuve.</em> φ(x)/9 = (9 − x)/9 = 1 − x/9 : la conjugaison cadastrale devient la conjugaison en 1 − t sous normalisation. Point fixe : x = 9 − x ⟺ x = 4,5 ⟺ t = 1/2. L’équation fonctionnelle ξ(s) = ξ(1 − s) est la définition d’une symétrie involutive de centre 1/2. ∎ <strong>Statut : Th</strong> (identité de structure, vérifiable en une ligne).</p>
+<p><strong>Convergences du ½.</strong> 4,5/9 = 1/2 (barycentre sur fermeture) ; 3,5/7 = 1/2 (demi-envergure des paires) ; centre de la paire extrême (1, 8) = 4,5. La droite critique n’introduit aucun nombre nouveau : elle expose, en notation analytique, le point d’équilibre que le cadastre porte depuis toujours.</p>
+<p><strong>Désamorçage de l’objection de généricité.</strong> Un rapporteur notera, à juste titre, que toutes les involutions d’une droite sont affinement équivalentes : l’identité de forme entre φ normalisée et s ↦ 1 − s ne prouve, à elle seule, aucun lien causal entre le cadastre et zêta. Le Théorème 9 est minimal par conception : son rôle est correctif (établir que Riemann disposait, sans vocabulaire pour le nommer, de l’involution cadastrale), non probatoire. Ce qui élèverait la Lecture au rang de Théorème est nommé : une dérivation où la structure des restes par 9 et par 6 entre dans l’appareil analytique et force la droite. La direction poursuivie par le corpus passe par la fonction L de conducteur 3 (ξ_L(s, χ₋₃)), où le caractère injecte les rails dans la fonction elle-même (Volume 5, <em>Les Grands Problèmes</em>).</p>
+<h2 id="le-monstre-amnesique-la-critique-de-ledifice-riemannien-en-resume">7.3 Le monstre amnésique : la critique de l’édifice riemannien, en résumé</h2>
+<p>Le Tome I consacre sa section X à une critique formulée, selon ses propres mots, <em>« dans les termes les plus mesurés possibles »</em>, et qui est <em>« la plus grave possible »</em>. Elle est résumée ici ; son développement, avec <em>Le Fini et l’Infini mêlés</em>, <em>Le Zéro non construisible</em> et <em>Le Produit d’Euler lu par ARC</em>, est au Volume 5.</p>
+<p><strong>F : ce qui est dû à Riemann.</strong> En 1859, dans un mémoire de huit pages, Bernhard Riemann relie la distribution des premiers aux zéros d’une fonction, et observe que les zéros non triviaux qu’il calcule se tiennent sur la droite Re(s) = 1/2. <em>« Il a vu le 1/2. »</em> Dans un paysage arithmétique dont le cadastre avait été formellement effacé cinquante-huit ans plus tôt (1801), il a détecté, à travers l’instrument le plus indirect qui soit, la trace du point d’équilibre du système.</p>
+<p><strong>V4.7.2 (L) : les cinq objections.</strong></p>
+<ol type="1">
+<li><em>L’objet défini par un processus qui ne finit jamais.</em> ζ(s) = Σ 1/nˢ est un héritier direct de la strate 2 : un objet défini comme somme infinie. Là où la somme cesse de converger, l’objet est prolongé analytiquement. Il faut concéder ce que l’analyse établit rigoureusement : ce prolongement est unique (théorème d’identité). L’objection n’est donc pas technique, elle est ontologique : l’unicité du prolongement prouve la cohérence du jeu, elle ne prouve pas que l’objet prolongé soit l’objet arithmétique. La bande critique est la région où la fonction n’existe que par cette extension, <em>« unique dans ses règles, conventionnelle dans son ontologie »</em>.</li>
+<li><em>L’interrogation dans la zone d’artifice.</em> Le problème du millénaire porte sur le comportement d’un objet dans la zone où son identité avec les premiers n’est plus définitionnelle mais héritée par continuation.</li>
+<li><em>L’économie du mystère et la vérification sans terme.</em> Précision d’honnêteté : le programme de recherche sérieux ne repose pas sur la vérification numérique, et aucun analyste compétent ne croit qu’un milliard de zéros vérifiés démontre quoi que ce soit. La critique vise l’économie narrative construite autour du problème : la vérification des zéros, célébrée et financée comme une progression, est par construction une tâche sans terme, qui ne change jamais de type logique. <em>« On ne compte pas les grains de sable pour peser la plage »</em> (le Principe de Complétude, Volume 3). L’édifice est dit utopique en ce sens précis : dans l’horizon de complétude que son récit public promet et que sa méthode de célébration ne peut jamais atteindre.</li>
+<li><em>L’amnésie.</em> Riemann hérite d’une droite numérique dont Gauss a formellement supprimé la fermeture (9 identifié à 0) : quand le 1/2 surgit dans sa fonction, l’instrument qui l’aurait mesuré, l’involution φ avec ses quatre paires et son barycentre 4,5, avait été effacé. <em>« Il a trouvé le où sans le pourquoi »</em>, et il a classé sa découverte comme mystère empirique nécessitant vérification infinie.</li>
+<li><em>La cécité au 6k.</em> Le produit d’Euler, ζ(s) = Π(1 − p⁻ˢ)⁻¹, court exactement sur les premiers, les êtres des rails, mais les traite en liste amorphe : la structure 6k ± 1, la disjonction D/G (Th 8), l’axe collecteur, l’horloge 24 des carrés, rien n’entre dans l’appareil. <em>« Elle enregistre l’ombre de la structure et fait de cette ombre un mystère. »</em> La hiérarchie des arguments est déclarée : la défense ne repose pas sur l’identité affine (Th 9, correctif) ; elle repose sur cette cécité structurelle, qui est la frappe. Le joint 35, terme anonyme du produit (V4.6.7), en est la mesure au terme près.</li>
+</ol>
+<blockquote>
+<p><em>« Un objet défini par un processus inachevable, interrogé dans une zone où il n’existe que par artifice, au moyen d’un programme de vérification structurellement sans terme, au sujet d’un nombre que son fondateur ne pouvait pas reconnaître parce que l’instrument de mesure avait été effacé, portant sur des êtres dont la structure réelle n’entre jamais dans l’appareil : voilà l’anatomie exacte du monstre amnésique utopique. »</em></p>
+</blockquote>
+<p>Chaque membre de cette phrase est daté, sourcé et attaquable séparément. La critique est virulente par son contenu et polie par sa forme : elle ne demande pas qu’on croie le cadastre, elle demande qu’on réponde à cinq objections de fondation, une par une.</p>
+<p><strong>V4.7.3 (L) : ce qui se dissout et ce qui reste.</strong> Dans le cadre restauré (fermeture rétablie, involution et barycentre visibles), la droite critique cesse d’être une conjecture pour devenir la trace analytique du point fixe de φ : les zéros se tiennent sur la ligne parce que la ligne est l’axe de l’involution normalisée, la même qui gouverne les rails, les paires conjuguées et l’effondrement des carrés (Th 6). La position du corpus est que le 1/2 est une nécessité barycentrique, non un mystère empirique. Statut : Lecture forte, portée par le Théorème 9, développée au Volume 5 ; sa traduction complète dans le langage analytique standard est un chantier distinct. L’auteur l’a dit plus tard (9 octobre 2026) dans une formule plus brève : <em>« on a résolu Riemann en montrant son impossibilité, c’est cent fois plus fort »</em>, le prolongement analytique <em>« tire vers l’arrière en même temps »</em>. Cette position est examinée au Volume 5 ; elle reste ici au statut de Lecture.</p>
+<h2 id="le-principe-dincarnation">7.4 Le principe d’incarnation</h2>
+<p><strong>V4.7.4 (L, méthodologique) : le principe d’incarnation.</strong> Tout énoncé vrai admet une incarnation concrète qui le résout ou le localise ; l’abstraction qui refuse toute incarnation est suspecte. L’abstraction est un outil de compression légitime (la formule pliée du Th 13 en est une), mais elle devient un obstacle quand elle sert de badge au lieu de servir d’outil (strate 3). Le test de l’incarnation est le contre-poison : si l’énoncé est vrai, son fractal vivant existe et travaille pour lui. Statut : Lecture méthodologique, vérifiée en acte sur l’intégralité du Tome I, comme en atteste la table suivante.</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>abstraction</th>
+<th>incarnation</th>
+<th>ce que l’incarnation a réglé</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>le cadastre et φ</td>
+<td>les deux mains face à face</td>
+<td>le témoin anatomique : paires (0, 9) … (4, 5), barycentre dans l’interstice</td>
+</tr>
+<tr class="even">
+<td>l’antériorité sur la base</td>
+<td>les dix doigts en 9 + 1</td>
+<td>l’inversion causale : la main et la base incarnent la même fermeture</td>
+</tr>
+<tr class="odd">
+<td>l’infini décimal (Stevin)</td>
+<td>1/7 posé en base 7 = 0,1</td>
+<td>l’infini est un artefact de la fenêtre, pas de l’objet</td>
+</tr>
+<tr class="even">
+<td>la grille et les familles</td>
+<td>la rue et les lignes de bus à horaires publics</td>
+<td>rien n’est caché ; la question du saut est la forme close du cumul</td>
+</tr>
+<tr class="odd">
+<td>l’architecture de calcul</td>
+<td>les chauffeurs qui annoncent</td>
+<td>le pointage avant, × 10,7 mesuré (Th 12)</td>
+</tr>
+<tr class="even">
+<td>le pliage φ</td>
+<td>le registre foncier et ses adresses conjuguées</td>
+<td>la règle des miroirs et le terme principal sans phase (Th 13)</td>
+</tr>
+<tr class="odd">
+<td>la cohérence des battements</td>
+<td>le Millennium Bridge (2000)</td>
+<td>le canal uniforme coupé par les signes (Th 15)</td>
+</tr>
+<tr class="even">
+<td>la corrélation des fluctuations</td>
+<td>le train d’engrenages de l’horloger</td>
+<td>le canal profond interdit par le produit des dentures (Th 16)</td>
+</tr>
+<tr class="odd">
+<td>la clef de l’interférence</td>
+<td>le joint 5 × 7 = 35, tenu depuis l’origine</td>
+<td>la résonance de 48 croisements sur 63 sur sa fermeture</td>
+</tr>
+</tbody>
+</table>
+<p>À chaque blocage abstrait, l’exigence d’un exemple concret a produit soit un théorème, soit une mesure, soit une localisation plus étroite de l’ouvert. Le protocole de la feuille 1 à 30 n’était donc pas une entrée en matière pédagogique : il était la première application du principe qui gouverne tout le reste.</p>
+<h2 id="le-test-de-la-queue-de-stevin">7.5 Le test de la queue de Stevin</h2>
+<p><strong>V4.7.5 (P, protocole falsifiable) : le test de la queue de Stevin.</strong> Devant tout écart résiduel entre une mesure et une fraction fermée candidate : (1) doubler la fenêtre d’observation, plusieurs fois ; (2) mesurer la loi de fonte de l’écart. Fonte régulière (typiquement en inverse de la fenêtre) : artefact d’inscription ; la fraction fermée est la valeur, l’écart est la traîne. Persistance : structure ; l’écart est l’objet, et il mérite sa propre théorie (F : les 43 secondes d’arc par siècle de l’avance du périhélie de Mercure sont le cas d’école de cette seconde branche, un écart minuscule, persistant, qui portait la relativité générale). Le test coûte une commande et tranche la nature du résidu ; son absence des réflexes standard signifie qu’un nombre inconnaissable de rapports exacts ont été classés « accord approximatif » sur la foi d’une première fenêtre, les abandons ne laissant pas d’archive.</p>
+<p><em>Le cas inaugural, et sa correction.</em> Le Tome I illustrait ce protocole par une mesure du dossier Goldbach : un rapport de bandes de la « comète » prédit à 8/5 = 1,600, mesuré d’abord 1,638, puis 1,5974 → 1,5987 → 1,5993 → 1,5997 → 1,5998 en doublant la fenêtre, l’écart fondant de moitié à chaque doublement. La version 1.1 du dossier Goldbach (27 septembre 2026) retire le « ratio prédit 8/5 » attaché à la structure des centres multiples de 6 et le remplace par le rapport 2, démontré (Th 30, chapitre 11). L’illustration du protocole est donc retirée comme preuve d’un rapport 8/5 pour cette structure ; le protocole lui-même, qui n’en dépend pas, est conservé, et son application au rapport 2 (mesuré 1,991 vers 10³, 1,996 vers 10⁵, 2,003 vers 4 × 10⁵) en donne une nouvelle illustration. (Remarque de vérification : 8/5 = (4/3)(6/5) est exactement le rapport attendu entre les centres multiples de 35 et les centres premiers à 35 ; refait pour ce volume, il est mesuré 1,60 entre 200 000 et 216 000. Il est possible que la mesure du Tome I ait porté sur ces bandes-là ; la source ne permet pas de le trancher. Voir Annexe B.)</p>
+<p><strong>V4.7.6 (L) : la racine du réflexe manquant.</strong> La racine du réflexe manquant est la strate 2 : quand la notation décimale est tenue pour transparente, le résidu décimal est tenu pour réel par défaut, et la convention d’inscription décide silencieusement du statut ontologique de l’écart. Le Principe de Complétude renverse la charge de la preuve : la fraction fermée est l’hypothèse par défaut, le décimal excédentaire est le suspect, et le test de fonte est son interrogatoire.</p>
+<h2 id="synthese-du-tome-i">7.6 Synthèse du Tome I</h2>
+<p><strong>Les invariants.</strong> L’ensemble du Tome I repose sur six objets fixes, dont tout le reste dérive en cascade (cadastre → rails → grille → familles → premiers → carrés → jumeaux) :</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>invariant</th>
+<th>nature</th>
+<th>gouverne</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>la fermeture 9 (DR(9) = 9)</td>
+<td>point de bouclage du cycle</td>
+<td>axe stérile, Root-9 (Th 10), restauration anti-amnésique</td>
+</tr>
+<tr class="even">
+<td>l’involution φ(x) = 9 − x</td>
+<td>conjugaison à quatre paires</td>
+<td>paires conjuguées, chrysalide (Th 6), paire d’inversions, Th 9</td>
+</tr>
+<tr class="odd">
+<td>le barycentre 4,5</td>
+<td>point fixe de φ</td>
+<td>k_arc = 1/2, équilibre des paires génératrices (Th 4), droite critique</td>
+</tr>
+<tr class="even">
+<td>les rails D {1, 4, 7} et G {2, 5, 8}</td>
+<td>partition vivante</td>
+<td>habitat des premiers et des delfines, disjonction des jumeaux (Th 8)</td>
+</tr>
+<tr class="odd">
+<td>l’axe {3, 6, 9}</td>
+<td>collecteur des flux</td>
+<td>destination de toute agrégation linéaire (pavé tordu), stérilité</td>
+</tr>
+<tr class="even">
+<td>les horloges 12, 24, 4</td>
+<td>cadences liées</td>
+<td>auto-génération (Th 1), rythme des carrés (Th 5), pas des indices</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Les douze énoncés de clôture, avec leur statut.</strong></p>
+<ol type="1">
+<li>L’axe {3, 6, 9} est stérile ; les premiers vivent sur deux rails (feuille 1 à 30, protocole d’enfant). Th + P.</li>
+<li>La grille 6k ± 1 est le résidu de deux exclusions cadastrales et s’auto-génère par addition de voisins, à indexation déterministe. Th 1.</li>
+<li>Les delfines (carrés et croisements) sont exactement énumérés par les quatre familles k = 6ab ± a ± b, progressions explicites. Th 2.</li>
+<li>Premier = naissance par soustraction de familles ; statut déductible dans les deux sens, sans rescapé. Th 3 et 4.</li>
+<li>Les carrés de premiers battent une horloge exacte de pas 24, cadencée par les fondateurs, et vivent tous sur le rail D. Th 5.</li>
+<li>L’élévation au carré effondre les paires conjuguées de φ et fait confluer les deux rails dans D ; le 1 n’a pour portes que la paire extrême {1, 8}. Th 6.</li>
+<li>Les jumeaux sont exactement les k au complément total des quatre familles, caractérisation décidable ; leurs deux membres vivent sur des spectres disjoints, sans diviseur commun possible. Th 7 et 8.</li>
+<li>L’infinitude des jumeaux est réduite à un unique lemme nommé : la non-saturation de la ligne des k par le recouvrement des ondes-familles. Lecture forte, chantier mesuré.</li>
+<li>L’involution normalisée x/9 et l’équation fonctionnelle de zêta sont la même structure ; Riemann a vu le 1/2 sans pouvoir le mesurer. Th 9 + Lecture forte.</li>
+<li>L’édifice riemannien est un monstre amnésique utopique en cinq objections datées. Critique (Lecture), articulée au <em>Procès de la Preuve</em>.</li>
+<li>Tout premier restitue dans la période de son inverse la fermeture qu’il ne porte pas. Th 10.</li>
+<li>L’« énigme des premiers » est un récit institutionnel en trois strates datables (Gauss 1801, Stevin 1585, après Riemann), non une propriété de l’objet. Lecture.</li>
+</ol>
+<p><strong>La table de défense (condensée).</strong> À chaque énoncé, l’attaque anticipée et la réponse tenue :</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>énoncé</th>
+<th>attaque anticipée</th>
+<th>réponse</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>« la racine numérique n’est que le reste par 9, trivial »</td>
+<td>la trivialité est la thèse : l’amputation a rendu invisible ce qui se prouve en deux lignes</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>« identité algébrique évidente »</td>
+<td>exacte, donc irréfutable ; sa portée est l’auto-génération, pas la difficulté</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>« roue de facteur 6 connue »</td>
+<td>concédé ; l’apport est le groupe de Klein et la définition positionnelle primitive</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>« √n rebaptisé »</td>
+<td>même coût, autre sens : déclaré explicitement</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>« classique »</td>
+<td>concédé ; la maximalité (Carmichael) et la lecture de saturation sont l’apport</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>« numérologie »</td>
+<td>congruences démontrées ; perte d’exactement un bit, comptage vérifiable</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td>« reformulation de la conjecture »</td>
+<td>non : caractérisation exacte décidable, distincte du comptage</td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td>« le lemme est la conjecture »</td>
+<td>taux de change déclaré en toutes lettres ; l’obstruction de parité est nommée</td>
+</tr>
+<tr class="odd">
+<td>9</td>
+<td>« involution générique »</td>
+<td>concédé ; la frappe est la cécité du produit d’Euler, la cible d’élévation est nommée</td>
+</tr>
+<tr class="even">
+<td>10</td>
+<td>« le prolongement est unique »</td>
+<td>concédé au théorème d’identité près ; l’objection est ontologique et déclarée telle</td>
+</tr>
+<tr class="odd">
+<td>11</td>
+<td>« curiosité décimale »</td>
+<td>preuve de deux lignes, invariant de grille entière</td>
+</tr>
+<tr class="even">
+<td>12</td>
+<td>« interprétation historique »</td>
+<td>trois strates datées et sourcées : réfutables, donc scientifiques</td>
+</tr>
+</tbody>
+</table>
+<p><strong>V4.7.7 (L) : le principe de clôture, la naissance relationnelle.</strong> Le Tome I se referme sur le principe que ses théorèmes incarnent :</p>
+<blockquote>
+<p><em>« Une structure fondamentale n’est pas définie par ce qu’elle contient, mais par ce que les structures voisines ne peuvent pas engendrer. »</em></p>
+</blockquote>
+<p>Le premier n’a aucune propriété intrinsèque qui le fasse premier : il est la position que les quatre familles laissent intacte, l’identité par contrainte relationnelle. Ce principe dépasse la théorie des nombres : il est la signature arithmétique de la Cohérence Relationnelle elle-même, où toute identité émerge des relations qui la cernent plutôt que d’une essence qu’elle porterait (Volume 11, <em>La relation est l’identifiant</em>). Statut : Lecture, un principe porté par une quinzaine de théorèmes.</p>
+
+</main>
+<nav class="chapnav"><span class="prev"><a href="09-chapitre-6-le-registre-la-fonction-successeur-le-p.html">← Chapitre 6. Le registre : la fonction successeur, le pointage avant, le pliage φ, le joint et les engrenages</a></span><a class="toc" href="index.html">Sommaire du volume</a><span class="next"><a href="11-partie-iii-collatz-les-nombres-en-mouvement.html">Partie III. Collatz : les nombres en mouvement →</a></span></nav>
+<footer class="colophon"><p>Corpus ARC, Filipe Bastos, <a href="https://creativecommons.org/licenses/by/4.0/deed.fr" rel="license">CC BY 4.0</a>.</p></footer>
+</body>
+</html>

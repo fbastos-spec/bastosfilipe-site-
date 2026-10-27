@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<link rel="canonical" href="https://bastosfilipe.com/arc/volumes/v03-le-code-et-le-registre/18-chapitre-14-la-formule-du-chaos.html">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chapitre 14. La formule du chaos · Le Code et le Registre · Corpus ARC</title>
+<meta name="description" content="Le Code et le Registre, volume 3 du corpus ARC de Filipe Bastos. Chapitre 14. La formule du chaos.">
+<meta name="keywords" content="registre des erreurs, table de multiplication, audit, chaos, approximation, troncature décimale, complétude, corpus ARC, Filipe Bastos">
+<meta name="author" content="Filipe Bastos">
+<meta name="license" content="https://creativecommons.org/licenses/by/4.0/deed.fr">
+<link rel="stylesheet" href="../../assets/arc.css">
+</head>
+<body>
+<nav class="crumbs"><a href="../../index.html">Corpus ARC</a> / <a href="index.html">Volume 3 · Le Code et le Registre</a></nav>
+<main class="chapter">
+<h2 id="chapitre-14.-la-formule-du-chaos">Chapitre 14. La formule du chaos</h2>
+<p>La théorie reçue du chaos dit que certains systèmes de la nature sont si sensibles à leur point de départ qu’ils deviennent imprévisibles, et que cette sensibilité est une propriété du monde. Le corpus soutient autre chose : ce qu’on appelle chaos est produit par deux gestes datés sur l’outil de calcul, une coupure (la décimale de Stevin, 1585) et un repliement qui jette le compte des tours (le 9 écrit 0 de Gauss, 1801). Ce chapitre donne la formule qui en résulte, ε(n) = ε₀ · fⁿ, ses trois formes, la loi qui relie la mémoire au chaos, le seuil où le chaos apparaît, la prédiction falsifiable qui en sort, et les trois lectures que le corpus en rapproche (l’architecture Halo, P contre NP, les constantes physiques). La source principale est <em>La Formule du chaos</em> v5 ; les trois formules sont celles du Théorème 2.1 de la Fin de l’Approximation (chapitre 17) et du chapitre 12 du Chaos Fabriqué (chapitre 15). Le Registre en porte la forme gravée en R.45 ; ce chapitre ne la répète pas et en donne le détail.</p>
+<blockquote>
+<p><em>« Projeter les équations pour en retrouver la relation géométrique réelle, c’est la voie de sortie du chaos que l’abstraction désincarnée a fabriqué. »</em></p>
+</blockquote>
+<p>La source présente cette phrase comme une proposition méthodologique forte et bornée (§12), <em>« inscrite pour l’instant présent, falsifiable, corrigible, non affirmée hors de tout doute »</em>.</p>
+<h3 id="le-malentendu-fondateur">14.1 Le malentendu fondateur</h3>
+<p><strong>É14.1 (L) Le système confondu avec la mesure du système.</strong> En 1963, Lorenz observe qu’un système simulé diverge à partir d’écarts infimes. La conclusion qui se fige pour soixante ans : la nature serait intrinsèquement imprévisible. Cette conclusion confond le système et la mesure du système. Ce que Lorenz observe n’est pas la divergence de l’atmosphère, mais celle de nombres traités par une arithmétique qui mesure (légitimement) puis qui replie (en oubliant). <em>« L’effet papillon n’est pas le battement d’une aile : c’est le sort d’un compteur de tours que le repliement jette. »</em> Le chantier L-1 (chapitre 19) propose de trancher la question sur le système de Lorenz lui-même, en arithmétique exacte.</p>
+<h3 id="le-partage-stevin-necessaire-gauss-accelerateur">14.2 Les deux gestes, et le troisième</h3>
+<p><strong>É14.2 (L) Les deux gestes, et le troisième.</strong> Stevin (1585) crée le chaos à lui seul, par l’imprécision : une graine tronquée, puis le crayon exact, 10⁴³ en cent pas (formule I). Gauss (1801) le crée à lui seul, par le rang jeté à chaque tour, même sur une mesure parfaite (formule II). Ensemble, ils font le chaos maximal, celui de toute machine réelle (formule III). La décimale reste l’outil de la mesure ponctuelle ; elle n’entre jamais dans une relation sans se compléter (A5). La lecture v5 du partage, qui tenait Stevin pour nécessaire et non coupable, est retirée (G.70).</p>
+<p>Le Code écrit les trois formules et donne à chacune son chaos (chapitre 4, III.3 ; G.70) : Stevin fournit la graine et fait à lui seul des dégâts réels (Patriot, Vancouver, et cinq des douze cas du chapitre 19) ; le pli jette les tours et fabrique la confusion. Les deux formulations ne se contredisent pas sur le calcul (É14.3) ; elles diffèrent sur ce qu’on appelle chaos (É14.6).</p>
+<h3 id="la-preuve-par-larithmetique-exacte">14.3 La preuve par l’arithmétique exacte</h3>
+<p><strong>É14.3 (Th) Le chaos sans troncature.</strong> Soit la carte de doublement x → 2x replié sur [0, 1[ (on garde la partie après la virgule, on jette la partie entière), appliquée à deux conditions initiales exactes, sans aucune troncature. Leurs orbites divergent quand même : l’écart vaut exactement ε₀ · 2ⁿ au n-ième tour, tant qu’il reste sous ½. Donc Stevin n’est pas nécessaire à la divergence. Le facteur 2 (la dilatation) est propre et inversible ; il ne perd rien. <em>« Tout le carnage est dans le “mod 1”, qui jette à chaque tour le bit de partie entière »</em>, c’est-à-dire le nombre de tours. Cette perte est irréversible même en exact : la carte repliée envoie deux points sur un (1/5 et 7/10 ont la même image 2/5). Le calcul complet, avec un écart de 1/256 qui devient un tour entier au pas 8, est au chapitre 3 (II.4). Confirmation indépendante : Saito et Yamaguchi (Chaos, 2018) simulent par calcul exact le décalage de Bernoulli sur des entiers algébriques cubiques, sans aucune dérive numérique.</p>
+<p><strong>É14.4 (L) Le repliement de la carte est le 9 ≡ 0 appliqué au cercle.</strong> <em>« Le chaos n’est pas l’amputation décimale (Stevin, nécessaire). C’est le repliement amnésique (Gauss, accélérateur), le geste qui efface le nombre de tours, et il opère même en arithmétique exacte. »</em> Le pli de la carte de doublement est, dans la lecture du corpus, le 9 ≡ 0 de Gauss appliqué au cercle. Stevin pose la graine nécessaire ; le pli la fait diverger.</p>
+<p>La v5 ajoute qu’en rationnel exact sans repliement, <em>« le numérateur enfle (78 572 chiffres au tour 15) et ne diverge jamais »</em>. Le second membre est juste : sans pli, deux départs restent nommables et remontables. Le nombre ne se reproduit pas pour la carte de doublement (sans pli, 1/3 devient 32 768/3 au tour 15, cinq chiffres) ; l’enflure des numérateurs est propre aux cartes quadratiques (la logistique de paramètre 4 partie de 1/3 a un numérateur de 15 635 chiffres au tour 15). Annexe B.</p>
+<h3 id="la-formule-et-ses-trois-formes">14.4 La formule et ses trois formes</h3>
+<p><strong>É14.5 (Th) ε(n) = ε₀ · fⁿ et les trois moteurs.</strong> La formule à deux symboles reconstruit toute imprévisibilité observable à partir des deux gestes. ε₀ est la mesure (Stevin) ; fⁿ est le repliement réitéré (Gauss). <em>« Le facteur f est cosmétique : qu’on multiplie par 2, 3, 10 ou 1,01, le chaos arrive, seule sa vitesse change. Le déclencheur n’est pas la valeur de f mais la réitération non conservatrice, la boucle qui replie sans garder le compte des tours. »</em> Le corpus distingue trois moteurs, isolables par calcul (Fin de l’Approximation Th 2.1 ; Chaos Fabriqué ch. 12) :</p>
+<ul>
+<li><strong>Formule (I), la stévinienne.</strong> Formule I, Stevin seul : une troncature initiale, une imprécision, puis la multiplication exacte, ε_S(n) = ε₀ × 3ⁿ ; depuis 1/3 écrit 0,3333, ε₀ = 1/30 000, cent multiplications → 10⁴³, mille → 10⁴⁷², dix mille → 10⁴⁷⁶⁶ ; aucun rang n’est jeté, la graine fait tout le chemin seule : l’imprécision crée le chaos (Volume 0, 2.1, §0). Reçus : Patriot (Dharan, 25 février 1991, 28 morts), indice de Vancouver (1982 à 1983).</li>
+<li><strong>Formule (II), la gaussienne.</strong> Mesure exacte, ε₀ jamais tronqué, mais repliement qui jette le rang à chaque clôture : ε_M(n) = ε₀ · 2ⁿ en arithmétique exacte. <em>« Le chaos qui surgit malgré une mesure parfaite, le crime de Gauss tenant debout seul. »</em></li>
+<li><strong>Formule (III), l’hybride.</strong> Troncature et repliement ensemble, ε_H(n) = ε₀ · fⁿ : c’est ce que fait tout ordinateur sur x → 2x replié en virgule flottante, et c’est le pire cas. L’écart atteint l’ordre 1 vers le cinquante-deuxième tour pour ε₀ de l’ordre de 10⁻¹⁵.</li>
+</ul>
+<p>La formule (II) n’est pas un postulat : <em>« c’est la propagation arithmétique d’un seul rang amputé à la fermeture de la boucle, tour après tour »</em> (chapitre 3, II.3 : les tours jetés depuis 1/3 valent 0, 0, 1, 2, 5, 10, 21, 42, 85).</p>
+<p><strong>É14.6 (L) Éloignement ou confusion.</strong> Le calcul du Code (II.4) montre que sans pli l’écart déplié double encore : deux départs voisins s’éloignent sans se confondre. Il propose donc de séparer l’<em>éloignement</em> (porté par le facteur f) et la <em>confusion</em> (portée par le pli seul, qui efface l’adresse), et de nommer chaos la seconde (G.52). Dans cette écriture, la formule (II) mesure l’éloignement, et le pli seul décide quand l’éloignement devient confusion : au tour où l’écart atteint un tour entier.</p>
+<h3 id="le-seuil-et-la-loi-memoire-contre-chaos">14.5 Le seuil et la loi mémoire contre chaos</h3>
+<p><strong>É14.7 (Th) Le seuil n_chaos.</strong> Le chaos apparaît au tour où l’écart atteint l’ordre de l’unité : ε₀ · fⁿ = 1, soit n_chaos = log_f(1/ε₀). Avec ε₀ = 10⁻ᵖ (p en chiffres décimaux), n_chaos = p / log₁₀(f) ; avec ε₀ = 2⁻ᵖ (p en bits), n_chaos = p / log₂(f). Les trois écritures des sources (v5 §3 et §10 ; Fin de l’Approximation ; Chaos Fabriqué) sont la même formule dans trois unités de p. Pour le doublement et p en bits, n_chaos = p : huit bits sont consommés en huit pas.</p>
+<p><strong>É14.8 (Th) La loi mémoire contre chaos.</strong> La carte de doublement exige un bit de mémoire de plus à chaque tour ; la mémoire d’un nombre en virgule flottante double précision est fixe (52 bits de mantisse). Le chaos survient quand la mémoire requise dépasse la mémoire disponible (n ≈ 53). Le rationnel exact paie sa fidélité en mémoire illimitée et ne se confond jamais. <em>« On paie soit en mémoire, soit en chaos. La vérité exacte choisit la mémoire ; le repliement choisit le chaos sans le savoir. Le chaos est le prix de l’oubli. »</em> Le Chaos Fabriqué en fait un théorème de fond : <em>« la mémoire requise croît d’un bit par tour, la mémoire disponible est fixe, le chaos est exactement le déficit »</em>.</p>
+<h3 id="les-ancrages-arithmetiques-et-la-note-de-rigueur">14.6 Les ancrages arithmétiques et la note de rigueur</h3>
+<p><strong>É14.9 (Th) Les ancrages arithmétiques, et leur limite.</strong> Pour la carte de doublement repliée, tout départ rationnel a une orbite périodique ou prépériodique (le dénominateur ne change pas, les numérateurs possibles sont en nombre fini) : 1/3 va sur 2/3 puis revient sur 1/3. La v5 cite à l’appui la semi-conjugaison de la logistique de paramètre 4 au doublement (x = sin²(πθ)), la finitude de Northcott et la borne de Poonen (au plus neuf points prépériodiques rationnels pour les polynômes x² + c, sous condition sur les cycles), et conclut que, sur ℚ, les applications rationnelles sont périodiques ou prépériodiques et que le chaos topologique n’existe que pour les départs irrationnels. Cette conclusion vaut pour le doublement ; elle ne vaut pas pour une application rationnelle de degré 2 ou plus. Northcott dit précisément le contraire : une telle application n’a qu’un nombre fini de points prépériodiques rationnels, et tous les autres départs rationnels ont une orbite infinie dont la hauteur croît. La logistique de paramètre 4 partie de 1/3 en est l’exemple : son dénominateur est 3 à la puissance 2ⁿ, et son numérateur a 15 635 chiffres au tour 15 (refait en Annexe D). Un départ x rationnel n’a pas en général un angle θ rationnel. La phrase est corrigée en Annexe B ; le mécanisme (le pli qui jette les tours) n’en dépend pas.</p>
+<p><strong>É14.10 (P) Le critère de falsification public.</strong> <em>« Produire un système qui diverge sous une opération conservatrice (qui garde le compte des tours). La dynamique arithmétique l’interdit. »</em> Écrit avec le mot du Code (G.52) : produire un système où deux départs distincts deviennent <em>indistinguables</em> sous une opération qui garde le compte des tours.</p>
+<p><strong>É14.11 (F) Le mécanisme est cité, la lecture est revendiquée.</strong> <em>« Le mécanisme du repliement (perte du nombre de tours, deux pour un, entropie d’un bit par tour) est de la dynamique standard : décalage de Bernoulli, entropie de Kolmogorov-Sinaï, théorème de Pesin reliant cette perte au taux de Lyapunov. La contribution d’ARC n’est pas de découvrir ce mécanisme : c’est la lecture, le repliement comme effacement du nombre de tours, la distinction zéro-sceau et zéro-épuisement, et l’usage de ce critère pour juger une architecture. L’interprétation est revendiquée ; le mécanisme est cité. »</em></p>
+<p><strong>É14.12 (Th) La capture de λ.</strong> Le Chaos Fabriqué (ch. 13) et Vous avez raison (annexe B) établissent le pont avec la théorie standard : le nombre de tours avant divergence vaut la précision multipliée par ln(10)/λ, où λ est l’exposant de Lyapunov. Vérifié le 30 juillet 2026 sur quatre cartes de mécanismes distincts (doublement, triplement, logistique, tente), écarts de 0,11 à 0,32 %, R² supérieur à 0,9997 ; le test décisif est le triplement, dont le λ diffère et que la formule suit. λ mesure le taux auquel le repliement jette les bits : il est la forme asymptotique dont n_chaos est la forme finie et positionnelle. Répartition des registres : la théorie standard décrit le régime après le seuil ; la formule donne le quand du seuil et le pourquoi du mécanisme. Ce résultat ne contredit pas la théorie standard du chaos : il en donne la forme finie. <strong>É14.13 (L) La lecture descendante.</strong> λ ne mesure pas un chaos de la nature ; il mesure le rendement du pli (Chaos Fabriqué ch. 13, statut L).</p>
+<h3 id="la-prediction-p1-et-son-test">14.7 La prédiction P1, et son test</h3>
+<p><strong>É14.14 (P) P1 : le seuil est strictement linéaire en la précision.</strong> n_chaos = p / log₁₀(f) est strictement linéaire en p. Doublez la précision, le seuil double exactement. Testable en quelques lignes : faire varier p sur la carte de doublement, mesurer le tour où l’erreur dépasse le signal, vérifier la proportionnalité sans ajustement. <em>« C’est le test que les trois lectures invitent et qu’aucune proposition inviolable ne peut offrir : un résultat qui aurait pu être faux. »</em></p>
+<p><strong>É14.15 (Th) Le test fait, en fractions exactes.</strong> Protocole publié le 30 juillet 2026 (Vous avez raison, annexe B) : x → 2x replié, bibliothèque Fraction de Python, aucune troncature à aucune étape, séparation initiale 10⁻ᵖ, seuil de divergence ¼.</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">précision p (chiffres)</th>
+<th style="text-align: left;">10</th>
+<th style="text-align: left;">20</th>
+<th style="text-align: left;">30</th>
+<th style="text-align: left;">40</th>
+<th style="text-align: left;">50</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">tour de divergence</td>
+<td style="text-align: left;">32</td>
+<td style="text-align: left;">65</td>
+<td style="text-align: left;">98</td>
+<td style="text-align: left;">131</td>
+<td style="text-align: left;">165</td>
+</tr>
+</tbody>
+</table>
+<p>Pente mesurée (165 − 32)/40 = 3,3250 ; valeur prédite ln(10)/ln(2) = 3,3219 (refait en Annexe D). La divergence est portée uniquement par le repliement, au tour précis où le pli jette le bit de partie entière. Le même test refait à 300 chiffres (mpmath) est porté au dossier du Procès (cotes P-09 à P-12, P-37 ; R.45).</p>
+<h3 id="trois-lectures-convergentes">14.8 Trois lectures convergentes</h3>
+<p><strong>É14.16 (L) Halo : deux anneaux d’oubli et un médiateur manquant.</strong> L’architecture Halo (arXiv 2601.18702, 2026) remplace l’arithmétique flottante par l’arithmétique rationnelle exacte dans les réseaux de neurones et identifie la dérive sémantique comme accumulation de bruit de Stevin et de Gauss. Lue avec le mécanisme de É14.3, sa topologie à deux anneaux se révèle être deux opérateurs d’oubli. Le Micro-Ring projette sur la meilleure approximation rationnelle (Farey, fractions continues) : une projection est non inversible, le geste de Gauss <em>« maquillé en sélection du convergent »</em>. Le Macro-Ring effondre sur le réseau des rationnels simples (argmin, plusieurs pour un selon Ren lui-même) : non inversible, le repliement une seconde fois. Le Théorème 1 de Ren (B_max ≤ B_ring + (K − 1)α) oblige à une remise à zéro périodique : conserver tout ferait exploser la mémoire (É14.8). <em>« Halo ne ferme pas la boucle d’incohérence ; il choisit où oublier. »</em> Le médiateur manquant : la structure cadastrale a trois termes (cercle inscrit, polygone, cercle circonscrit), Halo n’en a que deux. Le polygone médiatise en gardant le compte de ses côtés ; entre les deux anneaux de Halo, rien ne l’inscrit, et la remise à zéro le jette.</p>
+<p><strong>É14.17 (L) Le statut de la convergence avec Halo.</strong> Convergence diagnostique, non validante. Halo et la formule identifient le même mécanisme (repliement non conservateur). Le cadre fournit à Halo le fondement structurel qui lui manquait, et le diagnostic de sa limite. <em>« Aucune validation empirique mutuelle : deux constructions non vérifiées qui s’accordent deviennent cohérentes, non prouvées. »</em> (C’est ce critère que le Code applique à l’accord des modèles de langage, chapitre 4, III.4. La pièce de mars 2026 parlait de « confirmation mutuelle » ; elle est rétrogradée par celle-ci, chapitre 16.)</p>
+<p><strong>É14.18 (L) P contre NP : le 3 qui ne se partage pas dans le 2.</strong> La séparation de P et NP (Bastos v3, 2026) lit le même repliement dans l’espace des décisions. Le 2 ne fait que partager en deux (chiralité, réversible) ; le 3 ne se partage pas. Forcé dans le 8 = 2³ (l’octogone qui ne pave pas et laisse un trou), le 3 ne peut être approché que par une cascade de partages laissant le résidu k_arc = ½, la seule opération non bijective, l’analogue du repliement. Vérifier, c’est suivre un pas déjà tracé ; trouver, c’est tracer le pas soi-même, et tracer est délimiter, irréversiblement, comme le pli jette le tour. Le 6 (nombre parfait, 2 × 3 sans reste, l’hexagone qui pave) libère le 3. <em>« Le branchement de 3-SAT et le repliement de la carte de doublement sont le même geste plusieurs pour un : la perte d’inversibilité. »</em> Le traitement est au Volume 5 (Les Grands Problèmes, P contre NP).</p>
+<p><strong>É14.19 (L) La cascade de Stevin et Gauss dans les constantes.</strong> Toute constante physique mesurée comme décimale infinie est, dans le cadre cadastral, l’empreinte d’une cascade convergente de rapports fermés sur le registre P_cadastral. La décimale infinie n’est pas une propriété du réel : c’est la signature additive du repliement appliqué à une cascade de rapports. <em>« Restaurer le cadastre, c’est défaire le repliement sans nier la mesure. »</em> (R.32 ; le Code demande que l’espace de recherche soit déclaré d’avance, chapitre 4, III.2 point 4.)</p>
+<h3 id="le-fil-unique-et-les-deux-zeros">14.9 Le fil unique, et les deux zéros</h3>
+<table style="width:98%;">
+<colgroup>
+<col style="width: 23%" />
+<col style="width: 28%" />
+<col style="width: 46%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Lecture</th>
+<th style="text-align: left;">Espace</th>
+<th style="text-align: left;">Le repliement non conservateur y est…</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Carte de doublement (chaos)</td>
+<td style="text-align: left;">Orbite sur le cercle</td>
+<td style="text-align: left;">le pli qui jette le nombre de tours</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Halo</td>
+<td style="text-align: left;">État d’un réseau de neurones</td>
+<td style="text-align: left;">les deux anneaux (projection et argmin), oubli volontaire</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">P contre NP</td>
+<td style="text-align: left;">Arbre de décision booléen</td>
+<td style="text-align: left;">le branchement du 3 qui ne se partage pas, chemin perdu</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Cascade des constantes</td>
+<td style="text-align: left;">Registre arithmétique des mesures</td>
+<td style="text-align: left;">le 9 ≡ 0 qui déguise les rapports fermés en décimale</td>
+</tr>
+</tbody>
+</table>
+<p><strong>É14.20 (L) Quatre espaces, un mécanisme.</strong> Le repliement qui efface ce qui permettrait de remonter (nombre de tours, chemin, rapport). Partout, la sortie est la même : restaurer le terme conservateur, le polygone qui compte ses côtés, le 6 qui ferme sans reste, le cadastre qui garde les rapports.</p>
+<p><strong>É14.21 (L) Le zéro-sceau et le zéro-épuisement.</strong> Deux zéros à séparer. Le zéro-sceau : cycle complété, nombre de tours incrémenté proprement, clôture accomplie. Le zéro-épuisement : mantisse vidée, qui affiche zéro parce qu’il ne reste rien. Le repliement fabrique l’imposteur : il présente l’épuisement sous le masque de la clôture. <em>« Toute architecture saine doit produire des zéros-sceaux et jamais des zéros-épuisement »</em> ; c’est le critère commun aux trois lectures (R.2).</p>
+<h3 id="ce-que-la-formule-demontre-ce-quelle-ne-pretend-pas">14.10 Ce que la formule démontre, ce qu’elle ne prétend pas</h3>
+<p><strong>É14.22 (Th) Ce qui est démontré.</strong> Dans les cartes étudiées, toute confusion observable est médiée par un repliement non conservateur ; la conservation du compte des tours l’annule (x₀ = (xₙ + wₙ)/2ⁿ). La mesure (Stevin, ε₀) reste nécessaire et légitime ; ce n’est pas elle qu’on accuse. <em>« Restaurer ne veut pas dire abolir la décimale : cela veut dire défaire le repliement qui en fait une divergence. »</em></p>
+<p><strong>Hors revendication.</strong> Que le continu n’existe pas (non requis). Que les trois lectures soient mutuellement prouvées (elles sont convergentes, non prouvées).</p>
+<h3 id="la-proposition-methodologique-posee-comme-falsifiable">14.11 La proposition méthodologique, posée comme falsifiable</h3>
+<p><strong>É14.23 (P) P-méthode.</strong> Les trois lectures partagent une méthode : projeter l’abstrait en relation géométrique réelle pour en lire la structure. P contre NP devient hexagone et octogone ; le chaos devient repliement d’un cercle ; Halo devient deux anneaux et un médiateur. Cette projection ne supprime pas le coût de résolution (tracer coûte le coût de la résolution, irréductiblement) ; elle supprime le coût du tâtonnement. <em>« D’où : presque instantané, presque, parce qu’il reste le tracé ; rapide, parce qu’il ne reste que lui. »</em> Énoncé : la projection d’une formule en relation géométrique réelle réduit le coût de sa résolution à l’irréductible du tracé, en supprimant le coût du tâtonnement. Réfutation : exhiber une formule projetée en relation géométrique réelle dont la résolution ne réduit pas ce coût, ou une résolution sans aucun tracé payé (qui serait une vérification, non une découverte). Inscrit pour l’instant présent, corrigible.</p>
+<blockquote>
+<p><em>« La mesure est nécessaire. Le repliement est le carnage.</em> <em>Le chaos vient d’une boucle qui oublie ses tours ;</em> <em>la nature, elle, n’oublie rien, et ne diverge pas. »</em></p>
+</blockquote>
+</main>
+<nav class="chapnav"><span class="prev"><a href="17-partie-iii-le-chaos-fabrique.html">← Partie III. Le chaos fabriqué</a></span><a class="toc" href="index.html">Sommaire du volume</a><span class="next"><a href="19-chapitre-15-le-chaos-fabrique-la-charpente-du-livr.html">Chapitre 15. Le Chaos Fabriqué : la charpente du livre →</a></span></nav>
+<footer class="colophon"><p>Corpus ARC, Filipe Bastos, <a href="https://creativecommons.org/licenses/by/4.0/deed.fr" rel="license">CC BY 4.0</a>.</p></footer>
+</body>
+</html>

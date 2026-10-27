@@ -1,0 +1,33 @@
+# Corpus ARC, Filipe Bastos
+
+> Architecture de la Cohérence Relationnelle : relecture des mathématiques, de la physique, du vivant et de la cité à partir du cadastre des neuf positions. Chaque énoncé porte son statut : Théorème (calcul vérifié par script), Fait, Lecture, Prédiction, Chantier. Licence CC BY 4.0.
+
+## Volumes
+- [Volume 0, Le Seuil](https://bastosfilipe.com/arc/volumes/v00-le-seuil/) : Préface, méthode, statuts, Lexique et carte du corpus ARC. PDF : https://bastosfilipe.com/arc/pdf/ARC_Volume_00_le_seuil.pdf
+- [Volume 1, La Fondation](https://bastosfilipe.com/arc/volumes/v01-la-fondation/) : La Genèse, la logique restaurée et la métaphysique de la relation. PDF : https://bastosfilipe.com/arc/pdf/ARC_Volume_01_la_fondation.pdf
+- [Volume 2, La Figure](https://bastosfilipe.com/arc/volumes/v02-la-figure/) : Deux cercles et un carré : la géométrie, les opérations oubliées et les convergences du demi. PDF : https://bastosfilipe.com/arc/pdf/ARC_Volume_02_la_figure.pdf
+- [Volume 3, Le Code et le Registre](https://bastosfilipe.com/arc/volumes/v03-le-code-et-le-registre/) : Ce qui se refait au crayon, et ce que le système expose dans la science établie. PDF : https://bastosfilipe.com/arc/pdf/ARC_Volume_03_le_code_et_le_registre.pdf
+- [Volume 4, La Théorie des Nombres](https://bastosfilipe.com/arc/volumes/v04-la-theorie-des-nombres/) : Les premiers jamais cachés, les nombres en mouvement, et les nombres qui se souviennent. PDF : https://bastosfilipe.com/arc/pdf/ARC_Volume_04_la_theorie_des_nombres.pdf
+- [Volume 5, Les Grands Problèmes](https://bastosfilipe.com/arc/volumes/v05-les-grands-problemes/) : Riemann, P contre NP, Navier-Stokes, Yang-Mills : ce qui leur manque. PDF : https://bastosfilipe.com/arc/pdf/ARC_Volume_05_les_grands_problemes.pdf
+- [Volume 6, L'Histoire de la Preuve](https://bastosfilipe.com/arc/volumes/v06-l-histoire-de-la-preuve/) : Le procès, la lignée du zéro, les deux Euler, le tiroir de Gauss et le pourquoi indécidable. PDF : https://bastosfilipe.com/arc/pdf/ARC_Volume_06_l_histoire_de_la_preuve.pdf
+- [Volume 7, La Physique relue](https://bastosfilipe.com/arc/volumes/v07-la-physique-relue/) : La mesure comme projection : Tsirelson sans Hilbert, l'onde, le quantum, le proton et les cordes. PDF : https://bastosfilipe.com/arc/pdf/ARC_Volume_07_la_physique_relue.pdf
+- [Volume 8, La Matière et le Cosmos](https://bastosfilipe.com/arc/volumes/v08-la-matiere-et-le-cosmos/) : Le nombre atomique comme plan, la lumière sédimentée, et rien ne se dissipe. PDF : https://bastosfilipe.com/arc/pdf/ARC_Volume_08_la_matiere_et_le_cosmos.pdf
+- [Volume 9, Le Vivant](https://bastosfilipe.com/arc/volumes/v09-le-vivant/) : Identité, vie, conscience ; l'évolution relue ; la mort comme fiction. PDF : https://bastosfilipe.com/arc/pdf/ARC_Volume_09_le_vivant.pdf
+- [Volume 10, La Conscience et la Peine](https://bastosfilipe.com/arc/volumes/v10-la-conscience-et-la-peine/) : Conscience, automatisme, inconscient ; la panique et la honte ; la peine comme perte d'espoir. PDF : https://bastosfilipe.com/arc/pdf/ARC_Volume_10_la_conscience_et_la_peine.pdf
+- [Volume 11, La Cité et le Sens](https://bastosfilipe.com/arc/volumes/v11-la-cite-et-le-sens/) : La relation est l'identifiant : le pouvoir, la démocratie, l'héritage, la confession, le regard et l'empathie. PDF : https://bastosfilipe.com/arc/pdf/ARC_Volume_11_la_cite_et_le_sens.pdf
+
+## Dossiers
+- [Modulo : 225 ans de mathématiques et de science amputées](https://bastosfilipe.com/arc/dossiers/Modulo_v2_0.pdf) : L'outil qui jette 84 % du nombre, a caché les premiers rares et a tué. Le réquisitoire, ses théorèmes, les inversions sans signe et ses sources. (v2.0 · 22 octobre 2026 · 25 p.)
+- [P-B-1 : les pingouins du LHC](https://bastosfilipe.com/arc/dossiers/P-B-1_les_pingouins.pdf) : Prédiction pré-enregistrée sur l'anomalie b → s μμ de LHCb, avant les résultats du Run 3, avec ses critères de chute. (21 octobre 2026 · 6 p. · SHA-256 4079d4ae…a686)
+- [Benford sans Neper](https://bastosfilipe.com/arc/dossiers/Benford_sans_Neper_v0_1.pdf) : Le premier chiffre est un compte de tours, pas une loi logarithmique. (v0.1 · 26 octobre 2026 · 2 p.)
+- [Les nombres de Heegner dans le code](https://bastosfilipe.com/arc/dossiers/Les_nombres_de_Heegner_dans_le_code.pdf) : Neuf nombres fixés par un théorème, rangés en miroirs autour de la clôture : 1-9-1 = 163. (v1.0 · 21 octobre 2026 · 7 p.)
+- [Les Tables Natives](https://bastosfilipe.com/arc/dossiers/Les_Tables_Natives_v0_2.pdf) : Pièce d'entrée : deux pages à refaire au crayon. (v0.2 · 21 octobre 2026 · 7 p.)
+- [Les trois corps n'ont jamais bougé](https://bastosfilipe.com/arc/dossiers/Les_trois_corps_n_ont_jamais_bouge.pdf) : Le premier problème du corpus, relu : la troncature, Noether et Poincaré. (v1.2 · 20 octobre 2026 · 9 p.)
+- [Le sous-sol de la matière noire](https://bastosfilipe.com/arc/dossiers/Le_sous_sol_de_la_matiere_noire.pdf) : Ce que la mesure pose avant de mesurer : 175 galaxies, leurs conventions et leurs choix. (v0.1 · 20 octobre 2026 · 9 p.)
+- [Le Reste et les Tours](https://bastosfilipe.com/arc/dossiers/Le_Reste_et_les_Tours.pdf) : Ce que la réduction au reste jette, et ce qu'il en coûte. (v1.0 · 16 octobre 2026 · 10 p.)
+- [Faire tomber ARC](https://bastosfilipe.com/arc/dossiers/Faire_tomber_ARC.pdf) : La table complète des 179 énoncés à statut Prédiction des douze volumes, recopiés avec leur adresse. (v2.0 · 26 octobre 2026 · 38 p.)
+
+## Auteur
+- Filipe Bastos, né en 1976 au Québec. Page : https://bastosfilipe.com/bio/
+
+English index: https://bastosfilipe.com/llms.txt

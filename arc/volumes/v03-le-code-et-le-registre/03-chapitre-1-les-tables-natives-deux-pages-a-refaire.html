@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<link rel="canonical" href="https://bastosfilipe.com/arc/volumes/v03-le-code-et-le-registre/03-chapitre-1-les-tables-natives-deux-pages-a-refaire.html">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chapitre 1. Les Tables natives : deux pages à refaire au crayon · Le Code et le Registre · Corpus ARC</title>
+<meta name="description" content="Le Code et le Registre, volume 3 du corpus ARC de Filipe Bastos. Chapitre 1. Les Tables natives : deux pages à refaire au crayon.">
+<meta name="keywords" content="registre des erreurs, table de multiplication, audit, chaos, approximation, troncature décimale, complétude, corpus ARC, Filipe Bastos">
+<meta name="author" content="Filipe Bastos">
+<meta name="license" content="https://creativecommons.org/licenses/by/4.0/deed.fr">
+<link rel="stylesheet" href="../../assets/arc.css">
+</head>
+<body>
+<nav class="crumbs"><a href="../../index.html">Corpus ARC</a> / <a href="index.html">Volume 3 · Le Code et le Registre</a></nav>
+<main class="chapter">
+<h2 id="chapitre-1.-les-tables-natives-deux-pages-a-refaire-au-crayon">Chapitre 1. Les Tables natives : deux pages à refaire au crayon</h2>
+<p>Ce chapitre est la porte d’entrée du corpus. Il ne demande rien au lecteur sinon la table de multiplication de 1 à 9, celle qu’un enfant apprend, et la patience de la relire en additionnant les chiffres de chaque produit. Ce qu’on y voit, sans rien poser, ce sont quatre paires de chiffres qui se répondent, un axe qui ne porte aucun nombre premier, deux rails qui les portent tous, un centre qu’aucun chiffre n’occupe, et une clôture, le 9, qui n’est pas un vide. Le recto (sections 1 à 5) se refait au crayon ; le verso (sections 6 à 9) dit ce que le monde fait de ces tables sans les nommer, et ce que le corpus lit dans le centre vide. La pièce source date du 4 octobre 2026 ; ses vingt-deux vérifications sont refaites en Annexe D.</p>
+<blockquote>
+<p><em>« Rien ici n’est posé. Tout est lu dans la table de multiplication de 1 à 9, celle qu’un enfant apprend. Un lecteur qui doute refait chaque ligne lui-même ; il n’a besoin d’aucune autorité, d’aucun livre, d’aucune machine. Les preuves, pas les paroles. »</em></p>
+</blockquote>
+<h3 id="recto.-les-tables-natives">Recto. Les tables natives</h3>
+<h4 id="la-racine-digitale">1. La racine digitale</h4>
+<p><strong>É1.1 (Th) La racine digitale et sa compatibilité.</strong> On réduit un nombre à un seul chiffre en additionnant ses chiffres jusqu’à n’en garder qu’un : 28 donne 2 + 8 = 10, puis 1 + 0 = 1. On écrit DR(28) = 1. La règle tient parce que 10 = 9 + 1 : toute puissance de dix laisse 1 quand on retire les neuf, donc un nombre et la somme de ses chiffres laissent le même reste dans la division par 9. Le 9 reste 9 ; il n’est jamais écrit 0 : DR(9) = 9, DR(18) = 9, DR(729) = 9.</p>
+<pre><code>7 × 8 = 56 :  5 + 6 = 11 :  1 + 1 = 2
+DR(7) × DR(8) = 56 : 2        la même réponse par les deux chemins</code></pre>
+<p>Cette compatibilité avec l’addition et la multiplication, DR(a + b) = DR(DR(a) + DR(b)) et DR(a × b) = DR(DR(a) × DR(b)), est la preuve par neuf de l’école. Elle vaut pour tous les nombres : elle est démontrée par la seule ligne 10 = 9 + 1 (chapitre 2, I.2) et vérifiée sur 160 000 paires (Annexe D).</p>
+<h4 id="les-neuf-tables-en-racine-digitale">2. Les neuf tables, en racine digitale</h4>
+<p>On écrit la table de chaque chiffre de 1 à 9, et on réduit chaque produit en racine digitale.</p>
+<pre><code>×1 :  1 2 3 4 5 6 7 8 9          ×8 :  8 7 6 5 4 3 2 1 9
+×2 :  2 4 6 8 1 3 5 7 9          ×7 :  7 5 3 1 8 6 4 2 9
+×3 :  3 6 9 3 6 9 3 6 9          ×6 :  6 3 9 6 3 9 6 3 9
+×4 :  4 8 3 7 2 6 1 5 9          ×5 :  5 1 6 2 7 3 8 4 9
+                      ×9 :  9 9 9 9 9 9 9 9 9</code></pre>
+<p>Trois choses se lisent sans aucun calcul supplémentaire.</p>
+<p><strong>É1.2 (Th) Les quatre paires.</strong> La table de 8 est la table de 1 lue à l’envers ; 7 est 2 à l’envers ; 6 est 3 à l’envers ; 5 est 4 à l’envers. Colonne par colonne, les deux tables d’une paire font 9 : pour la paire (4, 5), on lit 4 + 5, 8 + 1, 3 + 6, 7 + 2, 2 + 7, 6 + 3, 1 + 8, 5 + 4. Sur l’axe, là où les deux tables sont à 9 en même temps (tables de 3 et de 6, colonnes 3, 6 et 9), la colonne fait 18, dont la racine est encore 9 : la clôture s’ajoute à elle-même sans sortir du cycle. Les paires (1, 8), (2, 7), (3, 6), (4, 5) ne sont pas choisies : elles sont dans la table. Leur règle est φ(x) = 9 − x, et φ(φ(x)) = x.</p>
+<p><strong>É1.3 (Th) L’axe et les rails.</strong> Les tables de 3 et de 6 ne visitent que 3, 6, 9 : c’est l’axe. Les autres tables visitent les six chiffres restants, qui se rangent en deux rails selon le reste dans la division par 3 : {1, 4, 7} et {2, 5, 8}. Tout nombre entier tombe sur l’axe ou sur l’un des deux rails, jamais ailleurs.</p>
+<p><strong>É1.4 (Th) La clôture.</strong> Chaque table finit par 9, et la table de 9 n’est faite que de 9. Le 9 est la position pleine qui ferme le cycle. Il n’est pas un vide.</p>
+<p>Le traitement complet des neuf positions, de l’axe et des rails appartient au Volume 1 (La Fondation, les neuf positions) ; ce chapitre en donne la forme refaisable.</p>
+<h4 id="le-centre-que-personne-noccupe">3. Le centre que personne n’occupe</h4>
+<pre><code>1 + 8 = 2 + 7 = 3 + 6 = 4 + 5 = 9
+le milieu de chaque paire :  9 / 2 = 4,5
+9 − x = x  donne  x = 4,5 :  aucun chiffre n&#39;est son propre partenaire
+1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 = 45 ;  45 / 4,5 = 10</code></pre>
+<p><strong>É1.5 (Th) Le centre 4,5 et sa place ½.</strong> Le centre des neuf chiffres est 4,5. Il tombe entre 4 et 5. Aucune position ne l’occupe, et toutes se plient autour de lui. Sa place dans le cycle est 4,5 / 9 = ½. C’est la constante que le corpus nomme k_arc.</p>
+<h4 id="les-nombres-premiers-sur-les-rails">4. Les nombres premiers sur les rails</h4>
+<pre><code>n = 6k + r,  r dans {0, 1, 2, 3, 4, 5}
+r = 0, 2, 4 :  n est pair.      r = 3 :  n est multiple de 3.
+Il reste r = 1 et r = 5 :  n = 6k + 1  ou  n = 6k − 1.</code></pre>
+<p><strong>É1.6 (Th) Les premiers hors de l’axe.</strong> Tout nombre premier plus grand que 3 est de la forme 6k ± 1, donc hors de l’axe {3, 6, 9}, sur l’un des deux rails. Vérifié sur les 78 496 premiers compris entre 5 et un million (78 498 premiers en tout jusqu’à un million), zéro exception.</p>
+<p><strong>É1.7 (Th) Le rythme 24.</strong> Pour p = 6k ± 1 : p² = 36k² ± 12k + 1 = 12k(3k ± 1) + 1 ; le produit k(3k ± 1) est toujours pair (si k est impair, 3k ± 1 est pair), donc p² − 1 est multiple de 24. 5² = 24 + 1, 7² = 48 + 1, 11² = 120 + 1.</p>
+<p>La théorie des nombres du corpus, qui part de cette grille, est au Volume 4 (La Théorie des Nombres).</p>
+<h4 id="bis.-toute-base-depuis-toujours-est-le-1-a-9-relance">4 bis. Toute base, depuis toujours, est le 1 à 9 relancé</h4>
+<p>L’objection vient toujours en premier : nos neuf chiffres seraient l’accident de nos dix doigts, les Babyloniens comptaient en base soixante, les Mayas en base vingt. On vérifie en regardant comment ces peuples écrivaient réellement (tablettes et codex sont publics ; Neugebauer et Sachs 1945 ; Ifrah 1981).</p>
+<pre><code>Babylone (base « 60 ») : deux signes.  Le clou = 1, répété de 1 à 9, jamais dix.
+                                       Le chevron = 10, répété de 1 à 5, jamais six.
+   59 = 5 chevrons + 9 clous ;  6 chevrons feraient 60, qui est la position suivante.
+   Chaque « chiffre » sexagésimal est un couple (dizaines ≤ 5, unités ≤ 9) : notre 1 à 9, et 10.
+Maya (base « 20 ») : le point = 1, répété de 1 à 4 ; à cinq, la barre.
+   19 = 3 barres + 4 points ;  4 barres feraient 20, la position suivante.
+Égypte : le trait répété de 1 à 9 ; à 10, un signe nouveau.
+Grèce alphabétique : 27 lettres, en trois séries de neuf (1 à 9, 10 à 90, 100 à 900).
+Rome et Grèce acrophonique : I, II, III, IIII ; à cinq, le V.
+Baguettes chinoises : tiges de 1 à 5 ; à six, la barre transversale.</code></pre>
+<p><strong>É1.8 (F) L’écriture réelle des bases anciennes.</strong> Le clou babylonien se répète de 1 à 9, le chevron de 1 à 5 ; le point maya de 1 à 4, puis la barre ; le trait égyptien de 1 à 9 ; les 27 lettres grecques en trois séries de neuf ; les baguettes chinoises de 1 à 5, puis la barre à 6.</p>
+<p><strong>É1.9 (L) Les emballages du 1 à 9.</strong> <em>« Aucune civilisation n’a jamais inscrit cinquante-neuf signes, ni dix-neuf. Il n’a jamais existé de base 60 ni de base 20 : il a existé des emballages du 1 à 9. »</em> Et dans les systèmes recensés ci-dessus, l’écriture ne rompt qu’à deux endroits : à la clôture, entre 9 et 10, jamais à 8, jamais à 11 ; ou au centre, entre 4 et 5 ou entre 5 et 6, les deux positions qui encadrent 4,5. Le centre vide ne peut pas porter de signe ; les écritures rompent au plus près de lui, des deux côtés. <em>« La main a toujours réimposé sa fenêtre : neuf chiffres, puis le 10, qui est 9 + 1, la clôture relancée avec son sceau. »</em></p>
+<p><strong>É1.10 (Chantier) La rupture 3|4.</strong> La lecture précédente porte un critère de réfutation fixé d’avance (Vous avez raison, annexe C-bis, chapitre 20) : exhiber une écriture numérique attestée dont la rupture de signe tombe hors de {4|5, 5|6, 9|10}. Or le Registre inscrit en G.16, au 31 juillet 2026, une « rupture 3|4 » pour les numérations chinoise, kharosthi et brahmi. Les deux inscriptions ne sont pas conciliées dans les pièces reçues ; tant qu’elles ne le sont pas, la phrase « l’écriture ne rompt qu’à deux endroits » vaut pour les systèmes du tableau et non pour toutes les écritures attestées (chapitre 13, III.12 b ; Annexe B).</p>
+<p>Le fait arithmétique qui accompagne cette lecture est, lui, établi : une clôture première (59, 19, 11) n’a ni axe ni rails, et parmi les clôtures balayées jusqu’à 200, la plus petite à porter un centre pur et un axe interne est 9 (chapitre 17, É17.1, où le mot « unique » de la source est corrigé).</p>
+<h4 id="le-trait-trois-points-deux-ecarts">5. Le trait, trois points, deux écarts</h4>
+<pre><code>0 ----- ½ ----- 1
+points : 3, chacun 1/3 de la file        écarts : 2, chacun 1/2 du trait
+distance × (écarts / points) = 1/2 × 2/3 = 1/3 : le point
+9 points, 8 écarts : pas 1/8, point 1/9, milieu 9/2</code></pre>
+<p><strong>É1.11 (Th) Le demi et le tiers reliés.</strong> Le demi et le tiers vivent ensemble : le demi est la distance d’un point au suivant, le tiers est le point, et le pont entre eux est le nombre d’écarts sur le nombre de points. Pour n points et n − 1 écarts : point 1/n, distance 1/(n − 1), et (1/(n − 1)) × ((n − 1)/n) = 1/n. Avec neuf points, le pas est 1/8 et le milieu est 4,5. Vérifié pour n de 2 à 9.</p>
+<h3 id="verso.-le-centre-vide">Verso. Le centre vide</h3>
+<h4 id="ce-que-le-monde-fait-des-tables-sans-les-nommer">6. Ce que le monde fait des tables sans les nommer</h4>
+<p><strong>É1.12 (F) Les tables employées sans être lues.</strong> La preuve par neuf de l’école jette les 9 ; les sommes de contrôle des numéros de compte et des codes-barres lisent la racine digitale ou un reste ; l’ingénieur de Nyquist (1932) garde le compte des tours pour que son système ne se croie pas revenu au départ ; le repliement de Bernoulli en théorie du chaos jette ce compte à chaque pas. Partout, les tables ci-dessus sont employées. Nulle part elles ne sont lues comme un tout.</p>
+<h4 id="huit-pas-un-tour-le-0-qui-jette">7. Huit pas, un tour, le 0 qui jette</h4>
+<pre><code>Marche de pas 1/8.   Dépliée : n/8.   Tours : k = partie entière de n/8.
+Repliée (on jette la partie entière) : n/8 − k.
+
+pas n        7      8      9     15     16     24
+dépliée     7/8     1     9/8   15/8     2      3
+tours k      0      1      1      1      2      3
+repliée     7/8     0     1/8    7/8     0      0</code></pre>
+<p><strong>É1.13 (Th) Le même 0 pour aucun tour et trois tours.</strong> Après huit pas, le pli affiche 0. Après seize, 0. Après vingt-quatre, 0. Le même 0 reçoit « aucun tour » et « trois tours ». C’est le geste de 1801, 9 posé égal à 0 : la clôture et le vide reçoivent le même signe.</p>
+<p><strong>É1.14 (Th) Les tours jetés se composent ; on remonte avec eux.</strong> Sous le doublement x → 2x, les tours jetés depuis x₀ = 1/3 valent 0, 0, 1, 2, 5, 10, 21, 42, 85 (n = 0 à 8) : un rang perdu au premier pas devient 2ⁿ rangs au n-ième. Avec les tours, on remonte au départ sans reste : x₀ = (xₙ + wₙ) / 2ⁿ. Sans eux, après huit pas, 1/3 a 256 départs possibles et la position seule n’en distingue aucun.</p>
+<p><strong>É1.15 (L) Le chaos comme nom de la confusion.</strong> Le chaos est le nom de cette confusion. Il apparaît par la troncature seule (formule I), par le pli seul (formule II), et au maximum par les deux ensemble (formule III). Le calcul complet est au chapitre 3 (II.3, II.4) et la théorie du chaos fabriqué occupe la Partie III de ce volume.</p>
+<h4 id="le-centre-vide-dans-les-tables-et-dans-le-monde">8. Le centre vide, dans les tables et dans le monde</h4>
+<p><strong>É1.16 (L) Une seule forme à trois endroits.</strong> Le 4,5 est la place que personne n’occupe et autour de laquelle tout se plie. Dès qu’une position prétend l’occuper, le pli ne ferme plus : plié en 4, les bras sont inégaux. Le corpus lit la même forme à trois endroits.</p>
+<ul>
+<li><strong>Dans le nombre.</strong> 9 écrit 0 : une place pleine prise pour un vide. Le compte des tours est jeté, et le chaos calculé en est le rendement (section 7).</li>
+<li><strong>Dans la pensée.</strong> Le pourquoi intronisé juge du comment (Aristote, puis la lignée) : un vide pris pour une place. Le pourquoi est structurellement indécidable, comme le point fixe 9 − x = x n’a aucune solution entière ; le poser comme atteint, c’est s’asseoir au centre (Volume 6, L’Histoire de la Preuve, le pourquoi indécidable).</li>
+<li><strong>Dans la cité.</strong> Chaque forme de pouvoir finit par mourir de son centre occupé (famille, tribu, empire, État). La démocratie est un registre horizontal dont le centre reste vide ; ce qui l’étouffe est toujours quelqu’un qui s’y assied (Volume 11, La Cité et le Sens).</li>
+</ul>
+<p>La correction est une seule, et elle est la même aux trois endroits : laisser le centre vide, garder le compte des tours, tenir les deux lectures ensemble au lieu de les dresser l’une contre l’autre. <em>« Rien n’est inventé ; c’est une lecture de ce qui est déjà dans la table. »</em></p>
+<h4 id="ce-que-cette-piece-ne-dit-pas">9. Ce que cette pièce ne dit pas</h4>
+<p>Elle ne dit pas que la physique est fausse, ni que les théorèmes classiques tombent : ils restent vrais, et le corpus les garde tous. Elle dit qu’ils ont été lus avec la moitié de la table. Ce qui relie les sections 1 à 7 (acquises au crayon) à la section 8 (une Lecture) est la chaîne des pièces du corpus, et chaque maillon porte son statut et son reçu dans le Registre des Erreurs (Partie II). Un lecteur qui veut aller plus loin commence par là.</p>
+</main>
+<nav class="chapnav"><span class="prev"><a href="02-partie-i-le-code.html">← Partie I. Le Code</a></span><a class="toc" href="index.html">Sommaire du volume</a><span class="next"><a href="04-chapitre-2-le-code-le-noyau-au-crayon.html">Chapitre 2. Le Code : le noyau, au crayon →</a></span></nav>
+<footer class="colophon"><p>Corpus ARC, Filipe Bastos, <a href="https://creativecommons.org/licenses/by/4.0/deed.fr" rel="license">CC BY 4.0</a>.</p></footer>
+</body>
+</html>

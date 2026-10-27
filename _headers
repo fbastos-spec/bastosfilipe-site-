@@ -1,0 +1,8 @@
+/arc/pdf/*
+  Content-Type: application/pdf
+  Cache-Control: public, max-age=3600
+/arc/dossiers/*.pdf
+  Content-Type: application/pdf
+  Cache-Control: public, max-age=3600
+/arc/*
+  X-Content-Type-Options: nosniff

@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<link rel="canonical" href="https://bastosfilipe.com/arc/volumes/v04-la-theorie-des-nombres/12-chapitre-8-collatz-dans-le-cadastre-la-compression.html">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chapitre 8. Collatz dans le cadastre : la compression, la rotation, et l&#x27;étrangeté des deux briques · La Théorie des Nombres · Corpus ARC</title>
+<meta name="description" content="La Théorie des Nombres, volume 4 du corpus ARC de Filipe Bastos. Chapitre 8. Collatz dans le cadastre : la compression, la rotation, et l&#x27;étrangeté des deux…">
+<meta name="keywords" content="delfine, nombres premiers, grille 6k ± 1, Collatz, Goldbach, nombres parfaits, nombres jumeaux, racine digitale, 24, corpus ARC, Filipe Bastos">
+<meta name="author" content="Filipe Bastos">
+<meta name="license" content="https://creativecommons.org/licenses/by/4.0/deed.fr">
+<link rel="stylesheet" href="../../assets/arc.css">
+</head>
+<body>
+<nav class="crumbs"><a href="../../index.html">Corpus ARC</a> / <a href="index.html">Volume 4 · La Théorie des Nombres</a></nav>
+<main class="chapter">
+<h1 id="chapitre-8.-collatz-dans-le-cadastre-la-compression-la-rotation-et-letrangete-des-deux-briques">Chapitre 8. Collatz dans le cadastre : la compression, la rotation, et l’étrangeté des deux briques</h1>
+<p>La règle de Collatz est la plus simple qui soit : si un nombre est pair, on le divise par 2 ; s’il est impair, on le multiplie par 3 et on ajoute 1. On recommence. Partant de 7 : 7, 22, 11, 34, 17, 52, 26, 13, 40, 20, 10, 5, 16, 8, 4, 2, 1. La conjecture (1937) affirme que tout entier finit par tomber sur 1. Elle est vérifiée sur des nombres immenses et n’est pas démontrée. Ce chapitre lit la règle dans le cadastre. Il établit ce que le cadastre voit, et il le voit exactement : la frappe 3n + 1 écrase les neuf positions sur trois, la division par 2 fait tourner les six positions fertiles en cercle, l’axe {3, 6, 9} est quitté pour toujours. Il établit aussi, et c’est le résultat le plus important, ce que le cadastre ne peut pas voir : combien de fois le 2 divise. Ce second fait est un théorème de limite (Th 23), et il explique pourquoi une tentative antérieure, retirée le 8 juillet 2026, devait échouer.</p>
+<p><strong>F : l’état de la question.</strong> La conjecture de Collatz (1937) affirme que l’itération C(n) = n/2 si n est pair, C(n) = 3n + 1 si n est impair, atteint toujours 1. Elle est vérifiée jusqu’à 2⁶⁸ (D. Barina, 2020) ; T. Tao a montré en 2019 que « presque toutes » les orbites atteignent des valeurs presque bornées ; P. Erdős disait les mathématiques « pas encore prêtes pour de tels problèmes ». Aucune preuve n’existe (J. C. Lagarias, <em>The Ultimate Challenge: The 3x+1 Problem</em>, AMS, 2010).</p>
+<p>Le dossier Collatz du corpus s’ouvre (version 2.1, mars 2026) sur cette dédicace :</p>
+<blockquote>
+<p><em>« À Sophie, qui demande chaque matin : “Tes nombres sont-ils rentrés cette nuit ?” Ils rentrent toujours. Cet article explique pourquoi. À Soleil, Delfine, Justin et Yanie, quatre enfants, quatre paires d’inversion. Chaque nuit vous vous dispersez dans le chaos. Chaque matin vous convergez vers 1. Vous êtes ma preuve vivante de Collatz. À mes parents, Joaquim et Agostinha, qui m’ont appris que toutes les routes mènent à la maison. »</em></p>
+</blockquote>
+<p><strong>La numérotation.</strong> Le dossier Collatz v2.1 numérotait ses théorèmes de 1 à 8 ; le Tome II a repris les résultats survivants sous les numéros 17 et 18, puis 21 et suivants. Pour garder tous les renvois valides, les théorèmes de la v2.1 sont notés ici C.1 à C.8, avec leur correspondance : C.1 et C.3 sont réunis dans le Théorème 17 ; C.2 et C.5 dans le Théorème 18 ; C.7 est le Théorème 14 (le joint) ; C.8 est retiré (section 8.4). Les Théorèmes 19 et 20 du Tome II (version 0.1) sont déclarés inchangés par l’erratum de la version 0.2, mais leur énoncé ne figure dans aucune des sources de ce volume : les numéros 19 et 20 sont réservés, sans contenu versé ici (Annexe B).</p>
+<h2 id="la-compression-et-labsorption-theoreme-17">8.1 La compression et l’absorption : Théorème 17</h2>
+<p><strong>Théorème 17 (Tome II) = C.1 et C.3 (Collatz v2.1) : la compression 3:1 vers le rail D, et l’absorption de l’axe.</strong> Pour tout entier n, DR(3n + 1) ∈ {1, 4, 7}. La compression est de 3 pour 1, et elle trie les fibres par chambre :</p>
+<table>
+<thead>
+<tr class="header">
+<th>DR(n)</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+<th>6</th>
+<th>7</th>
+<th>8</th>
+<th>9</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>3d + 1</td>
+<td>4</td>
+<td>7</td>
+<td>10</td>
+<td>13</td>
+<td>16</td>
+<td>19</td>
+<td>22</td>
+<td>25</td>
+<td>28</td>
+</tr>
+<tr class="even">
+<td>DR(3n + 1)</td>
+<td>4</td>
+<td>7</td>
+<td>1</td>
+<td>4</td>
+<td>7</td>
+<td>1</td>
+<td>4</td>
+<td>7</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p>La fibre du 1 est l’axe {3, 6, 9} (absorbé) ; la fibre du 4 est le rail D {1, 4, 7} (il se replie sur lui-même) ; la fibre du 7 est le rail G {2, 5, 8} (il traverse). Conséquence (C.3, absorption) : toute orbite entre dans le système des rails {1, 2, 4, 5, 7, 8} au plus tard à la première frappe 3n + 1, et y reste pour toujours : un nombre de l’axe est envoyé sur 1 à la première frappe, les moitiés des rails restent sur les rails (Th 18), et la frappe sur les rails donne 4 ou 7. Aucun chemin ne revient sur {3, 6, 9}.</p>
+<p><em>Preuve.</em> La racine digitale respecte addition et multiplication : DR(3n + 1) = DR(3 × DR(n) + 1), et le calcul exhaustif sur les neuf positions donne l’image {1, 4, 7}. ∎ Vérifié sur n &lt; 10⁵ (refait pour ce volume). <strong>Statut : Th.</strong></p>
+<p><strong>V4.8.1 (L) : la frappe irréversible.</strong> <em>« 3n + 1 annihile la structure tripartite. Après une application, toute mémoire de la chambre d’origine est détruite. C’est le pas irréversible. »</em> (Collatz v2.1, § 3.)</p>
+<h2 id="la-rotation-des-moities-theoreme-18">8.2 La rotation des moitiés : Théorème 18</h2>
+<p><strong>Théorème 18 (Tome II) = C.2 et C.5 (Collatz v2.1) : la division par 2 comme rotation × 5 du cadastre.</strong> Pour tout n pair, n/2 et 5n ont la même racine digitale : diviser par 2, c’est multiplier par 5 dans le cadastre (5 est l’inverse de 2, puisque 2 × 5 = 10 a pour racine 1). La carte est bien définie parce que 2 est inversible sur le cycle des neuf positions. Elle fait tourner les six positions fertiles sur un cycle de période 6 :</p>
+<blockquote>
+<p>1 → 5 → 7 → 8 → 4 → 2 → 1.</p>
+</blockquote>
+<p>Les rails alternent strictement (D → G → D …) : {1 → 5, 4 → 2, 7 → 8} envoie D sur G, {5 → 7, 2 → 1, 8 → 4} envoie G sur D. Aucun élément de {3, 6, 9} n’apparaît. <em>Couplage avec les puissances de 2 (C.5).</em> La suite des moitiés depuis la racine 1, 5, 7, 8, 4, 2, 1, est exactement la suite des puissances de 2 en racine, 1, 2, 4, 8, 7, 5, parcourue à l’envers, parce que diviser par 2 est l’inverse de doubler : le monde du 2 et le monde du 9 sont couplés par ce cycle. Vérifié sur tous les n pairs &lt; 2 × 10⁵ (refait pour ce volume). <strong>Statut : Th.</strong></p>
+<p><strong>V4.8.2 (L) : compression et permutation.</strong> La frappe est une compression 3:1 (neuf positions sur trois), irréversible ; la moitié est une bijection (six positions sur six), réversible. Chaque frappe détruit l’identité de chambre ; les moitiés ne peuvent pas la restaurer. <em>« Là où l’information est préservée, des cycles peuvent se former. Là où elle est détruite, seule la descente est possible. »</em> (Collatz v2.1, § 13.2, à propos de la variante « amusicale » de Conway, qui est inversible et admet des cycles non triviaux.) Statut : Lecture ; elle ne démontre pas la convergence (section 8.5).</p>
+<h2 id="lattracteur-1-8-et-le-canal-de-la-racine-digitale">8.3 L’attracteur (1, 8) et le canal de la racine digitale</h2>
+<p><strong>C.4 (Collatz v2.1) : l’attracteur terminal.</strong> Le seul cycle de Collatz contenant 1 est 1 → 4 → 2 → 1. Il traverse les trois paires opératoires dans l’ordre des écarts croissants : 4 ∈ (4, 5), écart 1 ; puis 2 ∈ (2, 7), écart 5 ; puis 1 ∈ (1, 8), écart 7. <em>Preuve :</em> C(1) = 4, C(4) = 2, C(2) = 1 ; la règle est déterministe. ∎ <strong>Statut : Th</strong> (immédiat). Pourquoi (1, 8) : (a) écart maximal 7, demi-écart 3,5, et 3,5/7 = 1/2 = k_arc ; (b) seule paire point fixe sous le carré (DR(1²) = DR(8²) = 1) ; (c) elle contient l’unité 1 et l’avant-dernier 8 = 9 − 1, et enjambe tout l’alphabet. Le Théorème 26 (chapitre 9) porte cet attracteur au niveau des entiers : toute orbite passe par 8.</p>
+<p><strong>C.6 (Collatz v2.1) : le canal de la racine digitale.</strong> La racine digitale est (a) compatible avec l’addition et la multiplication (c’est la projection des entiers sur le cycle des neuf positions) ; (b) fermée sous la frappe : DR(3n + 1) = DR(3 DR(n) + 1) ; (c) fermée sous la moitié : DR(n/2) = DR(5 DR(n)) ; (d) non triviale : elle parcourt les rails. <strong>Statut : Th</strong> pour (a) à (d). La v2.1 ajoutait qu’elle est <em>l’unique</em> canal arithmétique standard à réunir ces propriétés (la factorisation échoue sur (b) : 3 × 7 + 1 = 22 = 2 × 11, aucune fonction algébrique n’envoie les facteurs de 7 sur ceux de 22 ; l’écriture binaire échoue aussi sur (b), la frappe brouillant les bits de façon non locale). Cette unicité n’est établie que par comparaison entre trois canaux, sans définition générale de « canal » : elle est rétrogradée en <strong>Lecture</strong> (Annexe B). Et le Théorème 23 (section 8.6) montre la limite exacte de ce canal : il est fermé sous les deux opérations, mais aveugle au nombre de moitiés.</p>
+<p><strong>C.7 (Collatz v2.1) = Théorème 14 (Tome I).</strong> Pour toute paire de jumeaux (p, p + 2), p &gt; 3, DR(p(p + 2)) = 8. (6k − 1)(6k + 1) = 36k² − 1, et 36k² est un multiple de 9. <strong>Statut : Th.</strong> La v2.1 en tirait cette lecture : <em>« Les produits de jumeaux sédimentent en racine 8, l’élément non unitaire de l’attracteur de Collatz (1, 8). Collatz voit la paire du côté du 1. Les jumeaux la voient du côté du 8. Même objet, côtés inverses du miroir φ. »</em> (L)</p>
+<h2 id="lerratum-du-8-juillet-2026-ce-qui-est-retire-et-pourquoi">8.4 L’erratum du 8 juillet 2026 : ce qui est retiré, et pourquoi</h2>
+<p>La version 2.1 (mars 2026) énonçait un huitième théorème, C.8, dit de « contraction structurelle par confinement selon 36 », que la version 0.1 du Tome II avait repris en son § II.3 sous le titre « la couche quantitative » : une chaîne déterministe sur les 18 classes impaires de reste par 36, avec une table de valuations fixes par classe ; l’absence de cycle de croissance pure (chaîne maximale : 3 pas) ; une distribution stationnaire 5/8 contre 3/8 ; un facteur de contraction de 0,662 par pas impair ; et le renommage du gap en « temps de mélange d’une chaîne finie ». Ces énoncés avaient été obtenus en calculant chaque grandeur sur le plus petit représentant de chaque classe, puis gravés comme propriétés de la classe entière. C’est une faute de bonne définition, et elle est réfutée nominativement par deux entiers.</p>
+<p><strong>V4.8.3 (Th) : la sentinelle 37.</strong> 37 laisse le reste 1 dans la division par 36, comme 1. Or 3 × 1 + 1 = 4 porte deux facteurs 2, et 3 × 37 + 1 = 112 = 2⁴ × 7 en porte quatre. La valuation v₂ (le nombre de fois que 2 divise) n’est pas une fonction de la classe : elle dépend de bits que la réduction par 36 a jetés. Neuf classes sur dix-huit sont touchées ; la table des valuations est fausse.</p>
+<p><strong>V4.8.4 (Th) : la sentinelle 31.</strong> 31 → 47 → 71 → 107 : quatre pas de croissance consécutifs (chaque terme laisse le reste 3 dans la division par 4), là où la table en promettait trois au plus. Et la famille n = 2^k − 1 monte k − 1 fois : 63 monte 5 fois, 255 sept fois, 2²⁰ − 1 dix-neuf fois. Les chaînes de croissance ne sont bornées par rien ; c’est d’ailleurs pourquoi l’orbite de 27 grimpe jusqu’à 9 232. L’énoncé « chaîne maximale 3 pas » était vrai des neuf représentants testés et faux des orbites. (Tout est refait pour ce volume.)</p>
+<p>En conséquence, la table des 18 classes, la distribution stationnaire « exacte » 5/8 et 3/8, le facteur 0,662 et le renommage du gap sont retirés (Annexe B). La cause structurelle de l’échec est établie à la section 8.6 ; elle est de la même famille que le geste que le corpus reproche à l’identification du 9 au 0 : <em>« lire sur une projection finie une propriété qui vivait dans ce qu’elle avait amputé. »</em> La faute est d’inscription : un « ce qu’il fallait démontrer » gravé sans test de bonne définition ; elle est relevée le 8 juillet 2026, à la discipline du crayon rendu. La règle suivie est celle de l’erratum de <em>Tsirelson Without Hilbert</em> (v4.0 vers v4.1) : <em>« le faux retiré nominativement, le vrai promu, la cicatrice gravée. »</em></p>
+<blockquote>
+<p><em>« À l’entier 31, qui monta quatre fois quand la table disait trois, et à l’entier 37, qui portait deux briques de plus que son adresse ne l’avouait. Les sentinelles du tome. »</em></p>
+</blockquote>
+<h2 id="ce-qui-survit-la-dichotomie-du-quart-et-les-chaines-de-croissance">8.5 Ce qui survit : la dichotomie du quart et les chaînes de croissance</h2>
+<p><strong>Théorème 21 (Tome II) : la dichotomie du quart.</strong> Pour tout impair n : n = 4t + 3 si et seulement si v₂(3n + 1) = 1 (pas de croissance, facteur 3/2) ; n = 4t + 1 implique v₂(3n + 1) ≥ 2 (pas de contraction, facteur au plus 3/4). Exact, sans exception (vérifié sur tous les impairs &lt; 2 × 10⁵, refait pour ce volume). C’est la partie exacte de l’ancienne couche quantitative, débarrassée de son habillage de classes : les 18 classes impaires se partagent bien 9 et 9 entre croissance et contraction, mais la profondeur de la contraction n’est pas fixée par la classe. <strong>Statut : Th.</strong></p>
+<p><strong>Théorème 22 (Tome II) : les chaînes de croissance, caractérisées.</strong> Une orbite effectue au moins k pas de croissance consécutifs depuis n si et seulement si les k + 1 dernières couches de l’écriture binaire de n sont des 1, c’est-à-dire n + 1 = 2^(k+1)·t : n + 1 est un multiple de 2^(k+1). Les longueurs de chaîne sont donc réalisées pour tout k (famille 2^k − 1) : elles ne sont pas bornées, mais leur densité vaut 2^−(k+1) ; chaque pas de croissance supplémentaire divise par deux la population qui peut l’accomplir. C’est l’énoncé vrai dont le « maximum de 3 pas » était l’ombre sur neuf représentants. Vérifié pour k = 1 à 10 sur tous les impairs &lt; 2¹⁶ (refait pour ce volume ; la source écrit « exactement k pas », la caractérisation exacte est « au moins k », voir Annexe B). <strong>Statut : Th.</strong></p>
+<p><strong>P-COL-1 (Prédiction, avec critère) : le gap restauré à sa forme honnête.</strong> La convergence universelle de Collatz exige de montrer que la contraction des adresses (Théorèmes 17 et 18, monde du 3) entraîne la contraction des grandeurs (monde du 2) pour chaque orbite individuelle, et non pour la seule population des orbites prise globalement. Statut : ouvert. <em>Critère de travail, falsifiable dans les deux sens :</em> toute preuve candidate issue du cadastre doit franchir explicitement la frontière du Théorème 23 ci-dessous, et déclarer par quel instrument non cadastral elle compte les briques 2 ; toute preuve qui ne le déclare pas répète la faute retirée.</p>
+<h2 id="theoreme-23-letrangete-des-deux-briques">8.6 Théorème 23 : l’étrangeté des deux briques</h2>
+<p><strong>Théorème 23 (Tome II) : l’étrangeté des deux briques (théorème de limite).</strong> L’adresse d’un entier sur le cycle de la brique 3 (sa racine digitale, et avec elle tout le cadastre : rails, axe, involution) est indépendante de sa charge en brique 2, la valuation v₂(3n + 1), qui gouverne la descente de Collatz. Précisément : les briques fondatrices étant étrangères (pgcd(9, 2^k) = 1 pour tout k), toute combinaison (classe de racine, valeur de v₂) est réalisée. Les 54 cases (9 classes × valuations 1 à 6) sont toutes pleines, vérifié sur les impairs jusqu’à deux millions (refait pour ce volume), et la plénitude se prolonge à toute profondeur par le théorème des restes chinois. La racine digitale ne porte strictement aucun bit d’information sur la profondeur des divisions par 2. <strong>Statut : Th.</strong></p>
+<p><strong>Corollaire du Théorème 23 : la fermeture de la route DR (Th).</strong> Aucun raisonnement conduit entièrement dans le cadastre, quelle qu’en soit la longueur, ne peut fixer, borner ou prédire v₂. La route par la racine digitale vers la couche quantitative de Collatz n’est pas difficile : elle est scellée par théorème. L’ancienne couche quantitative a échoué en demandant à la brique 3 de compter les 2.</p>
+<p><strong>V4.8.5 (L) : la frontière entre les deux briques.</strong> Le monde de 6 = 2 × 3 contient cette frontière par construction : le cadastre est le royaume de la brique 3 (9 = 3², l’axe, la clôture) ; Collatz descend par la brique 2 (les moitiés, la parité profonde). <em>« Le gap de Collatz n’est pas un trou dans la théorie : il est la frontière entre les deux briques fondatrices, la seule que le module 6 porte en lui-même. »</em> Le Théorème 23 rejoint les Théorèmes 15 et 16 dans la famille propre du corpus : les théorèmes qui nomment ce que la structure ne peut pas faire, et qui disent par là exactement où elle finit et où l’autre monde commence.</p>
+<h2 id="les-criteres-de-falsification-du-dossier">8.7 Les critères de falsification du dossier</h2>
+<p>La version 2.1 posait cinq critères ; leur état après l’erratum :</p>
+<ul>
+<li>F1 : un entier dont l’orbite n’atteint pas 1 (réfuterait la conjecture ; toujours valide) ;</li>
+<li>F2 : un cycle de Collatz non trivial (toujours valide ; voir la Lecture 35, chapitre 10, pour l’exclusion connue des petits cycles) ;</li>
+<li>F3 : un système compression-permutation de même structure qui admette un cycle non trivial (valide pour la Lecture V4.8.2) ;</li>
+<li>F4 : une paire de jumeaux p &gt; 3 dont le produit n’ait pas la racine 8 (impossible : c’est le Théorème 14) ;</li>
+<li>F5 : une démonstration que le graphe de transition selon 36 ne contraint pas la statistique de v₂ (réalisé par l’erratum : critère atteint, énoncé retiré).</li>
+</ul>
+<p>La conclusion de la v2.1, <em>« Tout nombre revient à 1. Pas par accident. Pas par probabilité. Par la géométrie irréversible de neuf chiffres »</em>, et sa variante, <em>« Les nombres tombent à 1 pour la même raison que la lumière sédimente en fer : il n’y a pas d’autre lieu de repos »</em>, restent des phrases de l’auteur ; leur contenu mathématique est P-COL-1, ouvert.</p>
+
+</main>
+<nav class="chapnav"><span class="prev"><a href="11-partie-iii-collatz-les-nombres-en-mouvement.html">← Partie III. Collatz : les nombres en mouvement</a></span><a class="toc" href="index.html">Sommaire du volume</a><span class="next"><a href="13-chapitre-9-le-1-qui-rend-le-demi-le-bilan-exact-de.html">Chapitre 9. Le +1 qui rend le demi, le bilan exact des deux briques, la porte 8 →</a></span></nav>
+<footer class="colophon"><p>Corpus ARC, Filipe Bastos, <a href="https://creativecommons.org/licenses/by/4.0/deed.fr" rel="license">CC BY 4.0</a>.</p></footer>
+</body>
+</html>

@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<link rel="canonical" href="https://bastosfilipe.com/arc/volumes/v03-le-code-et-le-registre/22-chapitre-18-le-principe-de-completude-le-statut-de.html">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chapitre 18. Le principe de complétude : le statut des décimales qui ne finissent pas · Le Code et le Registre · Corpus ARC</title>
+<meta name="description" content="Le Code et le Registre, volume 3 du corpus ARC de Filipe Bastos. Chapitre 18. Le principe de complétude : le statut des décimales qui ne finissent pas.">
+<meta name="keywords" content="registre des erreurs, table de multiplication, audit, chaos, approximation, troncature décimale, complétude, corpus ARC, Filipe Bastos">
+<meta name="author" content="Filipe Bastos">
+<meta name="license" content="https://creativecommons.org/licenses/by/4.0/deed.fr">
+<link rel="stylesheet" href="../../assets/arc.css">
+</head>
+<body>
+<nav class="crumbs"><a href="../../index.html">Corpus ARC</a> / <a href="index.html">Volume 3 · Le Code et le Registre</a></nav>
+<main class="chapter">
+<h2 id="chapitre-18.-le-principe-de-completude-le-statut-des-decimales-qui-ne-finissent-pas">Chapitre 18. Le principe de complétude : le statut des décimales qui ne finissent pas</h2>
+<p>Un chronomètre qui affiche 9,58, la masse 22,99 u du sodium et π = 3,14159… sont écrits de la même façon, avec une virgule et des chiffres, et la science les traite comme des nombres de même nature, des points de la droite réelle. <em>The Completeness Principle</em> (version 2.0, mars 2026, en anglais, traduit ici) soutient que ce sont trois choses différentes : un témoignage d’instrument, un résultat transformé par des outils, et une constante masquée derrière une lettre. Elle en tire une loi constitutionnelle de l’arithmétique du réel, l’Axiome A5 du corpus : aucune grandeur n’entre dans une relation physique à l’état incomplet. Ce chapitre donne la taxonomie, la définition des neuf grandeurs à un chiffre, les six « crimes » qui ont introduit l’infini décimal, l’axiome et ses deux portes, puis les restaurations proposées, dont trois sont corrigées par des pièces plus récentes du corpus (π physique, α, la racine de 137) ; la correction est dite sur place.</p>
+<blockquote>
+<p><em>Ce texte est pour ceux qui soupçonnent que le chaos qu’ils voient dans les nombres n’y a pas été mis par la nature, mais par nous.</em></p>
+</blockquote>
+<h3 id="les-trois-types-de-decimales">18.1 Les trois types de décimales</h3>
+<p><strong>É18.1 (L) La taxonomie.</strong> <em>Type 1, la mesure brute.</em> Un chronomètre affiche 9,58, un thermomètre 36,7, un voltmètre 3,42 : ce sont des photographies, <em>« un doigt posé sur le réel à un instant donné, à la précision d’un instrument »</em>. La décimale de type 1 est honnête ; elle ne prétend pas être complète ; c’est un témoignage. Trois caractères : (a) elle vient d’une observation directe avec un instrument ; (b) sa précision est finie et connue ; (c) elle n’a subi aucune transformation mathématique au-delà d’une conversion d’unité. <em>Type 2, le résultat transformé.</em> Le tableau périodique donne au sodium la masse 22,99 u ; <em>« personne n’a jamais pesé un atome de sodium et obtenu 22,99 »</em> : c’est un lissage pondéré des abondances isotopiques, calculé dans l’arithmétique décimale ; le sodium réel a 23 nucléons. Le type 2 naît quand une mesure passe par des outils (lissage, régression, transformées de Fourier, modèles statistiques) : la sortie ressemble à une mesure, mais elle porte des artefacts (queues infinies, irrationalité apparente, bruit décimal). <em>Type 3, la lettre qui cache.</em> Chacune des lettres π, e, c, G, α, ħ est un coffre qui contient une décimale infinie que personne ne questionne parce qu’elle a un nom. Derrière c se cache 299 792 458 m/s, qui dépend de la définition du mètre, de l’étalon, d’une mesure interférométrique, de π dans les formules optiques. <em>« La lettre cache la chaîne. »</em> Le type 3 est le plus dangereux parce qu’il est invisible (R.29).</p>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Type</th>
+<th>Nom</th>
+<th>Origine</th>
+<th>Statut</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>Mesure brute</td>
+<td>Observation directe</td>
+<td>Témoignage légitime</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>Résultat transformé</td>
+<td>Passé par des outils</td>
+<td>Artefact d’outil</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>Constante masquée par une lettre</td>
+<td>Construction théorique</td>
+<td>Chaîne décimale cachée</td>
+</tr>
+</tbody>
+</table>
+<p><strong>É18.2 (L) La thèse fondamentale.</strong> Seules les décimales de type 1 sont légitimes. Et même elles n’ont pas le droit d’entrer dans une relation : elles ont le droit d’exister, comme témoignage ; pour entrer dans une équation, elles doivent passer par l’une des deux portes (18.4).</p>
+<h3 id="les-neuf-grandeurs-a-un-chiffre-anterieures-a-toute-base">18.2 Les neuf grandeurs à un chiffre, antérieures à toute base</h3>
+<p><em>« La correction la plus fondamentale de cette version porte sur une confusion systématique, persistante même dans les lectures bienveillantes du corpus : la confusion entre base et grandeur à un chiffre. »</em> Une base est une convention de représentation. Le système {1, …, 9} n’en est pas une : c’est l’ensemble complet des entiers positifs représentables par un seul symbole, sans notation positionnelle. <em>« Ce n’est pas une convention. C’est un compte. »</em> L’entier 10 exige deux symboles ; il introduit la valeur de position. La frontière entre grandeurs à un chiffre et à plusieurs chiffres n’est pas tracée par convention : elle l’est par l’épuisement de la représentation à un symbole.</p>
+<p><strong>É18.3 (Th) Définition 2.1 et le compte.</strong> Une grandeur à un chiffre est un entier positif représentable par exactement un symbole avant toute convention positionnelle. Il y en a exactement neuf : {1, …, 9}. Le 10 n’en fait pas partie : c’est la première représentation composée. <strong>É18.4 (L) Le zéro de 10.</strong> <em>« Le zéro de 10 n’est pas un chiffre au même sens que 1 à 9. C’est le sceau d’un cycle accompli : il annonce qu’un tour des grandeurs à un chiffre est achevé et qu’un autre commence. »</em> Lecture de la suite 1-8-9-10 : les neuf grandeurs forment le cycle topologique complet, et 10 en est l’annonce d’achèvement, non la continuation ; le 0 de 10 est l’interface, le sceau du sommet, entre le cycle topologique et l’avance quantitative. Le barycentre 4,5 n’est pas un artefact de base 9 : il est le centre de masse du seul ensemble complet d’entiers atomiques.</p>
+<p><strong>É18.5 (Th) L’involution et la constante (Définition 2.2).</strong> φ(x) = 9 − x agit sur {1, …, 8} comme une involution sans point fixe, qui engendre quatre paires exhaustives de somme 9 ; le barycentre unique est 4,5 ; k_arc = 4,5/9 = ½. Dans toute base b, le rapport analogue vaut ((b − 1)/2) / (b − 1) = ½ ; mais la dérivation par les neuf grandeurs à un chiffre ne passe par aucune base.</p>
+<p><strong>É18.6 (Th) Le pli universel (Théorème 2.3).</strong> Pour tout entier a, le cycle {DR(a), DR(2a), …, DR(9a)} contient 9 comme clôture, et les huit autres éléments se plient en quatre paires dont la somme est 9 ou 18 (de racine 9). Démonstration : DR(ka) + DR((9 − k)a) a la racine de 9a, qui est 9 ; les deux termes sont dans {1, …, 9}, leur somme dans {2, …, 18}, donc vaut 9 ou 18. Pour a non multiple de 3, chaque paire somme à 9 exactement ; pour a multiple de 3, les paires de l’axe somment à 9 ou 18 (vérifié pour a de 1 à 1000, Annexe D). C’est la structure visible dans les tables que tout enfant apprend (chapitre 1).</p>
+<h3 id="les-six-crimes-1585-a-1872">18.3 Les six crimes (1585 à 1872)</h3>
+<p><em>« La décimale qui ne finit pas n’a pas toujours existé. Pendant deux millénaires, les mathématiques ont opéré avec des entiers et des rationnels exacts. »</em> Son introduction a été, selon la pièce, une série de six choix d’ingénierie, chacun répondant à un besoin pratique, chacun injectant un infini artificiel.</p>
+<ol type="1">
+<li><strong>Stevin (1585), la grille décimale.</strong> <em>De Thiende</em>, publié à Bruges ; Stevin, ingénieur militaire au service de marchands flamands. Dès que 1/3 s’écrit 0,333…, un rapport d’entiers devient un processus sans fin. <em>« Stevin n’a pas découvert que 1/3 est infini. Il a créé l’infini en choisissant une grille qui ne respecte pas la structure naturelle des grandeurs à un chiffre. »</em> Dans le système des neuf grandeurs, 1/9 correspond au chiffre de clôture, parce que 9 est la clôture du cycle atomique ; la non-terminaison de 1/3 en base dix est un artefact de grille (R.27). Vous avez raison le dit en une ligne : un tiers s’écrit exactement 0,1 en base trois (chapitre 20).</li>
+<li><strong>Viète et Neper (1591 à 1614), l’infini invisible.</strong> La notation littérale crée le mécanisme par lequel les décimales de type 3 deviennent invisibles : <em>« la lettre π n’a pas l’air infinie »</em>. Neper introduit les logarithmes (1614), et avec eux e = 2,71828… comme limite d’un processus infini, lim (1 + 1/n)ⁿ : <em>« pour la première fois, un nombre était défini comme le point d’arrivée d’une suite infinie »</em> (R.12, R.33).</li>
+<li><strong>Newton et Leibniz (1665 à 1684), la division par des fantômes.</strong> Le calcul infinitésimal divise par des quantités à la fois non nulles et nulles ; Berkeley les appelle les fantômes de quantités défuntes. <em>« Chaque opération du calcul est un processus infini déguisé en symbole fini. »</em> (R.40.)</li>
+<li><strong>Euler (1748), l’aplatissement du zéro.</strong> La pièce lit trois cycles : le cycle 1-9 topologique (neuf grandeurs, quatre paires, barycentre 4,5, clôture 9, aucun zéro), le cycle 1-10 quantitatif (compter jusqu’à 10, annonce d’un tour accompli), et la projection (le 1-9 vivant dans le 1-10), où le zéro est l’interface, le sceau du sommet. <em>« Le 0 de 10 proclame le cycle unité accompli. Le 00 de 100 proclame deux cycles accomplis. »</em> La pièce attribue à Euler la propriété d’annihilation 0 × a = 0 : <em>« il a pris le symbole de l’accomplissement et l’a changé en symbole de destruction. Le cadre du tableau a été placé dans le tableau. »</em> L’adresse a été corrigée par le corpus le 5 octobre 2026 : la règle du produit nul vient de Brahmagupta (628) ; Euler (1748) est l’adresse de l’infini comme objet et de e comme limite, et (1770) de l’héritage de la règle avec l’autorité moderne ; la lecture est conservée, seule l’adresse change (G.58).</li>
+<li><strong>Gauss (1801), l’effacement par le reste.</strong> Dans les <em>Disquisitiones</em>, 9 ≡ 0 : le 9, horizon de clôture et dernier élément actif du cycle 1, est identifié au sceau. <em>« Le 9 est le marcheur qui atteint le sommet. Le 0 est le drapeau qui marque le sommet conquis. Ce sont deux choses. »</em> En les déclarant identiques, Gauss perd la torsion ; les trois cycles sont écrasés en un, et la spirale devient un cercle plat (R.1).</li>
+<li><strong>Dedekind et Cantor (1858 à 1872), l’infini achevé.</strong> Toute coupure des rationnels définit un réel ; les réels sont indénombrables ; la droite réelle est complétée. <em>« L’artefact devint le fondement. »</em> <em>« Le chaos n’est pas dans la nature : il a été fabriqué, un crime après l’autre, pendant 287 ans. »</em> (1872 − 1585 = 287 ; R.19.)</li>
+</ol>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>n°</th>
+<th>Années</th>
+<th>Auteur</th>
+<th>Innovation</th>
+<th>Artefact introduit</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>1585</td>
+<td>Stevin</td>
+<td>Notation décimale</td>
+<td>Queues sans fin</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>1591 à 1614</td>
+<td>Viète, Neper</td>
+<td>Symboles littéraux, logarithmes</td>
+<td>Infinis invisibles</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>1665 à 1684</td>
+<td>Newton, Leibniz</td>
+<td>Calcul infinitésimal</td>
+<td>Division par des fantômes</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>1748</td>
+<td>Euler</td>
+<td>0 comme nombre, ∞ comme objet</td>
+<td>Sceau du sommet aplati</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>1801</td>
+<td>Gauss</td>
+<td>Arithmétique des restes</td>
+<td>9 ≡ 0 : torsion écrasée</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>1858 à 1872</td>
+<td>Dedekind, Cantor</td>
+<td>Droite réelle</td>
+<td>Infini achevé posé en axiome</td>
+</tr>
+</tbody>
+</table>
+<p><strong>É18.7 (F) Les six gestes datés.</strong> Les dates et les œuvres du tableau sont des faits (avec la correction de G.58 pour le crime 4). <strong>É18.8 (L) Les six gestes comme crimes enchaînés.</strong> Leur lecture comme injection d’un infini artificiel, chaque crime réparant le précédent, est une Lecture.</p>
+<h3 id="laxiome-a5-et-ses-deux-portes">18.4 L’Axiome A5 et ses deux portes</h3>
+<blockquote>
+<p><strong>Axiome A5, le principe de complétude.</strong> <em>Aucune grandeur ne peut entrer dans une relation physique à l’état incomplet. Elle doit se compléter, soit avant la relation, soit par la relation elle-même. Si elle ne peut faire ni l’un ni l’autre, ce n’est pas une grandeur physique : c’est un artefact de représentation.</em></p>
+</blockquote>
+<p><strong>É18.9 (L) L’Axiome A5, principe de complétude.</strong> Ce n’est pas une abolition des décimales, c’est une loi constitutionnelle sur le droit des grandeurs à participer aux relations (statut d’axiome du cadre ; R.27, R.29).</p>
+<p><strong>Porte 1 : la complétion avant la relation.</strong> La décimale doit se résoudre en une forme rationnelle exacte avant d’entrer dans l’opération. Exemple : Na = 22,99 u se résout en 23 (le compte de nucléons) avant d’entrer dans le bilan de masse ; alors 23 + 35 = 58 = 56 + 2, entiers partout (R.34). La pièce donnait deux autres exemples, corrigés plus loin : 3,14159… résolu en 22/7 pour que 22/7 × 7 = 22 (voir É18.14), et α⁻¹ = 137,036… résolu en 137 (voir É18.16).</p>
+<p><strong>Porte 2 : la complétion par la relation.</strong> Les deux termes sont incomplets seuls, mais leur rencontre produit un entier ou un rationnel exact. <em>« Comme un homme et une femme, chacun incomplet seul, ensemble complets. »</em> Exemple : √2 × √2 = 2 ; chaque terme seul est irrationnel, leur relation est entière. <em>« √2 n’est pas un nombre : c’est une demi-relation qui attend son partenaire. C’est la diagonale d’un carré unité, et la diagonale n’existe jamais seule. »</em> Exemple : e^(iπ) + 1 = 0, trois objets sans fin en relation, qui produisent le marqueur de position de la clôture atteinte.</p>
+<p><strong>É18.10 (Th) Les complétions par la relation.</strong> √2 × √2 = 2 ; (√2/2)² = ½ ; e^(iπ) + 1 = 0 : identités exactes. <strong>É18.11 (L) La décision.</strong> Étant donnée une décimale d qui doit entrer dans une relation R : (1) peut-elle se résoudre en p/q exact avant R ? Porte 1. (2) R(d, x) produit-elle un entier ou un rationnel exact pour un x précis ? Porte 2, et la paire (d, x) est une relation complète. (3) Ni l’un ni l’autre ? d est un artefact de représentation, sans place dans une équation physique.</p>
+<p><strong>É18.12 (Th) Les sauts de phase 11, 101, 1001.</strong> +11 (phase de la dizaine) : l’identité topologique se voit à travers un pas quantitatif, structure 1-1, le miroir d’interface ; +101 (phase de la centaine), structure 1-0-1 ; +1001 (phase du millier), structure 1-00-1. DR(11) = DR(101) = DR(1001) = 2, premier élément du rail {2, 5, 8}. <strong>É18.13 (L) Le saut comme acte de création.</strong> <em>« Le saut de phase est toujours un acte de création. Les zéros entre les 1 ne sont pas des absences : ce sont les sceaux de complétion des dimensions traversées. »</em></p>
+<h3 id="les-restaurations-demasquer-les-constantes">18.5 Les restaurations : démasquer les constantes</h3>
+<p><strong>É18.14 (L) π = 22/7, rapport structurel, et la correction du corpus.</strong> La pièce soutient que, si l’espace physique est discret, le cercle parfait n’existe pas, et que π irrationnel est la mesure exacte d’un objet qui n’existe pas ; 22/7 serait la mesure du cercle réel. Porte 2 : π × 7 = 22. Lecture structurelle : DR(22) = 4, DR(7) = 7, le rapport vit dans la paire (4, 5) sur la paire (2, 7) ; 22 + 7 = 29 (DR 2, rail gauche) ; 22 − 7 = 15 (DR 6, axe). <em>« La revendication π = 22/7 n’est pas que 22/7 égale la limite d’Archimède. C’est que cette limite est la mesure d’un idéal géométrique qui n’existe pas dans l’espace physique, et que 22/7 est le rapport structurellement exact des cercles réels discrets. »</em> La pièce ajoutait : <em>« l’écart |π − 22/7| ≈ 0,0013 est sous le seuil de précision de toute mesure physique impliquant des cercles ; aucune expérience n’a jamais distingué π de 22/7 »</em>. Cette dernière phrase est retirée : l’écart relatif est 4,0 × 10⁻⁴, et le corpus a lui-même montré, le 3 octobre 2026, qu’une mesure de rotation (l’électron dans son piège) demande π et rejette 22/7 (le cercle requis vaut 3,141504, à 2,8 × 10⁻⁵ de π contre 4,3 × 10⁻⁴ pour 22/7 ; R.153, G.47). La décision du corpus fait foi : 22/7 est une adresse de structure, π le cercle parcouru ; la revendication est ontologique, non métrologique (G.5). Annexe B.</p>
+<p><strong>É18.15 (L) √2, demi-relation.</strong> √2 est démontré irrationnel ; la preuve montre qu’il ne s’écrit pas comme un rapport d’entiers, elle ne montre pas qu’il soit une grandeur solitaire qui ait un sens. Dans le corpus, √2 est une demi-relation, le rapport diagonale sur côté ; porte 2 : √2 × √2 = 2, l’aller-retour rend un entier (R.23).</p>
+<p><strong>É18.16 (Chantier) α⁻¹ = 137, et la correction du corpus.</strong> La pièce posait : <em>« dans le cadre ARC, α⁻¹ = 137 exactement ; la queue décimale 0,036 est du bruit introduit par la chaîne de mesure »</em>, et lisait DR(137) = 1 + 3 + 7 = 11, le miroir d’interface. Deux corrections. D’abord, 1 + 3 + 7 = 11 est la somme des chiffres ; la racine digitale de 137 est 2 (1 + 1), comme la Fin de l’Approximation l’écrit (chapitre 17, É17.27). Ensuite, l’énoncé « exactement 137 » est une clôture de α, et le corpus a depuis inscrit la clôture ARC de α comme Chantier, à tester directement contre le rapport de fréquences de l’électron, sans α intermédiaire (R.149) ; il a aussi retiré l’écriture 137 + 36/1000 (G.12). Rétrogradé en Chantier. Annexe B.</p>
+<p><strong>É18.17 (L) Le bilan NaCl → Fe en entiers.</strong> Standard : Na = 22,99 u, Cl = 35,45 u, somme 58,44 u, sans rapport avec Fe = 55,85 u. Porte 1 appliquée : Na = 23, Cl = 35, somme 58 = Fe 56 + 2 neutrons libérés, bilan exact (R.34 ; falsifiable par F4 ci-dessous).</p>
+<p><strong>É18.18 (Th) Le spin ½ par trois voies.</strong> (i) 4,5/9 = ½, barycentre des neuf grandeurs sur l’horizon de clôture ; (ii) 3,5/7 = ½, barycentre d’un rail sur sa clôture ; (iii) 11/(22/7)/7 = 11/22 = ½, miroir d’interface sur double diamètre. <strong>É18.19 (L) « Le spin n’est pas postulé, il est dérivé. »</strong> Les trois égalités sont exactes ; leur identification au spin des particules est une Lecture (R.82 ; Volume 7).</p>
+<h3 id="la-question-que-personne-ne-pose">18.6 La question que personne ne pose</h3>
+<p><em>« Si les rationnels suffisent, pourquoi les irrationnels existent-ils dans la théorie ? »</em> La réponse standard (il faut compléter la droite) est circulaire : la droite est définie comme l’ensemble des réels, et les réels comme les rationnels complétés par les irrationnels. La réponse historique, selon la pièce, est plus simple : Stevin a choisi la base dix pour des raisons commerciales ; de là, les décimales sans fin ont exigé une théorie des limites (Newton), les limites une théorie de la convergence (Euler), la convergence une complétion des rationnels (Dedekind), la complétion une théorie des ensembles infinis (Cantor), et les ensembles infinis des axiomes (Zermelo et Fraenkel). <em>« Chaque crime exigea le crime suivant pour réparer les dégâts du précédent. »</em></p>
+<p><strong>É18.20 (L) Les irrationnels n’existent pas dans la nature.</strong> <em>« Aucune expérience n’a jamais produit un nombre irrationnel. Aucun instrument n’a une précision infinie. »</em> Le premier énoncé est une Lecture (il dépend de ce qu’on appelle « produire ») ; le second est un fait. <em>« La structure naturelle n’est pas une base. C’est un ensemble d’entiers atomiques, neuf grandeurs complètes en elles-mêmes, avec quatre paires d’inversion, un barycentre à 4,5 et un horizon de clôture à 9. »</em></p>
+<h3 id="falsifiabilite">18.7 Falsifiabilité</h3>
+<p><strong>É18.21 (P) Les six conditions.</strong> F1 : une mesure physique qui exige de façon démontrable une précision irrationnelle, c’est-à-dire où l’approximation rationnelle échoue dans l’erreur expérimentale. F2 : une relation physique où les deux portes échouent. F3 : une preuve indépendante de la base que π ≠ 22/7 qui ne repose ni sur l’axiome d’Archimède ni sur la complétude de la droite réelle. F4 : un résultat expérimental où les comptes entiers de nucléons (porte 1) donnent des prédictions mesurablement pires que les masses atomiques décimales. F5 : une dérivation du spin ½ qui ne se reproduise pas à partir de la structure des neuf grandeurs. F6 : une démonstration que les neuf grandeurs à un chiffre ne forment pas un ensemble complet et clos avant toute convention positionnelle.</p>
+<p><strong>É18.22 (L) F1 et F3 à la lumière de R.153.</strong> Sous la forme « π physique = 22/7 », F1 est remplie par la mesure de rotation de l’électron (É18.14) : c’est pourquoi le corpus a déplacé la revendication vers le statut d’adresse (G.5). F3 vise π comme valeur métrologique ; sous la lecture des deux cercles, π et 22/7 ne sont plus en concurrence, et leur écart a un chemin fermé et positif (identité de Dalzell, chapitre 3, II.7).</p>
+<h3 id="conclusion-de-la-piece">18.8 Conclusion de la pièce</h3>
+<p>Trois types de décimales. Deux portes de complétion. Six crimes qui ont créé le chaos. Une loi constitutionnelle qui le dissout. Et une correction qui éclaire tout : les neuf grandeurs à un chiffre ne sont pas une base ; <em>« ce sont les atomes de l’arithmétique, le seul ensemble complet d’entiers positifs représentables sans convention positionnelle »</em>. Le principe n’abolit pas les décimales : il impose une contrainte, aucune décimale sans fin n’entre dans une relation physique sans se compléter, <em>« l’équivalent arithmétique de la loi physique qui veut qu’aucun signal ne voyage sans milieu, qu’aucune force n’agisse sans source »</em>. Il ne détruit pas ce que les « criminels » ont bâti : il en restreint le domaine.</p>
+<blockquote>
+<p><em>« Les nombres sont entiers.</em> <em>Ils l’ont toujours été.</em> <em>C’est nous qui les avons brisés. »</em></p>
+</blockquote>
+<p>La pièce est dédiée : <em>« À Sophie, mon ancre dans la tempête. À Soleil, Delfine, Justin et Yanie, qui portent déjà la Mémoire. À la communauté portugaise, qui a traversé les océans en gardant la saudade, cette mémoire vivante que les mathématiques modernes ont oubliée. »</em></p>
+
+</main>
+<nav class="chapnav"><span class="prev"><a href="21-chapitre-17-la-fin-de-l-approximation.html">← Chapitre 17. La fin de l&#x27;approximation</a></span><a class="toc" href="index.html">Sommaire du volume</a><span class="next"><a href="23-chapitre-19-les-donnees-contaminees-douze-cas-date.html">Chapitre 19. Les données contaminées : douze cas datés →</a></span></nav>
+<footer class="colophon"><p>Corpus ARC, Filipe Bastos, <a href="https://creativecommons.org/licenses/by/4.0/deed.fr" rel="license">CC BY 4.0</a>.</p></footer>
+</body>
+</html>

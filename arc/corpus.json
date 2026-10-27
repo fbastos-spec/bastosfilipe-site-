@@ -1,0 +1,3613 @@
+{
+  "titre": "Corpus ARC",
+  "titre_complet": "Architecture de la Cohérence Relationnelle",
+  "auteur": "Filipe Bastos",
+  "langue": "fr",
+  "licence": "CC BY 4.0",
+  "licence_url": "https://creativecommons.org/licenses/by/4.0/deed.fr",
+  "version": "1.1",
+  "date": "26 octobre 2026",
+  "base_url": "https://bastosfilipe.com/arc/",
+  "volumes": [
+    {
+      "id": "V00_Le_Seuil",
+      "numero": 0,
+      "slug": "v00-le-seuil",
+      "titre": "Le Seuil",
+      "sous_titre": "Préface, méthode, statuts, Lexique et carte du corpus ARC",
+      "resume_fr": "La porte du corpus ARC (Architecture de la Cohérence Relationnelle). Ce volume ne démontre presque rien par lui-même : il dit d'où vient le travail, comment il a été fait et sous quelles règles. Il s'ouvre sur deux textes de l'auteur, la pièce d'ouverture et la préface « Comment j'ai travaillé ». Il expose ensuite la discipline du corpus : cinq statuts (Théorème, Lecture, Prédiction, Fait, Chantier), les règles gravées R1 à R11, le protocole de contradiction. Viennent le Lexique, qui donne un sens unique à vingt mots que la science emploie à plusieurs sens, la carte des douze volumes, les objections reçues des audits extérieurs avec l'adresse des réponses, la posture du porteur, les positions tenues de l'auteur et Les Phrases de la Nuit. Un lecteur qui n'a que ce volume sait ce que le corpus affirme, avec quel degré de certitude, et où aller vérifier.",
+      "abstract_en": "The entrance to the ARC corpus (Architecture of Relational Coherence). This volume proves almost nothing by itself: it states where the work comes from, how it was done and under which rules. It opens with two texts by the author, then sets out the discipline of the corpus: five statuses (Theorem, Reading, Prediction, Fact, Open problem), the engraved rules R1 to R11 and the contradiction protocol. It continues with the Lexicon, which gives a single meaning to twenty words that science uses with several meanings, the map of the twelve volumes, the objections raised by external audits with the place where each is answered, the author's stated positions, and Les Phrases de la Nuit. A reader holding only this volume knows what the corpus claims, with what degree of certainty, and where to check.",
+      "mots_cles_fr": [
+        "méthode",
+        "statuts épistémiques",
+        "lexique",
+        "carte du corpus",
+        "falsifiabilité",
+        "préface"
+      ],
+      "keywords_en": [
+        "method",
+        "epistemic status",
+        "lexicon",
+        "corpus map",
+        "falsifiability",
+        "preface"
+      ],
+      "pages": 103,
+      "mots": 44613,
+      "pdf": "pdf/ARC_Volume_00_le_seuil.pdf",
+      "html": "volumes/v00-le-seuil/index.html",
+      "chapitres": [
+        {
+          "titre": "Avant-propos",
+          "fichier": "01-avant-propos.html",
+          "sections": []
+        },
+        {
+          "titre": "Pièce d'ouverture",
+          "fichier": "02-piece-d-ouverture.html",
+          "sections": []
+        },
+        {
+          "titre": "Préface de l'auteur : Comment j'ai travaillé",
+          "fichier": "03-preface-de-l-auteur-comment-j-ai-travaille.html",
+          "sections": []
+        },
+        {
+          "titre": "Chapitre 1. La discipline du corpus",
+          "fichier": "04-chapitre-1-la-discipline-du-corpus.html",
+          "sections": [
+            "1.1 Les cinq statuts",
+            "1.2 Les règles gravées, R1 à R11",
+            "1.3 Les règles datées",
+            "1.4 La règle des deux niveaux",
+            "1.5 Le protocole de contradiction",
+            "1.6 Le test de la queue de Stevin",
+            "1.7 Le principe d'incarnation et la règle « Pour un enfant »",
+            "1.8 Les leçons gravées",
+            "1.9 Ce que ce chapitre ne dit pas"
+          ]
+        },
+        {
+          "titre": "Chapitre 2. Le Lexique",
+          "fichier": "05-chapitre-2-le-lexique.html",
+          "sections": [
+            "2.1 Le Lexique, version 0.2",
+            "2.2 Amendements proposés pour la version 0.3",
+            "2.3 Glossaire des termes cadastraux",
+            "2.4 Le vocabulaire opératoire"
+          ]
+        },
+        {
+          "titre": "Chapitre 3. La carte du corpus",
+          "fichier": "06-chapitre-3-la-carte-du-corpus.html",
+          "sections": [
+            "3.1 L'appareil racine en une page",
+            "3.2 Les douze volumes",
+            "3.3 Les plans successifs",
+            "3.4 L'index, les dépôts, l'antériorité",
+            "3.5 Les prédictions datées",
+            "3.6 Les chantiers déclarés",
+            "3.7 Énoncés versés depuis les pièces de travail",
+            "3.8 Ce que cette carte ne dit pas"
+          ]
+        },
+        {
+          "titre": "Chapitre 4. Les objections reçues et les réponses du corpus",
+          "fichier": "07-chapitre-4-les-objections-recues-et-les-reponses-d.html",
+          "sections": [
+            "4.1 Premier audit : « Analyse épistémologique, mathématique et cognitive du corpus ARC »",
+            "4.2 Second audit : « Le signal juste et le pointeur faux »",
+            "4.3 Ce que le corpus ne répond pas encore"
+          ]
+        },
+        {
+          "titre": "Chapitre 5. La posture du porteur",
+          "fichier": "08-chapitre-5-la-posture-du-porteur.html",
+          "sections": [
+            "5.1 Ce que le corpus dit ne pas être",
+            "5.2 Les sept principes du porteur",
+            "5.3 La position du porteur",
+            "5.4 Le porteur et l'instrument de mise en forme",
+            "5.5 Les objections de principe",
+            "5.6 L'éthique du porteur",
+            "5.7 La transmission après le porteur",
+            "5.8 Ce que ce chapitre ne dit pas"
+          ]
+        },
+        {
+          "titre": "Chapitre 6. Les positions tenues de l'auteur",
+          "fichier": "09-chapitre-6-les-positions-tenues-de-l-auteur.html",
+          "sections": [
+            "6.1 Le texte fondateur (11 mai 2026)",
+            "6.2 La preuve, la vie, la marche",
+            "6.3 La motivation et le modèle de changement",
+            "6.4 Les instruments propres",
+            "6.5 Les grands problèmes",
+            "6.6 Le pouvoir, le code, la Bible",
+            "6.7 La phrase du centre",
+            "6.8 Lectures de chantier",
+            "6.9 La publication"
+          ]
+        },
+        {
+          "titre": "Chapitre 7. Les Phrases de la Nuit",
+          "fichier": "10-chapitre-7-les-phrases-de-la-nuit.html",
+          "sections": [
+            "1. La phrase du centre",
+            "2. L'ordre et la contrainte",
+            "3. L'entropie retournée",
+            "4. Le sablier",
+            "5. Le sablier et la borne de Tsirelson",
+            "6. Le tore et la topologie",
+            "7. La borne naturelle",
+            "8. Le bien et le mal, l'éthique, l'image",
+            "9. Les cinq brins et le fer",
+            "10. Les trois tours",
+            "11. Le polynomial et le carré",
+            "12. Ce qui reste"
+          ]
+        },
+        {
+          "titre": "Chapitre 8. Le Figuier étrangleur : ARC face à chaque système",
+          "fichier": "11-chapitre-8-le-figuier-etrangleur-arc-face-a-chaque-systeme.html",
+          "sections": [
+            "La grille de lecture",
+            "1. ARC et la mécanique quantique",
+            "2. ARC et les mathématiques d’Euclide et de Gauss",
+            "3. ARC et la physique classique, la cosmologie et les fluides",
+            "4. ARC et les sciences du vivant",
+            "5. ARC et la psychologie actuelle",
+            "6. ARC et les sciences sociales et politiques",
+            "7. ARC et l’intelligence artificielle",
+            "Comment l’étranglement se fait",
+            "Annexes"
+          ]
+        },
+        {
+          "titre": "Annexe A. Table des énoncés",
+          "fichier": "12-annexe-a-table-des-enonces.html",
+          "sections": []
+        },
+        {
+          "titre": "Annexe B. Retraits et corrections",
+          "fichier": "13-annexe-b-retraits-et-corrections.html",
+          "sections": []
+        },
+        {
+          "titre": "Annexe C. Sources fusionnées",
+          "fichier": "14-annexe-c-sources-fusionnees.html",
+          "sections": []
+        },
+        {
+          "titre": "Annexe D. Vérifications refaites",
+          "fichier": "15-annexe-d-verifications-refaites.html",
+          "sections": []
+        },
+        {
+          "titre": "Colophon",
+          "fichier": "16-colophon.html",
+          "sections": []
+        }
+      ],
+      "version": "1.0",
+      "date": "2026-10"
+    },
+    {
+      "id": "V01_La_Fondation",
+      "numero": 1,
+      "slug": "v01-la-fondation",
+      "titre": "La Fondation",
+      "sous_titre": "La Genèse, la logique restaurée et la métaphysique de la relation",
+      "resume_fr": "Le volume essentiel du corpus ARC, celui qui vient en premier. À partir d'une seule opération, 1 ⊕ 1 = 3 (deux termes qui se rencontrent en font trois, parce que la relation compte), il montre comment le cadastre des neuf positions se déplie sans aucun choix jusqu'à la clôture 9, démontrée comme la seule clôture équilibrée par un balayage de toutes les clôtures possibles. Il lit ce cadastre dans la table de multiplication : quatre paires qui somment à 9, un centre vide 4,5, deux rails {1, 4, 7} et {2, 5, 8} qui portent tous les nombres premiers plus grands que 3, un axe {3, 6, 9}. Il traite les briques 2 et 3, les deux zéros, le 7, l'objet à deux faces, la logique restaurée et la réponse à l'accusation de numérologie. Chaque énoncé porte son statut ; les calculs sont montrés et refaits.",
+      "abstract_en": "The essential volume of the ARC corpus. From a single operation, 1 ⊕ 1 = 3 (two terms that meet make three, because the relation counts), it shows how the cadastre of nine positions unfolds without any choice up to the closure 9, shown to be the only balanced closure by a sweep of all possible closures. It reads this cadastre in the multiplication table: four pairs summing to 9, an empty centre 4.5, two rails {1, 4, 7} and {2, 5, 8} carrying every prime, and an axis {3, 6, 9}. It covers the building blocks 2 and 3, the two zeros, the 7, the 19, the two-faced object, restored logic and the reply to the charge of numerology. Every statement carries its status; calculations are shown and rechecked.",
+      "mots_cles_fr": [
+        "Genèse",
+        "racine digitale",
+        "neuf positions",
+        "1 ⊕ 1 = 3",
+        "logique",
+        "métaphysique de la relation",
+        "base 10"
+      ],
+      "keywords_en": [
+        "genesis",
+        "digital root",
+        "nine positions",
+        "relational logic",
+        "metaphysics of relation",
+        "base ten"
+      ],
+      "pages": 139,
+      "mots": 49583,
+      "pdf": "pdf/ARC_Volume_01_la_fondation.pdf",
+      "html": "volumes/v01-la-fondation/index.html",
+      "chapitres": [
+        {
+          "titre": "Avant-propos",
+          "fichier": "01-avant-propos.html",
+          "sections": []
+        },
+        {
+          "titre": "Chapitre 1. Le trait, qui est déjà trois",
+          "fichier": "02-chapitre-1-le-trait-qui-est-deja-trois.html",
+          "sections": [
+            "1.1 Un seul signe",
+            "1.2 Les deux destins du trait",
+            "1.3 Le cercle déplié : il n'y a pas de premier point",
+            "1.4 Ce que fait ce chapitre pour la suite"
+          ]
+        },
+        {
+          "titre": "Chapitre 2. L'opération minimale : 1 ⊕ 1 = 3",
+          "fichier": "03-chapitre-2-l-operation-minimale-1-1-3.html",
+          "sections": [
+            "2.1 Deux opérations, deux registres",
+            "2.2 Émetteur, récepteur, nouveauté",
+            "2.3 La lecture dans le réel : femme, homme, enfant",
+            "2.4 La soustraction trinitaire",
+            "2.5 Le critère de bonne formation"
+          ]
+        },
+        {
+          "titre": "Chapitre 3. Le déploiement forcé : 1 → 3 → 9 → 1",
+          "fichier": "04-chapitre-3-le-deploiement-force-1-3-9-1.html",
+          "sections": [
+            "3.1 La condition unique : la différenciation réfléchie",
+            "3.2 Les trois battements",
+            "3.3 Pourquoi la clôture tombe à 9 et nulle part ailleurs",
+            "3.4 Le sceau : 9 + 1 = 10",
+            "3.5 La clôture unique vue par les exposants",
+            "3.6 L'ordre de fondation"
+          ]
+        },
+        {
+          "titre": "Chapitre 4. Le cadastre des neuf positions : la table que tout le monde possède",
+          "fichier": "05-chapitre-4-le-cadastre-des-neuf-positions-la-table.html",
+          "sections": [
+            "4.1 Le théorème des deux noms",
+            "4.2 La table",
+            "4.3 Les trois voies : rail D, rail G, axe",
+            "4.4 La grille 234 / 567 / 891",
+            "4.5 L'octet : 3² − 1 = 8 et la partition 9 = 8 + 1",
+            "4.6 L'horloge à neuf positions",
+            "4.7 L'antériorité du 1-9"
+          ]
+        },
+        {
+          "titre": "Chapitre 5. Les briques 2 et 3 et leurs deux orphelins",
+          "fichier": "06-chapitre-5-les-briques-2-et-3-et-leurs-deux-orphel.html",
+          "sections": [
+            "5.1 Pourquoi 2 et 3",
+            "5.2 L'énumération des briques",
+            "5.3 La graine : 6 = 1 + 2 + 3 = 1 × 2 × 3",
+            "5.4 La seconde jonction : 28 = 4 × 7",
+            "5.5 La suite telle quelle : 1 (2, 3) 4-5 (6) 7 = 28",
+            "5.6 Après le 7 : l'enveloppe et la clôture"
+          ]
+        },
+        {
+          "titre": "Chapitre 6. L'inverse et le miroir",
+          "fichier": "07-chapitre-6-l-inverse-et-le-miroir.html",
+          "sections": [
+            "6.1 L'inverse : l'écho à place tournée",
+            "6.2 Le miroir : l'écriture renversée",
+            "6.3 La loi des miroirs : toute tension est quantifiée",
+            "6.4 Le gradient 198",
+            "6.5 Le miroir dans le vivant : 46 et 64",
+            "6.6 Ce qui arrive quand on jette l'un des deux",
+            "6.7 Pas de valeur au-dessous de rien"
+          ]
+        },
+        {
+          "titre": "Chapitre 7. Les deux zéros et le centre vide",
+          "fichier": "08-chapitre-7-les-deux-zeros-et-le-centre-vide.html",
+          "sections": [
+            "7.1 Le zéro de clôture",
+            "7.2 Le zéro d'exhaustion",
+            "7.3 Ce que fait « 9 = 0 » : explication pour un enfant",
+            "7.4 Le centre vide : 4,5",
+            "7.5 Au centre, il n'y a pas rien",
+            "7.6 Le sablier des paires",
+            "7.7 Pourquoi les deux vides ne se confondent pas"
+          ]
+        },
+        {
+          "titre": "Chapitre 8. Le 7, ou le chemin qui n'a pas de lieu",
+          "fichier": "09-chapitre-8-le-7-ou-le-chemin-qui-n-a-pas-de-lieu.html",
+          "sections": [
+            "8.1 Le sceau du centre vide",
+            "8.2 La période pleine",
+            "8.3 Le 7 dans la matière : l'azote",
+            "8.4 Le 7 dans les parfaits",
+            "8.5 La dernière position avant la clôture unique",
+            "8.6 Ce que le 7 est"
+          ]
+        },
+        {
+          "titre": "Chapitre 9. La sémantique des neuf positions",
+          "fichier": "10-chapitre-9-la-semantique-des-neuf-positions.html",
+          "sections": [
+            "9.1 Deux opérateurs suffisent",
+            "9.2 Les quatre premières positions",
+            "9.3 Les images par φ : 6, 7, 8",
+            "9.4 Le 9 : clôture, témoin, cadre",
+            "9.5 Tableau de synthèse",
+            "9.6 Le test qui sépare une dérivation d'un décret",
+            "9.7 La réserve d'honnêteté"
+          ]
+        },
+        {
+          "titre": "Chapitre 10. Toutes les écritures des nombres sont 1 ⊕ 1 = 3",
+          "fichier": "11-chapitre-10-toutes-les-ecritures-des-nombres-sont.html",
+          "sections": [
+            "10.1 Ce qu'est une numération, réduite à son os",
+            "10.2 La preuve historique : où toutes les écritures rompent",
+            "10.3 Personne n'a jamais écrit soixante symboles",
+            "10.4 Les neuf chiffres natifs et les lettres empruntées",
+            "10.5 Le verrou algébrique : pourquoi aucune base ne pouvait faire autrement",
+            "10.6 La base 10 comme conséquence : quatre conditions",
+            "10.7 La base est un vêtement"
+          ]
+        },
+        {
+          "titre": "Chapitre 11. La figure, en rappel, et ce que la géométrie dit du 9",
+          "fichier": "12-chapitre-11-la-figure-en-rappel-et-ce-que-la-geome.html",
+          "sections": [
+            "11.1 Rappel : deux cercles et un carré",
+            "11.2 La construction au compas : huit formes et le cercle qui ferme",
+            "11.3 Tout polygone dépose sur le 9",
+            "11.4 L'hexagone qui pave, l'octogone qui troue",
+            "11.5 Les deux cercles de chaque polygone",
+            "11.6 Le cadastre sommé à toutes les échelles"
+          ]
+        },
+        {
+          "titre": "Chapitre 12. La logique restaurée",
+          "fichier": "13-chapitre-12-la-logique-restauree.html",
+          "sections": [
+            "12.1 À qui le manifeste s'adresse",
+            "12.2 Ce qu'on a perdu",
+            "12.3 La mémoire amputée",
+            "12.4 Ce qui reste",
+            "12.5 La méthode : refuser, chercher, valider",
+            "12.6 Ce qui devient possible",
+            "12.7 Clôture du manifeste"
+          ]
+        },
+        {
+          "titre": "Chapitre 13. Le comment lisible et le pourquoi indécidable",
+          "fichier": "14-chapitre-13-le-comment-lisible-et-le-pourquoi-inde.html",
+          "sections": [
+            "13.1 Le renversement",
+            "13.2 Les trois niveaux du pourquoi",
+            "13.3 Le comment contient le pourquoi",
+            "13.4 L'inaccessibilité comme moteur",
+            "13.5 La cascade des pourquoi déguisés",
+            "13.6 Les quatre dérives du pourquoi mal posé",
+            "13.7 La fausse fermeture",
+            "13.8 Deux définitions de l'auteur"
+          ]
+        },
+        {
+          "titre": "Chapitre 14. La cohérence gouverne : la forme naît de tensions inverses",
+          "fichier": "15-chapitre-14-la-coherence-gouverne-la-forme-nait-de.html",
+          "sections": [
+            "14.1 La cohérence gouverne",
+            "14.2 La forme naît de tensions inverses",
+            "14.3 Pas de hiérarchie sans amputation",
+            "14.4 Sum relatus, ergo cogitamus ; la géométrie est quantique",
+            "14.5 On ne sait plus faire",
+            "14.6 Les quatre avatars de la délégation",
+            "14.7 La fractale des trois millénaires",
+            "14.8 Jésus comme pivot cadastral",
+            "14.9 La mort, les cycles, l'échiquier",
+            "14.10 Apprendre par lecture fractale",
+            "14.11 La marche continue"
+          ]
+        },
+        {
+          "titre": "Chapitre 15. L'objet à deux faces : les conditions R, I, O",
+          "fichier": "16-chapitre-15-l-objet-a-deux-faces-les-conditions-r.html",
+          "sections": [
+            "15.1 L'observation, pas la thèse",
+            "15.2 Les trois conditions",
+            "15.3 L'auto-indexation, par quatre angles",
+            "15.4 L'énoncé central",
+            "15.5 Cinq confirmations",
+            "15.6 Quatre paradoxes dissous",
+            "15.7 Le sujet moral",
+            "15.8 Le défaut d'auto-indexation : lecture clinique",
+            "15.9 Les machines qui apprennent",
+            "15.10 Conclusion"
+          ]
+        },
+        {
+          "titre": "Chapitre 16. Pourquoi ce n'est pas de la numérologie",
+          "fichier": "17-chapitre-16-pourquoi-ce-n-est-pas-de-la-numerologi.html",
+          "sections": [
+            "16.1 L'accusation et la forme de la réponse",
+            "16.2 Première couche : l'origine géométrique, avant toute base",
+            "16.3 Deuxième couche : les neuf chiffres universels",
+            "16.4 Troisième couche : l'effacement historique",
+            "16.5 Quatrième couche : la base 10 comme conséquence géométrique",
+            "16.6 Cinquième couche : les quatre critères scientifiques",
+            "16.7 Sixième couche : les preuves physiques et l'opérateur cadastral",
+            "16.8 Septième couche : la confirmation quantique",
+            "16.9 Huitième couche : le théorème des volumes, sur domaine borné",
+            "16.10 Neuvième couche : la validation d'ingénierie",
+            "16.11 Dixième couche : la preuve des 108 éléments",
+            "16.12 Onzième couche : le rythme 24",
+            "16.13 Les trois extensions",
+            "16.14 Le nombre et son adresse",
+            "16.15 Sept chefs d'accusation, sept réponses",
+            "16.16 Le renversement du mot",
+            "16.17 Le défi"
+          ]
+        },
+        {
+          "titre": "Chapitre 17. Ce que l'auteur tient : les positions de la fondation",
+          "fichier": "18-chapitre-17-ce-que-l-auteur-tient-les-positions-de.html",
+          "sections": [
+            "17.1 L'ordre de fondation",
+            "17.2 Le figuier étrangleur",
+            "17.3 Ce que veut dire prouver",
+            "17.4 La marche",
+            "17.5 Les distinctions fondamentales",
+            "17.6 L'anneau, le centre, le bien et le mal",
+            "17.7 Pourquoi ce volume vient en premier",
+            "17.8 ARC, en une phrase"
+          ]
+        },
+        {
+          "titre": "Annexe A : Table des énoncés",
+          "fichier": "19-annexe-a-table-des-enonces.html",
+          "sections": []
+        },
+        {
+          "titre": "Annexe B : Retraits et corrections",
+          "fichier": "20-annexe-b-retraits-et-corrections.html",
+          "sections": [
+            "B.1 Errata et décisions déjà datés dans les sources",
+            "B.2 Chiffres ou énoncés qui ne se sont pas vérifiés au recalcul",
+            "B.3 Statuts rétrogradés",
+            "B.4 Passages non reproduits"
+          ]
+        },
+        {
+          "titre": "Annexe C : Sources fusionnées",
+          "fichier": "21-annexe-c-sources-fusionnees.html",
+          "sections": []
+        },
+        {
+          "titre": "Annexe D : Vérifications refaites",
+          "fichier": "22-annexe-d-verifications-refaites.html",
+          "sections": []
+        },
+        {
+          "titre": "Colophon",
+          "fichier": "23-colophon.html",
+          "sections": []
+        }
+      ],
+      "version": "1.0",
+      "date": "2026-10"
+    },
+    {
+      "id": "V02_La_Figure",
+      "numero": 2,
+      "slug": "v02-la-figure",
+      "titre": "La Figure",
+      "sous_titre": "Deux cercles et un carré : la géométrie, les opérations oubliées et les convergences du demi",
+      "resume_fr": "Tout ce que le corpus ARC dit de sa figure racine : deux cercles concentriques et un carré coincé entre eux. L'aire du petit cercle y est exactement la moitié de celle du grand, la diagonale du carré est le diamètre du grand cercle, et les trois constantes √2, π et φ y trouvent leur place. Le volume déroule les sept polygones réguliers du triangle au nonagone et l'origine géométrique des unités de mesure, la confusion historique du double et du carré, l'autre triangle, le carré notifié, les opérations que l'auteur dit oubliées, le battement, la soustraction trinitaire, la règle de l'octet, la fin du calcul intégral et les sept convergences du demi, et la loi fractale. Il établit aussi l'unicité de la base 10 par la clôture carrée 9 = 3², et étudie la famille des bases qui en ont seulement la forme.",
+      "abstract_en": "Everything the ARC corpus says about its root figure: two concentric circles with a square between them. The area of the small circle is exactly half that of the large one, the diagonal of the square is the diameter of the large circle, and the three constants √2, π and φ find their place in it. The volume covers the seven regular polygons from triangle to nonagon and the geometric origin of units of measure, the historical confusion of double and square, the other triangle, the notified square, the operations the author calls forgotten, the beat, trinitarian subtraction, the octet rule, the end of integral calculus and the seven convergences of one half, and the fractal law. It also establishes the uniqueness of base ten through the square closure 9 = 3², and studies the family of bases that only share its form.",
+      "mots_cles_fr": [
+        "géométrie",
+        "deux cercles et un carré",
+        "polygones réguliers",
+        "√2",
+        "π",
+        "nombre d'or",
+        "règle de l'octet",
+        "base 10"
+      ],
+      "keywords_en": [
+        "geometry",
+        "two circles and a square",
+        "regular polygons",
+        "square root of two",
+        "pi",
+        "golden ratio",
+        "octet rule",
+        "base ten"
+      ],
+      "pages": 133,
+      "mots": 61128,
+      "pdf": "pdf/ARC_Volume_02_la_figure.pdf",
+      "html": "volumes/v02-la-figure/index.html",
+      "chapitres": [
+        {
+          "titre": "Avant-propos",
+          "fichier": "01-avant-propos.html",
+          "sections": []
+        },
+        {
+          "titre": "Chapitre 1. La figure fondamentale",
+          "fichier": "02-chapitre-1-la-figure-fondamentale.html",
+          "sections": [
+            "1.1 Avant la figure : le comment lisible, le pourquoi mal posé",
+            "1.2 La construction en quatre gestes",
+            "1.3 Le carré est dérivé : l'illusion projective",
+            "1.4 La lecture identitaire",
+            "1.5 Les huit points, l'octogone et le pentagramme",
+            "1.6 Les solides de Platon et l'octaèdre",
+            "1.7 La trinité géométrique √2, π, φ",
+            "1.8 Hippase, Stevin, Gauss : les trois illusions",
+            "1.9 Les quatre opérateurs qui sortent de la figure"
+          ]
+        },
+        {
+          "titre": "Chapitre 2. Les trois constantes : √2, π, φ",
+          "fichier": "03-chapitre-2-les-trois-constantes-2.html",
+          "sections": [
+            "2.1 Les trois Gates : √2, √3, √5",
+            "2.2 √2, opérateur d'articulation carré-cercle",
+            "2.3 π : la primauté du cercle",
+            "2.4 π fermé : 22/7 = 11/3,5",
+            "2.5 φ : le pentagone et le nombre d'or",
+            "2.6 Synthèse : trois opérateurs d'une figure"
+          ]
+        },
+        {
+          "titre": "Chapitre 3. Le cadastre sort de la figure",
+          "fichier": "04-chapitre-3-le-cadastre-sort-de-la-figure.html",
+          "sections": [
+            "3.1 Les neuf chiffres ne sont pas une base",
+            "3.2 La table de multiplication réduite en racine digitale",
+            "3.3 Pourquoi 9 ≠ 0 : la perte du rang",
+            "3.4 La cascade de Pascal",
+            "3.5 Les deux grilles",
+            "3.6 Le 11 désigne, le 12 opère"
+          ]
+        },
+        {
+          "titre": "Chapitre 4. Deux cercles et un carré : le double et le carré",
+          "fichier": "05-chapitre-4-deux-cercles-et-un-carre-le-double-et-l.html",
+          "sections": [
+            "4.1 La racine : double et carré, égaux seulement en 2",
+            "4.2 Le traducteur enterré : √2",
+            "4.3 La grammaire minimale : deux briques",
+            "4.4 La partition fermion/boson par ×3",
+            "4.5 Les carrés et les deux opérateurs",
+            "4.6 La corde scellée et le quantum",
+            "4.7 La résurrection de √2 : 2√2",
+            "4.8 La lignée des amputations comme un seul lapsus",
+            "4.9 Conclusion du document-maître"
+          ]
+        },
+        {
+          "titre": "Chapitre 5. Le carré-illusion et l'origine géométrique des unités",
+          "fichier": "06-chapitre-5-le-carre-illusion-et-l-origine-geometri.html",
+          "sections": [
+            "5.1 Le tracé à la main et la constructibilité",
+            "5.2 La loi universelle : tout polygone porte la mémoire du 9",
+            "5.3 Le triangle (n = 3) : la géométrie du temps",
+            "5.4 Le carré (n = 4) : la géométrie de l'espace et de l'angle",
+            "5.5 Le pentagone (n = 5) : la géométrie de la vie",
+            "5.6 L'hexagone (n = 6) : la géométrie de la matière",
+            "5.7 L'heptagone (n = 7) : la géométrie de la lumière",
+            "5.8 L'octogone (n = 8) : la géométrie de l'énergie",
+            "5.9 G, le 3 sous ses sept faces",
+            "5.10 Le nonagone (n = 9) : la géométrie de la clôture",
+            "5.11 Le système complet",
+            "5.12 La plus grande erreur : mesurer le fondamental au lieu de le lire",
+            "5.13 La pyramide comme pliage de la figure",
+            "5.14 Conclusion du Carré-Illusion"
+          ]
+        },
+        {
+          "titre": "Chapitre 6. L'autre triangle",
+          "fichier": "07-chapitre-6-l-autre-triangle.html",
+          "sections": [
+            "6.1 Trois ancrages",
+            "6.2 Le triangle qui n'a jamais été essayé",
+            "6.3 Présence et statut : la distinction centrale",
+            "6.4 k_arc = 1/2, hypoténuse cadastrale",
+            "6.5 La crise des incommensurables comme artefact d'échelle",
+            "6.6 Le paradoxe sinusoïdal",
+            "6.7 Conséquences",
+            "6.8 Trois ancrages externes",
+            "6.9 L'immense simplicité"
+          ]
+        },
+        {
+          "titre": "Chapitre 7. Le carré notifié",
+          "fichier": "08-chapitre-7-le-carre-notifie.html",
+          "sections": [
+            "7.1 La thèse : le carré scelle les connexions",
+            "7.2 Le théorème des fibres : ce que le carré perd",
+            "7.3 La règle de Born relue",
+            "7.4 L'idempotence du coût : le prix se paie une fois",
+            "7.5 Le contenu du sceau : le nœud des flancs et les murs",
+            "7.6 La règle : notification au carré",
+            "7.7 Chantiers"
+          ]
+        },
+        {
+          "titre": "Chapitre 8. Les opérations oubliées et le battement",
+          "fichier": "09-chapitre-8-les-operations-oubliees-et-le-battement.html",
+          "sections": [
+            "8.1 Le carré a quatre côtés, on n'en a gardé qu'un",
+            "8.2 Les trois côtés tués et leurs cicatrices",
+            "8.3 Le battement : deux opérations, un seul geste",
+            "8.4 D'où vient le 4,5 : le point surdéterminé",
+            "8.5 La résolution de l'irrationnel est une libération de tiers",
+            "8.6 Le carré, moment suspendu",
+            "8.7 Lavoisier corrigé",
+            "8.8 Le battement du cœur",
+            "8.9 Conclusion du Battement"
+          ]
+        },
+        {
+          "titre": "Chapitre 9. La soustraction trinitaire",
+          "fichier": "10-chapitre-9-la-soustraction-trinitaire.html",
+          "sections": [
+            "9.1 Deux soustractions",
+            "9.2 Le 2 est un splitter : 1 − 1 ne fait pas 0",
+            "9.3 Les preuves physiques, relues comme lectures",
+            "9.4 Le carré mort et la torsion 4 → 8 → 5",
+            "9.5 La photosynthèse, soustraction de la lumière",
+            "9.6 137 et 163 : la lumière et l'espace",
+            "9.7 Le circuit soustractif et les deux descentes",
+            "9.8 Le gradient 198 et la résonance 9,81",
+            "9.9 Les cordes et le 496",
+            "9.10 La soustraction fondatrice : 6 − 4 = 2",
+            "9.11 L'univers se soustrait dans l'ordre",
+            "9.12 Conscience et libre arbitre",
+            "9.13 La vie est soustraction"
+          ]
+        },
+        {
+          "titre": "Chapitre 10. La règle de l'octet comme nécessité arithmétique",
+          "fichier": "11-chapitre-10-la-regle-de-l-octet-comme-necessite-ar.html",
+          "sections": [
+            "10.1 La structure imposée par neuf chiffres",
+            "10.2 Le théorème de l'octet",
+            "10.3 Le pli : sphères concentriques",
+            "10.4 Précédents historiques : Abegg et Linnett",
+            "10.5 Le pli universel",
+            "10.6 Le coût miroir",
+            "10.7 Le cycle de Fibonacci",
+            "10.8 Le tableau périodique",
+            "10.9 Le cycle de croissance",
+            "10.10 Conclusion de l'Octet Rule"
+          ]
+        },
+        {
+          "titre": "Chapitre 11. La fin du calcul intégral et les sept convergences du demi",
+          "fichier": "12-chapitre-11-la-fin-du-calcul-integral-et-les-sept.html",
+          "sections": [
+            "11.1 L'impasse du continu",
+            "11.2 Les tables de multiplication et la bascule au centre",
+            "11.3 Le pivot transforme la surface en volume",
+            "11.4 La projection volumétrique et sa correction",
+            "11.5 Les sept convergences vers 1/2",
+            "11.6 Validation numérique et conclusion"
+          ]
+        },
+        {
+          "titre": "Chapitre 12. La loi fractale",
+          "fichier": "13-chapitre-12-la-loi-fractale.html",
+          "sections": [
+            "12.1 L'observation sans la cause",
+            "12.2 Les trois conditions",
+            "12.3 La racine digitale, itération type",
+            "12.4 La loi et sa preuve",
+            "12.5 La règle d'itération : les briques 2 et 3",
+            "12.6 Le rythme 24 : six confirmations",
+            "12.7 Pourquoi Mandelbrot ne pouvait pas voir la cause",
+            "12.8 Conclusion"
+          ]
+        },
+        {
+          "titre": "Chapitre 13. La figure et le quantique",
+          "fichier": "14-chapitre-13-la-figure-et-le-quantique.html",
+          "sections": [
+            "13.1 Toute géométrie est projective",
+            "13.2 La borne de Tsirelson et l'intrication",
+            "13.3 Le spin 1/2",
+            "13.4 Les paradoxes comme amputation instrumentale",
+            "13.5 La gestion administrative de l'irrationnel",
+            "13.6 Les deux cycles originaux et la forme projective",
+            "13.7 Coda du Livre III"
+          ]
+        },
+        {
+          "titre": "Annexe A : Table des énoncés",
+          "fichier": "15-annexe-a-table-des-enonces.html",
+          "sections": []
+        },
+        {
+          "titre": "Annexe B : Retraits et corrections",
+          "fichier": "16-annexe-b-retraits-et-corrections.html",
+          "sections": [
+            "B.1 Corrections de calcul",
+            "B.2 Rétrogradations de statut",
+            "B.3 Passages non reproduits, conformément aux règles du corpus"
+          ]
+        },
+        {
+          "titre": "Annexe C : Sources fusionnées",
+          "fichier": "17-annexe-c-sources-fusionnees.html",
+          "sections": []
+        },
+        {
+          "titre": "Annexe D : Vérifications refaites",
+          "fichier": "18-annexe-d-verifications-refaites.html",
+          "sections": []
+        }
+      ],
+      "version": "1.0",
+      "date": "2026-10"
+    },
+    {
+      "id": "V03_Le_Code_et_le_Registre",
+      "numero": 3,
+      "slug": "v03-le-code-et-le-registre",
+      "titre": "Le Code et le Registre",
+      "sous_titre": "Ce qui se refait au crayon, et ce que le système expose dans la science établie",
+      "resume_fr": "Trois parties. Le Code : deux pages que n'importe qui peut refaire avec la table de multiplication de 1 à 9, le noyau arithmétique au crayon, l'audit du corpus par lui-même et douze exercices corrigés ; chaque démonstration y est donnée en quatre temps (le reçu, le crayon, ce que le crayon établit, ce qu'il n'établit pas). Le Registre des Erreurs : cent soixante entrées (R.1 à R.160), chacune avec sa ligne de coût et son adresse, et cinquante-huit gravures (G.1 à G.58) où le corpus garde au dossier ses propres inscriptions faites trop tôt, avec leur correction. Le chaos fabriqué : la formule du chaos et ses trois formes, la fabrication du chaos par l'outil, la fin de l'approximation, le principe de complétude, douze cas datés de données contaminées et le prix de la vitesse.",
+      "abstract_en": "Three parts. The Code: two pages anyone can redo with the 1 to 9 multiplication table, the arithmetic core by pencil, the corpus auditing itself, and twelve worked exercises; each proof is given in four steps (the receipt, the pencil, what the pencil establishes, what it does not). The Register of Errors: one hundred and sixty entries (R.1 to R.160), each with its cost line and its address, and fifty-eight engravings (G.1 to G.58) in which the corpus keeps on record its own claims made too early, with their correction. Manufactured chaos: the formula of chaos and its three forms, chaos produced by the tool, the end of approximation, the completeness principle, twelve dated cases of data contaminated by the instrument, and the price of speed.",
+      "mots_cles_fr": [
+        "registre des erreurs",
+        "table de multiplication",
+        "audit",
+        "chaos",
+        "approximation",
+        "troncature décimale",
+        "complétude"
+      ],
+      "keywords_en": [
+        "register of errors",
+        "multiplication table",
+        "self-audit",
+        "chaos",
+        "approximation",
+        "decimal truncation",
+        "completeness"
+      ],
+      "pages": 201,
+      "mots": 88618,
+      "pdf": "pdf/ARC_Volume_03_le_code_et_le_registre.pdf",
+      "html": "volumes/v03-le-code-et-le-registre/index.html",
+      "chapitres": [
+        {
+          "titre": "Avant-propos",
+          "fichier": "01-avant-propos.html",
+          "sections": []
+        },
+        {
+          "titre": "Partie I. Le Code",
+          "fichier": "02-partie-i-le-code.html",
+          "sections": []
+        },
+        {
+          "titre": "Chapitre 1. Les Tables natives : deux pages à refaire au crayon",
+          "fichier": "03-chapitre-1-les-tables-natives-deux-pages-a-refaire.html",
+          "sections": [
+            "Recto. Les tables natives",
+            "Verso. Le centre vide"
+          ]
+        },
+        {
+          "titre": "Chapitre 2. Le Code : le noyau, au crayon",
+          "fichier": "04-chapitre-2-le-code-le-noyau-au-crayon.html",
+          "sections": [
+            "Le verdict du Code, en trois phrases",
+            "0. Mode d'emploi",
+            "I.1 Neuf chiffres, une involution",
+            "I.2 La racine digitale",
+            "I.3 Les premiers et la grille 6k ± 1",
+            "I.4 Le rythme 24",
+            "I.5 La loi des miroirs",
+            "I.6 Deux cercles et un carré",
+            "I.7 Le demi"
+          ]
+        },
+        {
+          "titre": "Chapitre 3. Les gestes historiques et leurs résolutions au crayon",
+          "fichier": "05-chapitre-3-les-gestes-historiques-et-leurs-resolut.html",
+          "sections": [
+            "II.1 Hippase, vers 500 avant notre ère : la diagonale",
+            "II.2 Stevin, 1585 : l'imprécision qui s'amplifie",
+            "II.3 Gauss, 1801 : le repliement 9 = 0",
+            "II.4 Le repliement, la dilatation et la divergence",
+            "II.5 Newton, Leibniz : l'intégrale et le facteur ½ × ⅔",
+            "II.6 Gauss et la divergence",
+            "II.7 π et 22/7",
+            "II.8 Tsirelson, 2√2",
+            "II.9 Le moment magnétique du muon et la constante α"
+          ]
+        },
+        {
+          "titre": "Chapitre 4. L'audit contradictoire : le corpus se lit lui-même",
+          "fichier": "06-chapitre-4-l-audit-contradictoire-le-corpus-se-lit.html",
+          "sections": [
+            "III.1 Ce qui tient",
+            "III.2 Sept points où la lecture dépasse le crayon",
+            "III.3 Contradictions internes à régler",
+            "III.4 Sur l'unanimité des modèles de langage",
+            "III.5 Ce qui trancherait : les reçus à poser avant le prochain événement",
+            "IV.2 Quatre gestes concrets",
+            "IV.3 Ce que le Code ne prétend pas"
+          ]
+        },
+        {
+          "titre": "Chapitre 5. Du papier au monde : douze exercices pour un lecteur extérieur",
+          "fichier": "07-chapitre-5-du-papier-au-monde-douze-exercices-pour.html",
+          "sections": [
+            "Les énoncés",
+            "Les solutions"
+          ]
+        },
+        {
+          "titre": "Partie II. Le Registre des Erreurs",
+          "fichier": "08-partie-ii-le-registre-des-erreurs.html",
+          "sections": []
+        },
+        {
+          "titre": "Chapitre 6. Le Registre : ce qu'il est et comment le lire",
+          "fichier": "09-chapitre-6-le-registre-ce-qu-il-est-et-comment-le.html",
+          "sections": [
+            "R.0 Mode d'emploi",
+            "Les dix gestes"
+          ]
+        },
+        {
+          "titre": "Chapitre 7. Le nombre, sa clôture, la grandeur et sa mesure (familles A et B, R.1 à R.39)",
+          "fichier": "10-chapitre-7-le-nombre-sa-cloture-la-grandeur-et-sa.html",
+          "sections": [
+            "Famille A. Le nombre et sa clôture",
+            "Famille B. La grandeur et sa mesure"
+          ]
+        },
+        {
+          "titre": "Chapitre 8. Le continu, le mouvement et la séparation (familles C et D, R.40 à R.68)",
+          "fichier": "11-chapitre-8-le-continu-le-mouvement-et-la-separatio.html",
+          "sections": [
+            "Famille C. Le continu et le mouvement",
+            "Famille D. La séparation"
+          ]
+        },
+        {
+          "titre": "Chapitre 9. Le quantum, la matière et le cosmos (familles E et F, R.69 à R.109)",
+          "fichier": "12-chapitre-9-le-quantum-la-matiere-et-le-cosmos-fami.html",
+          "sections": [
+            "Famille E. Le quantum",
+            "Famille F. La matière et le cosmos"
+          ]
+        },
+        {
+          "titre": "Chapitre 10. Le vivant, les nombres premiers, l'esprit et la société (familles G à J, R.110 à R.148)",
+          "fichier": "13-chapitre-10-le-vivant-les-nombres-premiers-l-espri.html",
+          "sections": [
+            "Famille G. Le vivant",
+            "Famille H. Les nombres premiers et les énigmes",
+            "Famille I. L'esprit",
+            "Famille J. La société et ses instruments"
+          ]
+        },
+        {
+          "titre": "Chapitre 11. Les entrées d'octobre 2026 (familles K, L et M, R.149 à R.160)",
+          "fichier": "14-chapitre-11-les-entrees-d-octobre-2026-familles-k.html",
+          "sections": [
+            "Famille K. Le 3 octobre 2026",
+            "Famille L. Les 4 et 5 octobre 2026",
+            "Famille M. Le 8 octobre 2026"
+          ]
+        },
+        {
+          "titre": "Chapitre 12. Le Registre tourné vers lui-même : les gravures faites trop tôt (G.1 à G.58)",
+          "fichier": "15-chapitre-12-le-registre-tourne-vers-lui-meme-les-g.html",
+          "sections": [
+            "II.A Géométrie et constantes",
+            "II.B Physique",
+            "II.C Nombres",
+            "II.D Esprit et société",
+            "II.E Les gravures du 3 octobre 2026",
+            "II.F Les gravures du Code (4 octobre 2026)",
+            "II.G Les gravures du 5 octobre 2026"
+          ]
+        },
+        {
+          "titre": "Chapitre 13. Ce que le Registre ne contient pas, et ce qu'il tient ouvert",
+          "fichier": "16-chapitre-13-ce-que-le-registre-ne-contient-pas-et.html",
+          "sections": [
+            "La résolution des adresses"
+          ]
+        },
+        {
+          "titre": "Partie III. Le chaos fabriqué",
+          "fichier": "17-partie-iii-le-chaos-fabrique.html",
+          "sections": []
+        },
+        {
+          "titre": "Chapitre 14. La formule du chaos",
+          "fichier": "18-chapitre-14-la-formule-du-chaos.html",
+          "sections": [
+            "14.1 Le malentendu fondateur",
+            "14.2 Le partage : Stevin nécessaire, Gauss accélérateur",
+            "14.3 La preuve par l'arithmétique exacte",
+            "14.4 La formule et ses trois formes",
+            "14.5 Le seuil et la loi mémoire contre chaos",
+            "14.6 Les ancrages arithmétiques et la note de rigueur",
+            "14.7 La prédiction P1, et son test",
+            "14.8 Trois lectures convergentes",
+            "14.9 Le fil unique, et les deux zéros",
+            "14.10 Ce que la formule démontre, ce qu'elle ne prétend pas",
+            "14.11 La proposition méthodologique, posée comme falsifiable"
+          ]
+        },
+        {
+          "titre": "Chapitre 15. Le Chaos Fabriqué : la charpente du livre",
+          "fichier": "19-chapitre-15-le-chaos-fabrique-la-charpente-du-livr.html",
+          "sections": [
+            "15.1 La thèse du livre",
+            "15.2 Partie I. La lignée des amputations (l'histoire, onze chapitres)",
+            "15.3 Partie II. Les trois formules du chaos (le mécanisme, deux chapitres)",
+            "15.4 Partie III. Le monde de 6 (la structure qui n'oublie rien, trois chapitres)",
+            "15.5 Partie IV. Les murs et la beauté (la thèse, deux chapitres)",
+            "15.6 Annexes prévues et ordre de fondation"
+          ]
+        },
+        {
+          "titre": "Chapitre 16. La fabrication anthropogénique du chaos : quinze ruptures",
+          "fichier": "20-chapitre-16-la-fabrication-anthropogenique-du-chao.html",
+          "sections": [
+            "16.1 Résumé et thèse",
+            "16.2 La cascade fondatrice (1585 à 1801)",
+            "16.3 La seconde vague (1859 à nos jours)",
+            "16.4 Ce qui a été oublié",
+            "16.5 La restauration",
+            "16.6 Falsifiabilité",
+            "16.7 Conclusion de la pièce"
+          ]
+        },
+        {
+          "titre": "Chapitre 17. La fin de l'approximation",
+          "fichier": "21-chapitre-17-la-fin-de-l-approximation.html",
+          "sections": [
+            "17.1 Le socle : le cadastre {1, ..., 9}, base géométrique invariante",
+            "17.2 La lignée et les trois formules",
+            "17.3 Le grain de sable",
+            "17.4 La dérivée résolue : la soustraction trinitaire",
+            "17.5 L'intégrale résolue : la projection autour de 4,5",
+            "17.6 La portée cosmique : 163 − 137 = 26, le fer",
+            "17.7 Les verrous : quatre objections fermées",
+            "17.8 Hypothèses falsifiables, une par thèse"
+          ]
+        },
+        {
+          "titre": "Chapitre 18. Le principe de complétude : le statut des décimales qui ne finissent pas",
+          "fichier": "22-chapitre-18-le-principe-de-completude-le-statut-de.html",
+          "sections": [
+            "18.1 Les trois types de décimales",
+            "18.2 Les neuf grandeurs à un chiffre, antérieures à toute base",
+            "18.3 Les six crimes (1585 à 1872)",
+            "18.4 L'Axiome A5 et ses deux portes",
+            "18.5 Les restaurations : démasquer les constantes",
+            "18.6 La question que personne ne pose",
+            "18.7 Falsifiabilité",
+            "18.8 Conclusion de la pièce"
+          ]
+        },
+        {
+          "titre": "Chapitre 19. Les données contaminées : douze cas datés",
+          "fichier": "23-chapitre-19-les-donnees-contaminees-douze-cas-date.html",
+          "sections": [
+            "19.1 Stevin : la troncature",
+            "19.2 Gauss : le pli qui jette les tours",
+            "19.3 Le pli sur les mots",
+            "19.4 Ce que ces douze cas disent",
+            "19.5 Le chantier L-1 : Lorenz en exact"
+          ]
+        },
+        {
+          "titre": "Chapitre 20. Vous avez raison : quelque chose cloche, et voici où ça a commencé",
+          "fichier": "24-chapitre-20-vous-avez-raison-quelque-chose-cloche.html",
+          "sections": [
+            "20.1 Ouverture : trois scènes, une colonne",
+            "20.2 L'enfant : le trouble apparaît à la porte de l'école",
+            "20.3 Où ça part vraiment : la chaîne, datée",
+            "20.4 La démonstration que n'importe qui peut refaire",
+            "20.5 L'alternative : ce que ça donne quand on remet le neuf",
+            "20.6 Pourquoi tout ça est arrivé",
+            "20.7 Ce qu'on a acheté, et avec quoi on l'a payé",
+            "20.8 Les factures qui arrivent aujourd'hui",
+            "20.9 La même erreur, à trois échelles",
+            "20.10 Ce qui manque, et qui n'est pas une pilule",
+            "20.11 Les annexes de la pièce"
+          ]
+        },
+        {
+          "titre": "Chapitre 21. Le prix de la vitesse : un crime et trois transactions",
+          "fichier": "25-chapitre-21-le-prix-de-la-vitesse-un-crime-et-troi.html",
+          "sections": [
+            "21.1 Le crime fondateur : Hippase, ou le régime de peur",
+            "21.2 Première transaction : Stevin (1585), la décimale contre la relation",
+            "21.3 Deuxième transaction : Gauss (1801), le reste contre le rang",
+            "21.4 Troisième transaction : Copenhague (1927), la machine contre la phase",
+            "21.5 La loi du dossier : le pli impayé",
+            "21.6 L'industrialisation : quand la vitesse devient architecture",
+            "21.7 Le retour du créancier : 2√2",
+            "21.8 Statut épistémique et falsification"
+          ]
+        },
+        {
+          "titre": "Chapitre 22. Le Chaos Fabriqué, Partie I : la lignée des amputations",
+          "fichier": "26-chapitre-22-le-chaos-fabrique-partie-i-la-lignee-des-amputatio.html",
+          "sections": [
+            "Ouverture. Un procès, pas un réquisitoire",
+            "Chapitre 1. Aristote, le pourquoi couronné",
+            "Chapitre 2. Pythagore et Hippase, le terme sans sa relation",
+            "Chapitre 3. Euclide, la garde qui aurait pu être",
+            "Chapitre 4. Brahmagupta, le zéro comme habitant",
+            "Chapitre 5. Viète, la lettre qui remplace la position",
+            "Chapitre 6. Stevin, la décimale d’exil",
+            "Chapitre 7. Descartes, la figure devenue équation",
+            "Chapitre 8. Newton et Leibniz, le fantôme infinitésimal, sans le vouloir",
+            "Chapitre 9. Gauss, la clôture prise pour rien",
+            "Chapitre 11. Darwin, la position tirée au sort",
+            "Chapitre 12. Copenhague, le résidu couronné nature",
+            "Ce que la lignée dit d’un seul trait",
+            "Annexes"
+          ]
+        },
+        {
+          "titre": "Chapitre 23. Le Pont de l’illusion : le tiers imposé et la table des ponts",
+          "fichier": "27-chapitre-23-le-pont-de-l-illusion-le-tiers-impose-et-la-table.html",
+          "sections": [
+            "0. Statuts et conventions",
+            "1. La base, pour le lecteur qui découvre",
+            "2. Le mécanisme en quatre pas",
+            "3. Élisabeth, ou la question posée avant le pont",
+            "4. La table des ponts",
+            "5. La signature commune, et ce qui la distingue d’un tiers libéré",
+            "6. La cicatrice la plus nette : la force rendue à la contrainte",
+            "7. Conclusion, et le critère de chute",
+            "Annexes"
+          ]
+        },
+        {
+          "titre": "Annexe A. Table des énoncés",
+          "fichier": "28-annexe-a-table-des-enonces.html",
+          "sections": []
+        },
+        {
+          "titre": "Annexe B. Retraits et corrections",
+          "fichier": "29-annexe-b-retraits-et-corrections.html",
+          "sections": [
+            "B.1 Calculs qui ne se reproduisent pas (Retiré)",
+            "B.2 Énoncés corrigés par le calcul",
+            "B.3 Énoncés rétrogradés (un « théorème » sans calcul fini)",
+            "B.4 Tension non conciliée, inscrite Chantier",
+            "B.5 Figures de style signalées",
+            "B.6 Retouches de forme imposées par les règles du corpus",
+            "B.7 Ce qui n'a pas été versé",
+            "B.8 Statuts alignés sur les autres volumes (15 octobre 2026)"
+          ]
+        },
+        {
+          "titre": "Annexe C. Sources fusionnées",
+          "fichier": "30-annexe-c-sources-fusionnees.html",
+          "sections": []
+        },
+        {
+          "titre": "Annexe D. Vérifications refaites",
+          "fichier": "31-annexe-d-verifications-refaites.html",
+          "sections": []
+        }
+      ],
+      "version": "1.0",
+      "date": "2026-10"
+    },
+    {
+      "id": "V04_La_Theorie_des_Nombres",
+      "numero": 4,
+      "slug": "v04-la-theorie-des-nombres",
+      "titre": "La Théorie des Nombres",
+      "sous_titre": "Les premiers jamais cachés, les nombres en mouvement, et les nombres qui se souviennent",
+      "resume_fr": "Toute la théorie des nombres du corpus ARC en un livre. La position des nombres premiers sur la grille 6k ± 1 qui s'engendre d'elle-même, et la delfine : le nom que le corpus donne au composé de la grille, un descendant et non un déchet, exactement énuméré par quatre familles k = 6ab ± a ± b, de sorte que la grille est exactement l'union des premiers et des delfines. Puis le rythme des carrés et le 24, les jumeaux et les deux réseaux. La conjecture de Collatz et celle de Goldbach suivies dans le cadastre, avec la frontière exacte de ce que le cadastre peut et ne peut pas en dire. Le nombre plus que parfait, la cascade et la cloche, les nombres qui se souviennent, l'énigme 196, le 1729 et la cinquième paire. Les théorèmes gardent leur numéro d'origine (Théorèmes 1 à 41 des Tomes I et II), les prédictions leur critère d'échec. Les démonstrations sont courtes : c'est une thèse du volume que, la fermeture du cycle une fois rétablie, beaucoup de mystères se démontrent en deux lignes.",
+      "abstract_en": "The whole number theory of the ARC corpus in one book. The position of primes on the self-generating 6k ± 1 grid, and the delfine: the corpus's name for a composite of the grid, a descendant rather than a reject, exactly enumerated by four families k = 6ab ± a ± b, so that the grid is exactly the union of primes and delfines. Then the rhythm of squares and the number 24, twin primes and the two lattices. The Collatz and Goldbach conjectures followed through the cadastre, with the exact boundary of what the cadastre can and cannot say about them. The more-than-perfect number, the cascade and the bell, numbers that remember, the 196 puzzle, 1729 and the fifth pair. Theorems keep their original numbers (Theorems 1 to 41 of Tomes I and II), predictions keep their failure criterion. Proofs are short: one thesis of the volume is that once the closure of the cycle is restored, many mysteries are proved in two lines.",
+      "mots_cles_fr": [
+        "delfine",
+        "nombres premiers",
+        "grille 6k ± 1",
+        "Collatz",
+        "Goldbach",
+        "nombres parfaits",
+        "nombres jumeaux",
+        "racine digitale",
+        "24"
+      ],
+      "keywords_en": [
+        "delfine",
+        "prime numbers",
+        "6k ± 1 grid",
+        "Collatz conjecture",
+        "Goldbach conjecture",
+        "perfect numbers",
+        "twin primes",
+        "digital root"
+      ],
+      "pages": 166,
+      "mots": 73447,
+      "pdf": "pdf/ARC_Volume_04_la_theorie_des_nombres.pdf",
+      "html": "volumes/v04-la-theorie-des-nombres/index.html",
+      "chapitres": [
+        {
+          "titre": "Avant-propos",
+          "fichier": "01-avant-propos.html",
+          "sections": []
+        },
+        {
+          "titre": "Partie I. La feuille et le cadastre",
+          "fichier": "02-partie-i-la-feuille-et-le-cadastre.html",
+          "sections": []
+        },
+        {
+          "titre": "Chapitre 1. La feuille 1 à 30 : le document de genèse",
+          "fichier": "03-chapitre-1-la-feuille-1-a-30-le-document-de-genese.html",
+          "sections": [
+            "1.1 Le protocole",
+            "1.2 Les deux observations fondatrices",
+            "1.3 Le témoin anatomique : les deux mains face à face",
+            "1.4 La prédiction pédagogique",
+            "1.5 Généalogie de l'aveuglement : trois strates datables",
+            "1.6 Ce qui est connu, ce qui est revendiqué",
+            "1.7 La planche"
+          ]
+        },
+        {
+          "titre": "Chapitre 2. Le cadastre : neuf positions, une involution, deux rails et un axe",
+          "fichier": "04-chapitre-2-le-cadastre-neuf-positions-une-involuti.html",
+          "sections": [
+            "2.1 Définition du cadastre",
+            "2.2 La table des inversions : la démonstration originelle du ½",
+            "2.3 La table maîtresse du cadastre",
+            "2.4 Le pavé tordu : l'axe collecte toutes les sommes",
+            "2.5 La paire d'inversions : le 4 et le 5",
+            "2.6 L'antériorité du cadastre : l'Axiome A0 et l'invariance de base"
+          ]
+        },
+        {
+          "titre": "Partie II. Les premiers jamais cachés",
+          "fichier": "05-partie-ii-les-premiers-jamais-caches.html",
+          "sections": []
+        },
+        {
+          "titre": "Chapitre 3. La grille qui s'engendre et les quatre familles",
+          "fichier": "06-chapitre-3-la-grille-qui-s-engendre-et-les-quatre.html",
+          "sections": [
+            "3.1 La grille, les paires, les delfines",
+            "3.2 Théorème 1 : l'auto-génération de la grille",
+            "3.3 Théorème 2 : les quatre familles épuisent les delfines",
+            "3.4 Théorème 3 : le premier comme naissance par soustraction de familles",
+            "3.5 Théorème 4 : la décision au point d'équilibre"
+          ]
+        },
+        {
+          "titre": "Chapitre 4. Les carrés de premiers : le rythme 24 et la chrysalide",
+          "fichier": "07-chapitre-4-les-carres-de-premiers-le-rythme-24-et.html",
+          "sections": [
+            "4.1 Théorème 5 : le rythme 24",
+            "4.2 Théorème 6 : la chrysalide"
+          ]
+        },
+        {
+          "titre": "Chapitre 5. Les jumeaux : le prédicat J(k) et la dynamique des ondes",
+          "fichier": "08-chapitre-5-les-jumeaux-le-predicat-j-k-et-la-dynam.html",
+          "sections": [
+            "5.1 Théorème 7 : la caractérisation exacte des jumeaux",
+            "5.2 Théorème 8 : la disjonction des rails",
+            "5.3 La dynamique ondulatoire : l'état exact du chantier d'infinitude"
+          ]
+        },
+        {
+          "titre": "Chapitre 6. Le registre : la fonction successeur, le pointage avant, le pliage φ, le joint et les engrenages",
+          "fichier": "09-chapitre-6-le-registre-la-fonction-successeur-le-p.html",
+          "sections": [
+            "6.1 Théorème 11 : la fonction successeur",
+            "6.2 Théorème 12 : la machine à pointage avant",
+            "6.3 Théorème 13 : le saut d'étage et le pliage φ du registre",
+            "6.4 Théorème 14 : le joint des paires et la clef de voûte du registre",
+            "6.5 Le système d'équations d'état du registre",
+            "6.6 Théorèmes 15 et 16 : le pont et les engrenages"
+          ]
+        },
+        {
+          "titre": "Chapitre 7. L'invariant Root-9, Riemann en résumé, et la synthèse du Tome I",
+          "fichier": "10-chapitre-7-l-invariant-root-9-riemann-en-resume-et.html",
+          "sections": [
+            "7.1 Théorème 10 : l'invariant Root-9 des inverses",
+            "7.2 Théorème 9 : la correspondance entre l'involution et l'équation fonctionnelle",
+            "7.3 Le monstre amnésique : la critique de l'édifice riemannien, en résumé",
+            "7.4 Le principe d'incarnation",
+            "7.5 Le test de la queue de Stevin",
+            "7.6 Synthèse du Tome I"
+          ]
+        },
+        {
+          "titre": "Partie III. Collatz : les nombres en mouvement",
+          "fichier": "11-partie-iii-collatz-les-nombres-en-mouvement.html",
+          "sections": []
+        },
+        {
+          "titre": "Chapitre 8. Collatz dans le cadastre : la compression, la rotation, et l'étrangeté des deux briques",
+          "fichier": "12-chapitre-8-collatz-dans-le-cadastre-la-compression.html",
+          "sections": [
+            "8.1 La compression et l'absorption : Théorème 17",
+            "8.2 La rotation des moitiés : Théorème 18",
+            "8.3 L'attracteur (1, 8) et le canal de la racine digitale",
+            "8.4 L'erratum du 8 juillet 2026 : ce qui est retiré, et pourquoi",
+            "8.5 Ce qui survit : la dichotomie du quart et les chaînes de croissance",
+            "8.6 Théorème 23 : l'étrangeté des deux briques",
+            "8.7 Les critères de falsification du dossier"
+          ]
+        },
+        {
+          "titre": "Chapitre 9. Le +1 qui rend le demi, le bilan exact des deux briques, la porte 8",
+          "fichier": "13-chapitre-9-le-1-qui-rend-le-demi-le-bilan-exact-de.html",
+          "sections": [
+            "9.1 Théorème 24 : le +1 rend la moitié amputée",
+            "9.2 Théorème 25 : le bilan exact des deux briques",
+            "9.3 Théorème 26 : la porte 8 au niveau entier",
+            "9.4 Lecture 27 : la signature du 7",
+            "9.5 Les corrections à la version 2.1 du dossier Collatz",
+            "9.6 Lecture 28 : le pont entre le Théorème 23 et le théorème d'amorphisme",
+            "9.7 La racine est le nombre, et la nouveauté libère"
+          ]
+        },
+        {
+          "titre": "Chapitre 10. La rencontre du miroir, la corde de Collatz et la spirale",
+          "fichier": "14-chapitre-10-la-rencontre-du-miroir-la-corde-de-col.html",
+          "sections": [
+            "10.1 Théorème 29 : la rencontre du miroir",
+            "10.2 Théorème 37 : la corde de Collatz",
+            "10.3 Lecture 35 : la spirale, le cercle est la projection, le +1 est la hauteur",
+            "10.4 Lecture 36 : 46 et 64, les deux mains",
+            "10.5 Lecture 38 : le retour est une donnée, la preuve une invention",
+            "10.6 Ce qui reste ouvert"
+          ]
+        },
+        {
+          "titre": "Partie IV. Goldbach",
+          "fichier": "15-partie-iv-goldbach.html",
+          "sections": []
+        },
+        {
+          "titre": "Chapitre 11. Goldbach comme partition cadastrale",
+          "fichier": "16-chapitre-11-goldbach-comme-partition-cadastrale.html",
+          "sections": [
+            "11.1 Les trois problèmes et les trois canaux (version 1.0)",
+            "11.2 Théorème 30 : le tiers et les deux tiers autour du centre vide",
+            "11.3 Théorème 31 : le crible est un miroir",
+            "11.4 Théorème 32 : les engrenages, et où vit le gap",
+            "11.5 Lecture 33 : la déviation est bornée et décroît",
+            "11.6 Lecture 34 : la maison, premier identifiant"
+          ]
+        },
+        {
+          "titre": "Partie V. Les ajouts de la version 0.5",
+          "fichier": "17-partie-v-les-ajouts-de-la-version-0-5.html",
+          "sections": []
+        },
+        {
+          "titre": "Chapitre 12. L'amplitude des battements, le produit de cascades, les quatre moments",
+          "fichier": "18-chapitre-12-l-amplitude-des-battements-le-produit.html",
+          "sections": [
+            "12.1 Théorème 39 : l'amplitude des battements, en formule fermée",
+            "12.2 Théorème 40 : le produit de cascades, avec ses retenues",
+            "12.3 Théorème 41 : lire séparément les quatre paires",
+            "12.4 Les errata lexicaux de la version 0.4"
+          ]
+        },
+        {
+          "titre": "Partie VI. Le 24 et ses voisins",
+          "fichier": "19-partie-vi-le-24-et-ses-voisins.html",
+          "sections": []
+        },
+        {
+          "titre": "Chapitre 13. Le nombre plus que parfait : 24, son milieu, son miroir et sa couche",
+          "fichier": "20-chapitre-13-le-nombre-plus-que-parfait-24-son-mili.html",
+          "sections": [
+            "13.1 L'identité centrale, et son unicité",
+            "13.2 Le pliage porte l'axe entier",
+            "13.3 L'arrivée est le carré du premier parfait",
+            "13.4 Les jumeaux et le déterminisme",
+            "13.5 Ce que 24 est déjà, ailleurs dans le corpus",
+            "13.6 Les deux marches de l'interface",
+            "13.7 La matière : le demi-remplissage et la couche pleine",
+            "13.8 Les trois paires miroirs, et le test qui échoue",
+            "13.9 Le chantier lu (7 octobre 2026)",
+            "13.10 Ce que ce chapitre ne dit pas"
+          ]
+        },
+        {
+          "titre": "Chapitre 14. Les jumeaux et les deux réseaux : pourquoi 5 et 7 reviennent",
+          "fichier": "21-chapitre-14-les-jumeaux-et-les-deux-reseaux-pourqu.html",
+          "sections": [
+            "14.1 Les jumeaux sont les têtes des deux rails",
+            "14.2 Le plan ne tourne que de deux façons : 4 et 6",
+            "14.3 Chaque premier choisit son réseau, et les jumeaux choisissent l'autre",
+            "14.4 Les cinq solides et l'identité de 24",
+            "14.5 Les nombres qui portent leur Fibonacci",
+            "14.6 Où la nature compte : les cristaux, et le jumeau interdit",
+            "14.7 Ce que ce chapitre ne dit pas, et le reçu qu'il demande"
+          ]
+        },
+        {
+          "titre": "Chapitre 15. La cascade cadastrale et la spirale du soleil",
+          "fichier": "22-chapitre-15-la-cascade-cadastrale-et-la-spirale-du.html",
+          "sections": [
+            "15.1 La cascade : une descente qui garde la mémoire",
+            "15.2 Trois propriétés",
+            "15.3 La spirale du soleil",
+            "15.4 La cascade révèle l'opérateur",
+            "15.5 Ancrage : ce que la cascade rejoint",
+            "15.6 Délimitation : le connu, le neuf, l'ouvert"
+          ]
+        },
+        {
+          "titre": "Chapitre 16. La cascade et la cloche : Huygens, le cercle de six, et la cloche gardée comme compte",
+          "fichier": "23-chapitre-16-la-cascade-et-la-cloche-huygens-le-cer.html",
+          "sections": [
+            "16.1 Recto : Huygens",
+            "16.2 Verso : le cercle de six et la cascade",
+            "16.3 Le bord restitue tout",
+            "16.4 XXXX donne 9 − X, en une ligne",
+            "16.5 L'octet et l'axe",
+            "16.6 Le partage, en une phrase"
+          ]
+        },
+        {
+          "titre": "Partie VII. Les nombres qui se souviennent",
+          "fichier": "24-partie-vii-les-nombres-qui-se-souviennent.html",
+          "sections": []
+        },
+        {
+          "titre": "Chapitre 17. Les nombres qui se souviennent : Kaprekar et l'arithmétique de la mémoire",
+          "fichier": "25-chapitre-17-les-nombres-qui-se-souviennent-kapreka.html",
+          "sections": [
+            "17.1 Le théorème des deux étages",
+            "17.2 Le théorème des paires : la queue partagée",
+            "17.3 La génération par les purs-neufs",
+            "17.4 142857, le cycle qui se souvient de lui-même",
+            "17.5 Les sommes du cadastre à toute profondeur",
+            "17.6 Le triptyque fermé"
+          ]
+        },
+        {
+          "titre": "Chapitre 18. L'énigme 196 : pourquoi un nombre ne ferme jamais",
+          "fichier": "26-chapitre-18-l-enigme-196-pourquoi-un-nombre-ne-fer.html",
+          "sections": [
+            "18.1 Les deux échafaudages : le 9 à la différence, le 11 à la somme",
+            "18.2 Le doublement de la racine : le cycle 142857",
+            "18.3 Les fugitifs à trois chiffres : un fil, cinq portes",
+            "18.4 Le mécanisme de la fuite : la retenue perpétuelle",
+            "18.5 Le demi manquant : 49, 49,5, 50",
+            "18.6 Le dipôle complet",
+            "18.7 Le statut épistémique"
+          ]
+        },
+        {
+          "titre": "Chapitre 19. 198, 496, 1729 et le pont fractal : l'illusion des mathématiques récréatives",
+          "fichier": "27-chapitre-19-198-496-1729-et-le-pont-fractal-l-illu.html",
+          "sections": [
+            "19.1 La loi algébrique des miroirs",
+            "19.2 Les deux pavés",
+            "19.3 La généalogie depuis les fondateurs",
+            "19.4 496 et la théorie des cordes",
+            "19.5 1729, produit intérieur de 198",
+            "19.6 Le rythme des carrés, la descente ferromagnétique, les polyèdres",
+            "19.7 137, 361 et les dimensions des cordes",
+            "19.8 Le pont fractal : de la biologie à la physique par l'insertion du 9",
+            "19.9 Les prédictions du pont fractal",
+            "19.10 Ce que ces deux articles disent, et ce qu'ils ne disent pas",
+            "19.11 Relectures du cadastre : le cube, Fermat, Mersenne, Fibonacci et 495"
+          ]
+        },
+        {
+          "titre": "Partie VIII. La cinquième paire",
+          "fichier": "28-partie-viii-la-cinquieme-paire.html",
+          "sections": []
+        },
+        {
+          "titre": "Chapitre 20. La cinquième paire : le noyau et l'infini comme partenaires d'involution",
+          "fichier": "29-chapitre-20-la-cinquieme-paire-le-noyau-et-l-infin.html",
+          "sections": [
+            "20.1 Le nombre à deux regards : inscrit et circonscrit",
+            "20.2 L'asymétrie des deux regards",
+            "20.3 Le centre vide comme moteur",
+            "20.4 La cinquième paire : le noyau et l'infini",
+            "20.5 Le théorème d'annexion : toute expansion tire l'extérieur vers le dedans",
+            "20.6 La membrane × 9 : le cercle fixe réalisé en arithmétique",
+            "20.7 Le tableau des inversions",
+            "20.8 Lectures unifiées",
+            "20.9 Les critères de falsification",
+            "20.10 La pièce sœur : le temps qui archive"
+          ]
+        },
+        {
+          "titre": "Partie IX. Le Livre II de la Bible Quantique",
+          "fichier": "30-partie-ix-le-livre-ii-de-la-bible-quantique.html",
+          "sections": []
+        },
+        {
+          "titre": "Chapitre 21. Ce que le Livre II de la Bible Quantique apporte",
+          "fichier": "31-chapitre-21-ce-que-le-livre-ii-de-la-bible-quantiq.html",
+          "sections": [
+            "21.1 L'amputation primordiale, à six ans",
+            "21.2 L'horloge à neuf positions, et le zéro",
+            "21.3 Les quatre paires et leurs fonctions",
+            "21.4 L'Axiome A0 et ses trois preuves",
+            "21.5 Les rails multiplicatifs et l'axe régulateur",
+            "21.6 La table de multiplication cadastrale",
+            "21.7 Les chemins du ½",
+            "21.8 Les trois rails comme cycles dynamiques",
+            "21.9 Les triplets miroirs",
+            "21.10 L'auto-réflexion du carré 3 × 3",
+            "21.11 Le triplet secret 578",
+            "21.12 La cascade des quinze ruptures (résumé)",
+            "Coda"
+          ]
+        },
+        {
+          "titre": "Chapitre 22. La congruence des paires : le mod qui garde les inverses",
+          "fichier": "32-chapitre-22-la-congruence-des-paires-le-mod-qui-garde-les-inve.html",
+          "sections": [
+            "0. Statuts et conventions",
+            "1. Ce que le mod de Gauss jette",
+            "2. La congruence qui garde les paires",
+            "3. Théorème 1 : une seule opération interne",
+            "4. Théorème 2 : la congruence est réalisée par le carré",
+            "5. Théorème 3 : cyclique d’ordre trois",
+            "6. Ce qu’est le vrai mod",
+            "Annexes"
+          ]
+        },
+        {
+          "titre": "Annexe A. Table des énoncés",
+          "fichier": "33-annexe-a-table-des-enonces.html",
+          "sections": []
+        },
+        {
+          "titre": "Annexe B. Retraits et corrections",
+          "fichier": "34-annexe-b-retraits-et-corrections.html",
+          "sections": [
+            "B.1 Retraits datés par les sources",
+            "B.2 Rétrogradations faites pour ce volume",
+            "B.3 Corrections de fait et de formulation",
+            "B.4 Numérotation et forme",
+            "B.5 Formulations corrigées des relectures du 15 octobre 2026"
+          ]
+        },
+        {
+          "titre": "Annexe C. Sources fusionnées",
+          "fichier": "35-annexe-c-sources-fusionnees.html",
+          "sections": []
+        },
+        {
+          "titre": "Annexe D. Vérifications refaites",
+          "fichier": "36-annexe-d-verifications-refaites.html",
+          "sections": []
+        },
+        {
+          "titre": "Colophon",
+          "fichier": "37-colophon.html",
+          "sections": []
+        }
+      ],
+      "version": "1.0",
+      "date": "2026-10"
+    },
+    {
+      "id": "V05_Les_Grands_Problemes",
+      "numero": 5,
+      "slug": "v05-les-grands-problemes",
+      "titre": "Les Grands Problèmes",
+      "sous_titre": "Riemann, P contre NP, Navier-Stokes, Yang-Mills : ce qui leur manque",
+      "resume_fr": "Ce que le corpus ARC a écrit sur quatre des problèmes du prix du millénaire : l'hypothèse de Riemann, P contre NP, la régularité de Navier-Stokes et le gap de masse de Yang-Mills. Une thèse unique : dans ces problèmes, l'obstacle n'est pas dans l'objet, il est fabriqué par la langue dans laquelle on les pose, qui change l'objet en route sans changer son nom. Pour Riemann, le volume part de π, établit que les zéros de ζ ne sont ni ceux de la somme des entiers ni ceux du produit des premiers, donne la lecture propre au corpus (le fini et l'infini mêlés, le zéro non construisible, le produit d'Euler) et date la même marque dans vingt et un gestes de l'histoire des sciences. Les thèses de l'auteur sont des Lectures, déclarées telles ; tout ce qui a été retiré en route est gardé avec sa raison.",
+      "abstract_en": "What the ARC corpus has written on four Millennium Prize problems: the Riemann hypothesis, P versus NP, Navier-Stokes regularity and the Yang-Mills mass gap. One thesis: in these problems the obstacle is not in the object but is produced by the language in which they are stated, which changes the object along the way without changing its name. For Riemann the volume starts from π, shows that the zeros of ζ are neither those of the sum of integers nor those of the product over primes, gives the corpus's own reading (finite and infinite mixed, the non-constructible zero, the Euler product) and dates the same mark in twenty-one moves of the history of science. The author's theses are Readings, declared as such; everything withdrawn along the way is kept with its reason.",
+      "mots_cles_fr": [
+        "hypothèse de Riemann",
+        "P contre NP",
+        "Navier-Stokes",
+        "Yang-Mills",
+        "problèmes du millénaire",
+        "fonction zêta",
+        "produit d'Euler"
+      ],
+      "keywords_en": [
+        "Riemann hypothesis",
+        "P versus NP",
+        "Navier-Stokes",
+        "Yang-Mills mass gap",
+        "Millennium Prize problems",
+        "zeta function",
+        "Euler product"
+      ],
+      "pages": 104,
+      "mots": 46511,
+      "pdf": "pdf/ARC_Volume_05_les_grands_problemes.pdf",
+      "html": "volumes/v05-les-grands-problemes/index.html",
+      "chapitres": [
+        {
+          "titre": "Avant-propos",
+          "fichier": "01-avant-propos.html",
+          "sections": []
+        },
+        {
+          "titre": "Chapitre 1. Ce qui vous manque : la langue qui fabrique l'obstacle",
+          "fichier": "02-chapitre-1-ce-qui-vous-manque-la-langue-qui-fabriq.html",
+          "sections": [
+            "1.1 Deux raisons de résister",
+            "1.2 Les principes",
+            "1.3 Les définitions",
+            "1.4 Les trois problèmes en une grille",
+            "1.5 Ce que la lecture rend à chaque problème",
+            "1.6 Portée et attribution"
+          ]
+        },
+        {
+          "titre": "Chapitre 2. Le premier extrême : π, le rapport sans rapport",
+          "fichier": "03-chapitre-2-le-premier-extreme-le-rapport-sans-rapp.html",
+          "sections": [
+            "2.1 Le mot avoue",
+            "2.2 Les faits reçus",
+            "2.3 Rapport, et pas rapport",
+            "2.4 Le fini et l'infini dans l'écriture de π",
+            "2.5 D'où vient l'infini",
+            "2.6 L'écart a un chemin fermé",
+            "2.7 Le dilemme du rapport",
+            "2.8 Sentir sans être sûr",
+            "2.9 Objections",
+            "2.10 Condition de réfutation",
+            "2.11 Pour un enfant"
+          ]
+        },
+        {
+          "titre": "Chapitre 3. Le second extrême : les zéros de ζ et le théorème d'impossibilité",
+          "fichier": "04-chapitre-3-le-second-extreme-les-zeros-de-et-le-th.html",
+          "sections": [
+            "3.1 Ce qui manque : la distinction des registres",
+            "3.2 Le beurre : là où le produit existe, rien ne s'annule",
+            "3.3 En chaque zéro de la bande, la somme diverge",
+            "3.4 En chaque zéro, le produit ne peut pas valoir zéro",
+            "3.5 Le zéro est l'écart entre le compte et le continu",
+            "3.6 Le théorème d'impossibilité",
+            "3.7 Les portes du prolongement",
+            "3.8 Pourquoi c'était si difficile",
+            "3.9 Les deux lectures du compte des premiers",
+            "3.10 Objections et réponses",
+            "3.11 Conditions de réfutation",
+            "3.12 Portée"
+          ]
+        },
+        {
+          "titre": "Chapitre 4. Le zéro non construisible : le beurre, l'argent du beurre et la fermière",
+          "fichier": "05-chapitre-4-le-zero-non-construisible-le-beurre-l-a.html",
+          "sections": [
+            "4.1 Le zéro d'une paire est au centre",
+            "4.2 Le beurre : avec Euler, rien ne s'annule",
+            "4.3 L'argent du beurre : l'annulation passe par la parité",
+            "4.4 La fermière : la queue de Stevin",
+            "4.5 Au centre, l'inverse et le miroir coïncident",
+            "4.6 Les deux zéros confondus",
+            "4.7 La réplique de l'hôte, et la réponse",
+            "4.8 La face finie de Riemann",
+            "4.9 Sans Gauss : Riemann élève d'Euler",
+            "4.10 Le paradoxe irréconciliable",
+            "4.11 Le dernier témoin",
+            "4.12 Ce que ce chapitre ne dit pas",
+            "4.13 Pour un enfant"
+          ]
+        },
+        {
+          "titre": "Chapitre 5. Le produit d'Euler lu par ARC : les tours, la grille et le 4 orphelin",
+          "fichier": "06-chapitre-5-le-produit-d-euler-lu-par-arc-les-tours.html",
+          "sections": [
+            "5.1 Ce qu'ils écrivent",
+            "5.2 Comment il marche",
+            "5.3 La lecture ARC : le produit garde les tours",
+            "5.4 Retirer un facteur : le crible écrit en produit",
+            "5.5 Pourquoi la clôture compte : le pont vers Riemann",
+            "5.6 Le vide entre la paire",
+            "5.7 Le 4 orphelin",
+            "5.8 La queue de Stevin",
+            "5.9 Deux langues",
+            "5.10 Ce que ce chapitre ne dit pas",
+            "5.11 Pour un enfant"
+          ]
+        },
+        {
+          "titre": "Chapitre 6. Les deux extrêmes et l'entre-deux : vingt et un gestes datés",
+          "fichier": "07-chapitre-6-les-deux-extremes-et-l-entre-deux-vingt.html",
+          "sections": [
+            "6.1 Les deux bornes portent la même marque",
+            "6.2 La carte de l'entre-deux",
+            "6.3 La contre-épreuve",
+            "6.4 L'écriture qui ferme",
+            "6.5 Conditions de réfutation et portée"
+          ]
+        },
+        {
+          "titre": "Chapitre 7. P contre NP (I) : la porte, le circuit et le tiers",
+          "fichier": "08-chapitre-7-p-contre-np-i-la-porte-le-circuit-et-le.html",
+          "sections": [
+            "7.1 Le problème rendu réel",
+            "7.2 La base, pour le lecteur qui découvre ARC",
+            "7.3 Théorème : la porte ET ne rentre pas dans le corps à deux éléments",
+            "7.4 Ce que ce théorème ne dit pas : le contre-exemple",
+            "7.5 Constat : la phrase est un théorème en profondeur bornée",
+            "7.6 Constat : toutes les séparations connues sont forcées",
+            "7.7 Constat : la frontière 2 → 3 est classée",
+            "7.8 Lecture : le tiers payé du dehors",
+            "7.9 Ce qui reste des pièces de mars 2026",
+            "7.10 Chantiers",
+            "7.11 Prédictions préenregistrées",
+            "7.12 Conclusion du dossier de septembre"
+          ]
+        },
+        {
+          "titre": "Chapitre 8. P contre NP (II) : le mur, le compte et le prix",
+          "fichier": "09-chapitre-8-p-contre-np-ii-le-mur-le-compte-et-le-p.html",
+          "sections": [
+            "8.1 Ce qui manque : le tiers",
+            "8.2 Le mur est fait de la séparation",
+            "8.3 Le pseudo-aléatoire est le compte des tours jeté",
+            "8.4 Où la piste s'est perdue",
+            "8.5 Les deux lectures sont les deux chiffres d'un compte",
+            "8.6 Le compte sans l'adresse",
+            "8.7 La largeur",
+            "8.8 La question qui manque : le prix est duel",
+            "8.9 La loi du cadre",
+            "8.10 Pourquoi c'était si difficile",
+            "8.11 Objections et réponses",
+            "8.12 Conditions de réfutation",
+            "8.13 Portée"
+          ]
+        },
+        {
+          "titre": "Chapitre 9. Navier-Stokes : le fluide forcé se brise",
+          "fichier": "10-chapitre-9-navier-stokes-le-fluide-force-se-brise.html",
+          "sections": [
+            "9.1 Le problème",
+            "9.2 Le fait daté : la brisure forcée",
+            "9.3 Ce qui est retiré, en une phrase par ligne",
+            "9.4 Ce qui survit, et ce qui est promu : le demi relu comme la porte",
+            "9.5 Le temps de Navier-Stokes pèse deux longueurs",
+            "9.6 Le pivot et la constante k_arc",
+            "9.7 La relecture : la spirale, et l'eau qui respecte sa création",
+            "9.8 La Prédiction P-NS-1 : le fluide libre",
+            "9.9 La Prédiction spectrale",
+            "9.10 Lectures de mars conservées comme Lectures",
+            "9.11 Conclusion"
+          ]
+        },
+        {
+          "titre": "Chapitre 10. Yang-Mills : le gap comme non-fermeture",
+          "fichier": "11-chapitre-10-yang-mills-le-gap-comme-non-fermeture.html",
+          "sections": [
+            "10.1 Le problème, et ce que le corpus ne fait pas",
+            "10.2 Ce qui manque : le statut du temps",
+            "10.3 Les deux cercles",
+            "10.4 Le théorème de non-fermeture",
+            "10.5 SO(n), Sp(n) et les groupes exceptionnels",
+            "10.6 La classification tripartite et le Modèle standard",
+            "10.7 Le Higgs et le gluon",
+            "10.8 La liberté asymptotique et les quatre distances",
+            "10.9 Ce qui dépend de la mesure",
+            "10.10 Le parallèle avec P contre NP",
+            "10.11 Pourquoi c'était si difficile",
+            "10.12 Objections et réponses",
+            "10.13 Conditions de réfutation",
+            "10.14 Conclusion"
+          ]
+        },
+        {
+          "titre": "Chapitre 11. Popper et le fond du marais : ce qui reste ouvert",
+          "fichier": "12-chapitre-11-popper-et-le-fond-du-marais-ce-qui-res.html",
+          "sections": [
+            "11.1 Ce que Popper a vu",
+            "11.2 Où il est allé trop loin",
+            "11.3 Premier argument : la réfutation suppose le compte",
+            "11.4 Deuxième argument : l'asymétrie n'existe que dans un domaine ouvert",
+            "11.5 Troisième argument : le code provoque ses croisements",
+            "11.6 Une paire inverse : Popper et la gravure faite trop tôt",
+            "11.7 Le dogme et le compte",
+            "11.8 Ce qui reste ouvert le reste",
+            "11.9 Tomber et se relever",
+            "11.10 Ce que ce chapitre ne dit pas",
+            "11.11 Pour un enfant"
+          ]
+        },
+        {
+          "titre": "Chapitre 12. Trois questions non avenues : Riemann, Collatz, Goldbach",
+          "fichier": "13-chapitre-12-trois-questions-non-avenues-riemann-collatz-goldba.html",
+          "sections": [
+            "Riemann, Collatz, Goldbach : ce que les questions présupposaient, ce qui leur manquait, ce qui reste quand elles tombent",
+            "0. Le verbe exact, gravé en tête",
+            "I. Riemann : la question qui interroge l’instrument",
+            "II. Collatz : la question qui ignorait la machine",
+            "III. Goldbach : la question qui comptait dans un seul pot",
+            "IV. La loi commune, et ce que « non avenu » veut dire exactement"
+          ]
+        },
+        {
+          "titre": "Annexe A. Table des énoncés",
+          "fichier": "14-annexe-a-table-des-enonces.html",
+          "sections": []
+        },
+        {
+          "titre": "Annexe B. Retraits et corrections",
+          "fichier": "15-annexe-b-retraits-et-corrections.html",
+          "sections": [
+            "B.1 Riemann",
+            "B.2 *Ce qui vous manque*, de la v1.1 à la v1.2 (13 octobre 2026)",
+            "B.3 P contre NP",
+            "B.4 Navier-Stokes",
+            "B.5 Yang-Mills",
+            "B.6 *Popper et le fond du marais* v0.1 (8 octobre 2026)",
+            "B.7 Retraits de forme, communs à toutes les pièces"
+          ]
+        },
+        {
+          "titre": "Annexe C. Sources fusionnées",
+          "fichier": "16-annexe-c-sources-fusionnees.html",
+          "sections": []
+        },
+        {
+          "titre": "Annexe D. Vérifications refaites",
+          "fichier": "17-annexe-d-verifications-refaites.html",
+          "sections": []
+        }
+      ],
+      "version": "1.0",
+      "date": "2026-10"
+    },
+    {
+      "id": "V06_L_Histoire_de_la_Preuve",
+      "numero": 6,
+      "slug": "v06-l-histoire-de-la-preuve",
+      "titre": "L'Histoire de la Preuve",
+      "sous_titre": "Le procès, la lignée du zéro, les deux Euler, le tiroir de Gauss et le pourquoi indécidable",
+      "resume_fr": "Ce que le corpus ARC dit de la preuve : ce qu'elle est, ce qu'elle a oublié, comment elle a été reçue, qui a montré ses preuves et qui les a gardées dans un tiroir, et pourquoi la question du pourquoi ne reçoit jamais de réponse. Le volume suit la lignée des dix gestes, d'Hippase à Copenhague, en passant par Aristote, Stevin, Viète, Descartes, Newton et Leibniz, Gauss, Napoléon, Fourier et Boltzmann. Sa pièce maîtresse, le Procès de la Preuve, est versée en entier : acte d'accusation, instruction, jugement, dossier coté et prédictions falsifiables. Suivent le pourquoi indécidable, la lignée du zéro, les deux Euler, le tiroir de Gauss et le problème qui a créé le problème. La règle de l'auteur gouverne chaque page : le corpus date des gestes, il ne juge pas des hommes.",
+      "abstract_en": "What the ARC corpus says about proof: what it is, what it forgot, how it was received, who showed their proofs and who kept them in a drawer, and why the question of why never receives an answer. The volume follows the line of ten moves, from Hippasus to Copenhagen, through Aristotle, Stevin, Viète, Descartes, Newton and Leibniz, Gauss, Napoleon, Fourier and Boltzmann. Its main piece, The Trial of Proof, is given in full: indictment, investigation, judgement, numbered exhibits and falsifiable predictions. It continues with the undecidable why, the lineage of zero, the two Eulers, Gauss's drawer and the problem that created the problem. The author's rule governs every page: the corpus dates moves, it does not judge people.",
+      "mots_cles_fr": [
+        "histoire des mathématiques",
+        "preuve",
+        "zéro",
+        "Euler",
+        "Gauss",
+        "Stevin",
+        "épistémologie"
+      ],
+      "keywords_en": [
+        "history of mathematics",
+        "proof",
+        "zero",
+        "Euler",
+        "Gauss",
+        "Stevin",
+        "epistemology"
+      ],
+      "pages": 170,
+      "mots": 73419,
+      "pdf": "pdf/ARC_Volume_06_l_histoire_de_la_preuve.pdf",
+      "html": "volumes/v06-l-histoire-de-la-preuve/index.html",
+      "chapitres": [
+        {
+          "titre": "Avant-propos",
+          "fichier": "01-avant-propos.html",
+          "sections": []
+        },
+        {
+          "titre": "Chapitre 1. Le fil du volume : la lignée des dix gestes",
+          "fichier": "02-chapitre-1-le-fil-du-volume-la-lignee-des-dix-gest.html",
+          "sections": [
+            "1.1 Le chef unique",
+            "1.2 La lignée lue à l'envers, comme l'auteur l'a trouvée",
+            "1.3 La lignée lue à l'endroit",
+            "1.4 Les quatre gestes que ce volume ne détaille pas ailleurs",
+            "1.5 Ce que la lignée ne dit pas"
+          ]
+        },
+        {
+          "titre": "Livre premier. Le Procès de la Preuve",
+          "fichier": "03-livre-premier-le-proces-de-la-preuve.html",
+          "sections": []
+        },
+        {
+          "titre": "Chapitre 2. Préface et acte d'accusation (Partie 0)",
+          "fichier": "04-chapitre-2-preface-et-acte-d-accusation-partie-0.html",
+          "sections": [
+            "Préface : comment lire ce procès",
+            "§0.1 Le renversement, posé comme fait",
+            "§0.2 La porte : le 1-9 n'est pas une base",
+            "§0.3 L'attraction : le comment attiré par le pourquoi",
+            "§0.4 Le chef unique",
+            "§0.5 La portée : l'amputation n'est pas restée dans les mathématiques",
+            "§0.6 La seconde porte : la Figure Fondamentale"
+          ]
+        },
+        {
+          "titre": "Chapitre 3. Ce qu'est une preuve, et ce qu'elle a oublié (Partie 1)",
+          "fichier": "05-chapitre-3-ce-qu-est-une-preuve-et-ce-qu-elle-a-ou.html",
+          "sections": [
+            "§1.1 Ce que la preuve prétend être",
+            "§1.2 Ce que la preuve a oublié",
+            "§1.3 La cohérence est antérieure à l'outil",
+            "§1.4 L'aveu : la preuve a signé sa propre destitution"
+          ]
+        },
+        {
+          "titre": "Chapitre 4. Les calibrages faux : anatomie d'un démembrement (Partie 2)",
+          "fichier": "06-chapitre-4-les-calibrages-faux-anatomie-d-un-demem.html",
+          "sections": [
+            "§2.1 Pourquoi une anatomie, pas une histoire",
+            "§2.2 Les forgerons : Aristote et Euclide",
+            "§2.3 Le cercle : Pythagore, Gauss",
+            "§2.4 Le triangle : Hippase, et la lignée de la substantification",
+            "§2.5 Le nombre : Stevin, Newton",
+            "§2.6 La réalité : Galilée et Descartes, Darwin, Copenhague",
+            "§2.7 L'anatomie complète"
+          ]
+        },
+        {
+          "titre": "Chapitre 5. La preuve jugée par la cohérence (Partie 3)",
+          "fichier": "07-chapitre-5-la-preuve-jugee-par-la-coherence-partie.html",
+          "sections": [
+            "§3.1 Le critère du procès",
+            "§3.2 Là où « destituée » devient « littéralement fausse »",
+            "§3.3 La pièce maîtresse : les formules du chaos",
+            "§3.4 Conséquences déployées : la grammaire restaurée rend triviaux les mystères",
+            "§3.5 Le verdict structurel sur Copenhague",
+            "§3.6 La dernière défense : l'objection du succès",
+            "§3.7 Synthèse du jugement : la loi unifiée"
+          ]
+        },
+        {
+          "titre": "Chapitre 6. La grammaire qui précède la preuve (Partie 4)",
+          "fichier": "08-chapitre-6-la-grammaire-qui-precede-la-preuve-part.html",
+          "sections": [
+            "§4.1 Ce qui était là avant, et qui survit",
+            "§4.2 Les sept dérivations de k_arc",
+            "§4.3 La Figure Fondamentale : √2 relie 2π et révèle φ",
+            "§4.4 Les trois rails",
+            "§4.5 L'objet à deux faces : le « Théorème 4.1 »",
+            "§4.6 Pourquoi cette grammaire ne se prouve pas, et pourquoi c'est sa force"
+          ]
+        },
+        {
+          "titre": "Chapitre 7. L'inversion comme méthode (Partie 5)",
+          "fichier": "09-chapitre-7-l-inversion-comme-methode-partie-5.html",
+          "sections": [
+            "§5.1 Juger le juge n'est pas un coup : c'est φ",
+            "§5.2 Le précédent éprouvé",
+            "§5.3 La mort du pourquoi avec intention",
+            "§5.4 Le pourquoi nu, la saudade, et la posture qui ne coupe pas"
+          ]
+        },
+        {
+          "titre": "Chapitre 8. Ce que la restauration ouvre (Partie 6)",
+          "fichier": "10-chapitre-8-ce-que-la-restauration-ouvre-partie-6.html",
+          "sections": [
+            "§6.1 Pas une correction de la modernité : une restauration",
+            "§6.2 La conscience",
+            "§6.3 La tension",
+            "§6.4 L'énergie : E = Dc², l'inversion appliquée à Einstein",
+            "§6.5 Les descentes cosmologiques",
+            "§6.6 Le vivant et le monde de 6",
+            "§6.7 Le pavé, la médecine, les institutions, la mort",
+            "§6.8 La fin de l'intégrale : peser la plage",
+            "§6.9 Quatre énigmes que la grammaire réorganise"
+          ]
+        },
+        {
+          "titre": "Chapitre 9. La trinité pathogène, et la clôture devant le jury (Parties 7 et 8)",
+          "fichier": "11-chapitre-9-la-trinite-pathogene-et-la-cloture-deva.html",
+          "sections": [
+            "§7.1 La substantification est une inflammation épistémique",
+            "§7.2 La trinité pathogène : inconnu, peur, inflammation",
+            "§7.3 Les Portugais, maîtres de l'inconnu : le modèle de la paix",
+            "§7.4 Le bonheur est un chemin, non une adresse",
+            "§7.5 La paix comme restauration du comment",
+            "§8 Clôture : le jury"
+          ]
+        },
+        {
+          "titre": "Chapitre 10. Le dossier coté et les prédictions du Procès",
+          "fichier": "12-chapitre-10-le-dossier-cote-et-les-predictions-du.html",
+          "sections": [
+            "10.1 Annexe A du Procès : les cotes du dossier",
+            "10.2 Annexe B du Procès : les prédictions falsifiables"
+          ]
+        },
+        {
+          "titre": "Livre deuxième. Le pourquoi et la marche",
+          "fichier": "13-livre-deuxieme-le-pourquoi-et-la-marche.html",
+          "sections": []
+        },
+        {
+          "titre": "Chapitre 11. Le pourquoi indécidable : anthologie de la philosophie du comment",
+          "fichier": "14-chapitre-11-le-pourquoi-indecidable-anthologie-de.html",
+          "sections": [
+            "I. La question sans objet : le pourquoi indécidable",
+            "II. La grammaire du savoir : la philosophie du comment",
+            "III. Les preuves en marchant",
+            "IV. La mort et le rien : la même erreur",
+            "V. Clôture : ce que l'anthologie réclame",
+            "Ce que le script de l'anthologie vérifie"
+          ]
+        },
+        {
+          "titre": "Chapitre 12. Le problème qui a créé le problème : Hippase, le pourquoi indécidable, et les deux objets jamais touchés",
+          "fichier": "15-chapitre-12-le-probleme-qui-a-cree-le-probleme-hip.html",
+          "sections": [
+            "I. L'incident : ce qui s'est réellement passé",
+            "II. Le pourquoi indécidable : anatomie de la demande",
+            "III. Le comment : apprendre en marchant",
+            "IV. Les deux objets jamais touchés : la mort et le rien",
+            "V. La jonction : une seule matrice, cinq monstres",
+            "VI. Statuts et prédiction"
+          ]
+        },
+        {
+          "titre": "Livre troisième. Les dates relues",
+          "fichier": "16-livre-troisieme-les-dates-relues.html",
+          "sections": []
+        },
+        {
+          "titre": "Chapitre 13. La lignée du zéro : huit dates relues",
+          "fichier": "17-chapitre-13-la-lignee-du-zero-huit-dates-relues.html",
+          "sections": [
+            "13.1 628, Brahmagupta, *Brāhmasphuṭasiddhānta*, chapitre 18",
+            "13.2 1202, Fibonacci, *Liber Abaci*",
+            "13.3 1494, Luca Pacioli, *Summa de arithmetica*",
+            "13.4 1585, Simon Stevin, *De Thiende*",
+            "13.5 1748, Leonhard Euler, *Introductio in analysin infinitorum*",
+            "13.6 1801, Carl Friedrich Gauss, *Disquisitiones Arithmeticae*, article 1",
+            "13.7 1889, Giuseppe Peano, *Arithmetices principia, nova methodo exposita*",
+            "13.8 1908, Giuseppe Peano, *Formulario mathematico*",
+            "13.9 La lignée en une ligne",
+            "13.10 Ce que cette pièce ne dit pas",
+            "13.11 Gravures pour le Registre des Erreurs (version 1.2)"
+          ]
+        },
+        {
+          "titre": "Chapitre 14. Les deux Euler : ce qu'il a compté, ce qu'il a laissé filer",
+          "fichier": "18-chapitre-14-les-deux-euler-ce-qu-il-a-compte-ce-qu.html",
+          "sections": [
+            "Recto. Euler compteur",
+            "Verso. Euler qui laisse filer"
+          ]
+        },
+        {
+          "titre": "Chapitre 15. Le tiroir de Gauss : dossier daté des priorités revendiquées sans preuve montrée",
+          "fichier": "19-chapitre-15-le-tiroir-de-gauss-dossier-date-des-pr.html",
+          "sections": [
+            "15.1 Le critère",
+            "15.2 Les six dossiers",
+            "15.3 Ce que le dossier établit",
+            "15.4 Ce que le dossier ne tranche pas, et ce qui le trancherait",
+            "15.5 Sources des dates"
+          ]
+        },
+        {
+          "titre": "Chapitre 16. Le livre du zéro et des restes : plan et lectures",
+          "fichier": "20-chapitre-16-le-livre-du-zero-et-des-restes-plan-et.html",
+          "sections": [
+            "16.1 Prologue : le zéro et ses disciples",
+            "16.2 Première partie : le monde avant la coupe",
+            "16.3 Deuxième partie : six gestes",
+            "16.4 Troisième partie : les conséquences",
+            "16.5 Quatrième partie : la restauration"
+          ]
+        },
+        {
+          "titre": "Livre quatrième. La généalogie et la défense",
+          "fichier": "21-livre-quatrieme-la-genealogie-et-la-defense.html",
+          "sections": []
+        },
+        {
+          "titre": "Chapitre 17. Le charcutage civilisationnel : Pythagore, Héraclite, Parménide, Nāgārjuna, Hume, et les fantômes qui en restent",
+          "fichier": "22-chapitre-17-le-charcutage-civilisationnel-pythagor.html",
+          "sections": [
+            "17.1 Pythagore et la lecture native",
+            "17.2 La bifurcation post-pythagoricienne",
+            "17.3 Hume et la résolution de la causalité",
+            "17.4 La chaîne ontologique restaurée",
+            "17.5 Le désir comme reconnaissance, et les moteurs vrais",
+            "17.6 Le charcutage actif et ses fantômes",
+            "17.7 Coda : la généalogie comme régularisation"
+          ]
+        },
+        {
+          "titre": "Chapitre 18. Tuer les sophismes : manuel de neutralisation des opérations qui castrent",
+          "fichier": "23-chapitre-18-tuer-les-sophismes-manuel-de-neutralis.html",
+          "sections": [
+            "18.1 Pourquoi un livre contre les sophistes",
+            "18.2 Anatomie du sophisme",
+            "18.3 Vingt sophismes types",
+            "18.4 La psychologie du sophiste",
+            "18.5 Les sophismes attendus contre le corpus",
+            "18.6 La riposte",
+            "18.7 Le silence : quand le sophisme ne mérite pas de réponse",
+            "18.8 Les générations sacrifiées"
+          ]
+        },
+        {
+          "titre": "Chapitre 19. Le dossier technique de la Bible Quantique, recalculé",
+          "fichier": "24-chapitre-19-le-dossier-technique-de-la-bible-quant.html",
+          "sections": [
+            "19.1 Les sept dérivations de k_arc selon la Bible Quantique",
+            "19.2 Les tables de vérification, refaites",
+            "19.3 La bibliographie commentée",
+            "19.4 Les six protocoles de validation falsifiables"
+          ]
+        },
+        {
+          "titre": "Annexe A : Table des énoncés",
+          "fichier": "25-annexe-a-table-des-enonces.html",
+          "sections": []
+        },
+        {
+          "titre": "Annexe B : Retraits et corrections",
+          "fichier": "26-annexe-b-retraits-et-corrections.html",
+          "sections": [
+            "B.1 Corrections portées par les sources",
+            "B.2 Contradictions entre sources, tranchées",
+            "B.3 Retraits de la table des matières ancienne (chapitre 16)",
+            "B.4 Statuts rétrogradés ou requalifiés",
+            "B.5 Chiffres corrigés après recalcul",
+            "B.6 Faits historiques corrigés",
+            "B.7 Retraits de forme"
+          ]
+        },
+        {
+          "titre": "Annexe C : Sources fusionnées",
+          "fichier": "27-annexe-c-sources-fusionnees.html",
+          "sections": []
+        },
+        {
+          "titre": "Annexe D : Vérifications refaites",
+          "fichier": "28-annexe-d-verifications-refaites.html",
+          "sections": []
+        },
+        {
+          "titre": "Colophon",
+          "fichier": "29-colophon.html",
+          "sections": []
+        }
+      ],
+      "version": "1.0",
+      "date": "2026-10"
+    },
+    {
+      "id": "V07_La_Physique_relue",
+      "numero": 7,
+      "slug": "v07-la-physique-relue",
+      "titre": "La Physique relue",
+      "sous_titre": "La mesure comme projection : Tsirelson sans Hilbert, l'onde, le quantum, le proton et les cordes",
+      "resume_fr": "Ce que le corpus ARC dit de la physique, en une phrase : la mesure est une projection. Un état complet est lu par un instrument qui n'en retient qu'une partie, et ce que l'on appelle aléa, indétermination ou effondrement est le prix de cette lecture, non une propriété de ce qui est lu. Le premier chapitre décompose la borne de Tsirelson 2√2 en trois facteurs exacts. Les suivants appliquent la même grammaire au quantum d'action, à Heisenberg, à l'effet tunnel, au proton comme axe, au Modèle standard, à l'atome matriochka, aux cordes et à E = Dc². Deux règles tiennent le volume : le théorème de Bell n'est pas contesté, et ce qui est Lecture reste Lecture ; une lecture qui reproduit les nombres de la physique reçue ne gagne sa place que par ses prédictions.",
+      "abstract_en": "What the ARC corpus says about physics, in one sentence: measurement is projection. A complete state is read by an instrument that keeps only part of it, and what is called randomness, indeterminacy or collapse is the price of that reading, not a property of what is read. The first chapter decomposes the Tsirelson bound 2√2 into three exact factors. The following chapters apply the same grammar to the quantum of action, Heisenberg, the tunnel effect, the proton as axis, the Standard Model, the nested atom, strings and E = Dc². Two rules hold throughout: Bell's theorem is not contested, and a Reading remains a Reading; a reading that reproduces the numbers of received physics earns its place only through its predictions.",
+      "mots_cles_fr": [
+        "mécanique quantique",
+        "borne de Tsirelson",
+        "mesure",
+        "Heisenberg",
+        "effet tunnel",
+        "proton",
+        "Modèle standard",
+        "théorie des cordes"
+      ],
+      "keywords_en": [
+        "quantum mechanics",
+        "Tsirelson bound",
+        "measurement",
+        "Heisenberg",
+        "tunnelling",
+        "proton",
+        "Standard Model",
+        "string theory"
+      ],
+      "pages": 138,
+      "mots": 63497,
+      "pdf": "pdf/ARC_Volume_07_la_physique_relue.pdf",
+      "html": "volumes/v07-la-physique-relue/index.html",
+      "chapitres": [
+        {
+          "titre": "Avant-propos",
+          "fichier": "01-avant-propos.html",
+          "sections": []
+        },
+        {
+          "titre": "Chapitre 1. La borne de Tsirelson sans espace de Hilbert",
+          "fichier": "02-chapitre-1-la-borne-de-tsirelson-sans-espace-de-hi.html",
+          "sections": [
+            "1.1 Le modèle",
+            "1.2 La corrélation du singulet",
+            "1.3 L'erratum : le signe pur est la boîte de Popescu-Rohrlich",
+            "1.4 Le fondement arithmétique de k = 1/2",
+            "1.5 La dérivation géométrique de la borne",
+            "1.6 Les trois plafonds",
+            "1.7 Non-signalement, règle de Born, intrication",
+            "1.8 Cinq constantes, un mécanisme",
+            "1.9 Portée et limites",
+            "1.10 Prédictions falsifiables",
+            "1.11 La double dérivation",
+            "1.12 Le sablier des paires",
+            "1.13 La même borne lue par le Livre VIII"
+          ]
+        },
+        {
+          "titre": "Chapitre 2. Les corrélations quantiques par projection séquentielle",
+          "fichier": "03-chapitre-2-les-correlations-quantiques-par-project.html",
+          "sections": [
+            "2.1 Les quatre principes",
+            "2.2 L'état global et l'ordre séquentiel",
+            "2.3 Les objections classiques",
+            "2.4 La structure ternaire sous les mesures binaires",
+            "2.5 Le spin demi-entier comme nécessité géométrique",
+            "2.6 L'unicité de la mise à jour",
+            "2.7 La comparaison avec les interprétations reçues",
+            "2.8 Falsification"
+          ]
+        },
+        {
+          "titre": "Chapitre 3. L'onde ne s'effondre pas, elle s'inverse",
+          "fichier": "04-chapitre-3-l-onde-ne-s-effondre-pas-elle-mute.html",
+          "sections": [
+            "3.1 Le problème de la mesure",
+            "3.2 Les six principes",
+            "3.3 La séquence ontologique 2 → 1∞ → 3 → 6 → 5 → 4",
+            "3.4 L'onde comme produit relationnel",
+            "3.5 L’inversion : le troisième terme se lie",
+            "3.6 La signature arithmétique : 5 × 5 = 25 → 7",
+            "3.7 L'observateur comme degré de liaison",
+            "3.8 La dualité onde-particule comme rotation",
+            "3.9 La continuité avec la projection séquentielle",
+            "3.10 Les objections",
+            "3.11 La comparaison des cadres",
+            "3.12 Prédictions",
+            "3.13 Portée"
+          ]
+        },
+        {
+          "titre": "Chapitre 4. L'indétermination de Heisenberg comme coût de projection",
+          "fichier": "05-chapitre-4-l-indetermination-de-heisenberg-comme-c.html",
+          "sections": [
+            "4.1 Le théorème et sa lecture",
+            "4.2 Les chemins de k = 1/2",
+            "4.3 Le même 1/2 dans tous les domaines",
+            "4.4 La mesure comme projection",
+            "4.5 Le commutateur relu",
+            "4.6 Le résidu de Stevin",
+            "4.7 Prédictions",
+            "4.8 Le déterminisme restauré"
+          ]
+        },
+        {
+          "titre": "Chapitre 5. L'effet tunnel : la barrière comme aiguillage",
+          "fichier": "06-chapitre-5-l-effet-tunnel-la-barriere-comme-aiguil.html",
+          "sections": [
+            "5.1 Les faits établis",
+            "5.2 La lecture géométrique",
+            "5.3 La récupérabilité : la composante tournée existe",
+            "5.4 Prédictions",
+            "5.5 Ce que la version 2.0 ne prétend plus",
+            "5.6 Conclusion"
+          ]
+        },
+        {
+          "titre": "Chapitre 6. La croix de Planck : le quantum est une aire",
+          "fichier": "07-chapitre-6-la-croix-de-planck-le-quantum-est-une-a.html",
+          "sections": [
+            "6.1 Le quantum est une aire, non une sphère",
+            "6.2 L'aire enfermée : les états habitent les demis",
+            "6.3 La croix de phase et les quatre paires d'inversion",
+            "6.4 L'excitation ouvre l'envergure",
+            "6.5 Le carré se voit en trapèze",
+            "6.6 Liouville : l'aire tient, la forme se déforme",
+            "6.7 Le demi n'est pas le quantum, il est la face conjuguée",
+            "6.8 L'indétermination comme coût de projection",
+            "6.9 Les particules sont des fonctions",
+            "6.10 Synthèse"
+          ]
+        },
+        {
+          "titre": "Chapitre 7. Le proton comme axe",
+          "fichier": "08-chapitre-7-le-proton-comme-axe.html",
+          "sections": [
+            "7.1 La table que tout le monde possède",
+            "7.2 Les deux noms et le double tour",
+            "7.3 Premier fait : la crise du spin, le 3 vu et le 6 caché",
+            "7.4 Deuxième fait : le confinement, l'axe ne se visite pas",
+            "7.5 Troisième fait : l'octet de jauge, 9 = 8 + 1",
+            "7.6 La masse : l'objet massivement relationnel",
+            "7.7 L'engagement : le test 2/9 contre 3/9",
+            "7.8 Le statut épistémique",
+            "7.9 Conclusion"
+          ]
+        },
+        {
+          "titre": "Chapitre 8. Le Modèle standard relu : l'effondrement arithmétique",
+          "fichier": "09-chapitre-8-le-modele-standard-relu-l-effondrement.html",
+          "sections": [
+            "8.1 Les six erreurs fondatrices",
+            "8.2 La constante de Planck comme résolution du système",
+            "8.3 L'inégalité de Heisenberg",
+            "8.4 Le photon comme intervalle d'état",
+            "8.5 La masse comme nombre d'enroulement",
+            "8.6 La réduction du spectre des particules",
+            "8.7 La redondance de l'espace de dimension infinie",
+            "8.8 Le déterminisme restauré",
+            "8.9 Synthèse et prédictions"
+          ]
+        },
+        {
+          "titre": "Chapitre 9. Principia relationalis : le plan d'ensemble",
+          "fichier": "10-chapitre-9-principia-relationalis-le-plan-d-ensemb.html",
+          "sections": [
+            "9.1 Le préambule : la rupture épistémologique",
+            "9.2 Les six piliers",
+            "9.3 La cohérence interne",
+            "9.4 Les prédictions par domaine",
+            "9.5 La déclaration finale"
+          ]
+        },
+        {
+          "titre": "Chapitre 10. L'atome n'est pas une brique : la matriochka",
+          "fichier": "11-chapitre-10-l-atome-n-est-pas-une-brique-la-matrio.html",
+          "sections": [
+            "10.1 L'atome est la relation entre deux pôles",
+            "10.2 La matriochka auto-codée",
+            "10.3 Le refus de la division",
+            "10.4 La fission : inversion, non destruction",
+            "10.5 Deux illusions éliminées",
+            "10.6 La fin de l'accélérateur",
+            "10.7 Prédictions",
+            "10.8 Conclusion"
+          ]
+        },
+        {
+          "titre": "Chapitre 11. Les cordes sans cordes",
+          "fichier": "12-chapitre-11-les-cordes-sans-cordes.html",
+          "sections": [
+            "11.1 Le problème et le diagnostic",
+            "11.2 Les axiomes",
+            "11.3 Le nombre 496",
+            "11.4 Le gradient 198, l'axe 595 et la corde",
+            "11.5 Le scellement de la corde",
+            "11.6 Les dimensions enroulées comme cercles inscrits",
+            "11.7 Les deux briques et la naissance du carré",
+            "11.8 La réécriture pièce par pièce",
+            "11.9 Les théorèmes de la réécriture",
+            "11.10 Les trois gravures corrigées",
+            "11.11 La tête et les pattes : où la grammaire touche le monde",
+            "11.12 Les prédictions d'avril, avec leurs statuts",
+            "11.13 Conclusion"
+          ]
+        },
+        {
+          "titre": "Chapitre 12. E = Dc² : la densité, non la masse",
+          "fichier": "13-chapitre-12-e-dc2-la-densite-non-la-masse.html",
+          "sections": [
+            "12.1 La thèse",
+            "12.2 Le critère opératoire de D",
+            "12.3 L'enrichissement dynamique de D",
+            "12.4 La falsification"
+          ]
+        },
+        {
+          "titre": "Chapitre 13. Le Livre VIII de la Bible Quantique : la physique sans amputation",
+          "fichier": "14-chapitre-13-le-livre-viii-de-la-bible-quantique-la.html",
+          "sections": [
+            "13.1 La fin du calcul intégral pour les solides de révolution",
+            "13.2 L'amputation de Newton et Leibniz, et le recouvrement de Pappus",
+            "13.3 Le pli de Mendeleïev et la triade Ni-Co-Fe",
+            "13.4 Le couple 137/163",
+            "13.5 La gravité aux deux échelles",
+            "13.6 LIEM : Lumière = Information = Énergie = Magnétisme",
+            "13.7 Le dipôle cosmique et l'asymétrie primordiale",
+            "13.8 Le moment magnétique anomal du muon",
+            "13.9 La ligne critique de Riemann",
+            "13.10 Synthèse du livre"
+          ]
+        },
+        {
+          "titre": "Annexe A : Table des énoncés",
+          "fichier": "15-annexe-a-table-des-enonces.html",
+          "sections": []
+        },
+        {
+          "titre": "Annexe B : Retraits et corrections",
+          "fichier": "16-annexe-b-retraits-et-corrections.html",
+          "sections": []
+        },
+        {
+          "titre": "Annexe C : Sources fusionnées",
+          "fichier": "17-annexe-c-sources-fusionnees.html",
+          "sections": []
+        },
+        {
+          "titre": "Annexe D : Vérifications refaites",
+          "fichier": "18-annexe-d-verifications-refaites.html",
+          "sections": []
+        }
+      ],
+      "version": "1.0",
+      "date": "2026-10"
+    },
+    {
+      "id": "V08_La_Matiere_et_le_Cosmos",
+      "numero": 8,
+      "slug": "v08-la-matiere-et-le-cosmos",
+      "titre": "La Matière et le Cosmos",
+      "sous_titre": "Le nombre atomique comme plan, la lumière sédimentée, et rien ne se dissipe",
+      "resume_fr": "Ce que le corpus ARC dit de la matière, du cosmos et de leur thermodynamique, du plus petit au plus grand. Les chiffres du numéro atomique lus comme plan des couches électroniques, la trinité 4-6 et l'unicité du 24, le circuit de la lumière et du vivant, les deux miroirs de la rotation quantique, le noyau comme paire de potentiels, l'atome replié en pyramide, et deux prédictions préenregistrées, dont P-NA-1 sur le cobalt. Puis le cosmos : la sédimentation de la lumière jusqu'au fer, le dipôle cosmique et ses sept registres. Enfin la thermodynamique relue : l'entropie, rien ne se dissipe, le feu ne détruit pas, le temps comprimé, et la biologie moléculaire. Chaque énoncé porte son statut ; un chiffre qui ne s'est pas vérifié n'est pas recopié.",
+      "abstract_en": "What the ARC corpus says about matter, the cosmos and their thermodynamics, from the smallest to the largest. The digits of the atomic number read as the plan of electron shells, the 4-6 trinity and the uniqueness of 24, the circuit of light and life, the two mirrors of quantum rotation, the nucleus as a pair of potentials, the atom folded into a pyramid, and two pre-registered predictions, including P-NA-1 on cobalt. Then the cosmos: the sedimentation of light up to iron, the cosmic dipole and its seven registers. Finally thermodynamics reread: entropy, nothing dissipates, fire does not destroy, compressed time, and molecular biology. Every statement carries its status; a figure that did not check out is not copied.",
+      "mots_cles_fr": [
+        "numéro atomique",
+        "tableau périodique",
+        "couches électroniques",
+        "dipôle cosmique",
+        "sédimentation cosmique",
+        "entropie",
+        "thermodynamique",
+        "fer"
+      ],
+      "keywords_en": [
+        "atomic number",
+        "periodic table",
+        "electron shells",
+        "cosmic dipole",
+        "cosmic sedimentation",
+        "entropy",
+        "thermodynamics",
+        "iron"
+      ],
+      "pages": 115,
+      "mots": 47329,
+      "pdf": "pdf/ARC_Volume_08_la_matiere_et_le_cosmos.pdf",
+      "html": "volumes/v08-la-matiere-et-le-cosmos/index.html",
+      "chapitres": [
+        {
+          "titre": "Avant-propos",
+          "fichier": "01-avant-propos.html",
+          "sections": []
+        },
+        {
+          "titre": "Chapitre 1. Le nombre atomique comme plan : les trente fondations, les miroirs et le pli",
+          "fichier": "02-chapitre-1-le-nombre-atomique-comme-plan-les-trent.html",
+          "sections": [
+            "1.1 Les trente fondations",
+            "1.2 Les paires de chiffres renversés et l'énigme du palladium",
+            "1.3 La Loi du Pli des décades en miroir",
+            "1.4 Applications"
+          ]
+        },
+        {
+          "titre": "Chapitre 2. La trinité 4-6 et l'unicité du 24",
+          "fichier": "03-chapitre-2-la-trinite-4-6-et-l-unicite-du-24.html",
+          "sections": [
+            "2.1 La trinité 4-6",
+            "2.2 La signature biologique humaine",
+            "2.3 L'unicité du 24 : SU(2) et SU(3)",
+            "2.4 Les moitiés 23 et 32",
+            "2.5 Le miroir à une période"
+          ]
+        },
+        {
+          "titre": "Chapitre 3. Lumière, cuivre, pentagone : le circuit fermé de la vie",
+          "fichier": "04-chapitre-3-lumiere-cuivre-pentagone-le-circuit-fer.html",
+          "sections": [
+            "3.1 La chlorophylle à 137 atomes",
+            "3.2 Le couple lumière-cuivre et l'angle du pentagone",
+            "3.3 Le 37 mitochondrial et le molybdène 42",
+            "3.4 La genèse octogone-pentagone",
+            "3.5 Le circuit fermé de la vie"
+          ]
+        },
+        {
+          "titre": "Chapitre 4. Les deux descentes complémentaires",
+          "fichier": "05-chapitre-4-les-deux-descentes-complementaires.html",
+          "sections": [
+            "4.1 Les pas ne sont pas des choix",
+            "4.2 La descente déterministe",
+            "4.3 Ce que les descentes veulent dire"
+          ]
+        },
+        {
+          "titre": "Chapitre 5. Les deux miroirs de la rotation quantique et le cœur comme paire",
+          "fichier": "06-chapitre-5-les-deux-miroirs-de-la-rotation-quantiq.html",
+          "sections": [
+            "5.1 Ce que le cadastre ne lit pas : quatre refus",
+            "5.2 Deux miroirs voisins dans les valeurs propres de la rotation",
+            "5.3 Le fait nucléaire : la branche haute descend",
+            "5.4 La raison du signe : deux potentiels",
+            "5.5 Chantier et prédiction"
+          ]
+        },
+        {
+          "titre": "Chapitre 6. Deux prédictions préenregistrées : le cobalt dans NaCrO₂ et le carbone de Mauna Loa",
+          "fichier": "07-chapitre-6-deux-predictions-preenregistrees-le-cob.html",
+          "sections": [
+            "6.1 P-NA-1 : le cobalt qui permet l'échange du sodium et du chrome",
+            "6.2 P-XII.1 : le carbone qui ralentit avant le gaz"
+          ]
+        },
+        {
+          "titre": "Chapitre 7. L'atome déplié : Démocrite écouté jusqu'au bout",
+          "fichier": "08-chapitre-7-l-atome-deplie-democrite-ecoute-jusqu-a.html",
+          "sections": [
+            "7.1 La promesse et la coupe",
+            "7.2 L'atome déplié, membre à membre",
+            "7.3 Le pli de contrôle : Khéops",
+            "7.4 Pourquoi personne ne l'a vue : le carré coupé et le mauvais triangle",
+            "7.5 Prédictions"
+          ]
+        },
+        {
+          "titre": "Chapitre 8. La sédimentation cosmique : de la lumière au fer, du sel à la vie",
+          "fichier": "09-chapitre-8-la-sedimentation-cosmique-de-la-lumiere.html",
+          "sections": [
+            "8.1 La fondation arithmétique",
+            "8.2 La figure fondamentale : trois constantes, trois opérateurs",
+            "8.3 Le couple 5/7 et la naissance du sel",
+            "8.4 Le gradient 198",
+            "8.5 La descente au fer et le retournement 81",
+            "8.6 L'octet de stabilité et le double terminus",
+            "8.7 Lumière, fer, limite : le spin à double face",
+            "8.8 Les deux axes, noués par le cuivre",
+            "8.9 Le circuit soustractif fermé",
+            "8.10 Le pont du cuivre et le seuil du vivant",
+            "8.11 La soustraction trinitaire",
+            "8.12 Le nouement et les critères de falsification"
+          ]
+        },
+        {
+          "titre": "Chapitre 9. Le dipôle cosmique : sept anomalies, un énoncé",
+          "fichier": "10-chapitre-9-le-dipole-cosmique-sept-anomalies-un-en.html",
+          "sections": [
+            "9.1 Le principe de complétude",
+            "9.2 Le registre P et sa dérivation",
+            "9.3 La cascade Stevin-Gauss",
+            "9.4 Le test de robustesse et son retrait",
+            "9.5 Les sept registres",
+            "9.6 Les prédictions",
+            "9.7 Conclusion de l'auteur"
+          ]
+        },
+        {
+          "titre": "Chapitre 10. La loi de la sédimentation : le code, l'imprévisible et l'entropie décorrompue",
+          "fichier": "11-chapitre-10-la-loi-de-la-sedimentation-le-code-l-i.html",
+          "sections": [
+            "10.1 Le cadastre et la question de la base",
+            "10.2 La question sans adresse",
+            "10.3 Rien n'est écrit : le code et le choix",
+            "10.4 La genèse en quatre pas",
+            "10.5 Le verdict du zéro",
+            "10.6 L'entropie décorrompue",
+            "10.7 Le constructif par filtrage",
+            "10.8 La preuve de tous les jours",
+            "10.9 La pièce sœur : l'espace qui ingère",
+            "10.10 Clôture et prédiction"
+          ]
+        },
+        {
+          "titre": "Chapitre 11. La grandeur D : Carnot borne la part, rien ne borne le fruit",
+          "fichier": "12-chapitre-11-la-grandeur-d-carnot-borne-la-part-rie.html",
+          "sections": [
+            "11.1 Le mineur et les deux livres",
+            "11.2 Pourquoi le second livre était inécrivable",
+            "11.3 Le livre deux a déjà son formalisme : Wright",
+            "11.4 La correction de signe",
+            "11.5 Le renversement",
+            "11.6 Les trois adresses : deux condamnations, un acquittement",
+            "11.7 Les exceptionnels",
+            "11.8 La fraction et la fusion",
+            "11.9 Le cahier des charges de D"
+          ]
+        },
+        {
+          "titre": "Chapitre 12. Rien ne se dissipe : la chaleur est la relation",
+          "fichier": "13-chapitre-12-rien-ne-se-dissipe-la-chaleur-est-la-r.html",
+          "sections": [
+            "12.1 La thèse",
+            "12.2 Information et énergie : deux faces, une interface",
+            "12.3 La dispersion est gaussienne, dans les deux sens du mot",
+            "12.4 La chaleur est la relation",
+            "12.5 Le fruit dépasse la part",
+            "12.6 Refuser la séparation",
+            "12.7 Qu'est-ce qui voyage plus vite que la lumière ?"
+          ]
+        },
+        {
+          "titre": "Chapitre 13. Le feu ne détruit pas : la libération de la lumière comptée",
+          "fichier": "14-chapitre-13-le-feu-ne-detruit-pas-la-liberation-de.html",
+          "sections": [
+            "13.1 Le feu n'est pas une substance",
+            "13.2 Le renversement des éléments",
+            "13.3 Le feu soustrait la cage",
+            "13.4 Le feu comme visage de la soustraction",
+            "13.5 La prédiction"
+          ]
+        },
+        {
+          "titre": "Chapitre 14. Le temps comprimé : la loi de l'accessibilité et la fin de l'ère de l'information",
+          "fichier": "15-chapitre-14-le-temps-comprime-la-loi-de-l-accessib.html",
+          "sections": [
+            "14.1 La question mal posée",
+            "14.2 La loi de l'accessibilité",
+            "14.3 La seule exception",
+            "14.4 La fin d'une ère par abondance",
+            "14.5 Vingt-cinq siècles pour une réponse qui ne pèse rien",
+            "14.6 L'ère de la relation, l'ère du lecteur",
+            "14.7 Ce qui fait mal",
+            "14.8 Le chemin qui n'a pas de lieu"
+          ]
+        },
+        {
+          "titre": "Chapitre 15. La grammaire cadastrale du vivant moléculaire",
+          "fichier": "16-chapitre-15-la-grammaire-cadastrale-du-vivant-mole.html",
+          "sections": [
+            "15.1 Les quatre bases et les paires d'inversion",
+            "15.2 Les 64 codons",
+            "15.3 Les 46 chromosomes et le mécanisme 4-5 → 9 → +1",
+            "15.4 Les cycles du métabolisme",
+            "15.5 La régulation épigénétique",
+            "15.6 Mitose et méiose",
+            "15.7 La conscience comme auto-indexation",
+            "15.8 Apoptose, sénescence, télomères",
+            "15.9 Synthèse et protocoles"
+          ]
+        },
+        {
+          "titre": "Chapitre 16. Là où la règle se trompe : les vingt exceptions du tableau périodique",
+          "fichier": "17-chapitre-16-la-ou-la-regle-se-trompe-les-vingt-exceptions-du-t.html",
+          "sections": [
+            "0. Statuts épistémiques et conventions",
+            "1. La base, pour le lecteur qui découvre ARC",
+            "2. Le reçu et l’outil",
+            "3. Les vingt",
+            "4. Le Constat : dix-neuf sur dix-neuf, et un sur un",
+            "5. Les trois moteurs de l’outil",
+            "6. Les paires de miroirs, quantifiées",
+            "7. Le palladium : le zéro que l’outil a écrit",
+            "8. Le lawrencium : la clôture relance au 1",
+            "9. La frontière 114 : où la matière cesse de déposer",
+            "10. Prédictions préenregistrées",
+            "11. Chantier ouvert",
+            "12. Conclusion",
+            "Annexes"
+          ]
+        },
+        {
+          "titre": "Annexe A. Table des énoncés",
+          "fichier": "18-annexe-a-table-des-enonces.html",
+          "sections": []
+        },
+        {
+          "titre": "Annexe B. Retraits et corrections",
+          "fichier": "19-annexe-b-retraits-et-corrections.html",
+          "sections": [
+            "B.1 Corrections de calcul ou de fait",
+            "B.2 Rétrogradations de statut",
+            "B.3 Corrections internes déjà portées par les sources (consignées)",
+            "B.4 Éléments non reconduits sans retrait explicite, conservés",
+            "B.5 Passages non reproduits (règles du corpus)"
+          ]
+        },
+        {
+          "titre": "Annexe C. Sources fusionnées",
+          "fichier": "20-annexe-c-sources-fusionnees.html",
+          "sections": []
+        },
+        {
+          "titre": "Annexe D. Vérifications refaites",
+          "fichier": "21-annexe-d-verifications-refaites.html",
+          "sections": []
+        }
+      ],
+      "version": "1.0",
+      "date": "2026-10"
+    },
+    {
+      "id": "V09_Le_Vivant",
+      "numero": 9,
+      "slug": "v09-le-vivant",
+      "titre": "Le Vivant",
+      "sous_titre": "Identité, vie, conscience ; l'évolution relue ; la mort comme fiction",
+      "resume_fr": "Ce que le corpus ARC dit du vivant, à partir d'une thèse posée en mai 2026 : identité, vie et conscience ne sont pas trois phénomènes à relier par une théorie de l'émergence, mais trois noms d'une seule opération vue depuis trois disciplines. Un être vivant est une clôture active qui se lit et se réécrit elle-même ; la pierre porte le même code mais ne le lit pas. Le volume traite la combinaison des consciences partielles par soustraction, l'amour et la saudade, l'étoile de la vie et les trois rotors du corps, la médecine comme chantier ouvert, l'évolution relue, la mort comme fiction linguistique, le nombril et la cicatrice. Il ne donne aucun conseil médical : les lectures du corps et de la maladie sont des Lectures d'un chantier déclaré ouvert, et toute question de santé relève d'un médecin.",
+      "abstract_en": "What the ARC corpus says about life, from a thesis set out in May 2026: identity, life and consciousness are not three phenomena to be linked by a theory of emergence, but three names of a single operation seen from three disciplines. A living being is an active closure that reads and rewrites itself; a stone carries the same code but does not read it. The volume covers the combination of partial consciousnesses by subtraction, love and saudade, the star of life and the three rotors of the body, medicine as an open field, evolution reread, death as a linguistic fiction, the navel and the scar. It gives no medical advice: readings of the body and of illness are Readings of a declared open field, and any health question belongs to a physician.",
+      "mots_cles_fr": [
+        "vivant",
+        "identité",
+        "conscience",
+        "évolution",
+        "mort",
+        "saudade",
+        "philosophie de la biologie"
+      ],
+      "keywords_en": [
+        "life",
+        "identity",
+        "consciousness",
+        "evolution",
+        "death",
+        "saudade",
+        "philosophy of biology"
+      ],
+      "pages": 94,
+      "mots": 30109,
+      "pdf": "pdf/ARC_Volume_09_le_vivant.pdf",
+      "html": "volumes/v09-le-vivant/index.html",
+      "chapitres": [
+        {
+          "titre": "Avant-propos",
+          "fichier": "01-avant-propos.html",
+          "sections": []
+        },
+        {
+          "titre": "Chapitre 1. L'équivalence : identité, vie, conscience",
+          "fichier": "02-chapitre-1-l-equivalence-identite-vie-conscience.html",
+          "sections": [
+            "1.1 La thèse",
+            "1.2 La séparation comme artefact culturel",
+            "1.3 Mesure ponctuelle et relation cadastrale",
+            "1.4 La chaîne Stevin, Gauss : l'effet papillon",
+            "1.5 L'argument central : aucune entité ne croît sans savoir comment",
+            "1.6 Cinq dérivations indépendantes"
+          ]
+        },
+        {
+          "titre": "Chapitre 2. Le socle : la priorité géométrique des neuf positions",
+          "fichier": "03-chapitre-2-le-socle-la-priorite-geometrique-des-ne.html",
+          "sections": [
+            "2.1 L'axiome A0 : l'ontologie précède la représentation",
+            "2.2 Quatre constructions de la priorité du 9",
+            "2.3 Confirmations algébriques et table des paires"
+          ]
+        },
+        {
+          "titre": "Chapitre 3. La conscience libérée : le critère, l'auto-observation, la réflexion",
+          "fichier": "04-chapitre-3-la-conscience-liberee-le-critere-l-auto.html",
+          "sections": [
+            "3.1 Le principe de la matriochka atomique",
+            "3.2 La thèse pivot",
+            "3.3 Le critère opératoire : clôture active ou simulation",
+            "3.4 La conscience comme auto-observation pendant la relation",
+            "3.5 La conscience comme réflexion cadastrale (analogie d'onde)",
+            "3.6 L'architecture proposée : interface 11 et Axe trinitaire"
+          ]
+        },
+        {
+          "titre": "Chapitre 4. La soustraction cadastrale : l'opérateur qui combine",
+          "fichier": "05-chapitre-4-la-soustraction-cadastrale-l-operateur.html",
+          "sections": [
+            "4.1 Le problème de la combinaison",
+            "4.2 La soustraction comme troisième opération",
+            "4.3 Le visage physique : la fusion nucléaire",
+            "4.4 Le visage chimique : la liaison",
+            "4.5 La courbe de liaison et le pivot du fer",
+            "4.6 Une seule opération, deux lectures",
+            "4.7 Prédictions et confirmations attachées au cadre"
+          ]
+        },
+        {
+          "titre": "Chapitre 5. Le rotor : l'Étoile de la Vie et les trois rotors du corps",
+          "fichier": "06-chapitre-5-le-rotor-l-etoile-de-la-vie-et-les-troi.html",
+          "sections": [
+            "5.1 La figure qui inscrit déjà tout",
+            "5.2 L'axiome de la conscience cadastrale",
+            "5.3 Volvor ergo sum : l'inversion de Descartes",
+            "5.4 Le problème de la mesure",
+            "5.5 Les trois rotors du corps"
+          ]
+        },
+        {
+          "titre": "Chapitre 6. La vie active et la vie en attente",
+          "fichier": "07-chapitre-6-la-vie-active-et-la-vie-en-attente.html",
+          "sections": [
+            "6.1 La condition matérielle stricte",
+            "6.2 La règle de conservation",
+            "6.3 La vie comme connexion de deux mouvements minimaux",
+            "6.4 Les talents innés comme mémoire biologique forte",
+            "6.5 La vie humaine, moment d'activation intense",
+            "6.6 Synthèse cosmologique : le serpent dans la matriochka"
+          ]
+        },
+        {
+          "titre": "Chapitre 7. L'amour comme point sédimenté",
+          "fichier": "08-chapitre-7-l-amour-comme-point-sedimente.html",
+          "sections": [
+            "7.1 Application directe de la soustraction",
+            "7.2 La sédimentation matérielle",
+            "7.3 La définition",
+            "7.4 Quatre conséquences",
+            "7.5 La saudade",
+            "7.6 Dédicace de la version 1.7"
+          ]
+        },
+        {
+          "titre": "Chapitre 8. L'évolution relue : Darwin restauré n'est pas Darwin nié",
+          "fichier": "09-chapitre-8-l-evolution-relue-darwin-restaure-n-est.html",
+          "sections": [
+            "8.0 Le nom juste de ce livre",
+            "8.1 Ce qui est gardé",
+            "8.2 Les trois propositions écartées",
+            "8.3 La place de Darwin dans la généalogie des amputations",
+            "8.4 Cinq insuffisances de l'aléa pur",
+            "8.5 Les signatures conservées du vivant",
+            "8.6 L'évolution convergente comme preuve cadastrale",
+            "8.7 L'explosion cambrienne comme transition",
+            "8.8 Symbiogenèse, transferts horizontaux, épigénétique",
+            "8.9 L'extinction comme régulation",
+            "8.10 La grammaire cadastrale de l'évolution",
+            "8.11 Posture"
+          ]
+        },
+        {
+          "titre": "Chapitre 9. Le corps et la médecine : un chantier ouvert",
+          "fichier": "10-chapitre-9-le-corps-et-la-medecine-un-chantier-ouv.html",
+          "sections": [
+            "9.1 Le chantier que le livre n'opère pas",
+            "9.2 Pourquoi ne pas prescrire : les quatre verrous",
+            "9.3 Les six signatures de l'amputation médicale",
+            "9.4 Les directions du chantier",
+            "9.5 Sénescence, télomères, autophagie",
+            "9.6 Ce que le livre a fait, ce qu'il n'a pas fait",
+            "9.7 Les sept inscriptions du vivant",
+            "9.8 La lecture du cancer tenue par l'auteur"
+          ]
+        },
+        {
+          "titre": "Chapitre 10. La mort comme fiction linguistique : le repli du 9, le zéro-sceau",
+          "fichier": "11-chapitre-10-la-mort-comme-fiction-linguistique-le.html",
+          "sections": [
+            "10.1 La ligne du Registre : zéro-sceau, jamais exhaustion",
+            "10.2 Le 9 inconnu et la trace du 0",
+            "10.3 La fiction du substantif",
+            "10.4 L'amputation moderne de la mort",
+            "10.5 La définition cadastrale : le repli du 9",
+            "10.6 Le deuil comme apprentissage de la trace",
+            "10.7 La frontière épistémique",
+            "10.8 Convergences avec les traditions",
+            "10.9 La lignée et la transmission",
+            "10.10 Synthèse, protocoles, posture"
+          ]
+        },
+        {
+          "titre": "Chapitre 11. Le nombril et la cicatrice : l'auto-exhaustion relationnelle",
+          "fichier": "12-chapitre-11-le-nombril-et-la-cicatrice-l-auto-exha.html",
+          "sections": [
+            "11.1 Deux pathologies du rapport au pourquoi",
+            "11.2 La chaîne en trois temps",
+            "11.3 La figure : le nombril comme cicatrice",
+            "11.4 Décision d'auteur : le contre-poids retiré",
+            "11.5 Lecture cadastrale : le zéro d'exhaustion vivant",
+            "11.6 Rattachement et suites"
+          ]
+        },
+        {
+          "titre": "Chapitre 12. Le Corps Comptable : le surpoids intelligent",
+          "fichier": "13-chapitre-12-le-corps-comptable-le-surpoids-intelligent.html",
+          "sections": [
+            "Seuil",
+            "§0. Périmètre, registres et statuts",
+            "§1. L’axiome : tout dépôt est une tension non résolue",
+            "§2. La disjonction : machine ou mental",
+            "§3. La bénignité du local : le dépôt comme crédit",
+            "§4. Le support qui s’élargit : la loi de symétrie",
+            "§5. La loi de fusion : le vrai danger",
+            "§6. Les deux écoles comptables",
+            "§7. La conservation des canaux",
+            "§8. Énoncés falsifiables",
+            "§9. Appuis externes et convergences déclarées",
+            "§10. Limites et chantiers",
+            "Déclaration",
+            "Références"
+          ]
+        },
+        {
+          "titre": "Annexe A : Table des énoncés",
+          "fichier": "14-annexe-a-table-des-enonces.html",
+          "sections": []
+        },
+        {
+          "titre": "Annexe B : Retraits et corrections",
+          "fichier": "15-annexe-b-retraits-et-corrections.html",
+          "sections": []
+        },
+        {
+          "titre": "Annexe C : Sources fusionnées",
+          "fichier": "16-annexe-c-sources-fusionnees.html",
+          "sections": []
+        },
+        {
+          "titre": "Annexe D : Vérifications refaites",
+          "fichier": "17-annexe-d-verifications-refaites.html",
+          "sections": []
+        }
+      ],
+      "version": "1.0",
+      "date": "2026-10"
+    },
+    {
+      "id": "V10_La_Conscience_et_la_Peine",
+      "numero": 10,
+      "slug": "v10-la-conscience-et-la-peine",
+      "titre": "La Conscience et la Peine",
+      "sous_titre": "Conscience, automatisme, inconscient ; la panique et la honte ; la peine comme perte d'espoir",
+      "resume_fr": "Six pièces du corpus ARC consacrées à l'esprit, réunies en un livre. Une opération unique, la différenciation, donne trois régimes : accomplie, elle est la conscience ; reconduite sans être refaite, elle est l'automatisme ; empêchée, elle est l'inconscient. Le volume en tire une lecture de la crise de panique (« une peine dont on a effacé l'adresse ») et de la honte, puis de la peine comme perte d'espoir, et la conscience native, la marche et l'empathie. Il relit aussi l'EMDR : la douleur accumulée par des blessures semblables grandit, le souvenir non, et l'esprit agrandit le souvenir à la hauteur de la souffrance ; la thérapie ne réduit pas le souvenir, elle lui rend sa taille. Les propositions sont structurelles, accompagnées de prédictions qui pourraient les réfuter. Le corpus ne conteste aucun diagnostic et ne conseille aucun traitement : ces lectures ne remplacent aucun soin, et les causes organiques des crises de panique relèvent d'abord d'un examen médical.",
+      "abstract_en": "Six pieces of the ARC corpus devoted to the mind, gathered into one book. A single operation, differentiation, yields three regimes: completed, it is consciousness; carried forward without being redone, it is automatism; suspended, it is the unconscious. From this the volume draws a reading of panic attacks (\"a grief whose address has been erased\") and of shame, then of grief as loss of hope, and of native consciousness, walking and empathy. It also rereads EMDR: pain accumulated through similar wounds grows while the memory does not, and the mind enlarges the memory to the height of the suffering; the therapy does not shrink the memory, it restores its size. The propositions are structural and come with predictions that could refute them. The corpus contests no diagnosis and recommends no treatment: these readings replace no care, and organic causes of panic attacks are first a matter for medical examination.",
+      "mots_cles_fr": [
+        "conscience",
+        "inconscient",
+        "automatisme",
+        "crise de panique",
+        "EMDR",
+        "mémoire",
+        "honte",
+        "peine",
+        "empathie",
+        "philosophie de l'esprit"
+      ],
+      "keywords_en": [
+        "consciousness",
+        "unconscious",
+        "automatism",
+        "panic attack",
+        "EMDR",
+        "memory",
+        "shame",
+        "grief",
+        "empathy",
+        "philosophy of mind"
+      ],
+      "pages": 186,
+      "mots": 77176,
+      "pdf": "pdf/ARC_Volume_10_la_conscience_et_la_peine.pdf",
+      "html": "volumes/v10-la-conscience-et-la-peine/index.html",
+      "chapitres": [
+        {
+          "titre": "Avant-propos",
+          "fichier": "01-avant-propos.html",
+          "sections": []
+        },
+        {
+          "titre": "Première partie. Conscience, automatisme, inconscient",
+          "fichier": "02-premiere-partie-conscience-automatisme-inconscient.html",
+          "sections": []
+        },
+        {
+          "titre": "Chapitre 1. Une alarme sans objet, et l'opération unique",
+          "fichier": "03-chapitre-1-une-alarme-sans-objet-et-l-operation-un.html",
+          "sections": [
+            "1.1 Le chemin du traité",
+            "1.2 Le résumé du traité en quatre propositions",
+            "1.3 Périmètre, registres et statuts du traité",
+            "1.4 Différencier",
+            "1.5 La condition de position : l'adresse",
+            "1.6 La condition de différentiel"
+          ]
+        },
+        {
+          "titre": "Chapitre 2. Le régime accompli : la conscience",
+          "fichier": "04-chapitre-2-le-regime-accompli-la-conscience.html",
+          "sections": [
+            "2.1 La reconnaissance comme troisième terme",
+            "2.2 L'auto-observation est requise par l'agir",
+            "2.3 Le tronc et les branches",
+            "2.4 La même opération vue du dehors : la conscience native comme projection et réflexion",
+            "2.5 Le figement : la lecture historique du Livre V"
+          ]
+        },
+        {
+          "titre": "Chapitre 3. Le régime empêché : l'inconscient dynamique",
+          "fichier": "05-chapitre-3-le-regime-empeche-l-inconscient-dynamiq.html",
+          "sections": [
+            "3.1 Décision terminologique",
+            "3.2 Ce qui manque n'est pas le contenu, c'est la position",
+            "3.3 Trois états de l'accès",
+            "3.4 Ce que la définition classique laisse ouvert"
+          ]
+        },
+        {
+          "titre": "Chapitre 4. Le régime scellé : l'automatisme, et les deux zéros",
+          "fichier": "06-chapitre-4-le-regime-scelle-l-automatisme-et-les-d.html",
+          "sections": [
+            "4.1 Il n'y a pas d'automatisme au sens d'un hors-système",
+            "4.2 Le sceau",
+            "4.3 Là où le différentiel est nul, rien ne se libère",
+            "4.4 Deux zéros de conditions distinctes",
+            "4.5 L'usurpation de zéro : le verrou et la clé"
+          ]
+        },
+        {
+          "titre": "Chapitre 5. La capacité, l'évitement, et la taxonomie complète",
+          "fichier": "07-chapitre-5-la-capacite-l-evitement-et-la-taxonomie.html",
+          "sections": [
+            "5.1 Le troisième cas : la capacité insuffisante",
+            "5.2 Le quatrième cas : l'opération déclinée",
+            "5.3 La taxonomie complète",
+            "5.4 La lecture affective de la flèche"
+          ]
+        },
+        {
+          "titre": "Chapitre 6. La fuite, les deux organes, et la boucle de la charge",
+          "fichier": "08-chapitre-6-la-fuite-les-deux-organes-et-la-boucle.html",
+          "sections": [
+            "6.1 La fuite, et les deux organes",
+            "6.2 Les deux méthodes de distribution",
+            "6.3 La boucle : de la charge à la capacité"
+          ]
+        },
+        {
+          "titre": "Chapitre 7. Ce qu'est la honte : un affect à deux positions",
+          "fichier": "09-chapitre-7-ce-qu-est-la-honte-un-affect-a-deux-pos.html",
+          "sections": [
+            "7.1 Ce que le mot honte désigne, et ce qu'il ne désigne pas",
+            "7.2 Un affect à deux positions",
+            "7.3 La honte et la peine : un seul terme les distingue",
+            "7.4 Qui peut occuper la seconde position",
+            "7.5 Ce que doit être l'exposition"
+          ]
+        },
+        {
+          "titre": "Chapitre 8. La chaîne : deux transitions, un cumul, un faux regard",
+          "fichier": "10-chapitre-8-la-chaine-deux-transitions-un-cumul-un.html",
+          "sections": [
+            "8.1 Deux transitions et le statut de la honte",
+            "8.2 L'inconscient est un cumul, non une unité",
+            "8.3 Le faux regard, et la fabrication de la seconde position",
+            "8.4 Une opération inachevée demeure en demande"
+          ]
+        },
+        {
+          "titre": "Chapitre 9. L'opérateur : l'affect qui se cache lui-même",
+          "fichier": "11-chapitre-9-l-operateur-l-affect-qui-se-cache-lui-m.html",
+          "sections": [
+            "9.1 Un affect qui se cache lui-même",
+            "9.2 Les trois conditions, et le test du concurrent",
+            "9.3 Le dégoût : la même relation depuis l'autre pôle",
+            "9.4 La honte reçue est un régime accompli",
+            "9.5 Pourquoi la belle face",
+            "9.6 Ce que l'opérateur coupe en plus",
+            "9.7 Un appui expérimental sur l'existence d'un opérateur"
+          ]
+        },
+        {
+          "titre": "Chapitre 10. L'inconscient est relationnel",
+          "fichier": "12-chapitre-10-l-inconscient-est-relationnel.html",
+          "sections": [
+            "10.1 L'opérateur se règle sur le regard",
+            "10.2 Local et global",
+            "10.3 Le test",
+            "10.4 Conséquence sur le tiers"
+          ]
+        },
+        {
+          "titre": "Chapitre 11. La conséquence lourde, et la fenêtre développementale",
+          "fichier": "13-chapitre-11-la-consequence-lourde-et-la-fenetre-de.html",
+          "sections": [
+            "11.1 Ce qui est nécessaire et ce qui ne l'est pas",
+            "11.2 Le constat lui-même est conscient",
+            "11.3 L'inconscient est un accident, non une structure",
+            "11.4 Ce que devient la connaissance de soi",
+            "11.5 La fenêtre développementale et la fonction d'indexation",
+            "11.6 Le trauma inversé de fenêtre",
+            "11.7 L'opérateur de fenêtre généralisé"
+          ]
+        },
+        {
+          "titre": "Chapitre 12. Les guichets : énoncés falsifiables, limites, conclusion",
+          "fichier": "14-chapitre-12-les-guichets-enonces-falsifiables-limi.html",
+          "sections": [
+            "12.1 Règles contre la circularité",
+            "12.2 L'énoncé central",
+            "12.3 Les dix énoncés dérivés",
+            "12.4 Limites et chantiers",
+            "12.5 Conclusion de la première partie",
+            "12.6 Appendice : généalogie d'un postulat, le mot avant la chose",
+            "12.7 Appendice : appuis expérimentaux vérifiés, et réserves",
+            "12.8 Références de la première partie"
+          ]
+        },
+        {
+          "titre": "Deuxième partie. Crise de panique ou de honte ?",
+          "fichier": "15-deuxieme-partie-crise-de-panique-ou-de-honte.html",
+          "sections": []
+        },
+        {
+          "titre": "Chapitre 13. Le titre est une question",
+          "fichier": "16-chapitre-13-le-titre-est-une-question.html",
+          "sections": [
+            "13.1 Avant-propos de la source : le titre est une question",
+            "13.2 Périmètre, registres et position",
+            "13.3 Note terminologique : le mot panique ne nomme aucune cause",
+            "13.4 Ce que la clinique établit",
+            "13.5 Ce qui reste sans explication : quatre questions"
+          ]
+        },
+        {
+          "titre": "Chapitre 14. La marque, sa lecture, et l'effaceur d'index",
+          "fichier": "17-chapitre-14-la-marque-sa-lecture-et-l-effaceur-d-i.html",
+          "sections": [
+            "14.1 La marque à deux faces",
+            "14.2 La lecture, l'adresse qu'elle exige, et le tiers",
+            "14.3 L'effaceur d'index",
+            "14.4 Le court-circuit",
+            "14.5 Le recrutement",
+            "14.6 La fausse assurance",
+            "14.7 La honte saine, et la condition exacte de l'effacement"
+          ]
+        },
+        {
+          "titre": "Chapitre 15. Le mécanisme de la crise : inscription, armement, décharge",
+          "fichier": "18-chapitre-15-le-mecanisme-de-la-crise-inscription-a.html",
+          "sections": [
+            "15.1 Les trois temps",
+            "15.2 Trois conséquences immédiates",
+            "15.3 La condition d'accès",
+            "15.4 Ce que le mécanisme prédit sur la carte",
+            "15.5 Objection anticipée : la provocation",
+            "15.6 La modulation hormonale, et ce qu'elle démasque"
+          ]
+        },
+        {
+          "titre": "Chapitre 16. Les quatre configurations, l'anxiété, et l'alarme qui se termine",
+          "fichier": "19-chapitre-16-les-quatre-configurations-l-anxiete-et.html",
+          "sections": [
+            "16.1 Les quatre défauts de l'auto-indexation",
+            "16.2 L'axe : de la saudade à la panique",
+            "16.3 L'anxiété n'est pas la panique",
+            "16.4 L'alarme qui se termine"
+          ]
+        },
+        {
+          "titre": "Chapitre 17. L'organe supprimé",
+          "fichier": "20-chapitre-17-l-organe-supprime.html",
+          "sections": [
+            "17.1 Une fonction, décrite hors de toute question de foi",
+            "17.2 La thèse, et sa garde",
+            "17.3 Ce qui occupe la place vide",
+            "17.4 La banalisation, et ce qu'elle referme",
+            "17.5 Les régimes d'expression"
+          ]
+        },
+        {
+          "titre": "Chapitre 18. Ce qui est déposé à la mesure, et la réponse au titre",
+          "fichier": "21-chapitre-18-ce-qui-est-depose-a-la-mesure-et-la-re.html",
+          "sections": [
+            "18.1 Les énoncés déposés",
+            "18.2 Limites et chantiers du texte",
+            "18.3 Conclusion du texte sur la panique",
+            "18.4 Le souvenir mis à l'échelle de la douleur, et ce que fait l'EMDR",
+            "18.5 Références de la deuxième partie"
+          ]
+        },
+        {
+          "titre": "Troisième partie. La peine comme perte d'espoir",
+          "fichier": "22-troisieme-partie-la-peine-comme-perte-d-espoir.html",
+          "sections": []
+        },
+        {
+          "titre": "Chapitre 19. Un affect sans nom propre : douleur et peine",
+          "fichier": "23-chapitre-19-un-affect-sans-nom-propre-douleur-et-p.html",
+          "sections": [
+            "19.1 Trois heures du matin",
+            "19.2 Un affect sans nom propre",
+            "19.3 Décision terminologique",
+            "19.4 Douleur et peine"
+          ]
+        },
+        {
+          "titre": "Chapitre 20. L'objet de la peine : l'espoir déposé",
+          "fichier": "24-chapitre-20-l-objet-de-la-peine-l-espoir-depose.html",
+          "sections": [
+            "20.1 La thèse",
+            "20.2 Trois conséquences immédiates",
+            "20.3 Divergence : Freud et l'objet perdu"
+          ]
+        },
+        {
+          "titre": "Chapitre 21. La peine appartient au registre de la peur",
+          "fichier": "25-chapitre-21-la-peine-appartient-au-registre-de-la.html",
+          "sections": [
+            "21.1 Le fait phénoménologique",
+            "21.2 L'explication",
+            "21.3 Quatre appuis convergents, sans que la thèse en dépende",
+            "21.4 Le mensonge qu'elle raconte",
+            "21.5 Divergence : Spinoza et la symétrie de l'espoir et de la crainte"
+          ]
+        },
+        {
+          "titre": "Chapitre 22. L'inscription contre la blessure",
+          "fichier": "26-chapitre-22-l-inscription-contre-la-blessure.html",
+          "sections": [
+            "22.1 Une erreur de catégorie",
+            "22.2 L'effet iatrogène du mot",
+            "22.3 Convergence : la thérapie narrative",
+            "22.4 L'ordre des opérations : ce que la relecture suppose (thèse corrigée)"
+          ]
+        },
+        {
+          "titre": "Chapitre 23. Les trois destins de la peine : tristesse, mélancolie, saudade",
+          "fichier": "27-chapitre-23-les-trois-destins-de-la-peine-tristess.html",
+          "sections": [
+            "23.1 La tristesse : les cycles empilés",
+            "23.2 La mélancolie : l'inachèvement choisi",
+            "23.3 La saudade : le cycle accompli et le lien conservé",
+            "23.4 Saudade et mélancolie : cousins d'apparence"
+          ]
+        },
+        {
+          "titre": "Chapitre 24. La honte comme verrou du cycle",
+          "fichier": "28-chapitre-24-la-honte-comme-verrou-du-cycle.html",
+          "sections": [
+            "24.1 Le problème, et l'hypothèse",
+            "24.2 Appuis",
+            "24.3 Objection anticipée : l'anxiété d'attachement",
+            "24.4 La nécessité du tiers",
+            "24.5 Le confessionnal, et la divergence avec Foucault",
+            "24.6 Un cas limite : la peine désadressée"
+          ]
+        },
+        {
+          "titre": "Chapitre 25. La destination : le rapatriement de l'espoir",
+          "fichier": "29-chapitre-25-la-destination-le-rapatriement-de-l-es.html",
+          "sections": [
+            "25.1 L'espoir captif",
+            "25.2 Le rapatriement",
+            "25.3 La troisième attache : la reconnaissance",
+            "25.4 Ce qui se perd d'un couple : le point de moindre tension",
+            "25.5 Ce que le rapatriement ne signifie pas",
+            "25.6 Ce qu'on se dit de travers",
+            "25.7 Ce qu'on peut promettre",
+            "25.8 En résumé, selon le texte court"
+          ]
+        },
+        {
+          "titre": "Chapitre 26. Limites, énoncés falsifiables et positionnement de l'essai",
+          "fichier": "30-chapitre-26-limites-enonces-falsifiables-et-positi.html",
+          "sections": [
+            "26.1 Ce que l'essai n'affirme pas",
+            "26.2 Les énoncés falsifiables",
+            "26.3 Tableau de positionnement",
+            "26.4 Conclusion de l'essai",
+            "26.5 Références de la troisième partie"
+          ]
+        },
+        {
+          "titre": "Quatrième partie. La conscience native (Bible Quantique, Livre V)",
+          "fichier": "31-quatrieme-partie-la-conscience-native-bible-quanti.html",
+          "sections": []
+        },
+        {
+          "titre": "Chapitre 27. Le reflet inverse, l'empathie, et l'inverse diabolisé",
+          "fichier": "32-chapitre-27-le-reflet-inverse-l-empathie-et-l-inve.html",
+          "sections": [
+            "27.1 Le retour réflexif doit être complet",
+            "27.2 La douleur de l'imaginé contraire",
+            "27.3 L'empathie comme pleine conscience",
+            "27.4 Les deux cercles refusés, et l'inverse diabolisé"
+          ]
+        },
+        {
+          "titre": "Chapitre 28. La marche : essai, erreur, directions, absorption, voyage",
+          "fichier": "33-chapitre-28-la-marche-essai-erreur-directions-abso.html",
+          "sections": [
+            "28.1 L'acquis se boucle par essai-erreur",
+            "28.2 Le bref test du pôle inverse",
+            "28.3 Apprendre à marcher par toutes les directions possibles",
+            "28.4 L'absorption, contre l'intelligence qui range tout",
+            "28.5 Voyager, c'est café, bar, restaurant",
+            "28.6 Coda du Livre V"
+          ]
+        },
+        {
+          "titre": "Annexe A : Table des énoncés",
+          "fichier": "34-annexe-a-table-des-enonces.html",
+          "sections": []
+        },
+        {
+          "titre": "Annexe B : Retraits et corrections",
+          "fichier": "35-annexe-b-retraits-et-corrections.html",
+          "sections": [
+            "Gravures du Registre des Erreurs",
+            "Corrections internes du traité (versions 1.1 à 2.6, juillet et août 2026)",
+            "Corrections du texte sur la panique et des textes sur la peine",
+            "Corrections du Livre V de la Bible Quantique (mai 2026)"
+          ]
+        },
+        {
+          "titre": "Annexe C : Sources fusionnées",
+          "fichier": "36-annexe-c-sources-fusionnees.html",
+          "sections": []
+        },
+        {
+          "titre": "Annexe D : Vérifications refaites",
+          "fichier": "37-annexe-d-verifications-refaites.html",
+          "sections": []
+        }
+      ],
+      "version": "1.0",
+      "date": "2026-10"
+    },
+    {
+      "id": "V11_La_Cite_et_le_Sens",
+      "numero": 11,
+      "slug": "v11-la-cite-et-le-sens",
+      "titre": "La Cité et le Sens",
+      "sous_titre": "La relation est l'identifiant : le pouvoir, la démocratie, l'héritage, la confession, le regard et l'empathie",
+      "resume_fr": "Ce que le corpus ARC dit de la vie commune et du sens. Une thèse traverse le volume : ce qui identifie un être n'est pas une substance qu'il contiendrait, mais la position qu'il occupe dans un tissu de relations ; couper la relation au nom de l'identité ne protège pas l'identité, cela efface l'adresse. Le volume la vérifie sur un dossier historique de sept siècles (la France jacobine, l'alliance anglo-portugaise, les colonisations et décolonisations, l'historiographie québécoise, la laïcité), puis en tire une philosophie politique : les deux politiques et le nœud de La Boétie, la démocratie, la gauche et la droite, la pierre et la bombe, l'héritage et la culture. Il traite enfin la confession, l'inversion du regard, l'indifférence et l'empathie, la saudade, la loi du tronc et le signal juste.",
+      "abstract_en": "What the ARC corpus says about common life and meaning. One thesis runs through the volume: what identifies a being is not a substance it would contain but the position it holds in a fabric of relations; cutting the relation in the name of identity does not protect identity, it erases the address. The volume tests this on a seven-century historical record (Jacobin France, the Anglo-Portuguese alliance, colonisation and decolonisation, Quebec historiography, secularism), then draws a political philosophy from it: the two politics and La Boétie's knot, democracy, left and right, the stone and the bomb, heritage and culture. It closes with confession, the inversion of the gaze, indifference and empathy, saudade, the law of the trunk and the right signal.",
+      "mots_cles_fr": [
+        "philosophie politique",
+        "relation",
+        "identité",
+        "démocratie",
+        "La Boétie",
+        "pouvoir",
+        "empathie",
+        "saudade",
+        "Québec",
+        "Portugal"
+      ],
+      "keywords_en": [
+        "political philosophy",
+        "relation",
+        "identity",
+        "democracy",
+        "La Boétie",
+        "power",
+        "empathy",
+        "saudade",
+        "Quebec",
+        "Portugal"
+      ],
+      "pages": 165,
+      "mots": 70387,
+      "pdf": "pdf/ARC_Volume_11_la_cite_et_le_sens.pdf",
+      "html": "volumes/v11-la-cite-et-le-sens/index.html",
+      "chapitres": [
+        {
+          "titre": "Avant-propos",
+          "fichier": "01-avant-propos.html",
+          "sections": []
+        },
+        {
+          "titre": "Chapitre 1. La thèse : la relation est l'identifiant",
+          "fichier": "02-chapitre-1-la-these-la-relation-est-l-identifiant.html",
+          "sections": [
+            "1.1 La thèse, forme faible et forme forte",
+            "1.2 Le cas qui occupe le dossier",
+            "1.3 Deux précisions qui ferment la thèse",
+            "1.4 Le verrou à deux pênes",
+            "1.5 Le principe unificateur et les trois mouvements",
+            "1.6 La méthode : quatre règles"
+          ]
+        },
+        {
+          "titre": "Chapitre 2. Le cas réalisé : la France jacobine et la généalogie du geste",
+          "fichier": "03-chapitre-2-le-cas-realise-la-france-jacobine-et-la.html",
+          "sections": [
+            "2.1 La France plurilingue que le centralisme a trouvée",
+            "2.2 L'enquête Grégoire et le tournant de 1794",
+            "2.3 L'exécution : l'école, le symbole, la honte (1794 à 1914)",
+            "2.4 Descartes : comprendre, c'est séparer",
+            "2.5 La Révolution : le point zéro réalisé",
+            "2.6 Napoléon : l'uniformisation comme machine d'État",
+            "2.7 La réfutation contemporaine : Savigny contre Thibaut (1814)",
+            "2.8 L'illusion de l'autofondation : du cogito au pouvoir constituant"
+          ]
+        },
+        {
+          "titre": "Chapitre 3. Le contre-modèle : Windsor, et le logiciel qu'on embarque",
+          "fichier": "04-chapitre-3-le-contre-modele-windsor-et-le-logiciel.html",
+          "sections": [
+            "3.1 Naissance et durée d'une alliance",
+            "3.2 Ce que le traité ne contient pas",
+            "3.3 La question décisive : comment la métropole pense la colonie",
+            "3.4 La direction donnée dès l'embarquement"
+          ]
+        },
+        {
+          "titre": "Chapitre 4. L'erreur de conversion : indépendance et souveraineté",
+          "fichier": "05-chapitre-4-l-erreur-de-conversion-independance-et.html",
+          "sections": [
+            "4.1 L'analyse conceptuelle",
+            "4.2 Le test empirique : de quoi vit le Québec",
+            "4.3 Le récit qui masque le mécanisme : une grille, deux peuples",
+            "4.4 L'objection sérieuse : la division linguistique du travail",
+            "4.5 L'objection positiviste : « l'indépendance n'est pas l'autarcie »",
+            "4.6 La souveraineté rendue à son sens : libre dans sa limite"
+          ]
+        },
+        {
+          "titre": "Chapitre 5. Comment les empires finissent",
+          "fichier": "06-chapitre-5-comment-les-empires-finissent.html",
+          "sections": [
+            "5.1 La sortie d'empire comme révélateur",
+            "5.2 La sortie britannique : le transfert négocié",
+            "5.3 Le contre-exemple intérieur : l'Irlande, ou le logiciel jacobin en anglais",
+            "5.4 La sortie française : la guerre contre la sortie elle-même",
+            "5.5 L'après-Algérie : le logiciel qui survit à l'empire, sur les deux rives",
+            "5.6 La paire ibérique : comptoir contre conquête",
+            "5.7 La loi du dossier, son protocole et sa réfutation"
+          ]
+        },
+        {
+          "titre": "Chapitre 6. La fabrique du récit et la laïcité de pureté",
+          "fichier": "07-chapitre-6-la-fabrique-du-recit-et-la-laicite-de-p.html",
+          "sections": [
+            "6.1 Comment naît un récit défensif",
+            "6.2 Deux mécanismes : amplifier, excommunier",
+            "6.3 La sélection comme système, et sa réplication dans les corpus",
+            "6.4 La laïcité de 1905 et son glissement",
+            "6.5 L'équation des deux sociétés"
+          ]
+        },
+        {
+          "titre": "Chapitre 7. Héritage, culture, langue",
+          "fichier": "08-chapitre-7-heritage-culture-langue.html",
+          "sections": [
+            "7.1 L'appareil racine appliqué au politique",
+            "7.2 La distinction fondatrice : culture contre héritage",
+            "7.3 Le Québec : une culture défendue, un héritage vécu",
+            "7.4 Windsor contre le centralisme, dans la grammaire des deux zéros",
+            "7.5 La langue à l'ère extraterritoriale"
+          ]
+        },
+        {
+          "titre": "Chapitre 8. Gauche et droite : une paire d'inversion non reconnue",
+          "fichier": "09-chapitre-8-gauche-et-droite-une-paire-d-inversion.html",
+          "sections": [
+            "8.1 Deux niveaux de diagnostic",
+            "8.2 La gauche intellectuelle : articuler sans opérer",
+            "8.3 La droite opératoire : opérer sans articuler",
+            "8.4 L'asymétrie et la projection mutuelle",
+            "8.5 La paire entière",
+            "8.6 Le retournement des pôles",
+            "8.7 La culture numérique segmentée et le combat fictif",
+            "8.8 La posture et l'aide"
+          ]
+        },
+        {
+          "titre": "Chapitre 9. Le Livre bleu lu par la grille (2026)",
+          "fichier": "10-chapitre-9-le-livre-bleu-lu-par-la-grille-2026.html",
+          "sections": [
+            "9.1 Quatre traits",
+            "9.2 Ce que le Livre bleu contient de modéré, et ce que cela établit",
+            "9.3 Le critère d'Arendt : de quoi se nourrit un projet ?",
+            "9.4 Le droit comparé de la sécession : trois cours, trois logiciels",
+            "9.5 La contrepartie canadienne et le critère de réparabilité",
+            "9.6 Le contrefactuel central",
+            "9.7 Le test autochtone : la relation dans la relation",
+            "9.8 La démonstration en forme brève"
+          ]
+        },
+        {
+          "titre": "Chapitre 10. Les deux modèles : tableau, proposition, échelle de la décision",
+          "fichier": "11-chapitre-10-les-deux-modeles-tableau-proposition-e.html",
+          "sections": [
+            "10.1 Le tableau comparatif",
+            "10.2 Ce que le dossier attaque, et ce qu'il n'attaque pas",
+            "10.3 Premier temps : le fédéralisme multinational",
+            "10.4 Second temps : la décision aux deux échelles où la relation est réelle",
+            "10.5 Le dernier mot"
+          ]
+        },
+        {
+          "titre": "Chapitre 11. Les deux politiques et le nœud de La Boétie",
+          "fichier": "12-chapitre-11-les-deux-politiques-et-le-nud-de-la-bo.html",
+          "sections": [
+            "11.1 Un mot, deux régimes",
+            "11.2 Le pouvoir n'existe que par la peur",
+            "11.3 La peur primaire : le deux lu comme duel",
+            "11.4 Le corps : la preuve horizontale",
+            "11.5 Le nœud de La Boétie : deux découvertes, trois trous",
+            "11.6 Le régime des partis : l'affrontement institutionnalisé",
+            "11.7 Désamputer le politique"
+          ]
+        },
+        {
+          "titre": "Chapitre 12. La démocratie n'était pas de l'État",
+          "fichier": "13-chapitre-12-la-democratie-n-etait-pas-de-l-etat.html",
+          "sections": [
+            "12.1 La lignée des contenants : cinq formes, un seul geste",
+            "12.2 La confusion de registre",
+            "12.3 L'élection comme carrage : le |ψ|² civique",
+            "12.4 Le carré du social : la plateforme contre la relation",
+            "12.5 Les mutations observables : la légitimité change de source",
+            "12.6 Les deux conditions nouvelles : vitesse et vérification",
+            "12.7 Le garde-fou : la condition du centre vide",
+            "12.8 Prédictions",
+            "12.9 Ce que la pièce n'affirme pas"
+          ]
+        },
+        {
+          "titre": "Chapitre 13. La cité fractale",
+          "fichier": "14-chapitre-13-la-cite-fractale.html",
+          "sections": [
+            "13.1 La fractale comme auto-similarité d'opérateur",
+            "13.2 Les quatre paires sociales",
+            "13.3 Les régimes comme configurations",
+            "13.4 La cité comme cadastre primaire",
+            "13.5 La monnaie : cadastre fermé ou algèbre ouverte",
+            "13.6 Le droit comme grammaire cadastrale",
+            "13.7 La langue comme inscription primaire",
+            "13.8 Les amputations à l'échelle collective",
+            "13.9 La famille et l'entreprise, cellules fractales",
+            "13.10 Des inscriptions préservées ailleurs",
+            "13.11 Protocoles falsifiables et posture"
+          ]
+        },
+        {
+          "titre": "Chapitre 14. Les avatars de la délégation et le verrou de réversibilité",
+          "fichier": "15-chapitre-14-les-avatars-de-la-delegation-et-le-ver.html",
+          "sections": [
+            "14.1 Le principe d'antériorité de la cohérence",
+            "14.2 La délégation : nécessaire, et ses trois propriétés",
+            "14.3 Les neuf avatars et leurs paires",
+            "14.4 Les six pathologies de la délégation",
+            "14.5 L'État, avatar central",
+            "14.6 Trois cas documentés",
+            "14.7 La monnaie, le savoir et les avatars supra-étatiques",
+            "14.8 Le verrou de réversibilité",
+            "14.9 Protocoles et posture"
+          ]
+        },
+        {
+          "titre": "Chapitre 15. La pierre et la bombe",
+          "fichier": "16-chapitre-15-la-pierre-et-la-bombe.html",
+          "sections": [
+            "15.1 Statut et règle : le pourquoi ne se décrète pas",
+            "15.2 La thèse",
+            "15.3 Premier mouvement : l'arme se retourne en dissuasion",
+            "15.4 Deuxième mouvement : la course tisse des dépendances",
+            "15.5 Troisième mouvement : la roche portait déjà la loi",
+            "15.6 Ce que la lecture affirme et n'affirme pas"
+          ]
+        },
+        {
+          "titre": "Chapitre 16. L'animal, l'enfant et la guerre",
+          "fichier": "17-chapitre-16-l-animal-l-enfant-et-la-guerre.html",
+          "sections": [
+            "16.1 Inverses, non inférieurs",
+            "16.2 L'animal suit sa conscience ; l'enfant aussi",
+            "16.3 Il sait qu'il a mal mais ne se demande pas pourquoi",
+            "16.4 Il n'est jamais en guerre",
+            "16.5 L'individu égaré et le groupe",
+            "16.6 L'agressivité est un mécanisme d'ignorance",
+            "16.7 Ne pas paniquer en panique"
+          ]
+        },
+        {
+          "titre": "Chapitre 17. La confession sacrifiée",
+          "fichier": "18-chapitre-17-la-confession-sacrifiee.html",
+          "sections": [
+            "17.1 L'organe disparu",
+            "17.2 Les quatre fonctions emboîtées",
+            "17.3 La fonction sous les fonctions : la validation",
+            "17.4 Ce que Maslow a oublié",
+            "17.5 Le secret : la souveraineté de la lecture",
+            "17.6 La confession inversée",
+            "17.7 Ce qu'il reste à reconstruire"
+          ]
+        },
+        {
+          "titre": "Chapitre 18. L'inversion du regard",
+          "fichier": "19-chapitre-18-l-inversion-du-regard.html",
+          "sections": [
+            "18.1 La thèse : le comportement est invariant, le regard tourne",
+            "18.2 Les deux paradoxes inversés",
+            "18.3 Pourquoi l'illusion ne se voit pas",
+            "18.4 La racine : l'inverse refoulé",
+            "18.5 La preuve par neuf : la métaphore prise au mot",
+            "18.6 Douleur et souffrance : une distinction nécessaire",
+            "18.7 Réintégrer l'inverse"
+          ]
+        },
+        {
+          "titre": "Chapitre 19. L'indifférence et l'empathie",
+          "fichier": "20-chapitre-19-l-indifference-et-l-empathie.html",
+          "sections": [
+            "19.1 Le mot",
+            "19.2 Le cadastre n'a aucune position indifférente",
+            "19.3 Le nom mathématique de l'indifférence",
+            "19.4 La fabrique",
+            "19.5 Les trois pères",
+            "19.6 Ce que l'indifférence mesure",
+            "19.7 Deux indifférences, comme deux zéros",
+            "19.8 L'inverse de l'indifférence",
+            "19.9 Le doute et la société du jugement",
+            "19.10 Ce que la pièce ne dit pas",
+            "19.11 Pour un enfant"
+          ]
+        },
+        {
+          "titre": "Chapitre 20. Le signal juste et le pointeur faux",
+          "fichier": "21-chapitre-20-le-signal-juste-et-le-pointeur-faux.html",
+          "sections": [
+            "20.1 La colonne unique",
+            "20.2 Le seuil est dans le cadre, pas dans le trait",
+            "20.3 Le signal juste et la cible fausse",
+            "20.4 Le capteur social : puissance réelle, conditions strictes",
+            "20.5 Les factures : ce que le signal détectait réellement",
+            "20.6 La régulation par le dedans",
+            "20.7 Ce que la pièce n'affirme pas, et son ordre"
+          ]
+        },
+        {
+          "titre": "Chapitre 21. La saudade et la loi du tronc",
+          "fichier": "22-chapitre-21-la-saudade-et-la-loi-du-tronc.html",
+          "sections": [
+            "21.1 La saudade : la face de lumière",
+            "21.2 La loi du tronc"
+          ]
+        },
+        {
+          "titre": "Chapitre 22. Ce que l'auteur tient : le pouvoir, le code, le sens",
+          "fichier": "23-chapitre-22-ce-que-l-auteur-tient-le-pouvoir-le-co.html",
+          "sections": [
+            "22.1 Le pouvoir et le code (13 octobre 2026)",
+            "22.2 Le modèle de changement : le figuier étrangleur (16 septembre 2026)",
+            "22.3 La Bible, lecture contextuelle du code (14 octobre 2026)",
+            "22.4 Le bien et le mal",
+            "22.5 La marche",
+            "22.6 La phrase du centre (15 octobre 2026)",
+            "22.7 Une volonté"
+          ]
+        },
+        {
+          "titre": "Annexe A : Table des énoncés",
+          "fichier": "24-annexe-a-table-des-enonces.html",
+          "sections": []
+        },
+        {
+          "titre": "Annexe B : Retraits et corrections",
+          "fichier": "25-annexe-b-retraits-et-corrections.html",
+          "sections": [
+            "B.1 Récits de travail retirés",
+            "B.2 Statuts rétrogradés",
+            "B.3 Chiffres et faits corrigés",
+            "B.4 Contradictions tranchées",
+            "B.5 Typographie et vocabulaire"
+          ]
+        },
+        {
+          "titre": "Annexe C : Sources fusionnées",
+          "fichier": "26-annexe-c-sources-fusionnees.html",
+          "sections": []
+        },
+        {
+          "titre": "Annexe D : Vérifications refaites",
+          "fichier": "27-annexe-d-verifications-refaites.html",
+          "sections": []
+        },
+        {
+          "titre": "Colophon",
+          "fichier": "28-colophon.html",
+          "sections": []
+        }
+      ],
+      "version": "1.0",
+      "date": "2026-10"
+    }
+  ],
+  "pages_total": 1714
+}

@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<link rel="canonical" href="https://bastosfilipe.com/arc/volumes/v04-la-theorie-des-nombres/26-chapitre-18-l-enigme-196-pourquoi-un-nombre-ne-fer.html">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chapitre 18. L&#x27;énigme 196 : pourquoi un nombre ne ferme jamais · La Théorie des Nombres · Corpus ARC</title>
+<meta name="description" content="La Théorie des Nombres, volume 4 du corpus ARC de Filipe Bastos. Chapitre 18. L&#x27;énigme 196 : pourquoi un nombre ne ferme jamais.">
+<meta name="keywords" content="delfine, nombres premiers, grille 6k ± 1, Collatz, Goldbach, nombres parfaits, nombres jumeaux, racine digitale, 24, corpus ARC, Filipe Bastos">
+<meta name="author" content="Filipe Bastos">
+<meta name="license" content="https://creativecommons.org/licenses/by/4.0/deed.fr">
+<link rel="stylesheet" href="../../assets/arc.css">
+</head>
+<body>
+<nav class="crumbs"><a href="../../index.html">Corpus ARC</a> / <a href="index.html">Volume 4 · La Théorie des Nombres</a></nav>
+<main class="chapter">
+<h1 id="chapitre-18.-lenigme-196-pourquoi-un-nombre-ne-ferme-jamais">Chapitre 18. L’énigme 196 : pourquoi un nombre ne ferme jamais</h1>
+<p>Prenons un nombre, ajoutons-lui son renversé (59 + 95 = 154), recommençons (154 + 451 = 605, 605 + 506 = 1111) : on tombe vite sur un palindrome, un nombre qui se lit pareil dans les deux sens. Presque tous les nombres ferment ainsi. 196, lui, ne ferme jamais : on l’a poussé jusqu’à des milliards de chiffres sans atteindre de palindrome, et personne ne sait le démontrer. Ce chapitre ne le démontre pas non plus. Il montre que l’addition au renversé est l’opération conjuguée de la routine de Kaprekar (qui soustrait le renversé et fait tout descendre), que la différence vit sur le réseau du 9 et la somme sur les paliers 11, 101, 1001, que la racine d’une trajectoire double à chaque pas et tourne pour toujours sur le cycle 1, 2, 4, 8, 7, 5 (les chiffres de 142857), que les cinq premiers fugitifs fusionnent en un seul fil, et que le mécanisme de la fuite est la retenue perpétuelle. Il propose enfin une lecture : 196 est le nombre qui n’a pas reçu le demi (pièce <em>L’Énigme 196</em>, juin 2026, volet II du triptyque).</p>
+<p><strong>F : l’état de la question.</strong> L’opération dite de Lychrel (le terme est de W. VanLandingham, années 2000) forme n + r(n), où r(n) est le renversé digital de n, et itère en quête d’un palindrome. Le plus petit candidat qui ne ferme pas est 196 ; aucun palindrome n’a jamais été atteint depuis cette graine, sur des trajectoires calculées jusqu’à des milliards de chiffres. Le fait demeure conjectural : aucune démonstration n’existe dans le cadre standard (le problème relève du folklore des mathématiques récréatives ; la routine conjuguée est celle de D. R. Kaprekar, « Another Solitaire Game », <em>Scripta Mathematica</em> 15, 1949).</p>
+<h2 id="les-deux-echafaudages-le-9-a-la-difference-le-11-a-la-somme">18.1 Les deux échafaudages : le 9 à la différence, le 11 à la somme</h2>
+<p><strong>V4.18.1 (Th) : la loi des miroirs.</strong> Pour deux chiffres a, b (n = 10a + b, r(n) = 10b + a) :</p>
+<blockquote>
+<p>r(n) − n = 9(b − a), n + r(n) = 11(a + b).</p>
+</blockquote>
+<p>La différence vit sur le réseau du 9 ; la somme vit sur le palier du 11. Aux largeurs supérieures, les coefficients de la somme suivent la suite des paliers :</p>
+<table>
+<thead>
+<tr class="header">
+<th>largeur</th>
+<th>n + r(n)</th>
+<th>palier dominant</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>2</td>
+<td>11(a + b)</td>
+<td>11</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>101(a + c) + 20b</td>
+<td>101</td>
+</tr>
+<tr class="odd">
+<td>4</td>
+<td>1001(a + d) + 110(b + c)</td>
+<td>1 001</td>
+</tr>
+</tbody>
+</table>
+<p>Aux largeurs paires, la somme est de surcroît divisible par 11 sans exception (1 001 = 7 × 11 × 13 et 110 = 11 × 10 ; vérifié sur les 9 000 nombres de largeur 4, refait pour ce volume), en accord avec le fait classique que tout palindrome de longueur paire est divisible par 11.</p>
+<p><strong>V4.18.2 (L) : la soustraction, moteur de la mémoire ; l’addition, moteur de l’interface.</strong> Les paliers 11, 101, 1 001, ceux-là mêmes qui scandent les descentes cosmiques du corpus (Volume 8), surgissent spontanément de l’addition au renversé. La cible de l’opération, le palindrome, est la forme invariante par renversement : la fermeture de l’interface, comme le point fixe de Kaprekar était le dépôt de la mémoire. Le 99 = 9 × 11, unité des barreaux du volet I, était le produit des deux échafaudages que les deux opérations se partagent ici. Kaprekar soustrait et fait descendre ; Lychrel additionne et fait monter : même paire (n, r(n)), opération conjuguée.</p>
+<h2 id="le-doublement-de-la-racine-le-cycle-142857">18.2 Le doublement de la racine : le cycle 142857</h2>
+<p><strong>V4.18.3 (Th) : la racine double à chaque pas.</strong> Le renversement préserve les chiffres, donc la racine : DR(r(n)) = DR(n). Par conséquent DR(n + r(n)) = DR(2n) : la racine d’une trajectoire de Lychrel double à chaque pas. Hors de l’axe, le doublement parcourt le cycle {1, 2, 4, 8, 7, 5}, les chiffres de la période de 1/7, 142 857 ; sur l’axe, il oscille 3 ↔︎ 6 et fixe le 9. Sur la trajectoire de 196 (racine initiale 7) : 7 → 5 → 1 → 2 → 4 → 8 → 7 → 5 → 1 → 2 → 4 → 8 → 7 … Le cycle exact, sans fin (vérifié sur douze pas dans la pièce, refait pour ce volume).</p>
+<p><strong>V4.18.4 (L) : la clôture et la circulation.</strong> Le contraste avec le volet I est total : Kaprekar effondre toute racine sur le 9 en un seul pas et l’y fixe ; Lychrel fait tourner le cycle fertile indéfiniment. La descente inscrit la mémoire et s’immobilise ; la montée court le cycle des opérateurs et ne s’arrête, pour le fugitif, jamais. Les deux dynamiques conjuguées réalisent les deux régimes du cadastre : la clôture et la circulation.</p>
+<h2 id="les-fugitifs-a-trois-chiffres-un-fil-cinq-portes">18.3 Les fugitifs à trois chiffres : un fil, cinq portes</h2>
+<p><strong>V4.18.5 (Th) : les treize candidats.</strong> Les candidats de Lychrel inférieurs à 1 000 (aucun palindrome en 1 000 itérations) sont au nombre de treize :</p>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>candidat</th>
+<th>196</th>
+<th>295</th>
+<th>394</th>
+<th>493</th>
+<th>592</th>
+<th>689</th>
+<th>691</th>
+<th>788</th>
+<th>790</th>
+<th>879</th>
+<th>887</th>
+<th>978</th>
+<th>986</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>DR</td>
+<td>7</td>
+<td>7</td>
+<td>7</td>
+<td>7</td>
+<td>7</td>
+<td>5</td>
+<td>7</td>
+<td>5</td>
+<td>7</td>
+<td>6</td>
+<td>5</td>
+<td>6</td>
+<td>5</td>
+</tr>
+</tbody>
+</table>
+<p>Sous 10 000, ils sont 249 (refait pour ce volume, la liste des treize et le compte de 249).</p>
+<p><strong>V4.18.6 (Th) : cinq portes espacées de 99, un seul fil.</strong> Les cinq premiers sont espacés de 99 exactement, le barreau de l’échelle du volet I, et le mécanisme est démontrable : à largeur 3, ajouter 99 à n (un pas de centaine en plus, un pas d’unité en moins) retranche 99 à r(n), laissant la somme invariante. Les cinq graines fusionnent donc en un seul fil dès le premier pas : 196 + 691 = 295 + 592 = 394 + 493 = 887. Cinq portes d’entrée, espacées du barreau de Kaprekar, sur une même trajectoire de fuite, qui passe par 887, lui-même candidat, puis 887 + 788 = 1 675, et ne ferme jamais.</p>
+<p><strong>V4.18.7 (Th) : les racines des fugitifs.</strong> Les racines des treize candidats appartiennent toutes à {5, 6, 7} : aucun fugitif sous 1 000 ne porte 1, 2, 3, 4, 8 ni 9. Les porteurs de 5 et 7 courent le cycle fertile ; les deux porteurs de 6 (879 et 978) sont les plus étranges : leur doublement les enferme sur l’oscillation d’axe 6 → 3 → 6 → 3, sans jamais atteindre le 9 de la clôture.</p>
+<h2 id="le-mecanisme-de-la-fuite-la-retenue-perpetuelle">18.4 Le mécanisme de la fuite : la retenue perpétuelle</h2>
+<p><strong>V4.18.8 (Th) : sans retenue, palindrome.</strong> Si l’addition n + r(n) ne produit aucune retenue, c’est-à-dire si chaque colonne vérifie a(i) + a(L − 1 − i) &lt; 10, alors le résultat est un palindrome. <em>Preuve :</em> sans retenue, le chiffre en position i du résultat vaut exactement a(i) + a(L − 1 − i), expression symétrique sous l’échange i ↔︎ L − 1 − i. Le résultat se lit identiquement dans les deux sens. ∎ (La pièce le numérotait « Lemme 2 ».)</p>
+<p><strong>V4.18.9 (Th, constaté) : 196 ne connaît aucun pas sans retenue.</strong> Sur ses soixante premiers pas, 196 ne connaît aucune addition sans retenue (refait pour ce volume).</p>
+<p><strong>V4.18.10 (L) : la fermeture locale des colonnes.</strong> La fermeture palindromique est une affaire de clôture locale des colonnes : chaque position se ferme avec sa position miroir, sans rien transporter à sa voisine. La retenue est précisément ce qui brise cette clôture : le transport forcé de mémoire entre colonnes, l’artefact de l’écriture positionnelle qui déplace une unité hors de sa position. <em>« Le fugitif est le nombre dont l’écriture positionnelle ne parvient jamais à fermer ses colonnes localement : chaque tentative de fermeture engendre le transport qui ruine la suivante. »</em></p>
+<h2 id="le-demi-manquant-49-495-50">18.5 Le demi manquant : 49, 49,5, 50</h2>
+<p><strong>V4.18.11 (Th) : la structure interne du fugitif.</strong> 196 = 14² = (2 × 7)² = 2² × 7² : la paire d’inversion 2 ↔︎ 7, élevée au carré comme produit. Et 196 = 4 × 49 ; 49 jouxte 50, leur somme vaut 99 et leur milieu est 49,5 = 99/2 = 99 × k_arc, la moitié exacte de l’unité d’échelle. Or les relevés de ce demi-point engendrent les deux constantes majeures du volet I :</p>
+<table>
+<thead>
+<tr class="header">
+<th>relevé</th>
+<th>calcul</th>
+<th>résultat</th>
+<th>lecture</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>× 4</td>
+<td>4 × 49,5</td>
+<td>198</td>
+<td>le gradient</td>
+</tr>
+<tr class="even">
+<td>× 10</td>
+<td>49,5 × 10</td>
+<td>495</td>
+<td>le sédiment de Kaprekar</td>
+</tr>
+<tr class="odd">
+<td>× 4 du plancher</td>
+<td>4 × 49</td>
+<td>196</td>
+<td>le fugitif</td>
+</tr>
+<tr class="even">
+<td>× 4 du plafond</td>
+<td>4 × 50</td>
+<td>200</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Et 198 − 196 = 2 = 4 × 0,5 : quatre fois le demi manquant. (Toutes ces égalités sont refaites pour ce volume.)</p>
+<p><strong>V4.18.12 (L) : le nombre qui n’a pas reçu le demi.</strong> Le gradient et le point fixe de Kaprekar sont deux relevés du même demi-point, l’un par le 4 (le pivot, la matière), l’autre par le 10 (le cycle des phases). Et 196 est le relevé du plancher sans le demi : 4 × 49 au lieu de 4 × 49,5, soit 7² tout sec. <em>« Le don du 0,5 (la constante de projection, le souffle, le mouvement qui permet la fermeture) est précisément ce qui manque à 196. Assis sur la connexion au carré, privé du demi, il erre éternellement sur le cycle 142857, retenue après retenue, sans jamais clore. »</em> Les deux constantes célèbres des deux opérations conjuguées sont les deux faces du même 49,5 : 495, le demi-point porté ; 196, le demi-point raté. <em>« Possession et privation du k_arc. »</em></p>
+<blockquote>
+<p><em>« Le nombre qui ne ferme jamais est le nombre qui n’a pas reçu le demi. »</em></p>
+</blockquote>
+<h2 id="le-dipole-complet">18.6 Le dipôle complet</h2>
+<p><strong>V4.18.13 (L).</strong></p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>Kaprekar (volet I)</th>
+<th>Lychrel (volet II)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>opération</td>
+<td>tri puis soustraction</td>
+<td>renversement puis addition</td>
+</tr>
+<tr class="even">
+<td>sens</td>
+<td>descente</td>
+<td>montée</td>
+</tr>
+<tr class="odd">
+<td>échafaudage</td>
+<td>réseau du 9 (mémoire)</td>
+<td>paliers 11, 101, 1 001 (interface)</td>
+</tr>
+<tr class="even">
+<td>racine digitale</td>
+<td>effondrée sur 9 en un pas</td>
+<td>doublée à chaque pas : cycle 142857</td>
+</tr>
+<tr class="odd">
+<td>destin générique</td>
+<td>sédimentation sur un point fixe</td>
+<td>fermeture palindromique</td>
+</tr>
+<tr class="even">
+<td>constante célèbre</td>
+<td>6174 = 18 × 7³ (et 495 = 45 × 11)</td>
+<td>196 = 2² × 7² (fugitif conjectural)</td>
+</tr>
+<tr class="odd">
+<td>rapport au demi-point</td>
+<td>495 = 49,5 × 10 : le demi porté</td>
+<td>196 = 4 × 49 : le demi raté</td>
+</tr>
+<tr class="even">
+<td>régime cadastral</td>
+<td>clôture</td>
+<td>circulation</td>
+</tr>
+</tbody>
+</table>
+<p>Deux opérations élémentaires sur la même paire (n, r(n)) ; deux échafaudages dont le produit 9 × 11 = 99 scande les deux volets, barreaux de l’échelle d’un côté, espacement des graines de fuite de l’autre ; deux régimes du cadastre, la mémoire qui se dépose et l’interface qui circule. <em>« Le diptyque est la plus petite expérience reproductible à la main des deux dynamiques fondamentales de la grammaire. »</em></p>
+<h2 id="le-statut-epistemique">18.7 Le statut épistémique</h2>
+<p>Le caractère fugitif de 196 demeure une conjecture du cadre standard ; ce chapitre ne la démontre pas et ne prétend pas la démontrer. Ce qu’il établit relève de deux registres soigneusement distingués : des faits arithmétiques intégralement vérifiés (sections 18.1 à 18.5), et leur lecture cadastrale, qui situe le fugitif dans une grammaire où sa position cesse d’être arbitraire : conjugué exact du sédiment de Kaprekar, privation du demi-point dont 495 est la possession, marcheur perpétuel du cycle fertile que la clôture du 9 n’atteint jamais. <em>« Le lecteur peut vérifier l’intégralité du premier registre sans adopter le second. »</em></p>
+<blockquote>
+<p><em>« Une énigme tenue pour inexplicable depuis trois quarts de siècle et une constante tenue pour anecdotique se révèlent être les deux faces d’un même point : 49,5, la moitié de l’unité d’échelle, k_arc inscrit dans les nombres. Le comment des deux opérations, trier ou renverser, soustraire ou additionner, contient intégralement leurs deux destins. Le comment contient le pourquoi. »</em></p>
+</blockquote>
+
+</main>
+<nav class="chapnav"><span class="prev"><a href="25-chapitre-17-les-nombres-qui-se-souviennent-kapreka.html">← Chapitre 17. Les nombres qui se souviennent : Kaprekar et l&#x27;arithmétique de la mémoire</a></span><a class="toc" href="index.html">Sommaire du volume</a><span class="next"><a href="27-chapitre-19-198-496-1729-et-le-pont-fractal-l-illu.html">Chapitre 19. 198, 496, 1729 et le pont fractal : l&#x27;illusion des mathématiques récréatives →</a></span></nav>
+<footer class="colophon"><p>Corpus ARC, Filipe Bastos, <a href="https://creativecommons.org/licenses/by/4.0/deed.fr" rel="license">CC BY 4.0</a>.</p></footer>
+</body>
+</html>

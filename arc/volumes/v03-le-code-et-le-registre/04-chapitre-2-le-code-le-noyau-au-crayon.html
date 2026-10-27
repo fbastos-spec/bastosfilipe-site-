@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<link rel="canonical" href="https://bastosfilipe.com/arc/volumes/v03-le-code-et-le-registre/04-chapitre-2-le-code-le-noyau-au-crayon.html">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chapitre 2. Le Code : le noyau, au crayon · Le Code et le Registre · Corpus ARC</title>
+<meta name="description" content="Le Code et le Registre, volume 3 du corpus ARC de Filipe Bastos. Chapitre 2. Le Code : le noyau, au crayon.">
+<meta name="keywords" content="registre des erreurs, table de multiplication, audit, chaos, approximation, troncature décimale, complétude, corpus ARC, Filipe Bastos">
+<meta name="author" content="Filipe Bastos">
+<meta name="license" content="https://creativecommons.org/licenses/by/4.0/deed.fr">
+<link rel="stylesheet" href="../../assets/arc.css">
+</head>
+<body>
+<nav class="crumbs"><a href="../../index.html">Corpus ARC</a> / <a href="index.html">Volume 3 · Le Code et le Registre</a></nav>
+<main class="chapter">
+<h2 id="chapitre-2.-le-code-le-noyau-au-crayon">Chapitre 2. Le Code : le noyau, au crayon</h2>
+<p>Le Code est le document global du corpus : il rassemble en un seul lieu ce que le corpus établit par le calcul fini, ce qu’il lit, et ce qu’il prédit, et il est écrit pour être refait au crayon par un lecteur extérieur. Ce chapitre en donne le mode d’emploi et le noyau (Partie I du Code, version 0.4 du 4 octobre 2026) : sept résultats qu’un élève de collège peut refaire, chacun présenté en quatre temps. Le <em>reçu</em> dit ce qui est avancé ; le <em>crayon</em> montre le calcul ; ce que le crayon <em>établit</em> ; ce que le crayon <em>n’établit pas</em>. Ce quatrième temps est la marque du Code : il interdit à un calcul vrai de porter plus loin que ce qu’il montre.</p>
+<h3 id="le-verdict-du-code-en-trois-phrases">Le verdict du Code, en trois phrases</h3>
+<p><strong>É2.1 (L) Le verdict.</strong> <em>« Le noyau arithmétique est vrai, élégant et refaisable ; la perte de rang par le pli (le tour jeté, 9 posé égal à 0) est établie au crayon, en fractions exactes, et c’est le cœur de ce que le corpus avance ; les prédictions physiques qui pourraient trancher attendent leur reçu. »</em></p>
+<p>Le Code sépare les trois couches du corpus (l’arithmétique vérifiée, les lectures, les assertions physiques), liste ses contradictions internes, et dit pourquoi l’accord de plusieurs modèles de langage ne tient pas lieu de reçu (chapitre 4). Les versions 0.2 à 0.4 corrigent cinq lignes de la version 0.1, reprises par l’auteur le 4 octobre 2026 ; elles sont gravées au Registre en G.49 à G.56 (chapitre 12) avec leur remplacement.</p>
+<h3 id="mode-demploi">0. Mode d’emploi</h3>
+<p><strong>0.1 Ce que le Code a lu et exécuté.</strong> Lu en entier : le Registre des Erreurs v1.0 (148 entrées, 46 gravures) et sa pièce d’ajout v1.1 (6 entrées, 2 gravures, script) ; les règles de protocole et la terminologie ; le journal d’état du corpus ; <em>La Formule du chaos</em> v5 ; <em>Le Tiroir de Gauss</em> v0.1. Exécuté : 70 assertions Python, en arithmétique exacte quand c’est possible (fractions), sur le noyau, les démonstrations de la Partie II et les contre-poids de la Partie III. Aucune assertion n’échoue. Recoupé contre des sources extérieures : Patriot (GAO/IMTEC-92-26), indice de la Bourse de Vancouver, mesure finale du moment magnétique du muon (Fermilab, 2025). Les autres pièces du dépôt ne sont connues du Code que par ce que le Registre en rapporte : un énoncé du Registre y est vérifié <em>par le calcul</em>, jamais <em>par la citation</em>.</p>
+<p><strong>0.2 Les statuts.</strong> <strong>Th</strong> : calcul fini vérifié. <strong>L</strong> : lecture, interprétation cohérente déclarée telle. <strong>P</strong> : prédiction datée, avec reçu, fenêtre et méthode fixés d’avance. <strong>F</strong> : fait d’archive ou donnée extérieure. <strong>Chantier</strong> : déclaré ouvert.</p>
+<p><strong>0.3 La règle de lecture.</strong> Les deux lectures se tiennent ensemble : les données et les théorèmes classiques restent vrais ; ce que le corpus ajoute est une seconde lecture de la même donnée. Le Code ne retire donc jamais un théorème classique ; il demande, pour chaque lecture, quel calcul la distinguerait de la lecture usuelle.</p>
+<h3 id="i.1-neuf-chiffres-une-involution">I.1 Neuf chiffres, une involution</h3>
+<p><strong>Reçu.</strong> φ(x) = 9 − x range les huit chiffres 1 à 8 en quatre paires ; le centre est 4,5 ; k_arc = 4,5 / 9 = ½.</p>
+<pre><code>1 + 8 = 2 + 7 = 3 + 6 = 4 + 5 = 9
+φ(φ(x)) = 9 − (9 − x) = x               involution
+9 − x = x  donne  x = 4,5               point fixe : pas un entier
+1 + 2 + ... + 9 = 45 ;  45 / 4,5 = 10</code></pre>
+<p><strong>É2.2 (Th) L’involution sans point fixe entier.</strong> Le crayon établit l’involution, les quatre paires, et le fait que le centre n’est pas un entier : neuf est impair, donc le milieu de 1..9 tombe entre deux entiers. <strong>É2.3 (L) La portée du centre.</strong> Le crayon n’établit pas que ce centre gouverne autre chose que l’arithmétique des neuf chiffres. Cette portée est une lecture.</p>
+<h3 id="i.2-la-racine-digitale">I.2 La racine digitale</h3>
+<p><strong>Reçu.</strong> DR(n) est le reste de la division de n par 9, écrit 9 quand il vaut 0.</p>
+<pre><code>10 = 9 + 1, donc 10^k = (multiple de 9) + 1
+n = a0 + 10 a1 + 100 a2 + ... = (a0 + a1 + a2 + ...) + (multiple de 9)
+donc DR(n) = DR(somme des chiffres de n)
+Exemple : 729 : 7+2+9 = 18 ; 1+8 = 9
+Compatibilité : DR(a+b) = DR(DR(a)+DR(b)) ; DR(a × b) = DR(DR(a) × DR(b))
+Exemple : 7 × 8 = 56 : 5+6 = 11 : 1+1 = 2 ; et DR(7) × DR(8) = 56 : 2</code></pre>
+<p><strong>É2.4 (Th) La table fermée.</strong> La table de multiplication de 1 à 9, lue en racine digitale, est fermée ; c’est la preuve par neuf. Exécuté sur près de 160 000 paires, zéro exception. Le crayon n’établit pas que le fait de « jeter les neuf » soit une faute : la question est traitée en II.3 (chapitre 3).</p>
+<h3 id="i.3-les-premiers-et-la-grille-6k-1">I.3 Les premiers et la grille 6k ± 1</h3>
+<p><strong>Reçu.</strong> Tout premier supérieur à 3 est de la forme 6k ± 1 ; aucun ne tombe sur l’axe {3, 6, 9}.</p>
+<pre><code>n = 6k + r, avec r dans {0,1,2,3,4,5}
+r = 0, 2, 4 : n est pair
+r = 3        : n est multiple de 3
+il reste r = 1 ou r = 5, c&#39;est-à-dire 6k + 1 et 6k + 5 = 6(k+1) − 1
+Axe {3,6,9} : DR multiple de 3, donc n multiple de 3, donc non premier sauf 3
+Rails : DR dans {1,4,7} (reste 1 par 3) ou {2,5,8} (reste 2 par 3)</code></pre>
+<p><strong>É2.5 (Th) Les trois voies.</strong> La partition des entiers en trois voies selon le reste dans la division par 3. Exécuté : les 78 496 premiers supérieurs à 3 et inférieurs à 10⁶, zéro exception. Les DR des premiers supérieurs à 3 sont exactement {1, 2, 4, 5, 7, 8}. <strong>É2.6 (Chantier) La répartition.</strong> Le crayon n’établit aucune loi de répartition des premiers. Le comptage des jumeaux reste un Chantier déclaré (Volume 4).</p>
+<h3 id="i.4-le-rythme-24">I.4 Le rythme 24</h3>
+<pre><code>p = 6k ± 1 :  p^2 = 36 k^2 ± 12 k + 1 = 12 k (3k ± 1) + 1
+k (3k ± 1) est pair : k pair, ou k impair et 3k ± 1 pair
+donc p^2 − 1 est multiple de 24
+5^2 = 24 + 1 ;  7^2 = 48 + 1 ;  11^2 = 120 + 1</code></pre>
+<p><strong>É2.7 (Th) p² − 1 multiple de 24.</strong> Un fait classique, démontré en quatre lignes et exécuté sur tous les premiers supérieurs à 3 jusqu’à 10⁶. Le crayon n’établit rien sur la portée biologique ou musicale du 24 (lectures, Volume 2 et Volume 4).</p>
+<h3 id="i.5-la-loi-des-miroirs">I.5 La loi des miroirs</h3>
+<pre><code>n = 10a + b ;  ñ = 10b + a
+n − ñ = 9a − 9b = 9 (a − b)
+n + ñ = 11a + 11b = 11 (a + b)
+198 = 2 × 9 × 11 ;  694 − 496 = 198 ;  46 + 64 = 110 = 11 × 10 ;  64 − 46 = 18 = 9 × 2
+1729 = 19 × 91 : un nombre et son miroir</code></pre>
+<p><strong>É2.8 (Th) Les miroirs en toute base.</strong> L’identité est vraie pour tous les nombres à deux chiffres. Elle vaut aussi dans toute base B de 2 à 16 (exécuté) : les facteurs sont B − 1 et B + 1. En base 10 ce sont 9 et 11. <strong>É2.9 (Th) Ce qui est propre à la base dix.</strong> Le crayon n’établit pas que la base 10 soit privilégiée <em>par cette identité</em> : elle vaut dans toutes les bases. Ce qui est propre à 10 est que B − 1 = 3² ; c’est l’énoncé de la gravure G.4 (b − 1 = p²), qui est la forme honnête de l’argument.</p>
+<h3 id="i.6-deux-cercles-et-un-carre">I.6 Deux cercles et un carré</h3>
+<pre><code>Carré de côté 1.   Cercle inscrit : r = 1/2.
+Diagonale = racine de 2.   Cercle circonscrit : R = (racine de 2) / 2.
+r^2 = 1/4 ;  R^2 = 1/2 ;  r^2 / R^2 = 1/2
+La diagonale (racine de 2) = 2R : c&#39;est le diamètre du cercle circonscrit.
+cos(pi/5) = phi / 2    (pentagone, exact)</code></pre>
+<p><strong>É2.10 (Th) La diagonale est le diamètre.</strong> Géométrie élémentaire exacte : la diagonale du carré <em>est</em> le diamètre du cercle qui passe par ses quatre sommets, et le rapport des aires des deux cercles vaut ½. Et cos(π/5) = φ/2, exactement. <strong>É2.11 (L) Le carré comme projection de deux cercles.</strong> Le crayon n’établit pas que « le carré soit la projection de deux cercles » au sens d’une dérivation : c’est une lecture, belle et cohérente (Volume 2, La Figure).</p>
+<h3 id="i.7-le-demi">I.7 Le demi</h3>
+<p><strong>Reçu.</strong> k_arc = 4,5 / 9 = 3,5 / 7 = ½.</p>
+<p><strong>É2.12 (Th) Le milieu est la moitié.</strong> Le crayon établit que le milieu d’un segment est sa moitié. Il n’établit pas que cette moitié soit la même grandeur partout où elle apparaît : c’est le point 2 de l’audit (chapitre 4, III.2).</p>
+
+</main>
+<nav class="chapnav"><span class="prev"><a href="03-chapitre-1-les-tables-natives-deux-pages-a-refaire.html">← Chapitre 1. Les Tables natives : deux pages à refaire au crayon</a></span><a class="toc" href="index.html">Sommaire du volume</a><span class="next"><a href="05-chapitre-3-les-gestes-historiques-et-leurs-resolut.html">Chapitre 3. Les gestes historiques et leurs résolutions au crayon →</a></span></nav>
+<footer class="colophon"><p>Corpus ARC, Filipe Bastos, <a href="https://creativecommons.org/licenses/by/4.0/deed.fr" rel="license">CC BY 4.0</a>.</p></footer>
+</body>
+</html>

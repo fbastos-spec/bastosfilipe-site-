@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<link rel="canonical" href="https://bastosfilipe.com/arc/volumes/v04-la-theorie-des-nombres/25-chapitre-17-les-nombres-qui-se-souviennent-kapreka.html">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chapitre 17. Les nombres qui se souviennent : Kaprekar et l&#x27;arithmétique de la mémoire · La Théorie des Nombres · Corpus ARC</title>
+<meta name="description" content="La Théorie des Nombres, volume 4 du corpus ARC de Filipe Bastos. Chapitre 17. Les nombres qui se souviennent : Kaprekar et l&#x27;arithmétique de la mémoire.">
+<meta name="keywords" content="delfine, nombres premiers, grille 6k ± 1, Collatz, Goldbach, nombres parfaits, nombres jumeaux, racine digitale, 24, corpus ARC, Filipe Bastos">
+<meta name="author" content="Filipe Bastos">
+<meta name="license" content="https://creativecommons.org/licenses/by/4.0/deed.fr">
+<link rel="stylesheet" href="../../assets/arc.css">
+</head>
+<body>
+<nav class="crumbs"><a href="../../index.html">Corpus ARC</a> / <a href="index.html">Volume 4 · La Théorie des Nombres</a></nav>
+<main class="chapter">
+<h1 id="chapitre-17.-les-nombres-qui-se-souviennent-kaprekar-et-larithmetique-de-la-memoire">Chapitre 17. Les nombres qui se souviennent : Kaprekar et l’arithmétique de la mémoire</h1>
+<p>D’ordinaire, le carré d’un nombre efface son origine : rien dans 2025 n’indique 45 sans calcul. Il existe pourtant des nombres dont le carré, coupé en deux morceaux, redonne le nombre par une simple addition : 45² = 2025, et 20 + 25 = 45. Ce sont les nombres de Kaprekar ; le corpus les appelle <em>les nombres qui se souviennent</em>. Ce chapitre démontre qu’ils ont tous la racine 9 ou la racine 1, les deux seules adresses de la mémoire ; qu’ils viennent par paires qui partagent la même « queue », dont l’une est 1729 ; qu’ils naissent tous des nombres faits uniquement de 9 ; que 142857, la période de 1/7, en est un ; et que les sommes du cadastre (45, 4950, 499500) en sont toutes. Il clôt le triptyque de Kaprekar, dont le deuxième volet, l’énigme 196, fait l’objet du chapitre 18 (pièce <em>Les Nombres qui se Souviennent</em>, juin 2026, volet III du triptyque de la sédimentation arithmétique).</p>
+<p><strong>F : la définition.</strong> Un nombre de Kaprekar est un nombre n dont le carré, coupé en deux parts contiguës, redonne n par addition (D. R. Kaprekar, « On Kaprekar numbers », <em>Journal of Recreational Mathematics</em> 13, 1980) : 45² = 2025, coupe 20 | 25, somme 45 ; 297² = 88 209, coupe 88 | 209, somme 297 ; 703² = 494 209, coupe 494 | 209, somme 703. <em>« Le carré porte la racine en lui, lisible par une coupe : l’élévation qui conserve la trace, le n × n qui n’oublie pas son n. »</em> Dans la grammaire du corpus, où l’opération oubliée n × n ÷ n = n établit la conservation de l’identité à travers l’élévation (Volume 2), ces nombres sont l’incarnation arithmétique de la mémoire.</p>
+<p><strong>V4.17.1 (Th) : l’énumération.</strong> L’énumération exhaustive jusqu’à un million livre cinquante-quatre nombres, conformes à la littérature : 1, 9, 45, 55, 99, 297, 703, 999, 2 223, 2 728, 4 879, 4 950, 5 050, 5 292, 7 272, 7 777, 9 999, …, 142 857, …, 499 500, 500 500, …, 999 999 (refait pour ce volume : 54).</p>
+<p>Leur statut institutionnel est, comme pour les deux autres volets du triptyque, celui de la curiosité récréative, alors que leur structure, lue cadastralement, prolonge exactement celle des deux premiers volets.</p>
+<h2 id="le-theoreme-des-deux-etages">17.1 Le théorème des deux étages</h2>
+<p><strong>K.1 (Th) : les deux étages.</strong> Tout nombre de Kaprekar a pour racine digitale 9 ou 1.</p>
+<p><em>Preuve.</em> Soit n² = p · 10^e + q avec p + q = n. Comme 10^e laisse le reste 1 dans la division par 9, n² laisse le même reste que p + q = n. Donc 9 divise n² − n = n(n − 1). Les facteurs n et n − 1 étant consécutifs, 3 ne peut les diviser tous deux : 9 divise donc n ou n − 1, c’est-à-dire DR(n) = 9 ou DR(n) = 1. ∎ Vérification exhaustive sur les cinquante-quatre, sans exception (refait pour ce volume). (La pièce numérotait cet énoncé « Lemme 3 ».)</p>
+<p><strong>V4.17.2 (L) : les deux adresses de la mémoire.</strong> Les nombres qui se souviennent habitent exactement les deux étages identifiés au volet I (<em>L’Énigme 6174</em>) : le réseau-mémoire (racine 9), où la dynamique de Kaprekar sédimente et où vit 495, et sa chiralité (racine 1, le réseau plus un), où vivent les nombres parfaits et 496. <em>« La mémoire arithmétique n’a que deux adresses : le réseau, et le réseau plus le pas. »</em> Tout nombre capable de se souvenir de lui-même à travers son carré réside à l’une des deux.</p>
+<h2 id="le-theoreme-des-paires-la-queue-partagee">17.2 Le théorème des paires : la queue partagée</h2>
+<p><strong>K.2 (Th) : les paires.</strong> Si n est un nombre de Kaprekar de coupe n² = p · 10^e + q (p + q = n, 0 &lt; q &lt; 10^e, n &lt; 10^e), alors n′ = 10^e − n est aussi un nombre de Kaprekar, avec la même queue q.</p>
+<p><em>Preuve.</em> n′² = (10^e − n)² = 10^(2e) − 2n · 10^e + n² = (10^e − 2n + p) · 10^e + q. La part gauche p′ = 10^e − 2n + p et la queue q vérifient p′ + q = 10^e − 2n + (p + q) = 10^e − 2n + n = 10^e − n = n′. ∎ (La pièce le numérotait « Théorème 1 ».)</p>
+<p>Les nombres qui se souviennent viennent donc en paires complémentaires aux puissances de dix, et les deux membres d’une paire partagent leur queue : la même mémoire terminale, portée par deux nombres miroirs. Vérification intégrale (refaite pour ce volume) :</p>
+<table>
+<thead>
+<tr class="header">
+<th>paire</th>
+<th>somme</th>
+<th>queue partagée</th>
+<th>lecture de la queue</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>45 + 55</td>
+<td>10²</td>
+<td>25</td>
+<td>5²</td>
+</tr>
+<tr class="even">
+<td>297 + 703</td>
+<td>10³</td>
+<td>209</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>2 223 + 7 777</td>
+<td>10⁴</td>
+<td>1 729</td>
+<td>Hardy-Ramanujan, 12³ + 1</td>
+</tr>
+<tr class="even">
+<td>2 728 + 7 272</td>
+<td>10⁴</td>
+<td>1 984</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>4 950 + 5 050</td>
+<td>10⁴</td>
+<td>2 500</td>
+<td>50²</td>
+</tr>
+<tr class="even">
+<td>142 857 + 857 143</td>
+<td>10⁶</td>
+<td>122 449</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>V4.17.3 (L) : deux queues méritent l’arrêt.</strong> <em>La queue 1729</em> : le nombre de Hardy-Ramanujan, 12³ + 1, déjà inscrit au corpus pour sa double face et son appartenance au motif n³ + 1 (chapitre 19), est ici la mémoire commune de la paire (2 223, 7 777), où 7 777 = 7 × 11 × 101 : la connexion multipliée par les deux premiers paliers du volet II (chapitre 18). <em>La queue 209</em> de la paire (297, 703) scelle le lien avec le volet I, puisque 297 est un barreau de l’échelle 99k (k = 3, la paire inscrite 2-9-7) : un barreau de la descente de Kaprekar est lui-même un nombre qui se souvient.</p>
+<h2 id="la-generation-par-les-purs-neufs">17.3 La génération par les purs-neufs</h2>
+<p><strong>F : la caractérisation d’Iannucci (2000).</strong> D. E. Iannucci (« The Kaprekar Numbers », <em>Journal of Integer Sequences</em> 3, 2000) a établi que les nombres de Kaprekar à coupe de profondeur e sont en bijection avec les décompositions en diviseurs unitaires du pur-neuf 10^e − 1 = 99…9. Pour chaque écriture 10^e − 1 = A × B avec A et B premiers entre eux, le théorème des restes chinois livre l’unique n &lt; 10^e multiple de B qui laisse le reste 1 dans la division par A, et ce n est de Kaprekar. <em>Exemple à trois chiffres :</em> 999 = 27 × 37 engendre 703 (multiple de 37, reste 1 par 27) et 297 (multiple de 27, reste 1 par 37) (refait pour ce volume).</p>
+<p><strong>V4.17.4 (Th) : les factorisations des purs-neufs.</strong></p>
+<table>
+<thead>
+<tr class="header">
+<th>pur-neuf</th>
+<th>factorisation</th>
+<th>remarque</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>9</td>
+<td>3²</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>99</td>
+<td>3² × 11</td>
+<td>l’unité des barreaux, 9 × 11</td>
+</tr>
+<tr class="odd">
+<td>999</td>
+<td>3³ × 37</td>
+<td>engendre 297 et 703</td>
+</tr>
+<tr class="even">
+<td>9 999</td>
+<td>3² × 11 × 101</td>
+<td>les paliers 11 et 101</td>
+</tr>
+<tr class="odd">
+<td>99 999</td>
+<td>3² × 41 × 271</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>999 999</td>
+<td>3³ × 7 × 11 × 13 × 37</td>
+<td>= 7 × 142 857</td>
+</tr>
+</tbody>
+</table>
+<p>Les paliers 11 et 101 du volet II réapparaissent comme facteurs des purs-neufs ; et le pur-neuf de profondeur six se referme sur le cycle de la cascade : 999 999 = 7 × 142 857.</p>
+<p><strong>V4.17.5 (L) : la mémoire engendre les mémorieux.</strong> Dans la grammaire du corpus, où le 9 est la mémoire conservée contre l’amnésie de l’identification à 0, le résultat se lit en une phrase : <em>« les nombres capables de se souvenir naissent du 9 : la mémoire engendre les mémorieux. »</em></p>
+<h2 id="le-cycle-qui-se-souvient-de-lui-meme">17.4 142857, le cycle qui se souvient de lui-même</h2>
+<p><strong>V4.17.6 (Th).</strong> 142 857, la période de 1/7, le cycle des puissances de 2 en racine (1, 4, 2, 8, 5, 7 en sont les chiffres ; chapitre 18), figure dans la famille :</p>
+<blockquote>
+<p>142 857² = 20 408 122 449, et 20 408 + 122 449 = 142 857.</p>
+</blockquote>
+<p>Le cycle se souvient de lui-même. Son complément de paire est 857 143 = 6 × 142 857 + 1, six fois le cycle plus le pas de chiralité, et le produit générateur ferme la boucle : 7 × 142 857 = 999 999, le pur-neuf de profondeur six (refait pour ce volume).</p>
+<p><strong>V4.17.7 (L).</strong> Le nombre qui erre sans fin dans la dynamique montante du volet II (le cycle des racines de 196) est, dans la présente famille, un nombre-mémoire exemplaire : <em>« la circulation et le souvenir ne s’excluent pas : le cycle est une mémoire en mouvement. »</em></p>
+<h2 id="les-sommes-du-cadastre-a-toute-profondeur">17.5 Les sommes du cadastre à toute profondeur</h2>
+<p><strong>V4.17.8 (Th).</strong> Les nombres triangulaires aux frontières du 9 appartiennent tous à la famille (refait pour ce volume) :</p>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>profondeur</th>
+<th>T(9…9), somme de 1 à 10^k − 1</th>
+<th>T(10^k), somme de 1 à 10^k</th>
+<th>paire</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>k = 1</td>
+<td>45 = T(9)</td>
+<td>55 = T(10)</td>
+<td>45 + 55 = 10²</td>
+</tr>
+<tr class="even">
+<td>k = 2</td>
+<td>4 950 = T(99)</td>
+<td>5 050 = T(100)</td>
+<td>4 950 + 5 050 = 10⁴</td>
+</tr>
+<tr class="odd">
+<td>k = 3</td>
+<td>499 500 = T(999)</td>
+<td>500 500 = T(1 000)</td>
+<td>499 500 + 500 500 = 10⁶</td>
+</tr>
+</tbody>
+</table>
+<p>La somme du cadastre, à chaque profondeur, est un nombre qui se souvient ; 45, la singularité-mémoire du corpus, n’est que le premier étage d’une tour qui se répète à toutes les échelles, chaque étage apparié à la somme du cycle des phases correspondant (1 à 10, 1 à 100, 1 à 1 000).</p>
+<h2 id="le-triptyque-ferme">17.6 Le triptyque fermé</h2>
+<p><strong>V4.17.9 (L) : trois régimes du même cadastre.</strong></p>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>volet I : 6174</th>
+<th>volet II : 196</th>
+<th>volet III : mémoire</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>objet</td>
+<td>routine tri-soustraction</td>
+<td>addition-miroir</td>
+<td>carrés qui se coupent</td>
+</tr>
+<tr class="even">
+<td>dynamique</td>
+<td>descente, sédimentation</td>
+<td>montée, fuite</td>
+<td>conservation</td>
+</tr>
+<tr class="odd">
+<td>habitat</td>
+<td>réseau du 9</td>
+<td>paliers 11, 101, 1 001</td>
+<td>réseau du 9 et réseau + 1</td>
+</tr>
+<tr class="even">
+<td>constante</td>
+<td>6174, 495</td>
+<td>196 (conjectural)</td>
+<td>famille engendrée par les purs-neufs</td>
+</tr>
+<tr class="odd">
+<td>régime</td>
+<td>clôture</td>
+<td>circulation</td>
+<td>souvenir</td>
+</tr>
+</tbody>
+</table>
+<p>Trois objets du même découvreur, trois régimes du même cadastre : <em>« ce qui descend se dépose sur le réseau du 9 ; ce qui monte court les paliers du 11 ou fuit à jamais ; ce qui se souvient habite le réseau et sa chiralité, engendré par les purs-neufs. »</em> Le 99 = 9 × 11 scande les trois volets : barreaux de la descente, espacement des fugitifs, facteur des générateurs. Et le couple (495, 496) du volet I se révèle rétrospectivement comme l’emblème du tout : les deux adresses de la mémoire, côte à côte.</p>
+<blockquote>
+<p><em>« Le triptyque s’ouvre sur une question que personne ne posait, pourquoi 6174, et se ferme sur une réponse que personne n’attendait : les trois curiosités récréatives d’un calculateur indien de l’après-guerre sont trois lectures d’une même structure. Le comment des trois opérations contient intégralement leurs trois destins. Le comment contient le pourquoi. »</em></p>
+</blockquote>
+<p>(Le volet I, <em>L’Énigme 6174</em>, n’est pas au nombre des sources de ce volume ; ses résultats sont cités ici tels que les volets II et III les rappellent : 6174 = 18 × 7³, 495 = 45 × 11, l’échelle des barreaux 99k.)</p>
+
+</main>
+<nav class="chapnav"><span class="prev"><a href="24-partie-vii-les-nombres-qui-se-souviennent.html">← Partie VII. Les nombres qui se souviennent</a></span><a class="toc" href="index.html">Sommaire du volume</a><span class="next"><a href="26-chapitre-18-l-enigme-196-pourquoi-un-nombre-ne-fer.html">Chapitre 18. L&#x27;énigme 196 : pourquoi un nombre ne ferme jamais →</a></span></nav>
+<footer class="colophon"><p>Corpus ARC, Filipe Bastos, <a href="https://creativecommons.org/licenses/by/4.0/deed.fr" rel="license">CC BY 4.0</a>.</p></footer>
+</body>
+</html>
