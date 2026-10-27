@@ -10,4 +10,4 @@ Site statique du corpus ARC (Architecture de la Cohérence Relationnelle), Filip
 
 Publication : Cloudflare Pages relié à ce dépôt, branche `main`, sans commande de build, dossier de sortie `/`. Chaque commit sur `main` est mis en ligne.
 
-En attente : l'identifiant Google Analytics (G-…) du site, à rétablir dans l'en-tête des trois pages et du gabarit de `/arc/` ; le PDF `assets/quantum_correlations_v3_6-4-e2e413b1a0e9.pdf` et la page `elements/emergence-of-quantum-correlations-…` cités par la Bibliothèque, absents des pages sauvegardées.
+En attente : l'identifiant Google Analytics (G-…) du site, à rétablir dans l'en-tête des trois pages et du gabarit de `/arc/` ; le PDF `quantum_correlations_v3_6` (Emergence of Quantum Correlations, v3.6) de l'ancien serveur, les deux boutons de sa carte pointant vers Zenodo en attendant.
