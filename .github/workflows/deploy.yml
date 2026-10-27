@@ -3,7 +3,7 @@
 #   CLOUDFLARE_API_TOKEN   jeton Cloudflare, permission « Cloudflare Pages : Edit » sur le compte
 #   CLOUDFLARE_ACCOUNT_ID  identifiant du compte Cloudflare (tableau de bord, colonne de droite)
 # Le projet Pages doit exister dans Cloudflare sous le nom ci-dessous (créé en « Direct Upload »).
-name: Déploiement Cloudflare Pages
+name: Déploiement Cloudflare
 on:
   push:
     branches: [main]
@@ -34,11 +34,10 @@ jobs:
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
         run: |
           set -o pipefail
-          npx --yes wrangler@3 pages project create bastosfilipe-site --production-branch=main 2>&1 | tee -a sortie.txt || true
-          if ! npx --yes wrangler@3 pages deploy /tmp/public --project-name=bastosfilipe-site --branch=main --commit-dirty=true 2>&1 | tee -a sortie.txt; then
+          if ! npx --yes wrangler@4 deploy --assets /tmp/public --name bastosfilipe-site --compatibility-date 2026-10-01 2>&1 | tee -a sortie.txt; then
             msg=$(sed 's/\x1b\[[0-9;]*m//g' sortie.txt | grep -i -E 'ERROR|error|code:|permission|authenti' | tail -c 1200 | tr '\n' ' ')
-            echo "::error title=Déploiement Cloudflare Pages::$msg"
+            echo "::error title=Déploiement Cloudflare::$msg"
             exit 1
           fi
-          url=$(grep -o 'https://[a-z0-9.-]*pages.dev' sortie.txt | tail -1)
+          url=$(sed 's/\x1b\[[0-9;]*m//g' sortie.txt | grep -o 'https://[a-z0-9.-]*workers.dev' | tail -1)
           echo "::notice title=Site publié::$url"
