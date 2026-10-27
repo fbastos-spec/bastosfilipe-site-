@@ -36,7 +36,7 @@ jobs:
           set -o pipefail
           npx --yes wrangler@3 pages project create bastosfilipe-site --production-branch=main 2>&1 | tee -a sortie.txt || true
           if ! npx --yes wrangler@3 pages deploy /tmp/public --project-name=bastosfilipe-site --branch=main --commit-dirty=true 2>&1 | tee -a sortie.txt; then
-            msg=$(grep -v '^\s*$' sortie.txt | tail -c 900 | tr '\n' ' ')
+            msg=$(sed 's/\x1b\[[0-9;]*m//g' sortie.txt | grep -i -E 'ERROR|error|code:|permission|authenti' | tail -c 1200 | tr '\n' ' ')
             echo "::error title=Déploiement Cloudflare Pages::$msg"
             exit 1
           fi
