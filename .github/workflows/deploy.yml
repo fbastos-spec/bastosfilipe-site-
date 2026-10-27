@@ -1,0 +1,27 @@
+# Publie le site sur Cloudflare Pages à chaque commit sur main.
+# Secrets à créer dans le dépôt (Settings → Secrets and variables → Actions) :
+#   CLOUDFLARE_API_TOKEN   jeton Cloudflare, permission « Cloudflare Pages : Edit » sur le compte
+#   CLOUDFLARE_ACCOUNT_ID  identifiant du compte Cloudflare (tableau de bord, colonne de droite)
+# Le projet Pages doit exister dans Cloudflare sous le nom ci-dessous (créé en « Direct Upload »).
+name: Déploiement Cloudflare Pages
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Préparer le dossier publié (sans les fichiers de travail)
+        run: |
+          mkdir -p /tmp/public
+          rsync -a --exclude '.git' --exclude '.github' --exclude '_travail' --exclude 'README.md' ./ /tmp/public/
+      - name: Déployer
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy /tmp/public --project-name=bastosfilipe-site --branch=main --commit-dirty=true
