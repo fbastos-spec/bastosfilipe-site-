@@ -19,6 +19,15 @@ jobs:
         run: |
           mkdir -p /tmp/public
           rsync -a --exclude '.git' --exclude '.github' --exclude '_travail' --exclude 'README.md' ./ /tmp/public/
+      - name: Vérifier la présence des deux secrets (sans les afficher)
+        env:
+          T: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          A: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          ok=1
+          [ -n "$T" ] && echo "::notice::CLOUDFLARE_API_TOKEN présent (${#T} caractères)" || { echo "::error title=Secret manquant::CLOUDFLARE_API_TOKEN est vide ou absent des secrets Actions du dépôt"; ok=0; }
+          [ -n "$A" ] && echo "::notice::CLOUDFLARE_ACCOUNT_ID présent (${#A} caractères)" || { echo "::error title=Secret manquant::CLOUDFLARE_ACCOUNT_ID est vide ou absent des secrets Actions du dépôt"; ok=0; }
+          [ "$ok" = 1 ] || exit 1
       - name: Déployer sur Cloudflare Pages
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
