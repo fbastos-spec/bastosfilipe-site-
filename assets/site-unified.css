@@ -153,3 +153,6 @@
 .pwarn { border-left: 3px solid var(--or, #b8893b); background: rgba(184,137,59,.08); padding: 14px 18px; margin: 18px 0 14px; max-width: 760px; line-height: 1.55; }
 .prompt.popen { grid-column: 1 / -1; border-width: 2px; border-color: var(--bleu, #1e3a5f); }
 .prompt.popen .ptext { max-width: 820px; }
+.pquote { margin: 18px 0 20px; padding: 6px 0 6px 20px; border-left: 3px solid var(--bleu, #1e3a5f); max-width: 760px; }
+.pquote p { font-size: 1.22rem; line-height: 1.5; font-style: italic; margin: 0; }
+.pquote .pq-sign { font-style: normal; font-family: "IBM Plex Mono", monospace; font-size: .7rem; letter-spacing: .14em; text-transform: uppercase; margin-top: .6em; color: var(--or, #b8893b); }
