@@ -16,17 +16,17 @@ jobs:
       - name: Diagnostic du domaine
         run: |
           for u in https://bastosfilipe.com/ https://bastosfilipe.com/assets/site-unified.css https://bastosfilipe.com/robots.txt https://bastosfilipe.com/sitemap.xml https://www.bastosfilipe.com/; do
-            echo "$u -> $(curl -s -o /tmp/b -w '%{http_code} %{content_type} %{redirect_url}' "$u") ; nouveau site : $(grep -c 'ouverture\|User-agent\|urlset\|G-LB0FH513XB' /tmp/b)"
+            echo "::notice::$u -> $(curl -s -o /tmp/b -w '%{http_code} %{content_type} %{redirect_url}' "$u") ; nouveau site : $(grep -c 'ouverture\|User-agent\|urlset\|G-LB0FH513XB' /tmp/b)"
           done
           for ua in "GPTBot/1.1" "ClaudeBot/1.0" "PerplexityBot/1.0" "Googlebot/2.1" "bingbot/2.0"; do
-            echo "robot $ua -> $(curl -s -o /dev/null -w '%{http_code}' -A "Mozilla/5.0 (compatible; $ua)" https://bastosfilipe.com/)"
+            echo "::notice::robot $ua -> $(curl -s -o /dev/null -w '%{http_code}' -A "Mozilla/5.0 (compatible; $ua)" https://bastosfilipe.com/)"
           done
-          curl -sI https://bastosfilipe.com/ | grep -iE 'server|cf-ray|x-robots|location' || true
+          echo "::notice::entetes $(curl -sI https://bastosfilipe.com/ | grep -iE 'server|cf-ray|x-robots|location' | tr '\r\n' '  ')"
       - name: Signaler
         run: |
           KEY=$(ls | grep -E '^[0-9a-f]{32}\.txt$' | head -1 | sed 's/\.txt$//')
           if ! curl -fsS "https://bastosfilipe.com/$KEY.txt" | grep -q "$KEY"; then
-            echo "La clé n'est pas encore servie par bastosfilipe.com (domaine pas encore branché) : rien à signaler."; exit 0; fi
+            echo "::notice::La clé n'est pas encore servie par bastosfilipe.com (domaine pas encore branché) : rien à signaler."; exit 0; fi
           if git log -1 --format=%B | grep -q '\[indexnow-all\]'; then
             FILES=$(git ls-files '*.html' '*.pdf')
           else
@@ -35,4 +35,4 @@ jobs:
           URLS=$(printf '%s\n' $FILES | grep -vE '^(_travail|404\.html)' | sed -E 's#(^|/)index\.html$#\1#; s#\.html$##; s#^#https://bastosfilipe.com/#' | head -10000)
           [ -z "$URLS" ] && { echo "Aucune page changée."; exit 0; }
           JSON=$(printf '%s\n' $URLS | python3 -c "import sys,json;print(json.dumps({'host':'bastosfilipe.com','key':'$KEY','keyLocation':'https://bastosfilipe.com/$KEY.txt','urlList':[l.strip() for l in sys.stdin if l.strip()]}))")
-          curl -sS -o /dev/null -w "IndexNow : HTTP %{http_code}\n" -X POST https://api.indexnow.org/indexnow -H 'Content-Type: application/json; charset=utf-8' -d "$JSON"
+          curl -sS -o /dev/null -w "::notice::IndexNow : HTTP %{http_code}\n" -X POST https://api.indexnow.org/indexnow -H 'Content-Type: application/json; charset=utf-8' -d "$JSON"
