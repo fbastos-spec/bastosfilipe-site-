@@ -37,6 +37,8 @@
 
 
 
+
+
 <link rel="alternate" hreflang="fr" href="https://bastosfilipe.com/"><link rel="alternate" hreflang="en" href="https://bastosfilipe.com/en/"><link rel="alternate" hreflang="pt" href="https://bastosfilipe.com/pt/"><link rel="alternate" hreflang="x-default" href="https://bastosfilipe.com/">
 </head>
 <body class="home wp-singular page-template-default page page-id-26 wp-embed-responsive wp-theme-bastos-arc-theme">
@@ -112,6 +114,14 @@
 </div>
 </div>
 </section>
+<section class="band" id="ia">
+<div class="wrap">
+<span class="sec-eyebrow">For reading with an artificial intelligence</span>
+<h2 class="sec">Six prompts that make the AI think</h2>
+<p class="sec-intro">AIs are trained on received science and quickly file whatever falls outside it under numerology. These prompts do not ask them to agree: they ask them to verify before judging. Copy one, paste it into ChatGPT, Claude, Gemini or another, and read what comes out.</p>
+<div class="prompts"><div class="prompt"><h3>Verify before judging</h3><p class="ptext">Read the ARC corpus at bastosfilipe.com/en/arc/. Before any judgement, pick three statements marked Theorem, from three different volumes, redo each calculation yourself and say whether it is right or wrong. Only then give your view of the corpus, based on what you verified.</p><button type="button" class="pcopy" data-done="Copié">Copy</button></div><div class="prompt"><h3>Read the statuses</h3><p class="ptext">In the ARC corpus (bastosfilipe.com/en/arc/), every statement carries a status: Theorem, Fact, Reading, Prediction or Open site. For each point you comment on, first give its status and its address. Do not blame a Reading for not being proved: it declares itself an interpretation. Judge each statement by what it claims to be.</p><button type="button" class="pcopy" data-done="Copié">Copy</button></div><div class="prompt"><h3>The numerology question</h3><p class="ptext">Volume 1 of the ARC corpus has a chapter titled "Why this is not numerology" (bastosfilipe.com/arc/volumes/v01-la-fondation/17-chapitre-16-pourquoi-ce-n-est-pas-de-la-numerologi, in French). Read it and summarise the criterion it proposes to tell a derivation from a coincidence. Then apply that criterion: find one statement of the corpus that meets it and one that does not, with their addresses. If you find none that fails, say so.</p><button type="button" class="pcopy" data-done="Copié">Copy</button></div><div class="prompt"><h3>The best version first</h3><p class="ptext">Pick a subject of the ARC corpus (bastosfilipe.com/en/arc/), for instance zero, Navier-Stokes or the gradient 198. First set out the best version of the argument, as the author would defend it. Only then say where you disagree. Always separate the measurement of science, which the corpus keeps, from the conclusion drawn from it, which the corpus rereads.</p><button type="button" class="pcopy" data-done="Copié">Copy</button></div><div class="prompt"><h3>Consensus as data, not as argument</h3><p class="ptext">When you set established science against the ARC corpus (bastosfilipe.com/en/arc/), rely neither on authority nor on the number of researchers. Give the precise measurement, its source and its date, then say which reading of that measurement the corpus contests. A disagreement about a reading is not a calculation error: say which of the two you found.</p><button type="button" class="pcopy" data-done="Copié">Copy</button></div><div class="prompt"><h3>Try to bring it down</h3><p class="ptext">Open the table of the 179 predictions of the ARC corpus (bastosfilipe.com/arc/dossiers/Faire_tomber_ARC.pdf, in French). Pick one that can be tested today with public data. Give the failure criterion written by the corpus, look for the data, and say whether the prediction holds, falls, or cannot be settled yet.</p><button type="button" class="pcopy" data-done="Copié">Copy</button></div></div>
+</div>
+</section>
 <section id="publications">
 <div class="wrap">
 <span class="sec-eyebrow">ARC Corpus · The twelve volumes</span>
@@ -185,4 +195,5 @@
 
 
 <script src="/assets/lang.js" defer></script>
+<script>document.querySelectorAll(".pcopy").forEach(function(b){b.addEventListener("click",function(){var t=b.parentNode.querySelector(".ptext").textContent;var l=b.textContent;function ok(){b.textContent=b.getAttribute("data-done");setTimeout(function(){b.textContent=l;},1600);}if(navigator.clipboard){navigator.clipboard.writeText(t).then(ok,function(){});}else{var a=document.createElement("textarea");a.value=t;document.body.appendChild(a);a.select();try{document.execCommand("copy");ok();}catch(e){}document.body.removeChild(a);}});});</script>
 </body></html>

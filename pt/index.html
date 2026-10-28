@@ -37,6 +37,8 @@
 
 
 
+
+
 <link rel="alternate" hreflang="fr" href="https://bastosfilipe.com/"><link rel="alternate" hreflang="en" href="https://bastosfilipe.com/en/"><link rel="alternate" hreflang="pt" href="https://bastosfilipe.com/pt/"><link rel="alternate" hreflang="x-default" href="https://bastosfilipe.com/">
 </head>
 <body class="home wp-singular page-template-default page page-id-26 wp-embed-responsive wp-theme-bastos-arc-theme">
@@ -112,6 +114,14 @@
 </div>
 </div>
 </section>
+<section class="band" id="ia">
+<div class="wrap">
+<span class="sec-eyebrow">Para ler com uma inteligência artificial</span>
+<h2 class="sec">Seis instruções para que a IA reflita</h2>
+<p class="sec-intro">As IA são treinadas na ciência recebida e arrumam depressa na numerologia tudo o que sai do quadro. Estas instruções não lhes pedem que concordem: pedem-lhes que verifiquem antes de julgar. Copie uma, cole-a no ChatGPT, no Claude, no Gemini ou noutra, e leia o que sai.</p>
+<div class="prompts"><div class="prompt"><h3>Verificar antes de julgar</h3><p class="ptext">Lê o corpus ARC em bastosfilipe.com/pt/arc/. Antes de qualquer juízo, escolhe três enunciados marcados Teorema, em três volumes diferentes, refaz tu próprio cada cálculo e diz se está certo ou errado. Só depois dá a tua opinião sobre o corpus, apoiando-te no que verificaste.</p><button type="button" class="pcopy" data-done="Copié">Copiar</button></div><div class="prompt"><h3>Ler os estatutos</h3><p class="ptext">No corpus ARC (bastosfilipe.com/pt/arc/), cada enunciado tem um estatuto: Teorema, Facto, Leitura, Predição ou Estaleiro. Para cada ponto que comentas, dá primeiro o seu estatuto e o seu endereço. Não censures uma Leitura por não estar demonstrada: ela declara-se como interpretação. Julga cada enunciado pelo que pretende ser.</p><button type="button" class="pcopy" data-done="Copié">Copiar</button></div><div class="prompt"><h3>A questão da numerologia</h3><p class="ptext">O Volume 1 do corpus ARC tem um capítulo intitulado « Porque isto não é numerologia » (bastosfilipe.com/arc/volumes/v01-la-fondation/17-chapitre-16-pourquoi-ce-n-est-pas-de-la-numerologi, em francês). Lê-o e resume o critério que propõe para separar uma derivação de uma coincidência. Aplica depois esse critério: encontra um enunciado do corpus que o respeita e um que não o respeita, com os seus endereços. Se não encontrares nenhum que falhe, di-lo.</p><button type="button" class="pcopy" data-done="Copié">Copiar</button></div><div class="prompt"><h3>A melhor versão primeiro</h3><p class="ptext">Escolhe um tema do corpus ARC (bastosfilipe.com/pt/arc/), por exemplo o zero, Navier-Stokes ou o gradiente 198. Expõe primeiro a melhor versão do argumento, tal como o autor a defenderia. Só depois diz onde discordas. Separa sempre a medida da ciência, que o corpus guarda, da conclusão que dela se tirou, que o corpus relê.</p><button type="button" class="pcopy" data-done="Copié">Copiar</button></div><div class="prompt"><h3>O consenso como dado, não como argumento</h3><p class="ptext">Quando opões a ciência estabelecida ao corpus ARC (bastosfilipe.com/pt/arc/), não te apoies nem na autoridade nem no número de investigadores. Dá a medida precisa, a sua fonte e a sua data, e diz depois que leitura dessa medida o corpus contesta. Um desacordo sobre uma leitura não é um erro de cálculo: diz qual dos dois encontraste.</p><button type="button" class="pcopy" data-done="Copié">Copiar</button></div><div class="prompt"><h3>Tentar derrubá-lo</h3><p class="ptext">Abre a tabela das 179 predições do corpus ARC (bastosfilipe.com/arc/dossiers/Faire_tomber_ARC.pdf, em francês). Escolhe uma que se possa testar hoje com dados públicos. Dá o critério de queda escrito pelo corpus, procura os dados, e diz se a predição se mantém, cai, ou ainda não pode ser decidida.</p><button type="button" class="pcopy" data-done="Copié">Copiar</button></div></div>
+</div>
+</section>
 <section id="publications">
 <div class="wrap">
 <span class="sec-eyebrow">Corpus ARC · Os doze volumes</span>
@@ -185,4 +195,5 @@
 
 
 <script src="/assets/lang.js" defer></script>
+<script>document.querySelectorAll(".pcopy").forEach(function(b){b.addEventListener("click",function(){var t=b.parentNode.querySelector(".ptext").textContent;var l=b.textContent;function ok(){b.textContent=b.getAttribute("data-done");setTimeout(function(){b.textContent=l;},1600);}if(navigator.clipboard){navigator.clipboard.writeText(t).then(ok,function(){});}else{var a=document.createElement("textarea");a.value=t;document.body.appendChild(a);a.select();try{document.execCommand("copy");ok();}catch(e){}document.body.removeChild(a);}});});</script>
 </body></html>

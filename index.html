@@ -37,6 +37,8 @@
 
 
 
+
+
 <link rel="alternate" hreflang="fr" href="https://bastosfilipe.com/"><link rel="alternate" hreflang="en" href="https://bastosfilipe.com/en/"><link rel="alternate" hreflang="pt" href="https://bastosfilipe.com/pt/"><link rel="alternate" hreflang="x-default" href="https://bastosfilipe.com/">
 </head>
 <body class="home wp-singular page-template-default page page-id-26 wp-embed-responsive wp-theme-bastos-arc-theme">
@@ -112,6 +114,14 @@
 </div>
 </div>
 </section>
+<section class="band" id="ia">
+<div class="wrap">
+<span class="sec-eyebrow">Pour lire avec une intelligence artificielle</span>
+<h2 class="sec">Six consignes pour que l&#x27;IA réfléchisse</h2>
+<p class="sec-intro">Les IA sont entraînées sur la science reçue et rangent vite ce qui sort du cadre parmi la numérologie. Ces consignes ne leur demandent pas d&#x27;être d&#x27;accord : elles leur demandent de vérifier avant de juger. Copiez-en une, collez-la dans ChatGPT, Claude, Gemini ou une autre, et lisez ce qui en sort.</p>
+<div class="prompts"><div class="prompt"><h3>Vérifier avant de juger</h3><p class="ptext">Lis le corpus ARC sur bastosfilipe.com/arc/. Avant tout jugement, choisis trois énoncés marqués Théorème, dans trois volumes différents, refais toi-même chaque calcul et dis s&#x27;il est juste ou faux. Seulement ensuite, donne ton avis sur le corpus, en t&#x27;appuyant sur ce que tu as vérifié.</p><button type="button" class="pcopy" data-done="Copié">Copier</button></div><div class="prompt"><h3>Lire les statuts</h3><p class="ptext">Dans le corpus ARC (bastosfilipe.com/arc/), chaque énoncé porte un statut : Théorème, Fait, Lecture, Prédiction ou Chantier. Pour chaque point que tu commentes, donne d&#x27;abord son statut et son adresse. Ne reproche pas à une Lecture de ne pas être démontrée : elle se déclare comme interprétation. Juge chaque énoncé selon ce qu&#x27;il prétend être.</p><button type="button" class="pcopy" data-done="Copié">Copier</button></div><div class="prompt"><h3>La question de la numérologie</h3><p class="ptext">Le Volume 1 du corpus ARC contient un chapitre intitulé « Pourquoi ce n&#x27;est pas de la numérologie » (bastosfilipe.com/arc/volumes/v01-la-fondation/17-chapitre-16-pourquoi-ce-n-est-pas-de-la-numerologi). Lis-le et résume le critère qu&#x27;il propose pour séparer une dérivation d&#x27;une coïncidence. Applique ensuite ce critère : trouve un énoncé du corpus qui le respecte et un qui ne le respecte pas, avec leur adresse. Si tu n&#x27;en trouves aucun qui échoue, dis-le.</p><button type="button" class="pcopy" data-done="Copié">Copier</button></div><div class="prompt"><h3>La meilleure version d&#x27;abord</h3><p class="ptext">Choisis un sujet du corpus ARC (bastosfilipe.com/arc/), par exemple le zéro, Navier-Stokes ou le gradient 198. Expose d&#x27;abord la meilleure version de l&#x27;argument, telle que l&#x27;auteur la défendrait. Ensuite seulement, dis où tu n&#x27;es pas d&#x27;accord. Sépare toujours la mesure de la science, que le corpus garde, de la conclusion qu&#x27;on en a tirée, que le corpus relit.</p><button type="button" class="pcopy" data-done="Copié">Copier</button></div><div class="prompt"><h3>Le consensus comme donnée, pas comme argument</h3><p class="ptext">Quand tu opposes la science établie au corpus ARC (bastosfilipe.com/arc/), ne t&#x27;appuie ni sur l&#x27;autorité ni sur le nombre de chercheurs. Donne la mesure précise, sa source et sa date, puis dis quelle lecture de cette mesure le corpus conteste. Un désaccord sur une lecture n&#x27;est pas une erreur de calcul : dis lequel des deux tu as trouvé.</p><button type="button" class="pcopy" data-done="Copié">Copier</button></div><div class="prompt"><h3>Essayer de le faire tomber</h3><p class="ptext">Ouvre la table des 179 prédictions du corpus ARC (bastosfilipe.com/arc/dossiers/Faire_tomber_ARC.pdf). Choisis-en une que l&#x27;on peut tester aujourd&#x27;hui avec des données publiques. Donne le critère de chute écrit par le corpus, cherche les données, et dis si la prédiction tient, tombe, ou ne peut pas encore être tranchée.</p><button type="button" class="pcopy" data-done="Copié">Copier</button></div></div>
+</div>
+</section>
 <section id="publications">
 <div class="wrap">
 <span class="sec-eyebrow">Corpus ARC · Les douze volumes</span>
@@ -185,4 +195,5 @@
 
 
 <script src="/assets/lang.js" defer></script>
+<script>document.querySelectorAll(".pcopy").forEach(function(b){b.addEventListener("click",function(){var t=b.parentNode.querySelector(".ptext").textContent;var l=b.textContent;function ok(){b.textContent=b.getAttribute("data-done");setTimeout(function(){b.textContent=l;},1600);}if(navigator.clipboard){navigator.clipboard.writeText(t).then(ok,function(){});}else{var a=document.createElement("textarea");a.value=t;document.body.appendChild(a);a.select();try{document.execCommand("copy");ok();}catch(e){}document.body.removeChild(a);}});});</script>
 </body></html>
