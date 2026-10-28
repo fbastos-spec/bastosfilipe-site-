@@ -138,10 +138,6 @@
 .arcb .ici { display: inline-block; font-family: "IBM Plex Mono", monospace; font-size: .66rem; letter-spacing: .14em; text-transform: uppercase; color: var(--paper); background: var(--bleu); padding: .15rem .55rem; margin-left: .5rem; vertical-align: middle; }
 
 /* Traduction (28 octobre 2026) */
-.nav .lang { display: flex; align-items: baseline; gap: .55rem; flex-wrap: wrap; font-family: "IBM Plex Mono", monospace; font-size: .62rem; letter-spacing: .12em; text-transform: uppercase; }
-.nav .lang span { color: var(--or); }
-.nav .lang a { font-size: .62rem; opacity: .85; }
-@media (max-width: 820px) { .nav .lang { gap: .45rem; } }
 
 /* Consignes pour les IA (28 octobre 2026) */
 .prompts { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 18px; margin-top: 22px; }
@@ -175,3 +171,31 @@
 .ia-contra { margin-top: 22px; font-size: 1.02rem; }
 #contra-form .cbtn { font-family: "IBM Plex Mono", monospace; letter-spacing: .12em; text-transform: uppercase; background: var(--bleu, #1e3a5f); color: #fff; border: 0; cursor: pointer; }
 .contra-page .pquote { margin-top: 8px; }
+
+/* Entête : marque, menu, sélecteur de langue */
+.nav { gap: 12px 28px; align-items: center; }
+.nav ul { margin: 0; padding: 0; }
+.nav details.lang { position: relative; flex: none; }
+.nav details.lang summary { list-style: none; cursor: pointer; font-family: "IBM Plex Mono", monospace; font-size: .7rem; letter-spacing: .14em; color: var(--ink); border: 1px solid var(--rule); padding: 5px 9px 5px 10px; line-height: 1; user-select: none; }
+.nav details.lang summary::-webkit-details-marker { display: none; }
+.nav details.lang summary::after { content: ""; display: inline-block; width: 5px; height: 5px; margin-left: 8px; border-right: 1px solid currentColor; border-bottom: 1px solid currentColor; transform: translateY(-3px) rotate(45deg); }
+.nav details.lang[open] summary { border-color: var(--or); color: var(--bleu); }
+.nav .lang-menu { position: absolute; right: 0; top: calc(100% + 6px); z-index: 60; min-width: 190px; background: #f4f3ee; border: 1px solid var(--rule); box-shadow: 0 8px 24px rgba(20, 24, 30, .08); padding: 8px 0; display: flex; flex-direction: column; }
+.nav .lang-menu a { display: block; padding: 8px 16px; font-size: .7rem; letter-spacing: .1em; text-transform: none; border: 0; }
+.nav .lang-menu a:hover { background: rgba(0, 0, 0, .035); border: 0; }
+.nav .lang-menu a[aria-current] { color: var(--bleu); }
+.nav .lang-menu a[aria-current]::before { content: "· "; color: var(--or); }
+.nav .lang-menu span { display: block; padding: 10px 16px 4px; margin-top: 6px; border-top: 1px solid var(--rule); font-family: "IBM Plex Mono", monospace; font-size: .58rem; letter-spacing: .14em; text-transform: uppercase; color: var(--or); }
+@media (min-width: 701px) { .nav ul { margin-left: auto; } }
+@media (max-width: 700px) {
+  .nav { display: grid; grid-template-columns: 1fr auto; grid-template-areas: "brand lang" "menu menu"; align-items: center; gap: 10px 12px; padding-block: 12px 0; }
+  .nav .brand { grid-area: brand; font-size: .95rem; letter-spacing: .14em; }
+  .nav details.lang { grid-area: lang; }
+  .nav ul { grid-area: menu; flex-wrap: nowrap; overflow-x: auto; gap: 0 12px; padding-bottom: 11px; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+  .nav ul::-webkit-scrollbar { display: none; }
+  .nav ul li { flex: none; }
+  .nav ul li:first-child, .nav .m-hide { display: none; }
+  .nav ul { justify-content: space-between; }
+  .nav ul a { font-size: clamp(.56rem, 2.75vw, .66rem); letter-spacing: .08em; white-space: nowrap; }
+  .nav ul a[aria-current] { border-bottom: 1px solid var(--or); }
+}
