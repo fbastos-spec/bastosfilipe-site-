@@ -2595,13 +2595,23 @@
           ]
         },
         {
+          "titre": "Chapitre 17. Le 198 dans le tableau : les treize triplets, l’interface et la libération du 3",
+          "fichier": "18-chapitre-17-le-198-dans-le-tableau-les-treize-triplets.html",
+          "sections": [
+            "17.1 Les treize triplets",
+            "17.2 Les sommes",
+            "17.3 L’interface et la libération du 3",
+            "17.4 Conditions de réfutation"
+          ]
+        },
+        {
           "titre": "Annexe A. Table des énoncés",
-          "fichier": "18-annexe-a-table-des-enonces.html",
+          "fichier": "19-annexe-a-table-des-enonces.html",
           "sections": []
         },
         {
           "titre": "Annexe B. Retraits et corrections",
-          "fichier": "19-annexe-b-retraits-et-corrections.html",
+          "fichier": "20-annexe-b-retraits-et-corrections.html",
           "sections": [
             "B.1 Corrections de calcul ou de fait",
             "B.2 Rétrogradations de statut",
@@ -2612,12 +2622,12 @@
         },
         {
           "titre": "Annexe C. Sources fusionnées",
-          "fichier": "20-annexe-c-sources-fusionnees.html",
+          "fichier": "21-annexe-c-sources-fusionnees.html",
           "sections": []
         },
         {
           "titre": "Annexe D. Vérifications refaites",
-          "fichier": "21-annexe-d-verifications-refaites.html",
+          "fichier": "22-annexe-d-verifications-refaites.html",
           "sections": []
         }
       ],
