@@ -1,6 +1,6 @@
 # ARC corpus (Architecture of Relational Coherence), by Filipe Bastos
 
-> An independent research corpus, written in French, that rereads mathematics, physics, the living world and society from one operation, 1 ⊕ 1 = 3, and the cadastre of nine positions (1 to 9, involution φ(x) = 9 − x, centre 4.5, constant k = 1/2). Every statement carries an explicit status: Theorem (finite computation, verified by an attached script), Fact (received science, with sources), Reading (the author's interpretation, declared as such), Prediction (dated, with its refutation criterion), Open problem. 12 volumes, version 1.0, October 2026. License CC BY 4.0. Each volume page gives an English abstract.
+> An independent research corpus, written in French, that rereads mathematics, physics, the living world and society from a single figure, two concentric circles with a square between them, and the constant k = 1/2 it imposes (the ratio of the radii is √2/2, whose square is ½); the operation 1 ⊕ 1 = 3 and the cadastre of nine positions (1 to 9, involution φ(x) = 9 − x, centre 4.5) follow from it. Every statement carries an explicit status: Theorem (finite computation, verified by an attached script), Fact (received science, with sources), Reading (the author's interpretation, declared as such), Prediction (dated, with its refutation criterion), Open problem. 12 volumes, version 1.0, October 2026. License CC BY 4.0. Each volume page gives an English abstract.
 
 Main language: French. French index: https://bastosfilipe.com/arc/llms-fr.txt
 
