@@ -13,6 +13,15 @@ jobs:
         with: { fetch-depth: 2 }
       - name: Attendre la publication Cloudflare
         run: sleep 90
+      - name: Diagnostic du domaine
+        run: |
+          for u in https://bastosfilipe.com/ https://bastosfilipe.com/assets/site-unified.css https://bastosfilipe.com/robots.txt https://bastosfilipe.com/sitemap.xml https://www.bastosfilipe.com/; do
+            echo "$u -> $(curl -s -o /tmp/b -w '%{http_code} %{content_type} %{redirect_url}' "$u") ; nouveau site : $(grep -c 'ouverture\|User-agent\|urlset\|G-LB0FH513XB' /tmp/b)"
+          done
+          for ua in "GPTBot/1.1" "ClaudeBot/1.0" "PerplexityBot/1.0" "Googlebot/2.1" "bingbot/2.0"; do
+            echo "robot $ua -> $(curl -s -o /dev/null -w '%{http_code}' -A "Mozilla/5.0 (compatible; $ua)" https://bastosfilipe.com/)"
+          done
+          curl -sI https://bastosfilipe.com/ | grep -iE 'server|cf-ray|x-robots|location' || true
       - name: Signaler
         run: |
           KEY=$(ls | grep -E '^[0-9a-f]{32}\.txt$' | head -1 | sed 's/\.txt$//')
