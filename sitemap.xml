@@ -336,6 +336,7 @@
   <url><loc>https://bastosfilipe.com/arc/pdf/ARC_Volume_10_la_conscience_et_la_peine.pdf</loc><lastmod>2026-10-27</lastmod><priority>0.6</priority></url>
   <url><loc>https://bastosfilipe.com/arc/pdf/ARC_Volume_11_la_cite_et_le_sens.pdf</loc><lastmod>2026-10-27</lastmod><priority>0.6</priority></url>
   <url><loc>https://bastosfilipe.com/assets/quantum_correlations_v3_6-4-e2e413b1a0e9.pdf</loc><lastmod>2026-10-27</lastmod><priority>0.6</priority></url>
+  <url><loc>https://bastosfilipe.com/contradictions/</loc><lastmod>2026-10-28</lastmod><priority>0.7</priority></url>
   <url><loc>https://bastosfilipe.com/en/</loc><lastmod>2026-10-28</lastmod><priority>0.8</priority></url>
   <url><loc>https://bastosfilipe.com/en/about/</loc><lastmod>2026-10-28</lastmod><priority>0.5</priority></url>
   <url><loc>https://bastosfilipe.com/en/library/</loc><lastmod>2026-10-28</lastmod><priority>0.5</priority></url>
@@ -392,4 +393,6 @@
   <url><loc>https://bastosfilipe.com/pt/arc/volumes/v10-la-conscience-et-la-peine/anexo-a-tabela-dos-enunciados</loc><lastmod>2026-10-28</lastmod><priority>0.5</priority></url>
   <url><loc>https://bastosfilipe.com/pt/arc/volumes/v11-la-cite-et-le-sens/</loc><lastmod>2026-10-28</lastmod><priority>0.5</priority></url>
   <url><loc>https://bastosfilipe.com/pt/arc/volumes/v11-la-cite-et-le-sens/anexo-a-tabela-dos-enunciados</loc><lastmod>2026-10-28</lastmod><priority>0.5</priority></url>
+  <url><loc>https://bastosfilipe.com/en/contradictions/</loc><lastmod>2026-10-28</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bastosfilipe.com/pt/contradicoes/</loc><lastmod>2026-10-28</lastmod><priority>0.7</priority></url>
 </urlset>

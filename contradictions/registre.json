@@ -1,0 +1,4 @@
+{
+ "note": "Registre public des contradictions. Une entrée : id, date, enonce, adresse, contradiction, preuve, auteur, statut (examen | corrigee | maintenue | retiree), reponse, date_reponse.",
+ "entrees": []
+}
