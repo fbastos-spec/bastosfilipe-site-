@@ -1,6 +1,6 @@
 # Corpus ARC, Filipe Bastos
 
-> Architecture de la Cohérence Relationnelle : relecture des mathématiques, de la physique, du vivant et de la cité à partir d'une seule figure, deux cercles et un carré, et de la constante ½ qu'elle impose ; l'opération 1 ⊕ 1 = 3 et le cadastre des neuf positions en découlent. Chaque énoncé porte son statut : Théorème (calcul vérifié par script), Fait, Lecture, Prédiction, Chantier. Licence CC BY 4.0.
+> Architecture de la Cohérence Relationnelle. Ce n'est pas une théorie, et surtout pas une théorie du tout : aucune chose unique n'explique tout, car tout est relatif à son contexte ; aucun axiome ; une lecture faite de plusieurs éléments (la figure, les neuf positions, les paires, le centre vide, la relation), à chaque échelle. Relecture des mathématiques, de la physique, du vivant et de la cité à partir d'une seule figure, deux cercles et un carré, et de la constante ½ qu'elle impose ; l'opération 1 ⊕ 1 = 3 et le cadastre des neuf positions en découlent. Chaque énoncé porte son statut : Théorème (calcul vérifié par script), Fait, Lecture, Prédiction, Chantier. Licence CC BY 4.0.
 
 ## Volumes
 - [Volume 0, Le Seuil](https://bastosfilipe.com/arc/volumes/v00-le-seuil/) : Préface, méthode, statuts, Lexique et carte du corpus ARC. PDF : https://bastosfilipe.com/arc/pdf/ARC_Volume_00_le_seuil.pdf
