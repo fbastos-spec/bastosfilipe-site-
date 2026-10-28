@@ -4,6 +4,9 @@
 
 Main language: French. French index: https://bastosfilipe.com/arc/llms-fr.txt
 
+## English entry pages
+- [Home (English)](https://bastosfilipe.com/en/) ; [Library](https://bastosfilipe.com/en/library/) ; [About the author](https://bastosfilipe.com/en/about/) ; [Corpus index](https://bastosfilipe.com/en/arc/). Each volume has an English page with its abstract and a hand-translated table of every statement: https://bastosfilipe.com/en/arc/volumes/<slug>/ and .../appendix-a-table-of-statements
+
 ## Volumes
 - [Volume 0, Le Seuil](https://bastosfilipe.com/arc/volumes/v00-le-seuil/): The entrance to the ARC corpus (Architecture of Relational Coherence). PDF: https://bastosfilipe.com/arc/pdf/ARC_Volume_00_le_seuil.pdf
 - [Volume 1, La Fondation](https://bastosfilipe.com/arc/volumes/v01-la-fondation/): The essential volume of the ARC corpus. PDF: https://bastosfilipe.com/arc/pdf/ARC_Volume_01_la_fondation.pdf
