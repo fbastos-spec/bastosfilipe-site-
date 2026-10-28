@@ -130,7 +130,7 @@
   .top, .site-footer, .screen-reader-text, .reader-actions, .arc-reading .chapnav, .arc-reading .crumbs, .arc-reading .btn { display: none; }
 }
 /* Ouverture par la figure fondamentale (27 octobre 2026) */
-.ouverture { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; align-items: center; padding: 8px 0 24px; }
+.ouverture { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; align-items: center; padding-block: 8px 24px; }
 .ouverture .fig svg { width: 100%; max-width: 520px; height: auto; display: block; margin: 0 auto; }
 .ouverture p { color: rgb(44, 51, 60); font-size: 1.04rem; }
 .ouverture p + p { margin-top: 1em; }
