@@ -1538,7 +1538,7 @@
         "Euler product"
       ],
       "pages": 107,
-      "mots": 48613,
+      "mots": 48633,
       "pdf": "pdf/ARC_Volume_05_les_grands_problemes.pdf",
       "html": "volumes/v05-les-grands-problemes/index.html",
       "chapitres": [
@@ -2124,8 +2124,8 @@
         "Standard Model",
         "string theory"
       ],
-      "pages": 132,
-      "mots": 63497,
+      "pages": 133,
+      "mots": 64078,
       "pdf": "pdf/ARC_Volume_07_la_physique_relue.pdf",
       "html": "volumes/v07-la-physique-relue/index.html",
       "chapitres": [
@@ -2299,6 +2299,7 @@
             "11.10 Les trois gravures corrigées",
             "11.11 La tête et les pattes : où la grammaire touche le monde",
             "11.12 Les prédictions d'avril, avec leurs statuts",
+            "11.12 bis Yang-Mills et la corde : la relation détachée",
             "11.13 Conclusion"
           ]
         },
