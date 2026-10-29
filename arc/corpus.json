@@ -1537,8 +1537,8 @@
         "zeta function",
         "Euler product"
       ],
-      "pages": 104,
-      "mots": 46511,
+      "pages": 106,
+      "mots": 47828,
       "pdf": "pdf/ARC_Volume_05_les_grands_problemes.pdf",
       "html": "volumes/v05-les-grands-problemes/index.html",
       "chapitres": [
@@ -1711,6 +1711,7 @@
             "10.10 Le parallèle avec P contre NP",
             "10.11 Pourquoi c'était si difficile",
             "10.12 Objections et réponses",
+            "10.12 bis Le ballon vu de l’intérieur, et l’annonce du 26 octobre 2026",
             "10.13 Conditions de réfutation",
             "10.14 Conclusion"
           ]
