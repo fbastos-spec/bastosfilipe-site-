@@ -522,7 +522,7 @@
         "base ten"
       ],
       "pages": 137,
-      "mots": 61965,
+      "mots": 62344,
       "pdf": "pdf/ARC_Volume_02_la_figure.pdf",
       "html": "volumes/v02-la-figure/index.html",
       "chapitres": [
@@ -1537,8 +1537,8 @@
         "zeta function",
         "Euler product"
       ],
-      "pages": 106,
-      "mots": 47828,
+      "pages": 107,
+      "mots": 48613,
       "pdf": "pdf/ARC_Volume_05_les_grands_problemes.pdf",
       "html": "volumes/v05-les-grands-problemes/index.html",
       "chapitres": [
@@ -1712,6 +1712,7 @@
             "10.11 Pourquoi c'était si difficile",
             "10.12 Objections et réponses",
             "10.12 bis Le ballon vu de l’intérieur, et l’annonce du 26 octobre 2026",
+            "10.12 ter Le trou est plein : la mauvaise lecture du gap",
             "10.13 Conditions de réfutation",
             "10.14 Conclusion"
           ]
