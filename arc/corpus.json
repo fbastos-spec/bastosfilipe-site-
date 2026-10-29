@@ -2135,8 +2135,8 @@
         "Standard Model",
         "string theory"
       ],
-      "pages": 133,
-      "mots": 64271,
+      "pages": 134,
+      "mots": 64626,
       "pdf": "pdf/ARC_Volume_07_la_physique_relue.pdf",
       "html": "volumes/v07-la-physique-relue/index.html",
       "chapitres": [
@@ -2266,7 +2266,8 @@
             "8.6 La réduction du spectre des particules",
             "8.7 La redondance de l'espace de dimension infinie",
             "8.8 Le déterminisme restauré",
-            "8.9 Synthèse et prédictions"
+            "8.9 Synthèse et prédictions",
+            "8.10 Koide : les trois leptons à 45°"
           ]
         },
         {
