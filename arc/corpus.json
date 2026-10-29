@@ -1538,8 +1538,8 @@
         "zeta function",
         "Euler product"
       ],
-      "pages": 112,
-      "mots": 50508,
+      "pages": 114,
+      "mots": 51506,
       "pdf": "pdf/ARC_Volume_05_les_grands_problemes.pdf",
       "html": "volumes/v05-les-grands-problemes/index.html",
       "chapitres": [
@@ -1715,6 +1715,7 @@
             "10.12 bis Le ballon vu de l’intérieur, et l’annonce du 26 octobre 2026",
             "10.12 ter Le trou est plein : la mauvaise lecture du gap",
             "10.12 quater Le CP fort : la torsion qui s’annule",
+            "10.12 quinquies Les tests refaits : la figure fermée et l’équation de SU(3)",
             "10.13 Conditions de réfutation",
             "10.14 Conclusion"
           ]
@@ -1755,7 +1756,8 @@
             "13.1 Les deux énoncés",
             "13.2 La symétrie de Hodge est une involution",
             "13.3 Le beigne de la figure",
-            "13.4 La lecture"
+            "13.4 La lecture",
+            "13.5 Compléments : le beigne parfait, la torsion jetée, le centre de Birch et Swinnerton-Dyer"
           ]
         },
         {
