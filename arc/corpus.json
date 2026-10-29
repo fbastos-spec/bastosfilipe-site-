@@ -1537,8 +1537,8 @@
         "zeta function",
         "Euler product"
       ],
-      "pages": 107,
-      "mots": 48633,
+      "pages": 111,
+      "mots": 49779,
       "pdf": "pdf/ARC_Volume_05_les_grands_problemes.pdf",
       "html": "volumes/v05-les-grands-problemes/index.html",
       "chapitres": [
@@ -1744,6 +1744,16 @@
             "II. Collatz : la question qui ignorait la machine",
             "III. Goldbach : la question qui comptait dans un seul pot",
             "IV. La loi commune, et ce que « non avenu » veut dire exactement"
+          ]
+        },
+        {
+          "titre": "Chapitre 13. Le beigne : Hodge et Birch-Swinnerton-Dyer sur les deux cercles",
+          "fichier": "13b-chapitre-13-le-beigne-hodge-et-birch-swinnerton-dyer.html",
+          "sections": [
+            "13.1 Les deux énoncés",
+            "13.2 La symétrie de Hodge est une involution",
+            "13.3 Le beigne de la figure",
+            "13.4 La lecture"
           ]
         },
         {
