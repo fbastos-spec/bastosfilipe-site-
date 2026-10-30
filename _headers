@@ -14,3 +14,5 @@ https://bastosfilipe-site.pages.dev/*
   Content-Type: text/plain; charset=utf-8
 /llms.txt
   Content-Type: text/plain; charset=utf-8
+/assets/*
+  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
