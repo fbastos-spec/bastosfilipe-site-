@@ -1,0 +1,66 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LB0FH513XB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-LB0FH513XB');
+  gtag('config', 'G-7B04RFMF7Z');
+</script>
+<meta name="description" content="Search a word or an idea across the whole ARC corpus by Filipe Bastos: the twelve volumes, chapter by chapter, with the passage where it appears.">
+
+<meta content="width=device-width, initial-scale=1" name="viewport">
+<title>Search the corpus · Corpus ARC · Filipe Bastos</title>
+<meta name="robots" content="noindex, follow">
+
+<link rel="canonical" href="https://bastosfilipe.com/en/search/"><link href="/assets/css2-4869c7ae422d.css" id="bastos-arc-fonts-css" media="all" rel="stylesheet"><link href="/assets/style-2caf4e3e0608.css" id="bastos-arc-theme-css" media="all" rel="stylesheet"><link href="/assets/corpus-integration.css" rel="stylesheet"><link href="/assets/site-unified.css?v=6" rel="stylesheet">
+
+<meta property="og:type" content="website"><meta property="og:site_name" content="Filipe Bastos · Corpus ARC"><meta property="og:locale" content="en_CA"><meta property="og:title" content="Contradictions · ARC Corpus · Filipe Bastos"><meta property="og:description" content="Send a contradiction to Filipe Bastos&#x27;s ARC corpus: an error, an inconsistency, a prediction that falls. Every contradiction received is published here with the author&#x27;s answer."><meta property="og:url" content="https://bastosfilipe.com/en/search/"><meta property="og:image" content="https://bastosfilipe.com/assets/og-arc.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Contradictions · ARC Corpus · Filipe Bastos"><meta name="twitter:description" content="Send a contradiction to Filipe Bastos&#x27;s ARC corpus: an error, an inconsistency, a prediction that falls. Every contradiction received is published here with the author&#x27;s answer."><meta name="twitter:image" content="https://bastosfilipe.com/assets/og-arc.png">
+
+<link rel="alternate" hreflang="fr" href="https://bastosfilipe.com/rechercher/"><link rel="alternate" hreflang="en" href="https://bastosfilipe.com/en/search/"><link rel="alternate" hreflang="pt" href="https://bastosfilipe.com/pt/pesquisar/"><link rel="alternate" hreflang="x-default" href="https://bastosfilipe.com/rechercher/">
+<link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+<style>.pf-wrap{--pagefind-ui-primary:#1f3a5a;--pagefind-ui-text:#1b1f24;--pagefind-ui-background:#f4f2ec;--pagefind-ui-border:#c9c4b8;--pagefind-ui-tag:#e7e3d8;--pagefind-ui-font:inherit;margin-top:24px}</style>
+</head>
+<body class="page">
+<a class="screen-reader-text" href="/bio/#content">Skip to content</a>
+<header class="top">
+<nav aria-label="Main navigation" class="nav">
+<a class="brand" href="/en/">Filipe Bastos</a>
+<ul class="" id="menu-main-en"><li><a href="/en/">Home</a></li><li><a href="/en/library/">Library</a></li><li><a href="/en/about/">About</a></li><li><a href="/en/arc/">ARC Corpus</a></li><li><a href="/en/contradictions/">Contradictions</a></li></ul> <a class="search-link" href="/en/search/" aria-label="Search" title="Search" style="display:inline-flex;align-items:center;justify-content:center;width:34px;height:30px;margin-right:6px;color:inherit;border:1px solid currentColor;border-radius:3px;opacity:.75;vertical-align:middle"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg></a><details class="lang"><summary aria-label="Language">EN</summary><div class="lang-menu"><a data-l="fr" href="/" lang="fr">Français</a><a data-l="en" href="/en/" lang="en">English</a><a data-l="pt" href="/pt/" lang="pt">Português</a><span>Machine translation</span><a data-tl="es" href="#" lang="es">Español</a><a data-tl="it" href="#" lang="it">Italiano</a><a data-tl="de" href="#" lang="de">Deutsch</a><a data-tl="zh-CN" href="#" lang="zh">中文</a></div></details></nav>
+</header>
+<main id="content" data-pagefind-ignore="all">
+<div class="wrap page-shell">
+<span class="sec-eyebrow">ARC corpus</span>
+<h1 class="entry-title">Search the corpus</h1>
+<p>Type a word, an idea or a name: the search runs through the corpus, chapter by chapter, and shows every passage where it appears. The twelve volumes are in French; English pages are searched in English.</p>
+<div id="search" class="pf-wrap"></div>
+</div>
+<script src="/pagefind/pagefind-ui.js"></script>
+<script>
+window.addEventListener('DOMContentLoaded',function(){
+  var ui=new PagefindUI({element:'#search',showSubResults:true,showImages:false,resetStyles:false,translations:{placeholder:'Search (e.g. entanglement, Brahmagupta, 198)'}});
+  try{var q=new URLSearchParams(location.search).get('q'); if(q) ui.triggerSearch(q);}catch(e){}
+});
+</script>
+</main>
+<script>(function(){var f=document.getElementById("contra-form");if(!f)return;f.addEventListener("submit",function(){
+var g=function(n){return (f.elements[n].value||"").trim();};if(!g("enonce")||!g("contra")){f.reportValidity&&f.reportValidity();return;}
+var s="[ARC] Contradiction"+" : "+g("enonce");
+var b="Statement"+" : "+g("enonce")+"\n\n"+"Contradiction"+" :\n"+g("contra")+"\n\n"+"Calculation or source"+" :\n"+g("preuve")+"\n\n"+"Name"+" : "+(g("nom")||"-")+"\n"+"With an AI"+" : "+g("ia")+"\n\n"+location.href;
+location.href="mailto:f.bastos@d2technologie.com?subject="+encodeURIComponent(s)+"&body="+encodeURIComponent(b);});})();</script>
+<footer class="site-footer">
+<div class="wrap footgrid">
+<span class="sceau">Filipe Bastos · ARC</span>
+<p>© 2026 · Architecture of Relational Coherence · CC BY 4.0</p>
+<p class="mono">φ(x) = 9 − x · k = 1/2</p>
+</div>
+</footer>
+
+
+
+
+
+<script src="/assets/lang.js?v=5" defer></script>
+</body></html>
