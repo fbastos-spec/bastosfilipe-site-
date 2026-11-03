@@ -33,3 +33,14 @@
 - Filipe Bastos, né en 1976 au Québec. Page : https://bastosfilipe.com/bio/
 
 English index: https://bastosfilipe.com/llms.txt
+
+## Les grandes questions
+
+- [Pourquoi la borne de Tsirelson vaut 2√2](https://bastosfilipe.com/sujets/borne-de-tsirelson/) : Pourquoi les corrélations quantiques s'arrêtent à 2√2 : la borne de Tsirelson obtenue sans espace de Hilbert, par une projection sur la sphère, et décomposée en 4 × ½ × √2.
+- [L'intrication quantique : une relation, pas un signal](https://bastosfilipe.com/sujets/intrication-quantique/) : Qu'est-ce que l'intrication quantique ? Deux particules qui partagent un même état relationnel : leur corrélation est une mémoire commune, pas une action à distance.
+- [La physique quantique lue autrement : mesurer, c'est projeter](https://bastosfilipe.com/sujets/physique-quantique/) : La physique quantique sans mystère : la mesure est une projection, l'aléa est la perte de cette projection, le spin ½ est la constante de la lecture. Une lecture relationnelle, avec ses statuts.
+- [L'hypothèse de Riemann : pourquoi la droite ½](https://bastosfilipe.com/sujets/hypothese-de-riemann/) : Pourquoi les zéros de la fonction zêta de Riemann se tiennent sur la droite ½ : la lecture du corpus ARC, le centre d'une paire, et ce qui reste ouvert.
+- [Les nombres premiers ne sont pas aléatoires](https://bastosfilipe.com/sujets/nombres-premiers/) : Les nombres premiers sont-ils aléatoires ? Non : la grille 6k ± 1 s'engendre seule, ses composés naissent de quatre familles connues, et le premier est ce qu'aucune famille n'engendre.
+- [Le problème difficile de la conscience : un pont entre deux rives qu'on a séparées](https://bastosfilipe.com/sujets/probleme-difficile-de-la-conscience/) : Le « hard problem » de Chalmers lu par le corpus ARC : la conscience comme système qui se lit lui-même, et le fossé explicatif comme héritage d'une séparation historique.
+- [Pourquoi une crise de panique arrive sans raison apparente](https://bastosfilipe.com/sujets/crise-de-panique/) : Pourquoi la crise de panique survient sans objet, souvent la nuit, et résiste au raisonnement : une lecture philosophique et psychologique, qui ne remplace aucun soin.
+- [Gauche et droite : deux moitiés d'une même opération](https://bastosfilipe.com/sujets/gauche-droite/) : Gauche et droite lues comme une paire d'inversion non reconnue : l'une articule sans opérer, l'autre opère sans articuler, et chacune reproche à l'autre ce qu'elle ampute en elle-même.

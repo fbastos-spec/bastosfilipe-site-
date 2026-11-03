@@ -1,0 +1,65 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LB0FH513XB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-LB0FH513XB');
+  gtag('config', 'G-7B04RFMF7Z');
+</script>
+<meta name="description" content="Why quantum correlations stop at 2√2: the Tsirelson bound derived without Hilbert space, by projection on the sphere, and decomposed as 4 × ½ × √2.">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+<title>Why the Tsirelson bound is 2√2 · Filipe Bastos</title>
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<link rel="canonical" href="https://bastosfilipe.com/en/topics/tsirelson-bound/"><link href="/assets/css2-4869c7ae422d.css" media="all" rel="stylesheet"><link href="/assets/style-2caf4e3e0608.css" media="all" rel="stylesheet"><link href="/assets/corpus-integration.css" rel="stylesheet"><link href="/assets/site-unified.css?v=6" rel="stylesheet">
+<meta property="og:type" content="article"><meta property="og:site_name" content="Filipe Bastos · Corpus ARC"><meta property="og:locale" content="en_CA"><meta property="og:title" content="Why the Tsirelson bound is 2√2"><meta property="og:description" content="Why quantum correlations stop at 2√2: the Tsirelson bound derived without Hilbert space, by projection on the sphere, and decomposed as 4 × ½ × √2."><meta property="og:url" content="https://bastosfilipe.com/en/topics/tsirelson-bound/"><meta property="og:image" content="https://bastosfilipe.com/assets/og-arc.png"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Why the Tsirelson bound is 2√2"><meta name="twitter:description" content="Why quantum correlations stop at 2√2: the Tsirelson bound derived without Hilbert space, by projection on the sphere, and decomposed as 4 × ½ × √2."><meta name="twitter:image" content="https://bastosfilipe.com/assets/og-arc.png">
+<link rel="alternate" hreflang="fr" href="https://bastosfilipe.com/sujets/borne-de-tsirelson/"><link rel="alternate" hreflang="en" href="https://bastosfilipe.com/en/topics/tsirelson-bound/"><link rel="alternate" hreflang="x-default" href="https://bastosfilipe.com/sujets/borne-de-tsirelson/">
+<style>.q-page{max-width:760px}.q-page h1{font-size:clamp(1.9rem,4.2vw,2.7rem);line-height:1.15;margin:10px 0 18px}.q-rep{border-left:3px solid var(--or);padding:14px 18px;background:rgba(160,120,40,.06);margin:0 0 28px}.q-rep p{margin:6px 0 0;font-size:1.08rem;line-height:1.6}.q-rep .sec-eyebrow{margin:0}.q-page h2{font-size:1.35rem;margin:34px 0 10px}.q-page p{line-height:1.65;margin:0 0 14px}.q-st{display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;border:1px solid currentColor;border-radius:2px;padding:1px 6px;margin-right:8px;opacity:.75;vertical-align:2px}.q-warn{border:1px solid #b45309;background:rgba(180,83,9,.06);padding:12px 16px;border-radius:3px;margin:0 0 26px;font-size:.95rem;line-height:1.55}.q-links li,.q-hub li{margin:8px 0;line-height:1.5}.q-meta{font-size:.9rem;color:rgb(90,96,105);margin-top:30px;border-top:1px solid rgba(0,0,0,.12);padding-top:14px}.q-hub a strong{font-size:1.08rem}</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Article", "headline": "Why the Tsirelson bound is 2√2", "description": "Why quantum correlations stop at 2√2: the Tsirelson bound derived without Hilbert space, by projection on the sphere, and decomposed as 4 × ½ × √2.", "inLanguage": "en", "url": "https://bastosfilipe.com/en/topics/tsirelson-bound/", "author": {"@type": "Person", "@id": "https://bastosfilipe.com/#filipe-bastos", "name": "Filipe Bastos", "url": "https://bastosfilipe.com/bio/"}, "publisher": {"@id": "https://bastosfilipe.com/#filipe-bastos"}, "license": "https://creativecommons.org/licenses/by/4.0/", "datePublished": "2026-11-02", "dateModified": "2026-11-02", "isPartOf": {"@id": "https://bastosfilipe.com/#site"}, "about": "Tsirelson bound"}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Why the Tsirelson bound is 2√2", "acceptedAnswer": {"@type": "Answer", "text": "The Tsirelson bound is 2√2 because it is the algebraic maximum 4 brought down by the price of reading: 4 correlations, times the constant ½, times the diagonal √2 of the square. Bell's classical bound, 2, follows the same formula with the side of the square, 1, in place of the diagonal."}}]}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Filipe Bastos", "item": "https://bastosfilipe.com/en/"}, {"@type": "ListItem", "position": 2, "name": "The big questions", "item": "https://bastosfilipe.com/en/topics/"}, {"@type": "ListItem", "position": 3, "name": "Tsirelson bound", "item": "https://bastosfilipe.com/en/topics/tsirelson-bound/"}]}]}</script>
+</head>
+<body class="page">
+<a class="screen-reader-text" href="#content">Skip to content</a>
+<header class="top">
+<nav aria-label="Main navigation" class="nav">
+<a class="brand" href="/en/">Filipe Bastos</a>
+<ul class="" id="menu-main-en"><li><a href="/en/">Home</a></li><li><a href="/en/library/">Library</a></li><li><a href="/en/about/">About</a></li><li><a href="/en/arc/">ARC Corpus</a></li><li><a href="/en/contradictions/">Contradictions</a></li></ul> <a class="search-link" href="/en/search/" aria-label="Search" title="Search" style="display:inline-flex;align-items:center;justify-content:center;width:34px;height:30px;margin-right:6px;color:inherit;border:1px solid currentColor;border-radius:3px;opacity:.75;vertical-align:middle"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg></a><details class="lang"><summary aria-label="Language">EN</summary><div class="lang-menu"><a data-l="fr" href="/" lang="fr">Français</a><a data-l="en" href="/en/" lang="en">English</a><a data-l="pt" href="/pt/" lang="pt">Português</a><span>Machine translation</span><a data-tl="es" href="#" lang="es">Español</a><a data-tl="it" href="#" lang="it">Italiano</a><a data-tl="de" href="#" lang="de">Deutsch</a><a data-tl="zh-CN" href="#" lang="zh">中文</a></div></details></nav>
+</header>
+<main id="content" data-pagefind-meta="title:Why the Tsirelson bound is 2√2">
+<div class="wrap page-shell q-page">
+<p class="q-bc" style="font-size:.85rem;margin:0 0 6px"><a href="/en/topics/">The big questions</a></p>
+<span class="sec-eyebrow">Tsirelson bound</span>
+<h1 class="entry-title">Why the Tsirelson bound is 2√2</h1>
+<div class="q-rep"><span class="sec-eyebrow">The short answer</span><p>The Tsirelson bound is 2√2 because it is the algebraic maximum 4 brought down by the price of reading: 4 correlations, times the constant ½, times the diagonal √2 of the square. Bell&#x27;s classical bound, 2, follows the same formula with the side of the square, 1, in place of the diagonal.</p></div>
+<h2>What physics establishes</h2>
+<p><span class="q-st">Fact</span>Two entangled particles, measured far apart, give results more strongly correlated than any local hidden-variable theory allows: this is Bell&#x27;s theorem (1964), confirmed by experiment from Aspect (1982) to the loophole-free tests of 2015.</p>
+<p><span class="q-st">Fact</span>The violation itself has a limit. Boris Tsirelson proved in 1980 that the CHSH combination of correlations never exceeds 2√2 ≈ 2.828. Standard physics obtains this number through operator algebra in Hilbert space, without saying why it is this number.</p>
+<h2>The ARC reading</h2>
+<p><span class="q-st">Theorem</span>A protocol with no wave function and no operator recovers the exact singlet correlation, E(a, b) = −cos θ. The pair shares a state λ on the sphere; Alice reads the sign of her projection; the state updates; Bob reads his projection against a threshold μ that belongs to his reading device. The cosine follows in two lines from the linear response of the reading.</p>
+<p><span class="q-st">Theorem</span>Without the threshold μ, reading the sign alone, the same protocol gives 4: the Popescu-Rohrlich box, the algebraic maximum. The threshold is what brings 4 down to 2√2. &quot;Reading the sign alone is a free reading; nature grants no free reading.&quot;</p>
+<p><span class="q-st">Theorem</span>The bound decomposes into three factors: 2√2 = 4 × ½ × √2. The 4 counts the four CHSH correlations, which answer to the four pairs of the grid (1, 8), (2, 7), (3, 6), (4, 5). The ½ is the constant k, the barycentre 4.5 over 9. The √2 is the diagonal of the square in the founding figure. With the side 1 instead of the diagonal, one recovers the classical bound: 4 × ½ × 1 = 2.</p>
+<p><span class="q-st">Reading</span>The step from classical to quantum is therefore exactly √2, the ratio of diagonal to side: the view that sees objects reads the side, the view that sees relations reads the diagonal.</p>
+<h2>What this reading does not claim</h2>
+<p>The model is not local in Bell&#x27;s sense, and Bell&#x27;s theorem is not disputed: the state update is a shared relational memory, not a signal. The version of record is Tsirelson Without Hilbert v4.1 (July 2026); version 4.0, which read the pure sign, is withdrawn and its error is published.</p>
+<h2>Further reading</h2>
+<ul class="q-links"><li><a href="/en/arc/volumes/v07-la-physique-relue/">Volume 7, The Physics Reread (English summary and table of statements)</a></li><li><a href="/arc/volumes/v07-la-physique-relue/02-chapitre-1-la-borne-de-tsirelson-sans-espace-de-hi.html">Chapter 1: the Tsirelson bound without Hilbert space (in French)</a></li><li><a href="/arc/pdf/ARC_Volume_07_la_physique_relue.pdf">Volume 7, full PDF (in French)</a></li></ul>
+<h2>Related questions</h2>
+<ul class="q-links"><li><a href="/en/topics/quantum-entanglement/">Quantum entanglement: a relation, not a signal</a></li><li><a href="/en/topics/quantum-physics/">Quantum physics read differently: to measure is to project</a></li><li><a href="/en/topics/riemann-hypothesis/">The Riemann hypothesis: why the line ½</a></li><li><a href="/en/topics/">The big questions</a></li></ul>
+<p class="q-meta">Every statement carries its status: Fact (what science holds), Theorem (verified computation), Reading (the corpus&#x27;s interpretation), Prediction (what would bring it down).<br>Filipe Bastos · ARC Corpus · CC BY 4.0 · <a href="/en/#methode">Reading method: fractal, social and relational empathy</a> · <a href="/en/contradictions/">Found an error? Send a contradiction</a></p>
+</div>
+</main>
+<footer class="site-footer">
+<div class="wrap footgrid">
+<span class="sceau">Filipe Bastos · ARC</span>
+<p>© 2026 · Architecture of Relational Coherence · CC BY 4.0</p>
+<p class="mono">φ(x) = 9 − x · k = 1/2</p>
+</div>
+</footer>
+
+
+
+
+
+<script src="/assets/lang.js?v=5" defer></script>
+</body></html>

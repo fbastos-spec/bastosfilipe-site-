@@ -36,3 +36,14 @@ Main language: French. French index: https://bastosfilipe.com/arc/llms-fr.txt
 
 ## Author
 - Filipe Bastos, born 1976 in Quebec, son of Portuguese immigrants. Biography (French): https://bastosfilipe.com/bio/
+
+## The big questions
+
+- [Why the Tsirelson bound is 2√2](https://bastosfilipe.com/en/topics/tsirelson-bound/): Why quantum correlations stop at 2√2: the Tsirelson bound derived without Hilbert space, by projection on the sphere, and decomposed as 4 × ½ × √2.
+- [Quantum entanglement: a relation, not a signal](https://bastosfilipe.com/en/topics/quantum-entanglement/): What is quantum entanglement? Two particles sharing one relational state: their correlation is a common memory, not action at a distance.
+- [Quantum physics read differently: to measure is to project](https://bastosfilipe.com/en/topics/quantum-physics/): Quantum physics without mystery: measurement is projection, randomness is the loss in that projection, spin ½ is the constant of reading. A relational reading, with its statuses.
+- [The Riemann hypothesis: why the line ½](https://bastosfilipe.com/en/topics/riemann-hypothesis/): Why the zeros of the Riemann zeta function sit on the line ½: the ARC corpus reading, the centre of a pair, and what remains open.
+- [Prime numbers are not random](https://bastosfilipe.com/en/topics/prime-numbers/): Are prime numbers random? No: the 6k ± 1 grid builds itself, its composites are born from four known families, and a prime is what no family generates.
+- [The hard problem of consciousness: a bridge between two banks we separated](https://bastosfilipe.com/en/topics/hard-problem-of-consciousness/): Chalmers's hard problem read by the ARC corpus: consciousness as a system that reads itself, and the explanatory gap as the legacy of a historical separation.
+- [Why a panic attack comes for no apparent reason](https://bastosfilipe.com/en/topics/panic-attack/): Why panic attacks strike without an object, often at night, and resist reasoning: a philosophical and psychological reading that replaces no care.
+- [Left and right: two halves of one operation](https://bastosfilipe.com/en/topics/left-right-politics/): Left and right read as an unrecognised inverse pair: one articulates without operating, the other operates without articulating, and each blames the other for what it amputates in itself.

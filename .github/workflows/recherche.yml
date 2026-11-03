@@ -17,7 +17,7 @@ jobs:
       - uses: actions/setup-node@v4
         with: { node-version: 20 }
       - name: Construire l'index
-        run: npx -y pagefind@1.3.0 --site . --root-selector main --glob "{index.html,bio/**/*.html,bibliotheque-des-documents/**/*.html,contradictions/**/*.html,arc/**/*.html,en/**/*.html,pt/**/*.html}"
+        run: npx -y pagefind@1.3.0 --site . --root-selector main --glob "{index.html,sujets/**/*.html,bio/**/*.html,bibliotheque-des-documents/**/*.html,contradictions/**/*.html,arc/**/*.html,en/**/*.html,pt/**/*.html}"
       - name: Publier l'index
         run: |
           git config user.name "Filipe Bastos"
