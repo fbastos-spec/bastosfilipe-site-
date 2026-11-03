@@ -191,7 +191,10 @@
         }
       ],
       "version": "1.0",
-      "date": "2026-10"
+      "date": "2026-10",
+      "doi": "10.5281/zenodo.23923138",
+      "doi_concept": "10.5281/zenodo.23923137",
+      "zenodo_url": "https://doi.org/10.5281/zenodo.23923138"
     },
     {
       "id": "V01_La_Fondation",
@@ -492,7 +495,10 @@
         }
       ],
       "version": "1.0",
-      "date": "2026-10"
+      "date": "2026-10",
+      "doi": "10.5281/zenodo.23922602",
+      "doi_concept": "10.5281/zenodo.23922601",
+      "zenodo_url": "https://doi.org/10.5281/zenodo.23922602"
     },
     {
       "id": "V02_La_Figure",
@@ -750,7 +756,10 @@
         }
       ],
       "version": "1.0",
-      "date": "2026-10"
+      "date": "2026-10",
+      "doi": "10.5281/zenodo.23923238",
+      "doi_concept": "10.5281/zenodo.23923237",
+      "zenodo_url": "https://doi.org/10.5281/zenodo.23923238"
     },
     {
       "id": "V03_Le_Code_et_le_Registre",
@@ -1111,7 +1120,10 @@
         }
       ],
       "version": "1.0",
-      "date": "2026-10"
+      "date": "2026-10",
+      "doi": "10.5281/zenodo.23923500",
+      "doi_concept": "10.5281/zenodo.23923499",
+      "zenodo_url": "https://doi.org/10.5281/zenodo.23923500"
     },
     {
       "id": "V04_La_Theorie_des_Nombres",
@@ -1511,7 +1523,10 @@
         }
       ],
       "version": "1.0",
-      "date": "2026-10"
+      "date": "2026-10",
+      "doi": "10.5281/zenodo.23923584",
+      "doi_concept": "10.5281/zenodo.23923583",
+      "zenodo_url": "https://doi.org/10.5281/zenodo.23923584"
     },
     {
       "id": "V05_Les_Grands_Problemes",
@@ -1791,7 +1806,10 @@
         }
       ],
       "version": "1.0",
-      "date": "2026-10"
+      "date": "2026-10",
+      "doi": "10.5281/zenodo.23923765",
+      "doi_concept": "10.5281/zenodo.23923764",
+      "zenodo_url": "https://doi.org/10.5281/zenodo.23923765"
     },
     {
       "id": "V06_L_Histoire_de_la_Preuve",
@@ -2109,7 +2127,10 @@
         }
       ],
       "version": "1.0",
-      "date": "2026-10"
+      "date": "2026-10",
+      "doi": "10.5281/zenodo.23925403",
+      "doi_concept": "10.5281/zenodo.23925402",
+      "zenodo_url": "https://doi.org/10.5281/zenodo.23925403"
     },
     {
       "id": "V07_La_Physique_relue",
@@ -2367,7 +2388,10 @@
         }
       ],
       "version": "1.0",
-      "date": "2026-10"
+      "date": "2026-10",
+      "doi": "10.5281/zenodo.23925665",
+      "doi_concept": "10.5281/zenodo.23925664",
+      "zenodo_url": "https://doi.org/10.5281/zenodo.23925665"
     },
     {
       "id": "V08_La_Matiere_et_le_Cosmos",
@@ -2651,7 +2675,10 @@
         }
       ],
       "version": "1.0",
-      "date": "2026-10"
+      "date": "2026-10",
+      "doi": "10.5281/zenodo.23926245",
+      "doi_concept": "10.5281/zenodo.23926244",
+      "zenodo_url": "https://doi.org/10.5281/zenodo.23926245"
     },
     {
       "id": "V09_Le_Vivant",
@@ -2872,7 +2899,10 @@
         }
       ],
       "version": "1.0",
-      "date": "2026-10"
+      "date": "2026-10",
+      "doi": "10.5281/zenodo.23926439",
+      "doi_concept": "10.5281/zenodo.23926438",
+      "zenodo_url": "https://doi.org/10.5281/zenodo.23926439"
     },
     {
       "id": "V10_La_Conscience_et_la_Peine",
@@ -3274,7 +3304,10 @@
         }
       ],
       "version": "1.0",
-      "date": "2026-10"
+      "date": "2026-10",
+      "doi": "10.5281/zenodo.23926529",
+      "doi_concept": "10.5281/zenodo.23926528",
+      "zenodo_url": "https://doi.org/10.5281/zenodo.23926529"
     },
     {
       "id": "V11_La_Cite_et_le_Sens",
@@ -3635,8 +3668,21 @@
         }
       ],
       "version": "1.0",
-      "date": "2026-10"
+      "date": "2026-10",
+      "doi": "10.5281/zenodo.23926716",
+      "doi_concept": "10.5281/zenodo.23926715",
+      "zenodo_url": "https://doi.org/10.5281/zenodo.23926716"
     }
   ],
-  "pages_total": 1714
+  "pages_total": 1714,
+  "zenodo": {
+    "date_depot": "2026-11-03",
+    "note": "Un dépôt Zenodo par volume ; doi = version 1.1, doi_concept = toutes les versions.",
+    "dossiers": {
+      "L_Empathie_fractale_sociale_et_relationnelle_v1_1.pdf": {
+        "doi": "10.5281/zenodo.23926753",
+        "doi_concept": "10.5281/zenodo.23926752"
+      }
+    }
+  }
 }
