@@ -5,3 +5,6 @@
 /wp-login.php / 301
 /accueil/ / 301
 /corpus-arc/ /arc/ 301
+/arc/dossiers/Modulo_v2_0.pdf /arc/dossiers/Modulo_v2_1.pdf 301
+/arc/dossiers/lire/Modulo_v2_0/ /arc/dossiers/lire/Modulo_v2_1/ 301
+/arc/dossiers/lire/Modulo_v2_0 /arc/dossiers/lire/Modulo_v2_1/ 301
