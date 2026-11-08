@@ -44,6 +44,7 @@ Main language: French. French index: https://bastosfilipe.com/arc/llms-fr.txt
 - [Home](https://bastosfilipe.com/): the root figure and the twelve volumes
 - [Library](https://bastosfilipe.com/bibliotheque-des-documents/): all volumes and standalone papers (PDF)
 - [Author](https://bastosfilipe.com/bio/): Filipe Bastos
+- [Two exceptions: Descartes and Gauss](https://bastosfilipe.com/deux-exceptions/): the only two figures the corpus rejects, read with both faces (what they freed, what they cut) and judged on dated receipts (in French).
 - Sitemap: https://bastosfilipe.com/sitemap.xml
 
 ## The big questions

@@ -33,6 +33,7 @@
 - [Faire tomber ARC](https://bastosfilipe.com/arc/dossiers/Faire_tomber_ARC.pdf) : La table complète des 179 énoncés à statut Prédiction des douze volumes, recopiés avec leur adresse. (v2.0 · 26 octobre 2026 · 38 p.) [version texte](https://bastosfilipe.com/arc/dossiers/lire/Faire_tomber_ARC/)
 
 ## Auteur
+- [Deux exceptions : Descartes et Gauss](https://bastosfilipe.com/deux-exceptions/) : les deux seuls hommes que le corpus rejette, lus avec leurs deux faces et jugés sur pièces datées.
 - Filipe Bastos, né en 1976 au Québec. Page : https://bastosfilipe.com/bio/
 
 English index: https://bastosfilipe.com/llms.txt
