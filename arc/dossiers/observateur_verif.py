@@ -1,4 +1,4 @@
-# Vérifications de L'observateur est la confusion v0.3 (bibliothèque standard seulement)
+# Vérifications de L'observateur est la confusion v0.4 (bibliothèque standard seulement)
 import sys, math, random
 from fractions import Fraction as Fr
 
@@ -20,7 +20,7 @@ ok(f"Pli depuis 1/3 : tours jetés {','.join(map(str, w))} ; x0 restitué à cha
 
 ok("Ariane : seuil 16 bits signés 32767 ; 32768 déborde", 2**15 - 1 == 32767)
 
-def chsh(angles, N=200000, seed=9, tarif=True):
+def chsh(angles, N=200000, seed=9, tarif=True, side='B'):
     rnd = random.Random(seed)
     def unit(t): return (math.cos(t), math.sin(t), 0.0)
     def E(a, b):
@@ -28,10 +28,16 @@ def chsh(angles, N=200000, seed=9, tarif=True):
         for _ in range(N):
             z = rnd.uniform(-1, 1); ph = rnd.uniform(0, 2 * math.pi); r = math.sqrt(1 - z * z)
             lam = (r * math.cos(ph), r * math.sin(ph), z)
-            A = 1 if sum(i * j for i, j in zip(a, lam)) >= 0 else -1
-            lam2 = tuple(-A * i for i in a)
-            mu = rnd.uniform(-1, 1) if tarif else 0.0
-            B = 1 if sum(i * j for i, j in zip(b, lam2)) - mu >= 0 else -1
+            if side == 'B':
+                A = 1 if sum(i * j for i, j in zip(a, lam)) >= 0 else -1
+                lam2 = tuple(-A * i for i in a)
+                mu = rnd.uniform(-1, 1) if tarif else 0.0
+                B = 1 if sum(i * j for i, j in zip(b, lam2)) - mu >= 0 else -1
+            else:
+                B = 1 if sum(i * j for i, j in zip(b, lam)) >= 0 else -1
+                lam2 = tuple(-B * i for i in b)
+                mu = rnd.uniform(-1, 1) if tarif else 0.0
+                A = 1 if sum(i * j for i, j in zip(a, lam2)) - mu >= 0 else -1
             s += A * B
         return s / N
     a0, a1, b0, b1 = (unit(math.radians(t)) for t in angles)
@@ -42,6 +48,8 @@ S_flat = abs(chsh((0, 90, 0, 90)))                   # sans diagonales
 ok(f"CHSH sphère, réglages 0°,45°,90°,135° : lecture tarifée S = {S_diag:.4f} = 2√2 ; lecture gratuite {S_free:.4f} ; sans diagonales {S_flat:.4f}",
    abs(S_diag - 2 * math.sqrt(2)) < 0.02 and abs(S_free - 4) < 0.001 and abs(S_flat - 2) < 0.02)
 
+S_A = abs(chsh((0, 90, 45, 135), side='A'))
+ok(f"Tarif écrit chez Alice au lieu de Bob : S = {S_A:.4f} = 2√2 ; la place du tarif est une convention", abs(S_A - 2 * math.sqrt(2)) < 0.02)
 src = open(sys.argv[1], encoding="utf-8").read() if len(sys.argv) > 1 else ""
 ok("Typographie : aucun tiret cadratin", "—" not in src)
 print("\n".join(out))
