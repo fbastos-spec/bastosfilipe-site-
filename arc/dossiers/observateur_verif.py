@@ -1,4 +1,4 @@
-# Vérifications de L'observateur est la confusion v0.4 (bibliothèque standard seulement)
+# Vérifications de L'observateur est la confusion v0.6 (bibliothèque standard seulement)
 import sys, math, random
 from fractions import Fraction as Fr
 
@@ -47,6 +47,21 @@ S_free = abs(chsh((0, 90, 45, 135), tarif=False))    # lecture gratuite : lecteu
 S_flat = abs(chsh((0, 90, 0, 90)))                   # sans diagonales
 ok(f"CHSH sphère, réglages 0°,45°,90°,135° : lecture tarifée S = {S_diag:.4f} = 2√2 ; lecture gratuite {S_free:.4f} ; sans diagonales {S_flat:.4f}",
    abs(S_diag - 2 * math.sqrt(2)) < 0.02 and abs(S_free - 4) < 0.001 and abs(S_flat - 2) < 0.02)
+
+def marginals(a_deg, b_deg, N=200000, seed=11):
+    rnd = random.Random(seed); a = (math.cos(math.radians(a_deg)), math.sin(math.radians(a_deg)), 0.0); b = (math.cos(math.radians(b_deg)), math.sin(math.radians(b_deg)), 0.0)
+    sA = sB = 0
+    for _ in range(N):
+        z = rnd.uniform(-1, 1); ph = rnd.uniform(0, 2 * math.pi); r = math.sqrt(1 - z * z)
+        lam = (r * math.cos(ph), r * math.sin(ph), z)
+        A = 1 if sum(i * j for i, j in zip(a, lam)) >= 0 else -1
+        lam2 = tuple(-A * i for i in a); mu = rnd.uniform(-1, 1)
+        B = 1 if sum(i * j for i, j in zip(b, lam2)) - mu >= 0 else -1
+        sA += A; sB += B
+    return sA / N, sB / N
+marg = [marginals(a, b) for a in (0, 90) for b in (45, 135)]
+ok("Non-signalisation : marginales E[A], E[B] nulles pour les quatre réglages, Bob seul ne lit pas l'angle d'Alice : " + " ; ".join(f"({x:+.3f}, {y:+.3f})" for x, y in marg),
+   all(abs(x) < 0.01 and abs(y) < 0.01 for x, y in marg))
 
 S_A = abs(chsh((0, 90, 45, 135), side='A'))
 ok(f"Tarif écrit chez Alice au lieu de Bob : S = {S_A:.4f} = 2√2 ; la place du tarif est une convention", abs(S_A - 2 * math.sqrt(2)) < 0.02)
