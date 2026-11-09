@@ -1,4 +1,4 @@
-# Vérifications de Qui a mis le chat dans la boîte v0.1 (bibliothèque standard seulement)
+# Vérifications de Qui a mis le chat dans la boîte v0.2 (bibliothèque standard seulement)
 import sys, math
 out = []
 def ok(label, cond):
