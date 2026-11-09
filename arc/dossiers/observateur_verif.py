@@ -1,4 +1,4 @@
-# Vérifications de L'observateur est la confusion v0.1 (bibliothèque standard seulement)
+# Vérifications de L'observateur est la confusion v0.2 (bibliothèque standard seulement)
 import sys, math, random
 from fractions import Fraction as Fr
 
@@ -18,7 +18,7 @@ for n in range(9):
 ok(f"Pli depuis 1/3 : tours jetés {','.join(map(str, w))} ; x0 restitué à chaque pas",
    w == [0, 0, 1, 2, 5, 10, 21, 42, 85] and good)
 
-ok("Ariane : max 16 bits signés 32767 ; 32768 déborde", 2**15 - 1 == 32767)
+ok("Ariane : seuil 16 bits signés 32767 ; 32768 déborde", 2**15 - 1 == 32767)
 
 def chsh(angles, N=200000, seed=9, tarif=True):
     rnd = random.Random(seed)
