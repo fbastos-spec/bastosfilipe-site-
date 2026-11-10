@@ -1,0 +1,16 @@
+\usepackage{newunicodechar}
+\newfontfamily\arcfallback{FreeSerif}
+\newcommand{\arcfb}[1]{{\arcfallback\symbol{"#1}}}
+
+\AtBeginDocument{%
+\newunicodechar{∎}{\arcfb{220E}}%
+\newunicodechar{⋯}{\arcfb{22EF}}%
+\newunicodechar{ℓ}{\arcfb{2113}}%
+\newunicodechar{ℤ}{\arcfb{2124}}%
+\newunicodechar{≪}{\arcfb{226A}}%
+\newunicodechar{≫}{\arcfb{226B}}%
+\newunicodechar{≳}{\arcfb{2273}}%
+\newunicodechar{ℜ}{\arcfb{211C}}%
+\newunicodechar{⧸}{\arcfb{29F8}}%
+\newunicodechar{⋃}{\arcfb{22C3}}%
+}
