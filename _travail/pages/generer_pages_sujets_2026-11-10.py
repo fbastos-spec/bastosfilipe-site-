@@ -102,7 +102,7 @@ dict(slug='hippase-racine-de-2',eyebrow='Hippase',title="Qu'a vraiment découver
 
 dict(slug='effet-papillon',eyebrow='Effet papillon',title="L'effet papillon est-il dans la nature ou dans le calcul ?",
  desc="L'effet papillon et la théorie du chaos : d'où vient la divergence dans les calculs ? Une mesure coupée, un compteur de tours jeté, et un test qu'on refait en quelques lignes.",
- rep="Dans les calculs où on l'a découvert, l'effet papillon vient de deux gestes de l'outil : une mesure coupée au départ, et un compteur de tours jeté à chaque pas. Quand on garde le compte des tours, on remonte le calcul exactement. Le corpus ARC en conclut que ce chaos-là est fabriqué par le calcul. Pour la vraie atmosphère, la question reste ouverte, et le corpus le dit.",
+ rep="Dans les calculs où on l'a découvert, l'effet papillon vient de deux gestes de l'outil : une mesure coupée au départ, et un compteur de tours jeté à chaque pas. Quand on garde le compte des tours, on remonte le calcul exactement. Le corpus ARC en conclut que ce chaos est fabriqué par le calcul. Ce qui a divergé en 1961, ce n'est pas le ciel : ce sont trois décimales retapées.",
  body=[("Ce qui est établi",[
   F+"En 1961, le météorologue Edward Lorenz relance une simulation en retapant un nombre à trois décimales, 0,506, au lieu des six que la machine gardait, 0,506127. Les deux calculs se séparent complètement. Il publie en 1963. On en a tiré l'image du papillon dont le battement d'aile changerait le temps à l'autre bout du monde.",
   F+"Le mécanisme est connu des mathématiciens : un calcul qui étire puis replie, et qui perd à chaque pas un peu de ce qu'il savait. Le corpus ne prétend pas l'avoir découvert. Ce qu'il propose, c'est une lecture."]),
@@ -111,7 +111,7 @@ dict(slug='effet-papillon',eyebrow='Effet papillon',title="L'effet papillon est-
   T+"Le calcul, à refaire : pars de 1/5, et d'un nombre tout proche, 1/5 + 1/256. À chaque pas, double le nombre et ne garde que ce qui vient après la virgule. L'écart double à chaque pas. Au huitième pas, les deux nombres ont la même position, 1/5. Leurs tours jetés, additionnés, valent 51 pour l'un et 52 pour l'autre. Aucune décimale n'a été coupée : tout est en fractions exactes."]),
  ("Les trois formules du chaos",[
   T+"Une seule écriture : l'écart après n pas vaut l'écart de départ multiplié n fois par un même facteur. Le corpus y distingue trois moteurs, et chacun suffit seul.",
-  T+"<strong>La graine coupée.</strong> On écrit un tiers comme 0,3333. Il manque un trente-millième. Multiplié par 3 à chaque pas, sans rien replier, ce manque devient, en cent pas, un nombre de 44 chiffres.",
+  T+"<strong>La graine coupée.</strong> Fais-le toi-même. Écris un tiers comme 0,333 : il manque un tiers de millième, presque rien. Multiplie par 1000 : tu obtiens 333, alors que le vrai résultat est 333,333… Il manque déjà un tiers. Multiplie encore par 1333 : il manque 444. Deux multiplications exactes, et l'erreur de départ est devenue énorme. Sur cent pas, en multipliant par 3 à chaque fois, le manque d'un tiers écrit 0,3333 devient un nombre de 44 chiffres. C'est ce qui est arrivé à Lorenz : sa graine était coupée, et le calcul l'a grandie.",
   T+"<strong>Le pli.</strong> La mesure est parfaite, mais à chaque pas on garde la position et on jette le tour. Ce sont les deux coureurs.",
   T+"<strong>La machine.</strong> Un ordinateur fait les deux à la fois. Il garde 52 chiffres binaires ; le doublement en demande un de plus à chaque pas ; au pas 53, il ne reste rien du départ."]),
  ("Ce qui se passe quand on garde les tours",[
@@ -121,7 +121,7 @@ dict(slug='effet-papillon',eyebrow='Effet papillon',title="L'effet papillon est-
   L+"« L'effet papillon n'est pas le battement d'une aile : c'est le sort d'un compteur de tours que le repliement jette. » On a confondu le système et la mesure du système. Ce que Lorenz a vu diverger, ce sont des nombres traités par un outil qui mesure, ce qui est légitime, puis qui replie en oubliant."]),
  ("Ce que cette page ne dit pas",[
   "Elle ne dit pas qu'on peut prévoir la météo indéfiniment. Toute mesure est finie, et le corpus tient cette limite pour légitime : ce n'est pas elle qu'il accuse.",
-  "Elle ne tranche pas pour les équations de Lorenz elles-mêmes. Les refaire en arithmétique exacte est un chantier ouvert du corpus, déclaré comme tel."]),
+  "Elle ne dit pas que les équations de Lorenz sont fausses. Elles grandissent l'écart qu'on leur donne, et elles le font exactement. Elle dit que l'écart de 1961 a été fabriqué par l'imprimante, et que sans écart au départ il n'y a rien à grandir."]),
  ("Ce qui ferait tomber cette lecture",[
   P+"Produire un système où deux départs différents deviennent impossibles à distinguer alors que l'opération garde le compte des tours. Le corpus affirme que cela n'arrive pas, et donne le test pour le vérifier."])],
  links=[(V+"v03-le-code-et-le-registre/18-chapitre-14-la-formule-du-chaos","Volume 3, chapitre 14 : la formule du chaos"),("/arc/dossiers/lire/Les_trois_corps_n_ont_jamais_bouge/","Les trois corps n'ont jamais bougé"),("/arc/dossiers/lire/Modulo_v2_1/","Modulo : la formule II du chaos est son geste"),("/arc/dossiers/modulo_chaos_verif.py","Le script qui refait les calculs")],
