@@ -2706,7 +2706,7 @@
         "saudade",
         "philosophy of biology"
       ],
-      "pages": 95,
+      "pages": 96,
       "mots": 30732,
       "pdf": "pdf/ARC_Volume_09_le_vivant.pdf",
       "html": "volumes/v09-le-vivant/index.html",
@@ -3674,7 +3674,7 @@
       "zenodo_url": "https://doi.org/10.5281/zenodo.23926716"
     }
   ],
-  "pages_total": 1721,
+  "pages_total": 1722,
   "zenodo": {
     "date_depot": "2026-11-03",
     "note": "Un dépôt Zenodo par volume ; doi = version 1.1, doi_concept = toutes les versions.",
