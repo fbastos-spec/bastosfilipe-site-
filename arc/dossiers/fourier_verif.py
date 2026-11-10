@@ -1,4 +1,4 @@
-# Vérifications de Fourier est un ARC v0.5 (bibliothèque standard seulement)
+# Vérifications de Fourier est un ARC v0.6 (bibliothèque standard seulement)
 import sys, math
 from fractions import Fraction as Fr
 out = []
@@ -21,6 +21,20 @@ ok(f"Th 3.1 : énergies sur le cercle fermé = {','.join(map(str, E))} (carrés 
    E == [1, 4, 9, 16, 25] and all(abs(math.cos(k * 2 * math.pi) - 1) < 1e-12 for k in range(1, 6)))
 prods = [s * (1 / (2 * s)) for s in (0.1, 1, 10)]
 ok("Th 3.2 : produit des largeurs Δx·Δk = 0.5 pour σ = 0.1, 1, 10", all(abs(p - .5) < 1e-12 for p in prods))
+# Th 3.4 bis : le tarif des tours donne la courbe de Planck
+charge = lambda m, q: m / (q ** -m - 1)
+direct = lambda m, q, N=6000: sum(n * m * q ** (m * n) for n in range(N)) / sum(q ** (m * n) for n in range(N))
+ok("Th 3.4 bis : somme directe des parts = forme fermée m/(q^-m - 1), pour q = 0.5, 0.9, 0.99 et m = 1, 2, 3, 5, 10",
+   all(abs(direct(m, q) - charge(m, q)) < 1e-9 for q in (.5, .9, .99) for m in (1, 2, 3, 5, 10)))
+hP, kB, T, nu1 = 6.62607015e-34, 1.380649e-23, 300.0, 1e11
+qT = math.exp(-hP * nu1 / (kB * T))
+ok("Th 3.4 bis : avec q = e^(-hν₁/kT), écart relatif à hν/(e^(hν/kT) - 1) < 1e-12 aux rangs 1, 10, 100, 1000",
+   all(abs(charge(m, qT) * hP * nu1 / (hP * m * nu1 / math.expm1(hP * m * nu1 / (kB * T))) - 1) < 1e-12 for m in (1, 10, 100, 1000)))
+ok("Th 3.4 bis : boîte chaude (q = 0.999999), même charge aux rangs 1, 2, 5, 10 à 1e-5 près (Rayleigh et Jeans)",
+   all(abs(charge(m, .999999) / charge(1, .999999) - 1) < 1e-5 for m in (2, 5, 10)))
+tot = lambda q, M: sum(m * q ** m / (1 - q ** m) for m in range(1, M))  # même charge, écrite sans grand nombre
+ok("Th 3.4 bis : somme sur les rangs finie pour q = 0.5, 0.9, 0.99 (inchangée de 5 000 à 50 000 rangs)",
+   all(abs(tot(q, 50000) - tot(q, 5000)) < 1e-9 for q in (.5, .9, .99)))
 # Th 3.7 : le théorème de Pusey, Barrett et Rudolph (2012), preuve à deux exemplaires
 h = 2 ** -.5
 z, o, p, m = (1, 0), (0, 1), (h, h), (h, -h)
