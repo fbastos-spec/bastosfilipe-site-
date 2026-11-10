@@ -15,11 +15,12 @@ ch=dict(
  pi=V+"v03-le-code-et-le-registre/05-chapitre-3-les-gestes-historiques-et-leurs-resolut",
  formes=V+"v07-la-physique-relue/12-chapitre-11-les-cordes-sans-cordes",
  pourquoi=V+"v01-la-fondation/14-chapitre-13-le-comment-lisible-et-le-pourquoi-inde",
- hasard=V+"v00-le-seuil/05-chapitre-2-le-lexique")
+ hasard=V+"v00-le-seuil/05-chapitre-2-le-lexique",
+ n35=V+"v02-la-figure/08-chapitre-7-le-carre-notifie")
 S={'fr':dict(modulo='/sujets/modulo/',boeing='/sujets/boeing-787-248-jours/',pap='/sujets/effet-papillon/',hip='/sujets/hippase-racine-de-2/',tsi='/sujets/borne-de-tsirelson/',intr='/sujets/intrication-quantique/',khe='/sujets/pyramide-de-kheops-pi/',prem='/sujets/nombres-premiers/'),
    'en':dict(modulo='/en/topics/modulo/',boeing='/en/topics/boeing-787-248-days/',pap='/en/topics/butterfly-effect/',hip='/en/topics/hippasus-square-root-of-2/',tsi='/en/topics/tsirelson-bound/',intr='/en/topics/quantum-entanglement/',khe='/en/topics/khufu-pyramid-pi/',prem='/en/topics/prime-numbers/'),
    'pt':dict(modulo='/pt/temas/modulo/',boeing='/pt/temas/boeing-787-248-dias/',pap='/pt/temas/efeito-borboleta/',hip='/pt/temas/hipaso-raiz-de-2/',tsi='/en/topics/tsirelson-bound/',intr='/en/topics/quantum-entanglement/',khe='/pt/temas/piramide-de-queops-pi/',prem='/en/topics/prime-numbers/')}
-K=[['modulo','boeing','pap','chaos','pnp','cloche','pascal'],['un','trait','figure','paires','hip','tsi','intr','matrio','ponts'],['sept','pi','khe','formes','prem','pourquoi','hasard']]
+K=[['modulo','boeing','pap','chaos','pnp','cloche','pascal'],['un','n35','trait','figure','paires','hip','tsi','intr','matrio','ponts'],['sept','pi','khe','formes','prem','pourquoi','hasard']]
 L={}
 L['fr']=dict(url='/carte/',title='La carte du corpus : trois gestes, lus cent fois',nav='La carte',eyebrow='La carte du corpus',h1='Trois gestes, lus cent fois',fr='',
  desc="La carte du corpus ARC : trois gestes, retrouvés dans l'arithmétique, la physique, l'histoire et le vivant. Ce que l'outil jette, le tiers, la forme ouverte, et où chacun réapparaît.",
@@ -35,6 +36,7 @@ L['fr']=dict(url='/carte/',title='La carte du corpus : trois gestes, lus cent fo
   cloche=("La cloche","La courbe en cloche est d'abord un compte de chemins, la ligne 8 du triangle de Pascal. La cascade garde le rang que la somme jette."),
   pascal=("Le triangle de Pascal","Chaque case se souvient de ses deux parents : la cascade est ce triangle, lu avec ses tours."),
   un=("1 ⊕ 1 = 3","Une femme, un homme, un enfant. Un émetteur, un récepteur, un message. La relation est comptée."),
+  n35=("35, le croisement premier","5 × 7 = 35 : la première fois que deux chemins distincts se nouent. Et 35 + 1 = 36, le carré du 6 qui les sépare."),
   trait=("Le trait","Deux bouts et ce qui les relie : le moindre trait est déjà trois."),
   figure=("La figure","Les deux cercles ne se touchent jamais. Ils se touchent par le carré."),
   paires=("Les paires et le centre vide","1 et 8, 2 et 7, 3 et 6, 4 et 5 : chaque paire fait 9, et leur centre, 4,5, n'est occupé par personne."),
@@ -66,6 +68,7 @@ L['en']=dict(url='/en/map/',title='The map of the corpus: three gestures, read a
   cloche=("The bell curve","The bell curve is first a count of paths, row 8 of Pascal's triangle. The cascade keeps the rank that the sum throws away."),
   pascal=("Pascal's triangle","Each cell remembers its two parents: the cascade is this triangle, read with its turns."),
   un=("1 ⊕ 1 = 3","A woman, a man, a child. A sender, a receiver, a message. The relation is counted."),
+  n35=("35, the first crossing","5 × 7 = 35: the first time two distinct paths tie a knot. And 35 + 1 = 36, the square of the 6 that stands between them."),
   trait=("The stroke","Two ends and what links them: the smallest stroke is already three."),
   figure=("The figure","The two circles never touch. They touch through the square."),
   paires=("The pairs and the empty centre","1 and 8, 2 and 7, 3 and 6, 4 and 5: each pair makes 9, and their centre, 4.5, is occupied by no one."),
@@ -97,6 +100,7 @@ L['pt']=dict(url='/pt/mapa/',title='O mapa do corpus: três gestos, lidos cem ve
   cloche=("O sino","A curva em sino é primeiro uma conta de caminhos, a linha 8 do triângulo de Pascal. A cascata guarda a ordem que a soma deita fora."),
   pascal=("O triângulo de Pascal","Cada casa lembra-se dos seus dois pais: a cascata é este triângulo, lido com as suas voltas."),
   un=("1 ⊕ 1 = 3","Uma mulher, um homem, um filho. Um emissor, um recetor, uma mensagem. A relação é contada."),
+  n35=("35, o primeiro cruzamento","5 × 7 = 35: a primeira vez que dois caminhos distintos se atam. E 35 + 1 = 36, o quadrado do 6 que os separa."),
   trait=("O traço","Duas pontas e o que as liga: o menor traço já é três."),
   figure=("A figura","Os dois círculos nunca se tocam. Tocam-se pelo quadrado."),
   paires=("Os pares e o centro vazio","1 e 8, 2 e 7, 3 e 6, 4 e 5: cada par faz 9, e o seu centro, 4,5, não é ocupado por ninguém."),
