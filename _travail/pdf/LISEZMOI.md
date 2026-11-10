@@ -14,4 +14,8 @@ Réglages : classe report, 11 points, marges 2,5 cm, format lettre, table des ma
 
 Si le nombre de pages change, le reporter dans `arc/corpus.json` (`pages`, `pages_total`), dans les pages d'index des volumes (fr, en, pt), les accueils, les bibliothèques et `arc/index.html`.
 
-État au 10 novembre 2026 : Volumes 2, 3, 4 et 6 refaits avec ce script. Les Volumes 1, 7 et 9 ressortent identiques au PDF en place. Les Volumes 0, 5, 8, 10 et 11 ont été faits avec d'autres réglages et ne sont pas encore reproduits à l'identique : comparer avant de remplacer.
+Les blocs préformatés trop larges pour la page (la table des ponts du Volume 3, par exemple) sont réduits juste assez pour tenir, sans rien couper : `buildall.py` le fait sur le fichier .tex avant la composition.
+
+Contrôle à faire à chaque fois : aucun mot tronqué. Un mot nouveau qui est le début d'un mot disparu (« calc » pour « calcul ») signale un texte coupé au bord de la page.
+
+État au 10 novembre 2026 : Volumes 0, 1, 2, 3, 4, 6 et 7 refaits avec ce script ; le Volume 9 ressort identique au PDF en place. Les Volumes 5, 8, 10 et 11 ne sont pas encore reproduits à l'identique : comparer avant de remplacer.

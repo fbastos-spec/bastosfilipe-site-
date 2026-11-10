@@ -10,6 +10,14 @@ for v in corpus["volumes"]:
     subprocess.run([sys.executable,"-I","html2vol.py",str(n)],capture_output=True)
     b=f"build/V{n:02d}"
     subprocess.run(["pandoc",b+".md","-s","--pdf-engine=xelatex","-V","documentclass=report","-V","classoption=oneside","-H","build/fallback.tex","-o",b+".tex"],capture_output=True)
+    tex=open(b+".tex",encoding="utf-8").read()
+    def fit(m):
+        L=max((len(x) for x in m.group(1).split("\n")),default=0)
+        if L<=71: return m.group(0)
+        sz=max(5.2,round(468/(0.6021*L),2))
+        return "{\\makeatletter\\def\\verbatim@font{\\ttfamily\\fontsize{%s}{%s}\\selectfont}\\makeatother\n"%(sz,round(sz*1.2,2))+m.group(0)+"\n}"
+    tex=re.sub(r"\\begin\{verbatim\}\n(.*?)\\end\{verbatim\}",fit,tex,flags=re.S)
+    open(b+".tex","w",encoding="utf-8").write(tex)
     for i in range(3): subprocess.run(["xelatex","-interaction=nonstopmode",f"V{n:02d}.tex"],cwd="build",capture_output=True)
     log=open(b+".log",errors="replace").read()
     old=R+"/"+v["pdf"]; wa,wb=txt(old).split(),txt(b+".pdf").split()
