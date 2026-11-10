@@ -1,0 +1,76 @@
+<!DOCTYPE html><html lang="fr"><head><meta charset="utf-8">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LB0FH513XB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-LB0FH513XB');
+  gtag('config', 'G-7B04RFMF7Z');
+</script>
+<meta name="description" content="Le modulo, c&#x27;est le reste d&#x27;une division : l&#x27;heure sur une horloge, le compteur d&#x27;une voiture qui revient à zéro. Ce qu&#x27;il garde, ce qu&#x27;il jette, et ce qui arrive quand on prend ce reste pour le nombre.">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+<title>Le modulo expliqué simplement : ce qu&#x27;il garde, ce qu&#x27;il jette · Filipe Bastos</title>
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<link rel="canonical" href="https://bastosfilipe.com/sujets/modulo/"><link href="/assets/css2-4869c7ae422d.css" media="all" rel="stylesheet"><link href="/assets/style-2caf4e3e0608.css" media="all" rel="stylesheet"><link href="/assets/corpus-integration.css" rel="stylesheet"><link href="/assets/site-unified.css?v=6" rel="stylesheet">
+<meta property="og:type" content="article"><meta property="og:site_name" content="Filipe Bastos · Corpus ARC"><meta property="og:locale" content="fr_CA"><meta property="og:title" content="Le modulo expliqué simplement : ce qu&#x27;il garde, ce qu&#x27;il jette"><meta property="og:description" content="Le modulo, c&#x27;est le reste d&#x27;une division : l&#x27;heure sur une horloge, le compteur d&#x27;une voiture qui revient à zéro. Ce qu&#x27;il garde, ce qu&#x27;il jette, et ce qui arrive quand on prend ce reste pour le nombre."><meta property="og:url" content="https://bastosfilipe.com/sujets/modulo/"><meta property="og:image" content="https://bastosfilipe.com/assets/og-arc.png"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Le modulo expliqué simplement : ce qu&#x27;il garde, ce qu&#x27;il jette"><meta name="twitter:description" content="Le modulo, c&#x27;est le reste d&#x27;une division : l&#x27;heure sur une horloge, le compteur d&#x27;une voiture qui revient à zéro. Ce qu&#x27;il garde, ce qu&#x27;il jette, et ce qui arrive quand on prend ce reste pour le nombre."><meta name="twitter:image" content="https://bastosfilipe.com/assets/og-arc.png">
+<link rel="alternate" hreflang="fr" href="https://bastosfilipe.com/sujets/modulo/"><link rel="alternate" hreflang="x-default" href="https://bastosfilipe.com/sujets/modulo/">
+<style>.q-page{max-width:760px}.q-page h1{font-size:clamp(1.9rem,4.2vw,2.7rem);line-height:1.15;margin:10px 0 18px}.q-rep{border-left:3px solid var(--or);padding:14px 18px;background:rgba(160,120,40,.06);margin:0 0 28px}.q-rep p{margin:6px 0 0;font-size:1.08rem;line-height:1.6}.q-rep .sec-eyebrow{margin:0}.q-page h2{font-size:1.35rem;margin:34px 0 10px}.q-page p{line-height:1.65;margin:0 0 14px}.q-st{display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;border:1px solid currentColor;border-radius:2px;padding:1px 6px;margin-right:8px;opacity:.75;vertical-align:2px}.q-warn{border:1px solid #b45309;background:rgba(180,83,9,.06);padding:12px 16px;border-radius:3px;margin:0 0 26px;font-size:.95rem;line-height:1.55}.q-links li,.q-hub li{margin:8px 0;line-height:1.5}.q-meta{font-size:.9rem;color:rgb(90,96,105);margin-top:30px;border-top:1px solid rgba(0,0,0,.12);padding-top:14px}.q-hub a strong{font-size:1.08rem}</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Article", "headline": "Le modulo expliqué simplement : ce qu'il garde, ce qu'il jette", "description": "Le modulo, c'est le reste d'une division : l'heure sur une horloge, le compteur d'une voiture qui revient à zéro. Ce qu'il garde, ce qu'il jette, et ce qui arrive quand on prend ce reste pour le nombre.", "inLanguage": "fr", "url": "https://bastosfilipe.com/sujets/modulo/", "author": {"@type": "Person", "@id": "https://bastosfilipe.com/#filipe-bastos", "name": "Filipe Bastos", "url": "https://bastosfilipe.com/bio/"}, "publisher": {"@id": "https://bastosfilipe.com/#filipe-bastos"}, "license": "https://creativecommons.org/licenses/by/4.0/", "datePublished": "2026-11-10", "dateModified": "2026-11-10", "isPartOf": {"@id": "https://bastosfilipe.com/#site"}, "about": "Modulo"}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Le modulo expliqué simplement : ce qu'il garde, ce qu'il jette", "acceptedAnswer": {"@type": "Answer", "text": "Le modulo garde le reste d'une division et jette le nombre de tours. Sur une horloge, 15 heures et 3 heures tombent au même endroit : l'aiguille dit où l'on est dans le tour, pas combien de tours ont été faits. C'est très utile, et ça devient dangereux dès qu'on prend ce reste pour le nombre entier."}}]}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Filipe Bastos", "item": "https://bastosfilipe.com/"}, {"@type": "ListItem", "position": 2, "name": "Les grandes questions", "item": "https://bastosfilipe.com/sujets/"}, {"@type": "ListItem", "position": 3, "name": "Modulo", "item": "https://bastosfilipe.com/sujets/modulo/"}]}]}</script>
+</head>
+<body class="page">
+<a class="screen-reader-text" href="#content">Aller au contenu</a>
+<header class="top">
+<nav aria-label="Navigation principale" class="nav">
+<a class="brand" href="/">Filipe Bastos</a>
+<ul class="" id="menu-main-fr"><li><a href="/">Accueil</a></li><li><a href="/bibliotheque-des-documents/">Bibliothèque<span class="m-hide"> des documents</span></a></li><li><a href="/bio/">Bio</a></li><li><a href="/arc/">Corpus ARC</a></li><li><a href="/contradictions/">Contradictions</a></li></ul> <a class="search-link" href="/rechercher/" aria-label="Rechercher" title="Rechercher" style="display:inline-flex;align-items:center;justify-content:center;width:34px;height:30px;margin-right:6px;color:inherit;border:1px solid currentColor;border-radius:3px;opacity:.75;vertical-align:middle"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg></a><details class="lang"><summary aria-label="Langue">FR</summary><div class="lang-menu"><a data-l="fr" href="/" lang="fr">Français</a><a data-l="en" href="/en/" lang="en">English</a><a data-l="pt" href="/pt/" lang="pt">Português</a><span>Traduction automatique</span><a data-tl="es" href="#" lang="es">Español</a><a data-tl="it" href="#" lang="it">Italiano</a><a data-tl="de" href="#" lang="de">Deutsch</a><a data-tl="zh-CN" href="#" lang="zh">中文</a></div></details></nav>
+</header>
+<main id="content" data-pagefind-meta="title:Le modulo expliqué simplement : ce qu&#x27;il garde, ce qu&#x27;il jette">
+<div class="wrap page-shell q-page">
+<p class="q-bc" style="font-size:.85rem;margin:0 0 6px"><a href="/sujets/">Les grandes questions</a></p>
+<span class="sec-eyebrow">Modulo</span>
+<h1 class="entry-title">Le modulo expliqué simplement : ce qu'il garde, ce qu'il jette</h1>
+<div class="q-rep"><span class="sec-eyebrow">La réponse courte</span><p>Le modulo garde le reste d'une division et jette le nombre de tours. Sur une horloge, 15 heures et 3 heures tombent au même endroit : l'aiguille dit où l'on est dans le tour, pas combien de tours ont été faits. C'est très utile, et ça devient dangereux dès qu'on prend ce reste pour le nombre entier.</p></div>
+<h2>Le modulo, c'est une horloge</h2>
+<p><span class="q-st">Fait</span>Une horloge compte de 1 à 12, puis recommence. À 15 heures, l'aiguille montre le 3. Les mathématiciens écrivent : 15 modulo 12 égale 3. On a enlevé un tour de 12, et on a gardé ce qui dépasse.</p>
+<p><span class="q-st">Fait</span>Le compteur d'une vieille voiture fait la même chose. Il a six chiffres : après 999 999 kilomètres, il affiche 000 000. La voiture n'est pas neuve. Le compteur a fait un tour complet, et ce tour n'est écrit nulle part.</p>
+<p>Le modulo n'est donc pas une erreur de calcul. Il répond juste à une question précise : <em>où en est-on dans le tour ?</em> Il ne répond pas à l'autre question : <em>combien de tours a-t-on faits ?</em></p>
+<h2>Ce qu'il garde, ce qu'il jette</h2>
+<p><span class="q-st">Théorème</span>Tout nombre entier s'écrit d'une seule façon comme <em>des tours de 9, plus une position</em>. Par exemple 19 = 2 tours de 9, plus 1. Et 28 = 3 tours de 9, plus 1. Le corpus ARC compte les positions de 1 à 9 : 18, c'est un tour, et la position 9.</p>
+<p><span class="q-st">Théorème</span>10, 19, 28 et 1 000 000 ont tous la même position : 1. Si on ne garde que la position, ces quatre nombres deviennent le même. Et on ne peut pas revenir en arrière : à partir de « position 1 », personne ne peut dire de quel nombre on est parti.</p>
+<p><span class="q-st">Théorème</span>On peut mesurer la perte. Parmi le premier million de nombres, 111 112 ont la position 1. Dire seulement « position 1 », c'est donc laisser 111 112 candidats. En comptant l'information comme le font les ingénieurs (en bits), la position parmi neuf garde 3,17 bits sur 19,93 : 84 % de ce que le nombre portait est jeté.</p>
+<h2>Quand la position suffit, et quand elle ne suffit pas</h2>
+<p><span class="q-st">Théorème</span>La position suffit pour certaines questions. Un nombre est divisible par 3 exactement quand sa position est 3, 6 ou 9 : on n'a pas besoin des tours.</p>
+<p><span class="q-st">Théorème</span>Elle ne suffit pas pour d'autres. 10 et 19 ont la même position : l'un est pair, l'autre impair. 19 et 28 ont la même position : l'un est premier, l'autre non. Chaque fois que la réponse dépend du tour, le modulo ne peut pas la donner.</p>
+<h2>Quand on a pris le reste pour le nombre</h2>
+<p><span class="q-st">Fait</span>Dans un ordinateur, un compteur a un nombre fixe de chiffres. Quand il est plein, il revient à zéro, comme le compteur de la voiture. Si le programme croit que ce zéro est le vrai nombre, il se trompe.</p>
+<p><span class="q-st">Fait</span>C'est arrivé. En 1987, dans la machine de radiothérapie Therac-25, un compteur qui revenait à zéro au 256ᵉ passage a fait sauter une vérification, et un patient est mort d'une surdose. En 2015, les autorités ont imposé de redémarrer les Boeing 787 avant qu'un compteur n'arrive au bout, à 248 jours. En 1999 et en 2019, des récepteurs GPS se sont crus vingt ans plus tôt. <a href="/sujets/boeing-787-248-jours/">Le cas du Boeing, avec son calcul.</a></p>
+<h2>La lecture du corpus ARC</h2>
+<p><span class="q-st">Lecture</span>Le corpus ne reproche pas au modulo de mal calculer. Il lui reproche ce qu'on en a fait : prendre la position pour le nombre, et oublier que les tours existaient. Il date ce geste de Gauss, en 1801, quand le 9 a été écrit 0 : la fin du tour confondue avec le vide.</p>
+<p><span class="q-st">Théorème</span>Garder les tours, c'est tout garder. Si l'on note la position, puis la position du nombre de tours, et ainsi de suite, on retrouve le nombre entier sans rien perdre. 2026 s'écrit ainsi 2, 6, 9, 1, parce que 2 × 729 + 6 × 81 + 9 × 9 + 1 = 2026.</p>
+<p><span class="q-st">Lecture</span>« C'est l'outil qui est jugé, non ceux qui s'en sont servis. »</p>
+<h2>Ce que cette page ne dit pas</h2>
+<p>Elle ne dit pas que le modulo est faux, ni qu'il faut l'abandonner. Là où perdre est le but, il est à sa place : le chiffrement qui protège un mot de passe ou un paiement repose justement sur un chemin du retour qu'on a jeté.</p>
+<p>Elle ne lui impute pas tout. Le missile Patriot de 1991 a dérivé à cause d'une décimale coupée, pas d'un reste : c'est un autre geste, et le corpus les sépare.</p>
+<h2>Pour aller plus loin</h2>
+<ul class="q-links"><li><a href="/arc/dossiers/lire/Modulo_v2_1/">Modulo : le dossier complet, avec ses théorèmes et ses sources</a></li><li><a href="/arc/dossiers/Modulo_v2_1.pdf">Modulo (PDF)</a></li><li><a href="/arc/volumes/v03-le-code-et-le-registre/18-chapitre-14-la-formule-du-chaos">Volume 3, chapitre 14 : la formule du chaos</a></li><li><a href="/arc/dossiers/modulo_chaos_verif.py">Le script qui refait les calculs</a></li></ul>
+<h2>Questions voisines</h2>
+<ul class="q-links"><li><a href="/sujets/boeing-787-248-jours/">Pourquoi le Boeing 787 devait être redémarré avant 248 jours</a></li><li><a href="/sujets/effet-papillon/">L'effet papillon est-il dans la nature ou dans le calcul ?</a></li><li><a href="/sujets/nombres-premiers/">Les nombres premiers ne sont pas aléatoires</a></li><li><a href="/sujets/">Les grandes questions</a></li></ul>
+<p class="q-meta">Chaque énoncé porte son statut : Fait (ce que la science tient), Théorème (calcul vérifié), Lecture (interprétation du corpus), Prédiction (ce qui la ferait tomber).<br>Filipe Bastos · Corpus ARC · CC BY 4.0 · <a href="/#methode">Méthode de lecture : l'Empathie fractale, sociale et relationnelle</a> · <a href="/contradictions/">Une erreur ? Envoyez une contradiction</a></p>
+</div>
+</main>
+<footer class="site-footer">
+<div class="wrap footgrid">
+<span class="sceau">Filipe Bastos · ARC</span>
+<p>© 2026 · Architecture de la Cohérence Relationnelle · CC BY 4.0</p>
+<p class="mono">φ(x) = 9 − x · k = 1/2</p>
+</div>
+</footer>
+
+
+
+
+
+<script src="/assets/lang.js?v=5" defer></script>
+</body></html>
