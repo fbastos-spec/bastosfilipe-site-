@@ -1,4 +1,4 @@
-# Vérifications de L'observateur est la confusion v0.14 (bibliothèque standard seulement)
+# Vérifications de L'observateur est la confusion v0.15 (bibliothèque standard seulement)
 import sys, math, random
 from fractions import Fraction as Fr
 
@@ -150,6 +150,12 @@ ok(f"Forme du tarif, mêmes réglages : plat (densité ½) S = {Sp:.3f} = 2√2 
    abs(Sp - 2 * math.sqrt(2)) < 0.02 and abs(Sc - (4 * math.sqrt(2) - 2)) < 0.02 and abs(Sb - 2) < 0.02)
 ok(f"À 60°, le cosinus vaut ½ : le tarif plat rend {Ep:.3f}, le tarif au centre {Ec:.3f} (soit 3/4), le tarif aux bords {Eb:.3f} (soit 1/4) ; seul le plat rend le cosinus",
    abs(Ep - 0.5) < 0.01 and abs(Ec - 0.75) < 0.01 and abs(Eb - 0.25) < 0.01)
+def rendu(tirage, x, N=300000, seed=23):
+    rnd = random.Random(seed); return sum(1 if x - tirage(rnd) >= 0 else -1 for _ in range(N)) / N
+xs = (0.2, 0.5, 0.8)
+ok("Le ½ est gratuit : par le tarif plat, la liaison rend x pour x = 0,2 ; 0,5 ; 0,8 (" + " ; ".join(f"{rendu(t_plat, x):.3f}" for x in xs) + ") ; au centre et aux bords elle rend autre chose (" + " ; ".join(f"{rendu(t_centre, x):.3f}" for x in xs) + " et " + " ; ".join(f"{rendu(t_bords, x):.3f}" for x in xs) + ") ; au signe pur elle rend 1",
+   all(abs(rendu(t_plat, x) - x) < 0.01 for x in xs) and all(abs(rendu(t_centre, x) - (2 * x - x * x)) < 0.01 and abs(rendu(t_bords, x) - x * x) < 0.01 for x in xs)
+   and all(abs(rendu(t, x) - x) > 0.03 for t in (t_centre, t_bords) for x in xs) and all((1 if x >= 0 else -1) == 1 for x in xs))
 src = open(sys.argv[1], encoding="utf-8").read() if len(sys.argv) > 1 else ""
 ok("Typographie : aucun tiret cadratin", "—" not in src)
 print("\n".join(out))
