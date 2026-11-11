@@ -1,4 +1,4 @@
-# Vérifications de L'observateur est la confusion v0.13 (bibliothèque standard seulement)
+# Vérifications de L'observateur est la confusion v0.14 (bibliothèque standard seulement)
 import sys, math, random
 from fractions import Fraction as Fr
 
@@ -132,6 +132,24 @@ ok(f"n × n / n, deux chemins sous le plafond {PLAFOND} : les deux rendent n ; l
    seuil == 182 and 181 * 181 == 32761 <= PLAFOND < 182 * 182 == 33124
    and all((n * n) // n == n * (n // n) == n and chemin_un(n) == n for n in range(1, PLAFOND + 1))
    and all((chemin_carre(n) > PLAFOND) == (n >= 182) for n in range(1, PLAFOND + 1)))
+def borne_tarif(tirage, N=300000, seed=17):
+    rnd = random.Random(seed); c = math.sqrt(2) / 2
+    def E(cc):
+        s = 0
+        for _ in range(N):
+            A = 1 if rnd.random() < 0.5 else -1
+            s += A * (1 if -A * cc - tirage(rnd) >= 0 else -1)
+        return s / N
+    return abs(E(c) - E(-c) + E(c) + E(c)), -E(0.5)
+def t_plat(r): return r.uniform(-1, 1)
+def t_centre(r): return r.uniform(0, 1) - r.uniform(0, 1)
+def t_bords(r):
+    u = math.sqrt(r.random()); return u if r.random() < 0.5 else -u
+(Sp, Ep), (Sc, Ec), (Sb, Eb) = borne_tarif(t_plat), borne_tarif(t_centre), borne_tarif(t_bords)
+ok(f"Forme du tarif, mêmes réglages : plat (densité ½) S = {Sp:.3f} = 2√2 ; concentré au centre S = {Sc:.3f} = 4√2 − 2 ; concentré aux bords S = {Sb:.3f} = 2",
+   abs(Sp - 2 * math.sqrt(2)) < 0.02 and abs(Sc - (4 * math.sqrt(2) - 2)) < 0.02 and abs(Sb - 2) < 0.02)
+ok(f"À 60°, le cosinus vaut ½ : le tarif plat rend {Ep:.3f}, le tarif au centre {Ec:.3f} (soit 3/4), le tarif aux bords {Eb:.3f} (soit 1/4) ; seul le plat rend le cosinus",
+   abs(Ep - 0.5) < 0.01 and abs(Ec - 0.75) < 0.01 and abs(Eb - 0.25) < 0.01)
 src = open(sys.argv[1], encoding="utf-8").read() if len(sys.argv) > 1 else ""
 ok("Typographie : aucun tiret cadratin", "—" not in src)
 print("\n".join(out))
