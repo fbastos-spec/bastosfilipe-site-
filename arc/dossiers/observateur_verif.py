@@ -1,4 +1,4 @@
-# Vérifications de L'observateur est la confusion v0.10 (bibliothèque standard seulement)
+# Vérifications de L'observateur est la confusion v0.11 (bibliothèque standard seulement)
 import sys, math, random
 from fractions import Fraction as Fr
 
@@ -112,6 +112,18 @@ def orbite(x): return {x, som[x], pro[x], tro[x]}
 ok("Les deux inversions rangent les rails en un bloc de quatre et une paire : " + str(sorted(orbite(2))) + " et " + str(sorted(orbite(1))) + " ; dans le bloc, trois appariements",
    orbite(2) == orbite(4) == orbite(5) == orbite(7) == {2, 4, 5, 7} and orbite(1) == orbite(8) == {1, 8}
    and {frozenset((x, f[x])) for f in (som, pro, tro) for x in (2, 4, 5, 7)} == {frozenset(p) for p in ((2, 7), (4, 5), (2, 5), (4, 7), (2, 4), (5, 7))})
+def liaison(x, N=400000, seed=13):
+    rnd = random.Random(seed); return sum(1 for _ in range(N) if x - rnd.uniform(-1, 1) >= 0) / N
+ok("La liaison : chance de lire + à travers μ = ½ + ½ × (b · λ′), pour b · λ′ = 0 ; 0,5 ; 0,8 : " + " ; ".join(f"{liaison(x):.3f}" for x in (0, 0.5, 0.8)) + f" ; et pour l'inverse de 0,5 : {liaison(-0.5):.3f}",
+   all(abs(liaison(x) - (0.5 + 0.5 * x)) < 0.004 for x in (-0.5, 0, 0.5, 0.8)))
+def mm(P, Q): return tuple(tuple(sum(P[i][k] * Q[k][j] for k in range(2)) for j in range(2)) for i in range(2))
+def opp(P): return tuple(tuple(-v for v in r) for r in P)
+PX = ((0, 1), (1, 0)); PZ = ((1, 0), (0, -1)); PI = ((1, 0), (0, 1)); PXZ = mm(PX, PZ)
+def cl(P): return frozenset((P, opp(P)))
+G4 = {cl(PI), cl(PX), cl(PZ), cl(PXZ)}
+ok("Pauli : les deux produits croisés sont égaux au signe près, et le signe mis à part les quatre éléments ferment un groupe où chacun est son propre inverse",
+   mm(PX, PZ) == opp(mm(PZ, PX)) and mm(PX, PZ) != mm(PZ, PX) and len(G4) == 4
+   and all(cl(mm(next(iter(p)), next(iter(q)))) in G4 for p in G4 for q in G4) and all(cl(mm(next(iter(p)), next(iter(p)))) == cl(PI) for p in G4))
 src = open(sys.argv[1], encoding="utf-8").read() if len(sys.argv) > 1 else ""
 ok("Typographie : aucun tiret cadratin", "—" not in src)
 print("\n".join(out))
