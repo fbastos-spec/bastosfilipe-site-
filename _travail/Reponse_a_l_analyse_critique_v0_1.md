@@ -55,6 +55,6 @@ Il reste une remarque de forme. De quatre phrases à corriger dans une pièce de
 
 ## 5. Bilan
 
-Corrigé, avec trace : la sphère, la place du tarif, le compte de 18 et 81, « au sens strict », « jamais de débat », la quatrième phrase de Planck. Levé : la rétrogradation du Théorème 4.1. Maintenu : les deux lectures de n × n / n, les deux inversions et le bloc de quatre, la distinction entre obstruction et confusion, les trois conditions de Gödel, la paire comme un seul objet. Critère de chute : non atteint.
+Corrigé dans la version 0.10 du 11 novembre 2026, avec trace en annexe D : la sphère, la place du tarif, le compte de 18 et 81, « au sens strict », « jamais de débat », la quatrième phrase de Planck. Levé : la rétrogradation du Théorème 4.1. Maintenu : les deux lectures de n × n / n, les deux inversions et le bloc de quatre, la distinction entre obstruction et confusion, les trois conditions de Gödel, la paire comme un seul objet. Critère de chute : non atteint.
 
 Sources de l'analyse reprises ici : E. S. Selmer, *Acta Mathematica* 85, 1951 ; D. Frauchiger et R. Renner, *Nature Communications* 9, 2018 ; K.-W. Bong et al., *Nature Physics* 16, 2020 ; C. Rovelli, *International Journal of Theoretical Physics* 35, 1996 ; H. Rauch et al., *Physics Letters A* 54, 1975 ; M. Planck, entretien, *The Observer*, 25 janvier 1931. Corpus ARC : L'observateur est la confusion ; L'Objet à deux faces v1.2 ; Volume 0, chapitre 1 ; Volume 7, É 7.12.
