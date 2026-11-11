@@ -1,4 +1,4 @@
-# Vérifications de L'observateur est la confusion v0.12 (bibliothèque standard seulement)
+# Vérifications de L'observateur est la confusion v0.13 (bibliothèque standard seulement)
 import sys, math, random
 from fractions import Fraction as Fr
 
