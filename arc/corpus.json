@@ -528,7 +528,7 @@
         "octet rule",
         "base ten"
       ],
-      "pages": 138,
+      "pages": 139,
       "mots": 62344,
       "pdf": "pdf/ARC_Volume_02_la_figure.pdf",
       "html": "volumes/v02-la-figure/index.html",
@@ -3674,7 +3674,7 @@
       "zenodo_url": "https://doi.org/10.5281/zenodo.23926716"
     }
   ],
-  "pages_total": 1725,
+  "pages_total": 1726,
   "zenodo": {
     "date_depot": "2026-11-03",
     "note": "Un dépôt Zenodo par volume ; doi = version 1.1, doi_concept = toutes les versions.",
