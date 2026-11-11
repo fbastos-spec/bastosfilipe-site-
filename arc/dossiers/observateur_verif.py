@@ -1,4 +1,4 @@
-# Vérifications de L'observateur est la confusion v0.11 (bibliothèque standard seulement)
+# Vérifications de L'observateur est la confusion v0.12 (bibliothèque standard seulement)
 import sys, math, random
 from fractions import Fraction as Fr
 
@@ -124,6 +124,14 @@ G4 = {cl(PI), cl(PX), cl(PZ), cl(PXZ)}
 ok("Pauli : les deux produits croisés sont égaux au signe près, et le signe mis à part les quatre éléments ferment un groupe où chacun est son propre inverse",
    mm(PX, PZ) == opp(mm(PZ, PX)) and mm(PX, PZ) != mm(PZ, PX) and len(G4) == 4
    and all(cl(mm(next(iter(p)), next(iter(q)))) in G4 for p in G4 for q in G4) and all(cl(mm(next(iter(p)), next(iter(p)))) == cl(PI) for p in G4))
+PLAFOND = 2**15 - 1
+def chemin_carre(n): return max(n, n * n, (n * n) // n)
+def chemin_un(n): return max(n, n // n, n * (n // n))
+seuil = next(n for n in range(1, PLAFOND + 1) if chemin_carre(n) > PLAFOND)
+ok(f"n × n / n, deux chemins sous le plafond {PLAFOND} : les deux rendent n ; le chemin par le carré déborde à partir de n = {seuil} (181 × 181 = {181 * 181}, 182 × 182 = {182 * 182}) ; le chemin par le 1 ne dépasse jamais n",
+   seuil == 182 and 181 * 181 == 32761 <= PLAFOND < 182 * 182 == 33124
+   and all((n * n) // n == n * (n // n) == n and chemin_un(n) == n for n in range(1, PLAFOND + 1))
+   and all((chemin_carre(n) > PLAFOND) == (n >= 182) for n in range(1, PLAFOND + 1)))
 src = open(sys.argv[1], encoding="utf-8").read() if len(sys.argv) > 1 else ""
 ok("Typographie : aucun tiret cadratin", "—" not in src)
 print("\n".join(out))
