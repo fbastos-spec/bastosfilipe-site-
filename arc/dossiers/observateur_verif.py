@@ -1,4 +1,4 @@
-# Vérifications de L'observateur est la confusion v0.7 (bibliothèque standard seulement)
+# Vérifications de L'observateur est la confusion v0.8 (bibliothèque standard seulement)
 import sys, math, random
 from fractions import Fraction as Fr
 
@@ -65,6 +65,20 @@ ok("Non-signalisation : marginales E[A], E[B] nulles pour les quatre réglages, 
 
 S_A = abs(chsh((0, 90, 45, 135), side='A'))
 ok(f"Tarif écrit chez Alice au lieu de Bob : S = {S_A:.4f} = 2√2 ; la place du tarif est une convention", abs(S_A - 2 * math.sqrt(2)) < 0.02)
+RAILS = (1, 2, 4, 5, 7, 8); DROIT = (1, 4, 7)
+som = {x: 9 - x for x in RAILS}
+pro = {x: next(y for y in RAILS if DR(x * y) == 1) for x in RAILS}
+ok("Inversion par la somme : paires (1,8), (2,7), (4,5) ferment à 9 et changent toujours de rail",
+   all(x + som[x] == 9 and (x in DROIT) != (som[x] in DROIT) for x in RAILS))
+ok("Inversion par le produit : 1×1, 2×5, 4×7, 8×8 rendent 1 et restent toujours dans le rail ; unique pour chaque position",
+   pro == {1: 1, 2: 5, 4: 7, 5: 2, 7: 4, 8: 8} and all((x in DROIT) == (pro[x] in DROIT) for x in RAILS)
+   and all(sum(1 for y in range(1, 10) if DR(x * y) == 1) == 1 for x in RAILS))
+tro = {x: pro[som[x]] for x in RAILS}
+ok("Les deux inversions dans les deux ordres donnent la même troisième : (1,8), (2,4), (5,7) ; l'axe 3, 6, 9 ne revient jamais à 1 par le produit",
+   tro == {x: som[pro[x]] for x in RAILS} == {1: 8, 8: 1, 2: 4, 4: 2, 5: 7, 7: 5}
+   and all(DR(a * y) in (3, 6, 9) for a in (3, 6, 9) for y in range(1, 10)))
+ok("n × n / n : le carré rapporté à son côté rend n, et n rapporté à lui-même rend 1, n = 1..100000",
+   all(Fr(n * n, n) == n and Fr(n, n) == 1 and n * Fr(n, n) == n for n in range(1, 100001)))
 src = open(sys.argv[1], encoding="utf-8").read() if len(sys.argv) > 1 else ""
 ok("Typographie : aucun tiret cadratin", "—" not in src)
 print("\n".join(out))
