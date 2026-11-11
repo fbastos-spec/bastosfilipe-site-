@@ -1,4 +1,4 @@
-# Vérifications de L'observateur est la confusion v0.9 (bibliothèque standard seulement)
+# Vérifications de L'observateur est la confusion v0.10 (bibliothèque standard seulement)
 import sys, math, random
 from fractions import Fraction as Fr
 
@@ -64,7 +64,36 @@ ok("Non-signalisation : marginales E[A], E[B] nulles pour les quatre réglages, 
    all(abs(x) < 0.01 and abs(y) < 0.01 for x, y in marg))
 
 S_A = abs(chsh((0, 90, 45, 135), side='A'))
-ok(f"Tarif écrit chez Alice au lieu de Bob : S = {S_A:.4f} = 2√2 ; la place du tarif est une convention", abs(S_A - 2 * math.sqrt(2)) < 0.02)
+ok(f"Alice lit en second et paie, Bob lit le premier au signe : S = {S_A:.4f} = 2√2 ; c'est la seconde lecture qui paie", abs(S_A - 2 * math.sqrt(2)) < 0.02)
+
+def chsh2(cercle=False, premier_paie=False, N=200000, seed=5):
+    rnd = random.Random(seed)
+    def E(ad, bd):
+        a = (math.cos(math.radians(ad)), math.sin(math.radians(ad))); b = (math.cos(math.radians(bd)), math.sin(math.radians(bd))); s = 0
+        for _ in range(N):
+            if cercle:
+                ph = rnd.uniform(0, 2 * math.pi); lam = (math.cos(ph), math.sin(ph))
+            else:
+                z = rnd.uniform(-1, 1); ph = rnd.uniform(0, 2 * math.pi); r = math.sqrt(1 - z * z); lam = (r * math.cos(ph), r * math.sin(ph))
+            mu = rnd.uniform(-1, 1); al = a[0] * lam[0] + a[1] * lam[1]; ab = a[0] * b[0] + a[1] * b[1]
+            if premier_paie:
+                A = 1 if al - mu >= 0 else -1; B = 1 if -A * ab >= 0 else -1
+            else:
+                A = 1 if al >= 0 else -1; B = 1 if -A * ab - mu >= 0 else -1
+            s += A * B
+        return s / N
+    return abs(E(0, 45) - E(0, 135) + E(90, 45) + E(90, 135))
+S_c = chsh2(cercle=True); S_p = chsh2(premier_paie=True)
+ok(f"Même protocole sur un cercle au lieu de la sphère : S = {S_c:.4f} = 2√2 ; le ½ de ce protocole vient du tarif", abs(S_c - 2 * math.sqrt(2)) < 0.02)
+ok(f"Première lecture payante, seconde gratuite : S = {S_p:.4f} = 4", abs(S_p - 4) < 0.001)
+
+def chaine(N, tarif=True):
+    pas = math.pi / (2 * N); E = (lambda th: -math.cos(th)) if tarif else (lambda th: -1.0 if math.cos(th) > 0 else 1.0)
+    return abs(sum(E(pas) for _ in range(2 * N - 1)) - E((2 * N - 1) * pas))
+ok("N réglages par côté : lecture tarifée 2N × cos(π/2N), lecture gratuite 2N, pour N = 2, 3, 4 : " + " ; ".join(f"{chaine(N):.4f} et {chaine(N, False):.0f}" for N in (2, 3, 4)),
+   all(abs(chaine(N) - 2 * N * math.cos(math.pi / (2 * N))) < 1e-12 and chaine(N, False) == 2 * N for N in (2, 3, 4)) and abs(chaine(2) - 2 * math.sqrt(2)) < 1e-12)
+ok("18 = 9 × 1 + 9 et 81 = 9 × 8 + 9 : k compte les tours fermés avant ; 18 = 9 × 2 ferme le deuxième, 81 = 9 × 9 le neuvième",
+   (18 - DR(18)) // 9 == 1 and (81 - DR(81)) // 9 == 8 and DR(18) == DR(81) == 9 and 18 == 9 * 2 and 81 == 9 * 9)
 RAILS = (1, 2, 4, 5, 7, 8); DROIT = (1, 4, 7)
 som = {x: 9 - x for x in RAILS}
 pro = {x: next(y for y in RAILS if DR(x * y) == 1) for x in RAILS}
