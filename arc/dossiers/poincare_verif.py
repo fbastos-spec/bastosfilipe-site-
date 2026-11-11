@@ -124,5 +124,19 @@ ok("V19 racines des angles : (3,6) (9,9) (9,9) (6,3) (9,9) pour 3,4,5,6,8 ; (4,5
    [ang[n] for n in (3, 4, 5, 6, 8)] == [(3, 6), (9, 9), (9, 9), (6, 3), (9, 9)] and ang[9] == (4, 5)
    and set(periode(360, 7) + periode(900, 7)) == set("142857") and all(dr(180*(n-2)) == 9 for n in range(3, 200))
    and prem == {1, 2, 4, 5, 7, 8})
+import itertools as _it
+from fractions import Fraction as _Fr
+_T = set()
+for _i in range(7):
+    _T.add(frozenset((_i, (_i + 1) % 7, (_i + 3) % 7))); _T.add(frozenset((_i, (_i + 2) % 7, (_i + 3) % 7)))
+_A = {frozenset(p) for t in _T for p in _it.combinations(t, 2)}
+_C = [t | {p} for t in _T for p in (7, 8)]
+_F3 = {frozenset(f) for c in _C for f in _it.combinations(c, 3)}; _A3 = {frozenset(f) for c in _C for f in _it.combinations(c, 2)}
+_S5 = [frozenset(c) for c in _it.combinations(range(5), 4)]
+_lien = {frozenset(c - {0}) for c in _S5 if 0 in c}; _la = {frozenset(p) for t in _lien for p in _it.combinations(t, 2)}
+ok("V20 tore à 7 sommets coiffé de deux pointes : 9 - 35 + 56 - 28 = 2, deux cellules par face, enveloppe d'une pointe de compte 0 (un tore) ; sur le bord du 4-simplexe l'enveloppe compte 2 (une sphère) ; sept pas de 360/7 font 360",
+   (9, len(_A3), len(_F3), len(_C)) == (9, 35, 56, 28) and 9 - len(_A3) + len(_F3) - len(_C) == 2
+   and all(sum(1 for c in _C if f <= c) == 2 for f in _F3) and 7 - len(_A) + len(_T) == 0
+   and 4 - len(_la) + len(_lien) == 2 and 7 * _Fr(360, 7) == 360)
 for n, c in R: print("[OK]" if c else "[ECHEC]", n)
 print(sum(c for _, c in R), "sur", len(R))
