@@ -1,4 +1,4 @@
-# Vérifications de L'observateur est la confusion v0.8 (bibliothèque standard seulement)
+# Vérifications de L'observateur est la confusion v0.9 (bibliothèque standard seulement)
 import sys, math, random
 from fractions import Fraction as Fr
 
@@ -79,6 +79,10 @@ ok("Les deux inversions dans les deux ordres donnent la même troisième : (1,8)
    and all(DR(a * y) in (3, 6, 9) for a in (3, 6, 9) for y in range(1, 10)))
 ok("n × n / n : le carré rapporté à son côté rend n, et n rapporté à lui-même rend 1, n = 1..100000",
    all(Fr(n * n, n) == n and Fr(n, n) == 1 and n * Fr(n, n) == n for n in range(1, 100001)))
+def orbite(x): return {x, som[x], pro[x], tro[x]}
+ok("Les deux inversions rangent les rails en un bloc de quatre et une paire : " + str(sorted(orbite(2))) + " et " + str(sorted(orbite(1))) + " ; dans le bloc, trois appariements",
+   orbite(2) == orbite(4) == orbite(5) == orbite(7) == {2, 4, 5, 7} and orbite(1) == orbite(8) == {1, 8}
+   and {frozenset((x, f[x])) for f in (som, pro, tro) for x in (2, 4, 5, 7)} == {frozenset(p) for p in ((2, 7), (4, 5), (2, 5), (4, 7), (2, 4), (5, 7))})
 src = open(sys.argv[1], encoding="utf-8").read() if len(sys.argv) > 1 else ""
 ok("Typographie : aucun tiret cadratin", "—" not in src)
 print("\n".join(out))
