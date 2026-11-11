@@ -138,5 +138,210 @@ ok("V20 tore à 7 sommets coiffé de deux pointes : 9 - 35 + 56 - 28 = 2, deux c
    (9, len(_A3), len(_F3), len(_C)) == (9, 35, 56, 28) and 9 - len(_A3) + len(_F3) - len(_C) == 2
    and all(sum(1 for c in _C if f <= c) == 2 for f in _F3) and 7 - len(_A) + len(_T) == 0
    and 4 - len(_la) + len(_lien) == 2 and 7 * _Fr(360, 7) == 360)
+def _chantiers():
+    import itertools, random
+    from fractions import Fraction as F_
+    from collections import Counter as Cn
+    Cb = itertools.combinations
+    cle = lambda s: repr(sorted(s, key=repr))
+    def bord4(): return [frozenset(c) for c in Cb(range(5), 4)]
+    def c16(): return [frozenset((i, s) for i, s in enumerate(sg)) for sg in itertools.product((1, -1), repeat=4)]
+    def pair(p): return sum(1 for i in range(4) for j in range(i) if p[j] > p[i]) % 2 == 0
+    def icos_f():
+        phi = (1 + 5 ** .5) / 2; V = set()
+        for i in range(4):
+            for s in (1, -1):
+                w = [0, 0, 0, 0]; w[i] = s; V.add(tuple(w))
+        for sg in itertools.product((.5, -.5), repeat=4): V.add(sg)
+        base = (0, .5, phi / 2, 1 / (2 * phi))
+        for p in itertools.permutations(range(4)):
+            if not pair(p): continue
+            for sg in itertools.product((1, -1), repeat=3):
+                b = [base[0], base[1] * sg[0], base[2] * sg[1], base[3] * sg[2]]; w = [0] * 4
+                for k in range(4): w[p[k]] = b[k]
+                V.add(tuple(w))
+        return sorted({tuple(round(x, 9) + 0.0 for x in w) for w in V})
+    def c600():
+        V = icos_f(); d = lambda a, b: sum((x - y) ** 2 for x, y in zip(a, b))
+        m = min(d(V[0], w) for w in V[1:]); adj = {i: set() for i in range(len(V))}
+        for i, j in Cb(range(len(V)), 2):
+            if abs(d(V[i], V[j]) - m) < 1e-6: adj[i].add(j); adj[j].add(i)
+        T = set()
+        for i in adj:
+            for j in adj[i]:
+                if j < i: continue
+                for k in adj[i] & adj[j]:
+                    if k < j: continue
+                    for l in adj[i] & adj[j] & adj[k]:
+                        if l > k: T.add(frozenset((i, j, k, l)))
+        return sorted(T, key=sorted), V
+    def tore7():
+        T = []
+        for i in range(7): T.append((i, (i + 1) % 7, (i + 3) % 7)); T.append((i, (i + 2) % 7, (i + 3) % 7))
+        return [tuple(sorted(t)) for t in T]
+    def produit(surf, n=3):
+        cells = []
+        for (a, b, c) in surf:
+            for i in range(n):
+                j = (i + 1) % n
+                cells += [frozenset(((a, i), (b, i), (c, i), (c, j))), frozenset(((a, i), (b, i), (b, j), (c, j))), frozenset(((a, i), (a, j), (b, j), (c, j)))]
+        return cells
+    def faces(cells, k): return {frozenset(f) for c in cells for f in Cb(sorted(c, key=repr), k)}
+    def comptes(cells): return len(faces(cells, 1)), len(faces(cells, 2)), len(faces(cells, 3)), len(cells)
+    def surface(tris):
+        E = Cn(frozenset(e) for t in tris for e in Cb(sorted(t, key=repr), 2))
+        if any(x != 2 for x in E.values()): return None
+        adj = {}
+        for t in tris:
+            for e in Cb(sorted(t, key=repr), 2): adj.setdefault(frozenset(e), []).append(t)
+        t0 = next(iter(tris)); seen = {t0}; q = [t0]
+        while q:
+            t = q.pop()
+            for e in Cb(sorted(t, key=repr), 2):
+                for u in adj[frozenset(e)]:
+                    if u not in seen: seen.add(u); q.append(u)
+        if len(seen) != len(tris): return None
+        Vs = {x for t in tris for x in t}
+        for x in Vs:
+            nb = {}
+            for t in tris:
+                if x in t:
+                    a, b = [y for y in t if y != x]; nb.setdefault(a, []).append(b); nb.setdefault(b, []).append(a)
+            if any(len(z) != 2 for z in nb.values()): return None
+            s0 = next(iter(nb)); s = {s0}; q = [s0]
+            while q:
+                y = q.pop()
+                for z in nb[y]:
+                    if z not in s: s.add(z); q.append(z)
+            if len(s) != len(nb): return None
+        return len(Vs) - len(E) + len(tris)
+    def forme_reelle(cells):
+        Fc = Cn(frozenset(f) for c in cells for f in Cb(sorted(c, key=repr), 3))
+        if any(x != 2 for x in Fc.values()): return False
+        return all(surface([frozenset(c - {x}) for c in cells if x in c]) == 2 for x in {y for c in cells for y in c})
+    def rang(M):
+        M = [[F_(x) for x in r] for r in M]; r = 0; nc = len(M[0]) if M else 0
+        for col in range(nc):
+            piv = next((i for i in range(r, len(M)) if M[i][col] != 0), None)
+            if piv is None: continue
+            M[r], M[piv] = M[piv], M[r]; pr = M[r]; pv = pr[col]
+            for i in range(r + 1, len(M)):
+                if M[i][col] != 0:
+                    f = M[i][col] / pv; ri = M[i]
+                    for j in range(col, nc):
+                        if pr[j] != 0: ri[j] -= f * pr[j]
+            r += 1
+            if r == len(M): break
+        return r
+    def boucles(cells):
+        Vs = sorted(faces(cells, 1), key=cle); Es = sorted(faces(cells, 2), key=cle); Fs = sorted(faces(cells, 3), key=cle)
+        ei = {e: i for i, e in enumerate(Es)}; M = [[0] * len(Fs) for _ in Es]
+        for j, f in enumerate(Fs):
+            a, b, c = sorted(f, key=repr)
+            M[ei[frozenset((b, c))]][j] = 1; M[ei[frozenset((a, c))]][j] = -1; M[ei[frozenset((a, b))]][j] = 1
+        return len(Es) - (len(Vs) - 1) - rang(M)
+    def valide(P, Pv, Pe, Pf, c):
+        sh = [frozenset(f) for f in Cb(sorted(c, key=repr), 3) if frozenset(f) in Pf]; k = len(sh)
+        if k == 0: return 0 if not P else None
+        if k == 1:
+            (x,) = c - sh[0]; return 1 if x not in Pv else None
+        if k == 2: return 2 if frozenset(c - (sh[0] & sh[1])) not in Pe else None
+        return k
+    def derouler(cells, ordre=None, seed=0, verif=True):
+        rnd = random.Random(seed); P = []; Pv = set(); Pe = set(); Pf = Cn(); types = []; reste = set(cells); eu = []
+        def ajoute(c, t):
+            P.append(c); reste.discard(c); types.append(t); Pv.update(c)
+            for e in Cb(sorted(c, key=repr), 2): Pe.add(frozenset(e))
+            for f in Cb(sorted(c, key=repr), 3): Pf[frozenset(f)] += 1
+            if verif and reste: eu.append(surface([f for f, x in Pf.items() if x == 1]))
+        if ordre:
+            for c in ordre:
+                t = valide(P, Pv, Pe, Pf, c)
+                if t is None: return P, types, eu, False
+                ajoute(c, t)
+            return P, types, eu, True
+        ajoute(rnd.choice(sorted(cells, key=cle)), 0)
+        while reste:
+            front = {f for f, x in Pf.items() if x == 1}; cand = []
+            for c in reste:
+                if any(frozenset(f) in front for f in Cb(sorted(c, key=repr), 3)):
+                    t = valide(P, Pv, Pe, Pf, c)
+                    if t is not None: cand.append((c, t))
+            if not cand: return P, types, eu, False
+            cand.sort(key=lambda x: cle(x[0])); c, t = rnd.choice(cand); ajoute(c, t)
+        return P, types, eu, True
+    def ligne(cells, V):
+        d = (0.31, 0.57, 0.73, 0.19); x0 = (0.001, 0.002, -0.003, 0.0015); L = []
+        for c in cells:
+            pts = [V[i] for i in sorted(c)]; n = [sum(p[k] for p in pts) / 4 for k in range(4)]
+            h = sum(n[k] * pts[0][k] for k in range(4)); L.append(((h - sum(n[k] * x0[k] for k in range(4))) / sum(n[k] * d[k] for k in range(4)), c))
+        return [c for t, c in sorted([x for x in L if x[0] > 0], key=lambda x: x[0])] + [c for t, c in sorted([x for x in L if x[0] < 0], key=lambda x: x[0])]
+    def bilan(types): return tuple(Cn(types)[k] for k in range(5))
+    T600, V600 = c600(); SxC = produit([tuple(sorted(c)) for c in Cb(range(4), 3)]); TxC = produit(tore7())
+    ok("V21 sphère × cercle et tore × cercle : formes réelles, comptes 12 - 48 + 72 - 36 = 0 et 21 - 147 + 252 - 126 = 0, une boucle qui résiste et trois ; aucune sur le bord du 4-simplexe ni sur les 16 cellules",
+       forme_reelle(SxC) and forme_reelle(TxC) and comptes(SxC) == (12, 48, 72, 36) and comptes(TxC) == (21, 147, 252, 126)
+       and boucles(SxC) == 1 and boucles(TxC) == 3 and boucles(bord4()) == 0 and boucles(c16()) == 0)
+    r4 = [derouler(bord4(), seed=s) for s in range(200)]; r16 = [derouler(c16(), seed=s) for s in range(200)]; r600 = derouler(T600, ordre=ligne(T600, V600))
+    def attendu(cells):
+        a, e, f, c = comptes(cells); return (1, a - 4, e - 3 * a + 6, a - 4, 1)
+    ok("V22 déroulés complets : bilans 1,1,1,1,1 (4-simplexe), 1,4,6,4,1 (16 cellules), 1,116,366,116,1 (600 cellules) ; un seul bilan pour 200 ordres ; chaque enveloppe compte 2 ; bilan = (1, pointes - 4, arêtes - 3 × pointes + 6, pointes - 4, 1)",
+       all(r[3] and bilan(r[1]) == (1, 1, 1, 1, 1) and set(r[2]) <= {2} for r in r4)
+       and all(r[3] and bilan(r[1]) == (1, 4, 6, 4, 1) and set(r[2]) == {2} for r in r16)
+       and r600[3] and bilan(r600[1]) == (1, 116, 366, 116, 1) and set(r600[2]) == {2}
+       and attendu(bord4()) == (1, 1, 1, 1, 1) and attendu(c16()) == (1, 4, 6, 4, 1) and attendu(T600) == (1, 116, 366, 116, 1))
+    rs = [derouler(SxC, seed=s) for s in range(300)]; rt = [derouler(TxC, seed=s) for s in range(300)]
+    ms, mt = max(len(r[0]) for r in rs), max(len(r[0]) for r in rt)
+    ok(f"V23 blocage : sur 300 déroulés tirés au sort, aucun n'aboutit sur la sphère × cercle (au plus loin {ms} cellules sur 36) ni sur le tore × cercle (au plus loin {mt} sur 126) ; jusqu'au blocage chaque enveloppe compte 2",
+       not any(r[3] for r in rs + rt) and ms < 36 and mt < 126 and all(set(r[2]) <= {2} for r in rs + rt))
+    class Q5:
+        __slots__ = ('a', 'b')
+        def __init__(s, a, b=0): s.a = F_(a); s.b = F_(b)
+        def __add__(s, o): return Q5(s.a + o.a, s.b + o.b)
+        def __sub__(s, o): return Q5(s.a - o.a, s.b - o.b)
+        def __mul__(s, o): return Q5(s.a * o.a + 5 * s.b * o.b, s.a * o.b + s.b * o.a)
+        def __neg__(s): return Q5(-s.a, -s.b)
+        def __eq__(s, o): return s.a == o.a and s.b == o.b
+        def __hash__(s): return hash((s.a, s.b))
+        def f(s): return float(s.a) + float(s.b) * 5 ** .5
+    Z = Q5(0); H = Q5(F_(1, 2)); PH = Q5(F_(1, 4), F_(1, 4)); IP = Q5(F_(-1, 4), F_(1, 4))
+    def qm(p, q):
+        a, b, c, d = p; e, f, g, h = q
+        return (a*e - b*f - c*g - d*h, a*f + b*e + c*h - d*g, a*g - b*h + c*e + d*f, a*h + b*g - c*f + d*e)
+    G = set()
+    for i in range(4):
+        for s in (Q5(1), Q5(-1)):
+            w = [Z] * 4; w[i] = s; G.add(tuple(w))
+    for sg in itertools.product((1, -1), repeat=4): G.add(tuple(H if x == 1 else -H for x in sg))
+    base = (Z, H, PH, IP)
+    for p in itertools.permutations(range(4)):
+        if not pair(p): continue
+        for sg in itertools.product((1, -1), repeat=3):
+            b = [base[0]] + [base[k + 1] if sg[k] == 1 else -base[k + 1] for k in range(3)]; w = [None] * 4
+            for k in range(4): w[p[k]] = b[k]
+            G.add(tuple(w))
+    G = list(G); S = set(G); UN = (Q5(1), Z, Z, Z); inv = lambda g: (g[0], -g[1], -g[2], -g[3])
+    prod = {(a, b): qm(a, b) for a in G for b in G}
+    ok("V24 les 120 tours, en écriture exacte : ils sont 120, de grandeur 1, se composent sans sortir des 120 ; aucun tour autre que le tour nul ne laisse une position à sa place ; d'une position on atteint les 120",
+       len(G) == 120 and all(sum((x * x for x in g), Z) == Q5(1) for g in G) and all(p in S for p in prod.values())
+       and all(prod[(g, x)] != x for g in G if g != UN for x in G) and len({prod[(g, UN)] for g in G}) == 120)
+    accord = sum(1 for a in G for b in G if prod[(a, b)] == prod[(b, a)]); centre = [g for g in G if all(prod[(g, h)] == prod[(h, g)] for h in G)]
+    K = {qm(prod[(a, b)], qm(inv(a), inv(b))) for a in G for b in G}; sub = set(K)
+    while True:
+        new = {prod[(a, b)] for a in sub for b in K} | sub
+        if len(new) == len(sub): break
+        sub = new
+    ok(f"V25 le registre garde l'ordre : {accord} paires sur 14400 s'accordent dans les deux ordres (9 × 120) ; deux tours seulement s'accordent avec tous, les deux pôles ; les écarts d'ordre redonnent les 120 tours",
+       accord == 1080 == 9 * 120 and len(centre) == 2 and UN in centre and tuple(-x for x in UN) in centre and len(sub) == 120)
+    def retour(g):
+        x = g; n = 1
+        while x != UN: x = prod[(x, g)]; n += 1
+        return n
+    haut = sorted(Cn(g[0] for g in G).items(), key=lambda x: -x[0].f()); tailles = [n for h, n in haut]
+    fam = [{g for g in G if g[0] == h} for h, n in haut]
+    ok("V26 neuf enveloppes d'un pôle à l'autre : 1, 12, 20, 12, 30, 12, 20, 12, 1 ; chacune est une seule famille de tours (retours en 1, 10, 6, 5, 4, 10, 3, 5, 2 fois), stable quand on la lit depuis un autre tour",
+       tailles == [1, 12, 20, 12, 30, 12, 20, 12, 1] and [sorted({retour(g) for g in f})[0] for f in fam] == [1, 10, 6, 5, 4, 10, 3, 5, 2]
+       and all(len({retour(g) for g in f}) == 1 for f in fam)
+       and all({prod[(prod[(x, g)], inv(x))] for x in G} == f for f in fam for g in [next(iter(f))]))
+_chantiers()
 for n, c in R: print("[OK]" if c else "[ECHEC]", n)
 print(sum(c for _, c in R), "sur", len(R))
