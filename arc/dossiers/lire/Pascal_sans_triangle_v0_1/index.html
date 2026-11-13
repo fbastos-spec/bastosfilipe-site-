@@ -1,0 +1,88 @@
+<!DOCTYPE html><html lang="fr"><head><meta charset="utf-8">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LB0FH513XB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-LB0FH513XB');
+  gtag('config', 'G-7B04RFMF7Z');
+</script>
+<meta name="description" content="La pyramide de Pascal d&#x27;un nombre et sa racine digitale posées l&#x27;une sur l&#x27;autre. Une règle : la pointe est la racine plus un supplément pris à l&#x27;intérieur, les bords ne pèsent jamais ; sur un triplet, pointe = racine + centre. La table des suppléments de 2 à 10 chiffres. Les cent triplets qui pointent 9 : racine et centre inverses, dix par racine et vingt pour le 9, centre et flancs sur le même rail. Le 9 est la seule pointe faite des paires inverses. 256 et 512 y sont, avec 280, 578, 495 et 891. 14 vérifications au build.">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+<title>Pascal sans triangle : la racine digitale et l&#x27;intérieur du nombre · Dossier · Corpus ARC · Filipe Bastos</title>
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<link rel="canonical" href="https://bastosfilipe.com/arc/dossiers/lire/Pascal_sans_triangle_v0_1/"><link rel="alternate" type="application/pdf" href="https://bastosfilipe.com/arc/dossiers/Pascal_sans_triangle_v0_1.pdf"><link href="/assets/css2-4869c7ae422d.css" media="all" rel="stylesheet"><link href="/assets/style-2caf4e3e0608.css" media="all" rel="stylesheet"><link href="/assets/corpus-integration.css" rel="stylesheet"><link href="/assets/site-unified.css?v=6" rel="stylesheet">
+<meta property="og:type" content="article"><meta property="og:site_name" content="Filipe Bastos · Corpus ARC"><meta property="og:locale" content="fr_CA"><meta property="og:title" content="Pascal sans triangle : la racine digitale et l&#x27;intérieur du nombre"><meta property="og:description" content="La pyramide de Pascal d&#x27;un nombre et sa racine digitale posées l&#x27;une sur l&#x27;autre. Une règle : la pointe est la racine plus un supplément pris à l&#x27;intérieur, les bords ne pèsent jamais ; sur un triplet, pointe = racine + centre. La table des suppléments de 2 à 10 chiffres. Les cent triplets qui pointent 9 : racine et centre inverses, dix par racine et vingt pour le 9, centre et flancs sur le même rail. Le 9 est la seule pointe faite des paires inverses. 256 et 512 y sont, avec 280, 578, 495 et 891. 14 vérifications au build."><meta property="og:url" content="https://bastosfilipe.com/arc/dossiers/lire/Pascal_sans_triangle_v0_1/"><meta property="og:image" content="https://bastosfilipe.com/assets/og-arc.png"><meta name="twitter:card" content="summary_large_image">
+<style>.d-page pre{overflow-x:auto;max-width:100%;font-size:.78rem}.d-page table{display:block;overflow-x:auto;max-width:100%}.d-page{max-width:780px}.d-page h1{font-size:clamp(1.8rem,4vw,2.5rem);line-height:1.15;margin:8px 0 6px}.d-sub{font-style:italic;font-size:1.1rem;color:rgb(58,65,75);margin:0 0 18px}.d-note{font-size:.9rem;border-left:3px solid var(--or);padding:8px 14px;background:rgba(160,120,40,.06);margin:0 0 26px}.d-page h2{font-size:1.3rem;margin:30px 0 10px}.d-page p{line-height:1.65;margin:0 0 13px}.d-page table{border-collapse:collapse;margin:12px 0;font-size:.92rem;width:100%}.d-page th,.d-page td{border:1px solid rgba(0,0,0,.25);padding:4px 8px;vertical-align:top;text-align:left}.d-page blockquote{margin:10px 0 14px 12px;padding-left:12px;border-left:2px solid rgba(0,0,0,.3);font-style:italic}.d-page code{font-size:.88em}</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Pascal sans triangle : la racine digitale et l'intérieur du nombre", "description": "La pyramide de Pascal d'un nombre et sa racine digitale posées l'une sur l'autre. Une règle : la pointe est la racine plus un supplément pris à l'intérieur, les bords ne pèsent jamais ; sur un triplet, pointe = racine + centre. La table des suppléments de 2 à 10 chiffres. Les cent triplets qui pointent 9 : racine et centre inverses, dix par racine et vingt pour le 9, centre et flancs sur le même rail. Le 9 est la seule pointe faite des paires inverses. 256 et 512 y sont, avec 280, 578, 495 et 891. 14 vérifications au build.", "url": "https://bastosfilipe.com/arc/dossiers/lire/Pascal_sans_triangle_v0_1/", "inLanguage": "fr", "author": {"@type": "Person", "@id": "https://bastosfilipe.com/#filipe-bastos", "name": "Filipe Bastos", "url": "https://bastosfilipe.com/bio/"}, "publisher": {"@id": "https://bastosfilipe.com/#filipe-bastos"}, "isPartOf": {"@id": "https://bastosfilipe.com/#site"}, "license": "https://creativecommons.org/licenses/by/4.0/", "encoding": {"@type": "MediaObject", "contentUrl": "https://bastosfilipe.com/arc/dossiers/Pascal_sans_triangle_v0_1.pdf", "encodingFormat": "application/pdf"}}</script>
+</head>
+<body class="page">
+<a class="screen-reader-text" href="#content">Aller au contenu</a>
+<header class="top">
+<nav aria-label="Navigation principale" class="nav">
+<a class="brand" href="/">Filipe Bastos</a>
+<ul class="" id="menu-main-fr"><li><a href="/">Accueil</a></li><li><a href="/bibliotheque-des-documents/">Bibliothèque<span class="m-hide"> des documents</span></a></li><li><a href="/bio/">Bio</a></li><li><a href="/arc/">Corpus ARC</a></li><li><a href="/contradictions/">Contradictions</a></li></ul> <a class="search-link" href="/rechercher/" aria-label="Rechercher" title="Rechercher" style="display:inline-flex;align-items:center;justify-content:center;width:34px;height:30px;margin-right:6px;color:inherit;border:1px solid currentColor;border-radius:3px;opacity:.75;vertical-align:middle"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg></a><details class="lang"><summary aria-label="Langue">FR</summary><div class="lang-menu"><a data-l="fr" href="/" lang="fr">Français</a><a data-l="en" href="/en/" lang="en">English</a><a data-l="pt" href="/pt/" lang="pt">Português</a><span>Traduction automatique</span><a data-tl="es" href="#" lang="es">Español</a><a data-tl="it" href="#" lang="it">Italiano</a><a data-tl="de" href="#" lang="de">Deutsch</a><a data-tl="zh-CN" href="#" lang="zh">中文</a></div></details></nav>
+</header>
+<main id="content" data-pagefind-meta="title:Pascal sans triangle : la racine digitale et l&#x27;intérieur du nombre · Dossier">
+<div class="wrap page-shell d-page">
+<p style="font-size:.85rem;margin:0 0 6px"><a href="/bibliotheque-des-documents/">Bibliothèque des documents</a> / Dossier</p>
+<h1 class="entry-title">Pascal sans triangle</h1>
+<p class="d-note">Version texte du dossier, pour la lecture en ligne, la recherche et les moteurs de réponse. Le PDF fait foi pour la mise en page et les formules : <a href="/arc/dossiers/Pascal_sans_triangle_v0_1.pdf">télécharger le PDF</a>. Le script de vérification est à côté : <a href="/arc/dossiers/pascal_verif.py">pascal_verif.py</a>.</p>
+
+<p class="sub">La racine digitale et l'intérieur du nombre</p>
+<div class="meta"><p>Filipe Bastos</p><p>Corpus ARC (Architecture de la Cohérence Relationnelle), pièce courte, version 0.1</p><p>13 novembre 2026</p></div>
+<p><b>Avis.</b> Le triangle de Pascal et la racine digitale sont connus depuis des siècles. Cette pièce les pose l'un sur l'autre et lit ce que chaque position pèse. Elle en tire une règle qui donne la pointe de la pyramide sans monter la pyramide, et une lecture de la pointe 9. L'arithmétique est élémentaire ; il est possible que la règle figure ailleurs sous une autre forme, et le scribe ne l'a pas cherchée. Tous les comptes sont refaits.</p>
+<p>Statuts : F, fait connu ; Th, calcul fini vérifié ou démonstration ; L, lecture de l'auteur, citée et datée. Les contrôles sont au script <code>pascal_verif.py</code>.</p>
+<h2>1. Les deux outils</h2>
+<p><b>1.1 (F).</b> La racine digitale : on additionne les chiffres d'un nombre et l'on recommence jusqu'à un seul chiffre, de 1 à 9. C'est la preuve par 9 des écoles. Le triangle arithmétique, que Pascal décrit en 1654, donne les lignes 1 2 1, puis 1 3 3 1, puis 1 4 6 4 1.</p>
+<p><b>1.2 (la pyramide).</b> On écrit les chiffres d'un nombre sur une ligne. Sous chaque couple de voisins, on écrit leur somme réduite à sa racine. On recommence jusqu'à un seul chiffre : la pointe. Pour 256 : 2 5 6, puis 7 2, puis 9.</p>
+<p><b>1.3 (Th).</b> La pointe est la somme des chiffres pesés par la ligne de Pascal de même longueur, réduite. Pour trois chiffres : début + 2 × centre + fin. La racine, elle, pèse chaque chiffre une fois.</p>
+<h2>2. La règle</h2>
+<p><b>2.1 (L).</b> « Donc avec la racine, tu peux presque déterminer le Pascal. » « Je suis sûr qu'on peut trouver la logique aussi pour 5 chiffres ; et pour les pairs, on prend les 2 du centre et on additionne. Fini le long triangle pour trouver la pointe. » (l'auteur, 13 novembre 2026).</p>
+<p><b>2.2 (Th, la règle).</b> Pointe = racine + supplément de l'intérieur. Les deux bords ne donnent jamais de supplément : Pascal et la racine les pèsent tous deux une fois.</p>
+<p><b>2.3 (Th, les suppléments).</b> Ce qu'on ajoute à la racine, position par position, les tours de 9 retirés :</p>
+<ul><li>2 chiffres : 0 0. La pointe est la racine.</li><li>3 chiffres : 0 1 0. Une fois le centre.</li><li>4 chiffres : 0 2 2 0. Deux fois les deux du centre.</li><li>5 chiffres : 0 3 5 3 0.</li><li>6 chiffres : 0 4 0 0 4 0.</li><li>7 chiffres : 0 5 5 1 5 5 0.</li><li>8 chiffres : 0 6 2 7 7 2 6 0.</li><li>9 chiffres : 0 7 0 1 6 1 0 7 0.</li><li>10 chiffres : 0 8 8 2 8 8 2 8 8 0.</li></ul>
+<p><b>2.4 (Th, exemples).</b> 256 : racine 4, centre 5, pointe 9. 512 : racine 8, centre 1, pointe 9. 1024 : racine 7, milieu 0 + 2, doublé 4, pointe 2. 65 536 : racine 7 (somme 25), anneau 3 × (5 + 3) = 24, centre 5 × 5 = 25 ; 25 + 24 + 25 = 74, pointe 2. La pyramide complète donne les mêmes pointes.</p>
+<p><b>2.5 (Th, trois remarques).</b> Le voisin du bord pèse la longueur moins deux : 1, 2, 3, 4, 5. À six chiffres, les deux du centre ne comptent plus : leur poids de Pascal est 10, soit 9 + 1, un tour de plus que ce que la racine compte déjà. À dix chiffres, la pointe ne lit que quatre positions : la première, la dernière, et trois fois la quatrième et la septième ; les six autres ne pèsent que des tours.</p>
+<p><b>2.6 (L, Th, deux chiffres).</b> « Pascal sur un nombre à deux chiffres, c'est du délire de licornes. » (l'auteur, 13 novembre 2026). Le compte le dit : à deux chiffres la pointe est la racine, Pascal n'y ajoute rien. La pyramide commence au triplet : un début, un centre, une fin.</p>
+<p><b>2.7 (L).</b> « La racine, c'est le résultat une fois tout déballé. » (l'auteur, 13 novembre 2026). La racine lit le nombre à plat ; la pointe le lit avec le poids de son intérieur.</p>
+<h2>3. Les triplets</h2>
+<p><b>3.1 (Th).</b> Sur un triplet : pointe = racine + centre. Les 900 nombres de trois chiffres se partagent également : 100 par pointe. Dans chaque pointe, 10 triplets par racine, et 20 pour la racine qui porte le nom de la pointe, parce qu'elle a deux centres, 0 et 9.</p>
+<p><b>3.2 (L).</b> « Donne-moi les 100 qui pointent à 9, tu vas voir ce que je vois. » « Maintenant regarde leurs racines et la proportion. » (l'auteur, 13 novembre 2026).</p>
+<p><b>3.3 (Th, les 100 qui pointent 9).</b> Rangés par racine, ils ont tous le même centre, et ce centre est l'inverse de la racine :</p>
+<ul><li>racine 1, centre 8 : 181 280 289 388 487 586 685 784 883 982</li><li>racine 2, centre 7 : 173 272 371 470 479 578 677 776 875 974</li><li>racine 3, centre 6 : 165 264 363 462 561 660 669 768 867 966</li><li>racine 4, centre 5 : 157 256 355 454 553 652 751 850 859 958</li><li>racine 5, centre 4 : 140 149 248 347 446 545 644 743 842 941</li><li>racine 6, centre 3 : 132 231 330 339 438 537 636 735 834 933</li><li>racine 7, centre 2 : 124 223 322 421 520 529 628 727 826 925</li><li>racine 8, centre 1 : 116 215 314 413 512 611 710 719 818 917</li><li>racine 9, centre 0 ou 9 : 108 198 207 297 306 396 405 495 504 594 603 693 702 792 801 891 900 909 990 999</li></ul>
+<p><b>3.4 (Th).</b> Un triplet pointe 9 si et seulement si sa racine et son centre sont inverses, ou si sa racine est 9 et son centre 0 ou 9. Chaque famille avance par 99, avec un seul pas de 9. La liste entière avance par pas de 8, de 9 et de 17 = 8 + 9 : 72, 18 et 9 fois.</p>
+<p><b>3.5 (Th, les rails).</b> Pour un triplet qui pointe 9, le centre et la somme des flancs sont sur le même rail. Centre 1, 4, 7 : flancs 7, 1, 4, le rail D qui tourne. Centre 2, 5, 8 : flancs 5, 8, 2, le rail G qui tourne. Centre 3, 6, 9 : flancs 3, 6, 9, l'axe qui se répond à lui-même.</p>
+<p><b>3.6 (Th, qui est dans la liste).</b> 256 et 512. 280 = 5 × 7 × 8 et 578. 495, la constante de Kaprekar à trois chiffres, avec 198, 297, 396, 594, 693, 792, 891. Cinq carrés : 256, 289, 529, 784 = 28 × 28, 900. Un seul cube : 512.</p>
+<h2>4. Ce que le 9 a de propre</h2>
+<p><b>4.1 (L).</b> « Les paires du 9 sont des inverses. Obligées. Sa construction demande des inverses. » (l'auteur, 13 novembre 2026).</p>
+<p><b>4.2 (Th).</b> Toutes les pointes ont la même proportion : la fréquence ne distingue pas le 9. Ce qui le distingue est la nature du couple formé par la racine et le centre. Pour la pointe 9, ces couples sont les quatre paires inverses du cadastre, (1, 8), (2, 7), (3, 6), (4, 5), dans les deux sens, et le 9 avec lui-même. Pour la pointe 8, les couples sont (1, 7), (2, 6), (3, 5), qui ne sont pas des paires du cadastre, et (4, 4), un nombre collé à lui-même. Chaque pointe a une famille où la racine égale le centre ; pour le 9, cette famille est le 9 seul.</p>
+<p><b>4.3 (glose du scribe, à valider).</b> Pointer 9, c'est avoir le dehors et le dedans en paire : le nombre entier, lu par sa racine, et son milieu sont partenaires.</p>
+<p><b>4.4 (Th, les puissances de 2).</b> Les puissances de 2 à trois chiffres sont trois : 128, 256, 512. 128 pointe 4 ; 256 et 512 pointent 9. 256 est dans la famille de la paire centrale (4, 5) ; 512 dans celle de la paire extrême (1, 8).</p>
+<p><b>4.5 (Th, le témoin).</b> Un triplet pris sans raison pointe 9 une fois sur neuf. En avoir au moins deux sur trois sans raison arrive dans 3,4 % des cas, environ une fois sur 29. L'échantillon est de trois nombres : le chiffre est donné tel quel, sans plus.</p>
+<h2>5. Ce que la pièce ne fait pas</h2>
+<p><b>5.1.</b> Elle ne prétend pas que la règle soit nouvelle : elle découle en une ligne de la ligne de Pascal et de la racine. Ce qui est de l'auteur est la lecture : le centre, les paires, les rails, et le triplet comme lieu où la pyramide commence. Elle ne dit rien de la pyramide en dehors de l'écriture décimale.</p>
+<h2>Annexe. Vérifications et sources</h2>
+<p>Script <code>pascal_verif.py</code> (Python 3, bibliothèque standard seule). Treize contrôles sur les calculs, tous conformes : la pointe par la ligne de Pascal ; la règle et la table des suppléments, sur tous les nombres jusqu'à cinq chiffres et 4 000 tirages par longueur au-delà ; le cas des deux chiffres ; les 900 triplets ; la proportion 10 et 20 ; les couples de la pointe 9 ; la famille collée de chaque pointe ; les rails ; les pas de 99, 8, 9 et 17 ; les nombres présents dans la liste ; le témoin ; le cas des dix chiffres ; les exemples. Un quatorzième contrôle porte sur la typographie de la source.</p>
+<p>Non recontrôlé à la source : la date du traité de Pascal, donnée de mémoire.</p>
+<p>Sources : B. Pascal, <i>Traité du triangle arithmétique</i>, 1654. Corpus ARC : Volume 2, annexe D (cascade de Pascal) ; dossier <i>Le début, le centre et la fin</i> ; pièce <i>Erdős 406 : la forme et le doublement</i>, v0.1.</p>
+<p class="col">Modèle, questions, lectures et règles : Filipe Bastos. Scribe : Claude, sous la contradiction de l'auteur. Calculs, formulations et audits assistés par IA (ChatGPT, Gemini, DeepSeek, GLM), à sa demande. Corpus ARC, CC BY 4.0.</p>
+
+</div>
+</main>
+<footer class="site-footer">
+<div class="wrap footgrid">
+<span class="sceau">Filipe Bastos · ARC</span>
+<p>© 2026 · Architecture de la Cohérence Relationnelle · CC BY 4.0</p>
+<p class="mono">φ(x) = 9 − x · k = 1/2</p>
+</div>
+</footer>
+
+
+
+
+
+<script src="/assets/lang.js?v=5" defer></script>
+</body></html>
