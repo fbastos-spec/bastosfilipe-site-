@@ -1,4 +1,4 @@
-# Vérifications de L'observateur est la confusion v0.16 (bibliothèque standard seulement)
+# Vérifications de L'observateur est la confusion v0.17 (bibliothèque standard seulement)
 import sys, math, random
 from fractions import Fraction as Fr
 
@@ -171,6 +171,11 @@ def pas495(n):
 ok("Le 9 + 1 : 10 a la racine 1 et le tour 1 ; pour n de 1 à 20000, n = 9t + r d'une seule façon, r est la racine, n et n + 9 ont la même racine et un tour d'écart ; 189 et 198 font " + str(pas495(189)) + " et " + str(pas495(198)) + " pas jusqu'à 495",
    tours9(10) == (1, 1) and racine9(10) == 1 and all(tours9(n)[1] == racine9(n) and 9 * tours9(n)[0] + tours9(n)[1] == n and racine9(n + 9) == racine9(n) and tours9(n + 9)[0] == tours9(n)[0] + 1 for n in range(1, 20001))
    and pas495(189) == 4 and pas495(198) == 4)
+def _tr(n):
+    t = (n - 1) // 9; return t, n - 9 * t
+ok("Le 9 fait sauter la phase : de 1 à 100000, n + 9 gagne un tour et garde l'adresse ; + 1 ne change de tour qu'en partant d'un 9 ; par + 1 un ordre nouveau ne s'ouvre que depuis " + ", ".join(str(n) for n in range(1, 100000) if len(str(n + 1)) > len(str(n))),
+   all(_tr(n + 9) == (_tr(n)[0] + 1, _tr(n)[1]) and ((_tr(n + 1)[0] != _tr(n)[0]) == (_tr(n)[1] == 9)) for n in range(1, 100001))
+   and [n for n in range(1, 100000) if len(str(n + 1)) > len(str(n))] == [9, 99, 999, 9999, 99999])
 src = open(sys.argv[1], encoding="utf-8").read() if len(sys.argv) > 1 else ""
 ok("Typographie : aucun tiret cadratin", "—" not in src)
 print("\n".join(out))
