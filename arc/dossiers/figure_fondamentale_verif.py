@@ -86,9 +86,11 @@ ok("V21 un tour de cascade, huit niveaux : longueurs ÷ 16, aires ÷ 256 = 2⁸ 
 ok("V22 les deux pyramides : périmètre/hauteur = 8/√Φ = 6,2892 pour la pente √Φ ; 44/7 = 6,2857 pour le seked 14/11 ; 2π = 6,2832 ; trois valeurs distinctes",
    round(8/sqrt(phi),4)==6.2892 and F(8)/F(14,11)==F(44,7) and round(44/7,4)==6.2857 and round(2*pi,4)==6.2832)
 h2=(1-q)**2-q*q; V2=((2*q)**2/3)**2*h2; rho2=9*V2
-ok("V23 l'opération du volume : hauteur² = 1/2 = distance² du centre au nœud ; creux à mi-chemin ; V² = 2/24², soit V = r²R/24 ; rayon inscrit² = 2/64, soit R/8 = hauteur/4 ; égal au centre de gravité ssi face = 3 × demi-base ; surface totale = 1 ; 1/2 × 2/3 = 1/3",
+ok("V23 l'opération du volume : hauteur² = 1/2 = distance² du centre au nœud ; creux à mi-chemin ; V² = 2/24², soit V = r²R/24 ; rayon inscrit² = 2/64, soit R/8 = hauteur/4 ; égal au centre de gravité ssi face = 3 × demi-base ssi hauteur² = 8 × demi-base² ; cosinus entre faces voisines −1/9 ; surface totale = 1 ; 1/2 × 2/3 = 1/3",
    h2==d2(noeuds[0],(0,0)) and 4*d2((q,q),(0,0))==h2 and V2==F(2,24*24) and rho2==F(2,64) and rho2==h2/16 and q/(q+(1-q))==F(1,4) and (1-q)==3*q and (2*q)**2+4*face==1 and F(1,2)*F(2,3)==t
-   and isclose(abs(float(q)*sqrt(rho2)-sqrt(h2)*float(q))/sqrt(h2+q*q),sqrt(rho2)))
+   and isclose(abs(float(q)*sqrt(rho2)-sqrt(h2)*float(q))/sqrt(h2+q*q),sqrt(rho2))
+   and all((((4*a_*a_)**2*hh2)/((4*a_*a_+4*a_*sl)**2)==hh2/16)==(sl==3*a_)==(hh2==8*a_*a_) for a_ in (F(1,4),F(1),F(2)) for sl in (2*a_,3*a_,4*a_,F(7,2)*a_) for hh2 in [sl*sl-a_*a_])
+   and (q*q)/(h2+q*q)==F(1,9))
 ok("V24 le tétraèdre régulier : cosinus de l'angle entre faces = 1/3 ; trois faces sur une ; centre au quart de la hauteur",
    isclose((sqrt(3)/6)/(sqrt(3)/2),1/3) and isclose(sqrt(2/3)/4,(sqrt(2)/12)*3/sqrt(3)))
 ok("V25 le losange de côté 1 : la somme des deux diagonales, 2cos + 2sin, est au plus 2√2, atteinte pour le carré seul",
