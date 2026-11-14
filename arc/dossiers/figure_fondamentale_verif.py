@@ -129,6 +129,32 @@ ok("V29 le 8-9-1 du pli : (face/demi-base)² = 9, (hauteur/demi-base)² = 8, 1 +
    and sorted(''.join(p) for p in _pm('189') if _dr(int(''.join(p)[:2]))==int(''.join(p)[2]))==['189','819'] and F(81,18)==F(9,2) and 18*11==198 and 81*11==891
    and all((100*a_+10*b_+c_)-(100*c_+10*b_+a_)==99*(a_-c_) for a_ in range(1,10) for b_ in range(10) for c_ in range(a_)) and all(int(str(99*k).zfill(3)[0])+int(str(99*k).zfill(3)[2])==9 and str(99*k).zfill(3)[1]=='9' for k in range(1,10))
    and 694-496==198 and sum(d for d in range(1,496) if 496%d==0)==496 and 987654321==8*123456789+9 and 123456789*81==9999999909 and len(str(_N))==18 and _N%99==0)
+from math import tan as _tan, atan as _atan, asin as _asin
+ok("V30 le carré est seul : n × tan(π/n) = 4 pour n = 4 seulement, de 3 à 2000 ; la suite descend : 5,196 ; 4 ; 3,633 ; vers π",
+   [n for n in range(3,2001) if isclose(n*_tan(pi/n),4,rel_tol=1e-12)]==[4] and all((n+1)*_tan(pi/(n+1))<n*_tan(pi/n) for n in range(3,2000)) and round(3*_tan(pi/3),3)==5.196 and round(5*_tan(pi/5),3)==3.633)
+ok("V31 la courbure du sommet : 2π − 4 arctan(3/4) = 4 arctan(4/3)", isclose(2*pi-4*_atan(3/4),4*_atan(4/3)))
+_th=acos(-2/3); _P=[(3*sqrt(3)/10*cos(n*_th),3*sqrt(3)/10*sin(n*_th),n/sqrt(10)) for n in range(40)]
+_d=lambda a,b: sqrt(sum((x-y)**2 for x,y in zip(a,b)))
+ok("V32 l'hélice de tétraèdres : les points (rayon 3√3/10, angle de cosinus −2/3, avance 1/√10) sont à la distance 1 de leurs trois voisins suivants ; même angle et même avance que la vis de V27",
+   all(isclose(_d(_P[n],_P[n+j]),1,rel_tol=1e-12) for n in range(36) for j in (1,2,3)) and isclose(_vis(1)[0],cos(_th)) and isclose(_vis(1)[1],1/sqrt(10)))
+def _qm(p,q):
+    a,b,c,d=p; e,f,g,h=q; return (a*e-b*f-c*g-d*h, a*f+b*e+c*h-d*g, a*g-b*h+c*e+d*f, a*h+b*g-c*f+d*e)
+_q2=(1/sqrt(2),0,0,1/sqrt(2)); _q1=(1/sqrt(3),sqrt(2)/sqrt(3),0,0); _q4=_qm(_qm(_q2,_q2),_qm(_q2,_q2)); _pq=_qm(_q2,_q1)
+def _alt0(N=200):
+    S=set()
+    for L in range(2,90):
+        for d in (2,3):
+            seq=[d if i%2==0 else 5-d for i in range(L)]
+            for pp in [None]+list(range(L-1)):
+                e=str(seq[0])+''.join(('*' if i==pp else '+')+str(x) for i,x in enumerate(seq[1:])); val=eval(e)
+                if val<=N: S.add((val,pp is None))
+    return S
+_A=_alt0(); _som={n for n,s_ in _A if s_}; _tout={n for n,_ in _A}
+ok("V33 demi-angles : le quart de tour quatre fois donne −1 ; pli puis quart de tour : carrés 1/6, 1/3, 1/3, 1/6 ; cônes : cos 1/√2, tan √2, cos du double −1/3 ; Grover : arcsin(1/√5) + arcsin(1/√10) = 45°, pentes 1/2 et 1/3 ; à la borne de Tsirelson, 2, 2√2, 4 se suivent par √2 ; par la somme seule manquent 5k + 1 et 5k + 4 ; avec un produit au plus, tout de 5 à 200",
+   all(isclose(x,y,abs_tol=1e-12) for x,y in zip(_q4,(-1,0,0,0))) and all(isclose(x*x,y) for x,y in zip(_pq,(1/6,1/3,1/3,1/6)))
+   and isclose(_tan(acos(1/sqrt(3))),sqrt(2)) and isclose(cos(2*acos(1/sqrt(3))),-1/3) and isclose(_asin(1/sqrt(5))+_asin(1/sqrt(10)),pi/4) and isclose(_tan(_asin(1/sqrt(5))),.5) and isclose(_tan(_asin(1/sqrt(10))),1/3)
+   and isclose(2*sqrt(2)/2,sqrt(2)) and isclose(4/(2*sqrt(2)),sqrt(2))
+   and [n for n in range(5,200) if n not in _som]==[n for n in range(5,200) if n%5 in (1,4)] and all(n in _tout for n in range(5,201)))
 if len(sys.argv)>2:
     from PIL import Image
     im=Image.open(sys.argv[2]).convert('L'); cx,cy,r=540,762,282.0
