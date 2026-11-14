@@ -46,7 +46,7 @@ Statuts : F, fait connu ; Th, calcul fini vérifié ou démonstration ; L, lectu
 
 **3.1 (Th).** Sur un triplet : pointe = racine + centre. Les 900 nombres de trois chiffres se partagent également : 100 par pointe. Dans chaque pointe, 10 triplets par racine, et 20 pour la racine qui porte le nom de la pointe, parce qu'elle a deux centres, 0 et 9.
 
-**3.2 (L).** « Donne-moi les 100 qui pointent à 9, tu vas voir ce que je vois. » « Maintenant regarde leurs racines et la proportion. » (l'auteur, 13 novembre 2026).
+**3.2 (L).** La liste des cent nombres qui pointent à 9 se lit par leurs racines et par leur proportion (l'auteur, 13 novembre 2026).
 
 **3.3 (Th, les 100 qui pointent 9).** Rangés par racine, ils ont tous le même centre, et ce centre est l'inverse de la racine :
 
