@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 620" font-family="Helvetica,Arial,sans-serif">
+<rect width="1000" height="620" fill="#fff"/>
+<g transform="translate(300,300)">
+<circle r="254.56" fill="none" stroke="#9a7b1c" stroke-width="1.4"/>
+<circle r="180" fill="none" stroke="#2f5f8a" stroke-width="1.4"/>
+<polygon points="180.00,-180.00 -180.00,-180.00 -180.00,180.00 180.00,180.00" fill="none" stroke="#444" stroke-width="1.2"/>
+<polygon points="180.00,0.00 0.00,-180.00 -180.00,0.00 0.00,180.00" fill="none" stroke="#888" stroke-width="0.9" stroke-dasharray="5 4"/>
+<line x1="180.00" y1="0.00" x2="-180.00" y2="-180.00" stroke="#9a7b1c" stroke-width="0.7" stroke-dasharray="2 3"/>
+<line x1="180.00" y1="0.00" x2="-180.00" y2="180.00" stroke="#9a7b1c" stroke-width="0.7" stroke-dasharray="2 3"/>
+<line x1="-180.00" y1="0.00" x2="180.00" y2="-180.00" stroke="#9a7b1c" stroke-width="0.7" stroke-dasharray="2 3"/>
+<line x1="-180.00" y1="0.00" x2="180.00" y2="180.00" stroke="#9a7b1c" stroke-width="0.7" stroke-dasharray="2 3"/>
+<line x1="0.00" y1="-180.00" x2="-180.00" y2="180.00" stroke="#9a7b1c" stroke-width="0.7" stroke-dasharray="2 3"/>
+<line x1="0.00" y1="-180.00" x2="180.00" y2="180.00" stroke="#9a7b1c" stroke-width="0.7" stroke-dasharray="2 3"/>
+<line x1="0.00" y1="180.00" x2="180.00" y2="-180.00" stroke="#9a7b1c" stroke-width="0.7" stroke-dasharray="2 3"/>
+<line x1="0.00" y1="180.00" x2="-180.00" y2="-180.00" stroke="#9a7b1c" stroke-width="0.7" stroke-dasharray="2 3"/>
+<polygon points="180.00,0.00 45.00,-45.00 0.00,-180.00 -45.00,-45.00 -180.00,0.00 -45.00,45.00 0.00,180.00 45.00,45.00" fill="#b03a2e" fill-opacity="0.16" stroke="#b03a2e" stroke-width="1.8"/>
+<polygon points="60.00,0.00 45.00,-45.00 0.00,-60.00 -45.00,-45.00 -60.00,0.00 -45.00,45.00 0.00,60.00 45.00,45.00" fill="#ffffff" stroke="#b03a2e" stroke-width="0.9"/>
+<circle cx="90.0" cy="-90.0" r="3.2" fill="#444"/>
+<circle cx="-90.0" cy="-90.0" r="3.2" fill="#444"/>
+<circle cx="-90.0" cy="90.0" r="3.2" fill="#444"/>
+<circle cx="90.0" cy="90.0" r="3.2" fill="#444"/>
+<circle cx="180" cy="0" r="4" fill="#b03a2e"/>
+<circle cx="-180" cy="0" r="4" fill="#b03a2e"/>
+<circle cx="0" cy="-180" r="4" fill="#b03a2e"/>
+<circle cx="0" cy="180" r="4" fill="#b03a2e"/>
+<circle r="3" fill="#000"/></g>
+<text x="610" y="120" font-size="18" fill="#1a1a1a">L'étoile de la figure (petit rayon = 1)</text>
+<text x="610" y="168" font-size="15" fill="#333">Pointes : les 4 contacts, à distance 1</text>
+<text x="610" y="194" font-size="15" fill="#333">Creux : sur les diagonales, à (1/4, 1/4)</text>
+<text x="610" y="220" font-size="15" fill="#333">Pente des bords : 1/3</text>
+<text x="610" y="246" font-size="15" fill="#333">Angle de pointe : 36,87°, tangente 3/4</text>
+<text x="610" y="291" font-size="15" fill="#b03a2e">Aire de l'étoile : 1</text>
+<text x="610" y="317" font-size="15" fill="#b03a2e">Vide central : 1/3 ; chaque bras : 1/6</text>
+<text x="610" y="343" font-size="15" fill="#b03a2e">Base 1/4, quatre faces 3/4</text>
+<text x="610" y="388" font-size="15" fill="#333">Pliée : hauteur √2/2,</text>
+<text x="610" y="414" font-size="15" fill="#333">hauteur sur demi-base = 2√2</text>
+<text x="610" y="459" font-size="13" fill="#9a7b1c">En pointillé doré : du contact aux coins</text>
+<text x="610" y="483" font-size="13" fill="#9a7b1c">opposés, longueur √5, ouverture 53,13°</text>
+</svg>
