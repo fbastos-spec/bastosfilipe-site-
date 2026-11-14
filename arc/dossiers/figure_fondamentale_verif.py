@@ -121,6 +121,14 @@ def _alt(somme_seule,N=41):
 ok("V28 la règle du 2 et du 3 : avec la somme et le produit, tout nombre de 5 à 40 ; par la somme seule, 6 et 9 manquent entre 5 et 10 ; second compte : tout n de 5 à 999 est la somme de deux nombres différents, chacun au moins 2, et 4 ne l'est pas ; pyramide carrée : (h/b)² = 8 est la seule égalité possible de h/b et 8b/h",
    all(n in _alt(False) for n in range(5,41)) and [n for n in range(5,11) if n not in _alt(True)]==[6,9]
    and all(any(a!=n-a and n-a>=2 for a in range(2,n-1)) for n in range(5,1000)) and not any(a!=4-a and 4-a>=2 for a in range(2,3)) and F(8)**1==8)
+_dr=lambda n:1+(n-1)%9
+from itertools import permutations as _pm
+_N=987654321123456789
+ok("V29 le 8-9-1 du pli : (face/demi-base)² = 9, (hauteur/demi-base)² = 8, 1 + 8 = 9 ; 8 = 2 × 4, 9 = 3² ; du centre de gravité, sommet à 3 rayons inscrits et base à 1 ; rayon inscrit² = demi-base²/2 ; lectures suivies de leur racine : 189 et 819 seules ; 81 = 18 × 4,5 ; 198 = 18 × 11, 891 = 81 × 11 ; abc − cba = 99(a − c), bouts de somme 9 ; 694 − 496 = 198 ; 496 parfait ; 987654321 = 8 × 123456789 + 9 ; 123456789 × 81 = 9 999 999 909 ; la couture : 18 chiffres, divisible par 99",
+   ((1-q)/q)**2==9 and h2/(q*q)==8 and (3-1)*(3+1)==8 and h2==16*rho2 and (sqrt(h2)-sqrt(rho2))/sqrt(rho2)>2.999999 and rho2==q*q/2
+   and sorted(''.join(p) for p in _pm('189') if _dr(int(''.join(p)[:2]))==int(''.join(p)[2]))==['189','819'] and F(81,18)==F(9,2) and 18*11==198 and 81*11==891
+   and all((100*a_+10*b_+c_)-(100*c_+10*b_+a_)==99*(a_-c_) for a_ in range(1,10) for b_ in range(10) for c_ in range(a_)) and all(int(str(99*k).zfill(3)[0])+int(str(99*k).zfill(3)[2])==9 and str(99*k).zfill(3)[1]=='9' for k in range(1,10))
+   and 694-496==198 and sum(d for d in range(1,496) if 496%d==0)==496 and 987654321==8*123456789+9 and 123456789*81==9999999909 and len(str(_N))==18 and _N%99==0)
 if len(sys.argv)>2:
     from PIL import Image
     im=Image.open(sys.argv[2]).convert('L'); cx,cy,r=540,762,282.0
