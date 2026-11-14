@@ -46,7 +46,7 @@ Statuts : F, fait mesuré ou connu ; Th, calcul refait ou démonstration ; L, le
 
 **5.2 (F, L, un jalon mesuré).** En février 2026, l'auteur lit la borne de Heisenberg comme un coût de projection : la moitié appartient à la lecture, non à l'objet. Le 5 novembre 2026, une mesure sur 5,17 × 10¹⁰ atomes de rubidium descend à 1,01 dB sous cette borne, soit 20,7 %, en lisant des deux côtés (Li et coll., arXiv:2611.08104 ; Volume 7, chapitre 4, É 4.24 à É 4.26). C'est un point où la correction de la confusion quantique rencontre une mesure.
 
-**5.3 (glose du scribe, à valider : « une seule théorie »).** L'auteur a gravé le 10 novembre 2026 : « La théorie du tout n'est pas impossible, elle est non avenue », l'unité étant dans la forme fermée et non dans une formule posée sur un domaine ouvert (Volume 7, chapitre 11, É 11.65). La phrase du 13 novembre se lit avec celle-là : une seule théorie au sens d'une seule lecture à deux faces, et non d'une formule qui remplacerait les deux.
+**5.3 (à valider par l'auteur : « une seule théorie »).** L'auteur a gravé le 10 novembre 2026 : « La théorie du tout n'est pas impossible, elle est non avenue », l'unité étant dans la forme fermée et non dans une formule posée sur un domaine ouvert (Volume 7, chapitre 11, É 11.65). La phrase du 13 novembre se lit avec celle-là : une seule théorie au sens d'une seule lecture à deux faces, et non d'une formule qui remplacerait les deux.
 
 ## 6. Ce qui est compté, ce qui est en chantier
 

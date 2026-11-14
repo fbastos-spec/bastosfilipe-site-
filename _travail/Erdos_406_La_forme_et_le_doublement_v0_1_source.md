@@ -50,7 +50,7 @@ Statuts : F, fait sourcé ou connu de l'hôte ; Th, calcul fini vérifié ou dé
 
 **4.3 (L).** « Ce qui se vide, ce sont les racines. » « C'est un infini borné par le dehors, jamais par le dedans, comme l'échiquier et son nombre de combinaisons et de jeux par dedans. 256, c'est la borne externe. » « Rien ne peut déborder la forme et ses bords dans un monde fini. » (l'auteur, 13 novembre 2026).
 
-**4.4 (glose du scribe, à valider).** Les deux comptes ne se contredisent pas. Les adresses qui doublent d'étage en étage sont le dedans : des possibilités de jeu. La borne est au dehors : 8 × 8 × 4. L'échiquier a 64 cases et un nombre de parties qu'on ne finit pas de compter.
+**4.4 (à valider par l'auteur).** Les deux comptes ne se contredisent pas. Les adresses qui doublent d'étage en étage sont le dedans : des possibilités de jeu. La borne est au dehors : 8 × 8 × 4. L'échiquier a 64 cases et un nombre de parties qu'on ne finit pas de compter.
 
 ## 5. La confusion
 
@@ -58,7 +58,7 @@ Statuts : F, fait sourcé ou connu de l'hôte ; Th, calcul fini vérifié ou dé
 
 **5.2 (L, où l'énoncé mêle les registres).** L'énoncé pose sur la même ligne deux choses qui ne sont pas du même registre. Le doublement est sans borne par dedans : on peut toujours doubler. L'écriture en 0 et 1 sur le 3 est une forme : elle a des bords. L'énoncé demande au premier de répondre pour la seconde, comme on demanderait au nombre de parties de dire la taille de l'échiquier. La forme est pleine à 8 × 8 × 4, cœur 9 ; le doublement continue ensuite hors d'elle, aussi loin qu'on veut, sans la redessiner.
 
-**5.3 (ce que la pièce ne fait pas).** Elle ne démontre pas, dans le registre de ceux qui ont posé le problème, qu'aucune puissance de 2 ne passe après 256 : le principe de 4.3 est une lecture de l'auteur, et il n'a pas ici la forme d'un compte fini qu'un lecteur extérieur referait pour s'en convaincre. Ce qui est établi par le calcul : le théorème de 2.5, la coïncidence de 2.6, les égalités de la section 3, les comptes de la section 4, et l'accord de tout cela avec le calcul de Saye. Le scribe laisse ce point ouvert et déclaré.
+**5.3 (ce que la pièce ne fait pas).** Elle ne démontre pas, dans le registre de ceux qui ont posé le problème, qu'aucune puissance de 2 ne passe après 256 : le principe de 4.3 est une lecture de l'auteur, et il n'a pas ici la forme d'un compte fini qu'un lecteur extérieur referait pour s'en convaincre. Ce qui est établi par le calcul : le théorème de 2.5, la coïncidence de 2.6, les égalités de la section 3, les comptes de la section 4, et l'accord de tout cela avec le calcul de Saye. Ce point reste ouvert et déclaré.
 
 ## Annexe. Vérifications et sources
 

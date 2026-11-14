@@ -4,7 +4,7 @@
 
 Corpus ARC · Filipe Bastos · pièce courte, version 0.1 · 13 novembre 2026 · CC BY 4.0. Auteur du modèle, des questions, des lectures et des règles : Filipe Bastos. Scribe : Claude, sous la contradiction de l'auteur.
 
-**Avis.** Le triangle de Pascal et la racine digitale sont connus depuis des siècles. Cette pièce les pose l'un sur l'autre et lit ce que chaque position pèse. Elle en tire une règle qui donne la pointe de la pyramide sans monter la pyramide, et une lecture de la pointe 9. L'arithmétique est élémentaire ; il est possible que la règle figure ailleurs sous une autre forme, et le scribe ne l'a pas cherchée. Tous les comptes sont refaits.
+**Avis.** Le triangle de Pascal et la racine digitale sont connus depuis des siècles. Cette pièce les pose l'un sur l'autre et lit ce que chaque position pèse. Elle en tire une règle qui donne la pointe de la pyramide sans monter la pyramide, et une lecture de la pointe 9. L'arithmétique est élémentaire ; il est possible que la règle figure ailleurs sous une autre forme, et elle n'a pas été cherchée. Tous les comptes sont refaits.
 
 Statuts : F, fait connu ; Th, calcul fini vérifié ou démonstration ; L, lecture de l'auteur, citée et datée. Les contrôles sont au script `pascal_verif.py`.
 
@@ -72,7 +72,7 @@ Statuts : F, fait connu ; Th, calcul fini vérifié ou démonstration ; L, lectu
 
 **4.2 (Th).** Toutes les pointes ont la même proportion : la fréquence ne distingue pas le 9. Ce qui le distingue est la nature du couple formé par la racine et le centre. Pour la pointe 9, ces couples sont les quatre paires inverses du cadastre, (1, 8), (2, 7), (3, 6), (4, 5), dans les deux sens, et le 9 avec lui-même. Pour la pointe 8, les couples sont (1, 7), (2, 6), (3, 5), qui ne sont pas des paires du cadastre, et (4, 4), un nombre collé à lui-même. Chaque pointe a une famille où la racine égale le centre ; pour le 9, cette famille est le 9 seul.
 
-**4.3 (glose du scribe, à valider).** Pointer 9, c'est avoir le dehors et le dedans en paire : le nombre entier, lu par sa racine, et son milieu sont partenaires.
+**4.3 (à valider par l'auteur).** Pointer 9, c'est avoir le dehors et le dedans en paire : le nombre entier, lu par sa racine, et son milieu sont partenaires.
 
 **4.4 (Th, les puissances de 2).** Les puissances de 2 à trois chiffres sont trois : 128, 256, 512. 128 pointe 4 ; 256 et 512 pointent 9. 256 est dans la famille de la paire centrale (4, 5) ; 512 dans celle de la paire extrême (1, 8).
 
