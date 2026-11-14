@@ -33,5 +33,9 @@ ok("V6 mesure de Li et coll. : 1,01 dB sous la borne, soit 20,7 % en variance",a
 if len(sys.argv)>1:
     t=open(sys.argv[1],encoding='utf-8').read()
     ok("V7 typographie de la source : aucun tiret long ni moyen",'—' not in t and '–' not in t)
+_G,_c=6.674e-11,2.998e8
+_e=[(_G*M/(3*_c*_c),_G*M/(3*_c*_c)/Rr) for M,Rr in ((5.972e24,6.371e6),(1.989e30,6.957e8))]
+ok("V6 bis rayon en excès GM/(3c²) : 1,48 mm pour la Terre (2,3 × 10⁻¹⁰), 492 m pour le Soleil (7,1 × 10⁻⁷)",
+   abs(_e[0][0]*1000-1.48)<0.01 and abs(_e[1][0]-492)<1 and abs(_e[0][1]/2.3e-10-1)<0.02 and abs(_e[1][1]/7.1e-7-1)<0.02,f"{_e[0][0]*1000:.3f} mm ; {_e[1][0]:.1f} m")
 for n,k,v in R: print(('conforme : ' if k else 'ÉCHEC : ')+n+(' ['+v+']' if v else ''))
 assert all(k for _,k,_ in R); print(len(R),'contrôles, tous conformes')

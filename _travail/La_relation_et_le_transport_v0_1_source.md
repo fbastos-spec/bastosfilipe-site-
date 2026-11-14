@@ -2,7 +2,7 @@
 
 **Relativité générale et mécanique quantique : deux confusions à retirer, une paire à lire**
 
-Corpus ARC · Filipe Bastos · pièce courte, version 0.1 · 13 novembre 2026 · CC BY 4.0. Auteur du modèle, des questions, des lectures et des règles : Filipe Bastos. Scribe : Claude, sous la contradiction de l'auteur.
+Corpus ARC · Filipe Bastos · pièce courte, version 0.1 · 13 novembre 2026, corrigée le 14 novembre 2026 (6.2 bis) · CC BY 4.0. Auteur du modèle, des questions, des lectures et des règles : Filipe Bastos. Scribe : Claude, sous la contradiction de l'auteur.
 
 **Avis.** Cette pièce ne donne pas une théorie de la gravité quantique. Elle dit pourquoi les deux théories s'opposent tant qu'on ne les corrige pas, nomme la confusion de chacune, et montre ce qui reste une fois les confusions retirées : deux lectures qui marchent côte à côte et se tiennent comme une paire. Du côté quantique, le corpus a des théorèmes et une mesure. Du côté de la relativité, il a un chantier, et la pièce le dit.
 
@@ -54,13 +54,15 @@ Statuts : F, fait mesuré ou connu ; Th, calcul refait ou démonstration ; L, le
 
 **6.2 (Chantier, du côté de la relativité).** Le corpus n'a qu'un énoncé : la relativité générale lue en gradients de densité plutôt qu'en courbure induite par la masse, avec la correspondance entre ces gradients et la métrique encore à établir (Volume 7, chapitre 12, É 12.21). Tant que cette correspondance n'est pas faite, la moitié « transport » de la paire est une lecture, et non un compte.
 
+**6.2 bis (correction du 14 novembre 2026).** « Le corpus n'a qu'un énoncé » était inexact. Le Registre porte depuis le 9 novembre 2026 un second énoncé (Registre v1.6, R.153 bis ; Volume 3, chapitre 11, R.153) : « On a dit que l'espace se courbe ; c'est le cercle qui est tenu. » Autour d'une masse M, le rayon mesuré dépasse le tour divisé par 2π d'une longueur GM/(3c²) (F ; Feynman, *Lectures*, II, 42, cité par le Registre) : 1,48 mm pour la Terre et 492 m pour le Soleil, soit des proportions de 2,3 × 10⁻¹⁰ et de 7,1 × 10⁻⁷ (Th, refaites). La courbure y est lue comme l'ouverture du cercle relative à sa liaison (L), avec son critère de chute : un cercle mesuré dont le rapport du tour au diamètre ne dépendrait pas de ce qui le tient. Le côté « transport » a donc deux énoncés, dont un avec ses nombres ; la correspondance générale avec la métrique reste en chantier.
+
 **6.3 (ce qui trancherait).** Une grandeur que ni l'une ni l'autre ne donne seule et que la paire donnerait. Les prédictions déposées du corpus vont dans ce sens : les courbes de rotation des galaxies sans paramètre libre, et l'organisation du dipôle cosmique. Elles sont datées, avec leurs critères de chute.
 
 **6.4 (ce que la pièce ne fait pas).** Elle ne dérive pas les équations d'Einstein. Elle ne quantifie pas la gravité. Elle ne dit pas ce qui se passe à l'échelle de Planck. Elle dit où est la confusion de chacune, et ce qu'il faudrait compter pour que l'harmonie soit un résultat.
 
 ## Annexe. Vérifications et sources
 
-Script `rq_verif.py` (Python 3, bibliothèque standard seule). Six contrôles sur les calculs, tous conformes : le décalage des horloges en orbite ; l'avance du périhélie de Mercure ; les bornes 2 et 2√2 ; l'absence de signal ; la paire et le demi ; la conversion de la mesure de novembre. Un septième contrôle porte sur la typographie de la source.
+Script `rq_verif.py` (Python 3, bibliothèque standard seule). Sept contrôles sur les calculs, tous conformes : le rayon en excès autour de la Terre et du Soleil (ajout du 14 novembre 2026) ; le décalage des horloges en orbite ; l'avance du périhélie de Mercure ; les bornes 2 et 2√2 ; l'absence de signal ; la paire et le demi ; la conversion de la mesure de novembre. Un huitième contrôle porte sur la typographie de la source.
 
 Non recontrôlé à la source : les dates et auteurs des expériences de Bell, Aspect et Hensen, et l'article de 1935, donnés de mémoire.
 
