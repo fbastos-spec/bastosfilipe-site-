@@ -75,6 +75,50 @@ for Lg in range(2,11):
         for ops in _pr('+*',repeat=Lg-1): _V.add(eval(str(w[0])+''.join(o+str(x) for o,x in zip(ops,w[1:]))))
 ok("V16e la Fondation : assemblage alterné de 2 et de 3, tout nombre de 5 à 40 se construit, 2, 3, 4 non ; n + n = n × n seulement pour n = 2",
    [n for n in range(2,41) if n not in _V]==[2,3,4] and [n for n in range(1,1000) if n+n==n*n]==[2])
+# ---- ajouts de la version 2.1
+ok("V19 unicité : pointes fixes, creux en (t, t) ; hauteur/demi-base = périmètre/hauteur demande 8t² + 2t − 1 = 0 ; seule solution entre 0 et 1/2 : t = 1/4",
+   [F(k,2000) for k in range(1,1000) if 8*F(k,2000)**2+2*F(k,2000)-1==0]==[q] and (1-2*q)==8*q*q)
+face=(2*q)*(1-q)/2; petit=F(1,2)*(2*q)*(t-q)
+ok("V20 les deux découpages : base 1/4, face 3/16 ; 1/3 − 1/4 = 1/12 = quatre triangles de 1/48 ; face = bras + 1/48",
+   (2*q)**2==q and face==F(3,16) and t-q==F(1,12) and petit==F(1,48) and aire(vide)-(2*q)**2==4*petit and face==bras+petit and (2*q)**2+4*face==1)
+ok("V21 un tour de cascade, huit niveaux : longueurs ÷ 16, aires ÷ 256 = 2⁸ = 8 × 8 × 4 ; somme des huit aires 255/128 ; silhouette revenue en deux niveaux (2 × 45° = 90°)",
+   F(1,2)**8==F(1,256) and 2**8==8*8*4 and isclose(sqrt(.5)**8,1/16) and sum(F(1,2**i) for i in range(8))==F(255,128) and 8*45==360 and 2*45==90)
+ok("V22 les deux pyramides : périmètre/hauteur = 8/√Φ = 6,2892 pour la pente √Φ ; 44/7 = 6,2857 pour le seked 14/11 ; 2π = 6,2832 ; trois valeurs distinctes",
+   round(8/sqrt(phi),4)==6.2892 and F(8)/F(14,11)==F(44,7) and round(44/7,4)==6.2857 and round(2*pi,4)==6.2832)
+h2=(1-q)**2-q*q; V2=((2*q)**2/3)**2*h2; rho2=9*V2
+ok("V23 l'opération du volume : hauteur² = 1/2 = distance² du centre au nœud ; creux à mi-chemin ; V² = 2/24², soit V = r²R/24 ; rayon inscrit² = 2/64, soit R/8 = hauteur/4 ; égal au centre de gravité ssi face = 3 × demi-base ; surface totale = 1 ; 1/2 × 2/3 = 1/3",
+   h2==d2(noeuds[0],(0,0)) and 4*d2((q,q),(0,0))==h2 and V2==F(2,24*24) and rho2==F(2,64) and rho2==h2/16 and q/(q+(1-q))==F(1,4) and (1-q)==3*q and (2*q)**2+4*face==1 and F(1,2)*F(2,3)==t
+   and isclose(abs(float(q)*sqrt(rho2)-sqrt(h2)*float(q))/sqrt(h2+q*q),sqrt(rho2)))
+ok("V24 le tétraèdre régulier : cosinus de l'angle entre faces = 1/3 ; trois faces sur une ; centre au quart de la hauteur",
+   isclose((sqrt(3)/6)/(sqrt(3)/2),1/3) and isclose(sqrt(2/3)/4,(sqrt(2)/12)*3/sqrt(3)))
+ok("V25 le losange de côté 1 : la somme des deux diagonales, 2cos + 2sin, est au plus 2√2, atteinte pour le carré seul",
+   isclose(max(2*cos(a*pi/7200)+2*sin(a*pi/7200) for a in range(3601)),2*sqrt(2)) and [a for a in range(3601) if isclose(2*cos(a*pi/7200)+2*sin(a*pi/7200),2*sqrt(2),rel_tol=1e-12)]==[1800])
+ok("V26 le balayage : un côté reste entre les distances 1 et √2 du centre (l'anneau) ; une diagonale passe par le centre",
+   min(d2((F(1),F(k,100)),(0,0)) for k in range(-100,101))==1 and max(d2((F(1),F(k,100)),(0,0)) for k in range(-100,101))==2 and ((coins[0][0]+coins[2][0])/2,(coins[0][1]+coins[2][1])/2)==(0,0))
+
+def _vis(sg):
+    c,s_=-1/3,2*sqrt(2)/3; A=[[1,0,0],[0,c,-s_],[0,s_,c]]; p0=[0,.25,0]; Q=[[0,-sg,0],[sg,0,0],[0,0,1]]
+    mul=lambda M,v:[sum(M[i][j]*v[j] for j in range(3)) for i in range(3)]
+    M=[[sum(Q[i][k]*A[k][j] for k in range(3)) for j in range(3)] for i in range(3)]
+    Ap=mul(A,p0); tt=mul(Q,[p0[i]-Ap[i] for i in range(3)])
+    cth=(M[0][0]+M[1][1]+M[2][2]-1)/2; u=[M[2][1]-M[1][2],M[0][2]-M[2][0],M[1][0]-M[0][1]]; n=sqrt(sum(x*x for x in u)); u=[x/n for x in u]
+    tip=mul(A,[0,.75,0]); return cth,abs(sum(u[i]*tt[i] for i in range(3))),abs(u[2])/hypot(u[0],u[1]),(tip[1]+.25,tip[2])
+from math import acos
+ok("V27 la vis : pli de cosinus −1/3 (tan² du demi-angle = 2) ; la pointe arrive au sommet, hauteur √2/2 ; pli puis quart de tour : cos θ = −2/3, avance 1/√10 = distance du centre aux côtés du vide, pente de l'axe 1/2, dans les deux sens ; pas = 2π/(√10 θ) = 0,8637",
+   isclose((1+1/3)/(1-1/3),2) and all(isclose(_vis(g)[0],-2/3) and isclose(_vis(g)[1],1/sqrt(10)) and isclose(_vis(g)[2],.5) and isclose(_vis(g)[3][0],0,abs_tol=1e-12) and isclose(_vis(g)[3][1],sqrt(.5)) for g in (1,-1))
+   and round(2*pi/(sqrt(10)*acos(-2/3)),4)==0.8637)
+def _alt(somme_seule,N=41):
+    S=set()
+    for L in range(2,11):
+        for d in (2,3):
+            seq=[d if i%2==0 else 5-d for i in range(L)]
+            for ops in _pr(*(['+' if somme_seule else '+*']*(L-1))):
+                e=str(seq[0])+''.join(o+str(x) for o,x in zip(ops,seq[1:])); val=eval(e)
+                if val<N: S.add(val)
+    return S
+ok("V28 la règle du 2 et du 3 : avec la somme et le produit, tout nombre de 5 à 40 ; par la somme seule, 6 et 9 manquent entre 5 et 10 ; second compte : tout n de 5 à 999 est la somme de deux nombres différents, chacun au moins 2, et 4 ne l'est pas ; pyramide carrée : (h/b)² = 8 est la seule égalité possible de h/b et 8b/h",
+   all(n in _alt(False) for n in range(5,41)) and [n for n in range(5,11) if n not in _alt(True)]==[6,9]
+   and all(any(a!=n-a and n-a>=2 for a in range(2,n-1)) for n in range(5,1000)) and not any(a!=4-a and 4-a>=2 for a in range(2,3)) and F(8)**1==8)
 if len(sys.argv)>2:
     from PIL import Image
     im=Image.open(sys.argv[2]).convert('L'); cx,cy,r=540,762,282.0

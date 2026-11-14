@@ -188,5 +188,5 @@
 <polygon points="-138.93,143.87 -143.87,-138.93 138.93,-143.87 143.87,138.93" fill="none" stroke="#1a1a1a" stroke-width="0.28"/>
 <polygon points="-140.18,142.65 -142.65,-140.18 140.18,-142.65 142.65,140.18" fill="none" stroke="#1a1a1a" stroke-width="0.28"/>
 </g>
-<text x="750" y="490" text-anchor="middle" font-size="16" fill="#1a1a1a">180 positions de la diagonale : aucun cercle n'est tracé</text>
+<text x="750" y="490" text-anchor="middle" font-size="16" fill="#1a1a1a">Le carré qui tourne : ses côtés tracent l'anneau</text>
 </svg>

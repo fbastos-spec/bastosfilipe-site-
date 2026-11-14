@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 470" font-family="Helvetica,Arial,sans-serif">
+<rect width="1000" height="470" fill="#fff"/>
+<g transform="translate(250,215)"><polygon points="170.00,0.00 42.50,-42.50 0.00,-170.00 -42.50,-42.50 -170.00,0.00 -42.50,42.50 0.00,170.00 42.50,42.50" fill="#e9eef4" stroke="#1a1a1a" stroke-width="1.4"/><polygon points="56.67,0.00 42.50,-42.50 0.00,-56.67 -42.50,-42.50 -56.67,0.00 -42.50,42.50 0.00,56.67 42.50,42.50" fill="#f3e3b0" stroke="#9a7b1c" stroke-width="1.2"/></g>
+<g transform="translate(750,215)"><polygon points="170.00,0.00 42.50,-42.50 0.00,-170.00 -42.50,-42.50 -170.00,0.00 -42.50,42.50 0.00,170.00 42.50,42.50" fill="#e9eef4" stroke="#1a1a1a" stroke-width="1.4"/><polygon points="42.50,-42.50 56.67,0.00 42.50,42.50" fill="#b03a2e" stroke="none"/><polygon points="42.50,-42.50 0.00,-56.67 -42.50,-42.50" fill="#b03a2e" stroke="none"/><polygon points="-42.50,-42.50 -56.67,0.00 -42.50,42.50" fill="#b03a2e" stroke="none"/><polygon points="-42.50,42.50 0.00,56.67 42.50,42.50" fill="#b03a2e" stroke="none"/><polygon points="42.50,-42.50 -42.50,-42.50 -42.50,42.50 42.50,42.50" fill="#f3e3b0" stroke="#9a7b1c" stroke-width="1.2"/></g>
+<text x="250" y="440" text-anchor="middle" font-size="16" fill="#1a1a1a">À plat : le vide 1/3 et quatre bras de 1/6</text>
+<text x="750" y="440" text-anchor="middle" font-size="16" fill="#1a1a1a">Pour le pli : la base 1/4, quatre faces de 3/16 ; en rouge, 1/48</text>
+</svg>
