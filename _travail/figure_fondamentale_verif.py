@@ -155,6 +155,12 @@ ok("V33 demi-angles : le quart de tour quatre fois donne −1 ; pli puis quart d
    and isclose(_tan(acos(1/sqrt(3))),sqrt(2)) and isclose(cos(2*acos(1/sqrt(3))),-1/3) and isclose(_asin(1/sqrt(5))+_asin(1/sqrt(10)),pi/4) and isclose(_tan(_asin(1/sqrt(5))),.5) and isclose(_tan(_asin(1/sqrt(10))),1/3)
    and isclose(2*sqrt(2)/2,sqrt(2)) and isclose(4/(2*sqrt(2)),sqrt(2))
    and [n for n in range(5,200) if n not in _som]==[n for n in range(5,200) if n%5 in (1,4)] and all(n in _tout for n in range(5,201)))
+from fractions import Fraction as _Fr
+_c=_Fr(-2,3); _r2=_Fr(27,100); _h2=_Fr(1,10); _cs={1:_c,2:2*_c*_c-1,3:4*_c**3-3*_c}
+_tr={k:2*_r2*(1-_cs[k]) for k in (1,2,3)}; _av={k:k*k*_h2 for k in (1,2,3)}
+ok("V34 les arêtes de l'hélice partagées en ce qui tourne et ce qui avance (carrés, sur 10) : 9 + 1, 6 + 4, 1 + 9 ; sur les six arêtes d'un tétraèdre, 4 tournent et 2 avancent ; les trois conditions de distance 1 forcent cos −2/3 et avance² 1/10",
+   [(_tr[k]*10,_av[k]*10) for k in (1,2,3)]==[(9,1),(6,4),(1,9)] and 3*_tr[1]+2*_tr[2]+_tr[3]==4 and 3*_av[1]+2*_av[2]+_av[3]==2
+   and _Fr(3,2)/(1-_c)==_Fr(9,10) and -3*(2*_c+4)==-8 and 4*6==24 and 4+6==10)
 if len(sys.argv)>2:
     from PIL import Image
     im=Image.open(sys.argv[2]).convert('L'); cx,cy,r=540,762,282.0
