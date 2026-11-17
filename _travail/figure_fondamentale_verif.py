@@ -161,6 +161,20 @@ _tr={k:2*_r2*(1-_cs[k]) for k in (1,2,3)}; _av={k:k*k*_h2 for k in (1,2,3)}
 ok("V34 les arêtes de l'hélice partagées en ce qui tourne et ce qui avance (carrés, sur 10) : 9 + 1, 6 + 4, 1 + 9 ; sur les six arêtes d'un tétraèdre, 4 tournent et 2 avancent ; les trois conditions de distance 1 forcent cos −2/3 et avance² 1/10",
    [(_tr[k]*10,_av[k]*10) for k in (1,2,3)]==[(9,1),(6,4),(1,9)] and 3*_tr[1]+2*_tr[2]+_tr[3]==4 and 3*_av[1]+2*_av[2]+_av[3]==2
    and _Fr(3,2)/(1-_c)==_Fr(9,10) and -3*(2*_c+4)==-8 and 4*6==24 and 4+6==10)
+_dr=lambda n:1+(n-1)%9
+import cmath as _cm
+_z=lambda u:_cm.exp(2j*_cm.pi*u)
+def _suivi(tours,N=2000):
+    r=1+0j
+    for i in range(1,N+1):
+        c=_cm.sqrt(_z(tours*i/N)); r=c if abs(c-r)<abs(-c-r) else -c
+    return r
+ok("V35 la position et sa paire : deux points opposés ont le même carré ; les directions 1/8 et 9/8 coïncident et leurs moitiés 1/16 et 9/16 sont opposées ; la racine suivie vaut −1 après un tour du carré et +1 après deux ; pas 1 + i : puissances 4 et 8 = −4 et 16, et pour le carré 16 et 256",
+   all(abs(_z(u)**2-_z(u+0.5)**2)<1e-12 for u in (0.125,0.3,0.71)) and abs(_z(1/8)-_z(9/8))<1e-12 and abs(_z(1/16)+_z(9/16))<1e-12
+   and abs(_suivi(1)+1)<1e-9 and abs(_suivi(2)-1)<1e-9 and (1+1j)**4==-4 and (1+1j)**8==16 and (2j)**4==16 and (2j)**8==256 and abs(abs(1+1j)-2**0.5)<1e-15)
+ok("V36 le 4 et le 7 : racines de 4, 16, 256, 65 536 = 4, 7, 4, 7 ; puissances de 4 : 4, 7, 1 ; de 7 : 7, 4, 1 ; 22 de racine 4, 28 de racine 1, écart 6 ; 22/7 = (4 + 7)/3,5 ; 22/7 − π = 0,0013",
+   [_dr(n) for n in (4,16,256,65536)]==[4,7,4,7] and [_dr(4**k) for k in range(1,7)]==[4,7,1,4,7,1] and [_dr(7**k) for k in range(1,7)]==[7,4,1,7,4,1]
+   and _dr(22)==4 and _dr(28)==1 and 28-22==6 and F(4+7)/F(7,2)==F(22,7) and round(22/7-3.141592653589793,4)==0.0013)
 if len(sys.argv)>2:
     from PIL import Image
     im=Image.open(sys.argv[2]).convert('L'); cx,cy,r=540,762,282.0
