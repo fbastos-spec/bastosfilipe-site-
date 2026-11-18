@@ -77,8 +77,39 @@ ok("V19 heptagone : cos(2π/7) est racine de 8x³ + 4x² − 4x − 1",abs(8*c**
 cote,app=2*sin(pi/7),sqrt(3)/2
 ok("V20 heptagone approché par la moitié du côté du triangle inscrit : écart 0,2 % ; sept reports laissent moins d'un degré",
    round(100*(cote-app)/cote,1)==0.2 and 0<360-7*2*asin(app/2)*180/pi<1)
+# --- ajouts de la version 0.2 (18 novembre 2026)
+import math
+from fractions import Fraction as _F
+def _vol(a,b,c,d):
+    m=[[b[i]-a[i] for i in range(3)],[c[i]-a[i] for i in range(3)],[d[i]-a[i] for i in range(3)]]
+    return _F(abs(m[0][0]*(m[1][1]*m[2][2]-m[1][2]*m[2][1])-m[0][1]*(m[1][0]*m[2][2]-m[1][2]*m[2][0])+m[0][2]*(m[1][0]*m[2][1]-m[1][1]*m[2][0])))/6
+_O,_A,_B,_C,_M=(0,0,0),(1,0,0),(0,1,0),(0,0,1),(_F(1,2),)*3
+# sommets de la région {x, y, z ≥ 0 ; x+y ≤ 1 ; y+z ≤ 1 ; z+x ≤ 1} : intersections de trois des six plans, en fractions exactes
+from itertools import combinations as _comb
+_PL=[((1,0,0),0),((0,1,0),0),((0,0,1),0),((1,1,0),1),((0,1,1),1),((1,0,1),1)]
+def _det3(m): return m[0][0]*(m[1][1]*m[2][2]-m[1][2]*m[2][1])-m[0][1]*(m[1][0]*m[2][2]-m[1][2]*m[2][0])+m[0][2]*(m[1][0]*m[2][1]-m[1][1]*m[2][0])
+_S=set()
+for _t in _comb(_PL,3):
+    _m=[list(p[0]) for p in _t]; _d=_det3(_m)
+    if _d==0: continue
+    _b=[p[1] for p in _t]; _p=[]
+    for _k in range(3):
+        _mk=[r[:] for r in _m]
+        for _r in range(3): _mk[_r][_k]=_b[_r]
+        _p.append(_F(_det3(_mk),_d))
+    _x,_y,_z=_p
+    if min(_p)>=0 and _x+_y<=1 and _y+_z<=1 and _z+_x<=1: _S.add(tuple(_p))
+ok("V22 solide alterné, sommets donnés : coin (0,0,0),(1,0,0),(0,1,0),(0,0,1) = 1/6 ; coiffe sur la même base, pointe (1/2,1/2,1/2) = 1/12 ; la région des trois sommes par paires au plus égales à 1 a exactement ces cinq sommets, donc 1/6 + 1/12 = 1/4",
+   _vol(_O,_A,_B,_C)==_F(1,6) and _vol(_A,_B,_C,_M)==_F(1,12) and _S=={_O,_A,_B,_C,_M})
+_T=[(1,1,1),(1,-1,-1),(-1,1,-1),(-1,-1,1)]
+ok("V23 centre du tétraèdre régulier : à √6/4 = 0,612 de l'arête de chacun des quatre sommets",
+   all(abs(math.sqrt(sum(t*t for t in p))/math.sqrt(8)-math.sqrt(6)/4)<1e-12 for p in _T))
+_z3=1.2020569031595943
+_r=lambda N:_z3-sum(1/n**3 for n in range(1,N+1))
+ok("V24 somme ordinaire des inverses des cubes : il manque 5,0 × 10⁻⁷ à 1 000 termes, 1,0 × 10⁻⁶ à 700 ; le rapport centre-sommets sur centre-côtés est strictement entre 1 et 2 de 4 à 2 000 côtés",
+   abs(_r(1000)/5.0e-7-1)<0.01 and abs(_r(700)/1.0e-6-1)<0.03 and all(1<1/math.cos(math.pi/n)<2 for n in range(4,2001)))
 if len(sys.argv)>1:
     t=open(sys.argv[1],encoding='utf-8').read()
-    ok("V21 typographie de la source : aucun tiret long ni moyen",'—' not in t and '–' not in t)
+    ok("V25 typographie de la source : aucun tiret long ni moyen",'—' not in t and '–' not in t)
 for n,k in R: print(('conforme : ' if k else 'ÉCHEC : ')+n)
 assert all(k for _,k in R); print(len(R),'contrôles, tous conformes')

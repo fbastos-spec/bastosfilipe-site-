@@ -53,8 +53,15 @@ check(f"|zeta(rho)| et |eta(rho)| sous 10^-10 ; |1 - 2^(1-rho)| = {abs(den):.2f}
 
 dire("5. Sur la droite, l'inverse et le miroir coincident : Lambda est reelle")
 r_droite = max(abs(Lam(0.5 + 1j * t).imag) / abs(Lam(0.5 + 1j * t).real) for t in (5.0, 20.0, 33.0))
-r_hors = min(abs(Lam(0.7 + 1j * t).imag) / abs(Lam(0.7 + 1j * t).real) for t in (5.0, 20.0, 33.0))
-check(f"|Im/Re| sur la droite : sous 10^-12 ; a 0,7 : au moins {r_hors:.1e}", r_droite < 1e-12 and r_hors > 1e-2)
+ts = np.arange(0.5, 40.0, 0.002); vals = np.array([Lam(0.7 + 1j * t) for t in ts])
+zr = [float(ts[k]) for k in range(len(ts) - 1) if vals.real[k] * vals.real[k + 1] < 0]
+zi = [float(ts[k]) for k in range(len(ts) - 1) if vals.imag[k] * vals.imag[k + 1] < 0]
+ecart = min(abs(a - b) for a in zr for b in zi)
+r3 = [abs(Lam(0.7 + 1j * t).imag) / abs(Lam(0.7 + 1j * t).real) for t in (5.0, 20.0, 33.0)]
+check(f"|Im/Re| sur la droite : sous 10^-12 ; a 0,7, aux hauteurs 5, 20 et 33 : {r3[0]:.2f}, {r3[1]:.2f}, {r3[2]:.2f}", r_droite < 1e-12 and min(r3) > 0.1)
+check(f"a 0,7, hauteurs de 0,5 a 40 (pas 0,002) : la partie reelle s'annule {len(zr)} fois ({', '.join(f'{t:.2f}' for t in zr)}), "
+      f"la partie imaginaire {len(zi)} fois ({', '.join(f'{t:.2f}' for t in zi)}), jamais a la meme hauteur : ecart minimal {ecart:.2f}",
+      len(zr) == 6 and len(zi) == 6 and ecart > 0.5)
 check("equation fonctionnelle Lambda(s) = Lambda(1 - s) a 10^-12 pres (s = 0,3 + 2i)",
       abs(Lam(0.3 + 2j) - Lam(0.7 - 2j)) / abs(Lam(0.3 + 2j)) < 1e-12)
 

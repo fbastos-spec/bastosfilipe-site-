@@ -1,4 +1,4 @@
-# Vérifications de Fourier est un ARC v0.6 (bibliothèque standard seulement)
+# Vérifications de Fourier est un ARC v0.7 (bibliothèque standard seulement)
 import sys, math
 from fractions import Fraction as Fr
 out = []
@@ -21,6 +21,10 @@ ok(f"Th 3.1 : énergies sur le cercle fermé = {','.join(map(str, E))} (carrés 
    E == [1, 4, 9, 16, 25] and all(abs(math.cos(k * 2 * math.pi) - 1) < 1e-12 for k in range(1, 6)))
 prods = [s * (1 / (2 * s)) for s in (0.1, 1, 10)]
 ok("Th 3.2 : produit des largeurs Δx·Δk = 0.5 pour σ = 0.1, 1, 10", all(abs(p - .5) < 1e-12 for p in prods))
+import math as _m
+ok("Th 3.2, précision v0.7 : le même minimum vaut 1/(4π) = 0,0796 quand les tours sont comptés en cycles (0,5 / 2π)", abs(.5 / (2 * _m.pi) - 1 / (4 * _m.pi)) < 1e-15 and round(1 / (4 * _m.pi), 4) == 0.0796)
+_dr = lambda n: 1 + (n - 1) % 9
+ok("Th 2.1, précision v0.7 : les rangées ×3 et ×6 ne visitent que 3 positions, les six autres en visitent 9", [len({_dr(a * k) for k in range(1, 10)}) for a in range(1, 9)] == [9, 9, 3, 9, 9, 3, 9, 9])
 # Th 3.4 bis : le tarif des tours donne la courbe de Planck
 charge = lambda m, q: m / (q ** -m - 1)
 direct = lambda m, q, N=6000: sum(n * m * q ** (m * n) for n in range(N)) / sum(q ** (m * n) for n in range(N))

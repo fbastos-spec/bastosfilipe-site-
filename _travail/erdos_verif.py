@@ -45,6 +45,12 @@ def disque(R_, tri):
 n4, u4 = disque(60, False); n6, u6 = disque(60, True)
 ok("V9 au côté de la grille : la grille carrée fait près de 2 paires par point, la grille de triangles près de 3 (disque de rayon 60)",
    1.95 < u4 / n4 < 2 and 2.93 < u6 / n6 < 3)
+# --- ajout de la version 0.2 (18 novembre 2026)
+def _ecr(n, zero=False):
+    lo = 0 if zero else 1
+    return sorted((a, b) for a in range(lo, int(n ** 0.5) + 1) for b in range(a + 1, int(n ** 0.5) + 1) if a * a + b * b == n)
+ok("V9 bis rotors comme sommes de deux carrés : 5 = 1² + 2², 13 = 2² + 3², 17 = 1² + 4², 29 = 2² + 5² ; aucun nombre sous 65 n'a deux écritures en carrés différents et non nuls ; avec le zéro permis, 25 en a deux",
+   [_ecr(p) for p in (5, 13, 17, 29)] == [[(1, 2)], [(2, 3)], [(1, 4)], [(2, 5)]] and all(len(_ecr(n)) < 2 for n in range(1, 65)) and _ecr(65) == [(1, 8), (4, 7)] and _ecr(25, True) == [(0, 5), (3, 4)])
 if len(sys.argv) > 1:
     src = open(sys.argv[1], encoding="utf-8").read()
     ok("V10 aucun tiret cadratin ni demi-cadratin dans la source", "—" not in src and "–" not in src)

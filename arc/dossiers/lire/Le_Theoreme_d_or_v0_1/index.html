@@ -30,6 +30,7 @@
 <p style="font-size:.85rem;margin:0 0 6px"><a href="/bibliotheque-des-documents/">Bibliothèque des documents</a> / Dossier</p>
 <h1 class="entry-title">Le théorème d'or</h1>
 <p class="d-note">Version texte du dossier, pour la lecture en ligne, la recherche et les moteurs de réponse. Le PDF fait foi pour la mise en page et les formules : <a href="/arc/dossiers/Le_Theoreme_d_or_v0_1.pdf">télécharger le PDF</a>. Le script de vérification est à côté : <a href="/arc/dossiers/or_verif.py">or_verif.py</a>. Filipe Bastos · Corpus ARC · CC BY 4.0.</p>
+<p class="d-note"><b>Précisions du 18 novembre 2026 : portée du théorème 2.1 et critère de chute de la section 6.</b> <a href="#ajout-2026-11-18">Voir en fin de page</a>. Script : <a href="/arc/dossiers/precisions_2026-11-18_verif.py">precisions_2026-11-18_verif.py</a>.</p>
 
 <p class="sub">La loi des grands nombres est la loi des inverses qui se bouclent</p>
 <div class="meta"><p>Filipe Bastos</p><p>Corpus ARC (Architecture de la Cohérence Relationnelle), pièce courte, version 0.1</p><p>9 novembre 2026</p></div>
@@ -76,6 +77,10 @@ Puissances de 5 en racines : 5,7,8,4,2,1 ; période 6 ; axe jamais touché   OK
 Typographie : aucun tiret cadratin   OK</code></pre>
 <h2>Annexe C. Sources</h2>
 <p>J. Bernoulli, <i>Ars conjectandi</i>, Bâle, 1713, pars quarta ; S.-D. Poisson, <i>Recherches sur la probabilité des jugements</i>, 1837 (le nom « loi des grands nombres », 1835) ; P. L. Tchebychev, « Des valeurs moyennes », <i>J. Math. Pures Appl.</i>, 1867 ; É. Borel, <i>Rend. Circ. Mat. Palermo</i> 27, 1909 ; A. N. Kolmogorov, <i>Grundbegriffe der Wahrscheinlichkeitsrechnung</i>, 1933. M. Born, <i>Z. Phys.</i> 37, 1926 ; N. Bohr, <i>Nature</i> 121, 1928 ; H. Everett, <i>Rev. Mod. Phys.</i> 29, 1957 ; C. A. Fuchs, « QBism », 2010. Corpus ARC : Le Lexique v0.2 (hasard, mesure, probabilité ; entrées 24 et 25) ; La Cascade et la Cloche v0.2 ; Les Tables Natives v0.1 ; La congruence des paires v0.2 ; Tsirelson Without Hilbert v4.1 ; Qui a mis le chat dans la boîte v0.2 ; L'observateur est la confusion v0.3.</p>
+<h2 id="ajout-2026-11-18">Précisions du 18 novembre 2026</h2>
+<p>Deux précisions sur ce que le théorème 2.1 porte et sur le critère de chute. Aucun compte n'est changé ; rien n'est effacé du texte ci-dessus. Contrôle au script <code>precisions_2026-11-18_verif.py</code>, publié à côté.</p>
+<p><b>É 2.1 et É 2.2 : ce que l'identité démontre, et ce qu'elle ne démontre pas.</b> L'identité de Th 2.1 vaut pour toute suite finie : elle récrit l'écart au centre comme une somme sur les paires encore ouvertes. Elle ne démontre pas que cette somme tend vers zéro quand les tirages s'allongent. Cette tendance est la loi reçue de É 1.1 (Bernoulli, 1713), que la Lecture É 2.2 relit ; la section 5 dit de cette loi que la pièce « la garde ». Il est redit ici pour que le statut soit net : le théorème porte l'identité ; la fermeture des paires reste une Lecture.</p>
+<p><b>Section 6 : seule la seconde clause peut faire tomber la Lecture.</b> La première clause demande une suite où chaque position est tirée autant de fois que son inverse et où l'écart au centre 4,5 n'est pourtant pas nul. Le texte dit lui-même que Th 2.1 l'interdit : un tel cas n'existe pas, et cette clause ne met donc pas la Lecture à l'épreuve. Elle énonce le théorème. La clause qui mord est la seconde : une autre rangée que celle du 5 qui tresse, clôture comprise. Le balayage des neuf rangées est au build et n'en trouve aucune.</p>
 <p class="col">Modèle, questions, lectures et règles : Filipe Bastos. Scribe : Claude, sous la contradiction de l'auteur. Calculs, formulations et audits assistés par IA (ChatGPT, Gemini, DeepSeek, GLM), à sa demande. Corpus ARC, CC BY 4.0.</p>
 
 </div>

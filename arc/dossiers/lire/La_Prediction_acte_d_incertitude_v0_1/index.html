@@ -30,6 +30,7 @@
 <p style="font-size:.85rem;margin:0 0 6px"><a href="/bibliotheque-des-documents/">Bibliothèque des documents</a> / Dossier</p>
 <h1 class="entry-title">La Prédiction est un acte d'incertitude</h1>
 <p class="d-note">Version texte du dossier, pour la lecture en ligne, la recherche et les moteurs de réponse. Le PDF fait foi pour la mise en page et les formules : <a href="/arc/dossiers/La_Prediction_acte_d_incertitude_v0_1.pdf">télécharger le PDF</a>. Le script de vérification est à côté : <a href="/arc/dossiers/prediction_verif.py">prediction_verif.py</a>. Filipe Bastos · Corpus ARC · CC BY 4.0.</p>
+<p class="d-note"><b>Précisions du 18 novembre 2026 : portée des recalculs d'Ariane et de Lorenz (É 4.6, É 4.8).</b> <a href="#ajout-2026-11-18">Voir en fin de page</a>. Script : <a href="/arc/dossiers/precisions_2026-11-18_verif.py">precisions_2026-11-18_verif.py</a>.</p>
 
 <p class="sub">Le mécanisme refait après coup, forme forte de la preuve</p>
 <div class="meta"><p>Filipe Bastos</p><p>Corpus ARC (Architecture de la Cohérence Relationnelle), pièce courte, version 0.1</p><p>8 novembre 2026</p></div>
@@ -90,6 +91,11 @@ Lorenz    : écart initial 1.27e-04   OK
 Typographie : aucun tiret cadratin   OK</code></pre>
 <h2>Annexe C. Sources</h2>
 <p>GAO/IMTEC-92-26, <i>Patriot Missile Defense: Software Problem Led to System Failure at Dhahran, Saudi Arabia</i>, février 1992. J.-L. Lions et al., <i>Ariane 5, Flight 501 Failure, Report by the Inquiry Board</i>, Paris, 19 juillet 1996. <i>Toronto Star</i>, 29 novembre 1983, et <i>Wall Street Journal</i>, 8 novembre 1983, sur l'indice de la Bourse de Vancouver. E. N. Lorenz, « Deterministic Nonperiodic Flow », <i>Journal of the Atmospheric Sciences</i>, 20, 1963. R. P. Feynman, <i>Cargo Cult Science</i>, Caltech, 1974. K. Popper, <i>Logik der Forschung</i>, 1934 ; <i>Conjectures and Refutations</i>, 1963. T. S. Kuhn, <i>The Structure of Scientific Revolutions</i>, 1962. Corpus ARC : Les Données Contaminées v0.1 ; Fin de l'Approximation v3.4, Th 2.1 ; Le Code, II.4 ; Registre des Erreurs, R.16 ; Faire tomber ARC v2.0.</p>
+<h2 id="ajout-2026-11-18">Précisions du 18 novembre 2026</h2>
+<p>Deux des quatre recalculs de la section 4 portent moins loin que les deux autres ; la pièce le dit ici. Aucun compte n'est changé ; rien n'est effacé du texte ci-dessus.</p>
+<p><b>É 4.2 et É 4.4 : deux reçus refaits en nombres.</b> Pour le Patriot et pour l'indice de Vancouver, le mécanisme est recalculé jusqu'au nombre du reçu : 0,34 seconde, et l'ordre de l'écart de l'indice. Ces deux Th sont des reproductions.</p>
+<p><b>É 4.6 et É 4.8 : deux reçus refaits jusqu'au seuil seulement.</b> Pour Ariane, ce qui est calculé est le seuil : 2¹⁵ − 1 = 32 767, au-delà duquel le registre replie. Que la valeur du vol 501 ait passé ce seuil vers la trente-septième seconde, et que celle d'Ariane 4 soit restée en dessous, est repris du rapport Lions (É 4.5, Fait) ; la pièce ne recalcule pas cette valeur. Pour Lorenz, ce qui est calculé est l'écart de départ, 0,506127 − 0,506 = 0,000127. Le nombre de pas au bout duquel l'écart atteint la taille des variables n'est pas recalculé ici : il renvoie à la loi n_chaos = p / log₂ f, établie ailleurs dans le corpus. Le statut Th de ces deux énoncés couvre donc le seuil et l'écart de départ, pas la reproduction du reçu.</p>
+<p><b>Section 7 : ce que le critère de chute éprouve.</b> La thèse tombe si l'un des recalculs ne redonne pas son reçu. Cette clause mord en plein sur le Patriot et sur Vancouver ; sur Ariane et sur Lorenz elle ne mord que sur le seuil et sur l'écart de départ.</p>
 <p class="col">Modèle, questions, lectures et règles : Filipe Bastos. Scribe : Claude, sous la contradiction de l'auteur. Calculs, formulations et audits assistés par IA (ChatGPT, Gemini, DeepSeek, GLM), à sa demande. Corpus ARC, CC BY 4.0.</p>
 
 </div>

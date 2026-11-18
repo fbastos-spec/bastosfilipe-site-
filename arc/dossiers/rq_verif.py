@@ -9,7 +9,7 @@ c=299792458.0
 GM=3.986004418e14; Rt=6.371e6; r=2.6561e7
 grav=GM/c**2*(1/Rt-1/r)*86400e6          # microsecondes par jour, avance
 vit=(GM/r)/(2*c**2)*86400e6               # microsecondes par jour, retard
-ok("V1 GPS, formules de la relativité refaites : avance de gravité 45,7 µs par jour, retard de vitesse 7,2 µs, net 38 µs",
+ok("V1 GPS, formules de la relativité refaites : avance de gravité 45,7 µs par jour, retard de vitesse 7,2 µs, net 38,5 µs",
    abs(grav-45.7)<0.3 and abs(vit-7.2)<0.2 and abs(grav-vit-38.5)<0.6, f"{grav:.1f} - {vit:.1f} = {grav-vit:.1f}")
 # 2. Mercure : avance du périhélie
 GMs=1.32712440018e20; a=5.790905e10; e=0.20563; T=87.9691

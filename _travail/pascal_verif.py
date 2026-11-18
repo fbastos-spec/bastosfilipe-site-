@@ -47,8 +47,19 @@ ok("V12 dix chiffres : la pointe ne lit que le premier, le dernier, et trois foi
    [comb(9,i)%9 for i in range(10)]==[1,0,0,3,0,0,3,0,0,1] and all(pointe(d)==r(d[0]+d[9]+3*(d[3]+d[6])) for d in nombres(10) if d[0]+d[9]+d[3]+d[6]>0))
 ok("V13 exemples : 65 536, racine 7, anneau 3 × 8, centre 5 × 5, pointe 2 ; 1024, racine 7, milieu 2 × 2, pointe 2 ; 256 : 4 + 5 ; 512 : 8 + 1",
    pointe([6,5,5,3,6])==2==r(25+24+25) and r(25)==7 and pointe([1,0,2,4])==2==r(7+4) and r(256)==4 and r(512)==8)
+# --- ajouts de la version 0.2 (18 novembre 2026)
+_cpl=lambda p:sorted({(r(n),c(n)) for n in T[p]})
+ok("V14 pointe 8 : dix couples (racine, centre), (1,7) (2,6) (3,5) (4,4) (5,3) (6,2) (7,1) (8,0) (8,9) (9,8), aucun n'est une paire inverse ; pointe 9 : dix couples, les quatre paires dans les deux sens, (9,0) et (9,9)",
+   _cpl(8)==[(1,7),(2,6),(3,5),(4,4),(5,3),(6,2),(7,1),(8,0),(8,9),(9,8)] and all(a+b!=9 or 0 in (a,b) or 9 in (a,b) for a,b in _cpl(8))
+   and _cpl(9)==[(1,8),(2,7),(3,6),(4,5),(5,4),(6,3),(7,2),(8,1),(9,0),(9,9)])
+_pas=lambda L:Counter(b-a for a,b in zip(L,L[1:]))
+_f9=sorted(n for n in T[9] if r(n)==9)
+ok("V15 racine 9 : par centre (0, puis 9), huit pas de 99 et un de 9 ; les deux centres mêlés, dix pas de 9, huit de 90, un de 81 ; au centre 0 les flancs ont pour racine 9 ; le voisin du bord pèse 0 à 8 de deux à dix chiffres",
+   all(_pas([n for n in _f9 if c(n)==k])=={99:8,9:1} for k in (0,9)) and _pas(_f9)=={9:10,90:8,81:1}
+   and {r(n//100+n%10) for n in _f9 if c(n)==0}=={9} and [SUP[L][1] for L in range(2,11)]==list(range(9))
+   and all(_pas(sorted(n for n in T[9] if r(n)==k))=={99:8,9:1} for k in range(1,9)))
 if len(sys.argv)>1:
     t=open(sys.argv[1],encoding='utf-8').read()
-    ok("V14 typographie de la source : aucun tiret long ni moyen",'—' not in t and '–' not in t)
+    ok("V16 typographie de la source : aucun tiret long ni moyen",'—' not in t and '–' not in t)
 for n,k in R: print(('conforme : ' if k else 'ÉCHEC : ')+n)
 assert all(k for _,k in R); print(len(R),'contrôles, tous conformes')

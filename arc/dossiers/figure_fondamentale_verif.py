@@ -175,6 +175,12 @@ ok("V35 la position et sa paire : deux points opposés ont le même carré ; les
 ok("V36 le 4 et le 7 : racines de 4, 16, 256, 65 536 = 4, 7, 4, 7 ; puissances de 4 : 4, 7, 1 ; de 7 : 7, 4, 1 ; 22 de racine 4, 28 de racine 1, écart 6 ; 22/7 = (4 + 7)/3,5 ; 22/7 − π = 0,0013",
    [_dr(n) for n in (4,16,256,65536)]==[4,7,4,7] and [_dr(4**k) for k in range(1,7)]==[4,7,1,4,7,1] and [_dr(7**k) for k in range(1,7)]==[7,4,1,7,4,1]
    and _dr(22)==4 and _dr(28)==1 and 28-22==6 and F(4+7)/F(7,2)==F(22,7) and round(22/7-3.141592653589793,4)==0.0013)
+# --- ajout de la version 2.4 (18 novembre 2026)
+from math import atan as _atan, degrees as _deg
+_dm=lambda v:(int(_deg(_atan(v))),round((_deg(_atan(v))%1)*60))
+ok("V37 pavé 8, 9, 1 : sans le tour, demi-somme des flancs 4,5 et tiers de la ligne 6 ; avec le 1 compté 10, demi-somme 9 et tiers 9 ; lignes 2 3 4 et 5 6 7 : les deux lectures s'accordent ; angles : triangle 3, 4, 5 à 53°08′ (mesuré 53°10′), pente 1 pour 2 à 26°34′ (mesuré 26°31′)",
+   F(8+1,2)==F(9,2) and F(8+9+1,3)==6 and F(8+10,2)==9 and F(8+9+10,3)==9 and all(F(a+c,2)==b==F(a+b+c,3) for a,b,c in ((2,3,4),(5,6,7)))
+   and _dm(4/3)==(53,8) and _dm(1/2)==(26,34))
 if len(sys.argv)>2:
     from PIL import Image
     im=Image.open(sys.argv[2]).convert('L'); cx,cy,r=540,762,282.0
