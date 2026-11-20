@@ -181,6 +181,15 @@ _dm=lambda v:(int(_deg(_atan(v))),round((_deg(_atan(v))%1)*60))
 ok("V37 pavé 8, 9, 1 : sans le tour, demi-somme des flancs 4,5 et tiers de la ligne 6 ; avec le 1 compté 10, demi-somme 9 et tiers 9 ; lignes 2 3 4 et 5 6 7 : les deux lectures s'accordent ; angles : triangle 3, 4, 5 à 53°08′ (mesuré 53°10′), pente 1 pour 2 à 26°34′ (mesuré 26°31′)",
    F(8+1,2)==F(9,2) and F(8+9+1,3)==6 and F(8+10,2)==9 and F(8+9+10,3)==9 and all(F(a+c,2)==b==F(a+b+c,3) for a,b,c in ((2,3,4),(5,6,7)))
    and _dm(4/3)==(53,8) and _dm(1/2)==(26,34))
+# --- ajout de la version 2.5 (20 novembre 2026)
+_c=F(-2,3); _T=[F(1),_c]
+for _i in range(2,4): _T.append(2*_c*_T[-1]-_T[-2])
+_tour=lambda k:2*F(27,100)*(1-_T[k]); _av=lambda k:k*k*F(1,10)
+ok("V38 les six arêtes d'un tétraèdre de l'hélice : 3 de premier voisin, 2 de deuxième, 1 de troisième ; parts en carrés 9/10 et 1/10, 6/10 et 4/10, 1/10 et 9/10, chacune de somme 1 ; somme de ce qui tourne 4, de ce qui avance 2, total 6",
+   [(_tour(k),_av(k)) for k in (1,2,3)]==[(F(9,10),F(1,10)),(F(6,10),F(4,10)),(F(1,10),F(9,10))]
+   and 3*_tour(1)+2*_tour(2)+_tour(3)==4 and 3*_av(1)+2*_av(2)+_av(3)==2 and 3+2+1==6)
+ok("V39 le facteur 16 dans les deux sens : (√2)² = 2, donc huit huitièmes de tour donnent 2⁴ = 16 en longueur et 2⁸ = 256 en aire en remontant, 1/16 et 1/256 en descendant ; produit des deux sens 1",
+   F(2)**4==16 and F(2)**8==256 and F(1,2)**4==F(1,16) and F(1,2)**8==F(1,256) and F(2)**4*F(1,2)**4==1 and abs((2**0.5)**8-16)<1e-12)
 if len(sys.argv)>2:
     from PIL import Image
     im=Image.open(sys.argv[2]).convert('L'); cx,cy,r=540,762,282.0
