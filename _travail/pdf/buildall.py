@@ -1,5 +1,6 @@
 import subprocess,re,difflib,json,sys,os
-R="../../arc"  # lancer depuis _travail/pdf; corpus=json.load(open(R+"/corpus.json",encoding="utf-8"))
+R="../../arc"  # lancer depuis _travail/pdf
+corpus=json.load(open(R+"/corpus.json",encoding="utf-8"))
 def txt(p):
     t=subprocess.run(['pdftotext',p,'-'],capture_output=True,text=True).stdout
     return re.sub(r'\s+',' ',re.sub(r'-\n','',t))
