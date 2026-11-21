@@ -94,11 +94,12 @@ diag=[G[r][r] for r in range(1,10)]; horsdiag=[G[r][c] for r in range(1,10) for 
 ok("6.2 palindromes : diagonale racine=pointe deux fois plus peuplee",
    all(x==2 for x in diag) and all(x<=1 for x in horsdiag))
 # inverse par complement a 9 (sans zero)
-comp=lambda n:int(''.join(str(9-int(c)) for c in str(n)))
+phi=lambda d: 9 if d==9 else 9-d
+comp=lambda n:int(''.join(str(phi(int(c))) for c in str(n)))
 inv9=lambda x:9-x if x!=9 else 9
-propre=lambda n: all(c not in '09' for c in str(n))
-ok("6.3 complement a 9 inverse racine ET pointe (chiffres de 1 a 8, jusqu a 100000)",
-   all(dr(comp(n))==inv9(dr(n)) and apex(comp(n))==inv9(apex(n)) for n in range(10,100000) if propre(n)))
+ok("6.3 complement du cadastre (9->9, jamais 0) inverse racine ET pointe, chiffres 1 a 9 jusqu a 100000",
+   all(dr(comp(n))==inv9(dr(n)) and apex(comp(n))==inv9(apex(n)) for n in range(10,100000) if '0' not in str(n))
+   and comp(999)==999 and comp(137)==862)
 ok("6.3 renverser ne bouge ni racine ni pointe (fins non nulles)",
    all(dr(int(str(n)[::-1]))==dr(n) and apex(int(str(n)[::-1]))==apex(n) for n in range(100,100000) if str(n)[-1]!='0'))
 Fam=[n for n in range(100,1000) if dr(n)+somme(n)==9]
