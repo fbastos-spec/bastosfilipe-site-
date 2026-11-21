@@ -115,6 +115,12 @@ ok("3.3 les premiers NE suivent PAS le cycle : 9589 passages, 30,77% suivent, 69
    _t==9589 and _s==2951 and (_t-_s)==6638 and _e==1914)
 ok("3.3 la grille 6m+-1 : produit 36m^2-1 de racine 8 toujours, somme 12m sur l'axe 3,6,9",
    set(dr(36*m*m-1) for m in range(1,3000))=={8} and set(dr(12*m) for m in range(1,3000))=={3,6,9})
+_cyc6=[5,7,2,4,8,1]
+_pas=[dr(_cyc6[i]+_cyc6[(i+1)%6]) for i in range(6)]
+ok("3.3 les six sommes de pas du cycle valent 3,9,6,3,9,6 : toutes sur l'axe, deux pas sur six au neuf (face a face)",
+   _pas==[3,9,6,3,9,6] and all(s in (3,6,9) for s in _pas) and _pas.count(9)==2)
+ok("3.3 la grille se pose en face un tiers du temps (2/6), plus souvent que les premiers (19,96%)",
+   round(2/6*100,2)==33.33 and _e/_t<2/6)
 # 4.3 le centre vide : point fixe de 9-x, et sa normalisation sur la droite critique
 ok("4.3 le point fixe de neuf moins x est quatre et demi, et quatre et demi sur neuf vaut un demi",
    F(9,1)-F(9,2)==F(9,2) and F(9,2)/9==F(1,2))
