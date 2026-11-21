@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
-# Ce que Riemann cherchait, v0.2 : controles executes.
+# Ce que Riemann cherchait, v0.3 : controles executes.
 # Usage : python3 riemann_cherchait_verif.py [source.md] [--long]
-#   --long ajoute les comptes a 10^13 et 10^14 (environ sept minutes).
+#   --long ajoute les comptes a 10^13 et 10^14 (environ neuf minutes).
 import sys, re, math
 from math import isqrt, prod
 from fractions import Fraction as F
@@ -154,4 +154,24 @@ if SRC:
     ok("V26 aucune valeur ecrite avec un signe moins colle a un chiffre", re.search(r'[−](?=\d)',txt) is None and re.search(r'(?<![\w)])-(?=\d)',txt) is None)
 ok("V27 le dernier nouveau entre : 9 973 jusqu'a cent millions (son carre 99 460 729 tient, celui de 10 007 non) ; 9 999 991 jusqu'a 10^14",
    int(PR[PR<=10**4][-1])==9973 and 9973**2==99460729<=10**8<10007**2 and bool(S[10007]) and int(PR[PR<=10**7][-1])==9999991 and 9999991**2<=10**14 and not S[9999992:10**7+1].any())
+
+# ---------- 9. le partage entre les rails (v0.3)
+av={e:C[e][0]-C[e][1] for e in C}
+ok("V28 l'avance du rail du 5 : 419 a 10^8, 6 263 a 10^10, 44 976 a 10^12, chaque fois sous le nombre des nouveaux (1 227, 9 590, 78 496) ; 14 premiers sur un million a 10^10",
+   [av[e] for e in (8,10,12)]==[419,6263,44976] and [C[e][2] for e in (8,10,12)]==[1227,9590,78496] and all(av[e]<C[e][2] for e in (8,10,12))
+   and round(10**6*av[10]/(C[10][0]+C[10][1]))==14)
+if LONG:
+    ok("V29 l'avance a 10^13 et 10^14 : 152 811 et 259 652, sous 227 645 et 664 577 nouveaux ; 8 premiers sur cent millions a 10^14",
+       [av[e] for e in (13,14)]==[152811,259652] and all(av[e]<C[e][2] for e in (13,14)) and round(10**8*av[14]/(C[14][0]+C[14][1]))==8)
+    ok("V30 le relais : a 608 981 813 029 la regle compte 11 669 295 394 premiers sur le rail du 5 et 11 669 295 396 sur le rail du 7",
+       compte(608981813029)[:2]==(11669295394,11669295396) and av[12]>0)
+nv=[int(p) for p in PR[(PR>3)&(PR<=10**4)]]
+ok("V31 jusqu'a cent millions, les 1 227 carres des nouveaux sont tous sur le rail du 7, aucun sur le rail du 5",
+   len(nv)==1227 and all((p*p)%6==1 and p*p<=10**8 for p in nv))
+from math import comb
+l8=[comb(8,k) for k in range(9)]; l9=[comb(9,k) for k in range(10)]
+pli=lambda r:[r[k-1]+r[k+1]-2*r[k] for k in range(1,len(r)-1)]
+ok("V32 la crete : ligne 8 = 1, 8, 28, 56, 70, 56, 28, 8, 1 (total 256), pli 13 et 8 vers le haut puis 14, 28, 14 vers le bas, le plus fort au sommet ; ligne 9 : deux 126 face a face (total 512), centre a 4,5, pli 42 de chaque cote",
+   l8==[1,8,28,56,70,56,28,8,1] and sum(l8)==256 and pli(l8)==[13,8,-14,-28,-14,8,13] and l9[4]==l9[5]==126 and sum(l9)==512
+   and F(4+5,2)==F(9,2) and pli(l9)[3:5]==[-42,-42] and max(abs(x) for x in pli(l9))==42 and max(abs(x) for x in pli(l8))==28)
 print('%d contrôles, tous conformes'%n_ok)
