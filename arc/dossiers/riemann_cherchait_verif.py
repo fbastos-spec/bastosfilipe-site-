@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Ce que Riemann cherchait, v0.1 : controles executes.
+# Ce que Riemann cherchait, v0.2 : controles executes.
 # Usage : python3 riemann_cherchait_verif.py [source.md] [--long]
 #   --long ajoute les comptes a 10^13 et 10^14 (environ sept minutes).
 import sys, re, math
@@ -152,4 +152,6 @@ if SRC:
     txt=open(SRC[0],encoding='utf-8').read()
     ok("V25 typographie : aucun tiret long dans la source", '—' not in txt and '–' not in txt)
     ok("V26 aucune valeur ecrite avec un signe moins colle a un chiffre", re.search(r'[−](?=\d)',txt) is None and re.search(r'(?<![\w)])-(?=\d)',txt) is None)
+ok("V27 le dernier nouveau entre : 9 973 jusqu'a cent millions (son carre 99 460 729 tient, celui de 10 007 non) ; 9 999 991 jusqu'a 10^14",
+   int(PR[PR<=10**4][-1])==9973 and 9973**2==99460729<=10**8<10007**2 and bool(S[10007]) and int(PR[PR<=10**7][-1])==9999991 and 9999991**2<=10**14 and not S[9999992:10**7+1].any())
 print('%d contrôles, tous conformes'%n_ok)
