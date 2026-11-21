@@ -96,6 +96,39 @@ ok("6.1 496 est le troisieme nombre parfait (6, 28, 496)",
 ok("7.1 corde scellee du corpus : miroir 496/694, tension 198 = 2x99, axe immobile 595",
    694-496==198 and 198==2*99 and (496+694)//2==595)
 
+
+# audit v0.4 : les trois corrections et les appuis
+from math import isqrt as _isqrt
+def _primes(N):
+    sv=bytearray([1])*(N+1); sv[0]=sv[1]=0
+    for i in range(2,_isqrt(N)+1):
+        if sv[i]: sv[i*i::i]=bytearray(len(sv[i*i::i]))
+    return [i for i in range(2,N+1) if sv[i]]
+_P=[p for p in _primes(10**5) if p>3]
+_cyc=[5,7,2,4,8,1]; _nxt={_cyc[i]:_cyc[(i+1)%6] for i in range(6)}
+_s=_e=_t=0
+for a,b in zip(_P,_P[1:]):
+    _t+=1
+    if dr(b)==_nxt.get(dr(a)): _s+=1
+    if dr(a)+dr(b)==9: _e+=1
+ok("3.3 les premiers NE suivent PAS le cycle : 9589 passages, 30,77% suivent, 69,23% rompent, 19,96% en face",
+   _t==9589 and _s==2951 and (_t-_s)==6638 and _e==1914)
+ok("3.3 la grille 6m+-1 : produit 36m^2-1 de racine 8 toujours, somme 12m sur l'axe 3,6,9",
+   set(dr(36*m*m-1) for m in range(1,3000))=={8} and set(dr(12*m) for m in range(1,3000))=={3,6,9})
+# 4.3 le centre vide : point fixe de 9-x, et sa normalisation sur la droite critique
+ok("4.3 le point fixe de neuf moins x est quatre et demi, et quatre et demi sur neuf vaut un demi",
+   F(9,1)-F(9,2)==F(9,2) and F(9,2)/9==F(1,2))
+ok("4.3 l'involution normalisee t -> 1 - t a pour point fixe un demi (l'axe)",
+   (1-F(1,2))==F(1,2))
+# 7.1 vent solaire vs gravite, ordre de grandeur
+G=6.674e-11; Msol=1.989e30; Mt=5.972e24; AU=1.496e11
+Fg=G*Msol*Mt/AU**2; Re=6.371e6; Fv=2e-9*3.14159*(10*Re)**2
+ok("7.1 le vent solaire pese environ 7e-16 de la gravite du Soleil (negligeable)",
+   6e-16 < Fv/Fg < 9e-16)
+# 6.1 / annexe : 496 = dim SO(32) = troisieme parfait
+ok("6.1 496 = dim SO(32) = 32x31/2, et troisieme nombre parfait",
+   496==32*31//2 and 496==2**4*(2**5-1))
+
 # texte : pas de tiret long, pas de valeur en moins colle a un chiffre, 9 avec 9 et non 0
 if len(sys.argv)>1:
     t=open(sys.argv[1],encoding='utf-8').read()
