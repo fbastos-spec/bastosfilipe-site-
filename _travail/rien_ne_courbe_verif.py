@@ -60,6 +60,18 @@ seq=[dr(n) for n in rails[:12]]
 ok("3.2 racines des places de rails dans l'ordre 5,7,2,4,8,1 (repete)",
    seq==[5,7,2,4,8,1,5,7,2,4,8,1])
 
+
+# 3-4 : la projection du cercle en onde, et la pente a la traversee (v0.3)
+import math
+# zeros de la hauteur sin : la pente cos y est maximale en valeur absolue ; au sommet elle est nulle
+zeros=[k*math.pi for k in range(0,6)]
+sommets=[math.pi/2+k*math.pi for k in range(0,6)]
+ok("4.1 a la traversee (zero de sin) la pente cos vaut 1 en valeur absolue ; au sommet elle vaut 0",
+   all(abs(abs(math.cos(z))-1)<1e-12 for z in zeros) and all(abs(math.cos(s))<1e-12 for s in sommets))
+# la projection (theta, sin theta) garde le tour : theta croit sans borne, lecture reversible
+ok("3.1 la projection garde l'angle : apres un tour la hauteur revient mais l'angle a avance de 2 pi",
+   abs(math.sin(0)-math.sin(2*math.pi))<1e-12 and (2*math.pi)-0 > 6.28)
+
 # 4.2 un zero = passage par l'axe ; symetrie s <-> 1-s est une symetrie (centre 1/2)
 ok("4.2 le centre de la symetrie s <-> 1-s est 1/2", F(1,2)==1-F(1,2))
 
