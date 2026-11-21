@@ -134,6 +134,19 @@ ok("7.1 le vent solaire pese environ 7e-16 de la gravite du Soleil (negligeable)
 # 6.1 / annexe : 496 = dim SO(32) = troisieme parfait
 ok("6.1 496 = dim SO(32) = 32x31/2, et troisieme nombre parfait",
    496==32*31//2 and 496==2**4*(2**5-1))
+ok("6.1 E8xE8 = 248+248 = 496 (second groupe permis en dimension dix)",
+   248+248==496)
+# 4.3 rail du sept : carres des premiers equirepartis sur {1,4,7} mod 9, mais tous sur 6k+1 mod 6
+_Praj=[p for p in _primes(10**5) if p>3]
+_c9={}
+for p in _Praj: _c9[dr(p*p)]=_c9.get(dr(p*p),0)+1
+ok("4.3 les carres des premiers s'equipartissent sur 1,4,7 mod 9 (3191,3194,3205), pas tous sur 7",
+   set(_c9)=={1,4,7} and _c9[1]==3191 and _c9[4]==3194 and _c9[7]==3205)
+ok("4.3 tout (6m+-1)^2 vaut 1 mod 6 : les carres remplissent le rail 6k+1 par l'algebre",
+   set((x*x)%6 for m in range(1,2000) for x in (6*m-1,6*m+1))=={1})
+# 7.1 le facteur verbal : inverse du rapport ~ 1.4e15, soit un million de milliards (1e15), pas 1e21
+ok("7.1 l'inverse du rapport vent solaire/gravite est de l'ordre de 1e15 (un million de milliards), non 1e21",
+   1e15 < 1/7.2e-16 < 2e15)
 
 # texte : pas de tiret long, pas de valeur en moins colle a un chiffre, 9 avec 9 et non 0
 if len(sys.argv)>1:
