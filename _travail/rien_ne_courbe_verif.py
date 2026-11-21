@@ -10,6 +10,29 @@ def ok(nom,cond):
     n_ok+=1; print('[OK] '+nom)
 dr=lambda n:1+(n-1)%9
 
+
+# 0. la base autoportante (v0.2)
+ok("0.1 tout n = 9k + racine, le 9 est la cloture (pas 0) : bijection sur 1..100000",
+   all(n==9*((n-1)//9)+dr(n) for n in range(1,100001)))
+# 0.2 table de n et table de 9-n sont inverses : dr(n*k)+dr((9-n)*k) ferme sur 9
+def ferme9(a,b): return (a+b)%9==0
+ok("0.2 table de n et de 9-n inverses : dr(n k) + dr((9-n) k) = 9 pour n=1..4, k=1..9",
+   all(ferme9(dr(n*k),dr((9-n)*k)) for n in range(1,5) for k in range(1,10)))
+ok("0.2 table de 2 : racines 2,4,6,8,1,3,5,7,9 ; table de 7 : 7,5,3,1,8,6,4,2,9",
+   [dr(2*k) for k in range(1,10)]==[2,4,6,8,1,3,5,7,9] and [dr(7*k) for k in range(1,10)]==[7,5,3,1,8,6,4,2,9])
+# 0.3 les trois formules du chaos : croissance 3^n, 2^n, f^n ; seuil
+from fractions import Fraction as F
+e0=F(1,30000)
+ok("0.3 formule I stevinienne e0*3^n : partie entiere de e0*3^100 depasse 10^43",
+   len(str((e0*3**100).numerator//(e0*3**100).denominator))>=44)
+ok("0.3 formule II gaussienne e0*2^n : e0=10^-6 atteint l'ordre 1 vers le 20e tour",
+   F(1,10**6)*2**20 >= 1 and F(1,10**6)*2**19 < 1)
+import math
+# formule III : seuil n_chaos = p / log2(f) lineaire en p
+f=2.0
+ok("0.3 formule III seuil n_chaos = p / log2(f), lineaire en la precision p",
+   abs((20/math.log2(f)) - 20) < 1e-9 and abs((40/math.log2(f)) - 2*(20/math.log2(f))) < 1e-9)
+
 # 2.1 les paires ferment a 9 ; 9 avec 9
 paires=[(1,8),(2,7),(3,6),(4,5)]
 ok("2.1 les quatre paires d'inverses ferment a 9 ; 9 se ferme avec 9",
