@@ -1,4 +1,4 @@
-# octet_verif.py : checks for "The Octet Rule as Arithmetic Necessity", v7.0 (ARC corpus, Filipe Bastos)
+# octet_verif.py : checks for "The Octet Rule as Arithmetic Necessity", v8.0 (ARC corpus, Filipe Bastos)
 # Exact integer arithmetic only.
 from math import isqrt
 from itertools import combinations

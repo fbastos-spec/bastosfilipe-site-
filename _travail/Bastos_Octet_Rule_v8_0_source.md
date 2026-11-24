@@ -2,12 +2,12 @@
 title: "The Octet Rule as Arithmetic Necessity"
 subtitle: "Derivation from the involution φ(x) = 9 − x and the Universal Fold Theorem"
 author: "Filipe Bastos"
-date: "Architecture of Relational Coherence (ARC). Version 7.0, 24 November 2026. First written August 2025; v6.0 March 2026. CC BY 4.0"
+date: "Architecture of Relational Coherence (ARC). Version 8.0, 24 November 2026. First written August 2025; previous file v6.0, March 2026 (seventh Zenodo version). CC BY 4.0"
 ---
 
 **Abstract.** The chemical octet rule, the observation that atoms are stable with eight valence electrons, has been treated since Lewis (1916) as an experimental fact explained afterwards by orbital filling (s²p⁶). This paper states what in it is arithmetic. On the nine digits, the involution φ(x) = 9 − x arranges exactly eight elements in four pairs summing to 9, with fixed point 4.5 between two digits, and the ninth element, 9, can belong to no pair. The structure is universal: for every integer a ≥ 1, the cycle of digital roots of a, 2a, …, 9a closes on 9 and folds into four pairs (Universal Fold Theorem). The Fibonacci cycle of digital roots, of period 24, folds into 12 + 12. The periodic table folds on 119.
 
-**What version 7.0 changes.** Version 6.0 was never revised after March 2026. In the meantime the ARC corpus re-read it line by line (Volume 2, chapter 10, with its Annex B). This version carries those corrections into the paper itself. Nothing is silently removed: every withdrawn or restated claim is listed in section 12 with its date. Each statement now carries a status: **T**, theorem, a finite computation or a proof, re-run by the script `octet_verif.py` (29 checks); **F**, a fact held by science, with author and date; **R**, a reading of the author, declared as such.
+**What version 8.0 changes.** Version 6.0 was never revised after March 2026. It was the seventh version deposited on Zenodo; this one is numbered 8.0 so that the file and the deposit carry the same number. In the meantime the ARC corpus re-read it line by line (Volume 2, chapter 10, with its Annex B). This version carries those corrections into the paper itself. Nothing is silently removed: every withdrawn or restated claim is listed in section 12 with its date. Each statement now carries a status: **T**, theorem, a finite computation or a proof, re-run by the script `octet_verif.py` (29 checks); **F**, a fact held by science, with author and date; **R**, a reading of the author, declared as such.
 
 # 1. The question
 
@@ -108,7 +108,7 @@ C(5) = (5, 1, 6, 2, 7, 3, 8, 4, 9): 5 + 4, 1 + 8, 6 + 3, 2 + 7. C(7) = (7, 5, 3,
 
 # 12. What changed from v6.0
 
-| v6.0 | v7.0 | Source of the correction |
+| v6.0 | v8.0 | Source of the correction |
 |---|---|---|
 | Th 2.4, uniqueness of base 10 from four conditions | restated with b − 1 = p²; proved in general (2.4) | Volume 2, 3.3; Register G.4 |
 | "10 requires two symbols in every positional system" | true up to base 10 only (2.3) | Volume 2, 3.2 |
