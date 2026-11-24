@@ -1,0 +1,352 @@
+<!DOCTYPE html><html lang="fr"><head><meta charset="utf-8">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LB0FH513XB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-LB0FH513XB');
+  gtag('config', 'G-7B04RFMF7Z');
+</script>
+<meta name="description" content="Écrivez 5 et 7 autour de 6 : leurs carrés, 25 et 49, sont à un saut de 24. Autour de 12, deux sauts ; autour de 6m, m sauts. L&#x27;écart garde le rang du tour et le rend, à toute échelle : c&#x27;est une preuve par projection d&#x27;échelle. Ses trois temps, clôture, mémoire, projection, sont la formule du fractal de l&#x27;auteur ; chez Mandelbrot il faut itérer pour savoir. 29 contrôles.">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+<title>La preuve par projection d'échelle : la formule du fractal, face à Mandelbrot · Corpus ARC</title>
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<link rel="canonical" href="https://bastosfilipe.com/arc/dossiers/lire/La_preuve_par_projection_d_echelle_v1_0/"><link rel="alternate" type="application/pdf" href="https://bastosfilipe.com/arc/dossiers/La_preuve_par_projection_d_echelle_v1_0.pdf"><link href="/assets/css2-4869c7ae422d.css" media="all" rel="stylesheet"><link href="/assets/style-2caf4e3e0608.css" media="all" rel="stylesheet"><link href="/assets/corpus-integration.css" rel="stylesheet"><link href="/assets/site-unified.css?v=6" rel="stylesheet">
+<meta property="og:type" content="article"><meta property="og:site_name" content="Filipe Bastos · Corpus ARC"><meta property="og:locale" content="fr_CA"><meta property="og:title" content="La preuve par projection d&#x27;échelle : la formule du fractal, face à Mandelbrot"><meta property="og:description" content="Écrivez 5 et 7 autour de 6 : leurs carrés, 25 et 49, sont à un saut de 24. Autour de 12, deux sauts ; autour de 6m, m sauts. L&#x27;écart garde le rang du tour et le rend, à toute échelle : c&#x27;est une preuve par projection d&#x27;échelle. Ses trois temps, clôture, mémoire, projection, sont la formule du fractal de l&#x27;auteur ; chez Mandelbrot il faut itérer pour savoir. 29 contrôles."><meta property="og:url" content="https://bastosfilipe.com/arc/dossiers/lire/La_preuve_par_projection_d_echelle_v1_0/"><meta property="og:image" content="https://bastosfilipe.com/assets/og-arc.png"><meta name="twitter:card" content="summary_large_image">
+<style>.d-page pre{overflow-x:auto;max-width:100%;font-size:.78rem}.d-page table{display:block;overflow-x:auto;max-width:100%}.d-page{max-width:780px}.d-page h1{font-size:clamp(1.8rem,4vw,2.5rem);line-height:1.15;margin:8px 0 6px}.d-sub{font-style:italic;font-size:1.1rem;color:rgb(58,65,75);margin:0 0 18px}.d-note{font-size:.9rem;border-left:3px solid var(--or);padding:8px 14px;background:rgba(160,120,40,.06);margin:0 0 26px}.d-page h2{font-size:1.3rem;margin:30px 0 10px}.d-page p{line-height:1.65;margin:0 0 13px}.d-page table{border-collapse:collapse;margin:12px 0;font-size:.92rem;width:100%}.d-page th,.d-page td{border:1px solid rgba(0,0,0,.25);padding:4px 8px;vertical-align:top;text-align:left}.d-page blockquote{margin:10px 0 14px 12px;padding-left:12px;border-left:2px solid rgba(0,0,0,.3);font-style:italic}.d-page code{font-size:.88em}</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Ce que Riemann cherchait : le compte des premiers, sans courbe et sans zéros", "description": "En 1859, Riemann cherche le nombre des nombres premiers jusqu'à une hauteur donnée. On lui a mis dans les mains une courbe et un prolongement ; sa question devient l'écart entre la courbe et le vrai compte. La pièce reprend sa logique sans ce détour. Les premiers tiennent sur deux rails, au bord du 6, avec six racines et jamais trois. Chaque nouveau premier pose ses multiples à partir de son carré, en échangeant ou en gardant les rails, et le compte d'une échelle se lit dans l'échelle du dessous. Cette règle, connue depuis Legendre (1808), donne le nombre exact jusqu'à 10¹⁴ sans visiter une seule place. Mesurée contre lui, la courbe de Gauss est au-dessus de 314 889, et le nombre qui borne cet écart est la taille du dernier nouveau entré. Une preuve de l'hypothèse certifie la construction ; elle ne dit ni où sont les marches, ni pourquoi le milieu. 27 vérifications au build.", "url": "https://bastosfilipe.com/arc/dossiers/lire/La_preuve_par_projection_d_echelle_v1_0/", "inLanguage": "fr", "author": {"@type": "Person", "@id": "https://bastosfilipe.com/#filipe-bastos", "name": "Filipe Bastos", "url": "https://bastosfilipe.com/bio/"}, "publisher": {"@id": "https://bastosfilipe.com/#filipe-bastos"}, "isPartOf": {"@id": "https://bastosfilipe.com/#site"}, "license": "https://creativecommons.org/licenses/by/4.0/", "encoding": {"@type": "MediaObject", "contentUrl": "https://bastosfilipe.com/arc/dossiers/La_preuve_par_projection_d_echelle_v1_0.pdf", "encodingFormat": "application/pdf"}}</script>
+</head>
+<body class="page">
+<a class="screen-reader-text" href="#content">Aller au contenu</a>
+<header class="top">
+<nav aria-label="Navigation principale" class="nav">
+<a class="brand" href="/">Filipe Bastos</a>
+<ul class="" id="menu-main-fr"><li><a href="/">Accueil</a></li><li><a href="/bibliotheque-des-documents/">Bibliothèque<span class="m-hide"> des documents</span></a></li><li><a href="/bio/">Bio</a></li><li><a href="/arc/">Corpus ARC</a></li><li><a href="/contradictions/">Contradictions</a></li></ul> <a class="search-link" href="/rechercher/" aria-label="Rechercher" title="Rechercher" style="display:inline-flex;align-items:center;justify-content:center;width:34px;height:30px;margin-right:6px;color:inherit;border:1px solid currentColor;border-radius:3px;opacity:.75;vertical-align:middle"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg></a><details class="lang"><summary aria-label="Langue">FR</summary><div class="lang-menu"><a data-l="fr" href="/" lang="fr">Français</a><a data-l="en" href="/en/" lang="en">English</a><a data-l="pt" href="/pt/" lang="pt">Português</a><span>Traduction automatique</span><a data-tl="es" href="#" lang="es">Español</a><a data-tl="it" href="#" lang="it">Italiano</a><a data-tl="de" href="#" lang="de">Deutsch</a><a data-tl="zh-CN" href="#" lang="zh">中文</a></div></details></nav>
+</header>
+<main id="content" data-pagefind-meta="title:La preuve par projection d&#x27;échelle : la formule du fractal, face à Mandelbrot · Dossier">
+<div class="wrap page-shell d-page">
+<p style="font-size:.85rem;margin:0 0 6px"><a href="/bibliotheque-des-documents/">Bibliothèque des documents</a> / Dossier</p>
+<h1 class="entry-title">La preuve par projection d'échelle : la formule du fractal, face à Mandelbrot</h1>
+<p class="d-note">Version texte du dossier, pour la lecture en ligne, la recherche et les moteurs de réponse. Le PDF fait foi pour la mise en page : <a href="/arc/dossiers/La_preuve_par_projection_d_echelle_v1_0.pdf">télécharger le PDF</a>. Le script de vérification est à côté : <a href="/arc/dossiers/projection_echelle_verif.py">projection_echelle_verif.py</a>.</p>
+
+<p class="sub">Clôture, mémoire, projection : la formule du fractal employée comme preuve, face à l'itération de Mandelbrot</p><div class="meta"><p>Filipe Bastos</p><p>Corpus ARC (Architecture de la Cohérence Relationnelle), version 1.0, 24 novembre 2026, CC BY 4.0</p></div>
+<p><strong>Avis.</strong> Cette pièce pose un nom et une méthode. Le
+nom, <em>preuve par projection d’échelle</em>, est de l’auteur ; il date
+du 23 novembre 2026. La méthode était déjà au corpus sans porter ce nom
+: dans la Loi fractale (Volume 2, chapitre 12) et, plus tôt, dans la
+première pièce de l’auteur sur Riemann (février 2026). La pièce montre
+ce que la méthode prouve, ce qu’elle laisse ouvert, et pourquoi elle est
+la formule du fractal de l’auteur employée comme preuve. Les faits et
+les dates sont marqués F, les calculs Th, les lectures de l’auteur L.
+Les 29 contrôles sont au script
+<code>projection_echelle_verif.py</code>.</p>
+<h2 id="la-base-avant-toute-figure">0. La base, avant toute figure</h2>
+<p><strong>0.1 (Th).</strong> Avant toute base, il y a le code 1 à 9.
+Tout nombre s’écrit n = 9k + position, avec k le compte des tours et la
+position de 1 à 9. Le 9 est la clôture, il reste 9. Les neuf positions
+sont celles de la Figure fondamentale : huit points en quatre paires
+autour d’un centre, et le 9.</p>
+<p><strong>0.2 (Th).</strong> Les inversions ferment à 9 : 1 et 8, 2 et
+7, 3 et 6, 4 et 5. La table de n et celle de 9 − n se répondent terme à
+terme. Le centre des paires est 4,5, entre deux chiffres.</p>
+<p><strong>0.3 (F, L).</strong> Gauss, 1801, écrit 9 ≡ 0 : le compte des
+tours est jeté (Registre R.1, R.2 ; <em>Le Chaos Fabriqué</em>, Partie
+I). Le corpus isole trois formules du chaos (Volume 0, 2.1) : la
+stévinienne ε₀·3ⁿ (une imprécision au départ), la gaussienne ε₀·2ⁿ (le
+tour jeté), l’hybride ε₀·fⁿ, de seuil n = p / log₂ f. Les trois perdent
+la même chose : la mémoire de l’échelle.</p>
+<h2 id="le-nom">1. Le nom</h2>
+<p><strong>1.1 (L).</strong> Une preuve par projection d’échelle tient
+en une phrase de l’auteur : « si je porte le calcul à cette échelle, la
+relation me dit ce que j’y trouverai ». Le mot qui compte est
+<em>si</em>. La preuve donne une relation exacte à toute échelle
+choisie. Elle ne dit pas que le prochain pas arrivera : « le + 1,
+l’impulsion, est la preuve », et l’impulsion ne se prouve pas.</p>
+<p><strong>1.2 (L).</strong> Sa règle, dite le même jour : « la seule
+façon de prouver que tout continue est par règle de projection ; c’est
+ça le cadastre, tout est là en possibilité et la chaîne mène là ;
+jusqu’où, personne ne le sait et ce n’est pas important ».</p>
+<h2 id="lexemple-qui-la-porte-deux-carrés-autour-de-6m">2. L’exemple qui
+la porte : deux carrés autour de 6m</h2>
+<p><strong>2.1 (Th).</strong> Les deux bords d’un multiple de 6 sont 6m
+− 1 et 6m + 1. Leur écart est 2, leur somme 12m. L’écart de leurs carrés
+est le produit des deux :</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mrow><mo stretchy="true" form="prefix">(</mo><mn>6</mn><mi>m</mi><mo>+</mo><mn>1</mn><mo stretchy="true" form="postfix">)</mo></mrow><mn>2</mn></msup><mo>−</mo><msup><mrow><mo stretchy="true" form="prefix">(</mo><mn>6</mn><mi>m</mi><mo>−</mo><mn>1</mn><mo stretchy="true" form="postfix">)</mo></mrow><mn>2</mn></msup><mo>=</mo><mn>2</mn><mo>×</mo><mn>12</mn><mi>m</mi><mo>=</mo><mn>24</mn><mi>m</mi><mi>.</mi></mrow><annotation encoding="application/x-tex">(6m+1)^2-(6m-1)^2 = 2 \times 12m = 24m.</annotation></semantics></math></p>
+<p>Autour de 6 : 25 et 49, un saut de 24. Autour de 12 : 121 et 169,
+deux sauts. Autour de 18 : 289 et 361, trois sauts. L’écart des deux
+carrés vaut m sauts de 24 : il garde le rang du tour.</p>
+<p><strong>2.2 (Th).</strong> La lecture se fait dans les deux sens.
+Vers le haut : au rang un milliard, l’écart est un milliard de sauts de
+24, sans passer par les rangs d’avant (contrôles 3 et 4, jusqu’à un rang
+de 31 chiffres). Vers le bas : l’écart divisé par 24 rend le rang. Et
+deux carrés A &lt; B forment une telle paire exactement quand B − A est
+un multiple de 24 et que 8(A + B) = (B − A)² + 16 (contrôles 5 et
+6).</p>
+<p><strong>2.3 (Th).</strong> Chaque carré, pris seul, avance par sauts
+de 24 depuis 1 : (6m − 1)² est à m(3m − 1)/2 sauts, (6m + 1)² à m(3m +
+1)/2 sauts. Les rangs de saut sont 1, 2, 5, 7, 12, 15, 22, 26 : les
+nombres pentagonaux d’Euler (1750), ceux de <em>Riemann sans le
+zéro</em>, 4.5 bis.</p>
+<h2 id="les-trois-temps-de-la-preuve">3. Les trois temps de la
+preuve</h2>
+<p><strong>3.1 (L).</strong> La preuve a trois temps, et ce sont les
+trois conditions de la Loi fractale (Volume 2, É 12.3).</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Temps</th>
+<th>Dans l’exemple</th>
+<th>Condition de la Loi fractale</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Le tour se ferme</td>
+<td>le 6, entre ses deux bords</td>
+<td>clôture</td>
+</tr>
+<tr class="even">
+<td>Le rang est gardé</td>
+<td>m, lisible dans 24m</td>
+<td>mémoire</td>
+</tr>
+<tr class="odd">
+<td>La relation se porte à l’échelle choisie</td>
+<td>m quelconque, sans les rangs d’avant</td>
+<td>projection</td>
+</tr>
+</tbody>
+</table>
+<p><strong>3.2 (F, L).</strong> Ce que la méthode n’est pas. Elle n’est
+pas la récurrence de Peano (1889), qui pose le suivant en axiome : ici
+le suivant n’est pas demandé. Elle n’est pas une limite : elle ne répond
+pas par ce qui se passe au bout. Elle n’est pas un plafond valable d’un
+coup pour toutes les hauteurs : de ce plafond, l’auteur dit « ce n’est
+pas une garantie, c’est une rustine » (<em>Des zéros sous zéro</em>,
+6.7).</p>
+<p><strong>3.3 (F).</strong> Dit dans la langue reçue, 2.1 est une
+identité algébrique, vraie pour tout m, et personne ne la conteste. Ce
+que la pièce ajoute est la lecture : « pour tout m » y veut dire « à
+l’échelle que tu choisis », jamais « sur une totalité achevée ».</p>
+<h2 id="dautres-projections-déchelle-déjà-au-corpus">4. D’autres
+projections d’échelle déjà au corpus</h2>
+<p><strong>4.1 (Th). La position.</strong> La position d’un produit se
+lit sur les positions des facteurs, celle d’une somme aussi, à toute
+taille (contrôle 9). Un entier de 101 chiffres donne sa position par ses
+chiffres, sans être factorisé (contrôle 28).</p>
+<p><strong>4.2 (Th, F). Le compte des premiers.</strong> Le compte d’une
+échelle se lit dans l’échelle du dessous : les 78 498 premiers jusqu’à
+10⁶ se comptent avec les seuls 168 premiers jusqu’à 1000 (Legendre, 1808
+; contrôle 11). C’est le compte borné de <em>Ce que Riemann
+cherchait</em> et de <em>Riemann sans le zéro</em>.</p>
+<p><strong>4.3 (Th). Les jumeaux.</strong> Un rang k est libre des deux
+côtés quand ni 6k − 1 ni 6k + 1 n’est pris par un premier déjà entré.
+Sur un tour complet, le nombre de rangs libres est le produit des (g −
+2) : 15 sur 35 après 5 et 7, 135 sur 385 après 11, 1 485 sur 5 005 après
+13, 22 275 sur 85 085 après 17. La part baisse à chaque étage (42,86 %,
+35,06 %, 29,67 %, 26,18 %) et ne s’annule à aucun, puisque chaque
+facteur g − 2 vaut au moins 3.</p>
+<p><strong>4.4 (F, L).</strong> Que les paires de premiers jumeaux ne
+s’arrêtent jamais n’est pas démontré dans la langue reçue ; Zhang (2013)
+a montré qu’un écart borné revient sans fin, et le projet Polymath
+(2014) a ramené cette borne à 246. La lecture de l’auteur : « il va
+toujours rester un jumeau, c’est comme π, ça ne se fermera jamais, c’est
+un jeu d’échelle » ; « borné dehors, infini dedans ». La projection
+d’échelle prouve 4.3, à chaque étage. Elle ne prouve pas l’arrivée du
+prochain jumeau, et ne le prétend pas : c’est l’impulsion.</p>
+<h2 id="la-formule-du-fractal-face-à-mandelbrot">5. La formule du
+fractal, face à Mandelbrot</h2>
+<p><strong>5.1 (F).</strong> Mandelbrot nomme la fractalité (<em>Les
+objets fractals</em>, 1975 ; <em>The Fractal Geometry of Nature</em>,
+1982) et étudie en 1980 l’itération z → z² + c : on part de 0, on
+recommence, et l’on regarde si la suite reste bornée ou fuit. Une suite
+sortie du rayon 2 ne revient pas (contrôle 20).</p>
+<p><strong>5.2 (L).</strong> La formule de l’auteur est autre (Volume 2,
+chapitre 12, d’après la <em>Loi fractale de la nécessité fractale</em>,
+v1.6, mai 2026) : une forme se répète à toutes les échelles quand un
+système ferme son tour, garde le compte de ses tours et projette sa
+structure sur le registre suivant. Clôture, mémoire, projection. «
+Mandelbrot a vu l’effet. L’architecture cadastrale en est la cause. » Le
+24 novembre 2026, en relisant la preuve par projection d’échelle : «
+c’est la formule du fractal ».</p>
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th>Itération de Mandelbrot</th>
+<th>Projection d’échelle</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Geste</td>
+<td>recommencer z² + c</td>
+<td>porter la relation au rang choisi</td>
+</tr>
+<tr class="even">
+<td>Pour savoir</td>
+<td>il faut itérer</td>
+<td>on lit directement</td>
+</tr>
+<tr class="odd">
+<td>Domaine</td>
+<td>plan ouvert, la suite peut fuir</td>
+<td>tour fermé, rien ne fuit</td>
+</tr>
+<tr class="even">
+<td>Chemin</td>
+<td>perdu en route</td>
+<td>rendu (24m ÷ 24 = m)</td>
+</tr>
+<tr class="odd">
+<td>Fractalité</td>
+<td>au bord, entre deux régimes</td>
+<td>à chaque rang</td>
+</tr>
+</tbody>
+</table>
+<p><strong>5.3 (Th, F).</strong> Un compte fait voir la différence. Au
+bord de l’ensemble, en c = ¼, la suite reste bornée. Juste après, en c =
+¼ + ε, elle fuit, mais il faut itérer pour le savoir, et le nombre de
+pas grandit sans plafond quand ε rapetisse :</p>
+<table>
+<thead>
+<tr class="header">
+<th>ε</th>
+<th>pas avant la fuite</th>
+<th>pas × côté du carré d’aire ε</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0,01</td>
+<td>30</td>
+<td>3,0</td>
+</tr>
+<tr class="even">
+<td>0,0001</td>
+<td>312</td>
+<td>3,12</td>
+</tr>
+<tr class="odd">
+<td>0,000001</td>
+<td>3 140</td>
+<td>3,140</td>
+</tr>
+<tr class="even">
+<td>0,00000001</td>
+<td>31 414</td>
+<td>3,1414</td>
+</tr>
+</tbody>
+</table>
+<p>Le produit s’approche de π (observé par Boll, 1991 ; démontré par
+Klebanoff, 2001). Fait donné tel quel ; l’auteur tient ailleurs que π
+est « ce qui empêche la fermeture », et la pièce ne force pas le
+lien.</p>
+<p><strong>5.4 (F).</strong> Le poids, une fois. Le Volume 2 (É 12.8,
+Annexe B) a classé la « preuve » de la Loi fractale en Lecture : la
+projection y est définie comme gardant la structure, donc la conclusion
+est dans l’hypothèse. La présente pièce ne change pas ce statut. Ce qui
+est Th ici, ce sont les relations des sections 2 et 4.</p>
+<h2 id="ce-que-la-première-pièce-sur-riemann-portait-déjà">6. Ce que la
+première pièce sur Riemann portait déjà</h2>
+<p><strong>6.1 (F).</strong> La première pièce de l’auteur sur Riemann
+(<em>Une preuve de l’hypothèse de Riemann</em>, v4.5, février 2026) a
+été rétrogradée par le corpus (Volume 6, É 16.19 ; Volume 5, B.1.7).
+Relue aujourd’hui, elle contient la projection d’échelle avant son nom.
+Section 3.1, trois cycles : le topologique 1 à 9, le quantitatif qui «
+détermine la magnitude et l’échelle », et la <em>projection</em>.
+Section 3.2 : un premier de cent chiffres de position 7 « est soumis à
+la même géométrie d’inversion » que le premier 7 ; « la topologie ne
+s’étend jamais. Elle spirale. » Section 5 : un « invariant d’échelle »,
+demi-envergure sur envergure = ½ pour chaque paire (contrôle 29).</p>
+<p><strong>6.2 (Th).</strong> Ce qui tient dans cette pièce est une
+projection d’échelle exacte. Dans le corps du nonagone, celui de x³ − 3x
++ 1, le sort d’un premier dépend de sa seule position, à toute taille :
+trois solutions quand la position est 1 ou 8, aucune sinon (contrôle 24
+; fait classique des corps cyclotomiques). Plus fin : le caractère
+cubique de 9 prend la même valeur sur les deux membres de chaque paire
+d’inverses, 1 sur (1, 8), ω sur (2, 7), ω² sur (4, 5), et les trois
+somment à zéro (contrôles 25 et 26). Le résumé de février rangeait les
+premiers en {1, 4, 7} et {2, 5, 8} ; le rangement exact est celui des
+paires. De 5 à 10⁶ : 26 162, 26 196 et 26 138 premiers par paire.</p>
+<p><strong>6.3 (F, L).</strong> Ce qui a cassé est l’endroit où la pièce
+quittait la projection d’échelle : la section 9.3, région II, demandait
+une borne « uniforme en n », valable d’un coup pour tous les rangs, et
+le compte ne la donnait pas (λ₁ recompté : 0,3031 ; la table 9.2 était
+fausse). La leçon est celle de 3.2 : la relation portée à l’échelle
+tenait, le plafond pour toutes les hauteurs ne tenait pas.</p>
+<h2 id="riemann-et-le-quantique">7. Riemann, et le quantique</h2>
+<p><strong>7.1 (L).</strong> Pour Riemann, la projection d’échelle donne
+le compte borné à la hauteur choisie, sur les deux rails. La question «
+de combien la courbe lisse s’écarte-t-elle du compte » naît avec la
+courbe (<em>Riemann sans le zéro</em>, face-à-face ; <em>Des zéros sous
+zéro</em>, 5.5 et 6.7).</p>
+<p><strong>7.2 (L).</strong> Pour le quantique, l’auteur lit la même
+projection : « c’est la spirale qui s’amincit, qui devient point noir »
+; « c’est d’aller si loin qu’on ne voit plus, et c’est ce que le
+quantique est allé voir et n’a pas compris ». La pièce <em>Emergence of
+Quantum Correlations</em> (v4.0) porte le compte : la table des
+corrélations y est donnée pour la paire entière, les deux en même
+temps.</p>
+<h2 id="ce-qui-ferait-tomber">8. Ce qui ferait tomber</h2>
+<p>Les relations des sections 2, 4 et 6.2 sont des comptes exacts : un
+seul rang où elles manqueraient les ferait tomber, et le script les
+refait. La lecture de 5.2 tombe par les trois canaux de la Loi fractale
+(Volume 2, É 12.9) : un système fermé, à mémoire et à projection, sans
+forme répétée ; une forme répétée sans les trois conditions ; une règle
+de projection qui ne prédit rien de mesurable.</p>
+<h2 id="ce-que-la-pièce-ne-dit-pas">Ce que la pièce ne dit pas</h2>
+<p>Elle ne démontre ni l’hypothèse de Riemann ni l’infinité des jumeaux
+dans la langue reçue. Elle ne dit pas que l’itération de Mandelbrot est
+fausse : elle dit qu’elle montre l’effet. Elle n’ajoute aucun nombre
+choisi.</p>
+<h2 id="annexe.-vérifications-et-sources">Annexe. Vérifications et
+sources</h2>
+<p>Le script <code>projection_echelle_verif.py</code> refait tous les
+nombres de la pièce : 29 contrôles, exécutés le 24 novembre 2026. Calcul
+entier exact, sauf le tableau de 5.3, en nombres à virgule de double
+précision.</p>
+<p>Sources : Euler, L., nombres pentagonaux, 1750. Legendre, A.-M.,
+<em>Essai sur la théorie des nombres</em>, 1808. Peano, G.,
+<em>Arithmetices principia</em>, 1889. Mandelbrot, B., <em>Les objets
+fractals</em>, 1975 ; <em>Annals of the New York Academy of
+Sciences</em> 357, 1980 ; <em>The Fractal Geometry of Nature</em>, 1982.
+Boll, D., message du 24 avril 1991 (sci.math). Klebanoff, A., « π in the
+Mandelbrot set », <em>Fractals</em> 9, 2001. Zhang, Y., <em>Annals of
+Mathematics</em> 179, 2014 (annoncé en 2013). Polymath, D. H. J., 2014.
+Corpus ARC : Volume 2, chapitre 12 ; Volume 0, 2.1 ; <em>Riemann sans le
+zéro</em> ; <em>Des zéros sous zéro</em> ; <em>Ce que Riemann
+cherchait</em> ; <em>Rien ne courbe</em> ; <em>Le Carré du relais</em> ;
+<em>Emergence of Quantum Correlations</em> v4.0 ; <em>Une preuve de
+l’hypothèse de Riemann</em> v4.5 (février 2026).</p>
+<p>Modèle, questions, lectures et règles : Filipe Bastos. Scribe :
+Claude, sous la contradiction de l’auteur. Calculs, formulations et
+audits assistés par IA (ChatGPT, Gemini, DeepSeek, GLM), à sa demande.
+Corpus ARC, CC BY 4.0.</p>
+
+
+</div>
+</main>
+<footer class="site-footer">
+<div class="wrap footgrid">
+<span class="sceau">Filipe Bastos · ARC</span>
+<p>© 2026 · Architecture de la Cohérence Relationnelle · CC BY 4.0</p>
+<p class="mono">φ(x) = 9 − x · k = 1/2</p>
+</div>
+</footer>
+
+
+
+
+
+<script src="/assets/lang.js?v=5" defer></script>
+</body></html>

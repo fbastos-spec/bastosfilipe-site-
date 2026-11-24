@@ -1,0 +1,1022 @@
+<!DOCTYPE html><html lang="fr"><head><meta charset="utf-8">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LB0FH513XB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-LB0FH513XB');
+  gtag('config', 'G-7B04RFMF7Z');
+</script>
+<meta name="description" content="Pièce compagne de Riemann sans le zéro. Comment la question de Riemann est fabriquée, étage par étage : six étages, deux infinis sous un seul signe, et pourquoi la prouver n&#x27;apprend rien sur les nombres premiers. Avec ce qui se prouve (le compte borné, la relation portée à l&#x27;échelle) et ce qui ne se prouve pas (l&#x27;impulsion). 37 contrôles.">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+<title>Des zéros sous zéro : zêta lue pour ce qu'elle dit · Corpus ARC</title>
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<link rel="canonical" href="https://bastosfilipe.com/arc/dossiers/lire/Des_zeros_sous_zero_v1_1/"><link rel="alternate" type="application/pdf" href="https://bastosfilipe.com/arc/dossiers/Des_zeros_sous_zero_v1_1.pdf"><link href="/assets/css2-4869c7ae422d.css" media="all" rel="stylesheet"><link href="/assets/style-2caf4e3e0608.css" media="all" rel="stylesheet"><link href="/assets/corpus-integration.css" rel="stylesheet"><link href="/assets/site-unified.css?v=6" rel="stylesheet">
+<meta property="og:type" content="article"><meta property="og:site_name" content="Filipe Bastos · Corpus ARC"><meta property="og:locale" content="fr_CA"><meta property="og:title" content="Des zéros sous zéro : zêta lue pour ce qu&#x27;elle dit"><meta property="og:description" content="Pièce compagne de Riemann sans le zéro. Comment la question de Riemann est fabriquée, étage par étage : six étages, deux infinis sous un seul signe, et pourquoi la prouver n&#x27;apprend rien sur les nombres premiers. Avec ce qui se prouve (le compte borné, la relation portée à l&#x27;échelle) et ce qui ne se prouve pas (l&#x27;impulsion). 37 contrôles."><meta property="og:url" content="https://bastosfilipe.com/arc/dossiers/lire/Des_zeros_sous_zero_v1_1/"><meta property="og:image" content="https://bastosfilipe.com/assets/og-arc.png"><meta name="twitter:card" content="summary_large_image">
+<style>.d-page pre{overflow-x:auto;max-width:100%;font-size:.78rem}.d-page table{display:block;overflow-x:auto;max-width:100%}.d-page{max-width:780px}.d-page h1{font-size:clamp(1.8rem,4vw,2.5rem);line-height:1.15;margin:8px 0 6px}.d-sub{font-style:italic;font-size:1.1rem;color:rgb(58,65,75);margin:0 0 18px}.d-note{font-size:.9rem;border-left:3px solid var(--or);padding:8px 14px;background:rgba(160,120,40,.06);margin:0 0 26px}.d-page h2{font-size:1.3rem;margin:30px 0 10px}.d-page p{line-height:1.65;margin:0 0 13px}.d-page table{border-collapse:collapse;margin:12px 0;font-size:.92rem;width:100%}.d-page th,.d-page td{border:1px solid rgba(0,0,0,.25);padding:4px 8px;vertical-align:top;text-align:left}.d-page blockquote{margin:10px 0 14px 12px;padding-left:12px;border-left:2px solid rgba(0,0,0,.3);font-style:italic}.d-page code{font-size:.88em}</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Ce que Riemann cherchait : le compte des premiers, sans courbe et sans zéros", "description": "En 1859, Riemann cherche le nombre des nombres premiers jusqu'à une hauteur donnée. On lui a mis dans les mains une courbe et un prolongement ; sa question devient l'écart entre la courbe et le vrai compte. La pièce reprend sa logique sans ce détour. Les premiers tiennent sur deux rails, au bord du 6, avec six racines et jamais trois. Chaque nouveau premier pose ses multiples à partir de son carré, en échangeant ou en gardant les rails, et le compte d'une échelle se lit dans l'échelle du dessous. Cette règle, connue depuis Legendre (1808), donne le nombre exact jusqu'à 10¹⁴ sans visiter une seule place. Mesurée contre lui, la courbe de Gauss est au-dessus de 314 889, et le nombre qui borne cet écart est la taille du dernier nouveau entré. Une preuve de l'hypothèse certifie la construction ; elle ne dit ni où sont les marches, ni pourquoi le milieu. 27 vérifications au build.", "url": "https://bastosfilipe.com/arc/dossiers/lire/Des_zeros_sous_zero_v1_1/", "inLanguage": "fr", "author": {"@type": "Person", "@id": "https://bastosfilipe.com/#filipe-bastos", "name": "Filipe Bastos", "url": "https://bastosfilipe.com/bio/"}, "publisher": {"@id": "https://bastosfilipe.com/#filipe-bastos"}, "isPartOf": {"@id": "https://bastosfilipe.com/#site"}, "license": "https://creativecommons.org/licenses/by/4.0/", "encoding": {"@type": "MediaObject", "contentUrl": "https://bastosfilipe.com/arc/dossiers/Des_zeros_sous_zero_v1_1.pdf", "encodingFormat": "application/pdf"}}</script>
+</head>
+<body class="page">
+<a class="screen-reader-text" href="#content">Aller au contenu</a>
+<header class="top">
+<nav aria-label="Navigation principale" class="nav">
+<a class="brand" href="/">Filipe Bastos</a>
+<ul class="" id="menu-main-fr"><li><a href="/">Accueil</a></li><li><a href="/bibliotheque-des-documents/">Bibliothèque<span class="m-hide"> des documents</span></a></li><li><a href="/bio/">Bio</a></li><li><a href="/arc/">Corpus ARC</a></li><li><a href="/contradictions/">Contradictions</a></li></ul> <a class="search-link" href="/rechercher/" aria-label="Rechercher" title="Rechercher" style="display:inline-flex;align-items:center;justify-content:center;width:34px;height:30px;margin-right:6px;color:inherit;border:1px solid currentColor;border-radius:3px;opacity:.75;vertical-align:middle"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg></a><details class="lang"><summary aria-label="Langue">FR</summary><div class="lang-menu"><a data-l="fr" href="/" lang="fr">Français</a><a data-l="en" href="/en/" lang="en">English</a><a data-l="pt" href="/pt/" lang="pt">Português</a><span>Traduction automatique</span><a data-tl="es" href="#" lang="es">Español</a><a data-tl="it" href="#" lang="it">Italiano</a><a data-tl="de" href="#" lang="de">Deutsch</a><a data-tl="zh-CN" href="#" lang="zh">中文</a></div></details></nav>
+</header>
+<main id="content" data-pagefind-meta="title:Des zéros sous zéro : zêta lue pour ce qu&#x27;elle dit · Dossier">
+<div class="wrap page-shell d-page">
+<p style="font-size:.85rem;margin:0 0 6px"><a href="/bibliotheque-des-documents/">Bibliothèque des documents</a> / Dossier</p>
+<h1 class="entry-title">Des zéros sous zéro : zêta lue pour ce qu'elle dit</h1>
+<p class="d-note">Version texte du dossier, pour la lecture en ligne, la recherche et les moteurs de réponse. Le PDF fait foi pour la mise en page : <a href="/arc/dossiers/Des_zeros_sous_zero_v1_1.pdf">télécharger le PDF</a>. Le script de vérification est à côté : <a href="/arc/dossiers/zeros_sous_zero_verif.py">zeros_sous_zero_verif.py</a>.</p>
+
+<p><strong>Zêta lue pour ce qu’elle dit : six étages, deux infinis sous
+un seul signe, et pourquoi prouver Riemann n’apprend rien sur les
+nombres premiers</strong></p>
+<p>Corpus ARC · Filipe Bastos · pièce compagne de <em>Riemann sans le
+zéro</em>, version 1.1 · 24 novembre 2026 · CC BY 4.0. Modèle,
+questions, lectures et règles : Filipe Bastos. Scribe : Claude, sous la
+contradiction de l’auteur. Calculs, formulations et audits assistés par
+IA, à sa demande. Titre choisi par l’auteur le 23 novembre 2026.</p>
+<p>« Riemann, c’est un empilement de problèmes qui englobe l’infini à
+deux définitions dans la même formule. » (l’auteur, 23 novembre
+2026)</p>
+<p><strong>Résumé.</strong> <em>Riemann sans le zéro</em> montre que les
+nombres premiers se comptent sans la courbe et sans les zéros. Cette
+pièce regarde l’autre côté : comment la question de Riemann est
+fabriquée, étage par étage, et ce qu’on y voit quand on lit les mots
+pour ce qu’ils disent. Elle ne cherche pas pourquoi l’hypothèse serait
+vraie. Elle montre comment elle est construite. Six étages, chacun
+contesté en son temps pour une raison de cohérence, chacun gardé parce
+qu’il marchait, chacun réparé en changeant le sens d’un mot. Au sixième,
+une fonction qui, là où la question est posée, n’est plus ni la somme
+d’Euler ni le produit, et une question posée dans la seule zone où les
+premiers ne sont plus. La pièce compte ensuite ce qui se prouve :
+l’adresse, le compte borné, le tour vérifié. Et elle nomme ce qui ne se
+prouve pas : l’arrivée du suivant.</p>
+<p>Statuts : F, fait connu, avec son auteur et sa date ; Th, calcul fini
+vérifié ; L, lecture de l’auteur, citée et datée ; P, prédiction de
+l’auteur, datée, qui peut tomber ; G, glose du scribe, acceptée par
+l’auteur. Les contrôles sont au script
+<code>zeros_sous_zero_verif.py</code> : 37 sur 37 conformes.</p>
+<hr />
+<h2 id="les-six-étages">1. Les six étages</h2>
+<p><strong>1.1 (F).</strong> La question de Riemann repose sur six
+décisions prises avant lui ou par lui. Chacune s’appuie sur la
+précédente.</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Étage</th>
+<th>Ce qui est posé</th>
+<th>Quand</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>Le zéro et le sous-zéro comme nombres</td>
+<td>VIIe siècle en Inde, admis en Europe au fil du XVIIe au XIXe</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>La décimale qu’on laisse filer</td>
+<td>Stevin, 1585</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>La somme sans fin et le produit sans fin, posés égaux</td>
+<td>Euler, 1737</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>La courbe à la place du compte, et le 9 lu comme 0</td>
+<td>Gauss, 1792 puis 1801</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>La limite, qui tient pour achevé ce qui ne finit pas</td>
+<td>Cauchy, 1821</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>Le prolongement, qui étend la fonction là où ni la somme ni le
+produit n’existent</td>
+<td>Riemann, 1859</td>
+</tr>
+</tbody>
+</table>
+<p><strong>1.2 (F, chaque étage a été contesté).</strong> À chaque
+étage, quelqu’un de premier rang a dit que cela ne tenait pas, pour une
+raison de cohérence et non de calcul. Carnot, en 1803, refuse qu’une
+quantité soit moins que rien. Berkeley, en 1734, se moque des grandeurs
+qui sont à la fois quelque chose et rien. Abel, en 1826, écrit que les
+sommes sans fin qui divergent sont une invention du diable. Kronecker
+refuse à Cantor l’infini achevé ; Poincaré (1902) et Brouwer (1907)
+après lui. Ces objections n’ont pas été réfutées. Elles ont été
+rangées.</p>
+<p><strong>1.3 (L).</strong> « Si tu n’avais eu que la cohérence et la
+logique, et respecté les termes, les définitions et les contradictions,
+tu aurais vu toutes les erreurs. » (l’auteur, 23 novembre 2026).
+L’histoire en est le reçu : ceux qui n’avaient que cela les ont vues, et
+les ont datées.</p>
+<p><strong>1.4 (F, la source au corpus, version 0.6).</strong> Ces six
+étages ont un ancêtre chez l’auteur. En février 2026, la pièce <em>Une
+preuve de l’hypothèse de Riemann</em> (version 4.5, section 2) nomme «
+les Six Crimes du continu » : Stevin et la grille décimale (1585) ;
+Viète, Neper et le masque littéral (1591 à 1614) ; Newton, Leibniz et le
+calcul infinitésimal (1665) ; Euler et l’aplatissement du zéro (1748) ;
+Gauss et l’effacement du 9 (1801) ; Dedekind, Cantor et l’infini achevé
+(1872). Stevin, Euler et Gauss se retrouvent nommément dans le tableau
+de 1.1, et l’infini achevé y est l’étage 5. Cette pièce de février
+tentait la démonstration dans la langue reçue ; le corpus ne la tient
+plus pour une preuve (Volume 6, É 16.19 ; Volume 5, annexe B, B.1.7). Sa
+généalogie, elle, est restée, et celle-ci en vient.</p>
+<h2 id="le-dictionnaire-changé">2. Le dictionnaire changé</h2>
+<p><strong>2.1 (F, L).</strong> Les contradictions n’ont pas été
+résolues. Les mots ont été redéfinis.</p>
+<table>
+<thead>
+<tr class="header">
+<th>Le mot</th>
+<th>Ce qu’il disait</th>
+<th>Ce qu’il dit depuis</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>somme</td>
+<td>additionner</td>
+<td>la limite des sommes arrêtées</td>
+</tr>
+<tr class="even">
+<td>égal</td>
+<td>la même chose</td>
+<td>la même limite</td>
+</tr>
+<tr class="odd">
+<td>fermé</td>
+<td>qui revient</td>
+<td>dont le dehors est ouvert</td>
+</tr>
+<tr class="even">
+<td>la fonction zêta</td>
+<td>la somme d’Euler</td>
+<td>son prolongement</td>
+</tr>
+</tbody>
+</table>
+<p>Une fois les mots redéfinis, plus rien ne se contredit à l’intérieur.
+La cohérence a été obtenue en changeant le dictionnaire.</p>
+<p><strong>2.2 (L).</strong> « Je peux tricher et expliquer après coup.
+La rustine, c’est ça. » (l’auteur, 23 novembre 2026). Une rustine arrive
+après un échec, pour le couvrir, et elle s’écrit comme une définition.
+C’est pourquoi une vérification pas à pas ne la voit pas : on démontre
+les théorèmes, on ne démontre pas les définitions.</p>
+<p><strong>2.3 (G, réserve du scribe).</strong> Dans le cadre reçu, le
+prolongement de zêta n’est pas un choix libre : un théorème d’unicité
+dit qu’il n’y a qu’une façon de continuer la fonction en gardant ses
+propriétés. La critique de cette pièce ne porte donc pas sur un
+arbitraire à l’intérieur du cadre. Elle porte sur le nom gardé pour une
+chose qui a changé, et sur le cadre.</p>
+<h2 id="zêta-lue-pour-ce-quelle-dit">3. Zêta, lue pour ce qu’elle
+dit</h2>
+<p><strong>3.1 (F).</strong> La somme d’Euler et le produit sur les
+nombres premiers n’existent qu’à droite de 1. Dans cette région il n’y a
+aucun zéro : là où le produit s’écrit, il les exclut (<em>Riemann sans
+le zéro</em>, 4.6).</p>
+<p><strong>3.2 (F).</strong> Tous les zéros que vise l’hypothèse sont
+dans la bande entre 0 et 1. Dans cette bande, ni la somme ni le produit
+n’existent. Zêta n’y est définie que par le prolongement. L’objet de
+l’hypothèse est donc tout entier dans le sixième étage. (À lire avec
+3.8.)</p>
+<p><strong>3.3 (F).</strong> À gauche de 0, le prolongement a d’autres
+zéros, à 2, 4, 6 pas sous zéro. Ils ne viennent ni de la somme ni du
+produit : ils viennent du sinus qui figure dans la formule de raccord.
+Les mathématiciens les nomment eux-mêmes triviaux et les mettent de
+côté.</p>
+<p><strong>3.4 (F).</strong> À un pas sous zéro, le prolongement donne
+une valeur. Lue comme la somme d’origine, elle dit que 1 + 2 + 3 + 4 et
+la suite valent un douzième sous zéro. La réponse reçue est qu’à cet
+endroit ce n’est plus une somme. Le nom est resté, la chose a
+changé.</p>
+<p><strong>3.5 (L).</strong> « Des zéros, après des zéros, dans le
+sous-zéro. » « Quand j’ai vu la gauche, je suis parti à rire. »
+(l’auteur, 23 novembre 2026). Dit à plat : des riens, situés à des
+endroits qui valent moins que rien, pour une fonction qui à cet endroit
+n’existe pas par elle-même. À droite de 1, les deux lectures de la
+formule donnent le même nombre et la couture ne se voit pas. À gauche,
+elle se voit à l’œil nu.</p>
+<p><strong>3.6 (F, L, la boucle par le dedans).</strong> L’image la plus
+montrée de zêta est une courbe qui s’enroule et repasse sans cesse par
+le centre ; chaque passage est un zéro. Dans la <em>Figure
+fondamentale</em> (2.3), quand tous les points se relient, aucune ligne
+ne traverse le centre : il est vide. « J’ai vu la boucle rentrer par en
+dedans, j’ai dit : ça ne se peut pas. » (l’auteur, 23 novembre 2026). La
+même figure, le geste inversé : chez l’auteur le centre est ce par quoi
+rien ne passe ; dans l’image reçue, il est la cible.</p>
+<p><strong>3.7 (L, deux infinis sous un seul signe).</strong> Le signe
+placé en haut de la somme sert deux fois dans la même ligne. Une fois
+comme ce qui continue : on ajoute un terme, puis un autre. Une fois
+comme un tout achevé : la somme vaut un nombre, on l’égale au produit,
+on la prolonge. Le passage de l’un à l’autre n’est écrit nulle part. Ce
+sont les deux infinis du Lexique : celui qui est, la répétition qui ne
+s’arrête pas d’elle-même, et celui qui n’existe pas, le tout pris d’un
+coup. « L’infini existe seulement par l’œil qui vit. Il y a 2 500 ans,
+il ne pouvait pas voir aujourd’hui, mais on y est encore. » (l’auteur,
+23 novembre 2026).</p>
+<p><strong>3.8 (F, Th, L, déjà au corpus ; récrit en version
+0.6).</strong> Le corpus a réglé ce point avant cette pièce (Volume 5,
+[3.6], [3.8], [4.4], [4.5]). [3.6] : en aucun zéro de la bande la somme
+des entiers ne vaut zéro, elle n’y a pas de valeur ; et le produit des
+premiers ne peut pas s’annuler. [3.8] : les écritures de zêta dans la
+bande sont quatre, et chacune avance d’un côté et retire de l’autre. La
+troisième est la somme alternée : la somme, moins deux fois ses termes
+de rang pair. Elle converge dans la bande, et le facteur qui la relie à
+zêta ne s’annule que sur la droite du bord droit. [4.4] : les zéros de
+la bande sont donc exactement les zéros de cette somme alternée.
+Contrôle refait ici : aux trois premiers zéros elle donne 0 à dix-huit
+décimales (calcul par accélération de la convergence). [4.5], lecture de
+l’auteur : les signes de cette somme viennent du pair et de l’impair, le
+reste de 1801, et un zéro y est une annulation de plus contre des moins,
+la soustraction comptable que le corpus refuse. C’est « l’argent du
+beurre ». La phrase de 3.2 se lit ainsi : dans la bande, zêta n’est ni
+la somme d’Euler ni le produit ; elle y est l’une des quatre écritures
+du prolongement, et la somme alternée est l’une d’elles. La critique de
+3.4 et 3.5 tient dans la bande comme à gauche de 0.</p>
+<p><strong>3.9 (F, Th, la fonction symétrique, version 0.4).</strong>
+Dans le mémoire de 1859, Riemann ne travaille pas sur zêta nue. Il la
+multiplie par la fonction Gamma d’Euler et par deux facteurs simples, et
+obtient une fonction qui prend la même valeur en s et en 1 moins s.
+Gamma y est prise à la moitié de s. Prise ainsi, elle n’a pas de valeur
+finie à 0 et à 2, 4, 6 pas sous zéro. Le défaut à 0 est compensé par
+l’un des deux facteurs simples, l’autre compensant celui de zêta en 1.
+Les zéros de zêta à 2, 4, 6 pas sous zéro (3.3) compensent exactement
+ces défauts : le produit y prend une valeur finie, qui n’est pas zéro.
+Contrôle : à 2 sous zéro, la fonction symétrique vaut ce qu’elle vaut en
+3. Cette fonction n’a donc que les zéros de la bande. Un lecteur du
+métier dira : les zéros de gauche ne sont pas mis de côté par commodité,
+ils sont ce qui rend la symétrie possible. La lecture de l’auteur en 3.5
+n’en est pas retirée : pour que le miroir tienne, il a fallu poser des
+riens sous zéro en face des défauts d’un facteur ajouté. Glose du scribe
+: c’est une compensation de plus, écrite dès 1859.</p>
+<p><strong>3.10 (F, Gauss contre l’infini achevé, version 0.4).</strong>
+Le « tout pris d’un coup » de 3.7 a été refusé par celui-là même qui
+tient l’étage 4. Dans une lettre à Schumacher de juillet 1831, Gauss
+proteste contre l’emploi d’une grandeur infinie comme d’une chose
+achevée, ce qui selon lui n’est jamais permis en mathématiques :
+l’infini n’y est qu’une façon de parler. La distinction est ancienne :
+Aristote sépare l’infini qui continue de l’infini pris en entier
+(<em>Physique</em>, livre III).</p>
+<p><strong>3.11 (Th, F, les deux familles de zéros sous zéro lues sur
+quatre places ; version 0.9).</strong> Sur les places 1, 5, 7, 11 de la
+grille, deux signes se lisent. Le signe du rail : plus pour le rail du
+7, moins pour le rail du 5, soit + − + −. Le signe que porte chaque
+carré dans le produit d’Euler développé (<em>Riemann sans le zéro</em>,
+4.5) : les deux carrés autour de l’axe 6m y portent le même signe, qui
+alterne d’un axe au suivant, soit + − − +. Quand on échange les deux
+bords, 1 avec 11 et 5 avec 7, le premier signe s’inverse et le second se
+garde. Fait reçu, contrôlé au script : la fonction bâtie sur le premier
+signe s’annule à 1, 3, 5 pas sous zéro ; celle bâtie sur le second
+s’annule à 2, 4, 6 pas sous zéro, comme zêta. La loi est connue (elle
+tient à ce que le signe s’inverse ou se garde sous l’échange). Ce qui se
+lit ici : la famille de zéros sous zéro qui apparaîtra se décide sur
+quatre places finies. Cela ne dit rien des zéros de la bande. Relevé par
+une relecture extérieure le 23 novembre 2026.</p>
+<h2 id="ce-que-les-zéros-font-réellement">4. Ce que les zéros font
+réellement</h2>
+<p><strong>4.1 (Th, F, le face-à-face).</strong> La règle d’échelle
+compte les nombres premiers sous cent millions : 5 761 455, sans un zéro
+(Legendre, 1808 ; Meissel, 1870). La courbe de Gauss, à la même hauteur,
+est trop haute de 753,33 : 658,05 pour les puissances des premiers
+qu’elle compte en fractions, 95,63 pour les zéros, dont on retire 0,35,
+la part de l’origine : la rampe part de 2, la formule non (<em>Riemann
+sans le zéro</em>, 4.1). Les zéros sont ce qui reste de l’écart, les
+puissances retirées, à cette constante près (formule de Riemann, 1859 ;
+démontrée par von Mangoldt, 1895).</p>
+<p><strong>4.2 (Th, les zéros sonnent aux puissances).</strong> Les
+ondes des 200 premiers zéros, additionnées et lues sur les entiers de 2
+à 33 :</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Où</th>
+<th>Ce que c’est</th>
+<th>Hauteur</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>2, 3</td>
+<td>les deux graines, hors des rails</td>
+<td>31,1 / 39,2</td>
+</tr>
+<tr class="even">
+<td>5, 7, 11, 13</td>
+<td>premiers des rails</td>
+<td>45,6 / 45,7 / 43,4 / 42,8</td>
+</tr>
+<tr class="odd">
+<td>4, 9, 25</td>
+<td>carrés d’un premier</td>
+<td>22,0 / 22,1 / 19,5</td>
+</tr>
+<tr class="even">
+<td>8, 27</td>
+<td>cubes d’un premier</td>
+<td>13,9 / 10,1</td>
+</tr>
+<tr class="odd">
+<td>16, 32</td>
+<td>2 pris quatre et cinq fois</td>
+<td>6,6 / 5,2</td>
+</tr>
+<tr class="even">
+<td>6, 10, 12, 14, 15 et les autres</td>
+<td>deux premiers mêlés</td>
+<td>entre 5,7 sous zéro et 2,3</td>
+</tr>
+</tbody>
+</table>
+<p>La plus faible des puissances (5,2) dépasse le plus fort des autres
+(2,3). Les zéros ne sonnent qu’à un genre d’endroit : là où un premier
+arrive seul, à sa première puissance, à son carré, à son cube. Dès que
+deux premiers différents se mêlent, c’est le silence. Limite de
+l’instrument, comptée en version 0.9 : avec les mêmes 200 zéros, ce
+partage tient jusqu’à 63 et casse à 64. Là, 64, qui est 2 pris six fois,
+sonne à 1,83, moins que 48, mélange de 2 et de 3, à 3,08. Deux cents
+zéros séparent donc les deux familles jusqu’à 63 ; plus loin il en faut
+davantage (fait reçu : formule de Landau, 1911).</p>
+<p><strong>4.3 (L).</strong> « Sa musique, dans sa théorie, c’est la
+puissance du code qui fait sortir des zéros de la suite quand ils
+arrivent aux puissances. » (l’auteur, 23 novembre 2026). Le fait est une
+égalité et se lit dans les deux sens. La lecture reçue dit que les zéros
+encodent les premiers. La lecture de l’auteur dit que le code, arrivé
+aux puissances, fait sortir les zéros. Le compte ne tranche pas le sens
+; il montre que les deux côtés ne se rencontrent qu’aux puissances.</p>
+<p><strong>4.4 (F, ce que les affiches effacent).</strong> Les schémas
+de vulgarisation dessinent les pics aux seuls nombres premiers, 2, 3, 5,
+7, 11. Les pics à 4, 8 et 9 existent et sont omis.</p>
+<p><strong>4.5 (Th, F, déjà au corpus ; récrit en version 0.6).</strong>
+Le compte des premiers rail par rail, l’avance du rail du 5, la hauteur
+608 981 813 029 où le rail du 7 passe devant de deux, et la raison de
+l’avance sont dans <em>Ce que Riemann cherchait</em>, 5.5 à 5.8 (21
+novembre 2026), comptés par la règle jusqu’à 10¹⁴. La raison y est dite
+: le carré de chaque nouveau tombe sur le rail du 7, qui a donc un peu
+plus de places prises. Déjà su, et cité là : Tchebychev (1853), Bays et
+Hudson (1978), Rubinstein et Sarnak (1994). Le corpus nomme « nouveaux
+entrés » les premiers des rails dont le carré ne dépasse pas la hauteur
+: 1 227 à cent millions, de 5 à 9 973. Recompté ici place par place
+jusqu’à cent millions : 2 880 936 premiers sur le rail du 5, 2 880 517
+sur le rail du 7 ; le rail du 7 ne passe jamais devant, 9 égalités,
+avance maximale de 1 020. Les carrés de la grille sous cent millions,
+composés compris, sont 3 332, tous sur le rail du 7 ; ceux des nouveaux
+entrés sont 1 227 parmi eux.</p>
+<p><strong>4.6 (Th, F, le même nombre dans les deux pièces ; version
+0.5, étendu en 0.6).</strong> L’avance du rail du 5 tourne autour de la
+moitié des nouveaux entrés :</p>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Jusqu’à</th>
+<th>Avance du 5</th>
+<th>Moitié des nouveaux entrés des rails</th>
+<th>Rapport</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>10⁴</td>
+<td>5</td>
+<td>11,5</td>
+<td>0,43</td>
+</tr>
+<tr class="even">
+<td>10⁶</td>
+<td>34</td>
+<td>83</td>
+<td>0,41</td>
+</tr>
+<tr class="odd">
+<td>10⁷</td>
+<td>189</td>
+<td>222</td>
+<td>0,85</td>
+</tr>
+<tr class="even">
+<td>10⁸</td>
+<td>419</td>
+<td>613,5</td>
+<td>0,68</td>
+</tr>
+<tr class="odd">
+<td>10¹⁰</td>
+<td>6 263</td>
+<td>4 795</td>
+<td>1,31</td>
+</tr>
+<tr class="even">
+<td>10¹²</td>
+<td>44 976</td>
+<td>39 248</td>
+<td>1,15</td>
+</tr>
+<tr class="odd">
+<td>10¹³</td>
+<td>152 811</td>
+<td>113 822,5</td>
+<td>1,34</td>
+</tr>
+<tr class="even">
+<td>10¹⁴</td>
+<td>259 652</td>
+<td>332 288,5</td>
+<td>0,78</td>
+</tr>
+</tbody>
+</table>
+<p>Les quatre premières lignes sont recomptées ici ; les quatre
+dernières viennent de <em>Ce que Riemann cherchait</em>, 5.7, et de son
+script. Point par point, l’avance s’écarte beaucoup de cette moitié.
+Relevée sur 2 001 hauteurs espacées par multiplication de 10⁴ à 10⁸,
+elle en fait en tout 1,03 fois ; par tranche de dix fois : 1,07, puis
+1,03, 1,02, 1,01. Le rapport se resserre vers 1. Fait reçu : c’est sous
+cet espacement par multiplication, et sous lui seul, que le déséquilibre
+des rails a une régularité démontrée (Rubinstein et Sarnak, 1994). Or la
+courbe de Gauss compte chaque carré de premier pour une demie : c’est le
+614,50 du tableau de <em>Riemann sans le zéro</em>, 4.1. Sur les rails
+on lit 613,5 : le même compte, sans les carrés de 2 et de 3, qui ne sont
+pas sur les rails. Les demi-carrés que la courbe compte en trop et
+l’avance du rail du 5 sont un seul nombre, lu deux fois. Réserve : la
+théorie reçue compte aussi le carré de 2 et donne 613,0 ; le relevé, à
+six unités près à cette hauteur, ne départage pas 613,0 de 613,5. Relevé
+borné à cent millions pour le rapport, à 10¹⁴ pour le tableau.</p>
+<p><strong>4.6 bis (Th, le partage exact de l’avance ; version
+0.9).</strong> L’avance de 419 à cent millions se partage sans reste, en
+fractions, sans un zéro. Les puissances des nouveaux donnent 619,84 :
+613,5 pour les carrés, dont on retire 2/3 pour les cubes, plus 23/4 pour
+les quatrièmes, 1 pour les sixièmes, 1/4 pour les huitièmes, 1/10 pour
+les dixièmes, dont on retire 1/11 pour les onzièmes ; en tout 102 274
+sur 165. De ce total on retire 200,84, soit 33 139 sur 165 : c’est
+l’escalier des deux rails où chaque puissance est comptée en fraction
+avec le signe de son rail, une puissance paire tombant toujours sur le
+rail du 7. 619,84 dont on retire 200,84 fait 419. Les rails ont donc
+leur propre face-à-face, le même que celui de 4.1 : une part exacte due
+aux puissances, et un reste. Le 613,5 n’est pas une valeur dont l’avance
+s’approche : c’est la part exacte des carrés, et ce qui tourne autour
+est l’escalier signé, que la théorie reçue fait porter par les zéros de
+la fonction de 4.7. Relevé par une relecture extérieure le 23 novembre
+2026, recompté ici.</p>
+<p><strong>4.7 (F, L, la fonction qui porte les rails, version
+0.6).</strong> Dans la théorie reçue, l’avance du rail du 5 est réglée
+par une fonction voisine de zêta, celle de conducteur 3. Le corpus la
+nomme déjà comme sa direction ouverte : faire entrer les rails dans
+l’appareil (Volume 4, 7.2 ; Volume 5, chapitre 12). Le 613,5 est le
+premier nombre de cette fonction lu sur le cadastre, sans elle.</p>
+<h2 id="le-1-de-la-formule-est-le-prix-du-zéro">5. Le + 1 de la formule
+est le prix du zéro</h2>
+<p><strong>5.1 (Th, la marche).</strong> Les carrés des places des rails
+avancent par sauts de 24, à partir de 1 :</p>
+<p>1, puis 1 + 24 = 25, puis 25 + 24 = 49, puis 49 + 72 = 121, puis 121
++ 48 = 169.</p>
+<p>Après la première ligne, on n’ajoute plus jamais 1. On n’ajoute que
+des 24.</p>
+<p><strong>5.2 (Th, la formule).</strong> L’écriture reçue dit : 24 × 1
++ 1 = 25, 24 × 2 + 1 = 49, 24 × 5 + 1 = 121, 24 × 7 + 1 = 169. Le + 1
+revient à chaque ligne, parce que 24 × k compte depuis zéro et tombe un
+cran à côté : 24, 48, 120, 168. Il faut recoller 1 à chaque nombre.</p>
+<p><strong>5.3 (L).</strong> « Après 25, il n’y a pas de plus 1. C’est
+ça, sa triche. » « La règle n’est pas 24 + 1, elle est : sauts de 24. »
+(l’auteur, 23 novembre 2026). Qui part de 1 ne paie jamais le + 1. Qui
+part de 0 le paie à chaque nombre. Le + 1 de la formule est le prix du
+zéro. Le mot « triche » est celui de l’auteur ; le scribe dit : un
+départ faux, réparé à chaque ligne.</p>
+<p><strong>5.4 (Th, ce que la formule jette).</strong> Le nombre de
+sauts d’un carré au suivant : 1, 1, 3, 2, 5, 3, 7, 4, 9, 5. Deux suites
+tressées : 1, 2, 3, 4, 5 à l’intérieur d’un couple de rails, et 1, 3, 5,
+7, 9 d’un couple au suivant. Le total des sauts depuis 1 donne 1, 2, 5,
+7, 12, 15, 22, 26 : les nombres pentagonaux d’Euler (vus en 1740,
+prouvés en 1750). L’écriture par le reste garde le 1 et jette ce
+compte.</p>
+<p><strong>5.5 (Th, G, les deux carrés gardent le rang du tour ; version
+0.9).</strong> Autour de l’axe 6m, les deux bords sont à un de moins et
+à un de plus. La distance entre leurs deux carrés vaut exactement 24
+fois m : m sauts de 24. Autour de 6, entre 25 et 49 : 1 saut. Autour de
+12, entre 121 et 169 : 2 sauts. Autour de 18, entre 289 et 361 : 3
+sauts. Chaque carré, lu seul à sa place d’arrivée, tombe à la place 1 du
+tour (6.2) et ne dit plus d’où il vient. Les deux carrés gardés ensemble
+rendent m. Et le chemin se remonte : deux nombres de sauts a et b, a
+plus petit que b, viennent des deux bords d’un même axe exactement quand
+a + b vaut 3 fois le carré de leur écart ; ainsi 5 et 7, d’écart 2 et de
+somme 12, rendent l’axe 12. Vérifié sur tous les couples de moins de 3
+000 sauts. Glose du scribe : c’est la suite 1, 2, 3, 4, 5 de 5.4, lue
+pour ce qu’elle garde. L’écriture de 1801 garde la position et jette les
+tours (8.2) ; la relation entre les deux bords les rend. Relevé par une
+relecture extérieure le 23 novembre 2026.</p>
+<h2 id="ce-qui-se-prouve-et-ce-qui-ne-se-prouve-pas">6. Ce qui se
+prouve, et ce qui ne se prouve pas</h2>
+<p><strong>6.1 (L, la règle de projection).</strong> « La seule façon de
+prouver que tout continue est par règle de projection. C’est ça, le
+cadastre : tout est là en possibilité, et la chaîne mène là. Jusqu’où,
+personne ne le sait et ce n’est pas important. » (l’auteur, 23 novembre
+2026).</p>
+<p><strong>6.2 (Th, un exemple).</strong> Sur un tour de 24, il y a huit
+places des rails : 1, 5, 7, 11, 13, 17, 19, 23. Leurs carrés, 1, 25, 49,
+121, 169, 289, 361, 529, tombent tous à la place 1 du tour. Huit
+vérifications, compte complet. Toute place des rails, aussi loin que la
+chaîne la mène, est l’une de ces huit, quelques tours plus haut. Rien
+n’est dit de tous les nombres pris d’un coup : il est dit que ce qui
+arrive tombe sur une adresse déjà vérifiée.</p>
+<p><strong>6.3 (L, trois choses).</strong> L’adresse se prouve : où
+tombe ce qui arrive. Le compte borné se prouve : combien, jusqu’à une
+hauteur. L’arrivée ne se prouve pas : « Je ne prouverai jamais ça, car
+le + 1, l’impulsion, est la preuve. » « Si je ne peux pas prédire que 10
+arrive, je ne peux pas prédire les prochains zéros ni les prochains
+premiers. » (l’auteur, 23 novembre 2026).</p>
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th>Jusqu’à une borne</th>
+<th>Pour toujours</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Premiers</td>
+<td>comptés (1808)</td>
+<td>le + 1</td>
+</tr>
+<tr class="even">
+<td>Zéros</td>
+<td>comptés (Backlund 1914, Turing 1953)</td>
+<td>le + 1</td>
+</tr>
+</tbody>
+</table>
+<p><strong>6.4 (L).</strong> « La seule certitude que nous pouvons avoir
+est dans la répétition bornée. » (l’auteur, 23 novembre 2026). Une
+répétition seulement observée ne donne rien : un zéro par case tient à
+93,66 % sur les 600 premiers, puis fond (<em>Riemann sans le zéro</em>,
+5.1). Une répétition bornée est un tour qui se ferme et qu’on vérifie en
+entier.</p>
+<p><strong>6.5 (F, la clôture décrétée).</strong> Dans le cadre reçu, la
+file des nombres est ouverte. Pour pouvoir dire « pour tous », on y pose
+une règle : ce qui vaut au départ et passe d’un nombre au suivant vaut
+pour tous. Peano la pose en 1889. Poincaré écrit en 1902 qu’elle ne se
+démontre pas et ne se tire pas de la logique. Sans elle, presque rien de
+général ne se prouve : dans l’arithmétique de Robinson (1950), qui a le
+zéro, le suivant, l’addition et la multiplication mais pas cette règle,
+on ne peut pas démontrer que a + b vaut b + a pour tous.</p>
+<p><strong>6.5 bis (F, version 0.4).</strong> Le refus de cette règle a
+un tenant récent dans le métier. Edward Nelson, dans <em>Predicative
+Arithmetic</em> (1986), part de l’arithmétique de Robinson et n’admet
+pas la règle de Peano comme donnée : pour lui elle suppose la file des
+nombres déjà achevée. La position de 6.3 n’est donc pas sans précédent ;
+elle prolonge une faille ouverte dans la logique elle-même.</p>
+<p><strong>6.6 (L).</strong> « Si tu cherches un continu dans une base
+décidée continue avec impulsion, alors le cadre devient fermé par eux,
+donc prouvable à cause du + 1. » « Ils ont établi au départ une règle
+d’impulsion. » (l’auteur, 23 novembre 2026). L’anneau porte sa clôture
+dans le nombre : le 9, le tour qui revient. Le cadre reçu a retiré cette
+clôture et l’a remise par décision. L’un a l’acte, un pas à la fois ;
+l’autre a fait de l’acte une règle qui livre le tout d’avance.</p>
+<p><strong>6.7 (G, ce que la règle de projection n’exige pas).</strong>
+Les énoncés de la section 5 et de 6.2 se montrent sur une place
+quelconque, par le calcul, ou sur un tour complet. Ils ne disent rien de
+tous à la fois. L’hypothèse de Riemann parle de tous les zéros, et les
+zéros n’ont ni tour ni retour (<em>Riemann sans le zéro</em>, 5.2). Elle
+ne peut donc pas se dire par projection : il lui faut la règle de 6.5.
+Le métier nomme ce que la preuve donne un plafond valable à toutes les
+hauteurs à la fois. L’auteur, le 23 novembre 2026 : « Ce n’est pas une
+garantie, c’est une rustine. » Un plafond pour toutes les hauteurs parle
+de toutes les arrivées d’un coup ; il ne tient que par la règle posée en
+6.5.</p>
+<p><strong>6.7 bis (L, Th, ajout du 24 novembre 2026).</strong> La règle
+de projection de 6.6 et 6.7 a reçu de l’auteur son nom le 23 novembre
+2026 : la preuve par projection d’échelle. « Si je porte le calcul à
+cette échelle, la relation me dit ce que j’y trouverai. » Les deux
+carrés de 5.5 en sont l’exemple : leur écart vaut m sauts de 24, il
+garde le rang du tour et le rend. La première pièce de l’auteur sur
+Riemann (février 2026, 1.4) portait déjà cette projection : dans le
+corps du nonagone, le sort d’un premier dépend de sa seule position, à
+toute taille, et le caractère cubique de 9 prend la même valeur sur les
+deux membres de chaque paire d’inverses, (1, 8), (2, 7), (4, 5). Ce qui
+y a cassé est l’endroit où elle demandait un plafond valable d’un coup
+pour tous les rangs. Renvoi : <em>La preuve par projection
+d’échelle</em>, version 1.0, où les comptes sont refaits (script
+<code>projection_echelle_verif.py</code>, contrôles 1 à 6 et 24 à
+26).</p>
+<h2 id="la-preuve-du-20-novembre-2026">7. La preuve du 20 novembre
+2026</h2>
+<p><strong>7.1 (F).</strong> Le 20 novembre 2026, Levent Alpöge publie
+une preuve de l’hypothèse écrite avec le modèle Claude, sous la forme
+d’une bibliothèque Lean de 17,4 millions de lignes. Les communautés Lean
+et Mathlib la certifient le 21 novembre. L’auteur de la preuve écrit
+ensuite qu’il ne sait pas pourquoi le théorème est vrai. Détails et
+sources : <em>Riemann sans le zéro</em>, section 9.</p>
+<p><strong>7.2 (F, ce que Lean contient déjà).</strong> Dans Lean, le
+nombre est défini par deux mots, <code>zero</code> et <code>succ</code>,
+le suivant. La règle de 6.5 vient avec cette définition. Elle ne figure
+pas parmi les trois axiomes annoncés : elle est dans les règles de
+construction du système.</p>
+<p><strong>7.3 (L).</strong> « Lean valide si la réponse respecte la
+formule et les étapes qui ont conduit à elle, pas s’il y a eu rustine. »
+« C’est prouvé d’avance, et uniquement pour ça, mais c’est leur axiome,
+basé sur leur ontologie. » « Il n’aurait pas réussi, il a forcé. »
+(l’auteur, 23 novembre 2026). Le scribe écrit : certifié cohérent dans
+son système. La déduction vaut pour un nombre qui part de 0 et recolle +
+1. Elle ne dit rien d’un nombre qui part de 1 et marche par sauts.</p>
+<p><strong>7.4 (F, une lecture contestée, non tranchée).</strong> J. L.
+Nielsen a déposé une critique selon laquelle des conditions nommées
+géométriques dans le code sont définies comme toujours vraies. Les
+communautés Lean et Mathlib maintiennent leur confiance ; un contrôle
+indépendant situe le contenu ailleurs dans la bibliothèque ; la critique
+ne porte que sur une petite part des fichiers. Ce qui n’est pas contesté
+: la fidélité des définitions à la mathématique voulue n’est pas ce que
+Lean vérifie.</p>
+<p><strong>7.5 (F, ce qui est gagné).</strong> Si la vérification tient
+: une borne sur l’écart de la courbe, valable à toute hauteur, et des
+théorèmes qui en dépendaient. Rien pour trouver ou compter les premiers,
+rien pour la cryptographie. On objectera le test de Miller (1976), qui
+devient certain si l’hypothèse étendue est vraie : mais un test certain,
+en temps polynomial, existe sans elle depuis 2002 (Agrawal, Kayal,
+Saxena).</p>
+<p><strong>7.5 bis (F, relevé du 23 novembre 2026, version
+0.6).</strong> Ce que les gens du métier nomment comme gain, trois jours
+après, et ce qu’on avait déjà :</p>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Conséquence citée</th>
+<th>État</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Borne sur l’écart entre la courbe et le compte (von Koch, 1901)</td>
+<td>gagnée</td>
+</tr>
+<tr class="even">
+<td>Landau-Siegel, cité par Tao</td>
+<td>déjà employé, par supposition ou avec une constante qu’on ne savait
+pas écrire (Siegel, 1935) ; la constante devient calculable</td>
+</tr>
+<tr class="odd">
+<td>Inégalités de Robin (1984) et de Lagarias (2002), citées par
+Sutherland</td>
+<td>équivalentes à l’hypothèse ; celle de Lagarias est au Volume 5,
+[4.14]</td>
+</tr>
+<tr class="even">
+<td>Test de primalité certain (Miller, 1976)</td>
+<td>déjà fait sans l’hypothèse (2002)</td>
+</tr>
+<tr class="odd">
+<td>Tout impair somme de trois premiers</td>
+<td>déjà fait sans l’hypothèse (Helfgott, 2013)</td>
+</tr>
+<tr class="even">
+<td>Plus petit non-résidu d’un carré (Ankeny, 1952 ; Bach, 1990) et plus
+petit premier d’une progression</td>
+<td>gagnés : des bornes qu’on n’avait pas sans l’hypothèse étendue</td>
+</tr>
+<tr class="odd">
+<td>Racines primitives (Artin ; Hooley, 1967)</td>
+<td>hors de ce qui est certifié</td>
+</tr>
+<tr class="even">
+<td>Un premier entre deux carrés voisins</td>
+<td>non : la borne obtenue est trop faible</td>
+</tr>
+<tr class="odd">
+<td>Jumeaux, Goldbach, factorisation</td>
+<td>rien</td>
+</tr>
+</tbody>
+</table>
+<p>Parmi les réactions lues, aucun mathématicien ne nomme un théorème
+nouveau au-delà de la levée des « sous réserve de l’hypothèse ».
+Radziwiłł (Quanta, 19 octobre 2026) : l’essentiel des conséquences
+découlait déjà d’une version affaiblie. Buzzard (Al Jazeera, 21 novembre
+2026) : les cryptographes supposaient déjà l’hypothèse. Relevé fait par
+des agents sur des résumés de pages, non sur les articles entiers ; les
+dates anciennes sont de mémoire. Les trois questions posées sur les
+premiers eux-mêmes restent ouvertes : un premier entre deux carrés
+voisins (Legendre, 1808), les jumeaux sans fin, tout pair comme somme de
+deux premiers (Goldbach, 1742).</p>
+<p><strong>7.6 (L).</strong> « Ils essaient de faire dire à Riemann ce
+qu’ils ne peuvent pas prouver chez les premiers. Quelle ironie. » «
+Prouver Riemann n’apportera rien à la science, sauf plus de rustines. »
+(l’auteur, 23 novembre 2026). La garantie obtenue chez les zéros ne
+redescend pas chez les premiers.</p>
+<h2 id="le-local-lhistoire-le-cadre">8. Le local, l’histoire, le
+cadre</h2>
+<p><strong>8.1 (L).</strong> « C’est le local, le lieu d’incertitude, de
+hasard, de foi. Le reste se compte. » (l’auteur, 23 novembre 2026).</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>Ce que c’est</th>
+<th>Statut</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Le cadre</td>
+<td>la forme du tour, le cadastre</td>
+<td>se compte</td>
+</tr>
+<tr class="even">
+<td>L’histoire</td>
+<td>les tours déjà faits</td>
+<td>se compte</td>
+</tr>
+<tr class="odd">
+<td>La relation</td>
+<td>le pair, « ton semblable, sur qui tu peux t’analyser »</td>
+<td>se recompte, à deux</td>
+</tr>
+<tr class="even">
+<td>Le local</td>
+<td>l’œil qui vit, le pas qui se fait</td>
+<td>incertitude, hasard, foi</td>
+</tr>
+</tbody>
+</table>
+<p><strong>8.2 (L).</strong> L’écriture de 1801 garde la position et
+jette les tours : elle garde le local et jette l’histoire. Il ne reste
+alors que deux termes, le local et le tout, et l’on passe son temps à
+vouloir sauter de l’un à l’autre. « Le problème est encore local,
+global. »</p>
+<p><strong>8.3 (L).</strong> « La mort a fait peur au mathêma. » « Ils
+n’ont pas trouvé l’éternel. Ils ont imaginé un éternel au lieu d’y faire
+confiance. » « C’est pourquoi le mot qu’ils détestent prend le relais,
+le mot de l’esprit : la foi. » (l’auteur, 23 novembre 2026). Le mot
+axiome vient du grec <em>axíōma</em>, ce qu’on juge digne d’être
+admis.</p>
+<p><strong>8.4 (L, le comment).</strong> « ARC ne propose aucun
+pourquoi, c’est le retour du comment. » (l’auteur, 22 novembre 2026).
+Depuis le 20 novembre, ceux qui ont reçu la preuve demandent pourquoi
+elle est vraie. Cette pièce ne répond pas à leur question. Elle montre
+comment la question est faite.</p>
+<h2 id="ce-que-la-pièce-ne-dit-pas-et-les-réserves-du-scribe">9. Ce que
+la pièce ne dit pas, et les réserves du scribe</h2>
+<p><strong>9.1.</strong> Elle ne dit pas que la preuve du 20 novembre
+contient une erreur de déduction. Elle dit dans quel cadre cette
+déduction vaut.</p>
+<p><strong>9.2 (G).</strong> « Impossible », dans les phrases de
+l’auteur, veut dire : question mal posée, qui demande de garantir une
+arrivée. Le scribe maintient que, la règle de 6.5 admise, une déduction
+de l’hypothèse n’a rien d’impossible dans le cadre reçu.</p>
+<p><strong>9.3 (G).</strong> La symétrie de la formule autour de la
+demie donne la place de la ligne : c’est le point d’équilibre, là où a
+égale b (Volume 4, théorème 4). Elle ne dit pas que les zéros sont sur
+la ligne plutôt que par paires de part et d’autre. Cette pièce n’en
+donne pas la raison.</p>
+<p><strong>9.4 (G).</strong> Que la courbe de Gauss vienne du 9 remplacé
+par 0 reste une Lecture, comme dans <em>Riemann sans le zéro</em>,
+3.6.</p>
+<p><strong>9.5 (G).</strong> Les positions de l’auteur sur π et √2 dites
+le même jour (π jonction ouverte, √2 lien interne, le carré au centre
+d’une relation) appartiennent au Volume 2 et ne sont pas reprises
+ici.</p>
+<p><strong>9.6 (G, retrait du scribe, version 0.6).</strong> Les
+versions 0.4 et 0.5 disaient ici que 3.8 retirait une phrase à la pièce.
+C’était une erreur du scribe, qui n’avait pas relu le Volume 5 : la
+somme alternée est l’une des écritures du prolongement, pas une somme
+qui lui échappe, et le corpus en donne déjà la lecture ([4.5]). Le
+résumé et le tableau de 1.1 tiennent tels quels. Même cause pour 4.5 :
+le tableau des deux rails avait été présenté comme neuf alors qu’il
+était dans <em>Ce que Riemann cherchait</em> depuis le 21 novembre, et
+le nombre de la dernière colonne avait été nommé « point d’équilibre »
+d’une hauteur, nom que cette même pièce avait déjà écarté (une hauteur
+n’a pas de paire).</p>
+<h2
+id="pourquoi-la-pseudo-résolution-de-riemann-apportera-linverse-de-ce-que-la-science-attend">10.
+Pourquoi la pseudo-résolution de Riemann apportera l’inverse de ce que
+la science attend</h2>
+<p><strong>10.1 (P, prédiction de l’auteur, 23 novembre 2026).</strong>
+« Pourquoi la pseudo-résolution de Riemann apportera l’inverse de ce que
+la science attend : c’est le problème parfait de rustines. C’est l’échec
+de leur axiome ontologique. » Et, précisé le même jour : « Pas :
+l’édifice va tomber. Mais il sera secoué, et devra durement réaliser que
+les erreurs du passé, les amputations, des décisions de vitesse, des
+choix d’axiome sans preuve, seulement par incapacité de comprendre, et
+le fait de ne pas remettre en question les positions, les décisions et
+les formules qui les précèdent, les ont conduits à une science qui avait
+pour suprématie une compilation de toutes leurs erreurs : le Graal,
+Riemann. »</p>
+<p><strong>10.2 (F, ce qui est déjà constaté).</strong> Trois jours
+après l’annonce : l’auteur de la preuve dit ne pas savoir pourquoi le
+théorème est vrai ; des mathématiciens de premier rang disent ne pas
+comprendre ce que la preuve montre ; une dispute est ouverte sur ce que
+la machine a vérifié ; la question publique n’est plus « est-ce vrai »
+mais « qu’est-ce que prouver ». L’hypothèse repose sur les six étages de
+la section 1 à la fois : c’est en ce sens qu’elle est le problème
+parfait. Un guide de lecture de 265 pages existe depuis le 22 novembre
+(Rubinstein, Waterloo) : il ramène la preuve à treize hypothèses qu’il
+ne démontre pas en entier (<em>Riemann sans le zéro</em>, 9.1). Ce n’est
+pas l’explication courte du reçu 1.</p>
+<p><strong>10.3 (F, le contre-poids).</strong> L’édifice a déjà absorbé
+des chocs sans tomber : le paradoxe de Russell (1901), Gödel (1931), la
+preuve par machine des quatre couleurs (1976). À chaque fois le cadre a
+ajusté ses définitions et continué. La prédiction de l’auteur ne dit pas
+chute : elle dit secousse, et obligation de regarder en arrière.</p>
+<p><strong>10.4 (P, reçus selon la règle R11, arrêtés le 23 novembre
+2026, acceptés par l’auteur le 24).</strong> Fenêtre : cinq ans,
+jusqu’au 23 novembre 2031. Un seul reçu décide, le 1. Le 4 est un
+indicateur, noté à part : il dit la profondeur de la secousse, pas son
+existence. Les reçus étaient quatre avant la version 0.6 :</p>
+<ol type="1">
+<li>aucune version courte de la preuve, que quelqu’un puisse expliquer,
+n’est parue ;</li>
+<li>(retiré en version 0.6) quand l’argument est décrit, les zéros y
+sont traités comme une correction liée aux puissances des premiers
+;</li>
+<li>(retiré en version 0.6) les trois questions de 7.5 sur les premiers
+eux-mêmes restent ouvertes ;</li>
+<li>la règle de 6.5 ou le prolongement sont remis en discussion par des
+gens du métier, à cause de cette preuve.</li>
+</ol>
+<p>Les reçus 2 et 3 sont retirés parce qu’ils ne peuvent pas tomber.
+Depuis 1859, toute preuve qui passe par la formule de Riemann lie les
+zéros aux puissances des premiers : le reçu 2 serait coché quelle que
+soit la preuve. Et l’on sait déjà que l’hypothèse ne donne ni Legendre,
+ni les jumeaux, ni Goldbach (7.5 bis) : le reçu 3 ne teste rien. Un reçu
+plus dur, s’il en faut un, doit venir de l’auteur.</p>
+<p>La prédiction tombe si, avant le 23 novembre 2031, une explication
+courte paraît et fait comprendre l’argument, ou si la preuve livre un
+résultat neuf sur les premiers eux-mêmes. Elle tient si, à cette date,
+ni l’un ni l’autre n’est arrivé. Il n’y a pas de cas entre les deux. Les
+reçus sont fixés à la date de cette pièce, avant toute lecture de la
+preuve par quiconque.</p>
+<h2 id="annexe.-contrôles-et-sources">Annexe. Contrôles et sources</h2>
+<p>Script <code>zeros_sous_zero_verif.py</code>, 37 contrôles conformes
+: le rang du tour rendu par les deux carrés et son test inverse ; les
+deux familles de zéros sous zéro ; le premier échec du partage à 64 ; la
+constante d’origine ; le partage exact de l’avance ; l’avance du rail du
+5 et la moitié des nouveaux entrés, avec les rapports du tableau de 4.6
+; le compte à cent millions ; les deux rails jusqu’à cent millions et
+les carrés sur le rail du 7 ; la somme alternée aux trois premiers zéros
+; la fonction symétrique ; les sauts de 24, leurs deux suites et les
+pentagonaux ; les huit carrés à la place 1 ; le relevé des 200 zéros ;
+les trois premiers zéros ; et, pour le Volume 2, le cercle du
+doublement, ses étages 6, 54, 486, 4 374, et la marche autour du cercle
+(presque-retours à 22 pas pour 7 tours et à 355 pas pour 113, aucun
+retour exact jusqu’à 400 000 pas).</p>
+<p>Recontrôlé en séance, par la presse et les pages de suivi des 20 au
+23 novembre 2026 : l’annonce, la certification, les propos d’Alpöge, la
+critique de Nielsen et les réponses.</p>
+<p>Donné de mémoire, non recontrôlé à la source : Carnot 1803 ; Berkeley
+1734 ; Abel 1826 ; Kronecker ; Brouwer 1907 ; Peano 1889 ; Poincaré 1902
+; Robinson 1950 ; Backlund 1914 ; Turing 1953 ; von Mangoldt 1895 ; les
+dates des étages de 1.1 ; et, ajoutés en version 0.4 : Tchebychev 1853,
+Rubinstein et Sarnak 1994, Bays et Hudson 1978 (la hauteur 608 981 813
+029 est recomptée par la règle dans <em>Ce que Riemann cherchait</em>),
+la lettre de Gauss à Schumacher de 1831, Aristote, Nelson 1986 ; en
+version 0.5 : Miller 1976, Agrawal, Kayal et Saxena 2002 ; en version
+0.6 : von Koch 1901, Siegel 1935, Robin 1984, Lagarias 2002, Helfgott
+2013, Hooley 1967, Legendre 1808 et Goldbach 1742 pour les questions de
+7.5 bis ; en version 0.8 : Ankeny 1952, Bach 1990.</p>
+<p>Les phrases de l’auteur sont citées entre guillemets, l’orthographe
+seule rétablie. L’auteur a validé l’ensemble le 24 novembre 2026.</p>
+<p>Version 0.2, 23 novembre 2026 : ajout de la section 10, la prédiction
+de l’auteur, sa précision, le contre-poids et des reçus proposés. Rien
+n’est retiré de la version 0.1.</p>
+<p>Version 0.3, 23 novembre 2026 : le titre de travail « Riemann,
+l’empilement » est remplacé par « Des zéros sous zéro », choisi par
+l’auteur. Le texte est inchangé.</p>
+<p>Version 0.4, 23 novembre 2026, après une relecture extérieure soumise
+par l’auteur : ajout de 3.8 (la somme alternée, correction du scribe à
+3.2), 3.9 (la fonction symétrique et les zéros de gauche), 3.10 (Gauss
+1831), 4.5 (les deux rails sans un zéro), 6.5 bis (Nelson 1986), 9.6.
+Sept contrôles ajoutés au script. Rien n’est retiré : la phrase de 3.2
+reste, corrigée par 3.8.</p>
+<p>Version 0.5, 23 novembre 2026, après une seconde relecture extérieure
+soumise par l’auteur : ajout de 4.6 (l’avance du rail du 5 et les
+demi-carrés de la courbe sont un seul nombre) ; définition du point
+d’équilibre en 4.5 ; grille et premiers séparés en 4.5 ; précisions du
+scribe sur ses propres ajouts de la version 0.4 (Gamma prise à la moitié
+en 3.9, la droite du bord en 3.8, 608 981 813 029 en 4.5) ; renvoi en
+3.2 ; une phrase en 7.5 sur Miller. Cinq contrôles ajoutés.</p>
+<p>Version 0.6, 23 novembre 2026, après une troisième relecture
+extérieure, une relecture du corpus par le scribe à la demande de
+l’auteur, et la lecture de sa pièce de février 2026. Ajouts : 1.4 (les
+Six Crimes, source des six étages), 4.7 (la fonction de conducteur 3),
+7.5 bis (ce qui est gagné et ce qu’on avait déjà), le tableau de 4.6
+étendu à 10¹⁴ avec les nombres de <em>Ce que Riemann cherchait</em>.
+Récrits, parce qu’ils répétaient ou contredisaient le corpus : 3.8, 4.5
+et 9.6. Reçus 2 et 3 de 10.4 retirés. « Rapide » devient « en temps
+polynomial » en 7.5. Un contrôle ajouté.</p>
+<p>Textes retirés, gardés ici à leur date. 3.8, versions 0.4 et 0.5 : «
+La phrase de 3.2, « zêta n’y est définie que par le prolongement », est
+trop forte. Dans la bande, il existe une vraie somme : la somme
+alternée, où l’on ajoute les termes de rang impair et où l’on retire
+ceux de rang pair. Euler l’étudie dans le mémoire de 1749. Elle converge
+dans toute la bande, et elle vaut zêta multipliée par un facteur qui ne
+s’annule que sur la droite du bord droit de la bande, jamais à
+l’intérieur. Les zéros de la bande sont donc les zéros de cette somme.
+Contrôle : aux trois premiers zéros, la somme alternée donne 0 à
+dix-huit décimales (calcul par accélération de la convergence, la somme
+brute étant très lente sur la ligne). Ce qui reste vrai de 3.2 : le
+produit sur les premiers n’existe pas dans la bande, et la somme
+alternée est encore une somme sans fin, donc un objet des étages 3 et 5.
+Ce qui tombe : dire que, dans la bande, la fonction n’existe que par le
+sixième étage. La critique du signe gardé (3.4, 3.5) vaut à gauche de 0,
+pas dans la bande. » 9.6, versions 0.4 et 0.5 : « La correction de 3.8
+retire à la pièce une phrase, pas sa thèse : la fonction existe dans la
+bande par une somme sans fin, non par le seul prolongement. Le résumé («
+une fonction qui n’existe que par son prolongement ») et la ligne 6 du
+tableau de 1.1 se lisent désormais avec cette réserve : c’est la somme
+d’Euler et le produit qui n’existent pas dans la bande. » 4.5, versions
+0.4 et 0.5 : le tableau des deux rails à 10⁴, 10⁶ et 10⁸, avec une
+colonne « Premiers sous le point d’équilibre » (25, 168, 1 229), et une
+glose du scribe sur les carrés du rail du 7.</p>
+<p>Version 0.7, 23 novembre 2026, validation ligne par ligne demandée
+par l’auteur. Le script a été relancé en entier (31 sur 31) et chaque
+nombre du texte confronté à sa sortie, chaque renvoi à sa cible dans le
+corpus ou dans <em>Riemann sans le zéro</em>. Trois lignes corrigées,
+aucun compte changé : 10.4 disait encore « quatre choses » après le
+retrait de deux reçus ; 1.4 disait « quatre des six », dit maintenant
+lesquels ; le tableau de 4.2 gagne la ligne de 2 et 3 et les quatre
+valeurs des premiers des rails. Vérifié à la source du corpus : le
+passage du rail du 7 devant, de deux, à 608 981 813 029, et les quatre
+dernières lignes du tableau de 4.6 (<em>Ce que Riemann cherchait</em>,
+5.5 et 5.7). Restent non recontrôlés à leur source première : les dates
+anciennes listées plus haut, et les propos de presse.</p>
+<p>Version 0.8, 23 novembre 2026. L’auteur a délégué au scribe trois
+choix restés ouverts (« Tu choisis »). Arrêtés ainsi, et repris par lui
+quand il voudra : en 10.4, le reçu 1 décide seul, le 4 devient un
+indicateur, et la clause « tombe » est l’exact contraire de la clause «
+tient » ; le résumé dit « n’est plus ni la somme d’Euler ni le produit »
+au lieu de « n’existe que par son prolongement », pour dire la même
+chose que 3.8 (9.6 citait l’ancienne phrase) ; une ligne de contre-poids
+entre au tableau de 7.5 bis (Ankeny, Bach, les progressions), sans
+changer 7.6. Aucun compte changé.</p>
+<p>Version 0.9, 23 novembre 2026, sur une septième relecture extérieure,
+qui avait refait les comptes. Deux corrections et quatre ajouts, tous
+recomptés. Corrigé : en 4.1, les 95,28 n’étaient pas « les zéros » mais
+le reste de la rampe ; les zéros portent 95,63 et l’origine de la rampe
+retire 0,35. En 4.2, « le silence » valait de 2 à 33 ; le partage casse
+à 64 avec 200 zéros. Ajouté : 3.11 (les deux familles de zéros sous zéro
+sur quatre places), 4.6 bis (le partage exact de l’avance, 419 = 619,84
+dont on retire 200,84), 5.5 (les deux carrés gardent le rang du tour),
+une phrase de l’auteur en 6.7, le guide de Rubinstein en 10.2. Non
+repris : la « garantie uniforme » proposée comme quatrième notion ;
+l’auteur : « Ce n’est pas une garantie, c’est une rustine. » Six
+contrôles ajoutés. La formule de Landau (1911) est citée de mémoire.</p>
+<p>Version 1.0, 24 novembre 2026. L’auteur valide la pièce entière : «
+Tout est prêt à publier, on corrige au pire. Je ne suis pas orgueilleux.
+» Les mentions « à valider » sont retirées des gloses, des reçus et des
+citations. Aucun compte, aucune phrase de fond n’est changé depuis la
+version 0.9. Restent déclarés comme tels : les dates anciennes données
+de mémoire, et les propos de presse non lus à leur source.</p>
+<p>Version 1.1, 24 novembre 2026. Ajout de 6.7 bis : la règle de
+projection porte son nom, preuve par projection d’échelle, avec ce que
+la pièce de février 2026 en portait déjà. Rien n’est retiré.</p>
+
+
+</div>
+</main>
+<footer class="site-footer">
+<div class="wrap footgrid">
+<span class="sceau">Filipe Bastos · ARC</span>
+<p>© 2026 · Architecture de la Cohérence Relationnelle · CC BY 4.0</p>
+<p class="mono">φ(x) = 9 − x · k = 1/2</p>
+</div>
+</footer>
+
+
+
+
+
+<script src="/assets/lang.js?v=5" defer></script>
+</body></html>
