@@ -178,5 +178,12 @@ big = 10**100 + 267   # entier de 101 chiffres ; sa position se lit sans le fact
 controle("28. un entier de 101 chiffres : position lue sur ses chiffres = position de 9k + r", dr(big) == (sum(map(int, str(big))) - 1) % 9 + 1, dr(big))
 controle("29. demi-envergure sur envergure = 1/2 pour chaque paire (x, 9 - x), x = 1 a 4",
          all(Fraction(9-2*x, 2) / (9-2*x) == Fraction(1, 2) for x in range(1, 5)))
+
+# 11. Le pli universel (Octet Rule, aout 2025) : la table de tout entier se plie en quatre paires
+controle("30. positions de ka et de (9-k)a : somme 9, ou 18 quand les deux sont 9, a = 1 a 10^5",
+         all(dr(k*a)+dr((9-k)*a) in (9, 18) for a in range(1, 10**5+1) for k in range(1, 5)))
+gros = 7 * 10**40 + 12345
+controle("31. meme pli pour un multiplicateur de 41 chiffres ; la table de 5 : 5,1,6,2,7,3,8,4,9",
+         all(dr(k*gros)+dr((9-k)*gros) in (9, 18) for k in range(1, 5)) and [dr(5*k) for k in range(1, 10)] == [5,1,6,2,7,3,8,4,9])
 print()
 print(f"{tot} controles, {ok} conformes")
