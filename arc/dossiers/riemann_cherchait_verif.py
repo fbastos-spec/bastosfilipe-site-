@@ -149,6 +149,30 @@ ok("V33 cinq nouveaux : jonction 85 085, axe 7801/17017, distance 5,028 de chaqu
 ok("V34 rangs des extremes sur le tour entier : 1 et 33 sur 35 ; 18 et 366 sur 385 ; 1 838 et 3 166 sur 5 005 ; 666 031 et 950 583 sur 1 616 615",
    [sorted((t[5],t[6])) for t in T.values()]==[[1,33],[18,366],[1838,3166],[666031,950583]])
 
+# etage de sept nouveaux (version 0.5) : compte vectoriel
+import numpy as _np
+_G=[5,7,11,13,17,19,23]; _M=prod(_G); _R=prod(g_-1 for g_ in _G)
+_k=_np.arange(1,_M+1,dtype=_np.int64); _a=_np.zeros(_M,dtype=bool); _b=_np.zeros(_M,dtype=bool)
+for g_ in _G:
+    _a|=((6*_k-1)%g_==0); _b|=((6*_k+1)%g_==0)
+_E=_np.cumsum(_a.astype(_np.int64)+_b.astype(_np.int64))*_M-2*(_M-_R)*_k
+_i=int(_E.argmax())+1; _j=int(_E.argmin())+1; _axe=F(_M-_R,_M)
+ok("V35 sept nouveaux : tour 37 182 145, axe 344263/676039 (au-dessus de la moitie), extremes aux rangs 15 705 670 et 21 476 474, distance 13,764 de chaque cote, somme = tour moins un, positions 15 et 19 sur 35 ; 94 234 019 pris par 11, 94 234 021 par 7, 94 234 025 par 5, 94 234 027 libre",
+   _M==37182145 and _axe==F(344263,676039) and _axe>F(1,2) and (_i,_j)==(15705670,21476474) and _i+_j==_M-1 and (_i%35,_j%35)==(15,19)
+   and round(float(F(int(_E[_i-1]),_M)-_axe),3)==13.764==round(float(_axe-F(int(_E[_j-1]),_M)),3) and int(_E[-1])==0
+   and 94234019%11==0 and 94234021%7==0 and 94234025%5==0 and all(94234027%g_ for g_ in _G))
+del _k,_a,_b,_E
+def miroir(G):
+    M=prod(G); t=[0]*(M+1)
+    for k in range(1,M+1): t[k]=any((6*k-1)%g_==0 for g_ in G)+any((6*k+1)%g_==0 for g_ in G)
+    if t[M]!=0 or any(t[k]!=t[M-k] for k in range(1,M)): return False
+    C=[0]*(M+1)
+    for k in range(1,M+1): C[k]=C[k-1]+t[k]
+    T=C[M]
+    return all((C[k]*M-T*k)+(C[M-1-k]*M-T*(M-1-k))==T for k in range(1,M-1))
+ok("V36 le miroir par retournement : le rang k et le rang M - k portent le meme nombre de places prises, le rang M aucune, et l'ecart au rang M - 1 - k est l'oppose de l'ecart au rang k par rapport a l'axe, a tous les rangs, pour deux, trois, quatre et cinq nouveaux",
+   all(miroir(G) for G in ([5,7],[5,7,11],[5,7,11,13],[5,7,11,13,17])))
+
 # ---------- 7. les huit triangles
 x=math.pi/4; c4=1-x**2/2+x**4/24-x**6/720
 ok("V24 au huitieme de tour, quatre termes de la somme d'Euler donnent 0,707103 pour 0,707107 ; par la figure les deux carres valent 1/2 chacun, et huit triangles font le carre inscrit, d'aire 2",

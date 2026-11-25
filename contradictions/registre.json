@@ -1,4 +1,77 @@
 {
  "note": "Registre public des contradictions. Une entrée : id, date, enonce, adresse, contradiction, preuve, auteur, statut (examen | corrigee | maintenue | retiree), reponse, date_reponse.",
- "entrees": []
+ "entrees": [
+  {
+   "id": "C-001",
+   "date": "2026-11-25",
+   "enonce": "Le 9 ≡ 0 de Gauss serait un « malentendu d'isomorphisme »",
+   "adresse": "Riemann sans le zéro, section 3 ; Des zéros sous zéro, étage 4",
+   "contradiction": "Écrire les restes de 0 à 8 ou de 1 à 9 serait un simple changement d'étiquettes dans le même objet ; la critique du modulo reposerait sur une confusion.",
+   "preuve": "",
+   "auteur": "Audit par une IA, transmis par l'auteur du corpus",
+   "statut": "maintenue",
+   "reponse": "La critique ne porte pas sur une étiquette ni sur un mauvais usage : elle porte sur la définition. Le modulo 9 est l'ensemble des entiers où l'on impose 9 = 0 ; 0, 9, 18 y sont un seul objet, et 3 × 3 y vaut 0. Question posée à l'auteur de l'objection : dans cet objet, peut-on distinguer 9 de 18 ? Sa réponse, le même jour : non, 9, 18 et 0 y sont un seul et même élément. L'objection est retirée par son auteur. Ce qui reste en discussion, et que le corpus marque Lecture (Riemann sans le zéro, 3.6) : le lien entre ce geste et les zéros de zêta. Accordé de notre côté : la division entière existe toujours à côté, et le modulo sert là où le tour n'importe pas.",
+   "date_reponse": "2026-11-25"
+  },
+  {
+   "id": "C-002",
+   "date": "2026-11-25",
+   "enonce": "Les « 250 000 pages » de la preuve annoncée",
+   "adresse": "Riemann sans le zéro, 9.1",
+   "contradiction": "La pièce donnait ce chiffre comme un fait.",
+   "preuve": "",
+   "auteur": "Audit par une IA, transmis par l'auteur du corpus",
+   "statut": "corrigee",
+   "reponse": "Contrôlé à la source : l'auteur de la preuve a écrit le 23 novembre que ce chiffre était une plaisanterie. Corrigé en version 1.3 ; l'ancienne phrase reste lisible dans la correction.",
+   "date_reponse": "2026-11-25"
+  },
+  {
+   "id": "C-003",
+   "date": "2026-11-25",
+   "enonce": "Une phrase prêtée au mauvais auteur",
+   "adresse": "Riemann sans le zéro, 9.5 ; Des zéros sous zéro, 7.1 et 10.2",
+   "contradiction": "« On ne sait pas pourquoi le théorème est vrai » était prêté à Alpöge.",
+   "preuve": "",
+   "auteur": "Audit par une IA, transmis par l'auteur du corpus",
+   "statut": "corrigee",
+   "reponse": "Contrôlé à la source : la phrase est de Kevin Buzzard. Corrigé dans les deux pièces, version 1.3.",
+   "date_reponse": "2026-11-25"
+  },
+  {
+   "id": "C-004",
+   "date": "2026-11-25",
+   "enonce": "Les positions 16 et 18 n'étaient pas une loi",
+   "adresse": "Ce que Riemann cherchait, 6.4",
+   "contradiction": "La pièce sautait le cas de cinq nouveaux, où les deux plus grands écarts tombent en 1 et 33 ; à sept nouveaux, ils tombent en 15 et 19.",
+   "preuve": "",
+   "auteur": "Audit par une IA, transmis par l'auteur du corpus",
+   "statut": "corrigee",
+   "reponse": "Recompté, exact. Corrigé en versions 0.4 et 0.5 : ce qui vaut à tout étage est le miroir (les deux rangs font le tour moins un), désormais montré par retournement. Reste ouvert : ce qui décide entre 1-33 et 16-18.",
+   "date_reponse": "2026-11-25"
+  },
+  {
+   "id": "C-005",
+   "date": "2026-11-25",
+   "enonce": "La critique de Nielsen serait « écartée »",
+   "adresse": "Des zéros sous zéro, 7.4",
+   "contradiction": "La pièce la disait « non tranchée » ; l'audit demandait de la dire close.",
+   "preuve": "",
+   "auteur": "Audit par une IA, transmis par l'auteur du corpus",
+   "statut": "maintenue",
+   "reponse": "Les sources lues ne portent pas « écartée » : un contrôle indépendant tient ses observations sur le code pour largement exactes et sa conclusion pour non établie, et un suivi du 24 novembre la donne encore pour non réglée. « Non tranchée » est maintenu, avec ce verdict ajouté (version 1.3).",
+   "date_reponse": "2026-11-25"
+  },
+  {
+   "id": "C-006",
+   "date": "2026-11-25",
+   "enonce": "« Divisé par 81 » au lieu de 8π",
+   "adresse": "Riemann sans le zéro, 9.2",
+   "contradiction": "Le texte copiable du PDF donnerait 81.",
+   "preuve": "",
+   "auteur": "Audit par une IA, transmis par l'auteur du corpus",
+   "statut": "maintenue",
+   "reponse": "Contrôlé : le PDF porte 8π, à l'affichage et dans son texte copiable. Rien à corriger.",
+   "date_reponse": "2026-11-25"
+  }
+ ]
 }
