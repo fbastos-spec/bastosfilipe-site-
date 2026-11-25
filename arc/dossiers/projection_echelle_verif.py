@@ -185,5 +185,27 @@ controle("30. positions de ka et de (9-k)a : somme 9, ou 18 quand les deux sont 
 gros = 7 * 10**40 + 12345
 controle("31. meme pli pour un multiplicateur de 41 chiffres ; la table de 5 : 5,1,6,2,7,3,8,4,9",
          all(dr(k*gros)+dr((9-k)*gros) in (9, 18) for k in range(1, 5)) and [dr(5*k) for k in range(1, 10)] == [5,1,6,2,7,3,8,4,9])
+
+# 12. Le flocon de Koch : cotes, perimetre, aire (en triangles de depart), rang rendu
+from math import log
+cot = [3*4**n for n in range(201)]
+controle("32. cotes 3, 12, 48, 192, 768 ; position 3 a tous les tours (n = 0 a 200)", cot[:5] == [3,12,48,192,768] and all(dr(c) == 3 for c in cot))
+per = [Fraction(3*4**n, 3**n) for n in range(5)]
+controle("33. perimetre 3, 4, 16/3, 64/9, 256/27 = 3(4/3)^n", per == [Fraction(3), Fraction(4), Fraction(16,3), Fraction(64,9), Fraction(256,27)] and all(per[n] == 3*Fraction(4,3)**n for n in range(5)))
+aire = [Fraction(1)]
+for n in range(1, 201): aire.append(aire[-1] + Fraction(3*4**(n-1), 9**n))
+controle("34. aire 1, 4/3, 40/27, 376/243, 3448/2187 ; ecart a 8/5 = (3/5)(4/9)^n exact, n = 0 a 200",
+         aire[:5] == [Fraction(1), Fraction(4,3), Fraction(40,27), Fraction(376,243), Fraction(3448,2187)]
+         and all(Fraction(8,5) - aire[n] == Fraction(3,5)*Fraction(4,9)**n for n in range(201)),
+         [str(Fraction(8,5)-aire[n]) for n in range(5)])
+controle("35. des le tour 2, cotes multiples de 24 : 2, 8, 32 sauts ; 3*4^n / 24 = 2*4^(n-2)", [cot[n]//24 for n in (2,3,4)] == [2,8,32] and all(cot[n] == 24*2*4**(n-2) for n in range(2, 201)))
+def rang(c):
+    n = 0; c //= 3
+    while c > 1: c //= 4; n += 1
+    return n
+controle("36. le nombre de cotes rend le rang du tour par partages par 4 (n = 0 a 200)", all(rang(cot[n]) == n for n in range(201)))
+d = log(4)/log(3)
+controle("37. log 4 / log 3 = 1,2619 ; log(4^n) / log(3^n) donne le meme nombre pour n = 1 a 50 : le rang s'en va",
+         abs(d - 1.2618595) < 1e-7 and all(abs(log(4**n)/log(3**n) - d) < 1e-12 for n in range(1, 51)), round(d, 7))
 print()
 print(f"{tot} controles, {ok} conformes")

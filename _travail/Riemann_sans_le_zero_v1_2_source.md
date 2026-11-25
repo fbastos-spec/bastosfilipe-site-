@@ -1,0 +1,336 @@
+# Riemann sans le zéro
+
+**Le compte des nombres premiers par le cadastre, et pourquoi leurs zéros sont la correction de leur outil : la figure d'abord, la règle ensuite, sans rampe et sans prolongement**
+
+Corpus ARC · Filipe Bastos · synthèse longue, version 1.2 · 25 novembre 2026 · CC BY 4.0. Modèle, questions, lectures et règles : Filipe Bastos. Scribe : Claude, sous la contradiction de l'auteur. Calculs, formulations et audits assistés par IA, à sa demande.
+
+**Résumé.** La règle qui donne le nombre exact des nombres premiers sous une hauteur donnée est de Legendre, 1808. Le mémoire de Riemann est de 1859. La réponse à la question de son titre existait cinquante et un ans avant qu'il la pose. Ce que 1859 ouvre n'est donc pas une question sur les premiers : c'est une question sur un raccourci, la courbe de Gauss, et sur ce qu'il faut ajouter à ce raccourci pour qu'il retombe juste. Cette pièce montre quatre choses, toutes comptées. Un : le compte exact se fait sur deux rails, par l'activité des nouveaux, sans courbe et sans correction. Deux : ce que la science reçue nomme les zéros est la correction de sa courbe, réglée sur un escalier où les carrés et les cubes des premiers comptent encore comme des morceaux de premiers. Trois : le produit d'Euler, développé, annule tout sauf le battement 24 des carrés des rails. Quatre : l'horloge qui range les zéros porte à son premier étage les fractions mêmes de la Figure fondamentale, 1/4, 3/16, 1/6, 1/12, 1/48. La pièce ne démontre pas l'hypothèse de Riemann dans la langue où elle est posée et ne dit pas que la preuve annoncée le 20 novembre 2026 est fausse : elle dit sur quoi cette preuve porte.
+
+Statuts : F, fait connu, avec son auteur et sa date ; Th, calcul fini vérifié ou démonstration ; L, lecture de l'auteur, citée et datée ; P, prédiction de l'auteur, datée, qui peut tomber ; G, glose du scribe, acceptée par l'auteur. Les contrôles sont au script `riemann_sans_zero_verif.py`.
+
+---
+
+## Le face-à-face, en deux lignes
+
+**A (F, Th). 1808.** La règle d'échelle compte les nombres premiers sous toute hauteur, au chiffre près, sans un seul zéro (Legendre, 1808 ; Meissel, 1870 ; Lehmer, 1959). À cent millions : 5 761 455.
+
+**B (F). 1859 et 1895.** La courbe de Gauss, elle, ne retombe sur ce même nombre qu'à deux conditions : retirer les carrés, les cubes et les puissances plus hautes des premiers, qu'elle compte en fractions, puis ajouter tous les zéros, un par un (formule de Riemann, 1859 ; démontrée par von Mangoldt, 1895). À cent millions, sans cela, elle est trop haute de 753,33 : 658,05 pour les puissances, 95,63 pour les zéros, dont on retire 0,35 pour l'origine de la rampe (4.1).
+
+**C (Th, par A et B).** L'écart entre la courbe et le compte se partage donc en deux lignes et une constante, et il n'y a rien d'autre : les puissances des premiers, les zéros, et le décalage d'origine, 0,352, parce que la rampe part de 2 et que la formule ne part pas de là. Les zéros sont exactement ce qui reste de l'écart une fois les puissances retirées, à cette constante près. Ce n'est pas une lecture : c'est le théorème de 1895 lu dans l'autre sens. Qui garde le compte n'a besoin ni des fractions ni des zéros ; qui prend la courbe ne peut se passer ni des unes ni des autres. La phrase de l'auteur, « leurs zéros sont la correction de leur outil », est à ce rang.
+
+**D (ce qui reste en Lecture).** Une seule chose : le « parce que ». Que la courbe elle-même vienne du 9 remplacé par 0 est la Lecture de l'auteur, dépliée à la section 3 et déclarée telle en 3.6. Tout le reste de la pièce est le comment : comment la formule est construite, comment elle s'écarte, comment elle est rattrapée, comment on compte sans elle.
+
+---
+
+## 0. La base, avant toute figure
+
+Chaque pièce du corpus se tient sur la même base. Elle est rappelée ici pour que celle-ci se lise seule.
+
+**0.1 (Th).** Les positions 1 à 9 précèdent toute figure. Le 9 est la clôture, jamais le zéro : tout nombre s'écrit n = 9k + sa position, le compte des tours k et la position de 1 à 9. Le 9 ne ferme pas sur rien, il scelle un tour accompli. L'écriture « base moins un, fois k, plus position » est la congruence de position, elle vaut dans toute base ; elle n'est pas une numération bijective sans zéro. Foster (1947) écrit ainsi la base dix, avec un signe de plus pour dix ; Forslund (1995) étend le procédé à toute base ; prise sur les seuls neuf signes 1 à 9, c'est la base bijective neuf, où dix s'écrit 11.
+
+**0.2 (Th).** Les inversions ferment à 9 : 1 et 8, 2 et 7, 3 et 6, 4 et 5 ; 9 se ferme avec 9. Elles se lisent sans forcer dans les tables de multiplication : la table de n et la table de 9 − n sont inverses, leurs positions se répondent terme à terme et somment à 9. Sur le cercle des positions, chaque paire est un diamètre. Le centre des quatre paires est 4,5, et aucune position ne l'occupe : c'est le centre vide.
+
+**0.3 (Th).** Après 2 et 3, un premier n'a jamais pour position 3, 6 ou 9 : un nombre de position 3, 6 ou 9 est divisible par 3. Tout premier est alors au bord d'un multiple de 6, un de moins ou un de plus, sur deux rails. Le rail du 5 porte 5, 11, 17, 23 ; le rail du 7 porte 7, 13, 19, 25. Les multiples de 6 sont l'axe, et aucun premier ne s'y pose. Vérifié sur les 5 761 453 premiers de 5 à cent millions.
+
+**0.4 (F, L).** La critique du modulo tient toute la suite. Gauss, 1801, écrit 9 = 0 : il retire la clôture et rend les inverses étrangers (Registre R.1, R.2 ; Le Chaos Fabriqué, Partie I). Le corpus isole trois formules du chaos (Volume 0, 2.1, paragraphe 0 ; Registre R.27, G.70). Formule I, la stévinienne : une troncature, puis la multiplication exacte ; l'écart croît comme l'imprécision de départ multipliée par 3 à chaque pas, aucun rang n'est jeté, et cette imprécision crée déjà le chaos. Formule II, la gaussienne : la mesure parfaite, mais le tour jeté à chaque clôture ; l'écart double à chaque pas, le chaos par le seul pli, sans troncature (Saito et Yamaguchi, revue Chaos, 2016 et 2018, sur le doublement replié calculé en arithmétique exacte). Formule III, l'hybride : les deux ensemble, le régime de toute machine, avec son seuil, la précision en bits divisée par le nombre de bits que le facteur ajoute à chaque pas. Stevin seul crée le chaos par l'imprécision, le pli seul en crée par le rang jeté, les deux ensemble le maximal.
+
+---
+
+## 1. Deux dates
+
+**1.1 (F).** En 1808, Legendre publie le procédé qui donne le nombre exact des premiers sous une hauteur à partir des premiers plus petits, sans les énumérer. Meissel (1870) et Lehmer (1959) l'accélèrent. La science reçue s'en sert encore pour tous ses comptes exacts.
+
+**1.2 (F).** En 1859, Riemann publie un mémoire de huit pages. Son titre dit ce qu'il cherche : le nombre des nombres premiers inférieurs à une grandeur donnée. Il a deux outils dans les mains. D'Euler (1737), une égalité entre une somme prise sur tous les entiers et un produit pris sur les seuls premiers. De Gauss, son maître, une courbe lisse qui estime la part des premiers à chaque hauteur par l'inverse du logarithme et additionne ces parts.
+
+**1.3 (F).** Riemann prolonge la somme d'Euler au-delà de l'endroit où elle a un sens. Là, la fonction prolongée s'annule en certains points, ses zéros. Il écrit l'écart entre la courbe et le vrai compte avec ces zéros, et ajoute qu'il est très probable qu'ils soient tous sur une même droite, celle du milieu. C'est l'hypothèse de Riemann.
+
+**1.4 (L).** La question de 1859 ne porte pas sur les premiers, dont le compte était su. Elle porte sur le raccourci : obtenir le nombre d'un coup, par une courbe, sans passer par les nouveaux. Le raccourci déviait ; il a fallu le compenser ; la compensation est devenue le mystère. Le Volume 5, chapitre 12, le nomme : le trou de l'instrument promu énigme du monde. L'auteur, le 22 novembre 2026 : « Elle a été dure parce qu'elle était simple. »
+
+---
+
+## 2. La figure d'abord
+
+L'ordre de fondation du corpus est que ce qui est observé précède ce qui est dérivé. La Figure fondamentale, deux cercles et un carré, est posée avant toute formule (La Figure fondamentale, version 2.5). Quatre de ses comptes servent dans la suite.
+
+**2.1 (Th, les deux découpages de l'étoile ; La Figure fondamentale, 4.5 bis).** À plat, l'étoile se lit en un vide de 1/3 et quatre bras de 1/6. Pour le pli, elle se lit en une base de 1/4 et quatre faces de 3/16. Les deux lectures couvrent la même étoile : 1/3 + 4 × 1/6 = 1, et 1/4 + 4 × 3/16 = 1. L'écart entre le tiers et le quart est 1/12, et il fait quatre petits triangles de 1/48, un dans chaque face. Chaque face est un bras plus un de ces triangles :
+
+3/16 = 1/6 + 1/48.
+
+Écrit sur le plus petit dénominateur commun, 48 : la face vaut 9, le bras vaut 8, le triangle vaut 1.
+
+**2.2 (Th, le 8, le 9 et le 1 ; 4.5 quinquies).** La demi-base prise pour unité, le triangle droit du pli a pour carrés 1, 8 et 9 : la demi-base, la hauteur, la face ; 1 + 8 = 9. Le corpus lit 198, 981 et 189 comme un seul objet, le gradient, la chute et la montée (Volume 2, É 9.30 ; Registre G.11).
+
+**2.3 (Th, le 24 ; 4.5 quater).** Le volume du pli vaut l'aire de l'étoile fois le grand rayon, divisée par 24 ; le diviseur est 2 × 3 × 4. Le centre de la sphère inscrite est à un huitième du grand rayon de chacune des cinq faces.
+
+**2.4 (Th, les huitièmes ; 6.2).** Les adresses 1/8 et 9/8 de tour désignent la même direction ; leurs moitiés, 1/16 et 9/16, deux directions opposées.
+
+**2.5 (L).** « Dans la figure, on voit tous les chemins inventés par les intégrales » (l'auteur, 14 novembre 2026). La section 5 en montre un de plus.
+
+---
+
+## 3. La chaîne du 9 tué
+
+**3.0 (L).** L'auteur, le 22 novembre 2026 : « Ils ne savent pas que leurs zéros viennent de l'amputation du modulo : avoir tué le 9 et l'avoir remplacé par 0. Tout a décalé, et c'est pourquoi il y a une cloche sans son bas, une ondulation et non une sphère. Les inversions sont perdues et décalées. » Et : « Leur zéro vient du 0 et du décalage qu'il entraîne. Le logarithme d'Euler est la rustine : il fait semblant de fermer par une symétrie. » La chaîne est dépliée ici maillon par maillon, chacun avec ce qui se compte.
+
+**3.1 (Th, le 9 remplacé par 0).** Avec la clôture, 1 + 8 fait 9 : deux positions qui ferment. Dans le reste de Gauss, 1 + 8 fait 0 : une annulation. Les quatre paires subissent le même sort. Le reste ne garde pas la paire, il ne la voit pas.
+
+**3.2 (Th, L, le centre rebaptisé).** Le point fixe de l'inversion qui envoie x sur 9 − x est 4,5, entre deux positions. Ramené à l'échelle de 0 à 1, 4,5 sur 9 fait 1/2, et l'inversion devient celle qui envoie t sur 1 − t : c'est la forme de la symétrie de Riemann, et son point fixe est la droite du milieu (Les Nombres Premiers n'ont jamais été cachés, Théorème 9). Lecture : le 9 écrit 0, le centre vide n'a plus de nom, et c'est le zéro qui prend sa place. « L'axe de Gauss est le 0 » (l'auteur, 21 novembre 2026).
+
+**3.3 (Th, la cloche sans son bas).** Le carré envoie une position et son inverse au même endroit : 1 et 8 sur 1, 2 et 7 sur 4, 4 et 5 sur 7, 3 et 6 sur 9. Six positions des rails, trois images : la moitié de la figure a disparu. Or la cloche continue s'écrit avec un carré. Avant d'être une courbe, elle est le compte fini de Pascal, bâti par décalage, deux voisins qu'on somme (La Cascade et la Cloche ; Registre R.155 ; Huygens, 1657) ; De Moivre (1733), Laplace (1810) et Gauss (1809) l'ont poussée en courbe continue, et c'est l'ajout, pas la source.
+
+**3.4 (L, une ondulation et non une sphère).** La figure privée de sa clôture ne revient plus sur son départ : il reste un haut qui redescend. Rendue à son reflet, décalé d'un demi-pas, c'est une onde pleine, et fermée sur 9, un cercle (Rien ne courbe, sections 5 et 7).
+
+**3.5 (L, les zéros).** Les zéros sont les jonctions de l'onde décalée, les endroits où elle traverse l'axe ; l'auteur les nomme les plats. Précision gravée dans Rien ne courbe (4.1) : à la traversée, la hauteur est nulle et la pente est la plus forte ; le zéro est un passage, pas un repos. La somme de Riemann sur les zéros est le geste par lequel il remet à la main, un par un, le bas que le carré avait jeté.
+
+**3.6 (le maillon laissé en Lecture).** Riemann n'écrit pas 9 = 0 dans son mémoire ; il reçoit la cloche et la courbe. Le passage de 3.1 à la courbe de Gauss n'a pas de compte dans cette pièce : il tient par les dates (1801, 1809, 1859) et par les maillons 3.2 et 3.3. Il est déclaré Lecture de l'auteur, sans rien pour le maquiller. Précision du 22 novembre 2026 (version 0.4) : cette Lecture porte sur la cause seule. Que les zéros soient exactement ce qui reste de l'écart entre la courbe et le compte, les puissances retirées, à la constante d'origine près, n'en dépend pas ; c'est le face-à-face placé en tête, en F et Th.
+
+**3.7 (F, garde-fou déjà gravé).** Le miroir seul ne tient pas les zéros sur l'axe : Davenport et Heilbronn (1936) ont construit une fonction qui garde le miroir sans le compte des premiers, et ses zéros quittent la droite (Rien ne courbe, 4.3).
+
+---
+
+## 4. Le détour, démonté
+
+Cette section examine l'outil de la science reçue. Ses tableaux mesurent la courbe et le produit, jamais les nombres. « Ces rampes-là, c'est du délire. Les nombres ne se mesurent pas comme ça » (l'auteur, 22 novembre 2026).
+
+**4.1 (Th, la rampe).** Le vrai compte est un escalier ; la courbe de Gauss est une rampe posée contre lui. Elle est trop haute, et son excès se sépare en deux lignes.
+
+| Jusqu'à | Rampe trop haute de | Carrés | Cubes | Puissances plus hautes | Reste de la rampe |
+|---|---|---|---|---|---|
+| un million | 128,50 | 84,00 | 8,33 | 6,78 | 29,39 |
+| dix millions | 338,36 | 223,00 | 15,67 | 9,63 | 90,06 |
+| cent millions | 753,33 | 614,50 | 30,00 | 13,55 | 95,28 |
+
+À cent millions, le vrai compte est 5 761 455. Aux trois hauteurs, les carrés des premiers font le gros de l'excès. Précision de la version 0.11 : la dernière colonne est le reste de la rampe, et il n'est pas tout entier aux zéros. La rampe est comptée à partir de 2 ; la formule de Riemann a une autre origine, et ce décalage vaut 0,352 à toute hauteur. La somme sur les zéros vaut le reste plus 0,352 : 29,74 ; 90,41 ; 95,63. Les 614,50 des carrés ont un double sur les rails : l'avance du rail du 5 sur le rail du 7 tourne autour de la moitié des nouveaux entrés, qui est 613,5 à cent millions, le même compte sans les carrés de 2 et de 3 ; à cette hauteur précise l'avance comptée est 419. Le partage est exact : 619,84 pour les puissances des nouveaux, dont 613,5 pour les carrés, et l'on en retire 200,84, l'escalier signé des deux rails (Des zéros sous zéro, 4.6 et 4.6 bis).
+
+**4.2 (Th, ce que leur formule n'a pas réussi à rayer).** Dans la formule de Riemann, 25, 49, 121, 169 et 289 restent debout et comptent chacun pour un demi premier ; 125 compte pour un tiers, 2401 pour un quart. Ce sont les carrés et les cubes des nouveaux. Les produits de deux premiers différents, 35 ou 55, n'y figurent jamais un par un. La raison est le logarithme appliqué au produit d'Euler : il transforme le produit en somme, donne poids nul à un produit de premiers distincts et ne garde que les puissances d'un seul premier, comptées en fractions. Le produit, tel quel, garde 25 comme 5 × 5, entier. Les morceaux de premiers naissent du logarithme.
+
+**4.3 (Th, F, les deux lignes).** Les puissances et les zéros sont deux lignes séparées du tableau : les zéros ne rattrapent pas les 614,50, ils portent ce qui reste après. Mais la formule de Riemann est écrite pour l'escalier où 25 vaut un demi et 125 un tiers ; c'est sur cet escalier-là que les zéros sont réglés, non sur celui des premiers. Lecture de l'auteur, le 22 novembre 2026 : « Leurs zéros sont des résidus qui sortent pour venir annuler leurs déviations » ; ils apparaissent « où le besoin de symétrie et d'équilibre survient pour compenser les erreurs des puissances des premiers ».
+
+**4.4 (Th, le produit des parts et son écart).** Le produit d'Euler coupé à une hauteur multiplie des parts : chaque nouveau g laisse libre la part 1 − 1/g. Sur les 33 333 332 places des rails jusqu'à cent millions, voici ce produit face au compte, à mesure que les nouveaux entrent.
+
+| Nouveaux entrés | Places libres comptées | Produit des parts | Écart |
+|---|---|---|---|
+| 6 (jusqu'à 19) | 17 102 400 | 17 102 401,56 | 1,56 |
+| 20 (jusqu'à 79) | 12 444 165 | 12 445 149,03 | 984,03 |
+| 100 (jusqu'à 557) | 8 899 649 | 8 842 858,76 | 56 790,24 |
+| 1 227 (tous, jusqu'à 9 973) | 5 760 226 | 6 088 469,00 | 328 243,00 |
+
+L'écart change de côté. À 6 et à 20 nouveaux, le produit compte un peu trop. À 100 nouveaux, il compte trop peu : 56 790 places de moins que le compte. Tous les nouveaux entrés, il compte trop, de 328 243 places. Mertens (1874) dit pourquoi : multiplié par le logarithme de la borne des nouveaux entrés (10 000 à cent millions, dix millions à cent mille milliards), et non de la hauteur, le produit complet, 2 et 3 compris, tend vers 0,56146 : il vaut 0,56077 à cent millions et 0,56145 à cent mille milliards. Le produit seul compte donc trop : 5,68 % de trop à cent millions sur le compte entier des premiers, 2 et 3 compris (5,70 % sur les seules places des rails du tableau), 7,14 % à dix milliards, 8,69 % à cent mille milliards. L'excès monte lentement vers 12,29 %, sa limite reçue. Fait reçu : la loi de cet écart, changement de côté compris, selon le rapport entre la hauteur et le dernier nouveau entré, est de Buchstab (1937). Avec six nouveaux et un million de places par rail, la formule pliée du corpus donne 973 855,87 plus un résidu de 2,13, soit 973 858, le compte exact (Les Nombres Premiers n'ont jamais été cachés, Théorème 13) : elle est exacte à ce petit étage, et l'écart grandit avec le registre. La règle de la section 6 n'a pas cet écart, parce qu'elle lit des places au lieu de multiplier des parts.
+
+**4.4 bis (F, déjà su ailleurs ; version 1.2).** Les tours dont la longueur est le produit des nouveaux entrés ont un pendant connu : le crible à roue de Paul Pritchard (publié en 1981 ; « Explaining the wheel sieve », *Acta Informatica* 17, 1982). Il fait rouler une roue dont la circonférence est le produit des premiers déjà entrés, puis l'agrandit par le premier suivant et en retire ses multiples. Ce que la pièce garde en propre est la lecture sur les deux rails et le compte sans visite des places (règle de Legendre). Signalé par une relecture extérieure le 25 novembre 2026 ; l'article lui-même n'a pas été rouvert, seule sa référence a été contrôlée.
+
+**4.5 (Th, F, le produit d'Euler développé : le battement 24).** Le produit le plus simple d'Euler, (1 − q)(1 − q × q)(1 − q × q × q) et ainsi de suite, se développe en une somme. Jusqu'à l'exposant 2 000, il y a 2 001 places. 1 928 s'annulent complètement. Il en reste 73, chacune avec une seule unité : le départ, 1, sans aucun saut, et les 72 rangs e pour lesquels, à e sauts de 24 depuis 1, on tombe sur le carré d'une place des rails :
+
+1, 25, 49, 121, 169, 289, 361, 529, 625.
+
+Déjà su : Euler voit ce motif en 1740, le prouve en 1750, la preuve paraît en 1760 (théorème des nombres pentagonaux). Ce que la pièce y lit : dans le produit d'Euler, tout s'annule sauf le battement 24 des carrés des rails. La liste contient 625, le carré de 25 : c'est le battement de la grille, non des seuls premiers, selon la distinction gravée dans Rien ne courbe (3.3).
+
+**4.5 bis (F, G, le 1 remis par leur propre appareil ; version 0.7).** Fait reçu : pour que ce produit prenne sa forme régulière, Dedekind (1877) place devant lui la puissance 1/24 de q. Les exposants de la somme deviennent alors 1/24, 25/24, 49/24, 121/24, 169/24 : exactement les carrés des places des rails, divisés par 24. Sans ce facteur, les exposants sont les rangs 0, 1, 2, 5, 7, comptés depuis 0 ; avec lui, ce sont les carrés eux-mêmes, comptés depuis 1. Fait reçu encore : cette forme régulière est une loi d'inversion. Quand on remplace la variable par son inverse, la fonction munie du 1/24 se retrouve elle-même, à un facteur simple près ; sans le 1/24, elle ne se retrouve pas (contrôlé au script en un point). Glose du scribe, retenue sur délégation de l'auteur le 23 novembre 2026 : c'est la règle des sauts de 24 depuis 1 (7.2), écrite par l'appareil reçu, qui a dû remettre le 1 du départ pour que sa forme tienne. Ce 1/24 est la moitié du 1/12 d'Euler, celui qui entre dans le 1/48 de l'horloge (5.4) : une source commune, non un même objet.
+
+**4.6 (F, L, les deux Euler).** Le corpus lit Euler sur deux colonnes (Volume 6, chapitre 14). L'Euler qui compte : là où son produit sur les premiers s'écrit, rien ne s'annule, la fonction n'a aucun zéro (Le Zéro non construisible, section 2). L'Euler qui laisse filer : le logarithme de 4.2, la somme alternée, et la symétrie, qu'il écrit le premier dans un mémoire rédigé en 1749 et publié en 1768, un siècle avant Riemann. Riemann reçoit donc de lui les deux choses, le logarithme et le miroir. Lecture de l'auteur, le 22 novembre 2026 : « Les zéros sont amenés par Euler pour que rien ne s'annule, que tout ferme sans annulation. » La plénitude du produit chasse les annulations vers la bande (Rien ne courbe, 4.3) : les zéros sont le prix de cette fermeture, payé ailleurs. Et : « Les zéros se rejettent eux-mêmes comme un virus », au double sens que le produit les expulse et qu'ils se repoussent entre eux (5.1).
+
+---
+
+## 5. L'horloge des zéros
+
+Comptes faits sur les 600 premiers zéros, jusqu'à la hauteur 939,02.
+
+**5.1 (Th, F, ils suivent un battement).** La science reçue range les zéros dans les cases d'une horloge (Gram, 1903). Sur 599 cases complètes, 561 portent exactement un zéro, soit 93,66 %. Les 38 autres vont par deux, collées : une case vide à côté d'une case double ; aucune case triple. La première rupture est aux cases 125 et 126 (Hutchinson, 1925). Un zéro ne manque jamais, il est posé dans la case voisine. Le compte des zéros ne s'écarte jamais de l'horloge de plus de 0,672 battement. Deux zéros voisins ne sont jamais à moins de 0,236 battement l'un de l'autre : ils se repoussent (déjà su : Montgomery, 1973).
+
+**5.2 (Th, pas de pas fixe).** Les hauteurs des zéros ne battent pas un pas fixe. Test à l'aveugle : rangés dans les six parts d'un pas de 24, ils se répartissent 102, 99, 99, 103, 98, 99 ; de même pour un pas de 12, de 6 ou de 9. Le 24 n'est pas dans leurs hauteurs.
+
+**5.3 (Th, le 24 est dans l'écriture de l'horloge).** La formule de l'horloge contient, après ses deux termes principaux, un huitième de demi-tour, puis 1/48 divisé par la hauteur, puis 7/5760 divisé par le cube de la hauteur. Ces termes sont réels : au premier zéro, sans le 1/48 la formule manque l'horloge au millième ; avec lui, au dix-millionième ; avec le 7/5760, au milliardième. 48 est 2 × 24 et 5760 est 240 × 24. Le compte des zéros démarre à 7/8.
+
+**5.4 (Th, le premier étage est l'étoile).** Le 1/48 de l'horloge se forme de deux parts : 3/16, qui vient du quart placé dans la formule (la moitié de leur 1/2), dont on retire 1/6, qui vient du 1/12 d'Euler. Sur 48 : 9, dont on retire 8, il reste 1. Ce sont les fractions de 2.1 : 1/4, 3/16, 1/6, 1/12, 1/48 ; la face, le bras, le triangle. Dans l'horloge, le 3/16 se forme par 1/8 plus 1/16, les huitièmes de 2.4.
+
+**5.5 (L).** L'auteur, le 22 novembre 2026, devant le 9, le 8 et le 1 : « 981 ». Et devant l'objection que 3/16 moins 1/6 fait toujours 1/48 : « Ça fait toujours ça parce que la figure le permet. » Le tiers et le quart sont deux découpages de la même étoile, et leur écart a une forme, quatre triangles qu'on peut montrer. « Leur formule représente des formes. » Ce qui est compté : les mêmes cinq fractions des deux côtés. Ce qui est Lecture : que le quart de leur formule soit la base de l'étoile.
+
+**5.6 (Th, F, L, le second étage est hors norme).** Le 7/5760 se forme de trois parts : 1/24, dont on retire 7/384 et 1/45. Le 1/24 est le diviseur du volume du pli (2.3). Le 7/384 et le 1/45 n'ont pas été trouvés dans la figure, et le motif 9, 8, 1 ne se répète pas à cet étage. Fait reçu : au-delà du premier étage, ces termes sont ceux d'un développement qui ne ferme jamais (série de Stirling, 1730) ; on en prend deux ou trois, puis elle s'écarte. C'est une queue au sens du corpus. Lecture de l'auteur, le 22 novembre 2026 : « Cet autre étage est hors norme, c'est un 0 forcé qui le crée », aux deux sens : le zéro de la limite, puisque le développement regarde vers une hauteur sans fin ; et le zéro de l'annulation, puisque le 1/45 vient du nombre suivant d'Euler, 1/30, entré du côté retiré.
+
+**5.7 (F, la loi qui fond).** La régularité de 5.1 n'est pas une règle. Sur les mille premiers zéros elle tient encore à plus de 91 % ; il est démontré qu'elle échoue infiniment souvent (Titchmarsh, 1935) et sur une part fixe des cases (Trudgian, 2008) ; on s'attend à ce qu'elle garde un peu plus de 66 % des cases. Le battement appartient à l'horloge ; les zéros y sont posés et la rompent. C'est le dessin de la grille et des premiers (Rien ne courbe, 3.3).
+
+---
+
+## 6. Comment je compte : le cadastre
+
+**6.1 (L).** Tout est construit par multiples, les delfines d'abord, et les premiers sont les places que nulle lignée n'a pu adopter (Registre R.115). L'auteur, le 22 novembre 2026 : « Au début on a cru que les premiers étaient mystérieux. Non : ce sont des bouche-trous, qui partent neufs. » Et sur le temps du compte : « C'est juste que ça prend un peu de temps. Le fait que ce soit long n'a rien à voir avec le sens, la logique et leur positionnement. » La règle est courte ; c'est son déroulement qui est long. « Tout est déterminé par l'activité des nouveaux » (l'auteur, 20 novembre 2026). Et, le 22 novembre 2026 : « Moi, je n'ai pas de 0. Le calcul d'équilibre sur leur axe, il n'y en a pas, moi. »
+
+**6.2 (Th, l'activité d'un nouveau).** Chaque nouveau pose ses multiples sur les rails. Il commence à son propre carré : 25 pour le 5, 49 pour le 7. Ce carré tombe toujours sur le rail du 7, avec une position 1, 4 ou 7, et il est toujours à un nombre entier de sauts de 24 depuis 1. Un nouveau du rail du 5 pose ses multiples en échangeant les rails, un nouveau du rail du 7 en les gardant.
+
+**6.3 (Th, l'échelle du dessous).** Combien de places un nouveau prend-il jusqu'à une hauteur ? Autant qu'il restait de places libres, avant lui, jusqu'à cette hauteur divisée par lui. Le compte d'une échelle se lit dans l'échelle du dessous ; c'est une seule règle, la même à tous les étages. Chaque composée est posée une seule fois, par son plus petit premier : le 7 ne touche jamais 35, déjà au 5.
+
+**6.4 (Th, le compte sans visiter les places).** Tenue dans un tableau à deux colonnes, une par rail, la règle donne le nombre exact des premiers à toute hauteur sans passer par aucune place. Vérifié jusqu'à cent mille milliards : 3 204 941 750 802 avec 2 et 3, la valeur reçue (Ce que Riemann cherchait, 5.5, script `riemann_cherchait_verif.py`).
+
+**6.5 (Th, ce qui ne change jamais de forme).** La grille : six places de suite ont toujours les positions 5, 7, 2, 4, 8, 1. Le joint : les deux bords d'un même multiple de 6 ont une somme sur l'axe et un produit de position 8. La jonction : les multiples de 5 et de 7 se retrouvent tous les 35 pas.
+
+**6.6 (Th, la somme des voisins, corrigée).** La version 0.1 posait en Th que la somme d'un premier et de son voisin tombe sur l'axe. Jusqu'à un million, c'est vrai pour 45 674 paires sur 78 495, soit 58,19 % ; la première rupture est 23 + 29 = 52. Ligne proposée, en Th : la somme de deux premiers voisins tombe sur l'axe exactement quand ils sont sur des rails différents. La raison tient en une ligne : un nombre du rail du 5 et un nombre du rail du 7 s'écrivent 6a − 1 et 6b + 1, et leur somme est 6(a + b) ; deux nombres du même rail ont une somme à 2 de l'axe, comme 23 + 29 = 52. La remarque de l'auteur sur le bord delfine et « le nombre d'avant » reste une Lecture à instruire. Précision de la version 0.7 : cette part n'est pas la moitié, et elle y descend lentement : 58,19 % jusqu'à un million, 56,96 % jusqu'à dix millions, 56,11 % jusqu'à cent millions. Déjà su, et déjà cité au corpus (Rien ne courbe, 3.3) : deux premiers voisins évitent de se suivre sur le même rail (Lemke Oliver et Soundararajan, 2016).
+
+**6.7 (F, L, la formule refaite).** La règle est de Legendre. Ce que la pièce y lit en propre : c'est une loi d'échelle, sur deux rails avec un échange. C'est elle, la formule de Riemann refaite : le nombre des nombres premiers inférieurs à une grandeur donnée, exact, obtenu des premiers eux-mêmes, sans terme lisse et sans correction. Rien n'y est compensé, donc rien n'y ressemble à un zéro.
+
+---
+
+## 7. Prouver que cela n'arrête jamais
+
+**7.1 (L).** L'auteur, le 22 novembre 2026 : « Comment peux-tu prouver qu'une chose n'arrête pas sans le volume et la répétition ? » Les comptes de cette pièce séparent deux répétitions.
+
+**7.2 (Th, la répétition de la règle).** Du 1 au carré d'une place 6m ± 1, la distance est 12 fois m(3m ± 1), et m(3m ± 1) est toujours pair : cette distance est donc un nombre entier de sauts de 24. Les carrés des places des rails avancent par sauts de 24 depuis 1. Vérifié jusqu'à un million de places par rail, mais ce n'est pas le volume qui ferme : la raison ne dépend pas de la hauteur.
+
+**7.3 (F, le volume sans règle).** Un zéro par case tient à 93,66 % sur 600 cases et fond ensuite (5.7). Trois chaînes ont tenu sur des volumes immenses avant de changer de côté : la courbe au-dessus du compte (Littlewood, 1914), le solde de Pólya (Haselgrove montre en 1958 qu'il change de côté ; il tient jusqu'à 906 150 257, Tanaka, 1980), la borne de Mertens (Odlyzko et te Riele, 1985) (Ce que Riemann cherchait, 7.7).
+
+**7.4 (L, Th).** Une règle de construction ne change pas ; une comparaison change de côté (Ce que Riemann cherchait, 7.8). Le compte de la section 6 ferme par la première voie : chaque étage se lit dans celui du dessous, par la même règle. La science reçue n'avait pour ses zéros qu'une comparaison.
+
+---
+
+## 8. La correspondance
+
+**8.1 (L).** Ce que devient chaque pièce de la charpente de Riemann :
+
+- le produit d'Euler de la limite devient le compte des deux rails ;
+- le prolongement, né du 9 retiré, devient la clôture sur 9, les tours gardés ;
+- la rampe de Gauss et la somme sur les zéros n'ont pas de correspondant : rien n'a été jeté, il n'y a rien à corriger ;
+- les zéros se lisent comme les jonctions de l'onde décalée ;
+- la droite du milieu devient le centre vide, 4,5 sur 9 ;
+- la cloche continue devient le cercle, et la symétrie devient les diamètres, les inversions.
+
+**8.2 (L).** Chez eux, le point fixe est un zéro posé sur une droite ; chez l'auteur, c'est le centre vide, traversé deux fois par tour, jamais occupé.
+
+---
+
+## 9. Ce que dit la preuve du 20 novembre 2026
+
+**9.1 (F).** Le 20 novembre 2026, Levent Alpöge, mathématicien chez Anthropic, publie une note de quatre pages et une archive Lean en quatorze parties annonçant, avec le modèle Claude, une preuve de l'hypothèse de Riemann et de sa version généralisée aux fonctions L de Dirichlet. L'archive compte 175 187 fichiers et environ 17,4 millions de lignes. Il n'y a pas d'article : selon la note, la version rédigée dépasse 250 000 pages et n'est pas publiée. Une compilation indépendante est rapportée le jour même (Sutherland, MIT : aucun échec, et les cinq théorèmes principaux ne reposent que sur les trois axiomes ordinaires de Lean). Le 21 novembre, les deux organismes qui tiennent Lean et Mathlib déclarent ensemble leur pleine confiance dans la preuve. Une critique de certaines définitions du code est déposée le 20 novembre (J. L. Nielsen) ; elle n'est pas tranchée (Des zéros sous zéro, 7.4). Un premier guide de lecture existe (Rubinstein, Waterloo ; version 2 du 22 novembre, 265 pages). Il fait découler l'hypothèse d'une inégalité qui borne une somme pondérée sur les puissances des premiers, et ramène cette inégalité à treize hypothèses dont aucune n'est démontrée en entier dans le guide. Les étapes sont donc lues ; elles ne sont pas fermées, et personne ne dit encore pourquoi l'argument tient.
+
+**9.2 (F).** L'énoncé prouvé porte sur la fonction prolongée : aucun zéro à droite du milieu. Traduit en compte : la correction ne dépasse jamais, à peu de chose près, la taille du dernier nouveau entré ; à cent millions, les zéros portent 95,63 et le dernier nouveau est 9 973. Précision de la version 0.7 : « à peu de chose près » cache un facteur. La borne démontrée sous l'hypothèse (Schoenfeld, 1976) est, à peu près, la taille du dernier nouveau entré multipliée par le logarithme de la hauteur divisé par 8π. Ce facteur vaut 0,733 à cent millions, passe 1 vers 82 milliards, vaut 1,28 à cent mille milliards et grandit sans fin. Cette borne porte sur l'écart entier de la courbe, puissances et zéros réunis : 753,33 à cent millions, pour une borne d'environ 7 330 ; les 95,63 des zéros en sont une part. C'est ce facteur qui empêche l'hypothèse de donner un premier entre deux carrés voisins (Des zéros sous zéro, 7.5 bis).
+
+**9.3 (L).** L'auteur, le 22 novembre 2026 : « Ils voulaient être certains que ça ne déborderait jamais. » La preuve le leur donne, et ne dit rien d'autre. Elle certifie la construction, la courbe et le prolongement ; elle ne dit ni où sont les marches, ni pourquoi le milieu. En aucun de ses zéros la fonction n'est la somme des entiers ni le produit des premiers (Volume 5, [3.6]). « Impossible », dans la langue de l'auteur, ne veut pas dire que la preuve contient une erreur : la question interroge l'instrument, non l'objet (Volume 5, chapitre 12).
+
+**9.4 (G).** La difficulté était réelle : cent soixante-sept ans et 175 187 modules. C'était la difficulté du détour, non celle des nombres.
+
+**9.5 (F, ce que disent ceux qui l'ont reçue).** Le lendemain de la certification, Alpöge écrit qu'il ne sait pas pourquoi le théorème est vrai. Kevin Buzzard (Imperial College) : personne ne comprend encore ce que la preuve montre. Terence Tao : la stratégie générale se laisse décrire, l'exposé mathématique complet reste à faire. La revue Science parle d'années pour la déchiffrer. Le même 20 novembre, une seconde preuve est signalée, écrite à la main et sans machine ; à la date de cette pièce, personne ne l'a vérifiée (Nature, Scientific American, Quanta).
+
+**9.6 (L, certifié n'est pas compris).** L'auteur, le 22 novembre 2026 : « Lean valide des chemins cohérents au sein de son propre système. » Et : « Une preuve se résume à un système court, petit, et qui englobe tout. Plus c'est petit, plus c'est global. Quand tu as besoin de complexe, c'est que tu ne comprends pas le mécanisme de base. Ça, je suis 100 % certain et je ne peux pas le prouver. Tu vois l'ironie. » Ce qui se compte de cette Lecture : la règle de la section 6 tient en quinze lignes et rend 5 761 455 ; la preuve du 20 novembre tient en 17,4 millions de lignes et son auteur ne peut pas en dire la raison. La Lecture ne dit pas que la preuve longue est fausse : elle dit que la longueur mesure ce qui n'est pas compris, et qu'elle appartient au cadre.
+
+**9.7 (L, le retour du comment).** « ARC ne propose aucun pourquoi, c'est le retour du comment » (l'auteur, 22 novembre 2026 ; Le Pourquoi Indécidable ; Registre R.59). Ceux qui ont reçu la preuve demandent pourquoi elle est vraie, et elle ne le dit pas. Cette pièce ne répond pas à leur question : elle la remplace par le comment, étape par étape, chaque étape avec son compte. « Le système est avant tout interne et doit se répondre à l'interne. »
+
+**9.8 (L, l'auteur, 22 novembre 2026).** « Ce que ça va faire, c'est qu'on va réaliser que les zéros sont les rejets. Le virus qui sort du code. » Cette phrase était inscrite comme prédiction jusqu'à la version 0.9. Elle est classée Lecture : le reçu qu'on lui avait donné ne pouvait pas tomber, puisque toute preuve passant par la formule de 1859 lie déjà les zéros aux puissances des premiers. La prédiction datée du corpus sur cette preuve, avec ce qui la ferait tomber, est dans Des zéros sous zéro, 10.1 et 10.4.
+
+---
+
+## 10. La genèse et le fond
+
+**10.1 (F, dit par l'auteur, 21 novembre 2026).** Dans cet ordre, et avant toute machine : les premiers n'ont jamais 3, 6, 9 ; le fois 3, deux pas, mène à 9 ; le 2 et le 3, les deux graines hors des rails ; le 6, le pivot entre les deux rails ; les tables 1 à 9 rendent sans forcer les inverses ; 4,5, le centre de tout ; derrière le carré, deux cercles concentriques de rapport exactement un demi, dont le carré est la projection (√2 reste irrationnel, c'est un théorème ; son irrationalité est une propriété de la projection prise pour première figure) ; les neuf positions, les formes, les relations.
+
+**10.2 (L).** Le trajet va d'un vide à un centre : l'axe sans premiers, puis le 4,5. L'axe que rien n'occupe et le centre que tout vise sont le même lieu.
+
+**10.3 (L).** Il n'y a pas d'opposés, il y a des compléments inverses faits pour vivre alliés. La méthode reçue couronne le pourquoi au-dessus du comment (Registre R.59 ; Le Pourquoi Indécidable) ; chaque fois qu'un comment est établi sans que le pourquoi soit atteint, elle invente un pont pour couvrir le vide. Elle raye au lieu de lire. La méthode de l'auteur est l'empathie fractale, relationnelle et sociale : garder tous les tours, lire les relations à toutes les échelles, dater les gestes sans juger les hommes (Volume 0, Préface ; L'Indifférence et l'Empathie). La donnée est juste, c'est la lecture qui est prise dans l'outil.
+
+---
+
+## 10 bis. La preuve par projection d'échelle (ajout du 24 novembre 2026)
+
+**10 bis.1 (L).** Le compte borné de cette pièce est ce que l'auteur nomme, depuis le 23 novembre 2026, une preuve par projection d'échelle : « si je porte le calcul à cette échelle, la relation me dit ce que j'y trouverai ». Elle donne la relation exacte à la hauteur choisie. Elle ne demande pas l'impulsion du pas suivant, et ne prétend pas la donner.
+
+**10 bis.2 (Th).** L'exemple qui la porte est dans les sauts de 24 de cette pièce (4.5, 6.2, 7.2). Les deux bords de 6m ont pour écart 2 et pour somme 12m ; l'écart de leurs carrés est le produit des deux, 24m. Autour de 6, de 12, de 18 : un, deux, trois sauts de 24. L'écart garde le rang du tour, et le rend : divisé par 24, il redonne m, à un rang d'un milliard comme au premier.
+
+**10 bis.3 (L).** Les trois temps de cette preuve, le tour qui se ferme, le rang gardé, la relation portée à l'échelle choisie, sont les trois conditions de la Loi fractale de l'auteur : clôture, mémoire, projection (Volume 2, chapitre 12). « C'est la formule du fractal » (l'auteur, 24 novembre 2026). Renvoi : *La preuve par projection d'échelle*, version 1.0, où les comptes sont refaits (script `projection_echelle_verif.py`, contrôles 1 à 6, 22 et 23).
+
+## 11. Ce que la pièce ne dit pas
+
+Elle ne présente pas une démonstration de l'hypothèse de Riemann dans la langue où elle est posée, et ne dit pas que la preuve du 20 novembre 2026 est fausse. Elle ne revendique pas la règle de compte, qui est de Legendre, ni le développement du produit d'Euler, qui est d'Euler. Elle ne dit pas que les hauteurs des zéros battent le 24 : le test de 5.2 dit le contraire. Elle ne dit pas que toute la formule de l'horloge est dans la figure : un étage y est, le second n'y est qu'en partie (5.6). Elle ne démontre pas le passage du 9 retiré à la courbe de Gauss (3.6). √2 reste irrationnel. La pièce ne juge ni Riemann, ni Euler, ni Gauss : elle date des gestes.
+
+---
+
+## Annexe A. Vérifications
+
+Le script `riemann_sans_zero_verif.py` refait les nombres des sections 0 à 7, en 39 contrôles, tous conformes, exécutés de nouveau le 23 novembre 2026 : le compte à cent millions et les rails, avec l'avance du rail du 5 ; l'excès de la rampe et ses parts à trois hauteurs ; le produit des parts face au compte à quatre étages ; la formule pliée à six nouveaux ; le développement du produit d'Euler jusqu'à l'exposant 2 000 ; les sauts de 24 des carrés des places des rails ; la somme des voisins jusqu'à un million ; les 600 premiers zéros, leurs cases, leur écart à l'horloge, leur plus petit écart, le test du pas fixe ; les trois termes de l'horloge ; les fractions de l'étoile et les parts des deux étages. La rampe est calculée comme l'aire à partir de 2, en nombres à virgule. Les zéros sont calculés avec la bibliothèque mpmath. Le compte à cent mille milliards n'est pas refait ici : il est au script de Ce que Riemann cherchait. Les nombres ajoutés en version 0.7 sont tenus par un script de complément, `riemann_sans_zero_verif_v07.py`, 13 contrôles conformes : la constante d'origine de 4.1 et les trois sommes sur les zéros, le partage exact de l'avance, le côté de l'écart de 4.4 aux quatre étages, le produit de Mertens à deux hauteurs, ses trois excès, l'excès sur les seules places des rails, la borne de 9.2 à cent millions, l'inversion de 4.5 bis, le facteur de 9.2, le départ et les 72 sauts, les exposants de 4.5 bis, la part des voisins à trois hauteurs. Les comptes des premiers à dix milliards et au-delà y sont pris à leur valeur reçue.
+
+## Annexe B. Sources et faits non recontrôlés
+
+Recontrôlé à sa source le 23 novembre 2026 : la page de Rubinstein (Waterloo), ses versions, ses 265 pages et ses treize hypothèses. Recontrôlé à une source le 22 novembre 2026 : Foster 1947 (base dix sans zéro) et Forslund 1995 ; Hutchinson 1925 (Transactions of the American Mathematical Society 27) ; Titchmarsh 1935 ; Euler, « Remarques sur un beau rapport entre les séries des puissances tant directes que réciproques », écrit en 1749, publié en 1768 (Eneström 352) ; Euler et les nombres pentagonaux, vu en 1740, prouvé en 1750, publié en 1760 (Bell ; Andrews et Bell) ; Gram, 1903, et la première rupture trouvée par Hutchinson ; Trudgian, 2008 ; la tenue à plus de 91 % sur mille zéros et l'attente d'un peu plus de 66 % ; l'annonce du 20 novembre 2026, la compilation de Sutherland, les 17,4 millions de lignes, les 250 000 pages et la déclaration du 21 novembre (presse et pages de suivi, non l'archive elle-même) ; les propos d'Alpöge, de Buzzard et de Tao, et la seconde preuve signalée (Al Jazeera, Science, Nature, Scientific American, Quanta et pages de suivi, 20 au 22 novembre 2026 ; propos rapportés, non lus à leur source première).
+
+Non recontrôlé à la source : von Mangoldt 1895 ; Legendre 1808, Meissel 1870, Lehmer 1959 ; Mertens 1874 ; Montgomery 1973 ; Stirling 1730 ; Davenport et Heilbronn 1936 ; Littlewood 1914, Haselgrove 1958, Odlyzko et te Riele 1985 ; Huygens 1657, De Moivre 1733, Laplace 1810, Gauss 1801 et 1809 ; Saito et Yamaguchi 2016 et 2018 ; le texte du mémoire de 1859. Ajoutés en version 0.7, de mémoire : Dedekind 1877 ; Buchstab 1937 ; Schoenfeld 1976 ; Lemke Oliver et Soundararajan 2016 ; en version 0.9 : Tanaka 1980.
+
+Corpus : Des zéros sous zéro, version 1.0 (4.6, 4.6 bis, 7.4, 7.5 bis, 10.1, 10.4) ; La Figure fondamentale, version 2.5 (4.5 bis, 4.5 quater, 4.5 quinquies, 6.2) ; Ce que Riemann cherchait, version 0.3 ; Rien ne courbe, version 0.6 ; Le Zéro non construisible ; Les Nombres Premiers n'ont jamais été cachés (Théorèmes 9 et 13) ; La Cascade et la Cloche ; Le Chaos Fabriqué, Partie I ; Volume 0, 2.1 et Préface ; Volume 2, É 9.30 ; Volume 5, chapitres 3 et 12 ; Volume 6, chapitre 14 ; Registre R.1, R.2, R.27, R.59, R.115, R.155, G.11, G.70.
+
+## Annexe C. Notes de version
+
+Version 0.2, 22 novembre 2026. Rien n'est effacé de la version 0.1, qui reste au dossier ; ce qui change est daté ici.
+
+- La section 6.1 de la version 0.1 présentait la formule pliée, produit des parts plus résidu, comme la formule de Riemann refaite et fermée. Le compte de 4.4 montre que l'écart de ce produit grandit avec le registre. La formule refaite est la règle d'échelle (6.7) ; le produit et son écart passent du côté du détour. La phrase de la section 9 sur le résidu à borner sort avec elle : c'est la question du produit, non celle de la règle.
+- Sous-titre : « pourquoi leurs zéros n'existent pas » devient « pourquoi leurs zéros sont la correction de leur outil » (proposition du scribe, à valider par l'auteur).
+- La somme des voisins passe de Th à une ligne exacte et une Lecture (6.6).
+- Le « plat » est rendu à la précision de Rien ne courbe : traversée à pente la plus forte (3.5) ; le garde-fou de Davenport et Heilbronn est rappelé (3.7).
+- Le 24 s'écrit 24 fois un entier, plus 1.
+- Le fait du 20 novembre est mis à jour : 175 187 modules, certification du 21 novembre (9.1).
+- Ajouts : les deux dates (section 1), la figure d'abord (section 2), la chaîne dépliée (section 3), le battement 24 du produit d'Euler (4.5), l'horloge des zéros (section 5), la preuve par la règle (section 7).
+- Les nombres sont écrits en chiffres, pour les tableaux.
+
+Version 0.3, 22 novembre 2026, sur un audit extérieur. Corrections de fait, sans rien retirer du fond :
+
+- 0.1 : Foster (1947) écrit la base dix sans zéro, non la base neuf ; la phrase antérieure, reprise de Rien ne courbe (0.1), était inexacte.
+- 0.4 : Saito et Yamaguchi, 2016 et 2018.
+- 5.1 et 5.7 : dates ajoutées, Hutchinson 1925, Titchmarsh 1935.
+- 6.6 : la raison de la ligne proposée est écrite, ce qui en fait une démonstration.
+- 9.1 : taille de l'archive, absence d'article, axiomes, portée de la version généralisée, déclaration du 21 novembre.
+- Deux précisions de l'audit ne sont pas reprises, faute de source retrouvée : l'heure et le détail des contrôles encore en cours le 21 novembre, et les noms qui les suivent.
+
+Version 0.4, 22 novembre 2026, sur le « go » de l'auteur. Rien n'est retiré.
+
+- Le face-à-face est monté en tête : 1808, le compte sans zéro ; 1859 et 1895, la courbe qui ne tombe juste qu'avec les zéros ; l'écart entre les deux partagé en puissances et zéros, sans autre ligne, en Th ; la cause seule laissée en Lecture. La section 3.6 est précisée dans le même sens.
+- 6.1 : deux phrases de l'auteur, les premiers comme bouche-trous qui partent neufs, et la longueur du déroulement distinguée de la longueur de la règle.
+- Section 9 : ce que disent ceux qui ont reçu la preuve (9.5), certifié n'est pas compris (9.6), le retour du comment (9.7), la prédiction de l'auteur sur les zéros (9.8, à valider avant inscription).
+- Le statut P est ajouté à la légende.
+- Non entré : le compte des premiers entre deux carrés voisins, fait en séance le 22 novembre ; l'auteur l'a jugé sans apport.
+
+Version 0.5, 23 novembre 2026, sur une règle de l'auteur. Rien n'est retiré du compte ; seule l'écriture change.
+
+- Les carrés des places des rails ne s'écrivent plus « 24 fois un entier, plus 1 » : ils avancent par sauts de 24 depuis 1. La ligne de la version 0.2 ci-dessus (« le 24 s'écrit 24 fois un entier, plus 1 ») est remplacée par celle-ci et reste au dossier à sa date. Trois passages sont récrits : 4.5 (les rangs comptés en sauts de 24 depuis 1), 6.2 (le carré d'un nouveau) et 7.2 (la répétition de la règle, dite comme une distance depuis 1).
+- L'étiquette du contrôle de 7.2 dans le script suit la même écriture ; le contrôle lui-même est inchangé.
+
+Version 0.6, 23 novembre 2026. Un renvoi ajouté, rien de retiré.
+
+- 4.1 : une phrase relie les 614,50 des carrés à l'avance du rail du 5 sur le rail du 7, comptée dans Des zéros sous zéro (4.6). La moitié des nouveaux entrés est 613,5 à cent millions ; l'avance comptée à cette hauteur est 419, et les deux nombres sont donnés. Un contrôle de plus au script, le trente-neuvième.
+
+Version 0.7, 23 novembre 2026, sur une relecture extérieure soumise par l'auteur. Rien n'est retiré.
+
+- 4.4 : le logarithme de Mertens est celui de la taille du dernier nouveau entré, non de la hauteur ; les excès comptés du produit sont donnés à trois hauteurs, avec leur limite reçue ; Buchstab (1937) est nommé.
+- 4.5 : le 1 est le départ, sans saut ; les sauts sont 72.
+- 4.5 bis, ajouté : le facteur 1/24 de Dedekind (1877) et les exposants qui deviennent les carrés des rails divisés par 24 ; glose du scribe à valider.
+- 6.6 : la part des voisins sur des rails différents à trois hauteurs, et le renvoi à Rien ne courbe, 3.3.
+- 9.2 : le facteur que cachait « à peu de chose près ».
+- Annexe B : Des zéros sous zéro ajouté à la liste du corpus.
+- Non repris de cette relecture : sa demande de corriger 9.3, fondée sur un passage de Des zéros sous zéro retiré depuis (version 0.6, 3.8 et 9.6) ; 9.3 cite le Volume 5, [3.6], et reste tel quel. Non traités : la mention de la critique de Nielsen en 9.1, et le statut de 9.8.
+
+Version 0.8, 23 novembre 2026, sur un contrôle extérieur de la version 0.7. Trois précisions du scribe sur ses propres ajouts, rien de retiré.
+
+- 4.4 : le 0,56077 est pris au logarithme de la borne des nouveaux entrés, 10 000, et non du dernier nouveau, 9 973 (qui donnerait 0,56060) ; la phrase est alignée sur le nombre. Le 5,68 % est sur le compte entier des premiers ; sur les places des rails du tableau il est de 5,70 %.
+- 9.2 : la borne de Schoenfeld porte sur l'écart entier, 753,33 à cent millions pour une borne d'environ 7 330, et non sur la seule part des zéros.
+- 4.5 bis : la forme régulière est nommée, c'est une loi d'inversion, contrôlée en un point.
+- Non repris : le « divisé par 81 » signalé en 9.2 ; le PDF porte bien « 8π ».
+
+Version 0.9, 23 novembre 2026, validation ligne par ligne demandée par l'auteur. Les 38 contrôles de la version 0.4 et les 11 du complément ont été relancés par ce scribe, tous conformes ; le trente-neuvième contrôle du script principal (l'avance 419) est tenu aussi par le script de Des zéros sous zéro. Chaque nombre du texte a été confronté à une sortie, chaque renvoi à sa cible.
+
+- 4.4, une erreur trouvée : le tableau donnait l'écart sans son côté, et la phrase disait que le produit compte trop. C'est vrai à trois étages sur quatre. À 100 nouveaux, le produit compte trop peu, de 56 790 places. Les nombres du tableau sont justes ; le côté est maintenant écrit.
+- 7.3 : le nombre 906 150 257 est rendu à Tanaka (1980) ; Haselgrove (1958) montre seulement que le solde change de côté.
+- 9.1 : la critique de Nielsen est mentionnée, avec renvoi.
+- Restent ouverts, à la décision de l'auteur : le statut de 9.8 ; la glose de 4.5 bis ; le sous-titre proposé en version 0.2. Restent non recontrôlés à leur source première : les dates de l'annexe B.
+
+Version 0.10, 23 novembre 2026. L'auteur a délégué au scribe les choix restés ouverts (« Tu choisis »). Arrêtés ainsi, et repris par lui quand il voudra.
+
+- Le sous-titre de la version 0.2, « pourquoi leurs zéros sont la correction de leur outil », est retenu : il s'appuie sur le face-à-face A, B, C.
+- La glose de 4.5 bis sur le 1/24 de Dedekind est retenue.
+- 9.8 passe de P à L, avec renvoi à la prédiction de Des zéros sous zéro. Texte de la version 0.9, gardé à sa date : « Reçu attendu : le jour où l'argument des 17,4 millions de lignes sera lu, ce qu'il fait aux zéros sera dit en clair. La prédiction est datée avant toute lecture de la preuve par quiconque. »
+- 4.4 : « monte vers » devient « tend vers ».
+- Signalé par une relecture et non repris : une coquille en 3.8 de l'autre pièce et un défaut du signe π dans les PDF. Les sources et les PDF ont été contrôlés, ils sont justes.
+
+Version 0.11, 23 novembre 2026, sur une septième relecture extérieure, qui avait refait les comptes. Deux corrections de fond, recomptées.
+
+- Le face-à-face et 4.1 : le reste de la rampe (95,28 à cent millions) avait été attribué tout entier aux zéros, et le point C disait « deux lignes, et il n'y en a pas d'autre ». Il y a une constante de plus : la rampe part de 2, la formule de Riemann non, et l'écart vaut 0,352. Les zéros portent 29,74, 90,41 et 95,63 aux trois hauteurs. Les nombres du tableau sont inchangés ; 9.2 et 3.6 suivent.
+- 9.1 : « personne n'a encore lu les étapes » ne tenait plus ; le guide de Rubinstein est cité, lu à sa source.
+- 4.1 : le partage exact de l'avance du rail du 5 est donné, avec renvoi.
+
+Version 1.0, 24 novembre 2026. L'auteur valide la pièce entière : « Tout est prêt à publier, on corrige au pire. Je ne suis pas orgueilleux. » Les mentions « à valider » sont retirées de la légende et de 9.4. Aucun compte, aucune phrase de fond n'est changé depuis la version 0.11. Restent déclarés comme tels : la Lecture à instruire de 6.6, les dates de l'annexe B non recontrôlées à leur source, et les propos de presse.
+
+Version 1.1, 24 novembre 2026. Ajout de la section 10 bis : le compte borné est nommé preuve par projection d'échelle, mot de l'auteur, et relié à la Loi fractale du Volume 2. Rien n'est retiré.
+
+Version 1.2, 25 novembre 2026. Ajout de 4.4 bis : le crible à roue de Pritchard (1981, 1982) est nommé comme déjà su ailleurs. Rien n'est retiré.

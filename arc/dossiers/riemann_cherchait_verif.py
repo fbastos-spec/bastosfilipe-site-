@@ -139,8 +139,15 @@ ok("V21 entre deux jonctions, le compte s'ecarte de son axe d'autant vers le hau
    all(t[3]==t[4] for t in T.values()) and [t[2] for t in T.values()][:3]==[F(11,35),F(29,77),F(425,1001)] and round(float(T[(5,7,11,13,17,19)][2]),3)==0.487)
 ok("V22 la distance a l'axe vaut 1,057, 1,935, 3,164 et 8,317 pour deux, trois, quatre et six nouveaux",
    [round(float(t[3]),3) for t in T.values()]==[1.057,1.935,3.164,8.317])
-ok("V23 pour trois, quatre et six nouveaux, les deux extremes tombent aux positions 16 et 18 du tour de 35, de part et d'autre de 17,5, et leurs deux positions font ensemble le tour moins un",
-   all((t[5]%35,t[6]%35)==(16,18) and t[5]+t[6]==t[0]-1 for G,t in T.items() if len(G)>=3))
+T5=tour([5,7,11,13,17])
+TT=dict(T); TT[(5,7,11,13,17)]=T5
+ok("V23 (recrit en version 0.4) a tous les etages comptes, de deux a six nouveaux, les positions des deux extremes font ensemble le tour moins un ; sur le tour de 35 : 16 et 18 pour trois, quatre et six nouveaux, 1 et 33 pour deux et cinq ; milieu 17",
+   all(t[5]+t[6]==t[0]-1 for t in TT.values())
+   and all(sorted((t[5]%35,t[6]%35))==([16,18] if len(G) in (3,4,6) else [1,33]) for G,t in TT.items()) and (16+18)//2==17==(1+33)//2)
+ok("V33 cinq nouveaux : jonction 85 085, axe 7801/17017, distance 5,028 de chaque cote, extremes aux rangs 42 386 et 42 698",
+   T5[0]==85085 and T5[1]==0 and T5[2]==F(7801,17017) and T5[3]==T5[4] and round(float(T5[3]),3)==5.028 and sorted((T5[5],T5[6]))==[42386,42698])
+ok("V34 rangs des extremes sur le tour entier : 1 et 33 sur 35 ; 18 et 366 sur 385 ; 1 838 et 3 166 sur 5 005 ; 666 031 et 950 583 sur 1 616 615",
+   [sorted((t[5],t[6])) for t in T.values()]==[[1,33],[18,366],[1838,3166],[666031,950583]])
 
 # ---------- 7. les huit triangles
 x=math.pi/4; c4=1-x**2/2+x**4/24-x**6/720
