@@ -218,6 +218,14 @@ from math import cos
 c2=[cos(pi/n)**2 for n in range(3,2001)]
 ok("V45 l'ordre : entre deux cercles de même centre, le polygone à n côtés demande r/R = cos(π/n) ; (r/R)² vaut 1/4 pour le triangle, 1/2 pour le carré, puis croît sans redescendre ; le disque égal à l'anneau, (r/R)² = 1/2, n'est donné que par n = 4, pour n = 3 à 2000",
    isclose(c2[0],.25) and isclose(c2[1],.5) and all(c2[i]<c2[i+1] for i in range(len(c2)-1)) and [n for n,v in zip(range(3,2001),c2) if isclose(v,.5,abs_tol=1e-12)]==[4])
+from math import sin
+# un diamètre à l'angle a (demi-degrés entiers de 0 à 359, soit 0° à 179,5°) ; retournement autour du premier diamètre : a -> -a ; autour de la perpendiculaire : a -> 180° - a
+inv=[a for a in range(360) if (-a)%360==a and (360-a)%360==a]
+ok("V46 un cercle et son diamètre : parmi les diamètres pris de demi-degré en demi-degré, seuls le diamètre lui-même (0°) et celui à angle droit (90°) restent en place sous les deux retournements ; les quatre points font un carré de diagonale 2R ; le cercle inscrit a r² = R²/2 : le disque égale l'anneau",
+   inv==[0,180] and all(d2(c,(0,0))==2 for c in coins) and d2(coins[0],coins[2])==8 and d2(coins[0],coins[1])==4 and F(1,2)*2==1 and 2-1==1)
+ok("V47 le rayon reporté ferme le cercle en six pas (corde de 60° = rayon) ; (r/R)² : triangle 1/4, carré 1/2, hexagone 3/4 ; points avec le centre : 7, 9, 13 ; cascade d'étages : moitié pour le carré seul (somme 2), quart pour le triangle (4/3), trois quarts pour l'hexagone (4)",
+   isclose(2*sin(pi/6),1) and [isclose(cos(pi/n)**2,v) for n,v in ((3,.25),(4,.5),(6,.75))]==[True]*3 and [2*n+1 for n in (3,4,6)]==[7,9,13]
+   and [1/(1-F(k,4)) for k in (1,2,3)]==[F(4,3),2,4])
 if len(sys.argv)>2:
     from PIL import Image
     im=Image.open(sys.argv[2]).convert('L'); cx,cy,r=540,762,282.0
