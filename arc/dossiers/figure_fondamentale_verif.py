@@ -204,15 +204,17 @@ S6=lambda v:(-v[1],-v[2],-v[0])
 som={1:(1,1,-1)}; v_=som[1]; x_=1
 for _ in range(5):
     v_=S6(v_); x_=dr(2*x_); som[x_]=v_
-ok("V42 le cube sur sa diagonale : le mouvement (x, y, z) → (−y, −z, −x) est d'ordre 6 et parcourt 1, 2, 4, 8, 7, 5 ; il égale le doublement sur les six sommets ; les pôles s'échangent comme 3 et 6 ; le centre reste comme le 9 ; deux triangles aux hauteurs +1 et −1 : 1 4 7 et 2 5 8",
+ok("V42 le cube sur sa diagonale : le mouvement (x, y, z) → (−y, −z, −x) est d'ordre 6 et parcourt 1, 2, 4, 8, 7, 5 ; il égale le doublement sur les six sommets ; les pôles s'échangent comme 3 et 6 ; le renvoi sur l'opposé n'a qu'un point fixe, le centre, comme 9 − x n'a que 4,5 ; les huit sommets sont sur une même sphère, qui reste entière, comme le 9 reste 9 sous le doublement ; deux triangles aux hauteurs +1 et −1 : 1 4 7 et 2 5 8",
    list(som)==[1,2,4,8,7,5] and S6(som[5])==som[1] and all(S6(som[x])==som[dr(2*x)] for x in som)
-   and S6((1,1,1))==(-1,-1,-1) and S6((-1,-1,-1))==(1,1,1) and (dr(6),dr(12))==(6,3) and S6((0,0,0))==(0,0,0) and dr(18)==9
+   and S6((1,1,1))==(-1,-1,-1) and S6((-1,-1,-1))==(1,1,1) and (dr(6),dr(12))==(6,3) and dr(18)==9
+   and [v for v in [(a,b,c) for a in (-1,0,1) for b in (-1,0,1) for c in (-1,0,1)] if tuple(-x for x in v)==v]==[(0,0,0)] and F(9,2)==9-F(9,2) and all(9-x!=x for x in range(1,10))
+   and {sum(c*c for c in v) for v in list(som.values())+[(1,1,1),(-1,-1,-1)]}=={3} and all(sum(c*c for c in S6(v))==3 for v in som.values())
    and {x for x in som if sum(som[x])==1}=={1,4,7} and {x for x in som if sum(som[x])==-1}=={2,5,8})
 ok("V43 fait deux fois : tiers de tour = table de 4 (1 → 4 → 7, 2 → 8 → 5) ; fait trois fois : sommet opposé = 9 − x sur les quatre paires",
    all(S6(S6(som[x]))==som[dr(4*x)] for x in som) and all(S6(S6(S6(som[x])))==tuple(-c for c in som[x])==som[9-x] for x in som))
 cube=[(a,b,c) for a in (1,-1) for b in (1,-1) for c in (1,-1)]
-ok("V44 comptes du cube avec son centre : 9 points, 28 segments entre sommets, 36 avec le centre, 4 paires de sommets opposés ; la figure plane : 8 mouvements, aucun d'ordre 3",
-   len(cube)+1==9 and len(list(combinations(cube,2)))==28 and len(list(combinations(cube+[(0,0,0)],2)))==36
+ok("V44 comptes du cube : 8 sommets autour d'un centre, 28 segments entre sommets, 36 avec le centre, 4 paires de sommets opposés ; la figure plane : 8 mouvements, aucun d'ordre 3",
+   len(cube)==8 and len(list(combinations(cube,2)))==28 and len(list(combinations(cube+[(0,0,0)],2)))==36
    and len({frozenset((v,tuple(-c for c in v))) for v in cube})==4 and 8%3!=0)
 from math import cos
 c2=[cos(pi/n)**2 for n in range(3,2001)]
@@ -223,8 +225,8 @@ from math import sin
 inv=[a for a in range(360) if (-a)%360==a and (360-a)%360==a]
 ok("V46 un cercle et son diamètre : parmi les diamètres pris de demi-degré en demi-degré, seuls le diamètre lui-même (0°) et celui à angle droit (90°) restent en place sous les deux retournements ; les quatre points font un carré de diagonale 2R ; le cercle inscrit a r² = R²/2 : le disque égale l'anneau",
    inv==[0,180] and all(d2(c,(0,0))==2 for c in coins) and d2(coins[0],coins[2])==8 and d2(coins[0],coins[1])==4 and F(1,2)*2==1 and 2-1==1)
-ok("V47 le rayon reporté ferme le cercle en six pas (corde de 60° = rayon) ; (r/R)² : triangle 1/4, carré 1/2, hexagone 3/4 ; points avec le centre : 7, 9, 13 ; cascade d'étages : moitié pour le carré seul (somme 2), quart pour le triangle (4/3), trois quarts pour l'hexagone (4)",
-   isclose(2*sin(pi/6),1) and [isclose(cos(pi/n)**2,v) for n,v in ((3,.25),(4,.5),(6,.75))]==[True]*3 and [2*n+1 for n in (3,4,6)]==[7,9,13]
+ok("V47 le rayon reporté ferme le cercle en six pas (corde de 60° = rayon) ; (r/R)² : triangle 1/4, carré 1/2, hexagone 3/4 ; points : 6, 8, 12, soit 3, 4 et 6 paires opposées ; cascade d'étages : moitié pour le carré seul (somme 2), quart pour le triangle (4/3), trois quarts pour l'hexagone (4)",
+   isclose(2*sin(pi/6),1) and [isclose(cos(pi/n)**2,v) for n,v in ((3,.25),(4,.5),(6,.75))]==[True]*3 and [2*n for n in (3,4,6)]==[6,8,12]
    and [1/(1-F(k,4)) for k in (1,2,3)]==[F(4,3),2,4])
 if len(sys.argv)>2:
     from PIL import Image
