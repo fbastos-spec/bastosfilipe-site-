@@ -190,6 +190,34 @@ ok("V38 les six arêtes d'un tétraèdre de l'hélice : 3 de premier voisin, 2 d
    and 3*_tour(1)+2*_tour(2)+_tour(3)==4 and 3*_av(1)+2*_av(2)+_av(3)==2 and 3+2+1==6)
 ok("V39 le facteur 16 dans les deux sens : (√2)² = 2, donc huit huitièmes de tour donnent 2⁴ = 16 en longueur et 2⁸ = 256 en aire en remontant, 1/16 et 1/256 en descendant ; produit des deux sens 1",
    F(2)**4==16 and F(2)**8==256 and F(1,2)**4==F(1,16) and F(1,2)**8==F(1,256) and F(2)**4*F(1,2)**4==1 and abs((2**0.5)**8-16)<1e-12)
+# ---- version 2.6
+dr=lambda n:(n-1)%9+1
+ok("V40 sans unité : l'angle du triangle pris pour 1, la somme des angles vaut 3(n − 2) et ses positions sont 3, 6, 9 en boucle, pour n = 3 à 1000 ; tours 12 et 24 : encore l'axe ; plus petit tour donnant 9 partout : 18 ; tour 360 : 9 partout ; somme des diviseurs de 24 = 60",
+   all(dr(3*(n-2))==(3,6,9)[(n-3)%3] for n in range(3,1001)) and all({dr(3*a*(n-2)) for n in range(3,200)}=={3,6,9} for a in (2,4))
+   and min(6*a for a in range(1,100) if all(dr(3*a*(n-2))==9 for n in range(3,200)))==18 and all(dr(180*(n-2))==9 for n in range(3,1001))
+   and sum(d for d in range(1,25) if 24%d==0)==60)
+a_,l_=F(1,4),F(3,4); h2_=l_*l_-a_*a_
+ok("V41 une proportion, six résultats : face = 3 demi-bases ; faces/base = 3 ; h² = 8a² ; (h/a)² = (périmètre/h)² = 8 ; cos pente 1/3 ; cos entre faces −1/9 = −(1/3)² ; tan de l'angle au sommet 3/4",
+   l_==3*a_ and (4*a_*l_)/(4*a_*a_)==3 and h2_==8*a_*a_ and h2_/(a_*a_)==8==(8*a_)**2/h2_ and a_/l_==F(1,3)
+   and -(a_*a_)/(l_*l_)==F(-1,9)==-(a_/l_)**2 and (2*(a_/l_))/(1-(a_/l_)**2)==F(3,4))
+S6=lambda v:(-v[1],-v[2],-v[0])
+som={1:(1,1,-1)}; v_=som[1]; x_=1
+for _ in range(5):
+    v_=S6(v_); x_=dr(2*x_); som[x_]=v_
+ok("V42 le cube sur sa diagonale : le mouvement (x, y, z) → (−y, −z, −x) est d'ordre 6 et parcourt 1, 2, 4, 8, 7, 5 ; il égale le doublement sur les six sommets ; les pôles s'échangent comme 3 et 6 ; le centre reste comme le 9 ; deux triangles aux hauteurs +1 et −1 : 1 4 7 et 2 5 8",
+   list(som)==[1,2,4,8,7,5] and S6(som[5])==som[1] and all(S6(som[x])==som[dr(2*x)] for x in som)
+   and S6((1,1,1))==(-1,-1,-1) and S6((-1,-1,-1))==(1,1,1) and (dr(6),dr(12))==(6,3) and S6((0,0,0))==(0,0,0) and dr(18)==9
+   and {x for x in som if sum(som[x])==1}=={1,4,7} and {x for x in som if sum(som[x])==-1}=={2,5,8})
+ok("V43 fait deux fois : tiers de tour = table de 4 (1 → 4 → 7, 2 → 8 → 5) ; fait trois fois : sommet opposé = 9 − x sur les quatre paires",
+   all(S6(S6(som[x]))==som[dr(4*x)] for x in som) and all(S6(S6(S6(som[x])))==tuple(-c for c in som[x])==som[9-x] for x in som))
+cube=[(a,b,c) for a in (1,-1) for b in (1,-1) for c in (1,-1)]
+ok("V44 comptes du cube avec son centre : 9 points, 28 segments entre sommets, 36 avec le centre, 4 paires de sommets opposés ; la figure plane : 8 mouvements, aucun d'ordre 3",
+   len(cube)+1==9 and len(list(combinations(cube,2)))==28 and len(list(combinations(cube+[(0,0,0)],2)))==36
+   and len({frozenset((v,tuple(-c for c in v))) for v in cube})==4 and 8%3!=0)
+from math import cos
+c2=[cos(pi/n)**2 for n in range(3,2001)]
+ok("V45 l'ordre : entre deux cercles de même centre, le polygone à n côtés demande r/R = cos(π/n) ; (r/R)² vaut 1/4 pour le triangle, 1/2 pour le carré, puis croît sans redescendre ; le disque égal à l'anneau, (r/R)² = 1/2, n'est donné que par n = 4, pour n = 3 à 2000",
+   isclose(c2[0],.25) and isclose(c2[1],.5) and all(c2[i]<c2[i+1] for i in range(len(c2)-1)) and [n for n,v in zip(range(3,2001),c2) if isclose(v,.5,abs_tol=1e-12)]==[4])
 if len(sys.argv)>2:
     from PIL import Image
     im=Image.open(sys.argv[2]).convert('L'); cx,cy,r=540,762,282.0
