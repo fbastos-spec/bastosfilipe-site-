@@ -65,4 +65,14 @@ ajouts_presentation.html  inchangé depuis le paquet précédent
 
 - Rien n'est en attente à la date de ce paquet.
 
+## Règle permanente, ajoutée le 26 novembre 2026 : contrôler les plans avant tout commit
+
+Le 21 novembre 2026, un commit a publié `sitemap.xml`, `arc/sitemap.xml`, `llms.txt`, `arc/llms.txt` et `arc/llms-fr.txt` vides (0 octet). Ils sont restés vides cinq jours, et les moteurs ont lu un plan de site vide pendant ce temps. Les cinq fichiers ont été restaurés et remis à jour le 26 novembre 2026.
+
+Depuis cette date :
+
+- avant tout commit, lancer `python3 _travail/controle_plans.py` depuis la racine du dépôt, et ne rien pousser s'il sort en erreur ;
+- tout nouveau document et toute nouvelle version entrent dans les deux plans et dans les trois llms dans le même commit que la page ;
+- le workflow `Contrôle des plans` refait cette vérification à chaque publication : une croix rouge sur un commit veut dire que les plans sont cassés et qu'il faut réparer avant toute autre chose.
+
 *Corpus ARC, Filipe Bastos, CC BY 4.0. Paquet préparé le 26 octobre 2026. Toute question va à Filipe.*

@@ -1,0 +1,17 @@
+# Garde-fou des plans du site et des fichiers llms.
+# À chaque publication, vérifie que sitemap.xml, arc/sitemap.xml, llms.txt, arc/llms.txt et
+# arc/llms-fr.txt ne sont ni vides ni cassés, et que chaque adresse citée mène à un fichier.
+# En cas d'échec, GitHub marque le commit d'une croix rouge et écrit au propriétaire du dépôt.
+# Raison d'être : le 21 novembre 2026, ces cinq fichiers ont été publiés vides pendant cinq jours.
+name: Contrôle des plans
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+jobs:
+  controle:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Plans du site et llms
+        run: python3 _travail/controle_plans.py
